@@ -114,6 +114,70 @@ Ask who was reached, who benefited, who was missed and what it cost. A campaign 
 :::
 
 ::: {.lipps-section}
+## DEEPEN · A campaign is a managed intervention, not a collection of products
+
+Campaign planning should connect the health problem to a communication problem, a defined audience, measurable objectives, a strategy, implementation activities and an evaluation plan. The NCI *Making Health Communication Programs Work* model emphasises planning, developing and testing concepts and materials, implementation, and assessment.
+
+### Start with a communication diagnosis
+
+Specify the behaviour or decision, then separate communication determinants from service and structural determinants. If contraceptive uptake is limited because stock-outs are frequent, a campaign that increases demand without addressing supply may worsen trust.
+
+### Objectives form a ladder
+
+Distinguish outputs from outcomes. "Broadcast 100 radio spots" is an activity. "Increase correct knowledge of where free screening is available from 45% to 70%" is a communication objective. "Reduce cervical cancer mortality" is an important health goal but too distal to use as the sole communication indicator.
+
+### Strategy before products
+
+A strategy states **who must do what, what currently prevents that action, what value proposition or mechanism will be used, who should communicate, through which channels and when**. Posters, videos and radio spots are products that implement the strategy.
+
+### Implementation planning
+
+Specify responsibilities, production timelines, approvals, partner coordination, media placement, training, community mobilisation, supply dependencies and contingency plans. A strategy that assumes commodities or services that are unavailable is internally inconsistent.
+
+### Monitoring and evaluation
+
+Use a results chain:
+
+**inputs → activities → outputs → reach/exposure → comprehension/trust → intention/decision → behaviour/service use → health outcome**.
+
+Different study designs support different claims. A before-and-after increase may be encouraging but does not automatically prove campaign causation if services, prices, policies or secular trends changed at the same time.
+
+### Adaptive management
+
+Monitoring should trigger decisions. If reach is high but comprehension is low, revise the message. If comprehension is high but uptake is low, investigate trust, feasibility and service constraints rather than simply buying more airtime.
+
+### What could fool us?
+
+Programme dashboards often reward easily counted outputs. Teams may therefore produce more materials even when the bottleneck is elsewhere. Campaign evaluation should pre-specify the most important indicators and the decisions each indicator will inform.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Build a campaign logic model
+
+Consider a campaign to increase postpartum family-planning counselling.
+
+**Problem:** many women leave maternity services without understanding available methods.
+
+**Communication objective:** increase the proportion of postpartum women who can name at least two suitable options and know where to obtain counselling.
+
+**Strategy:** train maternity staff in brief counselling, provide a simple decision aid, and reinforce referral information through discharge materials and SMS where safe.
+
+**Results chain:**
+
+trained staff + decision aid → counselling delivered → women exposed → understanding and confidence → counselling attendance or method choice → improved contraceptive access.
+
+Each arrow contains an assumption. Staff may be trained but too busy to counsel. Women may understand but face partner opposition or stock-outs. Evaluation should therefore measure multiple stages rather than jumping from training delivered to contraceptive uptake.
+
+### Minimum campaign dashboard
+
+Include one indicator for implementation quality, one for reach, one for comprehension/trust, one for intended behaviour and one for service capacity. Pre-specify what action the team will take if each indicator crosses a threshold.
+
+### Evaluation choice
+
+If districts launch at different times, a staggered quasi-experimental analysis may be possible. If randomisation is feasible and ethical, cluster randomisation could support stronger causal inference. If only descriptive monitoring is available, state that limitation rather than converting correlation into impact.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 Design a six-month campaign to increase timely childhood vaccination after missed-dose rates rise in three districts. Routine data suggest missed appointments, but formative interviews identify transport barriers, uncertainty about catch-up eligibility, occasional stock-outs and rumours about side effects.
@@ -145,9 +209,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 11 mastery quiz
 
-**Pilot Mastery Quiz:** 20 objective questions sampled from a Week 11 bank of 56 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 11 bank of 30 items.
 
-**Initial time limit:** 14 minutes.  
+**Initial time limit:** 15 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -163,6 +227,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **WHO Strategic Communications Framework.** Strategic planning principles for effective communication.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-11-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

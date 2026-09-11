@@ -113,6 +113,63 @@ Build spokesperson capacity, audience maps, channel agreements, translation work
 :::
 
 ::: {.lipps-section}
+## DEEPEN · Communicating when evidence is incomplete
+
+Risk communication becomes most important when information is changing, consequences matter and people are anxious. Waiting for perfect certainty can create an information vacuum that others fill.
+
+CDC's Crisis and Emergency Risk Communication approach emphasises communication that is early, accurate, credible, empathetic, action-oriented and respectful. WHO's RCCE framework similarly places communities at the centre of preparedness and response.
+
+### The first announcement
+
+A strong first announcement should state what happened, what is known, what is not yet known, what authorities are doing, what people should do now, and when more information will be provided. Do not create false reassurance by turning uncertainty into certainty.
+
+### Risk is interpreted socially
+
+People judge risk through more than probability. Dread, unfamiliarity, fairness, control, trust and whether children are affected can change perceived risk. A communication team should understand these concerns rather than dismissing them as irrational.
+
+### Empathy before explanation
+
+Acknowledging fear, loss or disruption creates space for technical information. Empathy does not mean exaggerating danger or agreeing with false claims. It signals that the response understands what people are experiencing.
+
+### Spokesperson discipline
+
+Spokespeople should know what they can confirm, what they cannot confirm and who has authority to speak. Speculation becomes especially damaging when different agencies contradict one another. Coordination should reduce unnecessary inconsistency without suppressing legitimate uncertainty.
+
+### Update rhythm
+
+Commit to the next update even when no major new finding is expected. "We will update at 4 p.m." is more credible than silence. Correct previous information openly when evidence changes and explain why the recommendation changed.
+
+### Community feedback during crisis
+
+Hotlines, local leaders, health workers and digital monitoring can reveal emerging questions and rumours. Feedback must be analysed quickly enough to change communication or operations.
+
+### What could fool us?
+
+A drop in public questions may reflect reassurance, but it may also mean people stopped trusting official channels. High media coverage can coexist with low comprehension. Crisis evaluation should therefore triangulate reach, understanding, trust, action and operational data.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Draft the first public statement
+
+A first statement can follow this order:
+
+1. **Acknowledge:** recognise what people are experiencing.
+2. **State what is known:** use only verified information and a clear cut-off time.
+3. **State what is not known:** identify the most important uncertainties.
+4. **Give action:** tell people what they can do now.
+5. **Describe the response:** explain what authorities are doing.
+6. **Commit to an update:** give a time or trigger for the next communication.
+
+**Example opening:** "We are investigating a cluster of acute watery diarrhoea reported since yesterday in three villages. Samples are being tested. People in the affected area should use treated or boiled water, wash hands with soap, and seek care immediately for severe diarrhoea or signs of dehydration. We will provide the next update at 4 p.m. today."
+
+The statement avoids declaring a cause before evidence is available while still enabling protective action.
+
+### Update log
+
+Maintain a table of time, new evidence, message change, reason for change, channels used and unresolved questions. This prevents contradictory statements and makes later evaluation possible.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 A district reports suspected cholera after severe flooding. Laboratory confirmation will take 24 hours. Several water points are damaged, social media claims that chlorine is poisonous, and residents say previous emergency messages arrived only in English.
@@ -143,9 +200,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 9 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 9 bank of 52 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 9 bank of 30 items.
 
-**Initial time limit:** 12 minutes.  
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -161,6 +218,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **WHO RCCE Competency Framework, 2024.** Community-centred competencies before, during and after emergencies.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-09-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

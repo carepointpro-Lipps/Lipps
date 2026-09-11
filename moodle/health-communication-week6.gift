@@ -1,361 +1,211 @@
-$CATEGORY: LIPPS/Health Communication/Week 06/Core message
-
-::HC-W6-001::Which concept is best described as: The single most important idea the audience should take away. {
-=Core message#Correct. The single most important idea the audience should take away.
-~Acceptability#Not the best answer. The single most important idea the audience should take away.
-~A/B test#Not the best answer. The single most important idea the audience should take away.
-~Call to action#Not the best answer. The single most important idea the audience should take away.
+$CATEGORY: LIPPS/Health Communication/Week 06/Practice
+::HC-W6-P01::A vaccination leaflet lists eight scientific facts before mentioning where parents should take children. Which diagnosis or concept best identifies the main communication issue? {
+=buried main message and action#Correct. Users should not have to search for the main point.
+~jargon and vague action#Not the best answer. Users should not have to search for the main point.
+~incomplete risk framing#Not the best answer. Users should not have to search for the main point.
+~weak pre-test question#Not the best answer. Users should not have to search for the main point.
 }
 
-::HC-W6-002::In a noncommunicable-disease screening programme, which concept best matches this situation: The single most important idea the audience should take away. {
-=Core message#Correct. The single most important idea the audience should take away.
-~Credibility testing#Not the best answer. The single most important idea the audience should take away.
-~Plain language#Not the best answer. The single most important idea the audience should take away.
-~Loss framing#Not the best answer. The single most important idea the audience should take away.
+::HC-W6-P02::A vaccination leaflet lists eight scientific facts before mentioning where parents should take children. What is the strongest next response? {
+=Put the main action and essential benefit early, then support it with only the detail needed for the decision.#Correct. Users should not have to search for the main point.
+~Replace the phrase with a concrete instruction specifying what symptoms and when to return.#Not the best answer. Users should not have to search for the main point.
+~Add absolute risk or natural frequencies so people can judge the size of the benefit.#Not the best answer. Users should not have to search for the main point.
+~Ask what they think the message means, what action is expected, what is confusing and what feels credible.#Not the best answer. Users should not have to search for the main point.
 }
 
-::HC-W6-003::A communicator needs to recognise the following idea: The single most important idea the audience should take away. Which term is most appropriate? {
-=Core message#Correct. The single most important idea the audience should take away.
-~Cognitive interview#Not the best answer. The single most important idea the audience should take away.
-~Gain framing#Not the best answer. The single most important idea the audience should take away.
-~Actionability#Not the best answer. The single most important idea the audience should take away.
+::HC-W6-P03::A discharge sheet says present for clinical evaluation if symptoms persist. Which diagnosis or concept best identifies the main communication issue? {
+=jargon and vague action#Correct. Actionability depends on understandable, specific direction.
+~incomplete risk framing#Not the best answer. Actionability depends on understandable, specific direction.
+~weak pre-test question#Not the best answer. Actionability depends on understandable, specific direction.
+~failure of cultural and linguistic adaptation#Not the best answer. Actionability depends on understandable, specific direction.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 06/Supporting evidence
-
-::HC-W6-004::Which concept is best described as: Information that explains or justifies the core message. {
-=Supporting evidence#Correct. Information that explains or justifies the core message.
-~Actionability#Not the best answer. Information that explains or justifies the core message.
-~A/B test#Not the best answer. Information that explains or justifies the core message.
-~Core message#Not the best answer. Information that explains or justifies the core message.
+::HC-W6-P04::A discharge sheet says present for clinical evaluation if symptoms persist. What is the strongest next response? {
+=Replace the phrase with a concrete instruction specifying what symptoms and when to return.#Correct. Actionability depends on understandable, specific direction.
+~Add absolute risk or natural frequencies so people can judge the size of the benefit.#Not the best answer. Actionability depends on understandable, specific direction.
+~Ask what they think the message means, what action is expected, what is confusing and what feels credible.#Not the best answer. Actionability depends on understandable, specific direction.
+~Adapt meaning and tone with local speakers, then pre-test the revised version.#Not the best answer. Actionability depends on understandable, specific direction.
 }
 
-::HC-W6-005::In an outbreak response team, which concept best matches this situation: Information that explains or justifies the core message. {
-=Supporting evidence#Correct. Information that explains or justifies the core message.
-~Comprehension testing#Not the best answer. Information that explains or justifies the core message.
-~Loss framing#Not the best answer. Information that explains or justifies the core message.
-~Cognitive interview#Not the best answer. Information that explains or justifies the core message.
+::HC-W6-P05::A campaign states a treatment cuts risk by 50 percent but does not provide the baseline risk. Which diagnosis or concept best identifies the main communication issue? {
+=incomplete risk framing#Correct. Relative effects alone can sound larger than the underlying change.
+~weak pre-test question#Not the best answer. Relative effects alone can sound larger than the underlying change.
+~failure of cultural and linguistic adaptation#Not the best answer. Relative effects alone can sound larger than the underlying change.
+~competing actions#Not the best answer. Relative effects alone can sound larger than the underlying change.
 }
 
-::HC-W6-006::A communicator needs to recognise the following idea: Information that explains or justifies the core message. Which term is most appropriate? {
-=Supporting evidence#Correct. Information that explains or justifies the core message.
-~Call to action#Not the best answer. Information that explains or justifies the core message.
-~Gain framing#Not the best answer. Information that explains or justifies the core message.
-~Plain language#Not the best answer. Information that explains or justifies the core message.
+::HC-W6-P06::A campaign states a treatment cuts risk by 50 percent but does not provide the baseline risk. What is the strongest next response? {
+=Add absolute risk or natural frequencies so people can judge the size of the benefit.#Correct. Relative effects alone can sound larger than the underlying change.
+~Ask what they think the message means, what action is expected, what is confusing and what feels credible.#Not the best answer. Relative effects alone can sound larger than the underlying change.
+~Adapt meaning and tone with local speakers, then pre-test the revised version.#Not the best answer. Relative effects alone can sound larger than the underlying change.
+~Prioritise the single most important action or clearly sequence actions by audience and context.#Not the best answer. Relative effects alone can sound larger than the underlying change.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 06/Call to action
-
-::HC-W6-007::Which concept is best described as: Specific behaviour or decision the audience is asked to take. {
-=Call to action#Correct. Specific behaviour or decision the audience is asked to take.
-~Credibility testing#Not the best answer. Specific behaviour or decision the audience is asked to take.
-~Supporting evidence#Not the best answer. Specific behaviour or decision the audience is asked to take.
-~Cognitive interview#Not the best answer. Specific behaviour or decision the audience is asked to take.
+::HC-W6-P07::Pre-test participants are asked only whether they like a poster. Which diagnosis or concept best identifies the main communication issue? {
+=weak pre-test question#Correct. Preference does not establish comprehension or usability.
+~failure of cultural and linguistic adaptation#Not the best answer. Preference does not establish comprehension or usability.
+~competing actions#Not the best answer. Preference does not establish comprehension or usability.
+~unrealistic testing context#Not the best answer. Preference does not establish comprehension or usability.
 }
 
-::HC-W6-008::In a youth-friendly service, which concept best matches this situation: Specific behaviour or decision the audience is asked to take. {
-=Call to action#Correct. Specific behaviour or decision the audience is asked to take.
-~Gain framing#Not the best answer. Specific behaviour or decision the audience is asked to take.
-~Comprehension testing#Not the best answer. Specific behaviour or decision the audience is asked to take.
-~Actionability#Not the best answer. Specific behaviour or decision the audience is asked to take.
+::HC-W6-P08::Pre-test participants are asked only whether they like a poster. What is the strongest next response? {
+=Ask what they think the message means, what action is expected, what is confusing and what feels credible.#Correct. Preference does not establish comprehension or usability.
+~Adapt meaning and tone with local speakers, then pre-test the revised version.#Not the best answer. Preference does not establish comprehension or usability.
+~Prioritise the single most important action or clearly sequence actions by audience and context.#Not the best answer. Preference does not establish comprehension or usability.
+~Test the material under conditions that resemble actual exposure and time constraints.#Not the best answer. Preference does not establish comprehension or usability.
+}
+$CATEGORY: LIPPS/Health Communication/Week 06/Mastery
+::HC-W6-M01::A technically accurate English slogan is translated literally and becomes offensive in a local language. Which diagnosis or concept best identifies the main communication issue? {
+=failure of cultural and linguistic adaptation#Correct. Literal translation can preserve words while damaging meaning.
+~competing actions#Not the best answer. Literal translation can preserve words while damaging meaning.
+~unrealistic testing context#Not the best answer. Literal translation can preserve words while damaging meaning.
+~non-actionable benefit statement#Not the best answer. Literal translation can preserve words while damaging meaning.
 }
 
-::HC-W6-009::A communicator needs to recognise the following idea: Specific behaviour or decision the audience is asked to take. Which term is most appropriate? {
-=Call to action#Correct. Specific behaviour or decision the audience is asked to take.
-~Core message#Not the best answer. Specific behaviour or decision the audience is asked to take.
-~Loss framing#Not the best answer. Specific behaviour or decision the audience is asked to take.
-~Acceptability#Not the best answer. Specific behaviour or decision the audience is asked to take.
+::HC-W6-M02::A technically accurate English slogan is translated literally and becomes offensive in a local language. What is the strongest next response? {
+=Adapt meaning and tone with local speakers, then pre-test the revised version.#Correct. Literal translation can preserve words while damaging meaning.
+~Prioritise the single most important action or clearly sequence actions by audience and context.#Not the best answer. Literal translation can preserve words while damaging meaning.
+~Test the material under conditions that resemble actual exposure and time constraints.#Not the best answer. Literal translation can preserve words while damaging meaning.
+~Specify the feasible protective action, where to obtain what is needed and when to act.#Not the best answer. Literal translation can preserve words while damaging meaning.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 06/Gain framing
-
-::HC-W6-010::Which concept is best described as: Presentation emphasising benefits of taking an action. {
-=Gain framing#Correct. Presentation emphasising benefits of taking an action.
-~A/B test#Not the best answer. Presentation emphasising benefits of taking an action.
-~Loss framing#Not the best answer. Presentation emphasising benefits of taking an action.
-~Acceptability#Not the best answer. Presentation emphasising benefits of taking an action.
+::HC-W6-M03::A poster contains three competing calls to action: test, donate and attend a meeting. Which diagnosis or concept best identifies the main communication issue? {
+=competing actions#Correct. Multiple equal calls to action dilute decision clarity.
+~unrealistic testing context#Not the best answer. Multiple equal calls to action dilute decision clarity.
+~non-actionable benefit statement#Not the best answer. Multiple equal calls to action dilute decision clarity.
+~misleading visual encoding#Not the best answer. Multiple equal calls to action dilute decision clarity.
 }
 
-::HC-W6-011::In a rural health centre, which concept best matches this situation: Presentation emphasising benefits of taking an action. {
-=Gain framing#Correct. Presentation emphasising benefits of taking an action.
-~Supporting evidence#Not the best answer. Presentation emphasising benefits of taking an action.
-~Call to action#Not the best answer. Presentation emphasising benefits of taking an action.
-~Plain language#Not the best answer. Presentation emphasising benefits of taking an action.
+::HC-W6-M04::A poster contains three competing calls to action: test, donate and attend a meeting. What is the strongest next response? {
+=Prioritise the single most important action or clearly sequence actions by audience and context.#Correct. Multiple equal calls to action dilute decision clarity.
+~Test the material under conditions that resemble actual exposure and time constraints.#Not the best answer. Multiple equal calls to action dilute decision clarity.
+~Specify the feasible protective action, where to obtain what is needed and when to act.#Not the best answer. Multiple equal calls to action dilute decision clarity.
+~Use a simple proportional display with labelled axes and no decorative distortion.#Not the best answer. Multiple equal calls to action dilute decision clarity.
 }
 
-::HC-W6-012::A communicator needs to recognise the following idea: Presentation emphasising benefits of taking an action. Which term is most appropriate? {
-=Gain framing#Correct. Presentation emphasising benefits of taking an action.
-~Comprehension testing#Not the best answer. Presentation emphasising benefits of taking an action.
-~Cognitive interview#Not the best answer. Presentation emphasising benefits of taking an action.
-~Credibility testing#Not the best answer. Presentation emphasising benefits of taking an action.
+::HC-W6-M05::Programme staff approve a brochure after reading it in a quiet office, but clinic users see it while queuing for less than two minutes. Which diagnosis or concept best identifies the main communication issue? {
+=unrealistic testing context#Correct. Usability depends on the real context of use.
+~non-actionable benefit statement#Not the best answer. Usability depends on the real context of use.
+~misleading visual encoding#Not the best answer. Usability depends on the real context of use.
+~need for behavioural usability testing#Not the best answer. Usability depends on the real context of use.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 06/Loss framing
-
-::HC-W6-013::Which concept is best described as: Presentation emphasising consequences of not taking an action. {
-=Loss framing#Correct. Presentation emphasising consequences of not taking an action.
-~Cognitive interview#Not the best answer. Presentation emphasising consequences of not taking an action.
-~A/B test#Not the best answer. Presentation emphasising consequences of not taking an action.
-~Credibility testing#Not the best answer. Presentation emphasising consequences of not taking an action.
+::HC-W6-M06::Programme staff approve a brochure after reading it in a quiet office, but clinic users see it while queuing for less than two minutes. What is the strongest next response? {
+=Test the material under conditions that resemble actual exposure and time constraints.#Correct. Usability depends on the real context of use.
+~Specify the feasible protective action, where to obtain what is needed and when to act.#Not the best answer. Usability depends on the real context of use.
+~Use a simple proportional display with labelled axes and no decorative distortion.#Not the best answer. Usability depends on the real context of use.
+~Observe users explaining or demonstrating dosing and revise layout or instructions based on errors.#Not the best answer. Usability depends on the real context of use.
 }
 
-::HC-W6-014::In an urban community clinic, which concept best matches this situation: Presentation emphasising consequences of not taking an action. {
-=Loss framing#Correct. Presentation emphasising consequences of not taking an action.
-~Actionability#Not the best answer. Presentation emphasising consequences of not taking an action.
-~Gain framing#Not the best answer. Presentation emphasising consequences of not taking an action.
-~Call to action#Not the best answer. Presentation emphasising consequences of not taking an action.
+::HC-W6-M07::A malaria message says protect your family without explaining how. Which diagnosis or concept best identifies the main communication issue? {
+=non-actionable benefit statement#Correct. Motivation without operational instruction may not enable action.
+~misleading visual encoding#Not the best answer. Motivation without operational instruction may not enable action.
+~need for behavioural usability testing#Not the best answer. Motivation without operational instruction may not enable action.
+~vague probability language#Not the best answer. Motivation without operational instruction may not enable action.
 }
 
-::HC-W6-015::A communicator needs to recognise the following idea: Presentation emphasising consequences of not taking an action. Which term is most appropriate? {
-=Loss framing#Correct. Presentation emphasising consequences of not taking an action.
-~Supporting evidence#Not the best answer. Presentation emphasising consequences of not taking an action.
-~Comprehension testing#Not the best answer. Presentation emphasising consequences of not taking an action.
-~Acceptability#Not the best answer. Presentation emphasising consequences of not taking an action.
+::HC-W6-M08::A malaria message says protect your family without explaining how. What is the strongest next response? {
+=Specify the feasible protective action, where to obtain what is needed and when to act.#Correct. Motivation without operational instruction may not enable action.
+~Use a simple proportional display with labelled axes and no decorative distortion.#Not the best answer. Motivation without operational instruction may not enable action.
+~Observe users explaining or demonstrating dosing and revise layout or instructions based on errors.#Not the best answer. Motivation without operational instruction may not enable action.
+~Use an understandable numeric frequency and compare it with relevant benefits or risks.#Not the best answer. Motivation without operational instruction may not enable action.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 06/Plain language
-
-::HC-W6-016::Which concept is best described as: Clear, audience-centred wording that supports rapid understanding and use. {
-=Plain language#Correct. Clear, audience-centred wording that supports rapid understanding and use.
-~Actionability#Not the best answer. Clear, audience-centred wording that supports rapid understanding and use.
-~Comprehension testing#Not the best answer. Clear, audience-centred wording that supports rapid understanding and use.
-~A/B test#Not the best answer. Clear, audience-centred wording that supports rapid understanding and use.
+::HC-W6-M09::A chart uses 3D bars that make small differences appear large. Which diagnosis or concept best identifies the main communication issue? {
+=misleading visual encoding#Correct. Visual design can alter perceived magnitude.
+~need for behavioural usability testing#Not the best answer. Visual design can alter perceived magnitude.
+~vague probability language#Not the best answer. Visual design can alter perceived magnitude.
+~ceremonial pre-testing#Not the best answer. Visual design can alter perceived magnitude.
 }
 
-::HC-W6-017::In a national public-health campaign, which concept best matches this situation: Clear, audience-centred wording that supports rapid understanding and use. {
-=Plain language#Correct. Clear, audience-centred wording that supports rapid understanding and use.
-~Acceptability#Not the best answer. Clear, audience-centred wording that supports rapid understanding and use.
-~Loss framing#Not the best answer. Clear, audience-centred wording that supports rapid understanding and use.
-~Cognitive interview#Not the best answer. Clear, audience-centred wording that supports rapid understanding and use.
+::HC-W6-M10::A chart uses 3D bars that make small differences appear large. What is the strongest next response? {
+=Use a simple proportional display with labelled axes and no decorative distortion.#Correct. Visual design can alter perceived magnitude.
+~Observe users explaining or demonstrating dosing and revise layout or instructions based on errors.#Not the best answer. Visual design can alter perceived magnitude.
+~Use an understandable numeric frequency and compare it with relevant benefits or risks.#Not the best answer. Visual design can alter perceived magnitude.
+~Pause production, document the issue and revise before scaling the material.#Not the best answer. Visual design can alter perceived magnitude.
 }
 
-::HC-W6-018::A communicator needs to recognise the following idea: Clear, audience-centred wording that supports rapid understanding and use. Which term is most appropriate? {
-=Plain language#Correct. Clear, audience-centred wording that supports rapid understanding and use.
-~Core message#Not the best answer. Clear, audience-centred wording that supports rapid understanding and use.
-~Gain framing#Not the best answer. Clear, audience-centred wording that supports rapid understanding and use.
-~Credibility testing#Not the best answer. Clear, audience-centred wording that supports rapid understanding and use.
+::HC-W6-M11::A medicine label is rewritten in simpler language but dosing errors persist. Which diagnosis or concept best identifies the main communication issue? {
+=need for behavioural usability testing#Correct. Readability alone does not guarantee correct use.
+~vague probability language#Not the best answer. Readability alone does not guarantee correct use.
+~ceremonial pre-testing#Not the best answer. Readability alone does not guarantee correct use.
+~recall substituted for comprehension#Not the best answer. Readability alone does not guarantee correct use.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 06/Comprehension testing
-
-::HC-W6-019::Which concept is best described as: Assessment of what people think a message means. {
-=Comprehension testing#Correct. Assessment of what people think a message means.
-~Gain framing#Not the best answer. Assessment of what people think a message means.
-~Plain language#Not the best answer. Assessment of what people think a message means.
-~Call to action#Not the best answer. Assessment of what people think a message means.
+::HC-W6-M12::A medicine label is rewritten in simpler language but dosing errors persist. What is the strongest next response? {
+=Observe users explaining or demonstrating dosing and revise layout or instructions based on errors.#Correct. Readability alone does not guarantee correct use.
+~Use an understandable numeric frequency and compare it with relevant benefits or risks.#Not the best answer. Readability alone does not guarantee correct use.
+~Pause production, document the issue and revise before scaling the material.#Not the best answer. Readability alone does not guarantee correct use.
+~Measure whether people can explain the intended meaning and next action, not only repeat words.#Not the best answer. Readability alone does not guarantee correct use.
 }
 
-::HC-W6-020::In a district vaccination programme, which concept best matches this situation: Assessment of what people think a message means. {
-=Comprehension testing#Correct. Assessment of what people think a message means.
-~Credibility testing#Not the best answer. Assessment of what people think a message means.
-~Core message#Not the best answer. Assessment of what people think a message means.
-~Loss framing#Not the best answer. Assessment of what people think a message means.
+::HC-W6-M13::A message says vaccine side effects are extremely rare without defining the frequency. Which diagnosis or concept best identifies the main communication issue? {
+=vague probability language#Correct. Words such as rare are interpreted differently by different people.
+~ceremonial pre-testing#Not the best answer. Words such as rare are interpreted differently by different people.
+~recall substituted for comprehension#Not the best answer. Words such as rare are interpreted differently by different people.
+~inaccessible visual design#Not the best answer. Words such as rare are interpreted differently by different people.
 }
 
-::HC-W6-021::A communicator needs to recognise the following idea: Assessment of what people think a message means. Which term is most appropriate? {
-=Comprehension testing#Correct. Assessment of what people think a message means.
-~Cognitive interview#Not the best answer. Assessment of what people think a message means.
-~Supporting evidence#Not the best answer. Assessment of what people think a message means.
-~Acceptability#Not the best answer. Assessment of what people think a message means.
+::HC-W6-M14::A message says vaccine side effects are extremely rare without defining the frequency. What is the strongest next response? {
+=Use an understandable numeric frequency and compare it with relevant benefits or risks.#Correct. Words such as rare are interpreted differently by different people.
+~Pause production, document the issue and revise before scaling the material.#Not the best answer. Words such as rare are interpreted differently by different people.
+~Measure whether people can explain the intended meaning and next action, not only repeat words.#Not the best answer. Words such as rare are interpreted differently by different people.
+~Add labels, patterns or symbols and test contrast so meaning does not depend on colour perception.#Not the best answer. Words such as rare are interpreted differently by different people.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 06/Credibility testing
-
-::HC-W6-022::Which concept is best described as: Assessment of whether people believe the message and trust the source. {
-=Credibility testing#Correct. Assessment of whether people believe the message and trust the source.
-~Gain framing#Not the best answer. Assessment of whether people believe the message and trust the source.
-~Plain language#Not the best answer. Assessment of whether people believe the message and trust the source.
-~Comprehension testing#Not the best answer. Assessment of whether people believe the message and trust the source.
+::HC-W6-M15::A message pre-test finds confusion but the final product is unchanged because printing is already booked. Which diagnosis or concept best identifies the main communication issue? {
+=ceremonial pre-testing#Correct. Pre-testing has value only if findings can change the product.
+~recall substituted for comprehension#Not the best answer. Pre-testing has value only if findings can change the product.
+~inaccessible visual design#Not the best answer. Pre-testing has value only if findings can change the product.
+~selection bias in message testing#Not the best answer. Pre-testing has value only if findings can change the product.
 }
 
-::HC-W6-023::In a maternal-health campaign, which concept best matches this situation: Assessment of whether people believe the message and trust the source. {
-=Credibility testing#Correct. Assessment of whether people believe the message and trust the source.
-~Call to action#Not the best answer. Assessment of whether people believe the message and trust the source.
-~A/B test#Not the best answer. Assessment of whether people believe the message and trust the source.
-~Cognitive interview#Not the best answer. Assessment of whether people believe the message and trust the source.
+::HC-W6-M16::A message pre-test finds confusion but the final product is unchanged because printing is already booked. What is the strongest next response? {
+=Pause production, document the issue and revise before scaling the material.#Correct. Pre-testing has value only if findings can change the product.
+~Measure whether people can explain the intended meaning and next action, not only repeat words.#Not the best answer. Pre-testing has value only if findings can change the product.
+~Add labels, patterns or symbols and test contrast so meaning does not depend on colour perception.#Not the best answer. Pre-testing has value only if findings can change the product.
+~Include intended non-users and people facing the barriers the campaign aims to change.#Not the best answer. Pre-testing has value only if findings can change the product.
+}
+$CATEGORY: LIPPS/Health Communication/Week 06/Institutional
+::HC-W6-I01::A campaign claims a message is understandable because 90 percent recalled the slogan. Which diagnosis or concept best identifies the main communication issue? {
+=recall substituted for comprehension#Correct. Memory of a slogan can coexist with misunderstanding.
+~inaccessible visual design#Not the best answer. Memory of a slogan can coexist with misunderstanding.
+~selection bias in message testing#Not the best answer. Memory of a slogan can coexist with misunderstanding.
+~buried main message and action#Not the best answer. Memory of a slogan can coexist with misunderstanding.
 }
 
-::HC-W6-024::A communicator needs to recognise the following idea: Assessment of whether people believe the message and trust the source. Which term is most appropriate? {
-=Credibility testing#Correct. Assessment of whether people believe the message and trust the source.
-~Core message#Not the best answer. Assessment of whether people believe the message and trust the source.
-~Acceptability#Not the best answer. Assessment of whether people believe the message and trust the source.
-~Loss framing#Not the best answer. Assessment of whether people believe the message and trust the source.
+::HC-W6-I02::A campaign claims a message is understandable because 90 percent recalled the slogan. What is the strongest next response? {
+=Measure whether people can explain the intended meaning and next action, not only repeat words.#Correct. Memory of a slogan can coexist with misunderstanding.
+~Add labels, patterns or symbols and test contrast so meaning does not depend on colour perception.#Not the best answer. Memory of a slogan can coexist with misunderstanding.
+~Include intended non-users and people facing the barriers the campaign aims to change.#Not the best answer. Memory of a slogan can coexist with misunderstanding.
+~Put the main action and essential benefit early, then support it with only the detail needed for the decision.#Not the best answer. Memory of a slogan can coexist with misunderstanding.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 06/Acceptability
-
-::HC-W6-025::Which concept is best described as: Whether content and delivery are considered appropriate and tolerable by the intended audience. {
-=Acceptability#Correct. Whether content and delivery are considered appropriate and tolerable by the intended audience.
-~Gain framing#Not the best answer. Whether content and delivery are considered appropriate and tolerable by the intended audience.
-~Comprehension testing#Not the best answer. Whether content and delivery are considered appropriate and tolerable by the intended audience.
-~Loss framing#Not the best answer. Whether content and delivery are considered appropriate and tolerable by the intended audience.
+::HC-W6-I03::A graphic uses red and green alone to distinguish safe and unsafe categories. Which diagnosis or concept best identifies the main communication issue? {
+=inaccessible visual design#Correct. Accessibility requires redundant visual cues.
+~selection bias in message testing#Not the best answer. Accessibility requires redundant visual cues.
+~buried main message and action#Not the best answer. Accessibility requires redundant visual cues.
+~jargon and vague action#Not the best answer. Accessibility requires redundant visual cues.
 }
 
-::HC-W6-026::In an HIV prevention programme, which concept best matches this situation: Whether content and delivery are considered appropriate and tolerable by the intended audience. {
-=Acceptability#Correct. Whether content and delivery are considered appropriate and tolerable by the intended audience.
-~Credibility testing#Not the best answer. Whether content and delivery are considered appropriate and tolerable by the intended audience.
-~A/B test#Not the best answer. Whether content and delivery are considered appropriate and tolerable by the intended audience.
-~Core message#Not the best answer. Whether content and delivery are considered appropriate and tolerable by the intended audience.
+::HC-W6-I04::A graphic uses red and green alone to distinguish safe and unsafe categories. What is the strongest next response? {
+=Add labels, patterns or symbols and test contrast so meaning does not depend on colour perception.#Correct. Accessibility requires redundant visual cues.
+~Include intended non-users and people facing the barriers the campaign aims to change.#Not the best answer. Accessibility requires redundant visual cues.
+~Put the main action and essential benefit early, then support it with only the detail needed for the decision.#Not the best answer. Accessibility requires redundant visual cues.
+~Replace the phrase with a concrete instruction specifying what symptoms and when to return.#Not the best answer. Accessibility requires redundant visual cues.
 }
 
-::HC-W6-027::A communicator needs to recognise the following idea: Whether content and delivery are considered appropriate and tolerable by the intended audience. Which term is most appropriate? {
-=Acceptability#Correct. Whether content and delivery are considered appropriate and tolerable by the intended audience.
-~Supporting evidence#Not the best answer. Whether content and delivery are considered appropriate and tolerable by the intended audience.
-~Actionability#Not the best answer. Whether content and delivery are considered appropriate and tolerable by the intended audience.
-~Plain language#Not the best answer. Whether content and delivery are considered appropriate and tolerable by the intended audience.
+::HC-W6-I05::A pre-test sample contains only people already using the service the message is meant to promote. Which diagnosis or concept best identifies the main communication issue? {
+=selection bias in message testing#Correct. Existing users may interpret the product differently from priority audiences.
+~buried main message and action#Not the best answer. Existing users may interpret the product differently from priority audiences.
+~jargon and vague action#Not the best answer. Existing users may interpret the product differently from priority audiences.
+~incomplete risk framing#Not the best answer. Existing users may interpret the product differently from priority audiences.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 06/Actionability
-
-::HC-W6-028::Which concept is best described as: Whether the audience can identify and realistically perform the recommended action. {
-=Actionability#Correct. Whether the audience can identify and realistically perform the recommended action.
-~Core message#Not the best answer. Whether the audience can identify and realistically perform the recommended action.
-~A/B test#Not the best answer. Whether the audience can identify and realistically perform the recommended action.
-~Credibility testing#Not the best answer. Whether the audience can identify and realistically perform the recommended action.
+::HC-W6-I06::A pre-test sample contains only people already using the service the message is meant to promote. What is the strongest next response? {
+=Include intended non-users and people facing the barriers the campaign aims to change.#Correct. Existing users may interpret the product differently from priority audiences.
+~Put the main action and essential benefit early, then support it with only the detail needed for the decision.#Not the best answer. Existing users may interpret the product differently from priority audiences.
+~Replace the phrase with a concrete instruction specifying what symptoms and when to return.#Not the best answer. Existing users may interpret the product differently from priority audiences.
+~Add absolute risk or natural frequencies so people can judge the size of the benefit.#Not the best answer. Existing users may interpret the product differently from priority audiences.
 }
 
-::HC-W6-029::In a malaria-control programme, which concept best matches this situation: Whether the audience can identify and realistically perform the recommended action. {
-=Actionability#Correct. Whether the audience can identify and realistically perform the recommended action.
-~Acceptability#Not the best answer. Whether the audience can identify and realistically perform the recommended action.
-~Cognitive interview#Not the best answer. Whether the audience can identify and realistically perform the recommended action.
-~Plain language#Not the best answer. Whether the audience can identify and realistically perform the recommended action.
-}
-
-::HC-W6-030::A communicator needs to recognise the following idea: Whether the audience can identify and realistically perform the recommended action. Which term is most appropriate? {
-=Actionability#Correct. Whether the audience can identify and realistically perform the recommended action.
-~Loss framing#Not the best answer. Whether the audience can identify and realistically perform the recommended action.
-~Call to action#Not the best answer. Whether the audience can identify and realistically perform the recommended action.
-~Supporting evidence#Not the best answer. Whether the audience can identify and realistically perform the recommended action.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 06/Cognitive interview
-
-::HC-W6-031::Which concept is best described as: Individual interview exploring how a person understands and responds to wording or content. {
-=Cognitive interview#Correct. Individual interview exploring how a person understands and responds to wording or content.
-~Supporting evidence#Not the best answer. Individual interview exploring how a person understands and responds to wording or content.
-~Acceptability#Not the best answer. Individual interview exploring how a person understands and responds to wording or content.
-~Actionability#Not the best answer. Individual interview exploring how a person understands and responds to wording or content.
-}
-
-::HC-W6-032::In a school health programme, which concept best matches this situation: Individual interview exploring how a person understands and responds to wording or content. {
-=Cognitive interview#Correct. Individual interview exploring how a person understands and responds to wording or content.
-~Gain framing#Not the best answer. Individual interview exploring how a person understands and responds to wording or content.
-~Core message#Not the best answer. Individual interview exploring how a person understands and responds to wording or content.
-~Credibility testing#Not the best answer. Individual interview exploring how a person understands and responds to wording or content.
-}
-
-::HC-W6-033::A communicator needs to recognise the following idea: Individual interview exploring how a person understands and responds to wording or content. Which term is most appropriate? {
-=Cognitive interview#Correct. Individual interview exploring how a person understands and responds to wording or content.
-~A/B test#Not the best answer. Individual interview exploring how a person understands and responds to wording or content.
-~Plain language#Not the best answer. Individual interview exploring how a person understands and responds to wording or content.
-~Call to action#Not the best answer. Individual interview exploring how a person understands and responds to wording or content.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 06/A-B test
-
-::HC-W6-034::Which concept is best described as: Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting. {
-=A/B test#Correct. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-~Supporting evidence#Not the best answer. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-~Gain framing#Not the best answer. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-~Credibility testing#Not the best answer. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-}
-
-::HC-W6-035::In a refugee-settlement health team, which concept best matches this situation: Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting. {
-=A/B test#Correct. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-~Call to action#Not the best answer. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-~Core message#Not the best answer. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-~Plain language#Not the best answer. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-}
-
-::HC-W6-036::A communicator needs to recognise the following idea: Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting. Which term is most appropriate? {
-=A/B test#Correct. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-~Comprehension testing#Not the best answer. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-~Acceptability#Not the best answer. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-~Cognitive interview#Not the best answer. Comparison of alternative content versions on a defined outcome, usually in a controlled digital setting.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 06/Applied decision
-
-::HC-W6-037::In Week 6 (Message Development and Pre-testing), in a noncommunicable-disease screening programme, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W6-038::In Week 6 (Message Development and Pre-testing), in an outbreak response team, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W6-039::In Week 6 (Message Development and Pre-testing), in a youth-friendly service, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W6-040::In Week 6 (Message Development and Pre-testing), in a rural health centre, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-}
-
-::HC-W6-041::In Week 6 (Message Development and Pre-testing), in an urban community clinic, a campaign uses a striking statistic with no denominator or baseline. What is the main communication risk? {
-=The audience may misinterpret the magnitude of risk or effect#Correct. Risk information needs context, denominators and appropriate framing.
-~The message will always be too long#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~Denominators are irrelevant in communication#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~The source becomes automatically credible#Not the best answer. Risk information needs context, denominators and appropriate framing.
-}
-
-::HC-W6-042::In Week 6 (Message Development and Pre-testing), in a national public-health campaign, a team labels non-adoption as “ignorance” without studying access, norms or service barriers. What should happen first? {
-=Conduct formative diagnosis of behavioural and communication determinants#Correct. Audience and behavioural diagnosis should precede message selection.
-~Design a harsher slogan#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Increase fear immediately#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Assume knowledge is the only determinant#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-}
-
-::HC-W6-043::In Week 6 (Message Development and Pre-testing), in a district vaccination programme, an organisation changes guidance when new evidence arrives but tries to hide the earlier advice. What would better protect trust? {
-=Explain what changed, why it changed, and what people should do now#Correct. Transparent updates can preserve credibility when evidence evolves.
-~Delete all previous communication without explanation#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Claim the guidance never changed#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Delay future updates until certainty is complete#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-}
-
-::HC-W6-044::In Week 6 (Message Development and Pre-testing), in a maternal-health campaign, a communication strategy works well for smartphone users but misses people without data access. Which principle needs stronger attention? {
-=Equity and accessibility#Correct. Effectiveness should be assessed across groups, including those facing access barriers.
-~Message saturation#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Brand visibility#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Technical complexity#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-}
-
-::HC-W6-045::In Week 6 (Message Development and Pre-testing), in an HIV prevention programme, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W6-046::In Week 6 (Message Development and Pre-testing), in a malaria-control programme, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W6-047::In Week 6 (Message Development and Pre-testing), in a school health programme, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W6-048::In Week 6 (Message Development and Pre-testing), in a refugee-settlement health team, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-}

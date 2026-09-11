@@ -1,4 +1,4 @@
-# LIPPS v1.6 starter
+# LIPPS v2.2 starter
 
 **Tagline:** Evidence is never the whole story.
 
@@ -66,7 +66,7 @@ The Epidemiology course now progresses continuously through:
 11. Surveillance, Outbreak Investigation and Field Epidemiology
 12. Causal Interpretation and Critical Appraisal
 
-The next content priority after course-wide QA is the **Health Communication 12-week course**, while Moodle can be installed and branded in parallel.
+Both flagship 12-week courses are now populated. Health Communication Weeks 1–12 have also undergone a deeper content and assessment-bank revision. The current priority is repository deployment, browser-authoring activation, Moodle installation/branding, and continued evidence/content QA.
 
 ## Week 1 content status
 
@@ -100,3 +100,8 @@ New Moodle banks:
 - Week 12: 65 items
 
 See `QA-EPIDEMIOLOGY.md` for course-wide QA and source-boundary notes.
+
+
+## Browser authoring
+
+LIPPS v2.2 includes an `/admin/` authoring layer. The GitHub repository target is now configured as `carepointpro-Lipps/Lipps`. See `admin/README.md`. Once the repository exists and authentication is connected, authorised editors can edit Quarto source in the browser, use an editorial workflow, and publish through the existing GitHub Action. Git commits provide version history. The production domain is intentionally still unset.

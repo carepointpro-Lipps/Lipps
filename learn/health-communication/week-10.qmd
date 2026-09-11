@@ -112,6 +112,68 @@ Social listening should minimise collection of identifiable information, avoid t
 :::
 
 ::: {.lipps-section}
+## DEEPEN · Manage information risk, not every incorrect sentence
+
+WHO describes an infodemic as an overabundance of information, including false or misleading information, that can create confusion, mistrust and harmful behaviour. Infodemic management is therefore broader than fact-checking individual posts.
+
+### Distinguish the information problem
+
+**Misinformation** is false or inaccurate information shared without necessarily intending harm. **Disinformation** is deliberately false or manipulated information intended to deceive. Harmful communication may also involve technically true information used out of context. The response depends on reach, credibility, audience vulnerability and likely health impact—not only truth status.
+
+### Listen before correcting
+
+Social listening, community feedback, hotline questions and frontline-worker reports help identify recurring concerns and information voids. Code concerns by topic, audience, location, channel and potential consequence. Protect privacy and avoid storing unnecessary personal identifiers.
+
+### Prioritise
+
+Not every rumour deserves amplification. A practical matrix considers **reach, growth, credibility, behavioural consequence and affected population**. A false claim seen by ten people may need quiet correction; a rapidly growing claim that discourages emergency care may require immediate coordinated response.
+
+### Prebunking and debunking
+
+Prebunking anticipates predictable misleading tactics or claims before they spread widely. Debunking corrects a claim after exposure. Corrections should lead with accurate information, explain the problem clearly, avoid repeating sensational falsehoods unnecessarily and give people a useful action.
+
+### Fill information voids
+
+Silence can be an intervention failure. When authorities do not explain an adverse event, service interruption or policy change, alternative explanations flourish. Rapid, transparent communication reduces the space for speculation.
+
+### Trusted messengers and resilience
+
+People judge information partly through relationships. Work with trusted local messengers, but do not use trust as a shortcut for poor evidence. Long-term resilience also requires media and health literacy, community dialogue and institutions that respond to legitimate concerns.
+
+### What could fool us?
+
+Online volume is not the same as population belief. Bots and highly active users can distort apparent prevalence. Removing a post can move the claim into less visible channels. Evaluate whether the response changes understanding, confidence or harmful behaviour—not only whether the content disappears.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Triage an information signal
+
+Use a simple priority score rather than reacting equally to every rumour.
+
+| Dimension | Low priority | High priority |
+|---|---|---|
+| reach | isolated | rapidly expanding |
+| credibility | implausible source | trusted or authority-like source |
+| health consequence | little behavioural effect | delays care or promotes dangerous action |
+| vulnerability | low-risk audience | people facing immediate health risk |
+| persistence | fading | recurring across channels |
+
+A high-priority signal should trigger rapid verification, message preparation, messenger selection and monitoring. A low-priority signal may be best handled quietly through targeted clarification to avoid amplification.
+
+### Correction structure
+
+**Fact first → brief explanation → clear action → trusted source.**
+
+Example: "The measles vaccine cannot cause measles infection. It uses a weakened virus that trains the immune system. Children who are due for vaccination should attend the listed clinics this week. Updated clinic information is available from..."
+
+The exact wording must fit the local evidence and audience. The structure keeps accurate information more prominent than the false claim.
+
+### Listening dashboard
+
+Track topic, question/claim, source/channel, audience, location, trend, potential harm, response owner and status. Avoid retaining personal identifiers unless genuinely necessary.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 During an immunisation campaign, rumours circulate that the vaccine is part of a fertility-control programme. Some versions are low reach; another is repeated by a widely followed local personality. Health workers report that caregivers are asking whether the vaccine contains hormones.
@@ -142,9 +204,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 10 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 10 bank of 52 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 10 bank of 30 items.
 
-**Initial time limit:** 12 minutes.  
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -160,6 +222,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **WHO/UNICEF infodemic insights guidance.** Social listening and translation of information signals into action.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-10-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

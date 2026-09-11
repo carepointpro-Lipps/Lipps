@@ -55,3 +55,17 @@ Week 2 introduces the Health Belief Model, Theory of Planned Behaviour, Social C
 **Source rule**  
 LIPPS examples and synthesis frameworks are teaching devices. They should not be presented as substitutes for current WHO, ministry, professional or institutional guidance when a learner is making an actual public-health decision.
 :::
+
+
+## Authoring and evidence update — v2.0
+
+The expanded lessons use these sources as **framework anchors**, not as scripts to reproduce verbatim:
+
+- World Health Organization. **Principles for effective communications**: accessible, actionable, credible, relevant, timely and understandable. https://www.who.int/about/communications/principles
+- World Health Organization. **RCCE competency framework** (2024), emphasizing community-centred emergency communication before, during and after emergencies. https://www.who.int/publications/i/item/9789240092501
+- World Health Organization. **Infodemic management** resources, including listening to community concerns, improving risk understanding, building resilience to misinformation and engaging communities. https://www.who.int/health-topics/infodemic
+- U.S. CDC. **Clear Communication Index**, a research-based tool for developing and assessing public communication materials. https://www.cdc.gov/ccindex/
+- U.S. CDC. **Crisis & Emergency Risk Communication Manual**. https://www.cdc.gov/cerc/php/cerc-manual/index.html
+- U.S. National Cancer Institute. **Making Health Communication Programs Work** and **Making Data Talk**. https://www.cancer.gov/publications/health-communication
+
+LIPPS examples, synthesis, assessment scenarios and SIGNAL framework remain original instructional material.

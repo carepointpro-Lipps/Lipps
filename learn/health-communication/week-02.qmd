@@ -106,6 +106,63 @@ A theoretical construct becomes useful when it can be translated into something 
 :::
 
 ::: {.lipps-section}
+## DEEPEN · From theory to an intervention mechanism
+
+A theory becomes useful only when it changes what you **measure, design or decide**. LIPPS therefore uses a four-step chain:
+
+**determinant → mechanism → intervention component → indicator**.
+
+If women miss antenatal contacts because they believe later visits add little value, the determinant is not simply "poor knowledge". A plausible mechanism is low perceived benefit. Communication might therefore use a credible explanation of what later contacts detect that the first visit cannot. An intermediate indicator could be the proportion of women who correctly identify the purpose of later contacts. By contrast, if women intend to attend but cannot afford transport, the dominant problem is physical opportunity. A stronger poster does not create transport.
+
+| Diagnostic question | Useful theoretical lens | Example response |
+|---|---|---|
+| Does the person believe the threat applies to them? | Health Belief Model | clarify susceptibility without exaggerating fear |
+| Do important others approve of the behaviour? | Theory of Planned Behaviour | address norms and influential referents |
+| Does the person feel able to perform the behaviour? | Self-efficacy / perceived control | demonstration, rehearsal, skills and problem-solving |
+| Is behaviour constrained by resources or the environment? | COM-B / social-ecological thinking | change opportunity, services or policy as well as communication |
+| Will people see the innovation as useful and compatible? | Diffusion of innovations | demonstrate relative advantage and fit with routines |
+
+### Theory fit, not theory shopping
+
+A common academic error is to mention several theories because a proposal appears more sophisticated when it has many boxes and arrows. That is **theory decoration**. A defensible choice begins with evidence about the behaviour, identifies the most plausible determinants, and then selects the smallest theoretical toolkit that helps explain or change them.
+
+### Worked example · Hypertension screening
+
+Suppose adults in an urban community agree that hypertension is serious, but many say, "I feel fine, so I do not need screening." The important barrier is not severity. It is the belief that absence of symptoms implies absence of risk. A useful communication objective might be: *increase the proportion of adults aged 30–60 who understand that hypertension may be asymptomatic and who can identify a convenient screening point.* If screening sites are open only during working hours, however, the programme must also address opportunity.
+
+### What could fool us?
+
+A determinant measured in a cross-sectional survey may be **associated** with behaviour without being its cause. People who already attend services may subsequently report higher self-efficacy or more favourable attitudes. Social-desirability bias can make stated intentions look stronger than real-world behaviour. Theory should organize inquiry, not manufacture causality from weak data.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Diagnose before you communicate
+
+Use this rapid worksheet before approving a behaviour-change campaign.
+
+| Step | Question | ANC example |
+|---|---|---|
+| **Behaviour** | What exactly should change? | complete the recommended antenatal contacts |
+| **Observed gap** | What is happening now? | many women attend once but do not return |
+| **Candidate determinant** | What evidence suggests why? | later visits seen as unnecessary; transport and queues also matter |
+| **Theory construct** | Which construct helps organise that determinant? | perceived benefit, subjective norm, opportunity |
+| **Communication mechanism** | What could communication plausibly change? | understanding of the purpose of later visits; partner support |
+| **Non-communication action** | What must the service/system change? | appointment flow, waiting time, transport barriers |
+| **Intermediate indicator** | What should change before behaviour? | correct understanding, confidence, partner support |
+| **Behaviour indicator** | What final action is observed? | attendance at subsequent contacts |
+
+The purpose of the table is not to force every programme into one theory. It is to make the causal story visible enough to challenge. If the proposed message has no plausible path to the measured outcome, the strategy needs revision.
+
+### Mini worked example
+
+A district survey finds that 88% of women know antenatal care is recommended, 73% intend to return, but only 41% complete later contacts. Interviews show long queues and partner-controlled transport money. A knowledge campaign is therefore a weak first response. The evidence points toward opportunity and household decision-making. Communication may still help by preparing partners and clarifying appointment value, but service redesign is central.
+
+### Reflection
+
+Before naming a theory, write one sentence beginning: **"The behaviour is not occurring because..."** If that sentence is vague, theory selection is premature.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 A district has low completion of four or more antenatal contacts. Interviews suggest that many women intend to attend but face transport costs, partners sometimes control household money, clinic queues are long, and some women believe later visits are unnecessary if the first visit found no problem.
@@ -136,9 +193,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 2 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 2 bank of 48 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 2 bank of 30 items.
 
-**Initial time limit:** 11 minutes.  
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -154,6 +211,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **Michie, van Stralen & West, Behaviour Change Wheel / COM-B.** Capability, opportunity and motivation as determinants of behaviour.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-02-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

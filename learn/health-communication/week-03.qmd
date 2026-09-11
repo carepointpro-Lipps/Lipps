@@ -113,6 +113,59 @@ Useful methods include interviews, focus groups, observation, rapid intercepts, 
 :::
 
 ::: {.lipps-section}
+## DEEPEN · Audience insight is more than demographics
+
+Age, sex and residence describe an audience; they rarely explain a decision. Useful audience analysis asks about **goals, constraints, language, trust, routines, social influence, information access, perceived risk and the decision context**. Two women of the same age in the same district may require very different communication if one has private smartphone access and supportive family members while the other shares a phone, depends on a partner for transport money and is concerned about confidentiality.
+
+### Segmentation without stereotyping
+
+Segmentation groups people because a meaningful communication strategy differs between groups. A segment should therefore be **actionable**. "Young people" is often too broad. "First-year university students who know where HIV testing is offered but fear being recognized at the clinic" identifies a specific communication and service problem. Personas can help teams imagine decisions, but they must be grounded in evidence and should never become fictional stereotypes presented as research findings.
+
+### Health literacy as an interaction
+
+Health literacy is not simply a person's reading ability. Communication becomes easier or harder depending on how organisations design forms, signs, counselling, instructions and digital interfaces. A universal-precautions approach assumes that **anyone can misunderstand complex health information**, especially when anxious, ill or under time pressure. Plain language, clear structure, visual support and teach-back are therefore good design rather than remedial treatment for a "low-literacy" group.
+
+### Culture is explanatory only when you investigate it
+
+"Culture" should not become a residual explanation for behaviour we have not studied. Ask what specific norm, value, social role, history or practice influences the decision. Then ask whether it is shared, contested or changing. Community members are not culturally identical.
+
+### Accessibility and exclusion
+
+Audience analysis should explicitly test whether communication excludes people because of disability, language, literacy, cost, connectivity, gendered phone ownership, geography or social status. The WHO communication framework emphasises accessibility, relevance and understandability, while the CDC Clear Communication Index provides practical criteria for assessing public communication materials.
+
+### Formative research toolkit
+
+A rapid audience analysis may combine short interviews, focus groups, observation, service data, call-centre questions, social listening and review of previous campaign data. The purpose is not to collect every possible fact. It is to reduce uncertainty about the decision you are trying to influence.
+
+### What could fool us?
+
+The loudest voices in a focus group may not represent the wider audience. Online comments systematically exclude people who are offline. Translating a message accurately does not guarantee that the **meaning** survives translation. And a subgroup that appears "hard to reach" may actually be easy to reach through channels the programme has not bothered to use.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Build a rapid audience-insight protocol
+
+Suppose a district wants to improve adolescent use of confidential HIV testing. Before designing messages, collect enough evidence to answer six questions:
+
+1. **Decision:** What decision must the adolescent make, and at what moment?
+2. **Barrier:** What makes that decision difficult—fear, stigma, cost, location, privacy, norms, service experience?
+3. **Influencers:** Which peers, partners, parents, providers or online voices matter?
+4. **Access:** Which channels are available privately and affordably?
+5. **Language and literacy:** What words, formats and visual cues are actually understood?
+6. **Trust:** What would make the service or messenger believable?
+
+A practical rapid design might include 8–12 individual interviews with adolescents, a few interviews with providers, observation of the service journey, review of routine service data, and a short prototype test. That is often more useful than a large generic knowledge survey.
+
+### Evidence-to-segment example
+
+If interviews reveal that school-going adolescents know testing locations but fear being recognised, while out-of-school adolescents lack information about opening hours, these are **different communication problems**. The first needs privacy and trust solutions; the second needs access information. A single youth message would hide the distinction.
+
+### Minimum equity check
+
+For every segment ask: who is absent because of disability, language, geography, phone access, social status or safety concerns? Then decide whether the research method itself needs adaptation.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 A maternal-health programme wants to encourage birth preparedness in an urban informal settlement and a rural district. In the urban area, most women have smartphones but frequently change numbers; many work long hours. In the rural district, radio is common, network coverage is patchy and household financial decisions often involve partners or older relatives. Both settings include women with low literacy and several local languages.
@@ -143,9 +196,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 3 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 3 bank of 48 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 3 bank of 30 items.
 
-**Initial time limit:** 11 minutes.  
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -161,6 +214,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **WHO Health Literacy resources.** Health literacy as an interaction between people and health information/services.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-03-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

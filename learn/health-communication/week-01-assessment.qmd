@@ -1,0 +1,137 @@
+---
+title: "Health Communication Week 1 — Assessment Blueprint"
+description: "Curated assessment architecture, question-bank map and authentic-task rubric for Foundations of Health Communication."
+---
+
+# Week 1 assessment blueprint
+
+This page is an **instructor-facing assessment specification** for *Foundations of Health Communication*. It establishes the quality standard that should be used when the remaining Health Communication banks are rewritten.
+
+## Assessment purpose
+
+Week 1 should not reward memorising isolated definitions. A prepared learner should be able to diagnose a communication problem, distinguish communication from programme constraints, select defensible objectives, interpret audience response and judge whether a communication claim is supported by evidence.
+
+The redesigned bank contains **30 genuinely distinct items** rather than multiple paraphrases of the same definition.
+
+| Pool | Items | Intended use |
+|---|---:|---|
+| Practice | 8 | Formative learning with immediate explanatory feedback and repeat attempts |
+| Mastery | 16 | Weekly graded quiz; scenario-based application and interpretation |
+| Institutional | 6 | Protected seed pool for later formal assessment; do not expose in routine practice |
+
+::: {.lipps-callout}
+**Important**  
+The six institutional items are a **seed pool**, not yet a sufficient stand-alone high-stakes examination bank. Expand and independently review this pool before consequential institutional use.
+:::
+
+## Recommended Moodle configuration
+
+### Practice
+
+- Use all 8 practice items or allow free navigation through them.
+- Unlimited or generous time.
+- Multiple attempts.
+- Immediate option-level feedback.
+- Do not include practice performance in the formal course grade unless the institution deliberately chooses participation credit.
+
+### Mastery
+
+- Randomly draw **10 of the 16 mastery items**.
+- Pilot time limit: **12 minutes** because these are scenario-reading items rather than rapid definition recall.
+- One question per page.
+- Shuffle answer options.
+- One scored attempt in mastery mode; a second learning attempt can be institution-configurable.
+- Analyse response time and discrimination before tightening or extending timing.
+
+### Institutional assessment
+
+- Keep this category hidden from student practice.
+- Do not publish the item text on the public LIPPS site.
+- Add more independently reviewed items before using the category for a consequential examination.
+- Delay answer feedback until the assessment window closes.
+
+## Learning-outcome map
+
+The Week 1 outcomes are coded as follows:
+
+- **LO1:** distinguish health communication from dissemination, publicity and information transfer alone;
+- **LO2:** analyse communication as a transactional process involving source, message, channel, audience, context, feedback and noise;
+- **LO3:** distinguish communication objectives from programme activities and distal health outcomes;
+- **LO4:** select and combine interpersonal, organisational, community, mass and digital levels appropriately;
+- **LO5:** judge communication against accessibility, actionability, relevance, timeliness and understandability;
+- **LO6:** explain how trust, culture, language, prior experience and social context shape interpretation;
+- **LO7:** identify why accurate communication may fail and avoid blaming audiences for non-communication barriers;
+- **LO8:** perform a basic communication diagnosis and identify evidence needed before claiming success.
+
+| Item | Pool | Outcome | Cognitive demand | Main domain |
+|---|---|---|---|---|
+| HC-W1-P01 | Practice | LO1 | Apply | Communication vs dissemination |
+| HC-W1-P02 | Practice | LO3 | Apply | Communication objectives |
+| HC-W1-P03 | Practice | LO2 | Apply | Communication process |
+| HC-W1-P04 | Practice | LO6 | Analyze | Context and noise |
+| HC-W1-P05 | Practice | LO5 | Apply | Accessibility |
+| HC-W1-P06 | Practice | LO5 | Analyze | Actionability |
+| HC-W1-P07 | Practice | LO4 | Apply | Communication levels |
+| HC-W1-P08 | Practice | LO7 | Analyze | Diagnosing failure |
+| HC-W1-M01 | Mastery | LO8 | Analyze | Communication diagnosis |
+| HC-W1-M02 | Mastery | LO6 | Analyze | Trust and credibility |
+| HC-W1-M03 | Mastery | LO3 | Evaluate | Objective selection |
+| HC-W1-M04 | Mastery | LO2 | Analyze | Transactional communication |
+| HC-W1-M05 | Mastery | LO5 | Evaluate | Timeliness and relevance |
+| HC-W1-M06 | Mastery | LO5 | Analyze | Understandability |
+| HC-W1-M07 | Mastery | LO4 | Evaluate | Channel strategy |
+| HC-W1-M08 | Mastery | LO7 | Analyze | Interpreting campaign data |
+| HC-W1-M09 | Mastery | LO6 | Analyze | Messenger credibility |
+| HC-W1-M10 | Mastery | LO6 | Analyze | Culture and interpretation |
+| HC-W1-M11 | Mastery | LO1 | Evaluate | Communication success |
+| HC-W1-M12 | Mastery | LO8 | Analyze | Problem diagnosis |
+| HC-W1-M13 | Mastery | LO3 | Analyze | Audience and decision |
+| HC-W1-M14 | Mastery | LO7 | Evaluate | Avoiding audience blame |
+| HC-W1-M15 | Mastery | LO2 | Analyze | Noise |
+| HC-W1-M16 | Mastery | LO8 | Evaluate | Evidence and evaluation |
+| HC-W1-I01 | Institutional | LO8 | Evaluate | Integrated diagnosis |
+| HC-W1-I02 | Institutional | LO6 | Evaluate | Credibility under uncertainty |
+| HC-W1-I03 | Institutional | LO3 | Evaluate | Objective alignment |
+| HC-W1-I04 | Institutional | LO7 | Evaluate | Interpreting mixed outcomes |
+| HC-W1-I05 | Institutional | LO5 | Evaluate | Equity and accessibility |
+| HC-W1-I06 | Institutional | LO1 | Evaluate | Claims from communication data |
+
+## Authentic task · Communication Diagnosis Brief
+
+**Task:** Give students a short public-health scenario containing a mixture of message, channel, trust, audience and service-delivery problems. In **800–1,000 words**, students prepare a diagnostic brief that answers:
+
+1. What is the health problem?
+2. What is the communication problem — and what is **not** primarily a communication problem?
+3. Who is the primary audience? Who enables or constrains the decision?
+4. What specific decision or action should communication support?
+5. Where are the likely weaknesses in source, message, channel, context, feedback or trust?
+6. Which WHO communication quality dimensions are most threatened?
+7. What one communication objective would be appropriate?
+8. What evidence would you collect before claiming the communication worked?
+
+Students should be rewarded for **diagnosis before solution**. A polished poster proposal with weak problem analysis should not score highly.
+
+## Rubric — 20 marks
+
+| Criterion | 4 — Excellent | 3 — Good | 2 — Developing | 1 — Weak | 0 — Missing / unsafe |
+|---|---|---|---|---|---|
+| **Problem diagnosis** | Clearly separates the health problem, communication problem and non-communication constraints; prioritises them logically. | Mostly separates the problems with minor ambiguity. | Identifies several issues but mixes communication and programme barriers. | Treats the problem mainly as “lack of awareness” without evidence. | No meaningful diagnosis or makes a clearly unsafe interpretation. |
+| **Audience + decision analysis** | Identifies primary and supporting audiences, decision roles and contextual constraints with a clear rationale. | Correct audiences and decision identified but analysis is incomplete. | Audience is broadly identified but decision roles are vague. | Audience is defined only demographically or without relation to a decision. | No defensible audience or decision identified. |
+| **Communication-process reasoning** | Correctly analyses source, message, channel, context, feedback, trust and noise, focusing on the elements that matter most. | Analyses most relevant elements accurately. | Lists elements but provides limited interpretation. | Uses communication terms superficially or incorrectly. | No usable process analysis. |
+| **Objective + proposed response** | Provides a specific measurable communication objective and a response logically matched to the diagnosis; acknowledges what communication cannot solve. | Objective and response are generally appropriate with minor gaps. | Objective or response is partly appropriate but generic. | Response jumps to a channel/product without a defensible objective. | Proposed response is irrelevant, misleading or potentially harmful. |
+| **Evidence + judgement** | Specifies appropriate indicators for reach/understanding/trust/action and states limits on causal claims; reasoning is concise and evidence-aware. | Identifies useful indicators and mostly cautious interpretation. | Mentions measurement but does not clearly link evidence to claims. | Relies mainly on outputs such as posters printed or views. | No evaluation logic or makes unsupported causal claims. |
+
+**Suggested pass standard:** 10/20, with no score of 0 in *Problem diagnosis* or *Evidence + judgement*. Institutions can adjust this threshold to their regulations.
+
+## Item-writing standard established by Week 1
+
+Every future mastery or institutional question should, where possible:
+
+1. begin with a plausible public-health decision or communication situation;
+2. require application, analysis or evaluation rather than term recognition alone;
+3. use distractors that reflect realistic reasoning errors;
+4. have one defensibly best answer;
+5. give explanatory feedback that teaches the reasoning, not merely labels the answer;
+6. avoid testing trivia that could be answered without understanding the communication problem;
+7. distinguish communication failure from service, policy or access failure; and
+8. avoid overclaiming causation from reach, recall or simple before/after observations.

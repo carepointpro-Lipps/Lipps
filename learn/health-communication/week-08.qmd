@@ -114,6 +114,64 @@ Automated drafting, translation, summarisation and chatbots can increase speed. 
 :::
 
 ::: {.lipps-section}
+## DEEPEN · Digital communication changes the information environment
+
+Digital platforms do more than transmit messages. They rank, recommend, personalise and amplify content. The same health message can therefore reach different people in different contexts, surrounded by comments, competing claims and platform-generated cues about popularity.
+
+### Platform affordances
+
+Short-form video encourages different communication from a clinic portal or WhatsApp group. Design should consider discoverability, sharing, comment culture, privacy, persistence, moderation and whether users can ask questions.
+
+### Metrics hierarchy
+
+Separate **exposure metrics** such as impressions and views from **engagement metrics** such as clicks and comments, **communication outcomes** such as comprehension or trust, and **health or service outcomes** such as vaccination or appointment completion. A viral post can be a communication failure if people share it because it is confusing or controversial.
+
+### Privacy and sensitive health information
+
+A platform may expose a person's interests, group membership or messages to employers, family members or advertisers. Do not assume that a direct message is private merely because it is not public. Collect the minimum data needed, explain its use and avoid unnecessary linkage of identity to sensitive health topics.
+
+### Digital exclusion
+
+Device ownership, disability, data cost, network coverage, language and gendered control of phones influence who can benefit. Digital-first programmes should maintain meaningful alternatives rather than relegating offline audiences to an inferior service.
+
+### Moderation and community management
+
+Comments can reveal confusion, misinformation and adverse experiences. Establish escalation rules for threats, clinical emergencies, abuse, personal data and misinformation. Moderation should distinguish disagreement from harmful conduct.
+
+### AI and automated communication
+
+Chatbots can provide scalable answers but may generate incorrect or overconfident health information. High-risk outputs need constrained knowledge sources, transparent limitations, escalation to humans and monitoring. Automation should not masquerade as a clinician.
+
+### What could fool us?
+
+Algorithms make platform data endogenous: the people who see a post are partly selected by prior behaviour and platform ranking. Comparing engagement across posts does not necessarily identify which message would work better in the whole population. Digital analytics are valuable operational data, not automatically causal evidence.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Build a digital metrics ladder
+
+A useful dashboard separates what the platform did from what people understood and what happened next.
+
+| Level | Example metric | What it can tell you |
+|---|---|---|
+| exposure | unique reach, impressions | whether content was delivered |
+| engagement | clicks, shares, comments | whether users interacted |
+| communication | comprehension, trust, confidence | whether the message changed a proximal communication outcome |
+| behaviour | appointment completion, hotline use | whether the intended action occurred |
+| health/service | diagnosis, treatment initiation | downstream programme outcome |
+
+Do not skip levels when interpreting results. A high click rate with low comprehension indicates a different problem from low reach.
+
+### Digital safety review
+
+Before launch, answer: What personal data are collected? Is the channel private enough for the topic? Can users opt out? What happens if someone reports self-harm, abuse or an emergency? Who moderates harmful comments? How are AI-generated answers constrained and audited? What non-digital alternative exists?
+
+### A/B testing caution
+
+Randomised message testing can improve subject lines or calls to action, but optimise for the **right outcome**. A headline that maximises clicks by provoking fear may reduce trust. The optimisation metric is part of the ethical design.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 A youth-friendly service plans a WhatsApp and Instagram campaign offering information about STI testing. Young people report concerns about privacy, some share phones with family, rural data costs are high, and staff cannot answer messages 24 hours a day.
@@ -144,9 +202,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 8 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 8 bank of 48 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 8 bank of 30 items.
 
-**Initial time limit:** 11 minutes.  
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -162,6 +220,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **WHO Infodemic and social-listening resources.** Use of digital listening to understand information needs and harmful narratives.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-08-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

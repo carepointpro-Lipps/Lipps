@@ -3,7 +3,7 @@
 ## Build summary
 
 - Weeks present: **12/12**
-- Total candidate Moodle items: **604**
+- Total candidate Moodle items: **586**
 - Quarto pages in complete LIPPS starter: **45**
 - Internal `.qmd` links checked: **82**
 - Broken internal links: **0**
@@ -14,7 +14,7 @@
 
 ## Moodle item counts
 
-- Week 01: 48 items
+- Week 01: 30 curated items — 8 Practice, 16 Mastery, 6 Institutional
 - Week 02: 48 items
 - Week 03: 48 items
 - Week 04: 48 items
@@ -46,3 +46,12 @@ The Moodle banks are **candidate teaching and pilot-assessment items**, not yet 
 ## University-readiness correction (v1.8)
 
 A deeper audit found that raw item count overstated assessment maturity. Many concepts were represented by three close paraphrases of the same recognition task. Before institutional assessment use, split the bank into foundation/practice, mastery and protected assessment pools and rewrite the latter two toward novel application scenarios. See `QA-UNIVERSITY-READINESS.md`.
+
+
+## Week 1 assessment overhaul (v1.9)
+
+Week 1 is now the benchmark for future bank revision. The previous 48-item recognition-heavy bank was replaced with **30 distinct scenario-based questions** mapped to learning outcomes and cognitive demand. It is explicitly separated into Practice, Mastery and protected Institutional pools.
+
+The redesign also adds an 800–1,000 word **Communication Diagnosis Brief** with a 20-mark analytic rubric. This ensures that Week 1 assesses more than rapid option recognition.
+
+Remaining Weeks 2–12 retain their v1.8 candidate banks and should be rewritten progressively against the Week 1 standard before high-stakes institutional deployment.

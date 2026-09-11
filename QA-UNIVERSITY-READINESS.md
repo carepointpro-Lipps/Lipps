@@ -142,3 +142,8 @@ LIPPS should not describe either course as high-stakes-ready until all of the fo
 **Proceed to pilot. Do not market the current version as a finished high-stakes assessment product.**
 
 The curriculum is strong enough to justify a real university pilot. The next build priority is not more content categories; it is **assessment quality, authentic student work, references/readings and pilot evidence**.
+
+
+## v1.9 progress
+
+Health Communication Week 1 has now been rebuilt against the recommended assessment standard: 30 distinct scenario-based items in Practice, Mastery and protected Institutional pools, plus an authentic Communication Diagnosis Brief and analytic rubric. Weeks 2–12 remain queued for the same overhaul.

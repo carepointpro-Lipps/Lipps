@@ -154,3 +154,15 @@ Week 8, Week 9, Week 10 and Week 12 deliberately include clearly labelled **LIPP
 The stated time limits are **starting pilot settings only**. Use Moodle response-time distributions to calibrate them. A defensible target is that a prepared learner has enough time to read and reason, while extensive external searching is inefficient. Do not shorten timing to the point that reading speed, disability, language proficiency or device/network latency becomes the primary construct being tested.
 
 Approved accommodations should always be applied through user/group overrides.
+
+## Health Communication Week 1 — benchmark assessment bank (v1.9)
+
+Week 1 is the first Health Communication bank rewritten to the university-pilot standard. `health-communication-week1.gift` now contains **30 distinct scenario-based items** split into Moodle categories:
+
+- Practice — 8 items
+- Mastery — 16 items
+- Institutional — 6 protected seed items
+
+Recommended mastery configuration: draw **10 of 16 Mastery items** in an initial **12-minute** window, then recalibrate using response-time and item-statistics data. The Institutional category should remain hidden from routine practice and should be expanded and independently reviewed before consequential examination use.
+
+The instructor-facing item map and 20-mark Communication Diagnosis Brief rubric are in `../learn/health-communication/week-01-assessment.qmd`.

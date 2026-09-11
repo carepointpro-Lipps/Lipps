@@ -113,6 +113,69 @@ Track whether content was delivered, who was reached, who understood, whether in
 :::
 
 ::: {.lipps-section}
+## DEEPEN · Channels are delivery systems, not strategy by themselves
+
+"Use radio and social media" is not a communication strategy. Channel choice should follow the audience, objective, trust environment, required interaction, urgency, frequency and cost.
+
+### Channel characteristics
+
+Mass media can provide broad reach quickly but may offer limited personal clarification. Community and interpersonal channels can support dialogue and trust but require trained people and time. Digital channels allow rapid targeting and feedback yet can exclude people without devices, data, literacy or safe private access.
+
+### Owned, earned, paid and community channels
+
+- **Owned:** programme websites, SMS lists, clinic screens and official social accounts.
+- **Earned:** news coverage, interviews and organic discussion not directly purchased.
+- **Paid:** advertisements, sponsored posts and purchased airtime.
+- **Community:** local leaders, health workers, peer networks, faith organisations and community gatherings.
+
+A resilient strategy usually combines channels so that one channel creates awareness while another supports questions, trust or action.
+
+### Reach, frequency and timing
+
+Reach asks who encountered the communication. Frequency asks how often. Repetition can support recall, but excessive exposure can produce fatigue. Timing should match the moment when the audience can act: a reminder sent after the clinic has closed is technically delivered but operationally useless.
+
+### Messenger-channel fit
+
+The most trusted messenger may not control the highest-reach channel. A national expert can explain technical evidence, while a local health worker can address practical concerns and a peer can demonstrate social feasibility. Coordination matters so these voices do not contradict one another.
+
+### Media relations
+
+Journalists need timely, clear and verifiable information. Prepare spokespeople to state the main message, acknowledge uncertainty, avoid speculation and correct errors without becoming defensive. Media monitoring should identify both reach and emerging misunderstanding.
+
+### Low-bandwidth design
+
+For many public-health contexts, communication plans should assume intermittent data, shared phones and basic handsets. SMS, radio, printable materials and community networks remain important. Digital sophistication is not a substitute for accessibility.
+
+### What could fool us?
+
+High impressions do not prove that the intended audience saw or trusted a message. A popular channel may be inappropriate for a sensitive topic. Channel analytics often describe users of the platform rather than the target population. Always interpret channel metrics against the communication objective.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Give every channel a job
+
+For a cervical-screening campaign, a channel mix might look like this:
+
+| Channel | Primary job | Why it fits | Key indicator |
+|---|---|---|---|
+| radio | awareness and normalisation | broad local reach | aided exposure and message recall |
+| community health worker | questions and trust | interpersonal clarification | questions resolved / referrals made |
+| SMS | reminder and logistics | timely individual prompt | delivery and appointment completion |
+| clinic signage | point-of-decision instruction | reaches people already near service | correct navigation / same-day uptake |
+| social media | shareable updates and dialogue | useful for connected segments | comprehension and referral clicks |
+
+The same message should not simply be copied into every channel. Radio can tell a short story; SMS needs concise logistics; a health worker can respond interactively.
+
+### Reach-frequency decision
+
+A channel plan should state the intended audience, estimated reach, repetition schedule and decision timing. Repetition is valuable when it supports memory or confidence, but excessive frequency can create fatigue. Monitor both exposure and negative feedback.
+
+### Media briefing drill
+
+Prepare a spokesperson to answer three questions in 30 seconds each: What is the problem? What should the public do? What remains uncertain? If the spokesperson cannot answer without jargon or speculation, the campaign is not ready for earned media.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 A district wants to increase uptake of scheduled hypertension screening days among adults over 40. Urban residents commonly use WhatsApp and radio; rural residents rely more on radio, churches, markets and village health teams. Screening is offered monthly at fixed sites. Men are less likely to attend during working hours.
@@ -143,9 +206,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 7 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 7 bank of 48 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 7 bank of 30 items.
 
-**Initial time limit:** 10 minutes.  
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -161,6 +224,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **NCI Making Health Communication Programs Work.** Channel selection and integrated communication planning.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-07-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

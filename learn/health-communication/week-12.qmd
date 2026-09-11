@@ -122,6 +122,75 @@ A strong plan should be understandable, evidence-based, feasible, inclusive, res
 :::
 
 ::: {.lipps-section}
+## DEEPEN · Ethical communication is part of effectiveness
+
+Communication that achieves a short-term behaviour change by humiliating, deceiving or excluding people is not high-quality public-health communication. Ethics should be built into problem definition, audience research, message design, data collection, targeting, evaluation and technology choices.
+
+### Autonomy and truthful persuasion
+
+Health communication often aims to influence behaviour. Ethical persuasion provides relevant evidence, explains uncertainty and respects the person's ability to decide. Manipulation hides material information, exploits vulnerability or creates a false impression of certainty.
+
+### Stigma and fear
+
+Fear can attract attention, but fear without efficacy can produce avoidance, denial or stigma. Messages about HIV, TB, sexually transmitted infections, obesity, mental health or outbreak risk should avoid implying that affected people are irresponsible or dangerous simply because of their condition.
+
+### Equity
+
+Ask not only whether average outcomes improved but **who was excluded, who carried new burdens and who benefited least**. A digital campaign that improves access for urban smartphone users while reducing investment in other channels may widen inequity.
+
+### Privacy, targeting and data governance
+
+Audience segmentation can become surveillance when sensitive data are collected without necessity or clear consent. Minimise data, restrict access, establish retention rules and avoid targeting that could reveal a person's health status to others.
+
+### Generative AI and synthetic media
+
+AI can support drafting, translation, summarisation and chat interfaces, but it can also fabricate evidence, introduce bias or create highly persuasive synthetic content. Human review is essential for health claims. Disclose material use of synthetic media where deception is plausible, and never invent patient testimony or community endorsement.
+
+### The LIPPS SIGNAL capstone
+
+Use **S — Situation, I — Intended audience and insight, G — Goal, N — Narrative and needed action, A — Access, L — Listen and learn** as a final integration tool. SIGNAL is not a substitute for formal theory or evaluation; it is a disciplined checklist that keeps communication connected to a real decision and a feedback loop.
+
+### Final critical question
+
+Before publishing, ask: **If this communication works exactly as intended, could it still harm someone?** Then consider stigma, privacy, exclusion, service capacity, misunderstanding and unintended incentives.
+
+### What could fool us?
+
+Ethical review cannot rely only on the communicator's intention. Harms may appear in subgroups that were absent from pre-testing. AI systems can behave differently after deployment than in demonstrations. Ethical communication therefore requires monitoring, incident reporting and willingness to revise or withdraw content.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Run an ethics and equity pre-mortem
+
+Before launch, imagine the communication caused harm. Ask what the most plausible failure would have been.
+
+| Domain | Pre-mortem question |
+|---|---|
+| autonomy | could people be manipulated or materially misled? |
+| stigma | could a group be blamed, shamed or exposed? |
+| equity | who cannot access or act on the message? |
+| privacy | could targeting or notifications reveal health status? |
+| service capacity | could successful communication create demand the system cannot meet? |
+| AI | could automated content fabricate, discriminate or overstate certainty? |
+| evidence | are we claiming more than the evaluation design supports? |
+
+Document the mitigation before publication. For higher-risk interventions, assign an owner and review date to each mitigation.
+
+### SIGNAL worked example
+
+For an adolescent mental-health helpline:
+
+- **Situation:** low use despite high reported distress.
+- **Intended audience and insight:** adolescents know the helpline exists but fear confidentiality breaches.
+- **Goal:** increase confidence that help-seeking is private and safe.
+- **Narrative and needed action:** explain confidentiality clearly and give a discreet way to initiate contact.
+- **Access:** provide channels that work on shared phones and for low-data users.
+- **Listen and learn:** monitor confidentiality questions, complaints, comprehension and actual use.
+
+The framework reveals that the central issue is not awareness. It also forces the team to examine privacy and access before celebrating higher call volume.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 A health authority wants to use an AI chatbot and targeted social-media advertising to increase uptake of mental-health services among university students. The advertising platform can target users inferred to be interested in depression-related content. The chatbot can answer common questions but occasionally gives overconfident clinical advice. Students fear that counselling use could become known to peers or administrators.
@@ -155,9 +224,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 12 mastery quiz
 
-**Pilot Mastery Quiz:** 20 objective questions sampled from a Week 12 bank of 60 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 12 bank of 30 items.
 
-**Initial time limit:** 15 minutes.  
+**Initial time limit:** 15 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -174,6 +243,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **WHO Infodemic resources.** Ethical, evidence-informed management of information environments.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-12-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

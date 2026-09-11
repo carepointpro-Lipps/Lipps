@@ -1,0 +1,152 @@
+{
+  "version": "2.0",
+  "qmd_pages": 60,
+  "internal_qmd_links_checked": 102,
+  "broken_links": [],
+  "front_matter_errors": [],
+  "health_communication_bank": {
+    "1": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 01/Institutional",
+        "LIPPS/Health Communication/Week 01/Mastery",
+        "LIPPS/Health Communication/Week 01/Practice"
+      ]
+    },
+    "2": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 02/Institutional",
+        "LIPPS/Health Communication/Week 02/Mastery",
+        "LIPPS/Health Communication/Week 02/Practice"
+      ]
+    },
+    "3": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 03/Institutional",
+        "LIPPS/Health Communication/Week 03/Mastery",
+        "LIPPS/Health Communication/Week 03/Practice"
+      ]
+    },
+    "4": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 04/Institutional",
+        "LIPPS/Health Communication/Week 04/Mastery",
+        "LIPPS/Health Communication/Week 04/Practice"
+      ]
+    },
+    "5": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 05/Institutional",
+        "LIPPS/Health Communication/Week 05/Mastery",
+        "LIPPS/Health Communication/Week 05/Practice"
+      ]
+    },
+    "6": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 06/Institutional",
+        "LIPPS/Health Communication/Week 06/Mastery",
+        "LIPPS/Health Communication/Week 06/Practice"
+      ]
+    },
+    "7": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 07/Institutional",
+        "LIPPS/Health Communication/Week 07/Mastery",
+        "LIPPS/Health Communication/Week 07/Practice"
+      ]
+    },
+    "8": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 08/Institutional",
+        "LIPPS/Health Communication/Week 08/Mastery",
+        "LIPPS/Health Communication/Week 08/Practice"
+      ]
+    },
+    "9": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 09/Institutional",
+        "LIPPS/Health Communication/Week 09/Mastery",
+        "LIPPS/Health Communication/Week 09/Practice"
+      ]
+    },
+    "10": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 10/Institutional",
+        "LIPPS/Health Communication/Week 10/Mastery",
+        "LIPPS/Health Communication/Week 10/Practice"
+      ]
+    },
+    "11": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 11/Institutional",
+        "LIPPS/Health Communication/Week 11/Mastery",
+        "LIPPS/Health Communication/Week 11/Practice"
+      ]
+    },
+    "12": {
+      "items": 30,
+      "unique_ids": 30,
+      "unique_stems": 30,
+      "categories": [
+        "LIPPS/Health Communication/Week 12/Institutional",
+        "LIPPS/Health Communication/Week 12/Mastery",
+        "LIPPS/Health Communication/Week 12/Practice"
+      ]
+    }
+  },
+  "health_communication_total_items": 360,
+  "all_hc_ids_unique": true,
+  "health_communication_week_word_counts": {
+    "1": 1439,
+    "2": 1860,
+    "3": 1869,
+    "4": 1728,
+    "5": 1645,
+    "6": 1626,
+    "7": 1655,
+    "8": 1640,
+    "9": 1553,
+    "10": 1668,
+    "11": 1656,
+    "12": 1844
+  },
+  "admin_files": [
+    "admin/index.html",
+    "admin/config.yml",
+    "admin/README.md",
+    "admin/preview.html"
+  ],
+  "auth_activation_required": true
+}

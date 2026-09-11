@@ -1,449 +1,211 @@
-$CATEGORY: LIPPS/Health Communication/Week 12/Autonomy
-
-::HC-W12-001::Which concept is best described as: Respect for people’s ability to make informed decisions without inappropriate coercion. {
-=Autonomy#Correct. Respect for people’s ability to make informed decisions without inappropriate coercion.
-~Manipulation#Not the best answer. Respect for people’s ability to make informed decisions without inappropriate coercion.
-~Persuasion#Not the best answer. Respect for people’s ability to make informed decisions without inappropriate coercion.
-~Stigma#Not the best answer. Respect for people’s ability to make informed decisions without inappropriate coercion.
+$CATEGORY: LIPPS/Health Communication/Week 12/Practice
+::HC-W12-P01::An HIV campaign uses images implying people with HIV are dangerous to frighten audiences into testing. Which diagnosis or concept best identifies the main communication issue? {
+=stigma-producing fear appeal#Correct. Short-term attention does not justify harm to affected people.
+~privacy-invasive targeting#Not the best answer. Short-term attention does not justify harm to affected people.
+~equity harm through channel substitution#Not the best answer. Short-term attention does not justify harm to affected people.
+~unsafe AI hallucination#Not the best answer. Short-term attention does not justify harm to affected people.
 }
 
-::HC-W12-002::In a district vaccination programme, which concept best matches this situation: Respect for people’s ability to make informed decisions without inappropriate coercion. {
-=Autonomy#Correct. Respect for people’s ability to make informed decisions without inappropriate coercion.
-~Non-maleficence#Not the best answer. Respect for people’s ability to make informed decisions without inappropriate coercion.
-~Conflict of interest#Not the best answer. Respect for people’s ability to make informed decisions without inappropriate coercion.
-~LIPPS SIGNAL#Not the best answer. Respect for people’s ability to make informed decisions without inappropriate coercion.
+::HC-W12-P02::An HIV campaign uses images implying people with HIV are dangerous to frighten audiences into testing. What is the strongest next response? {
+=Replace stigmatising imagery with accurate risk information, efficacy and respectful testing guidance.#Correct. Short-term attention does not justify harm to affected people.
+~Use consented data and avoid sensitive inference that users would not reasonably expect.#Not the best answer. Short-term attention does not justify harm to affected people.
+~Retain or strengthen accessible alternatives and monitor outcomes by subgroup.#Not the best answer. Short-term attention does not justify harm to affected people.
+~Constrain the system, validate clinical content, monitor errors and route high-risk questions to qualified humans.#Not the best answer. Short-term attention does not justify harm to affected people.
 }
 
-::HC-W12-003::A communicator needs to recognise the following idea: Respect for people’s ability to make informed decisions without inappropriate coercion. Which term is most appropriate? {
-=Autonomy#Correct. Respect for people’s ability to make informed decisions without inappropriate coercion.
-~Synthetic media#Not the best answer. Respect for people’s ability to make informed decisions without inappropriate coercion.
-~Inclusive design#Not the best answer. Respect for people’s ability to make informed decisions without inappropriate coercion.
-~Human oversight#Not the best answer. Respect for people’s ability to make informed decisions without inappropriate coercion.
+::HC-W12-P03::A personalised fertility campaign infers pregnancy status from browsing data without explicit consent. Which diagnosis or concept best identifies the main communication issue? {
+=privacy-invasive targeting#Correct. Personalisation can become surveillance when sensitive status is inferred covertly.
+~equity harm through channel substitution#Not the best answer. Personalisation can become surveillance when sensitive status is inferred covertly.
+~unsafe AI hallucination#Not the best answer. Personalisation can become surveillance when sensitive status is inferred covertly.
+~deceptive synthetic media#Not the best answer. Personalisation can become surveillance when sensitive status is inferred covertly.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 12/Non-maleficence
-
-::HC-W12-004::Which concept is best described as: Obligation to avoid or minimise preventable harm. {
-=Non-maleficence#Correct. Obligation to avoid or minimise preventable harm.
-~Data minimisation#Not the best answer. Obligation to avoid or minimise preventable harm.
-~AI hallucination#Not the best answer. Obligation to avoid or minimise preventable harm.
-~Justice#Not the best answer. Obligation to avoid or minimise preventable harm.
+::HC-W12-P04::A personalised fertility campaign infers pregnancy status from browsing data without explicit consent. What is the strongest next response? {
+=Use consented data and avoid sensitive inference that users would not reasonably expect.#Correct. Personalisation can become surveillance when sensitive status is inferred covertly.
+~Retain or strengthen accessible alternatives and monitor outcomes by subgroup.#Not the best answer. Personalisation can become surveillance when sensitive status is inferred covertly.
+~Constrain the system, validate clinical content, monitor errors and route high-risk questions to qualified humans.#Not the best answer. Personalisation can become surveillance when sensitive status is inferred covertly.
+~Disclose that the representation is synthetic or use authentic consented testimony.#Not the best answer. Personalisation can become surveillance when sensitive status is inferred covertly.
 }
 
-::HC-W12-005::In a maternal-health campaign, which concept best matches this situation: Obligation to avoid or minimise preventable harm. {
-=Non-maleficence#Correct. Obligation to avoid or minimise preventable harm.
-~Manipulation#Not the best answer. Obligation to avoid or minimise preventable harm.
-~Stigma#Not the best answer. Obligation to avoid or minimise preventable harm.
-~Inclusive design#Not the best answer. Obligation to avoid or minimise preventable harm.
+::HC-W12-P05::A digital service improves access for urban smartphone users while rural alternatives are discontinued. Which diagnosis or concept best identifies the main communication issue? {
+=equity harm through channel substitution#Correct. Average improvement can hide widening inequity.
+~unsafe AI hallucination#Not the best answer. Average improvement can hide widening inequity.
+~deceptive synthetic media#Not the best answer. Average improvement can hide widening inequity.
+~manipulative risk communication#Not the best answer. Average improvement can hide widening inequity.
 }
 
-::HC-W12-006::A communicator needs to recognise the following idea: Obligation to avoid or minimise preventable harm. Which term is most appropriate? {
-=Non-maleficence#Correct. Obligation to avoid or minimise preventable harm.
-~Autonomy#Not the best answer. Obligation to avoid or minimise preventable harm.
-~Synthetic media#Not the best answer. Obligation to avoid or minimise preventable harm.
-~Human oversight#Not the best answer. Obligation to avoid or minimise preventable harm.
+::HC-W12-P06::A digital service improves access for urban smartphone users while rural alternatives are discontinued. What is the strongest next response? {
+=Retain or strengthen accessible alternatives and monitor outcomes by subgroup.#Correct. Average improvement can hide widening inequity.
+~Constrain the system, validate clinical content, monitor errors and route high-risk questions to qualified humans.#Not the best answer. Average improvement can hide widening inequity.
+~Disclose that the representation is synthetic or use authentic consented testimony.#Not the best answer. Average improvement can hide widening inequity.
+~Present benefits, harms and uncertainty accurately while making the recommended action clear.#Not the best answer. Average improvement can hide widening inequity.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 12/Justice
-
-::HC-W12-007::Which concept is best described as: Fair distribution of communication benefits, burdens and access. {
-=Justice#Correct. Fair distribution of communication benefits, burdens and access.
-~Manipulation#Not the best answer. Fair distribution of communication benefits, burdens and access.
-~Conflict of interest#Not the best answer. Fair distribution of communication benefits, burdens and access.
-~Purpose limitation#Not the best answer. Fair distribution of communication benefits, burdens and access.
+::HC-W12-P07::An AI chatbot invents a contraindication while sounding confident. Which diagnosis or concept best identifies the main communication issue? {
+=unsafe AI hallucination#Correct. Fluency is not evidence of clinical accuracy.
+~deceptive synthetic media#Not the best answer. Fluency is not evidence of clinical accuracy.
+~manipulative risk communication#Not the best answer. Fluency is not evidence of clinical accuracy.
+~data-retention and consent problem#Not the best answer. Fluency is not evidence of clinical accuracy.
 }
 
-::HC-W12-008::In an HIV prevention programme, which concept best matches this situation: Fair distribution of communication benefits, burdens and access. {
-=Justice#Correct. Fair distribution of communication benefits, burdens and access.
-~Data minimisation#Not the best answer. Fair distribution of communication benefits, burdens and access.
-~Synthetic media#Not the best answer. Fair distribution of communication benefits, burdens and access.
-~Stigma#Not the best answer. Fair distribution of communication benefits, burdens and access.
+::HC-W12-P08::An AI chatbot invents a contraindication while sounding confident. What is the strongest next response? {
+=Constrain the system, validate clinical content, monitor errors and route high-risk questions to qualified humans.#Correct. Fluency is not evidence of clinical accuracy.
+~Disclose that the representation is synthetic or use authentic consented testimony.#Not the best answer. Fluency is not evidence of clinical accuracy.
+~Present benefits, harms and uncertainty accurately while making the recommended action clear.#Not the best answer. Fluency is not evidence of clinical accuracy.
+~Minimise retained identifiers, define retention and obtain consent for each intended use.#Not the best answer. Fluency is not evidence of clinical accuracy.
+}
+$CATEGORY: LIPPS/Health Communication/Week 12/Mastery
+::HC-W12-M01::A campaign uses a synthetic image presented as a real survivor testimony. Which diagnosis or concept best identifies the main communication issue? {
+=deceptive synthetic media#Correct. Viewers may reasonably infer a real person and lived experience.
+~manipulative risk communication#Not the best answer. Viewers may reasonably infer a real person and lived experience.
+~data-retention and consent problem#Not the best answer. Viewers may reasonably infer a real person and lived experience.
+~potential discriminatory targeting#Not the best answer. Viewers may reasonably infer a real person and lived experience.
 }
 
-::HC-W12-009::A communicator needs to recognise the following idea: Fair distribution of communication benefits, burdens and access. Which term is most appropriate? {
-=Justice#Correct. Fair distribution of communication benefits, burdens and access.
-~Inclusive design#Not the best answer. Fair distribution of communication benefits, burdens and access.
-~LIPPS SIGNAL#Not the best answer. Fair distribution of communication benefits, burdens and access.
-~Human oversight#Not the best answer. Fair distribution of communication benefits, burdens and access.
+::HC-W12-M02::A campaign uses a synthetic image presented as a real survivor testimony. What is the strongest next response? {
+=Disclose that the representation is synthetic or use authentic consented testimony.#Correct. Viewers may reasonably infer a real person and lived experience.
+~Present benefits, harms and uncertainty accurately while making the recommended action clear.#Not the best answer. Viewers may reasonably infer a real person and lived experience.
+~Minimise retained identifiers, define retention and obtain consent for each intended use.#Not the best answer. Viewers may reasonably infer a real person and lived experience.
+~Audit model inputs, burden, benefit and fairness before deployment and provide transparent safeguards.#Not the best answer. Viewers may reasonably infer a real person and lived experience.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 12/Persuasion
-
-::HC-W12-010::Which concept is best described as: Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice. {
-=Persuasion#Correct. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
-~Data minimisation#Not the best answer. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
-~Human oversight#Not the best answer. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
-~Justice#Not the best answer. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
+::HC-W12-M03::A message exaggerates certainty about a screening benefit because staff believe people will otherwise not attend. Which diagnosis or concept best identifies the main communication issue? {
+=manipulative risk communication#Correct. Public-health goals do not justify material deception.
+~data-retention and consent problem#Not the best answer. Public-health goals do not justify material deception.
+~potential discriminatory targeting#Not the best answer. Public-health goals do not justify material deception.
+~threat without efficacy and support#Not the best answer. Public-health goals do not justify material deception.
 }
 
-::HC-W12-011::In a malaria-control programme, which concept best matches this situation: Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice. {
-=Persuasion#Correct. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
-~Manipulation#Not the best answer. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
-~Inclusive design#Not the best answer. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
-~Non-maleficence#Not the best answer. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
+::HC-W12-M04::A message exaggerates certainty about a screening benefit because staff believe people will otherwise not attend. What is the strongest next response? {
+=Present benefits, harms and uncertainty accurately while making the recommended action clear.#Correct. Public-health goals do not justify material deception.
+~Minimise retained identifiers, define retention and obtain consent for each intended use.#Not the best answer. Public-health goals do not justify material deception.
+~Audit model inputs, burden, benefit and fairness before deployment and provide transparent safeguards.#Not the best answer. Public-health goals do not justify material deception.
+~Pair proportionate risk information with clear, accessible cessation options and support.#Not the best answer. Public-health goals do not justify material deception.
 }
 
-::HC-W12-012::A communicator needs to recognise the following idea: Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice. Which term is most appropriate? {
-=Persuasion#Correct. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
-~Synthetic media#Not the best answer. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
-~LIPPS SIGNAL#Not the best answer. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
-~Autonomy#Not the best answer. Attempt to influence decisions through reasons, framing or appeals while preserving meaningful choice.
+::HC-W12-M05::A programme collects community stories for a campaign and stores names indefinitely though the stories are published anonymously. Which diagnosis or concept best identifies the main communication issue? {
+=data-retention and consent problem#Correct. Anonymised publication does not remove backend privacy risk.
+~potential discriminatory targeting#Not the best answer. Anonymised publication does not remove backend privacy risk.
+~threat without efficacy and support#Not the best answer. Anonymised publication does not remove backend privacy risk.
+~unverified automated translation#Not the best answer. Anonymised publication does not remove backend privacy risk.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 12/Manipulation
-
-::HC-W12-013::Which concept is best described as: Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice. {
-=Manipulation#Correct. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
-~Purpose limitation#Not the best answer. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
-~Synthetic media#Not the best answer. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
-~Conflict of interest#Not the best answer. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
+::HC-W12-M06::A programme collects community stories for a campaign and stores names indefinitely though the stories are published anonymously. What is the strongest next response? {
+=Minimise retained identifiers, define retention and obtain consent for each intended use.#Correct. Anonymised publication does not remove backend privacy risk.
+~Audit model inputs, burden, benefit and fairness before deployment and provide transparent safeguards.#Not the best answer. Anonymised publication does not remove backend privacy risk.
+~Pair proportionate risk information with clear, accessible cessation options and support.#Not the best answer. Anonymised publication does not remove backend privacy risk.
+~Require competent human review and audience testing before publication.#Not the best answer. Anonymised publication does not remove backend privacy risk.
 }
 
-::HC-W12-014::In a school health programme, which concept best matches this situation: Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice. {
-=Manipulation#Correct. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
-~AI hallucination#Not the best answer. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
-~Justice#Not the best answer. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
-~Human oversight#Not the best answer. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
+::HC-W12-M07::An algorithm sends obesity messages more aggressively to one ethnic group based on predicted risk. Which diagnosis or concept best identifies the main communication issue? {
+=potential discriminatory targeting#Correct. Risk targeting can reproduce bias and stigma.
+~threat without efficacy and support#Not the best answer. Risk targeting can reproduce bias and stigma.
+~unverified automated translation#Not the best answer. Risk targeting can reproduce bias and stigma.
+~average outcome masking inequity#Not the best answer. Risk targeting can reproduce bias and stigma.
 }
 
-::HC-W12-015::A communicator needs to recognise the following idea: Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice. Which term is most appropriate? {
-=Manipulation#Correct. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
-~Inclusive design#Not the best answer. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
-~LIPPS SIGNAL#Not the best answer. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
-~Data minimisation#Not the best answer. Influence that covertly exploits vulnerabilities or distorts information in ways that undermine autonomous choice.
+::HC-W12-M08::An algorithm sends obesity messages more aggressively to one ethnic group based on predicted risk. What is the strongest next response? {
+=Audit model inputs, burden, benefit and fairness before deployment and provide transparent safeguards.#Correct. Risk targeting can reproduce bias and stigma.
+~Pair proportionate risk information with clear, accessible cessation options and support.#Not the best answer. Risk targeting can reproduce bias and stigma.
+~Require competent human review and audience testing before publication.#Not the best answer. Risk targeting can reproduce bias and stigma.
+~Disaggregate meaningful outcomes and redesign inaccessible components.#Not the best answer. Risk targeting can reproduce bias and stigma.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 12/Stigma
-
-::HC-W12-016::Which concept is best described as: Social devaluation or discrimination attached to an identity, condition or behaviour. {
-=Stigma#Correct. Social devaluation or discrimination attached to an identity, condition or behaviour.
-~Manipulation#Not the best answer. Social devaluation or discrimination attached to an identity, condition or behaviour.
-~Purpose limitation#Not the best answer. Social devaluation or discrimination attached to an identity, condition or behaviour.
-~Synthetic media#Not the best answer. Social devaluation or discrimination attached to an identity, condition or behaviour.
+::HC-W12-M09::A smoking campaign uses highly graphic fear imagery but provides no cessation support. Which diagnosis or concept best identifies the main communication issue? {
+=threat without efficacy and support#Correct. Fear without feasible action can produce avoidance or distress.
+~unverified automated translation#Not the best answer. Fear without feasible action can produce avoidance or distress.
+~average outcome masking inequity#Not the best answer. Fear without feasible action can produce avoidance or distress.
+~lack of transparency about automation#Not the best answer. Fear without feasible action can produce avoidance or distress.
 }
 
-::HC-W12-017::In a refugee-settlement health team, which concept best matches this situation: Social devaluation or discrimination attached to an identity, condition or behaviour. {
-=Stigma#Correct. Social devaluation or discrimination attached to an identity, condition or behaviour.
-~Autonomy#Not the best answer. Social devaluation or discrimination attached to an identity, condition or behaviour.
-~Persuasion#Not the best answer. Social devaluation or discrimination attached to an identity, condition or behaviour.
-~Conflict of interest#Not the best answer. Social devaluation or discrimination attached to an identity, condition or behaviour.
+::HC-W12-M10::A smoking campaign uses highly graphic fear imagery but provides no cessation support. What is the strongest next response? {
+=Pair proportionate risk information with clear, accessible cessation options and support.#Correct. Fear without feasible action can produce avoidance or distress.
+~Require competent human review and audience testing before publication.#Not the best answer. Fear without feasible action can produce avoidance or distress.
+~Disaggregate meaningful outcomes and redesign inaccessible components.#Not the best answer. Fear without feasible action can produce avoidance or distress.
+~Clearly disclose the automated nature, limitations and route to human help.#Not the best answer. Fear without feasible action can produce avoidance or distress.
 }
 
-::HC-W12-018::A communicator needs to recognise the following idea: Social devaluation or discrimination attached to an identity, condition or behaviour. Which term is most appropriate? {
-=Stigma#Correct. Social devaluation or discrimination attached to an identity, condition or behaviour.
-~LIPPS SIGNAL#Not the best answer. Social devaluation or discrimination attached to an identity, condition or behaviour.
-~Inclusive design#Not the best answer. Social devaluation or discrimination attached to an identity, condition or behaviour.
-~Justice#Not the best answer. Social devaluation or discrimination attached to an identity, condition or behaviour.
+::HC-W12-M11::A translation tool generates health messages in a minority language that no fluent reviewer checks. Which diagnosis or concept best identifies the main communication issue? {
+=unverified automated translation#Correct. Translation errors can alter medical meaning and trust.
+~average outcome masking inequity#Not the best answer. Translation errors can alter medical meaning and trust.
+~lack of transparency about automation#Not the best answer. Translation errors can alter medical meaning and trust.
+~ethical blind spot in formative testing#Not the best answer. Translation errors can alter medical meaning and trust.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 12/Data minimisation
-
-::HC-W12-019::Which concept is best described as: Collecting only information necessary for a defined purpose. {
-=Data minimisation#Correct. Collecting only information necessary for a defined purpose.
-~Autonomy#Not the best answer. Collecting only information necessary for a defined purpose.
-~Stigma#Not the best answer. Collecting only information necessary for a defined purpose.
-~Human oversight#Not the best answer. Collecting only information necessary for a defined purpose.
+::HC-W12-M12::A translation tool generates health messages in a minority language that no fluent reviewer checks. What is the strongest next response? {
+=Require competent human review and audience testing before publication.#Correct. Translation errors can alter medical meaning and trust.
+~Disaggregate meaningful outcomes and redesign inaccessible components.#Not the best answer. Translation errors can alter medical meaning and trust.
+~Clearly disclose the automated nature, limitations and route to human help.#Not the best answer. Translation errors can alter medical meaning and trust.
+~Include affected groups safely and assess stigma, dignity and unintended interpretation before launch.#Not the best answer. Translation errors can alter medical meaning and trust.
 }
 
-::HC-W12-020::In a noncommunicable-disease screening programme, which concept best matches this situation: Collecting only information necessary for a defined purpose. {
-=Data minimisation#Correct. Collecting only information necessary for a defined purpose.
-~Non-maleficence#Not the best answer. Collecting only information necessary for a defined purpose.
-~Conflict of interest#Not the best answer. Collecting only information necessary for a defined purpose.
-~AI hallucination#Not the best answer. Collecting only information necessary for a defined purpose.
+::HC-W12-M13::A programme reports only overall campaign success despite much lower comprehension among people with disabilities. Which diagnosis or concept best identifies the main communication issue? {
+=average outcome masking inequity#Correct. Equity requires examining who benefits, not only the mean.
+~lack of transparency about automation#Not the best answer. Equity requires examining who benefits, not only the mean.
+~ethical blind spot in formative testing#Not the best answer. Equity requires examining who benefits, not only the mean.
+~benefit-harm trade-off with privacy breach#Not the best answer. Equity requires examining who benefits, not only the mean.
 }
 
-::HC-W12-021::A communicator needs to recognise the following idea: Collecting only information necessary for a defined purpose. Which term is most appropriate? {
-=Data minimisation#Correct. Collecting only information necessary for a defined purpose.
-~Manipulation#Not the best answer. Collecting only information necessary for a defined purpose.
-~Persuasion#Not the best answer. Collecting only information necessary for a defined purpose.
-~Synthetic media#Not the best answer. Collecting only information necessary for a defined purpose.
+::HC-W12-M14::A programme reports only overall campaign success despite much lower comprehension among people with disabilities. What is the strongest next response? {
+=Disaggregate meaningful outcomes and redesign inaccessible components.#Correct. Equity requires examining who benefits, not only the mean.
+~Clearly disclose the automated nature, limitations and route to human help.#Not the best answer. Equity requires examining who benefits, not only the mean.
+~Include affected groups safely and assess stigma, dignity and unintended interpretation before launch.#Not the best answer. Equity requires examining who benefits, not only the mean.
+~Redesign notification consent and privacy protections before claiming the programme is ethically successful.#Not the best answer. Equity requires examining who benefits, not only the mean.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 12/Purpose limitation
-
-::HC-W12-022::Which concept is best described as: Using personal data only for the stated and legitimate purpose. {
-=Purpose limitation#Correct. Using personal data only for the stated and legitimate purpose.
-~Inclusive design#Not the best answer. Using personal data only for the stated and legitimate purpose.
-~Conflict of interest#Not the best answer. Using personal data only for the stated and legitimate purpose.
-~Justice#Not the best answer. Using personal data only for the stated and legitimate purpose.
+::HC-W12-M15::A chatbot does not tell users that they are interacting with an automated system. Which diagnosis or concept best identifies the main communication issue? {
+=lack of transparency about automation#Correct. Users need information to calibrate trust and expectations.
+~ethical blind spot in formative testing#Not the best answer. Users need information to calibrate trust and expectations.
+~benefit-harm trade-off with privacy breach#Not the best answer. Users need information to calibrate trust and expectations.
+~checklist substituted for ethical judgement#Not the best answer. Users need information to calibrate trust and expectations.
 }
 
-::HC-W12-023::In an outbreak response team, which concept best matches this situation: Using personal data only for the stated and legitimate purpose. {
-=Purpose limitation#Correct. Using personal data only for the stated and legitimate purpose.
-~Human oversight#Not the best answer. Using personal data only for the stated and legitimate purpose.
-~Synthetic media#Not the best answer. Using personal data only for the stated and legitimate purpose.
-~Autonomy#Not the best answer. Using personal data only for the stated and legitimate purpose.
+::HC-W12-M16::A chatbot does not tell users that they are interacting with an automated system. What is the strongest next response? {
+=Clearly disclose the automated nature, limitations and route to human help.#Correct. Users need information to calibrate trust and expectations.
+~Include affected groups safely and assess stigma, dignity and unintended interpretation before launch.#Not the best answer. Users need information to calibrate trust and expectations.
+~Redesign notification consent and privacy protections before claiming the programme is ethically successful.#Not the best answer. Users need information to calibrate trust and expectations.
+~Use SIGNAL as an integration aid while conducting separate ethical, privacy and equity review.#Not the best answer. Users need information to calibrate trust and expectations.
+}
+$CATEGORY: LIPPS/Health Communication/Week 12/Institutional
+::HC-W12-I01::A campaign pre-test excludes the minority group most likely to be stigmatised by the message. Which diagnosis or concept best identifies the main communication issue? {
+=ethical blind spot in formative testing#Correct. Harms may be invisible to designers and majority audiences.
+~benefit-harm trade-off with privacy breach#Not the best answer. Harms may be invisible to designers and majority audiences.
+~checklist substituted for ethical judgement#Not the best answer. Harms may be invisible to designers and majority audiences.
+~stigma-producing fear appeal#Not the best answer. Harms may be invisible to designers and majority audiences.
 }
 
-::HC-W12-024::A communicator needs to recognise the following idea: Using personal data only for the stated and legitimate purpose. Which term is most appropriate? {
-=Purpose limitation#Correct. Using personal data only for the stated and legitimate purpose.
-~Non-maleficence#Not the best answer. Using personal data only for the stated and legitimate purpose.
-~Data minimisation#Not the best answer. Using personal data only for the stated and legitimate purpose.
-~Persuasion#Not the best answer. Using personal data only for the stated and legitimate purpose.
+::HC-W12-I02::A campaign pre-test excludes the minority group most likely to be stigmatised by the message. What is the strongest next response? {
+=Include affected groups safely and assess stigma, dignity and unintended interpretation before launch.#Correct. Harms may be invisible to designers and majority audiences.
+~Redesign notification consent and privacy protections before claiming the programme is ethically successful.#Not the best answer. Harms may be invisible to designers and majority audiences.
+~Use SIGNAL as an integration aid while conducting separate ethical, privacy and equity review.#Not the best answer. Harms may be invisible to designers and majority audiences.
+~Replace stigmatising imagery with accurate risk information, efficacy and respectful testing guidance.#Not the best answer. Harms may be invisible to designers and majority audiences.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 12/Inclusive design
-
-::HC-W12-025::Which concept is best described as: Design that anticipates diverse accessibility, language, technology and social needs. {
-=Inclusive design#Correct. Design that anticipates diverse accessibility, language, technology and social needs.
-~Manipulation#Not the best answer. Design that anticipates diverse accessibility, language, technology and social needs.
-~Justice#Not the best answer. Design that anticipates diverse accessibility, language, technology and social needs.
-~Human oversight#Not the best answer. Design that anticipates diverse accessibility, language, technology and social needs.
+::HC-W12-I03::A communication intervention improves clinic attendance but exposes some adolescents’ service use to parents through shared-phone notifications. Which diagnosis or concept best identifies the main communication issue? {
+=benefit-harm trade-off with privacy breach#Correct. Positive average outcomes do not erase serious subgroup harms.
+~checklist substituted for ethical judgement#Not the best answer. Positive average outcomes do not erase serious subgroup harms.
+~stigma-producing fear appeal#Not the best answer. Positive average outcomes do not erase serious subgroup harms.
+~privacy-invasive targeting#Not the best answer. Positive average outcomes do not erase serious subgroup harms.
 }
 
-::HC-W12-026::In a youth-friendly service, which concept best matches this situation: Design that anticipates diverse accessibility, language, technology and social needs. {
-=Inclusive design#Correct. Design that anticipates diverse accessibility, language, technology and social needs.
-~AI hallucination#Not the best answer. Design that anticipates diverse accessibility, language, technology and social needs.
-~Data minimisation#Not the best answer. Design that anticipates diverse accessibility, language, technology and social needs.
-~Stigma#Not the best answer. Design that anticipates diverse accessibility, language, technology and social needs.
+::HC-W12-I04::A communication intervention improves clinic attendance but exposes some adolescents’ service use to parents through shared-phone notifications. What is the strongest next response? {
+=Redesign notification consent and privacy protections before claiming the programme is ethically successful.#Correct. Positive average outcomes do not erase serious subgroup harms.
+~Use SIGNAL as an integration aid while conducting separate ethical, privacy and equity review.#Not the best answer. Positive average outcomes do not erase serious subgroup harms.
+~Replace stigmatising imagery with accurate risk information, efficacy and respectful testing guidance.#Not the best answer. Positive average outcomes do not erase serious subgroup harms.
+~Use consented data and avoid sensitive inference that users would not reasonably expect.#Not the best answer. Positive average outcomes do not erase serious subgroup harms.
 }
 
-::HC-W12-027::A communicator needs to recognise the following idea: Design that anticipates diverse accessibility, language, technology and social needs. Which term is most appropriate? {
-=Inclusive design#Correct. Design that anticipates diverse accessibility, language, technology and social needs.
-~Conflict of interest#Not the best answer. Design that anticipates diverse accessibility, language, technology and social needs.
-~Synthetic media#Not the best answer. Design that anticipates diverse accessibility, language, technology and social needs.
-~Purpose limitation#Not the best answer. Design that anticipates diverse accessibility, language, technology and social needs.
+::HC-W12-I05::A team uses the LIPPS SIGNAL checklist and concludes ethical review is unnecessary because every SIGNAL element is complete. Which diagnosis or concept best identifies the main communication issue? {
+=checklist substituted for ethical judgement#Correct. A planning checklist cannot replace formal judgement about rights and harms.
+~stigma-producing fear appeal#Not the best answer. A planning checklist cannot replace formal judgement about rights and harms.
+~privacy-invasive targeting#Not the best answer. A planning checklist cannot replace formal judgement about rights and harms.
+~equity harm through channel substitution#Not the best answer. A planning checklist cannot replace formal judgement about rights and harms.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 12/AI hallucination
-
-::HC-W12-028::Which concept is best described as: Confident generation of false or unsupported content by an AI system. {
-=AI hallucination#Correct. Confident generation of false or unsupported content by an AI system.
-~Human oversight#Not the best answer. Confident generation of false or unsupported content by an AI system.
-~Inclusive design#Not the best answer. Confident generation of false or unsupported content by an AI system.
-~Manipulation#Not the best answer. Confident generation of false or unsupported content by an AI system.
+::HC-W12-I06::A team uses the LIPPS SIGNAL checklist and concludes ethical review is unnecessary because every SIGNAL element is complete. What is the strongest next response? {
+=Use SIGNAL as an integration aid while conducting separate ethical, privacy and equity review.#Correct. A planning checklist cannot replace formal judgement about rights and harms.
+~Replace stigmatising imagery with accurate risk information, efficacy and respectful testing guidance.#Not the best answer. A planning checklist cannot replace formal judgement about rights and harms.
+~Use consented data and avoid sensitive inference that users would not reasonably expect.#Not the best answer. A planning checklist cannot replace formal judgement about rights and harms.
+~Retain or strengthen accessible alternatives and monitor outcomes by subgroup.#Not the best answer. A planning checklist cannot replace formal judgement about rights and harms.
 }
 
-::HC-W12-029::In a rural health centre, which concept best matches this situation: Confident generation of false or unsupported content by an AI system. {
-=AI hallucination#Correct. Confident generation of false or unsupported content by an AI system.
-~Stigma#Not the best answer. Confident generation of false or unsupported content by an AI system.
-~Conflict of interest#Not the best answer. Confident generation of false or unsupported content by an AI system.
-~LIPPS SIGNAL#Not the best answer. Confident generation of false or unsupported content by an AI system.
-}
-
-::HC-W12-030::A communicator needs to recognise the following idea: Confident generation of false or unsupported content by an AI system. Which term is most appropriate? {
-=AI hallucination#Correct. Confident generation of false or unsupported content by an AI system.
-~Autonomy#Not the best answer. Confident generation of false or unsupported content by an AI system.
-~Justice#Not the best answer. Confident generation of false or unsupported content by an AI system.
-~Persuasion#Not the best answer. Confident generation of false or unsupported content by an AI system.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 12/Human oversight
-
-::HC-W12-031::Which concept is best described as: Accountable review and intervention by qualified people in automated communication processes. {
-=Human oversight#Correct. Accountable review and intervention by qualified people in automated communication processes.
-~Inclusive design#Not the best answer. Accountable review and intervention by qualified people in automated communication processes.
-~AI hallucination#Not the best answer. Accountable review and intervention by qualified people in automated communication processes.
-~Persuasion#Not the best answer. Accountable review and intervention by qualified people in automated communication processes.
-}
-
-::HC-W12-032::In an urban community clinic, which concept best matches this situation: Accountable review and intervention by qualified people in automated communication processes. {
-=Human oversight#Correct. Accountable review and intervention by qualified people in automated communication processes.
-~Conflict of interest#Not the best answer. Accountable review and intervention by qualified people in automated communication processes.
-~Justice#Not the best answer. Accountable review and intervention by qualified people in automated communication processes.
-~Purpose limitation#Not the best answer. Accountable review and intervention by qualified people in automated communication processes.
-}
-
-::HC-W12-033::A communicator needs to recognise the following idea: Accountable review and intervention by qualified people in automated communication processes. Which term is most appropriate? {
-=Human oversight#Correct. Accountable review and intervention by qualified people in automated communication processes.
-~Autonomy#Not the best answer. Accountable review and intervention by qualified people in automated communication processes.
-~Synthetic media#Not the best answer. Accountable review and intervention by qualified people in automated communication processes.
-~Manipulation#Not the best answer. Accountable review and intervention by qualified people in automated communication processes.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 12/Synthetic media
-
-::HC-W12-034::Which concept is best described as: AI-generated or manipulated text, audio, image or video that can appear authentic. {
-=Synthetic media#Correct. AI-generated or manipulated text, audio, image or video that can appear authentic.
-~AI hallucination#Not the best answer. AI-generated or manipulated text, audio, image or video that can appear authentic.
-~Manipulation#Not the best answer. AI-generated or manipulated text, audio, image or video that can appear authentic.
-~LIPPS SIGNAL#Not the best answer. AI-generated or manipulated text, audio, image or video that can appear authentic.
-}
-
-::HC-W12-035::In a national public-health campaign, which concept best matches this situation: AI-generated or manipulated text, audio, image or video that can appear authentic. {
-=Synthetic media#Correct. AI-generated or manipulated text, audio, image or video that can appear authentic.
-~Conflict of interest#Not the best answer. AI-generated or manipulated text, audio, image or video that can appear authentic.
-~Non-maleficence#Not the best answer. AI-generated or manipulated text, audio, image or video that can appear authentic.
-~Data minimisation#Not the best answer. AI-generated or manipulated text, audio, image or video that can appear authentic.
-}
-
-::HC-W12-036::A communicator needs to recognise the following idea: AI-generated or manipulated text, audio, image or video that can appear authentic. Which term is most appropriate? {
-=Synthetic media#Correct. AI-generated or manipulated text, audio, image or video that can appear authentic.
-~Justice#Not the best answer. AI-generated or manipulated text, audio, image or video that can appear authentic.
-~Purpose limitation#Not the best answer. AI-generated or manipulated text, audio, image or video that can appear authentic.
-~Persuasion#Not the best answer. AI-generated or manipulated text, audio, image or video that can appear authentic.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 12/LIPPS SIGNAL
-
-::HC-W12-037::Which concept is best described as: Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn. {
-=LIPPS SIGNAL#Correct. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-~Purpose limitation#Not the best answer. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-~Autonomy#Not the best answer. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-~Manipulation#Not the best answer. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-}
-
-::HC-W12-038::In a district vaccination programme, which concept best matches this situation: Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn. {
-=LIPPS SIGNAL#Correct. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-~AI hallucination#Not the best answer. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-~Justice#Not the best answer. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-~Human oversight#Not the best answer. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-}
-
-::HC-W12-039::A communicator needs to recognise the following idea: Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn. Which term is most appropriate? {
-=LIPPS SIGNAL#Correct. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-~Conflict of interest#Not the best answer. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-~Non-maleficence#Not the best answer. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-~Stigma#Not the best answer. Situation, Intended audience and insight, Goal, Narrative and needed action, Access, Listen and learn.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 12/Conflict of interest
-
-::HC-W12-040::Which concept is best described as: Competing financial, political or institutional interest that may influence communication and should be transparently managed. {
-=Conflict of interest#Correct. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-~Autonomy#Not the best answer. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-~AI hallucination#Not the best answer. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-~LIPPS SIGNAL#Not the best answer. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-}
-
-::HC-W12-041::In a maternal-health campaign, which concept best matches this situation: Competing financial, political or institutional interest that may influence communication and should be transparently managed. {
-=Conflict of interest#Correct. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-~Persuasion#Not the best answer. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-~Non-maleficence#Not the best answer. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-~Purpose limitation#Not the best answer. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-}
-
-::HC-W12-042::A communicator needs to recognise the following idea: Competing financial, political or institutional interest that may influence communication and should be transparently managed. Which term is most appropriate? {
-=Conflict of interest#Correct. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-~Stigma#Not the best answer. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-~Human oversight#Not the best answer. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-~Synthetic media#Not the best answer. Competing financial, political or institutional interest that may influence communication and should be transparently managed.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 12/Applied decision
-
-::HC-W12-043::In Week 12 (Ethics, Equity and the Future of Health Communication), in a district vaccination programme, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W12-044::In Week 12 (Ethics, Equity and the Future of Health Communication), in a maternal-health campaign, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W12-045::In Week 12 (Ethics, Equity and the Future of Health Communication), in an HIV prevention programme, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W12-046::In Week 12 (Ethics, Equity and the Future of Health Communication), in a malaria-control programme, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-}
-
-::HC-W12-047::In Week 12 (Ethics, Equity and the Future of Health Communication), in a school health programme, a campaign uses a striking statistic with no denominator or baseline. What is the main communication risk? {
-=The audience may misinterpret the magnitude of risk or effect#Correct. Risk information needs context, denominators and appropriate framing.
-~The message will always be too long#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~Denominators are irrelevant in communication#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~The source becomes automatically credible#Not the best answer. Risk information needs context, denominators and appropriate framing.
-}
-
-::HC-W12-048::In Week 12 (Ethics, Equity and the Future of Health Communication), in a refugee-settlement health team, a team labels non-adoption as “ignorance” without studying access, norms or service barriers. What should happen first? {
-=Conduct formative diagnosis of behavioural and communication determinants#Correct. Audience and behavioural diagnosis should precede message selection.
-~Design a harsher slogan#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Increase fear immediately#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Assume knowledge is the only determinant#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-}
-
-::HC-W12-049::In Week 12 (Ethics, Equity and the Future of Health Communication), in a noncommunicable-disease screening programme, an organisation changes guidance when new evidence arrives but tries to hide the earlier advice. What would better protect trust? {
-=Explain what changed, why it changed, and what people should do now#Correct. Transparent updates can preserve credibility when evidence evolves.
-~Delete all previous communication without explanation#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Claim the guidance never changed#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Delay future updates until certainty is complete#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-}
-
-::HC-W12-050::In Week 12 (Ethics, Equity and the Future of Health Communication), in an outbreak response team, a communication strategy works well for smartphone users but misses people without data access. Which principle needs stronger attention? {
-=Equity and accessibility#Correct. Effectiveness should be assessed across groups, including those facing access barriers.
-~Message saturation#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Brand visibility#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Technical complexity#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-}
-
-::HC-W12-051::In Week 12 (Ethics, Equity and the Future of Health Communication), in a youth-friendly service, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W12-052::In Week 12 (Ethics, Equity and the Future of Health Communication), in a rural health centre, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W12-053::In Week 12 (Ethics, Equity and the Future of Health Communication), in an urban community clinic, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W12-054::In Week 12 (Ethics, Equity and the Future of Health Communication), in a national public-health campaign, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-}
-
-::HC-W12-055::In Week 12 (Ethics, Equity and the Future of Health Communication), in a district vaccination programme, a campaign uses a striking statistic with no denominator or baseline. What is the main communication risk? {
-=The audience may misinterpret the magnitude of risk or effect#Correct. Risk information needs context, denominators and appropriate framing.
-~The message will always be too long#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~Denominators are irrelevant in communication#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~The source becomes automatically credible#Not the best answer. Risk information needs context, denominators and appropriate framing.
-}
-
-::HC-W12-056::In Week 12 (Ethics, Equity and the Future of Health Communication), in a maternal-health campaign, a team labels non-adoption as “ignorance” without studying access, norms or service barriers. What should happen first? {
-=Conduct formative diagnosis of behavioural and communication determinants#Correct. Audience and behavioural diagnosis should precede message selection.
-~Design a harsher slogan#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Increase fear immediately#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Assume knowledge is the only determinant#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-}
-
-::HC-W12-057::In Week 12 (Ethics, Equity and the Future of Health Communication), in an HIV prevention programme, an organisation changes guidance when new evidence arrives but tries to hide the earlier advice. What would better protect trust? {
-=Explain what changed, why it changed, and what people should do now#Correct. Transparent updates can preserve credibility when evidence evolves.
-~Delete all previous communication without explanation#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Claim the guidance never changed#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Delay future updates until certainty is complete#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-}
-
-::HC-W12-058::In Week 12 (Ethics, Equity and the Future of Health Communication), in a malaria-control programme, a communication strategy works well for smartphone users but misses people without data access. Which principle needs stronger attention? {
-=Equity and accessibility#Correct. Effectiveness should be assessed across groups, including those facing access barriers.
-~Message saturation#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Brand visibility#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Technical complexity#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-}
-
-::HC-W12-059::In Week 12 (Ethics, Equity and the Future of Health Communication), in a school health programme, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W12-060::In Week 12 (Ethics, Equity and the Future of Health Communication), in a refugee-settlement health team, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}

@@ -1,361 +1,215 @@
-$CATEGORY: LIPPS/Health Communication/Week 01/Communication versus dissemination
+$CATEGORY: LIPPS/Health Communication/Week 01/Practice
 
-::HC-W1-001::Which concept is best described as: Health communication requires attention to audience interpretation, feedback and action, not merely message transmission. {
-=Communication versus dissemination#Correct. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
-~Noise#Not the best answer. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
-~Actionability#Not the best answer. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
-~Credibility#Not the best answer. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
+::HC-W1-P01::A district team prints 20,000 posters explaining that childhood vaccination is free. Coverage does not change. The team argues that communication has been completed because every village received posters. Which response best reflects a health-communication perspective? {
+=The posters demonstrate dissemination, but communication success still depends on whether caregivers noticed, understood, trusted and could act on the information.#Correct. Dissemination documents that information was sent. Health communication also examines interpretation, response, context and whether the recommended action was feasible.
+~The campaign succeeded because distribution volume is the main communication outcome.#Not the best answer. Dissemination documents that information was sent. Health communication also examines interpretation, response, context and whether the recommended action was feasible.
+~The only remaining task is to print more posters using the same design.#Not the best answer. Dissemination documents that information was sent. Health communication also examines interpretation, response, context and whether the recommended action was feasible.
+~The unchanged coverage proves caregivers are opposed to vaccination.#Not the best answer. Dissemination documents that information was sent. Health communication also examines interpretation, response, context and whether the recommended action was feasible.
 }
 
-::HC-W1-002::In a maternal-health campaign, which concept best matches this situation: Health communication requires attention to audience interpretation, feedback and action, not merely message transmission. {
-=Communication versus dissemination#Correct. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
-~Feedback#Not the best answer. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
-~Transactional process#Not the best answer. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
-~Context#Not the best answer. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
+::HC-W1-P02::A maternal-health programme states its communication objective as “reduce maternal mortality by 30% this year.” What is the main problem with this objective? {
+=It is a broad health outcome influenced by many factors and does not specify the communication change expected in a defined audience.#Correct. A communication objective should specify a realistic change in knowledge, perception, decision or behaviour among a defined audience. Maternal mortality is a distal programme outcome.
+~It is too measurable for a communication objective.#Not the best answer. A communication objective should specify a realistic change in knowledge, perception, decision or behaviour among a defined audience. Maternal mortality is a distal programme outcome.
+~Communication objectives should never include numbers.#Not the best answer. A communication objective should specify a realistic change in knowledge, perception, decision or behaviour among a defined audience. Maternal mortality is a distal programme outcome.
+~Maternal mortality cannot be influenced by communication.#Not the best answer. A communication objective should specify a realistic change in knowledge, perception, decision or behaviour among a defined audience. Maternal mortality is a distal programme outcome.
 }
 
-::HC-W1-003::A communicator needs to recognise the following idea: Health communication requires attention to audience interpretation, feedback and action, not merely message transmission. Which term is most appropriate? {
-=Communication versus dissemination#Correct. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
-~Communication diagnosis#Not the best answer. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
-~Audience#Not the best answer. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
-~Accessibility#Not the best answer. Health communication requires attention to audience interpretation, feedback and action, not merely message transmission.
+::HC-W1-P03::A radio presenter explains a new cholera-control measure and invites listeners to call with questions. The programme team changes the next broadcast after hearing that the instructions were misunderstood. Which element of communication is most clearly demonstrated by the change in the second broadcast? {
+=Feedback#Correct. Feedback is information about how audiences received or interpreted communication, and it can be used to adapt subsequent communication.
+~Reach#Not the best answer. Feedback is information about how audiences received or interpreted communication, and it can be used to adapt subsequent communication.
+~Branding#Not the best answer. Feedback is information about how audiences received or interpreted communication, and it can be used to adapt subsequent communication.
+~Message saturation#Not the best answer. Feedback is information about how audiences received or interpreted communication, and it can be used to adapt subsequent communication.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 01/Communication objective
-
-::HC-W1-004::Which concept is best described as: A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience. {
-=Communication objective#Correct. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
-~Communication versus dissemination#Not the best answer. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
-~Actionability#Not the best answer. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
-~Audience#Not the best answer. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
+::HC-W1-P04::A clinic sends technically correct HIV-prevention messages by SMS. Many recipients share phones with family members and are afraid the messages could reveal private information. What is the most important communication issue? {
+=The channel interacts with privacy and social context, making the communication potentially unsafe even if the wording is accurate.#Correct. Channels cannot be judged apart from context. Shared-device use, privacy and stigma can change whether a channel is appropriate and acceptable.
+~The scientific content must be incorrect because recipients are uncomfortable.#Not the best answer. Channels cannot be judged apart from context. Shared-device use, privacy and stigma can change whether a channel is appropriate and acceptable.
+~SMS cannot be used for any health communication.#Not the best answer. Channels cannot be judged apart from context. Shared-device use, privacy and stigma can change whether a channel is appropriate and acceptable.
+~The only problem is that the message is too short.#Not the best answer. Channels cannot be judged apart from context. Shared-device use, privacy and stigma can change whether a channel is appropriate and acceptable.
 }
 
-::HC-W1-005::In an HIV prevention programme, which concept best matches this situation: A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience. {
-=Communication objective#Correct. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
-~Feedback#Not the best answer. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
-~Accessibility#Not the best answer. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
-~Context#Not the best answer. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
+::HC-W1-P05::A national campaign publishes excellent cervical-cancer information only as high-resolution social-media videos with no captions, transcripts or low-data alternative. Which communication quality is most directly weakened? {
+=Accessibility#Correct. Accessibility concerns whether communication can be reached and used across language, literacy, disability, technology and access conditions.
+~Scientific accuracy#Not the best answer. Accessibility concerns whether communication can be reached and used across language, literacy, disability, technology and access conditions.
+~Programme ownership#Not the best answer. Accessibility concerns whether communication can be reached and used across language, literacy, disability, technology and access conditions.
+~Message frequency#Not the best answer. Accessibility concerns whether communication can be reached and used across language, literacy, disability, technology and access conditions.
 }
 
-::HC-W1-006::A communicator needs to recognise the following idea: A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience. Which term is most appropriate? {
-=Communication objective#Correct. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
-~Transactional process#Not the best answer. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
-~Channel#Not the best answer. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
-~Communication diagnosis#Not the best answer. A communication objective specifies a change in knowledge, belief, intention, skill or action for a defined audience.
+::HC-W1-P06::A poster clearly tells women with danger signs to “go immediately to the emergency maternity unit,” but the unit is closed overnight and there is no referral number. Which statement is best? {
+=The message may be understandable but is not sufficiently actionable because the recommended pathway is not realistically available at all times.#Correct. Actionability requires people to know what to do and to have a realistic path to do it. Clear wording alone is not enough.
+~The poster is successful because the wording is clear.#Not the best answer. Actionability requires people to know what to do and to have a realistic path to do it. Clear wording alone is not enough.
+~The problem can be solved only by adding more medical terminology.#Not the best answer. Actionability requires people to know what to do and to have a realistic path to do it. Clear wording alone is not enough.
+~Actionability refers only to whether the poster includes a verb.#Not the best answer. Actionability requires people to know what to do and to have a realistic path to do it. Clear wording alone is not enough.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 01/Transactional process
-
-::HC-W1-007::Which concept is best described as: Meaning is shaped through interaction, feedback and context rather than simply transferred intact. {
-=Transactional process#Correct. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
-~Feedback#Not the best answer. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
-~Communication versus dissemination#Not the best answer. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
-~Actionability#Not the best answer. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
+::HC-W1-P07::A vaccination programme uses radio to announce clinic dates, village health workers to answer household questions, and facility staff to counsel hesitant caregivers. What is the strongest rationale for this design? {
+=Different communication levels can reinforce one another across awareness, dialogue and individual decision-making.#Correct. Health communication often works as a system. Mass, community and interpersonal communication can play different but complementary roles.
+~Using more channels always guarantees behaviour change.#Not the best answer. Health communication often works as a system. Mass, community and interpersonal communication can play different but complementary roles.
+~Interpersonal communication is unnecessary once radio coverage is high.#Not the best answer. Health communication often works as a system. Mass, community and interpersonal communication can play different but complementary roles.
+~Mass media is useful only when no health workers are available.#Not the best answer. Health communication often works as a system. Mass, community and interpersonal communication can play different but complementary roles.
 }
 
-::HC-W1-008::In a malaria-control programme, which concept best matches this situation: Meaning is shaped through interaction, feedback and context rather than simply transferred intact. {
-=Transactional process#Correct. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
-~Context#Not the best answer. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
-~Communication diagnosis#Not the best answer. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
-~Communication objective#Not the best answer. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
+::HC-W1-P08::After a malaria campaign, 88% of surveyed households correctly explain when to seek care for a febrile child, but only 39% report doing so. Medicines were frequently out of stock and transport costs were high. What conclusion is most defensible? {
+=Communication may have improved understanding, but important service and access barriers remain, so low care-seeking should not automatically be attributed to message failure.#Correct. Behaviour is shaped by communication and non-communication determinants. High understanding with low uptake should trigger investigation of service, cost and access constraints.
+~The campaign had no effect because behaviour did not reach 100%.#Not the best answer. Behaviour is shaped by communication and non-communication determinants. High understanding with low uptake should trigger investigation of service, cost and access constraints.
+~The community is resistant despite adequate services.#Not the best answer. Behaviour is shaped by communication and non-communication determinants. High understanding with low uptake should trigger investigation of service, cost and access constraints.
+~The only appropriate response is to increase message frequency.#Not the best answer. Behaviour is shaped by communication and non-communication determinants. High understanding with low uptake should trigger investigation of service, cost and access constraints.
 }
 
-::HC-W1-009::A communicator needs to recognise the following idea: Meaning is shaped through interaction, feedback and context rather than simply transferred intact. Which term is most appropriate? {
-=Transactional process#Correct. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
-~Channel#Not the best answer. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
-~Credibility#Not the best answer. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
-~Accessibility#Not the best answer. Meaning is shaped through interaction, feedback and context rather than simply transferred intact.
+$CATEGORY: LIPPS/Health Communication/Week 01/Mastery
+
+::HC-W1-M01::A district wants earlier tuberculosis testing. Posters use the phrase “presumptive TB clients should report for sputum evaluation.” Interviews find that adults do not understand the terminology, fear being labelled as HIV-positive, and cannot attend clinics during work hours. What should the team do first? {
+=Separate the communication barriers from service and stigma barriers, define the decisions required, and redesign the strategy around those findings.#Correct. The first task is diagnosis. This scenario contains message, trust/stigma and service-access problems; changing a channel before distinguishing them risks solving the wrong problem.
+~Increase the number of posters before changing anything else.#Not the best answer. The first task is diagnosis. This scenario contains message, trust/stigma and service-access problems; changing a channel before distinguishing them risks solving the wrong problem.
+~Replace all posters with social-media advertisements.#Not the best answer. The first task is diagnosis. This scenario contains message, trust/stigma and service-access problems; changing a channel before distinguishing them risks solving the wrong problem.
+~Assume low testing is caused by poor health literacy alone.#Not the best answer. The first task is diagnosis. This scenario contains message, trust/stigma and service-access problems; changing a channel before distinguishing them risks solving the wrong problem.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 01/Audience
-
-::HC-W1-010::Which concept is best described as: The people whose decisions or supporting actions the communication is intended to influence. {
-=Audience#Correct. The people whose decisions or supporting actions the communication is intended to influence.
-~Feedback#Not the best answer. The people whose decisions or supporting actions the communication is intended to influence.
-~Accessibility#Not the best answer. The people whose decisions or supporting actions the communication is intended to influence.
-~Channel#Not the best answer. The people whose decisions or supporting actions the communication is intended to influence.
+::HC-W1-M02::During a vaccine campaign, district officials say adverse events are “impossible,” while clinicians tell patients that mild reactions can occur. Rumours then spread that officials are hiding information. Which communication principle is most threatened? {
+=Credibility, because inconsistent and overly absolute claims weaken trust.#Correct. Credibility depends on accuracy, consistency, transparency and willingness to acknowledge uncertainty. Contradictory messages and impossible guarantees erode trust.
+~Accessibility, because the audience can hear both messages.#Not the best answer. Credibility depends on accuracy, consistency, transparency and willingness to acknowledge uncertainty. Contradictory messages and impossible guarantees erode trust.
+~Timeliness, because the statements were made during the campaign.#Not the best answer. Credibility depends on accuracy, consistency, transparency and willingness to acknowledge uncertainty. Contradictory messages and impossible guarantees erode trust.
+~Reach, because rumours are circulating widely.#Not the best answer. Credibility depends on accuracy, consistency, transparency and willingness to acknowledge uncertainty. Contradictory messages and impossible guarantees erode trust.
 }
 
-::HC-W1-011::In a school health programme, which concept best matches this situation: The people whose decisions or supporting actions the communication is intended to influence. {
-=Audience#Correct. The people whose decisions or supporting actions the communication is intended to influence.
-~Communication versus dissemination#Not the best answer. The people whose decisions or supporting actions the communication is intended to influence.
-~Communication objective#Not the best answer. The people whose decisions or supporting actions the communication is intended to influence.
-~Communication diagnosis#Not the best answer. The people whose decisions or supporting actions the communication is intended to influence.
+::HC-W1-M03::A hypertension programme is planning communication for adults who have never checked their blood pressure. Which is the strongest communication objective? {
+=Within three months, increase from 40% to 65% the proportion of adults aged 40–69 in the target communities who know where and when free blood-pressure screening is available.#Correct. The strongest objective identifies a defined audience, a specific communication-related outcome, a magnitude and a timeframe. Producing materials is an activity, not an outcome.
+~Eliminate hypertension in the district.#Not the best answer. The strongest objective identifies a defined audience, a specific communication-related outcome, a magnitude and a timeframe. Producing materials is an activity, not an outcome.
+~Improve awareness of hypertension.#Not the best answer. The strongest objective identifies a defined audience, a specific communication-related outcome, a magnitude and a timeframe. Producing materials is an activity, not an outcome.
+~Produce 50,000 hypertension leaflets.#Not the best answer. The strongest objective identifies a defined audience, a specific communication-related outcome, a magnitude and a timeframe. Producing materials is an activity, not an outcome.
 }
 
-::HC-W1-012::A communicator needs to recognise the following idea: The people whose decisions or supporting actions the communication is intended to influence. Which term is most appropriate? {
-=Audience#Correct. The people whose decisions or supporting actions the communication is intended to influence.
-~Noise#Not the best answer. The people whose decisions or supporting actions the communication is intended to influence.
-~Transactional process#Not the best answer. The people whose decisions or supporting actions the communication is intended to influence.
-~Context#Not the best answer. The people whose decisions or supporting actions the communication is intended to influence.
+::HC-W1-M04::A community dialogue on family planning begins with a prepared presentation. Participants raise concerns about infertility, partner opposition and provider disrespect. The facilitator changes the session to address these concerns and asks participants to suggest acceptable service arrangements. Which model of communication best fits this approach? {
+=Transactional communication, because meaning and subsequent messages are shaped through interaction and feedback.#Correct. Transactional communication treats audiences as active participants whose responses influence the communication process.
+~One-way dissemination, because the session began with a presentation.#Not the best answer. Transactional communication treats audiences as active participants whose responses influence the communication process.
+~Publicity, because several people heard the same message.#Not the best answer. Transactional communication treats audiences as active participants whose responses influence the communication process.
+~Noise reduction, because concerns were removed from discussion.#Not the best answer. Transactional communication treats audiences as active participants whose responses influence the communication process.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 01/Channel
-
-::HC-W1-013::Which concept is best described as: The route through which communication is delivered, such as counselling, radio, SMS or social media. {
-=Channel#Correct. The route through which communication is delivered, such as counselling, radio, SMS or social media.
-~Context#Not the best answer. The route through which communication is delivered, such as counselling, radio, SMS or social media.
-~Accessibility#Not the best answer. The route through which communication is delivered, such as counselling, radio, SMS or social media.
-~Actionability#Not the best answer. The route through which communication is delivered, such as counselling, radio, SMS or social media.
+::HC-W1-M05::Flood-related diarrhoea is increasing. A technically excellent household-water leaflet is approved three weeks after the contaminated water source has been repaired and families have moved back home. Which assessment is best? {
+=The communication may be accurate and understandable but failed the timeliness test for the decision it was meant to support.#Correct. Timeliness asks whether communication reaches people when it can still influence the relevant decision or protective action.
+~The communication is effective because technical quality is more important than timing.#Not the best answer. Timeliness asks whether communication reaches people when it can still influence the relevant decision or protective action.
+~The leaflet is inaccessible simply because it was printed.#Not the best answer. Timeliness asks whether communication reaches people when it can still influence the relevant decision or protective action.
+~The delay proves the message was irrelevant to diarrhoea prevention.#Not the best answer. Timeliness asks whether communication reaches people when it can still influence the relevant decision or protective action.
 }
 
-::HC-W1-014::In a refugee-settlement health team, which concept best matches this situation: The route through which communication is delivered, such as counselling, radio, SMS or social media. {
-=Channel#Correct. The route through which communication is delivered, such as counselling, radio, SMS or social media.
-~Audience#Not the best answer. The route through which communication is delivered, such as counselling, radio, SMS or social media.
-~Communication versus dissemination#Not the best answer. The route through which communication is delivered, such as counselling, radio, SMS or social media.
-~Credibility#Not the best answer. The route through which communication is delivered, such as counselling, radio, SMS or social media.
+::HC-W1-M06::A breastfeeding message says “exclusive breastfeeding is recommended for six months,” and most mothers can repeat the sentence. Interviews show many believe this still allows water and herbal drinks. What is the most important next step? {
+=Test and revise the message so the intended meaning is understood, not merely remembered.#Correct. Recall is not the same as comprehension. Communication evaluation should test the meaning people take from a message and the decision it supports.
+~Keep the message because recall proves comprehension.#Not the best answer. Recall is not the same as comprehension. Communication evaluation should test the meaning people take from a message and the decision it supports.
+~Increase the font size without changing the wording.#Not the best answer. Recall is not the same as comprehension. Communication evaluation should test the meaning people take from a message and the decision it supports.
+~Conclude that mothers are refusing expert advice.#Not the best answer. Recall is not the same as comprehension. Communication evaluation should test the meaning people take from a message and the decision it supports.
 }
 
-::HC-W1-015::A communicator needs to recognise the following idea: The route through which communication is delivered, such as counselling, radio, SMS or social media. Which term is most appropriate? {
-=Channel#Correct. The route through which communication is delivered, such as counselling, radio, SMS or social media.
-~Transactional process#Not the best answer. The route through which communication is delivered, such as counselling, radio, SMS or social media.
-~Communication objective#Not the best answer. The route through which communication is delivered, such as counselling, radio, SMS or social media.
-~Noise#Not the best answer. The route through which communication is delivered, such as counselling, radio, SMS or social media.
+::HC-W1-M07::A programme wants adolescent girls to know where confidential sexual-health services are available and to feel safe asking questions. Radio reaches nearly everyone, but formative work shows girls prefer private questions through trusted female peers or confidential messaging. What is the strongest strategy? {
+=Use radio for broad awareness and pair it with confidential interpersonal or messaging channels for questions and decision support.#Correct. Channel choice should match the communication task. High-reach channels can create awareness while private channels support dialogue and sensitive decisions.
+~Use radio alone because it has the greatest reach.#Not the best answer. Channel choice should match the communication task. High-reach channels can create awareness while private channels support dialogue and sensitive decisions.
+~Use only printed brochures because sensitive topics should not be discussed.#Not the best answer. Channel choice should match the communication task. High-reach channels can create awareness while private channels support dialogue and sensitive decisions.
+~Avoid communication because confidentiality concerns make communication impossible.#Not the best answer. Channel choice should match the communication task. High-reach channels can create awareness while private channels support dialogue and sensitive decisions.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 01/Feedback
-
-::HC-W1-016::Which concept is best described as: Information from audiences that helps communicators understand reception, questions and needed adaptation. {
-=Feedback#Correct. Information from audiences that helps communicators understand reception, questions and needed adaptation.
-~Credibility#Not the best answer. Information from audiences that helps communicators understand reception, questions and needed adaptation.
-~Accessibility#Not the best answer. Information from audiences that helps communicators understand reception, questions and needed adaptation.
-~Transactional process#Not the best answer. Information from audiences that helps communicators understand reception, questions and needed adaptation.
+::HC-W1-M08::After a cholera campaign, 92% of households report hearing the message, 81% correctly describe how to prepare safe water, but only 34% report treating household water. Chlorine products were unavailable in many villages. Which interpretation is best? {
+=The communication achieved substantial reach and understanding, but action was constrained by product availability, so behaviour data alone should not be used to declare communication failure.#Correct. The pattern suggests a drop-off between understanding and action, with a plausible non-communication barrier. Evaluation should distinguish stages in the pathway.
+~The campaign failed at reach.#Not the best answer. The pattern suggests a drop-off between understanding and action, with a plausible non-communication barrier. Evaluation should distinguish stages in the pathway.
+~The campaign proves knowledge has no relationship to behaviour.#Not the best answer. The pattern suggests a drop-off between understanding and action, with a plausible non-communication barrier. Evaluation should distinguish stages in the pathway.
+~The only valid outcome is the number of radio spots aired.#Not the best answer. The pattern suggests a drop-off between understanding and action, with a plausible non-communication barrier. Evaluation should distinguish stages in the pathway.
 }
 
-::HC-W1-017::In a noncommunicable-disease screening programme, which concept best matches this situation: Information from audiences that helps communicators understand reception, questions and needed adaptation. {
-=Feedback#Correct. Information from audiences that helps communicators understand reception, questions and needed adaptation.
-~Audience#Not the best answer. Information from audiences that helps communicators understand reception, questions and needed adaptation.
-~Noise#Not the best answer. Information from audiences that helps communicators understand reception, questions and needed adaptation.
-~Actionability#Not the best answer. Information from audiences that helps communicators understand reception, questions and needed adaptation.
+::HC-W1-M09::A district chooses a famous musician to promote antenatal care. Formative interviews show pregnant women trust midwives and experienced mothers more on pregnancy questions and view the musician as entertaining but uninformed. What should the team infer? {
+=Popularity is not the same as issue-specific credibility; messenger choice should reflect whom the audience trusts for the decision in question.#Correct. Credibility is contextual. A messenger may be highly visible yet not be trusted as a source on a particular health decision.
+~Celebrity reach automatically outweighs credibility.#Not the best answer. Credibility is contextual. A messenger may be highly visible yet not be trusted as a source on a particular health decision.
+~Only government officials can be credible health messengers.#Not the best answer. Credibility is contextual. A messenger may be highly visible yet not be trusted as a source on a particular health decision.
+~The message content no longer matters once a trusted messenger is selected.#Not the best answer. Credibility is contextual. A messenger may be highly visible yet not be trusted as a source on a particular health decision.
 }
 
-::HC-W1-018::A communicator needs to recognise the following idea: Information from audiences that helps communicators understand reception, questions and needed adaptation. Which term is most appropriate? {
-=Feedback#Correct. Information from audiences that helps communicators understand reception, questions and needed adaptation.
-~Communication diagnosis#Not the best answer. Information from audiences that helps communicators understand reception, questions and needed adaptation.
-~Context#Not the best answer. Information from audiences that helps communicators understand reception, questions and needed adaptation.
-~Channel#Not the best answer. Information from audiences that helps communicators understand reception, questions and needed adaptation.
+::HC-W1-M10::A newborn-care campaign uses the phrase “keep the baby warm” with an image of a heavily wrapped infant. In one community, families interpret this as keeping the baby indoors near a charcoal stove. What does this illustrate? {
+=Audiences interpret messages through local experience and context, so intended meaning must be tested rather than assumed.#Correct. Meaning is constructed by audiences. Pretesting and contextual inquiry are needed because technically correct wording can produce unintended interpretations.
+~Images always communicate more accurately than words.#Not the best answer. Meaning is constructed by audiences. Pretesting and contextual inquiry are needed because technically correct wording can produce unintended interpretations.
+~Cultural interpretation is irrelevant if the message is medically correct.#Not the best answer. Meaning is constructed by audiences. Pretesting and contextual inquiry are needed because technically correct wording can produce unintended interpretations.
+~The problem is solely insufficient message reach.#Not the best answer. Meaning is constructed by audiences. Pretesting and contextual inquiry are needed because technically correct wording can produce unintended interpretations.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 01/Noise
-
-::HC-W1-019::Which concept is best described as: Anything that interferes with reception or interpretation, including competing messages and confusing jargon. {
-=Noise#Correct. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
-~Channel#Not the best answer. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
-~Transactional process#Not the best answer. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
-~Accessibility#Not the best answer. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
+::HC-W1-M11::A ministry reports that a malaria campaign was successful because 4 million people viewed its social-media content. Which additional evidence would most directly strengthen a claim that communication, rather than distribution alone, was successful? {
+=Evidence that the intended audience understood the recommended action and that the communication influenced the relevant decision or behaviour pathway.#Correct. Views are exposure or reach indicators. Stronger communication evidence examines comprehension, trust, decision-making, action and other relevant intermediate outcomes.
+~The total number of graphic designers employed.#Not the best answer. Views are exposure or reach indicators. Stronger communication evidence examines comprehension, trust, decision-making, action and other relevant intermediate outcomes.
+~The number of posts published by the ministry.#Not the best answer. Views are exposure or reach indicators. Stronger communication evidence examines comprehension, trust, decision-making, action and other relevant intermediate outcomes.
+~The size of the ministry’s social-media account.#Not the best answer. Views are exposure or reach indicators. Stronger communication evidence examines comprehension, trust, decision-making, action and other relevant intermediate outcomes.
 }
 
-::HC-W1-020::In an outbreak response team, which concept best matches this situation: Anything that interferes with reception or interpretation, including competing messages and confusing jargon. {
-=Noise#Correct. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
-~Communication diagnosis#Not the best answer. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
-~Communication objective#Not the best answer. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
-~Audience#Not the best answer. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
+::HC-W1-M12::A hotline receives few calls after a mental-health campaign. Managers propose “more awareness.” Data show that most intended users know the hotline number, but many believe calls are recorded and shared with employers. What is the most important communication problem? {
+=A trust and confidentiality belief is blocking use, so the strategy must address credibility and privacy concerns rather than awareness alone.#Correct. Diagnosis should use evidence. High awareness with privacy fears points toward trust and perceived confidentiality rather than a simple reach problem.
+~The hotline number has not been disseminated.#Not the best answer. Diagnosis should use evidence. High awareness with privacy fears points toward trust and perceived confidentiality rather than a simple reach problem.
+~The audience lacks all knowledge of mental health.#Not the best answer. Diagnosis should use evidence. High awareness with privacy fears points toward trust and perceived confidentiality rather than a simple reach problem.
+~The campaign necessarily requires a television advertisement.#Not the best answer. Diagnosis should use evidence. High awareness with privacy fears points toward trust and perceived confidentiality rather than a simple reach problem.
 }
 
-::HC-W1-021::A communicator needs to recognise the following idea: Anything that interferes with reception or interpretation, including competing messages and confusing jargon. Which term is most appropriate? {
-=Noise#Correct. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
-~Context#Not the best answer. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
-~Communication versus dissemination#Not the best answer. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
-~Feedback#Not the best answer. Anything that interferes with reception or interpretation, including competing messages and confusing jargon.
+::HC-W1-M13::A programme wants children with fever to receive prompt malaria testing. Caregivers usually decide whether to seek care, but household money for transport is controlled by another adult. Which planning approach is strongest? {
+=Treat caregivers as a primary decision audience and identify the household resource controller as an important supporting audience.#Correct. Audience definition should reflect who makes, enables or constrains the relevant decision. Primary and supporting audiences may require different communication.
+~Communicate only with children because they experience the fever.#Not the best answer. Audience definition should reflect who makes, enables or constrains the relevant decision. Primary and supporting audiences may require different communication.
+~Choose the audience solely by who is easiest to reach.#Not the best answer. Audience definition should reflect who makes, enables or constrains the relevant decision. Primary and supporting audiences may require different communication.
+~Use one undifferentiated message for the entire district without considering decision roles.#Not the best answer. Audience definition should reflect who makes, enables or constrains the relevant decision. Primary and supporting audiences may require different communication.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 01/Credibility
-
-::HC-W1-022::Which concept is best described as: Perceived trustworthiness and competence of the source or communication. {
-=Credibility#Correct. Perceived trustworthiness and competence of the source or communication.
-~Accessibility#Not the best answer. Perceived trustworthiness and competence of the source or communication.
-~Context#Not the best answer. Perceived trustworthiness and competence of the source or communication.
-~Communication versus dissemination#Not the best answer. Perceived trustworthiness and competence of the source or communication.
+::HC-W1-M14::A campaign encourages facility delivery, but women report disrespectful care, informal charges and lack of transport at night. Staff describe women who still deliver at home as “hard to convince.” What is the best critique? {
+=The explanation wrongly treats a multi-factor service-access problem as an audience-attitude problem; communication cannot substitute for fixing major structural barriers.#Correct. Communication planning should not blame audiences for behaviour that is strongly constrained by service quality, cost, transport or other structural conditions.
+~Women should receive more fear-based messages until behaviour changes.#Not the best answer. Communication planning should not blame audiences for behaviour that is strongly constrained by service quality, cost, transport or other structural conditions.
+~The campaign should stop measuring service barriers because they are outside communication.#Not the best answer. Communication planning should not blame audiences for behaviour that is strongly constrained by service quality, cost, transport or other structural conditions.
+~The only communication error is insufficient use of social media.#Not the best answer. Communication planning should not blame audiences for behaviour that is strongly constrained by service quality, cost, transport or other structural conditions.
 }
 
-::HC-W1-023::In a youth-friendly service, which concept best matches this situation: Perceived trustworthiness and competence of the source or communication. {
-=Credibility#Correct. Perceived trustworthiness and competence of the source or communication.
-~Audience#Not the best answer. Perceived trustworthiness and competence of the source or communication.
-~Communication objective#Not the best answer. Perceived trustworthiness and competence of the source or communication.
-~Channel#Not the best answer. Perceived trustworthiness and competence of the source or communication.
+::HC-W1-M15::During an Ebola response, official guidance is consistent, but edited audio clips circulating on messaging apps falsely claim that treatment centres infect patients. In the communication process, the misinformation is best understood as what? {
+=Competing information that creates conceptual noise and alters how official messages are interpreted.#Correct. Noise includes more than poor sound or signal. Competing claims can interfere with attention, trust and interpretation of accurate information.
+~Feedback only, because it comes from community members.#Not the best answer. Noise includes more than poor sound or signal. Competing claims can interfere with attention, trust and interpretation of accurate information.
+~A communication objective.#Not the best answer. Noise includes more than poor sound or signal. Competing claims can interfere with attention, trust and interpretation of accurate information.
+~Evidence that official guidance should never be repeated.#Not the best answer. Noise includes more than poor sound or signal. Competing claims can interfere with attention, trust and interpretation of accurate information.
 }
 
-::HC-W1-024::A communicator needs to recognise the following idea: Perceived trustworthiness and competence of the source or communication. Which term is most appropriate? {
-=Credibility#Correct. Perceived trustworthiness and competence of the source or communication.
-~Actionability#Not the best answer. Perceived trustworthiness and competence of the source or communication.
-~Feedback#Not the best answer. Perceived trustworthiness and competence of the source or communication.
-~Noise#Not the best answer. Perceived trustworthiness and competence of the source or communication.
+::HC-W1-M16::A district introduces a new counselling script for childhood immunisation. To test whether the script improves communication, which early outcome is most directly aligned with the intervention? {
+=Caregivers’ understanding of the recommended schedule and confidence about when and where to return.#Correct. Early evaluation should measure outcomes close to the communication pathway, such as comprehension, confidence, intention or decision quality, before attributing distal population outcomes.
+~District infant mortality within one month.#Not the best answer. Early evaluation should measure outcomes close to the communication pathway, such as comprehension, confidence, intention or decision quality, before attributing distal population outcomes.
+~National vaccine procurement volume.#Not the best answer. Early evaluation should measure outcomes close to the communication pathway, such as comprehension, confidence, intention or decision quality, before attributing distal population outcomes.
+~The number of health facilities constructed that year.#Not the best answer. Early evaluation should measure outcomes close to the communication pathway, such as comprehension, confidence, intention or decision quality, before attributing distal population outcomes.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 01/Actionability
+$CATEGORY: LIPPS/Health Communication/Week 01/Institutional
 
-::HC-W1-025::Which concept is best described as: The extent to which people can tell what to do and can realistically take the recommended action. {
-=Actionability#Correct. The extent to which people can tell what to do and can realistically take the recommended action.
-~Communication diagnosis#Not the best answer. The extent to which people can tell what to do and can realistically take the recommended action.
-~Noise#Not the best answer. The extent to which people can tell what to do and can realistically take the recommended action.
-~Communication versus dissemination#Not the best answer. The extent to which people can tell what to do and can realistically take the recommended action.
+::HC-W1-I01::A malaria programme reports low use of insecticide-treated nets despite a year-long campaign. Survey findings are: 91% have heard that nets prevent malaria; 84% can explain correct use; 62% own at least one net; 37% report enough nets for all household members; and many households say nights are very hot. Which recommendation best follows from these data? {
+=Do not treat the problem as awareness alone; investigate net access, household allocation and comfort barriers while refining communication around feasible use.#Correct. The evidence shows high awareness and understanding but substantial access and practical barriers. A sound response combines programme and communication action rather than assuming a single cause.
+~Increase awareness advertising because fewer than 100% have heard the message.#Not the best answer. The evidence shows high awareness and understanding but substantial access and practical barriers. A sound response combines programme and communication action rather than assuming a single cause.
+~Conclude that households reject malaria prevention.#Not the best answer. The evidence shows high awareness and understanding but substantial access and practical barriers. A sound response combines programme and communication action rather than assuming a single cause.
+~Stop communication because knowledge is already high.#Not the best answer. The evidence shows high awareness and understanding but substantial access and practical barriers. A sound response combines programme and communication action rather than assuming a single cause.
 }
 
-::HC-W1-026::In a rural health centre, which concept best matches this situation: The extent to which people can tell what to do and can realistically take the recommended action. {
-=Actionability#Correct. The extent to which people can tell what to do and can realistically take the recommended action.
-~Transactional process#Not the best answer. The extent to which people can tell what to do and can realistically take the recommended action.
-~Communication objective#Not the best answer. The extent to which people can tell what to do and can realistically take the recommended action.
-~Context#Not the best answer. The extent to which people can tell what to do and can realistically take the recommended action.
+::HC-W1-I02::During a suspected measles outbreak, laboratory confirmation is pending. Officials know that vaccination and early reporting are protective but do not yet know the outbreak’s final size. Which public statement is strongest? {
+=Explain what is known, what remains uncertain, what people should do now, and when updated information will be provided.#Correct. Credible communication under uncertainty distinguishes known facts from unknowns, gives actionable guidance and commits to updates rather than making false guarantees.
+~State that there is definitely no outbreak until every laboratory result is available.#Not the best answer. Credible communication under uncertainty distinguishes known facts from unknowns, gives actionable guidance and commits to updates rather than making false guarantees.
+~Announce the largest plausible case count to make the public take the threat seriously.#Not the best answer. Credible communication under uncertainty distinguishes known facts from unknowns, gives actionable guidance and commits to updates rather than making false guarantees.
+~Avoid communicating until all uncertainty has disappeared.#Not the best answer. Credible communication under uncertainty distinguishes known facts from unknowns, gives actionable guidance and commits to updates rather than making false guarantees.
 }
 
-::HC-W1-027::A communicator needs to recognise the following idea: The extent to which people can tell what to do and can realistically take the recommended action. Which term is most appropriate? {
-=Actionability#Correct. The extent to which people can tell what to do and can realistically take the recommended action.
-~Feedback#Not the best answer. The extent to which people can tell what to do and can realistically take the recommended action.
-~Credibility#Not the best answer. The extent to which people can tell what to do and can realistically take the recommended action.
-~Channel#Not the best answer. The extent to which people can tell what to do and can realistically take the recommended action.
+::HC-W1-I03::A campaign aims to increase cervical-cancer screening. Which objective is best suited to evaluate the communication contribution before assessing screening uptake itself? {
+=Increase the proportion of eligible women who correctly know where screening is available, the cost, and the recommended next step from baseline to a specified target by campaign end.#Correct. An intermediate communication objective should capture a specific, measurable audience change that is plausibly influenced by communication and precedes the final health or service outcome.
+~Reduce cervical-cancer mortality by campaign end.#Not the best answer. An intermediate communication objective should capture a specific, measurable audience change that is plausibly influenced by communication and precedes the final health or service outcome.
+~Print 10,000 screening posters.#Not the best answer. An intermediate communication objective should capture a specific, measurable audience change that is plausibly influenced by communication and precedes the final health or service outcome.
+~Make cervical cancer a national priority.#Not the best answer. An intermediate communication objective should capture a specific, measurable audience change that is plausibly influenced by communication and precedes the final health or service outcome.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 01/Accessibility
-
-::HC-W1-028::Which concept is best described as: Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs. {
-=Accessibility#Correct. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-~Transactional process#Not the best answer. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-~Actionability#Not the best answer. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-~Audience#Not the best answer. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
+::HC-W1-I04::A new maternal-health hotline campaign produces the following results: message reach 76%; correct recall of the number 69%; belief that calls are confidential 31%; actual calls 12%. Which conclusion is most defensible? {
+=The largest documented weakness is trust in confidentiality, which should be investigated before assuming additional reach will solve low use.#Correct. The communication pathway shows reasonable reach and recall but a severe trust gap before use. The evidence supports investigating confidentiality beliefs and service experience.
+~Reach is the only meaningful problem because it is below 100%.#Not the best answer. The communication pathway shows reasonable reach and recall but a severe trust gap before use. The evidence supports investigating confidentiality beliefs and service experience.
+~Low calls prove the hotline is clinically ineffective.#Not the best answer. The communication pathway shows reasonable reach and recall but a severe trust gap before use. The evidence supports investigating confidentiality beliefs and service experience.
+~The campaign should be judged successful because most people remember the number.#Not the best answer. The communication pathway shows reasonable reach and recall but a severe trust gap before use. The evidence supports investigating confidentiality beliefs and service experience.
 }
 
-::HC-W1-029::In an urban community clinic, which concept best matches this situation: Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs. {
-=Accessibility#Correct. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-~Feedback#Not the best answer. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-~Communication versus dissemination#Not the best answer. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-~Communication diagnosis#Not the best answer. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
+::HC-W1-I05::During a hepatitis E response in a displacement settlement, authorities can rapidly send SMS in the national language. The settlement includes several language groups, low literacy, shared phones and people with hearing and visual impairments. What is the strongest strategy? {
+=Use multiple accessible formats and trusted community channels, test comprehension across groups, and keep SMS as one component rather than the sole channel.#Correct. Accessibility and equity require communication to be usable by diverse audiences. Urgency does not remove the need for multiple formats and community-based pathways.
+~Use national-language SMS only because it is the fastest channel.#Not the best answer. Accessibility and equity require communication to be usable by diverse audiences. Urgency does not remove the need for multiple formats and community-based pathways.
+~Delay all communication until one format can serve everyone identically.#Not the best answer. Accessibility and equity require communication to be usable by diverse audiences. Urgency does not remove the need for multiple formats and community-based pathways.
+~Target only literate phone owners because they are easiest to measure.#Not the best answer. Accessibility and equity require communication to be usable by diverse audiences. Urgency does not remove the need for multiple formats and community-based pathways.
 }
 
-::HC-W1-030::A communicator needs to recognise the following idea: Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs. Which term is most appropriate? {
-=Accessibility#Correct. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-~Channel#Not the best answer. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-~Context#Not the best answer. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-~Credibility#Not the best answer. Whether communication can be reached and used by people with different language, disability, literacy, technology and access needs.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 01/Context
-
-::HC-W1-031::Which concept is best described as: The social, cultural, political, economic and service environment in which communication is interpreted. {
-=Context#Correct. The social, cultural, political, economic and service environment in which communication is interpreted.
-~Channel#Not the best answer. The social, cultural, political, economic and service environment in which communication is interpreted.
-~Actionability#Not the best answer. The social, cultural, political, economic and service environment in which communication is interpreted.
-~Communication diagnosis#Not the best answer. The social, cultural, political, economic and service environment in which communication is interpreted.
-}
-
-::HC-W1-032::In a national public-health campaign, which concept best matches this situation: The social, cultural, political, economic and service environment in which communication is interpreted. {
-=Context#Correct. The social, cultural, political, economic and service environment in which communication is interpreted.
-~Noise#Not the best answer. The social, cultural, political, economic and service environment in which communication is interpreted.
-~Transactional process#Not the best answer. The social, cultural, political, economic and service environment in which communication is interpreted.
-~Accessibility#Not the best answer. The social, cultural, political, economic and service environment in which communication is interpreted.
-}
-
-::HC-W1-033::A communicator needs to recognise the following idea: The social, cultural, political, economic and service environment in which communication is interpreted. Which term is most appropriate? {
-=Context#Correct. The social, cultural, political, economic and service environment in which communication is interpreted.
-~Feedback#Not the best answer. The social, cultural, political, economic and service environment in which communication is interpreted.
-~Communication versus dissemination#Not the best answer. The social, cultural, political, economic and service environment in which communication is interpreted.
-~Communication objective#Not the best answer. The social, cultural, political, economic and service environment in which communication is interpreted.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 01/Communication diagnosis
-
-::HC-W1-034::Which concept is best described as: Systematic identification of the communication problem before choosing a message or channel. {
-=Communication diagnosis#Correct. Systematic identification of the communication problem before choosing a message or channel.
-~Noise#Not the best answer. Systematic identification of the communication problem before choosing a message or channel.
-~Actionability#Not the best answer. Systematic identification of the communication problem before choosing a message or channel.
-~Channel#Not the best answer. Systematic identification of the communication problem before choosing a message or channel.
-}
-
-::HC-W1-035::In a district vaccination programme, which concept best matches this situation: Systematic identification of the communication problem before choosing a message or channel. {
-=Communication diagnosis#Correct. Systematic identification of the communication problem before choosing a message or channel.
-~Communication objective#Not the best answer. Systematic identification of the communication problem before choosing a message or channel.
-~Communication versus dissemination#Not the best answer. Systematic identification of the communication problem before choosing a message or channel.
-~Accessibility#Not the best answer. Systematic identification of the communication problem before choosing a message or channel.
-}
-
-::HC-W1-036::A communicator needs to recognise the following idea: Systematic identification of the communication problem before choosing a message or channel. Which term is most appropriate? {
-=Communication diagnosis#Correct. Systematic identification of the communication problem before choosing a message or channel.
-~Credibility#Not the best answer. Systematic identification of the communication problem before choosing a message or channel.
-~Transactional process#Not the best answer. Systematic identification of the communication problem before choosing a message or channel.
-~Feedback#Not the best answer. Systematic identification of the communication problem before choosing a message or channel.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 01/Applied decision
-
-::HC-W1-037::In Week 1 (Foundations of Health Communication), in a maternal-health campaign, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W1-038::In Week 1 (Foundations of Health Communication), in an HIV prevention programme, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W1-039::In Week 1 (Foundations of Health Communication), in a malaria-control programme, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W1-040::In Week 1 (Foundations of Health Communication), in a school health programme, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-}
-
-::HC-W1-041::In Week 1 (Foundations of Health Communication), in a refugee-settlement health team, a campaign uses a striking statistic with no denominator or baseline. What is the main communication risk? {
-=The audience may misinterpret the magnitude of risk or effect#Correct. Risk information needs context, denominators and appropriate framing.
-~The message will always be too long#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~Denominators are irrelevant in communication#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~The source becomes automatically credible#Not the best answer. Risk information needs context, denominators and appropriate framing.
-}
-
-::HC-W1-042::In Week 1 (Foundations of Health Communication), in a noncommunicable-disease screening programme, a team labels non-adoption as “ignorance” without studying access, norms or service barriers. What should happen first? {
-=Conduct formative diagnosis of behavioural and communication determinants#Correct. Audience and behavioural diagnosis should precede message selection.
-~Design a harsher slogan#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Increase fear immediately#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Assume knowledge is the only determinant#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-}
-
-::HC-W1-043::In Week 1 (Foundations of Health Communication), in an outbreak response team, an organisation changes guidance when new evidence arrives but tries to hide the earlier advice. What would better protect trust? {
-=Explain what changed, why it changed, and what people should do now#Correct. Transparent updates can preserve credibility when evidence evolves.
-~Delete all previous communication without explanation#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Claim the guidance never changed#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Delay future updates until certainty is complete#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-}
-
-::HC-W1-044::In Week 1 (Foundations of Health Communication), in a youth-friendly service, a communication strategy works well for smartphone users but misses people without data access. Which principle needs stronger attention? {
-=Equity and accessibility#Correct. Effectiveness should be assessed across groups, including those facing access barriers.
-~Message saturation#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Brand visibility#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Technical complexity#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-}
-
-::HC-W1-045::In Week 1 (Foundations of Health Communication), in a rural health centre, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W1-046::In Week 1 (Foundations of Health Communication), in an urban community clinic, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W1-047::In Week 1 (Foundations of Health Communication), in a national public-health campaign, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W1-048::In Week 1 (Foundations of Health Communication), in a district vaccination programme, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
+::HC-W1-I06::A campaign evaluation finds 82% message exposure, 71% correct comprehension, 52% intention to act and 29% verified service uptake. No comparison group was used, and service availability improved during the same period. Which claim is best supported? {
+=The campaign achieved substantial exposure and comprehension, but the data alone cannot establish how much of the service uptake was caused by communication.#Correct. Descriptive pathway indicators can show reach and comprehension, but causal attribution of service uptake requires stronger design and attention to concurrent changes.
+~The campaign caused a 29% increase in service uptake.#Not the best answer. Descriptive pathway indicators can show reach and comprehension, but causal attribution of service uptake requires stronger design and attention to concurrent changes.
+~The campaign had no effect because uptake was lower than exposure.#Not the best answer. Descriptive pathway indicators can show reach and comprehension, but causal attribution of service uptake requires stronger design and attention to concurrent changes.
+~The service improvement can be ignored because communication was widely seen.#Not the best answer. Descriptive pathway indicators can show reach and comprehension, but causal attribution of service uptake requires stronger design and attention to concurrent changes.
 }

@@ -1,0 +1,78 @@
+---
+title: "Health Communication Week 10 — Assessment Blueprint"
+description: "Curated assessment architecture and authentic-task rubric for Misinformation, Disinformation and Infodemic Management."
+---
+
+# Week 10 assessment blueprint
+
+This instructor-facing specification applies the LIPPS assessment standard established in Week 1. The bank contains **30 distinct scenario items** divided into 8 Practice, 16 Mastery and 6 protected Institutional seed items.
+
+| Pool | Items | Intended use |
+|---|---:|---|
+| Practice | 8 | Formative learning with explanatory feedback and repeat attempts |
+| Mastery | 16 | Weekly graded quiz based on application and judgement |
+| Institutional | 6 | Protected seed items for later formal assessment; expand and independently review before high-stakes use |
+
+## Recommended Moodle configuration
+
+- **Practice:** all 8 items, untimed or generous time, immediate feedback.
+- **Mastery:** randomly draw **10 of 16**, one question per page, shuffled options, pilot limit **12 minutes**.
+- **Institutional:** keep hidden from routine practice; no immediate feedback; add independently reviewed parallel items before consequential use.
+- Preserve approved accessibility accommodations. Timing is a secondary safeguard, never a substitute for good item design.
+
+## Item map
+
+| Item | Pool | Outcome | Cognitive demand | Domain |
+|---|---|---|---|---|
+| HC-W10-P01 | Practice | LO1 | Analyze | Diagnosis / concept application |
+| HC-W10-P02 | Practice | LO1 | Evaluate | Decision / intervention selection |
+| HC-W10-P03 | Practice | LO2 | Analyze | Diagnosis / concept application |
+| HC-W10-P04 | Practice | LO2 | Evaluate | Decision / intervention selection |
+| HC-W10-P05 | Practice | LO3 | Analyze | Diagnosis / concept application |
+| HC-W10-P06 | Practice | LO3 | Evaluate | Decision / intervention selection |
+| HC-W10-P07 | Practice | LO4 | Analyze | Diagnosis / concept application |
+| HC-W10-P08 | Practice | LO4 | Evaluate | Decision / intervention selection |
+| HC-W10-M01 | Mastery | LO5 | Analyze | Diagnosis / concept application |
+| HC-W10-M02 | Mastery | LO5 | Evaluate | Decision / intervention selection |
+| HC-W10-M03 | Mastery | LO6 | Analyze | Diagnosis / concept application |
+| HC-W10-M04 | Mastery | LO6 | Evaluate | Decision / intervention selection |
+| HC-W10-M05 | Mastery | LO7 | Analyze | Diagnosis / concept application |
+| HC-W10-M06 | Mastery | LO7 | Evaluate | Decision / intervention selection |
+| HC-W10-M07 | Mastery | LO8 | Analyze | Diagnosis / concept application |
+| HC-W10-M08 | Mastery | LO8 | Evaluate | Decision / intervention selection |
+| HC-W10-M09 | Mastery | LO1 | Analyze | Diagnosis / concept application |
+| HC-W10-M10 | Mastery | LO1 | Evaluate | Decision / intervention selection |
+| HC-W10-M11 | Mastery | LO2 | Analyze | Diagnosis / concept application |
+| HC-W10-M12 | Mastery | LO2 | Evaluate | Decision / intervention selection |
+| HC-W10-M13 | Mastery | LO3 | Analyze | Diagnosis / concept application |
+| HC-W10-M14 | Mastery | LO3 | Evaluate | Decision / intervention selection |
+| HC-W10-M15 | Mastery | LO4 | Analyze | Diagnosis / concept application |
+| HC-W10-M16 | Mastery | LO4 | Evaluate | Decision / intervention selection |
+| HC-W10-I01 | Institutional | LO5 | Analyze | Diagnosis / concept application |
+| HC-W10-I02 | Institutional | LO5 | Evaluate | Decision / intervention selection |
+| HC-W10-I03 | Institutional | LO6 | Analyze | Diagnosis / concept application |
+| HC-W10-I04 | Institutional | LO6 | Evaluate | Decision / intervention selection |
+| HC-W10-I05 | Institutional | LO7 | Analyze | Diagnosis / concept application |
+| HC-W10-I06 | Institutional | LO7 | Evaluate | Decision / intervention selection |
+
+## Authentic task · Infodemic Signal Triage and Response Brief
+
+**Task:** Analyse a set of information signals, distinguish misinformation and disinformation where possible, prioritise by likely health harm, and propose listening, correction, messenger and evaluation actions.
+
+Suggested length: **900–1,200 words** or an equivalent structured product. Students should show their reasoning and identify what evidence would change their decision.
+
+## Rubric — 20 marks
+
+| Criterion | 4 — Excellent | 3 — Good | 2 — Developing | 1 — Weak | 0 — Missing / unsafe |
+|---|---|---|---|---|---|
+| **Signal interpretation** | Accurate, specific and well justified | Mostly accurate with minor gaps | Partial or generic | Weak reasoning | Missing, unsafe or unsupported |
+| **Prioritisation** | Accurate, specific and well justified | Mostly accurate with minor gaps | Partial or generic | Weak reasoning | Missing, unsafe or unsupported |
+| **Response design** | Accurate, specific and well justified | Mostly accurate with minor gaps | Partial or generic | Weak reasoning | Missing, unsafe or unsupported |
+| **Messenger and community strategy** | Accurate, specific and well justified | Mostly accurate with minor gaps | Partial or generic | Weak reasoning | Missing, unsafe or unsupported |
+| **Outcome evaluation** | Accurate, specific and well justified | Mostly accurate with minor gaps | Partial or generic | Weak reasoning | Missing, unsafe or unsupported |
+
+**Suggested pass standard:** 10/20, subject to institutional regulation. For formal use, require minimum competence on any safety-, ethics- or evidence-critical criterion.
+
+## Quality rule
+
+Questions in this bank are paired around the same realistic situations: one asks the learner to **diagnose**, and the second asks the learner to **choose an action**. This deliberately tests transfer from concept to decision rather than repeated definition recall.

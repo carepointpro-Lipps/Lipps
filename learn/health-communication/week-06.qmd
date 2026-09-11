@@ -114,6 +114,68 @@ Document what changed and why. If pre-testing reveals a service barrier rather t
 :::
 
 ::: {.lipps-section}
+## DEEPEN · Build the message from the decision backwards
+
+A message should begin with the action or decision it must support. Before writing copy, specify the audience, the desired action, the main barrier, the benefit that matters to the audience and the evidence that must be conveyed.
+
+### One main message does not mean one sentence
+
+People can process supporting details, but the material should make the main point unmistakable. The CDC Clear Communication Index asks whether the main message and call to action are obvious and whether numbers are explained in ways people can use. A technically complete brochure that hides the key action on page four is poorly designed.
+
+### Plain language is precision
+
+Plain language removes unnecessary complexity without removing scientific meaning. Replace jargon, shorten sentences, use familiar words, define unavoidable technical terms and make instructions concrete. "Present for clinical evaluation if symptoms persist" is less actionable than "Return to the clinic if the fever is still present after two days."
+
+### Communicating numbers
+
+Use consistent denominators, meaningful frequencies and absolute risks when possible. "Risk doubled" can sound dramatic even when risk changed from 1 in 10,000 to 2 in 10,000. Visuals should clarify rather than decorate.
+
+### Pre-testing is diagnosis, not voting
+
+Ask intended users what they think the message means, what action they believe is expected, what is confusing, what feels credible and whether anything is offensive or unrealistic. Avoid asking only, "Do you like it?" A liked message can still be misunderstood.
+
+### Translation and adaptation
+
+Literal translation can preserve words while losing meaning, tone or social acceptability. Back-translation is useful but insufficient. Test the adapted message with people who actually use the language in the intended setting.
+
+### Iteration
+
+Pre-testing should change the product. Document the issue identified, the revision made and whether the revised version solved the problem. This creates an audit trail and prevents teams from treating pre-testing as ceremonial approval.
+
+### What could fool us?
+
+People may explain a message correctly in an interview because the interviewer prompts them. Testing in a quiet office can overestimate comprehension under real-world conditions. A visually attractive message may score well with programme staff but fail among the intended audience. Test where possible under conditions that resemble actual use.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · From dense message to usable instruction
+
+**Draft:** "Eligible beneficiaries are advised to present at designated health facilities for hypertension screening and subsequent clinical evaluation where indicated."
+
+The sentence is technically understandable to professionals but forces the public to decode several ideas.
+
+**Reworked:** "High blood pressure often has no symptoms. If you are 30 years or older, get your blood pressure checked at the nearest participating health centre this month. The check takes a few minutes."
+
+The revision makes the risk, audience, action, place and timing easier to identify. Whether it is actually effective still requires pre-testing.
+
+### Five pre-test probes
+
+Ask intended users:
+
+1. What is the main point in your own words?
+2. Who is this for?
+3. What should the person do next?
+4. What is confusing, worrying or hard to believe?
+5. Is the action realistically possible for someone like you?
+
+Record the answer **before** explaining the intended meaning. Once the interviewer teaches the message, the pre-test is contaminated.
+
+### Revision log
+
+Maintain a simple table with version, problem identified, evidence source, revision made and result of re-test. This becomes part of the quality record and is especially useful when multiple partners approve the same material.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 A family-planning programme drafts: “Modern contraceptive methods are safe, effective and available. Visit your nearest facility today.” Formative research shows that many women worry about side effects, some need discreet access, adolescents fear judgement from providers, and several methods are intermittently out of stock.
@@ -144,9 +206,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 6 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 6 bank of 48 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 6 bank of 30 items.
 
-**Initial time limit:** 11 minutes.  
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -162,6 +224,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **NCI Making Health Communication Programs Work.** Message development, testing and programme planning.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-06-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

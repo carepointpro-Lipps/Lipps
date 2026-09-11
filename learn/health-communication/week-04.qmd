@@ -111,6 +111,74 @@ Before ending, clarify what happens next, where, when, what warning signs matter
 :::
 
 ::: {.lipps-section}
+## DEEPEN · The clinical encounter is a decision environment
+
+Interpersonal communication is not simply a polite way to transmit instructions. It shapes whether concerns are disclosed, whether risks are understood and whether a patient can participate in a decision. A technically correct explanation can fail if the patient is interrupted, embarrassed, frightened, rushed or uncertain whether the conversation is confidential.
+
+### A practical consultation sequence
+
+LIPPS uses five moves: **invite → listen → explain → check → agree**.
+
+1. **Invite** the patient's agenda before assuming the problem.
+2. **Listen** for concerns, expectations, prior experiences and constraints.
+3. **Explain** the most important information in plain language and manageable chunks.
+4. **Check** understanding using teach-back rather than "Do you understand?"
+5. **Agree** on the next step, including what to do if circumstances change.
+
+Teach-back is not a test of the patient. The clinician asks the patient to explain the plan in their own words so the **clinician can test whether the explanation worked**.
+
+### Shared decision-making and informed choice
+
+When more than one reasonable option exists, communication should help the patient understand choices, likely benefits, harms and uncertainty, then incorporate what matters to that patient. Persuasion becomes ethically problematic when information is selectively framed to push a preferred choice while pretending the decision is shared.
+
+### Difficult conversations
+
+Bad news, sexual and reproductive health, HIV testing, mental health and end-of-life discussions require privacy, empathy and clear language. Empathy is not agreement with every belief. It is recognition of the person's experience before moving to information or action.
+
+### Motivational interviewing as a communication stance
+
+For ambivalent behaviour, arguing can strengthen resistance. A motivational approach uses open questions, reflective listening and eliciting the person's own reasons for change. This week introduces the stance; it does not certify students as motivational-interviewing practitioners.
+
+### Confidentiality and power
+
+A young person may give very different answers if a parent, partner or security officer is in the room. Communication quality therefore depends on the physical and social environment, not merely the clinician's wording.
+
+### What could fool us?
+
+Patient satisfaction is not identical to understanding, and understanding is not identical to adherence. A patient may correctly understand a plan but be unable to afford it. Conversely, apparent "non-compliance" may reveal that the original plan was not feasible. Interpretation should separate communication quality from structural barriers.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Rewrite a difficult consultation
+
+**Version A**
+
+Clinician: "Your blood pressure is high. You need to take these tablets every day. Any questions?"
+
+Patient: "No."
+
+The exchange is efficient but reveals almost nothing about understanding, concerns or feasibility.
+
+**Version B**
+
+Clinician: "Before I explain the tablets, what worries you most about what we found today?"
+
+Patient: "I feel well. I am worried the medicine will make me dependent on it."
+
+Clinician: "That concern makes sense. High blood pressure often causes no symptoms, but over time it can damage the heart, kidneys and brain. The medicine controls the pressure; it does not create dependence. What have you heard about these medicines?"
+
+After discussion, the clinician explains the plan in short chunks and asks: "Just so I know I explained it clearly, how will you take the tablets when you get home?"
+
+The second consultation is not simply longer. It is **better targeted**: it discovers the patient's concern, explains the relevant mechanism, checks comprehension and creates a basis for agreement.
+
+### Observation checklist
+
+During a simulated encounter, record whether the provider: elicits the agenda; avoids interruption; uses plain language; acknowledges emotion; explains options; checks understanding; asks about feasibility; protects confidentiality; and ends with a clear agreed next step.
+
+Use the checklist for feedback, not as a mechanical scorecard. A consultation can tick every box and still feel dismissive if tone, timing or power are ignored.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 A 22-year-old patient newly diagnosed with HIV says, “I feel fine, so I do not understand why I need tablets every day.” The clinic is busy. The patient is worried that family members will discover the diagnosis and has heard online that treatment damages the kidneys.
@@ -141,9 +209,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 4 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 4 bank of 48 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 4 bank of 30 items.
 
-**Initial time limit:** 11 minutes.  
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -159,6 +227,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **Motivational Interviewing, Miller & Rollnick.** Client-centred communication for ambivalence and behaviour change.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-04-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

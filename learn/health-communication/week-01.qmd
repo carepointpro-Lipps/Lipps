@@ -142,10 +142,16 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 1 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 1 bank of 48 items.
+The Week 1 bank has been rebuilt around **30 distinct scenario-based items** rather than repeated definition templates. It is separated into 8 Practice, 16 Mastery and 6 protected Institutional items.
 
-**Initial time limit:** 10 minutes.  
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 1 bank of 30 items.
+
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+The protected Institutional category is not part of routine student practice and is only a seed bank until it is expanded and independently reviewed.
+
+[Instructor assessment blueprint and rubric →](week-01-assessment.qmd)
 
 ::: {.lipps-callout}
 **Assessment principle**  
@@ -160,6 +166,12 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **National Cancer Institute, Making Health Communication Programs Work.** Classic planning framework for audience-centred health communication programmes.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-01-assessment.qmd)
 :::
 
 ::: {.lipps-section}

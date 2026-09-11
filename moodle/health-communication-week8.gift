@@ -1,361 +1,211 @@
-$CATEGORY: LIPPS/Health Communication/Week 08/Impression
-
-::HC-W8-001::Which concept is best described as: One instance of content being displayed, including repeated displays to the same user. {
-=Impression#Correct. One instance of content being displayed, including repeated displays to the same user.
-~Data minimisation#Not the best answer. One instance of content being displayed, including repeated displays to the same user.
-~Engagement#Not the best answer. One instance of content being displayed, including repeated displays to the same user.
-~Conversion#Not the best answer. One instance of content being displayed, including repeated displays to the same user.
+$CATEGORY: LIPPS/Health Communication/Week 08/Practice
+::HC-W8-P01::A viral health video has 500,000 views but comments show many viewers interpreted the advice backwards. Which diagnosis or concept best identifies the main communication issue? {
+=engagement without comprehension#Correct. Exposure metrics do not establish correct interpretation.
+~privacy risk in digital messaging#Not the best answer. Exposure metrics do not establish correct interpretation.
+~unsafe generative AI deployment#Not the best answer. Exposure metrics do not establish correct interpretation.
+~digital exclusion by design#Not the best answer. Exposure metrics do not establish correct interpretation.
 }
 
-::HC-W8-002::In a youth-friendly service, which concept best matches this situation: One instance of content being displayed, including repeated displays to the same user. {
-=Impression#Correct. One instance of content being displayed, including repeated displays to the same user.
-~Digital exclusion#Not the best answer. One instance of content being displayed, including repeated displays to the same user.
-~Algorithmic amplification#Not the best answer. One instance of content being displayed, including repeated displays to the same user.
-~Moderation#Not the best answer. One instance of content being displayed, including repeated displays to the same user.
+::HC-W8-P02::A viral health video has 500,000 views but comments show many viewers interpreted the advice backwards. What is the strongest next response? {
+=Measure comprehension and correct the ambiguity rather than treating views as success.#Correct. Exposure metrics do not establish correct interpretation.
+~Use consented, discreet reminder options and allow users to choose safe channels.#Not the best answer. Exposure metrics do not establish correct interpretation.
+~Constrain knowledge sources, define prohibited advice, monitor outputs and escalate high-risk questions to humans.#Not the best answer. Exposure metrics do not establish correct interpretation.
+~Offer low-data and offline alternatives such as compressed content, SMS or community channels.#Not the best answer. Exposure metrics do not establish correct interpretation.
 }
 
-::HC-W8-003::A communicator needs to recognise the following idea: One instance of content being displayed, including repeated displays to the same user. Which term is most appropriate? {
-=Impression#Correct. One instance of content being displayed, including repeated displays to the same user.
-~Privacy by design#Not the best answer. One instance of content being displayed, including repeated displays to the same user.
-~Click-through rate#Not the best answer. One instance of content being displayed, including repeated displays to the same user.
-~Reach#Not the best answer. One instance of content being displayed, including repeated displays to the same user.
+::HC-W8-P03::An HIV service sends identifiable appointment reminders to shared family phones. Which diagnosis or concept best identifies the main communication issue? {
+=privacy risk in digital messaging#Correct. Shared-device contexts can reveal sensitive health information.
+~unsafe generative AI deployment#Not the best answer. Shared-device contexts can reveal sensitive health information.
+~digital exclusion by design#Not the best answer. Shared-device contexts can reveal sensitive health information.
+~moderation that suppresses legitimate concern#Not the best answer. Shared-device contexts can reveal sensitive health information.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 08/Reach
-
-::HC-W8-004::Which concept is best described as: Estimated number of unique users exposed. {
-=Reach#Correct. Estimated number of unique users exposed.
-~Moderation#Not the best answer. Estimated number of unique users exposed.
-~Digital exclusion#Not the best answer. Estimated number of unique users exposed.
-~Social listening#Not the best answer. Estimated number of unique users exposed.
+::HC-W8-P04::An HIV service sends identifiable appointment reminders to shared family phones. What is the strongest next response? {
+=Use consented, discreet reminder options and allow users to choose safe channels.#Correct. Shared-device contexts can reveal sensitive health information.
+~Constrain knowledge sources, define prohibited advice, monitor outputs and escalate high-risk questions to humans.#Not the best answer. Shared-device contexts can reveal sensitive health information.
+~Offer low-data and offline alternatives such as compressed content, SMS or community channels.#Not the best answer. Shared-device contexts can reveal sensitive health information.
+~Moderate abuse and dangerous misinformation while allowing respectful questions and responding transparently.#Not the best answer. Shared-device contexts can reveal sensitive health information.
 }
 
-::HC-W8-005::In a rural health centre, which concept best matches this situation: Estimated number of unique users exposed. {
-=Reach#Correct. Estimated number of unique users exposed.
-~Click-through rate#Not the best answer. Estimated number of unique users exposed.
-~Privacy by design#Not the best answer. Estimated number of unique users exposed.
-~Data minimisation#Not the best answer. Estimated number of unique users exposed.
+::HC-W8-P05::A chatbot answers medication questions using a general language model with no clinical knowledge constraints. Which diagnosis or concept best identifies the main communication issue? {
+=unsafe generative AI deployment#Correct. Fluent output can be wrong or overconfident.
+~digital exclusion by design#Not the best answer. Fluent output can be wrong or overconfident.
+~moderation that suppresses legitimate concern#Not the best answer. Fluent output can be wrong or overconfident.
+~metric-objective mismatch#Not the best answer. Fluent output can be wrong or overconfident.
 }
 
-::HC-W8-006::A communicator needs to recognise the following idea: Estimated number of unique users exposed. Which term is most appropriate? {
-=Reach#Correct. Estimated number of unique users exposed.
-~Conversion#Not the best answer. Estimated number of unique users exposed.
-~Low-bandwidth design#Not the best answer. Estimated number of unique users exposed.
-~Impression#Not the best answer. Estimated number of unique users exposed.
+::HC-W8-P06::A chatbot answers medication questions using a general language model with no clinical knowledge constraints. What is the strongest next response? {
+=Constrain knowledge sources, define prohibited advice, monitor outputs and escalate high-risk questions to humans.#Correct. Fluent output can be wrong or overconfident.
+~Offer low-data and offline alternatives such as compressed content, SMS or community channels.#Not the best answer. Fluent output can be wrong or overconfident.
+~Moderate abuse and dangerous misinformation while allowing respectful questions and responding transparently.#Not the best answer. Fluent output can be wrong or overconfident.
+~Measure confidence, knowledge of referral options and verified help-seeking in addition to clicks.#Not the best answer. Fluent output can be wrong or overconfident.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 08/Engagement
-
-::HC-W8-007::Which concept is best described as: User interaction such as reacting, commenting, sharing or saving. {
-=Engagement#Correct. User interaction such as reacting, commenting, sharing or saving.
-~Impression#Not the best answer. User interaction such as reacting, commenting, sharing or saving.
-~Social listening#Not the best answer. User interaction such as reacting, commenting, sharing or saving.
-~Privacy by design#Not the best answer. User interaction such as reacting, commenting, sharing or saving.
+::HC-W8-P07::A digital campaign is available only through a high-data video app in a low-bandwidth district. Which diagnosis or concept best identifies the main communication issue? {
+=digital exclusion by design#Correct. Technical availability does not guarantee practical access.
+~moderation that suppresses legitimate concern#Not the best answer. Technical availability does not guarantee practical access.
+~metric-objective mismatch#Not the best answer. Technical availability does not guarantee practical access.
+~algorithmic selection of exposure#Not the best answer. Technical availability does not guarantee practical access.
 }
 
-::HC-W8-008::In an urban community clinic, which concept best matches this situation: User interaction such as reacting, commenting, sharing or saving. {
-=Engagement#Correct. User interaction such as reacting, commenting, sharing or saving.
-~Reach#Not the best answer. User interaction such as reacting, commenting, sharing or saving.
-~Click-through rate#Not the best answer. User interaction such as reacting, commenting, sharing or saving.
-~Conversion#Not the best answer. User interaction such as reacting, commenting, sharing or saving.
+::HC-W8-P08::A digital campaign is available only through a high-data video app in a low-bandwidth district. What is the strongest next response? {
+=Offer low-data and offline alternatives such as compressed content, SMS or community channels.#Correct. Technical availability does not guarantee practical access.
+~Moderate abuse and dangerous misinformation while allowing respectful questions and responding transparently.#Not the best answer. Technical availability does not guarantee practical access.
+~Measure confidence, knowledge of referral options and verified help-seeking in addition to clicks.#Not the best answer. Technical availability does not guarantee practical access.
+~Avoid assuming platform reach represents all pregnant women and use complementary recruitment or channels.#Not the best answer. Technical availability does not guarantee practical access.
+}
+$CATEGORY: LIPPS/Health Communication/Week 08/Mastery
+::HC-W8-M01::A social-media page deletes every critical comment about vaccination. Which diagnosis or concept best identifies the main communication issue? {
+=moderation that suppresses legitimate concern#Correct. Trust can fall when disagreement is treated as misconduct.
+~metric-objective mismatch#Not the best answer. Trust can fall when disagreement is treated as misconduct.
+~algorithmic selection of exposure#Not the best answer. Trust can fall when disagreement is treated as misconduct.
+~group privacy and consent problem#Not the best answer. Trust can fall when disagreement is treated as misconduct.
 }
 
-::HC-W8-009::A communicator needs to recognise the following idea: User interaction such as reacting, commenting, sharing or saving. Which term is most appropriate? {
-=Engagement#Correct. User interaction such as reacting, commenting, sharing or saving.
-~Algorithmic amplification#Not the best answer. User interaction such as reacting, commenting, sharing or saving.
-~Low-bandwidth design#Not the best answer. User interaction such as reacting, commenting, sharing or saving.
-~Moderation#Not the best answer. User interaction such as reacting, commenting, sharing or saving.
+::HC-W8-M02::A social-media page deletes every critical comment about vaccination. What is the strongest next response? {
+=Moderate abuse and dangerous misinformation while allowing respectful questions and responding transparently.#Correct. Trust can fall when disagreement is treated as misconduct.
+~Measure confidence, knowledge of referral options and verified help-seeking in addition to clicks.#Not the best answer. Trust can fall when disagreement is treated as misconduct.
+~Avoid assuming platform reach represents all pregnant women and use complementary recruitment or channels.#Not the best answer. Trust can fall when disagreement is treated as misconduct.
+~Explain visibility, obtain informed agreement and offer a private alternative for those who do not want disclosure.#Not the best answer. Trust can fall when disagreement is treated as misconduct.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 08/Click-through rate
-
-::HC-W8-010::Which concept is best described as: Proportion of impressions or exposures that result in a defined click. {
-=Click-through rate#Correct. Proportion of impressions or exposures that result in a defined click.
-~Social listening#Not the best answer. Proportion of impressions or exposures that result in a defined click.
-~Engagement#Not the best answer. Proportion of impressions or exposures that result in a defined click.
-~Low-bandwidth design#Not the best answer. Proportion of impressions or exposures that result in a defined click.
+::HC-W8-M03::A programme uses click-through rate as its main indicator for a mental-health campaign whose objective is help-seeking confidence. Which diagnosis or concept best identifies the main communication issue? {
+=metric-objective mismatch#Correct. Clicks are intermediate platform behaviour, not the intended communication outcome.
+~algorithmic selection of exposure#Not the best answer. Clicks are intermediate platform behaviour, not the intended communication outcome.
+~group privacy and consent problem#Not the best answer. Clicks are intermediate platform behaviour, not the intended communication outcome.
+~potentially deceptive synthetic media#Not the best answer. Clicks are intermediate platform behaviour, not the intended communication outcome.
 }
 
-::HC-W8-011::In a national public-health campaign, which concept best matches this situation: Proportion of impressions or exposures that result in a defined click. {
-=Click-through rate#Correct. Proportion of impressions or exposures that result in a defined click.
-~Conversion#Not the best answer. Proportion of impressions or exposures that result in a defined click.
-~Privacy by design#Not the best answer. Proportion of impressions or exposures that result in a defined click.
-~Reach#Not the best answer. Proportion of impressions or exposures that result in a defined click.
+::HC-W8-M04::A programme uses click-through rate as its main indicator for a mental-health campaign whose objective is help-seeking confidence. What is the strongest next response? {
+=Measure confidence, knowledge of referral options and verified help-seeking in addition to clicks.#Correct. Clicks are intermediate platform behaviour, not the intended communication outcome.
+~Avoid assuming platform reach represents all pregnant women and use complementary recruitment or channels.#Not the best answer. Clicks are intermediate platform behaviour, not the intended communication outcome.
+~Explain visibility, obtain informed agreement and offer a private alternative for those who do not want disclosure.#Not the best answer. Clicks are intermediate platform behaviour, not the intended communication outcome.
+~Disclose synthetic representation when viewers could reasonably infer a real testimonial or real event.#Not the best answer. Clicks are intermediate platform behaviour, not the intended communication outcome.
 }
 
-::HC-W8-012::A communicator needs to recognise the following idea: Proportion of impressions or exposures that result in a defined click. Which term is most appropriate? {
-=Click-through rate#Correct. Proportion of impressions or exposures that result in a defined click.
-~Impression#Not the best answer. Proportion of impressions or exposures that result in a defined click.
-~Moderation#Not the best answer. Proportion of impressions or exposures that result in a defined click.
-~Digital exclusion#Not the best answer. Proportion of impressions or exposures that result in a defined click.
+::HC-W8-M05::An algorithm shows a maternal-health post mostly to users already following health pages. Which diagnosis or concept best identifies the main communication issue? {
+=algorithmic selection of exposure#Correct. Recommendation systems shape who is exposed.
+~group privacy and consent problem#Not the best answer. Recommendation systems shape who is exposed.
+~potentially deceptive synthetic media#Not the best answer. Recommendation systems shape who is exposed.
+~ambiguous engagement signal#Not the best answer. Recommendation systems shape who is exposed.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 08/Conversion
-
-::HC-W8-013::Which concept is best described as: Completion of a defined desired action. {
-=Conversion#Correct. Completion of a defined desired action.
-~Moderation#Not the best answer. Completion of a defined desired action.
-~Data minimisation#Not the best answer. Completion of a defined desired action.
-~Low-bandwidth design#Not the best answer. Completion of a defined desired action.
+::HC-W8-M06::An algorithm shows a maternal-health post mostly to users already following health pages. What is the strongest next response? {
+=Avoid assuming platform reach represents all pregnant women and use complementary recruitment or channels.#Correct. Recommendation systems shape who is exposed.
+~Explain visibility, obtain informed agreement and offer a private alternative for those who do not want disclosure.#Not the best answer. Recommendation systems shape who is exposed.
+~Disclose synthetic representation when viewers could reasonably infer a real testimonial or real event.#Not the best answer. Recommendation systems shape who is exposed.
+~Review comment content and other evidence before inferring attitudes from reaction counts.#Not the best answer. Recommendation systems shape who is exposed.
 }
 
-::HC-W8-014::In a district vaccination programme, which concept best matches this situation: Completion of a defined desired action. {
-=Conversion#Correct. Completion of a defined desired action.
-~Impression#Not the best answer. Completion of a defined desired action.
-~Click-through rate#Not the best answer. Completion of a defined desired action.
-~Privacy by design#Not the best answer. Completion of a defined desired action.
+::HC-W8-M07::A WhatsApp group for chronic-disease patients allows members to see one another’s phone numbers without warning. Which diagnosis or concept best identifies the main communication issue? {
+=group privacy and consent problem#Correct. Group tools can expose identifiers even when messages are health-related.
+~potentially deceptive synthetic media#Not the best answer. Group tools can expose identifiers even when messages are health-related.
+~ambiguous engagement signal#Not the best answer. Group tools can expose identifiers even when messages are health-related.
+~data minimisation failure#Not the best answer. Group tools can expose identifiers even when messages are health-related.
 }
 
-::HC-W8-015::A communicator needs to recognise the following idea: Completion of a defined desired action. Which term is most appropriate? {
-=Conversion#Correct. Completion of a defined desired action.
-~Reach#Not the best answer. Completion of a defined desired action.
-~Engagement#Not the best answer. Completion of a defined desired action.
-~Social listening#Not the best answer. Completion of a defined desired action.
+::HC-W8-M08::A WhatsApp group for chronic-disease patients allows members to see one another’s phone numbers without warning. What is the strongest next response? {
+=Explain visibility, obtain informed agreement and offer a private alternative for those who do not want disclosure.#Correct. Group tools can expose identifiers even when messages are health-related.
+~Disclose synthetic representation when viewers could reasonably infer a real testimonial or real event.#Not the best answer. Group tools can expose identifiers even when messages are health-related.
+~Review comment content and other evidence before inferring attitudes from reaction counts.#Not the best answer. Group tools can expose identifiers even when messages are health-related.
+~Collect only the data needed for subscription and explain retention and use.#Not the best answer. Group tools can expose identifiers even when messages are health-related.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 08/Algorithmic amplification
-
-::HC-W8-016::Which concept is best described as: Platform-driven increase or reduction in content visibility through ranking and recommendation systems. {
-=Algorithmic amplification#Correct. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
-~Moderation#Not the best answer. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
-~Engagement#Not the best answer. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
-~Impression#Not the best answer. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
+::HC-W8-M09::A health ministry uses an AI-generated image of a fictional patient without disclosing that it is synthetic. Which diagnosis or concept best identifies the main communication issue? {
+=potentially deceptive synthetic media#Correct. Authenticity matters when imagery implies lived experience or endorsement.
+~ambiguous engagement signal#Not the best answer. Authenticity matters when imagery implies lived experience or endorsement.
+~data minimisation failure#Not the best answer. Authenticity matters when imagery implies lived experience or endorsement.
+~external validity and digital divide problem#Not the best answer. Authenticity matters when imagery implies lived experience or endorsement.
 }
 
-::HC-W8-017::In a maternal-health campaign, which concept best matches this situation: Platform-driven increase or reduction in content visibility through ranking and recommendation systems. {
-=Algorithmic amplification#Correct. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
-~Reach#Not the best answer. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
-~Conversion#Not the best answer. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
-~Data minimisation#Not the best answer. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
+::HC-W8-M10::A health ministry uses an AI-generated image of a fictional patient without disclosing that it is synthetic. What is the strongest next response? {
+=Disclose synthetic representation when viewers could reasonably infer a real testimonial or real event.#Correct. Authenticity matters when imagery implies lived experience or endorsement.
+~Review comment content and other evidence before inferring attitudes from reaction counts.#Not the best answer. Authenticity matters when imagery implies lived experience or endorsement.
+~Collect only the data needed for subscription and explain retention and use.#Not the best answer. Authenticity matters when imagery implies lived experience or endorsement.
+~Assess reach and outcomes among rural, female, low-connectivity and disability groups before generalising.#Not the best answer. Authenticity matters when imagery implies lived experience or endorsement.
 }
 
-::HC-W8-018::A communicator needs to recognise the following idea: Platform-driven increase or reduction in content visibility through ranking and recommendation systems. Which term is most appropriate? {
-=Algorithmic amplification#Correct. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
-~Digital exclusion#Not the best answer. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
-~Privacy by design#Not the best answer. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
-~Click-through rate#Not the best answer. Platform-driven increase or reduction in content visibility through ranking and recommendation systems.
+::HC-W8-M11::A post receives angry reactions, and the team concludes the audience rejected the health recommendation. Which diagnosis or concept best identifies the main communication issue? {
+=ambiguous engagement signal#Correct. Platform reactions do not have a single stable meaning.
+~data minimisation failure#Not the best answer. Platform reactions do not have a single stable meaning.
+~external validity and digital divide problem#Not the best answer. Platform reactions do not have a single stable meaning.
+~undisclosed sponsorship#Not the best answer. Platform reactions do not have a single stable meaning.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 08/Social listening
-
-::HC-W8-019::Which concept is best described as: Systematic analysis of questions, concerns and narratives in information environments. {
-=Social listening#Correct. Systematic analysis of questions, concerns and narratives in information environments.
-~Moderation#Not the best answer. Systematic analysis of questions, concerns and narratives in information environments.
-~Click-through rate#Not the best answer. Systematic analysis of questions, concerns and narratives in information environments.
-~Privacy by design#Not the best answer. Systematic analysis of questions, concerns and narratives in information environments.
+::HC-W8-M12::A post receives angry reactions, and the team concludes the audience rejected the health recommendation. What is the strongest next response? {
+=Review comment content and other evidence before inferring attitudes from reaction counts.#Correct. Platform reactions do not have a single stable meaning.
+~Collect only the data needed for subscription and explain retention and use.#Not the best answer. Platform reactions do not have a single stable meaning.
+~Assess reach and outcomes among rural, female, low-connectivity and disability groups before generalising.#Not the best answer. Platform reactions do not have a single stable meaning.
+~Require transparent disclosure of the paid relationship and maintain evidence standards for claims.#Not the best answer. Platform reactions do not have a single stable meaning.
 }
 
-::HC-W8-020::In an HIV prevention programme, which concept best matches this situation: Systematic analysis of questions, concerns and narratives in information environments. {
-=Social listening#Correct. Systematic analysis of questions, concerns and narratives in information environments.
-~Impression#Not the best answer. Systematic analysis of questions, concerns and narratives in information environments.
-~Engagement#Not the best answer. Systematic analysis of questions, concerns and narratives in information environments.
-~Algorithmic amplification#Not the best answer. Systematic analysis of questions, concerns and narratives in information environments.
+::HC-W8-M13::A clinic collects birth dates, exact addresses and national IDs for a simple health newsletter signup. Which diagnosis or concept best identifies the main communication issue? {
+=data minimisation failure#Correct. More data increases privacy risk without improving the communication function.
+~external validity and digital divide problem#Not the best answer. More data increases privacy risk without improving the communication function.
+~undisclosed sponsorship#Not the best answer. More data increases privacy risk without improving the communication function.
+~content removal mistaken for outcome#Not the best answer. More data increases privacy risk without improving the communication function.
 }
 
-::HC-W8-021::A communicator needs to recognise the following idea: Systematic analysis of questions, concerns and narratives in information environments. Which term is most appropriate? {
-=Social listening#Correct. Systematic analysis of questions, concerns and narratives in information environments.
-~Digital exclusion#Not the best answer. Systematic analysis of questions, concerns and narratives in information environments.
-~Low-bandwidth design#Not the best answer. Systematic analysis of questions, concerns and narratives in information environments.
-~Conversion#Not the best answer. Systematic analysis of questions, concerns and narratives in information environments.
+::HC-W8-M14::A clinic collects birth dates, exact addresses and national IDs for a simple health newsletter signup. What is the strongest next response? {
+=Collect only the data needed for subscription and explain retention and use.#Correct. More data increases privacy risk without improving the communication function.
+~Assess reach and outcomes among rural, female, low-connectivity and disability groups before generalising.#Not the best answer. More data increases privacy risk without improving the communication function.
+~Require transparent disclosure of the paid relationship and maintain evidence standards for claims.#Not the best answer. More data increases privacy risk without improving the communication function.
+~Monitor whether the claim persists, shifts channels or continues to influence beliefs and behaviour.#Not the best answer. More data increases privacy risk without improving the communication function.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 08/Moderation
-
-::HC-W8-022::Which concept is best described as: Management of comments and interactions according to safety and participation rules. {
-=Moderation#Correct. Management of comments and interactions according to safety and participation rules.
-~Social listening#Not the best answer. Management of comments and interactions according to safety and participation rules.
-~Digital exclusion#Not the best answer. Management of comments and interactions according to safety and participation rules.
-~Conversion#Not the best answer. Management of comments and interactions according to safety and participation rules.
+::HC-W8-M15::A digital campaign performs well among urban men and is declared nationally effective. Which diagnosis or concept best identifies the main communication issue? {
+=external validity and digital divide problem#Correct. Digital performance in one segment may not transport to the wider population.
+~undisclosed sponsorship#Not the best answer. Digital performance in one segment may not transport to the wider population.
+~content removal mistaken for outcome#Not the best answer. Digital performance in one segment may not transport to the wider population.
+~confounding in digital observational analytics#Not the best answer. Digital performance in one segment may not transport to the wider population.
 }
 
-::HC-W8-023::In a malaria-control programme, which concept best matches this situation: Management of comments and interactions according to safety and participation rules. {
-=Moderation#Correct. Management of comments and interactions according to safety and participation rules.
-~Privacy by design#Not the best answer. Management of comments and interactions according to safety and participation rules.
-~Click-through rate#Not the best answer. Management of comments and interactions according to safety and participation rules.
-~Algorithmic amplification#Not the best answer. Management of comments and interactions according to safety and participation rules.
+::HC-W8-M16::A digital campaign performs well among urban men and is declared nationally effective. What is the strongest next response? {
+=Assess reach and outcomes among rural, female, low-connectivity and disability groups before generalising.#Correct. Digital performance in one segment may not transport to the wider population.
+~Require transparent disclosure of the paid relationship and maintain evidence standards for claims.#Not the best answer. Digital performance in one segment may not transport to the wider population.
+~Monitor whether the claim persists, shifts channels or continues to influence beliefs and behaviour.#Not the best answer. Digital performance in one segment may not transport to the wider population.
+~Account for self-selection and use stronger comparison designs before making a causal claim.#Not the best answer. Digital performance in one segment may not transport to the wider population.
+}
+$CATEGORY: LIPPS/Health Communication/Week 08/Institutional
+::HC-W8-I01::An influencer promotes a health product without disclosing payment from the programme. Which diagnosis or concept best identifies the main communication issue? {
+=undisclosed sponsorship#Correct. Hidden sponsorship can mislead audiences about independence and credibility.
+~content removal mistaken for outcome#Not the best answer. Hidden sponsorship can mislead audiences about independence and credibility.
+~confounding in digital observational analytics#Not the best answer. Hidden sponsorship can mislead audiences about independence and credibility.
+~engagement without comprehension#Not the best answer. Hidden sponsorship can mislead audiences about independence and credibility.
 }
 
-::HC-W8-024::A communicator needs to recognise the following idea: Management of comments and interactions according to safety and participation rules. Which term is most appropriate? {
-=Moderation#Correct. Management of comments and interactions according to safety and participation rules.
-~Reach#Not the best answer. Management of comments and interactions according to safety and participation rules.
-~Impression#Not the best answer. Management of comments and interactions according to safety and participation rules.
-~Low-bandwidth design#Not the best answer. Management of comments and interactions according to safety and participation rules.
+::HC-W8-I02::An influencer promotes a health product without disclosing payment from the programme. What is the strongest next response? {
+=Require transparent disclosure of the paid relationship and maintain evidence standards for claims.#Correct. Hidden sponsorship can mislead audiences about independence and credibility.
+~Monitor whether the claim persists, shifts channels or continues to influence beliefs and behaviour.#Not the best answer. Hidden sponsorship can mislead audiences about independence and credibility.
+~Account for self-selection and use stronger comparison designs before making a causal claim.#Not the best answer. Hidden sponsorship can mislead audiences about independence and credibility.
+~Measure comprehension and correct the ambiguity rather than treating views as success.#Not the best answer. Hidden sponsorship can mislead audiences about independence and credibility.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 08/Privacy by design
-
-::HC-W8-025::Which concept is best described as: Building protection of sensitive information into communication systems from the start. {
-=Privacy by design#Correct. Building protection of sensitive information into communication systems from the start.
-~Low-bandwidth design#Not the best answer. Building protection of sensitive information into communication systems from the start.
-~Reach#Not the best answer. Building protection of sensitive information into communication systems from the start.
-~Social listening#Not the best answer. Building protection of sensitive information into communication systems from the start.
+::HC-W8-I03::A platform removes a misleading post, and the programme declares the misinformation problem solved. Which diagnosis or concept best identifies the main communication issue? {
+=content removal mistaken for outcome#Correct. Removal of one item does not measure information impact.
+~confounding in digital observational analytics#Not the best answer. Removal of one item does not measure information impact.
+~engagement without comprehension#Not the best answer. Removal of one item does not measure information impact.
+~privacy risk in digital messaging#Not the best answer. Removal of one item does not measure information impact.
 }
 
-::HC-W8-026::In a school health programme, which concept best matches this situation: Building protection of sensitive information into communication systems from the start. {
-=Privacy by design#Correct. Building protection of sensitive information into communication systems from the start.
-~Moderation#Not the best answer. Building protection of sensitive information into communication systems from the start.
-~Click-through rate#Not the best answer. Building protection of sensitive information into communication systems from the start.
-~Data minimisation#Not the best answer. Building protection of sensitive information into communication systems from the start.
+::HC-W8-I04::A platform removes a misleading post, and the programme declares the misinformation problem solved. What is the strongest next response? {
+=Monitor whether the claim persists, shifts channels or continues to influence beliefs and behaviour.#Correct. Removal of one item does not measure information impact.
+~Account for self-selection and use stronger comparison designs before making a causal claim.#Not the best answer. Removal of one item does not measure information impact.
+~Measure comprehension and correct the ambiguity rather than treating views as success.#Not the best answer. Removal of one item does not measure information impact.
+~Use consented, discreet reminder options and allow users to choose safe channels.#Not the best answer. Removal of one item does not measure information impact.
 }
 
-::HC-W8-027::A communicator needs to recognise the following idea: Building protection of sensitive information into communication systems from the start. Which term is most appropriate? {
-=Privacy by design#Correct. Building protection of sensitive information into communication systems from the start.
-~Conversion#Not the best answer. Building protection of sensitive information into communication systems from the start.
-~Algorithmic amplification#Not the best answer. Building protection of sensitive information into communication systems from the start.
-~Engagement#Not the best answer. Building protection of sensitive information into communication systems from the start.
+::HC-W8-I05::Users who click a diabetes ad later attend screening more often, and the team concludes the ad caused attendance. Which diagnosis or concept best identifies the main communication issue? {
+=confounding in digital observational analytics#Correct. People predisposed to screening may be more likely to click and attend.
+~engagement without comprehension#Not the best answer. People predisposed to screening may be more likely to click and attend.
+~privacy risk in digital messaging#Not the best answer. People predisposed to screening may be more likely to click and attend.
+~unsafe generative AI deployment#Not the best answer. People predisposed to screening may be more likely to click and attend.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 08/Data minimisation
-
-::HC-W8-028::Which concept is best described as: Collecting only the personal data necessary for the defined purpose. {
-=Data minimisation#Correct. Collecting only the personal data necessary for the defined purpose.
-~Impression#Not the best answer. Collecting only the personal data necessary for the defined purpose.
-~Algorithmic amplification#Not the best answer. Collecting only the personal data necessary for the defined purpose.
-~Click-through rate#Not the best answer. Collecting only the personal data necessary for the defined purpose.
+::HC-W8-I06::Users who click a diabetes ad later attend screening more often, and the team concludes the ad caused attendance. What is the strongest next response? {
+=Account for self-selection and use stronger comparison designs before making a causal claim.#Correct. People predisposed to screening may be more likely to click and attend.
+~Measure comprehension and correct the ambiguity rather than treating views as success.#Not the best answer. People predisposed to screening may be more likely to click and attend.
+~Use consented, discreet reminder options and allow users to choose safe channels.#Not the best answer. People predisposed to screening may be more likely to click and attend.
+~Constrain knowledge sources, define prohibited advice, monitor outputs and escalate high-risk questions to humans.#Not the best answer. People predisposed to screening may be more likely to click and attend.
 }
 
-::HC-W8-029::In a refugee-settlement health team, which concept best matches this situation: Collecting only the personal data necessary for the defined purpose. {
-=Data minimisation#Correct. Collecting only the personal data necessary for the defined purpose.
-~Social listening#Not the best answer. Collecting only the personal data necessary for the defined purpose.
-~Digital exclusion#Not the best answer. Collecting only the personal data necessary for the defined purpose.
-~Low-bandwidth design#Not the best answer. Collecting only the personal data necessary for the defined purpose.
-}
-
-::HC-W8-030::A communicator needs to recognise the following idea: Collecting only the personal data necessary for the defined purpose. Which term is most appropriate? {
-=Data minimisation#Correct. Collecting only the personal data necessary for the defined purpose.
-~Moderation#Not the best answer. Collecting only the personal data necessary for the defined purpose.
-~Engagement#Not the best answer. Collecting only the personal data necessary for the defined purpose.
-~Reach#Not the best answer. Collecting only the personal data necessary for the defined purpose.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 08/Low-bandwidth design
-
-::HC-W8-031::Which concept is best described as: Providing essential content and functionality with minimal data and device requirements. {
-=Low-bandwidth design#Correct. Providing essential content and functionality with minimal data and device requirements.
-~Data minimisation#Not the best answer. Providing essential content and functionality with minimal data and device requirements.
-~Click-through rate#Not the best answer. Providing essential content and functionality with minimal data and device requirements.
-~Conversion#Not the best answer. Providing essential content and functionality with minimal data and device requirements.
-}
-
-::HC-W8-032::In a noncommunicable-disease screening programme, which concept best matches this situation: Providing essential content and functionality with minimal data and device requirements. {
-=Low-bandwidth design#Correct. Providing essential content and functionality with minimal data and device requirements.
-~Moderation#Not the best answer. Providing essential content and functionality with minimal data and device requirements.
-~Social listening#Not the best answer. Providing essential content and functionality with minimal data and device requirements.
-~Algorithmic amplification#Not the best answer. Providing essential content and functionality with minimal data and device requirements.
-}
-
-::HC-W8-033::A communicator needs to recognise the following idea: Providing essential content and functionality with minimal data and device requirements. Which term is most appropriate? {
-=Low-bandwidth design#Correct. Providing essential content and functionality with minimal data and device requirements.
-~Digital exclusion#Not the best answer. Providing essential content and functionality with minimal data and device requirements.
-~Privacy by design#Not the best answer. Providing essential content and functionality with minimal data and device requirements.
-~Engagement#Not the best answer. Providing essential content and functionality with minimal data and device requirements.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 08/Digital exclusion
-
-::HC-W8-034::Which concept is best described as: Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers. {
-=Digital exclusion#Correct. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-~Conversion#Not the best answer. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-~Impression#Not the best answer. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-~Engagement#Not the best answer. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-}
-
-::HC-W8-035::In an outbreak response team, which concept best matches this situation: Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers. {
-=Digital exclusion#Correct. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-~Click-through rate#Not the best answer. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-~Data minimisation#Not the best answer. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-~Moderation#Not the best answer. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-}
-
-::HC-W8-036::A communicator needs to recognise the following idea: Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers. Which term is most appropriate? {
-=Digital exclusion#Correct. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-~Social listening#Not the best answer. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-~Reach#Not the best answer. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-~Low-bandwidth design#Not the best answer. Systematic inability to participate because of access, cost, literacy, disability, privacy or technology barriers.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 08/Applied decision
-
-::HC-W8-037::In Week 8 (Digital Health and Social Media Communication), in a youth-friendly service, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W8-038::In Week 8 (Digital Health and Social Media Communication), in a rural health centre, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W8-039::In Week 8 (Digital Health and Social Media Communication), in an urban community clinic, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W8-040::In Week 8 (Digital Health and Social Media Communication), in a national public-health campaign, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-}
-
-::HC-W8-041::In Week 8 (Digital Health and Social Media Communication), in a district vaccination programme, a campaign uses a striking statistic with no denominator or baseline. What is the main communication risk? {
-=The audience may misinterpret the magnitude of risk or effect#Correct. Risk information needs context, denominators and appropriate framing.
-~The message will always be too long#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~Denominators are irrelevant in communication#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~The source becomes automatically credible#Not the best answer. Risk information needs context, denominators and appropriate framing.
-}
-
-::HC-W8-042::In Week 8 (Digital Health and Social Media Communication), in a maternal-health campaign, a team labels non-adoption as “ignorance” without studying access, norms or service barriers. What should happen first? {
-=Conduct formative diagnosis of behavioural and communication determinants#Correct. Audience and behavioural diagnosis should precede message selection.
-~Design a harsher slogan#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Increase fear immediately#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Assume knowledge is the only determinant#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-}
-
-::HC-W8-043::In Week 8 (Digital Health and Social Media Communication), in an HIV prevention programme, an organisation changes guidance when new evidence arrives but tries to hide the earlier advice. What would better protect trust? {
-=Explain what changed, why it changed, and what people should do now#Correct. Transparent updates can preserve credibility when evidence evolves.
-~Delete all previous communication without explanation#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Claim the guidance never changed#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Delay future updates until certainty is complete#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-}
-
-::HC-W8-044::In Week 8 (Digital Health and Social Media Communication), in a malaria-control programme, a communication strategy works well for smartphone users but misses people without data access. Which principle needs stronger attention? {
-=Equity and accessibility#Correct. Effectiveness should be assessed across groups, including those facing access barriers.
-~Message saturation#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Brand visibility#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Technical complexity#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-}
-
-::HC-W8-045::In Week 8 (Digital Health and Social Media Communication), in a school health programme, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W8-046::In Week 8 (Digital Health and Social Media Communication), in a refugee-settlement health team, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W8-047::In Week 8 (Digital Health and Social Media Communication), in a noncommunicable-disease screening programme, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W8-048::In Week 8 (Digital Health and Social Media Communication), in an outbreak response team, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-}

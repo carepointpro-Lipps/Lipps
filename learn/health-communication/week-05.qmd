@@ -113,6 +113,62 @@ Useful indicators may include diversity of participation, proportion of priority
 :::
 
 ::: {.lipps-section}
+## DEEPEN · Engagement changes decisions, not only messages
+
+Community engagement is often weakened into "sensitisation": officials decide, then communities are informed. Genuine participation can change **what problem is prioritised, how an intervention is designed, who delivers it and how implementation is corrected**.
+
+### Participation has degrees
+
+Information sharing, consultation, involvement, collaboration and community-led decision-making are not interchangeable. The appropriate level depends on the decision, urgency, legal responsibilities and available time, but teams should be honest about which level they are offering. Calling a one-way briefing "co-design" damages trust.
+
+### Representation and power
+
+Inviting recognised leaders is useful but insufficient. Leadership structures can exclude women, adolescents, displaced people, people with disabilities, minority language groups or politically marginalised households. Engagement plans should ask: **Who is affected? Who speaks? Who is missing? Who can safely disagree?**
+
+### Build a feedback loop
+
+A functioning loop has four parts: collect concerns, analyse and prioritise them, adapt the response when justified, and communicate back what changed or why it did not. Collecting complaints without closure can become extractive.
+
+### Community listening as data
+
+Rumours, questions, hotline logs, community health-worker reports and meeting notes can reveal confusion or distrust early. They are not automatically representative survey data. Use them as signals, triangulate them and document how decisions were made.
+
+### Worked example · Cholera prevention
+
+If residents report that chlorinated water tastes unpleasant, the response should not begin by labelling them resistant. Investigate whether dosing is correct, whether taste is expected at safe concentrations, whether alternative unsafe water sources are easier to access, and what trusted local explanations exist. The final response may involve technical correction, transparent explanation and community monitoring—not messaging alone.
+
+### Accountability and do-no-harm
+
+Engagement creates expectations. Never promise resources you cannot deliver. Protect confidentiality when feedback could expose individuals to stigma or retaliation. In conflict settings, even selecting meeting locations or community representatives can have political consequences.
+
+### What could fool us?
+
+High meeting attendance can coexist with low influence. Repeated consultation can create "participation fatigue" while decisions remain unchanged. Community agreement recorded in public meetings may hide private dissent. Evaluate not only how many people participated but **whose input altered what**.
+:::
+
+::: {.lipps-section}
+## FIELD LAB · Design a feedback loop that actually closes
+
+Imagine a cholera response in a large settlement. Community health workers report three recurring concerns: chlorine taste, long water-point queues and confusion about where suspected cases should go.
+
+A weak system simply records these concerns. A stronger system assigns each concern to a decision pathway:
+
+| Signal | Owner | Decision | Feedback to community |
+|---|---|---|---|
+| chlorine taste | WASH technical team | check dosing and explain safe range | report test result and any correction |
+| long queues | operations team | adjust distribution schedule or add points | announce changed hours/locations |
+| referral confusion | health/RCCE team | simplify referral instructions | publish clear route and test comprehension |
+
+The essential step is **closure**. Community members should be able to see whether their input changed the response. Where a request cannot be met, explain why rather than allowing silence to imply neglect.
+
+### Participation audit
+
+At the end of an engagement cycle, ask: Which groups contributed? Which groups were missing? What decisions were genuinely open to influence? What changed because of community input? What was outside community control? Were any people exposed to stigma or retaliation by participating?
+
+These questions turn engagement from a meeting count into an accountability process.
+:::
+
+::: {.lipps-section}
 ## APPLY · Integrated public-health problem
 
 An Ebola preparedness programme plans vaccination and infection-prevention activities in a border district. Community leaders support the programme, but market traders fear loss of business if cases are announced, young people rely heavily on social media, and some religious leaders are sceptical of vaccination. Previous emergency teams promised feedback but rarely returned.
@@ -143,9 +199,9 @@ Use Practice mode to work slowly and review explanations. Mastery mode should be
 ::: {.lipps-section}
 ## DEMONSTRATE · Week 5 mastery quiz
 
-**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 5 bank of 48 items.
+**Pilot Mastery Quiz:** 10 objective questions randomly sampled from a curated Week 5 bank of 30 items.
 
-**Initial time limit:** 11 minutes.  
+**Initial time limit:** 12 minutes.
 **Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
 
 ::: {.lipps-callout}
@@ -161,6 +217,14 @@ Knowing the material should be the fastest strategy. Timing is calibrated to rew
 - **WHO Risk Communication and Community Engagement resources.** Community engagement as partnership in emergency solutions.
 
 The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Assessment architecture
+
+[Instructor assessment blueprint →](week-05-assessment.qmd)
+
+The curated bank separates formative practice, weekly mastery and protected institutional seed items.
 :::
 
 ::: {.lipps-section}

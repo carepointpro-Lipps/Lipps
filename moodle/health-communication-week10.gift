@@ -1,389 +1,211 @@
-$CATEGORY: LIPPS/Health Communication/Week 10/Misinformation
-
-::HC-W10-001::Which concept is best described as: False or misleading information shared without necessarily intending harm. {
-=Misinformation#Correct. False or misleading information shared without necessarily intending harm.
-~Infodemic#Not the best answer. False or misleading information shared without necessarily intending harm.
-~Resilience#Not the best answer. False or misleading information shared without necessarily intending harm.
-~Information void#Not the best answer. False or misleading information shared without necessarily intending harm.
+$CATEGORY: LIPPS/Health Communication/Week 10/Practice
+::HC-W10-P01::A false claim about a vaccine is shared by a parent who genuinely believes it. Which diagnosis or concept best identifies the main communication issue? {
+=misinformation#Correct. Intent distinguishes misinformation from deliberate disinformation.
+~disinformation#Not the best answer. Intent distinguishes misinformation from deliberate disinformation.
+~harm-based prioritisation#Not the best answer. Intent distinguishes misinformation from deliberate disinformation.
+~correction that amplifies misinformation#Not the best answer. Intent distinguishes misinformation from deliberate disinformation.
 }
 
-::HC-W10-002::In an urban community clinic, which concept best matches this situation: False or misleading information shared without necessarily intending harm. {
-=Misinformation#Correct. False or misleading information shared without necessarily intending harm.
-~Amplification risk#Not the best answer. False or misleading information shared without necessarily intending harm.
-~Prebunking#Not the best answer. False or misleading information shared without necessarily intending harm.
-~Rumour#Not the best answer. False or misleading information shared without necessarily intending harm.
+::HC-W10-P02::A false claim about a vaccine is shared by a parent who genuinely believes it. What is the strongest next response? {
+=Correct respectfully with accurate information and address the underlying concern without accusing the parent of deception.#Correct. Intent distinguishes misinformation from deliberate disinformation.
+~Issue a rapid authenticated correction, investigate coordinated spread and direct users to verifiable official information.#Not the best answer. Intent distinguishes misinformation from deliberate disinformation.
+~Prioritise the rapidly spreading claim that could delay urgent care.#Not the best answer. Intent distinguishes misinformation from deliberate disinformation.
+~Lead with the accurate fact, mention the false claim only as needed and provide a clear action.#Not the best answer. Intent distinguishes misinformation from deliberate disinformation.
 }
 
-::HC-W10-003::A communicator needs to recognise the following idea: False or misleading information shared without necessarily intending harm. Which term is most appropriate? {
-=Misinformation#Correct. False or misleading information shared without necessarily intending harm.
-~Harm prioritisation#Not the best answer. False or misleading information shared without necessarily intending harm.
-~Social listening#Not the best answer. False or misleading information shared without necessarily intending harm.
-~Infodemic insight#Not the best answer. False or misleading information shared without necessarily intending harm.
+::HC-W10-P03::A coordinated network fabricates a fake ministry memo to discourage vaccination. Which diagnosis or concept best identifies the main communication issue? {
+=disinformation#Correct. The content is deliberately deceptive and imitates authority.
+~harm-based prioritisation#Not the best answer. The content is deliberately deceptive and imitates authority.
+~correction that amplifies misinformation#Not the best answer. The content is deliberately deceptive and imitates authority.
+~information void#Not the best answer. The content is deliberately deceptive and imitates authority.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 10/Disinformation
-
-::HC-W10-004::Which concept is best described as: False or misleading information deliberately created or spread for strategic purposes. {
-=Disinformation#Correct. False or misleading information deliberately created or spread for strategic purposes.
-~Rumour#Not the best answer. False or misleading information deliberately created or spread for strategic purposes.
-~Information void#Not the best answer. False or misleading information deliberately created or spread for strategic purposes.
-~Infodemic#Not the best answer. False or misleading information deliberately created or spread for strategic purposes.
+::HC-W10-P04::A coordinated network fabricates a fake ministry memo to discourage vaccination. What is the strongest next response? {
+=Issue a rapid authenticated correction, investigate coordinated spread and direct users to verifiable official information.#Correct. The content is deliberately deceptive and imitates authority.
+~Prioritise the rapidly spreading claim that could delay urgent care.#Not the best answer. The content is deliberately deceptive and imitates authority.
+~Lead with the accurate fact, mention the false claim only as needed and provide a clear action.#Not the best answer. The content is deliberately deceptive and imitates authority.
+~Publish a clear authoritative answer through the channels where the question is appearing.#Not the best answer. The content is deliberately deceptive and imitates authority.
 }
 
-::HC-W10-005::In a national public-health campaign, which concept best matches this situation: False or misleading information deliberately created or spread for strategic purposes. {
-=Disinformation#Correct. False or misleading information deliberately created or spread for strategic purposes.
-~Amplification risk#Not the best answer. False or misleading information deliberately created or spread for strategic purposes.
-~Social listening#Not the best answer. False or misleading information deliberately created or spread for strategic purposes.
-~Prebunking#Not the best answer. False or misleading information deliberately created or spread for strategic purposes.
+::HC-W10-P05::A harmless inaccurate post has 20 views while a misleading emergency-care claim is rapidly spreading. Which diagnosis or concept best identifies the main communication issue? {
+=harm-based prioritisation#Correct. Infodemic management should focus resources on likely health consequence, not every error equally.
+~correction that amplifies misinformation#Not the best answer. Infodemic management should focus resources on likely health consequence, not every error equally.
+~information void#Not the best answer. Infodemic management should focus resources on likely health consequence, not every error equally.
+~online volume mistaken for prevalence#Not the best answer. Infodemic management should focus resources on likely health consequence, not every error equally.
 }
 
-::HC-W10-006::A communicator needs to recognise the following idea: False or misleading information deliberately created or spread for strategic purposes. Which term is most appropriate? {
-=Disinformation#Correct. False or misleading information deliberately created or spread for strategic purposes.
-~Correction#Not the best answer. False or misleading information deliberately created or spread for strategic purposes.
-~Infodemic insight#Not the best answer. False or misleading information deliberately created or spread for strategic purposes.
-~Harm prioritisation#Not the best answer. False or misleading information deliberately created or spread for strategic purposes.
+::HC-W10-P06::A harmless inaccurate post has 20 views while a misleading emergency-care claim is rapidly spreading. What is the strongest next response? {
+=Prioritise the rapidly spreading claim that could delay urgent care.#Correct. Infodemic management should focus resources on likely health consequence, not every error equally.
+~Lead with the accurate fact, mention the false claim only as needed and provide a clear action.#Not the best answer. Infodemic management should focus resources on likely health consequence, not every error equally.
+~Publish a clear authoritative answer through the channels where the question is appearing.#Not the best answer. Infodemic management should focus resources on likely health consequence, not every error equally.
+~Describe volume and trend as platform signals and use representative research for population belief estimates.#Not the best answer. Infodemic management should focus resources on likely health consequence, not every error equally.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 10/Rumour
-
-::HC-W10-007::Which concept is best described as: Unverified information circulating within a community or network. {
-=Rumour#Correct. Unverified information circulating within a community or network.
-~Resilience#Not the best answer. Unverified information circulating within a community or network.
-~Correction#Not the best answer. Unverified information circulating within a community or network.
-~Information void#Not the best answer. Unverified information circulating within a community or network.
+::HC-W10-P07::Officials repeat a sensational false claim in every correction, and searches for the claim increase. Which diagnosis or concept best identifies the main communication issue? {
+=correction that amplifies misinformation#Correct. Corrections can unintentionally increase familiarity with a falsehood.
+~information void#Not the best answer. Corrections can unintentionally increase familiarity with a falsehood.
+~online volume mistaken for prevalence#Not the best answer. Corrections can unintentionally increase familiarity with a falsehood.
+~credible messenger with outdated information#Not the best answer. Corrections can unintentionally increase familiarity with a falsehood.
 }
 
-::HC-W10-008::In a district vaccination programme, which concept best matches this situation: Unverified information circulating within a community or network. {
-=Rumour#Correct. Unverified information circulating within a community or network.
-~Infodemic insight#Not the best answer. Unverified information circulating within a community or network.
-~Social listening#Not the best answer. Unverified information circulating within a community or network.
-~Amplification risk#Not the best answer. Unverified information circulating within a community or network.
+::HC-W10-P08::Officials repeat a sensational false claim in every correction, and searches for the claim increase. What is the strongest next response? {
+=Lead with the accurate fact, mention the false claim only as needed and provide a clear action.#Correct. Corrections can unintentionally increase familiarity with a falsehood.
+~Publish a clear authoritative answer through the channels where the question is appearing.#Not the best answer. Corrections can unintentionally increase familiarity with a falsehood.
+~Describe volume and trend as platform signals and use representative research for population belief estimates.#Not the best answer. Corrections can unintentionally increase familiarity with a falsehood.
+~Engage the leader privately, provide updated evidence and support a corrected message to the same audience.#Not the best answer. Corrections can unintentionally increase familiarity with a falsehood.
+}
+$CATEGORY: LIPPS/Health Communication/Week 10/Mastery
+::HC-W10-M01::People ask the same unanswered question about vaccine eligibility for a week. Which diagnosis or concept best identifies the main communication issue? {
+=information void#Correct. Persistent questions may signal missing information rather than hostility.
+~online volume mistaken for prevalence#Not the best answer. Persistent questions may signal missing information rather than hostility.
+~credible messenger with outdated information#Not the best answer. Persistent questions may signal missing information rather than hostility.
+~suppression of legitimate questions#Not the best answer. Persistent questions may signal missing information rather than hostility.
 }
 
-::HC-W10-009::A communicator needs to recognise the following idea: Unverified information circulating within a community or network. Which term is most appropriate? {
-=Rumour#Correct. Unverified information circulating within a community or network.
-~Infodemic#Not the best answer. Unverified information circulating within a community or network.
-~Disinformation#Not the best answer. Unverified information circulating within a community or network.
-~Harm prioritisation#Not the best answer. Unverified information circulating within a community or network.
+::HC-W10-M02::People ask the same unanswered question about vaccine eligibility for a week. What is the strongest next response? {
+=Publish a clear authoritative answer through the channels where the question is appearing.#Correct. Persistent questions may signal missing information rather than hostility.
+~Describe volume and trend as platform signals and use representative research for population belief estimates.#Not the best answer. Persistent questions may signal missing information rather than hostility.
+~Engage the leader privately, provide updated evidence and support a corrected message to the same audience.#Not the best answer. Persistent questions may signal missing information rather than hostility.
+~Differentiate genuine questions from harmful manipulation and respond transparently with evidence.#Not the best answer. Persistent questions may signal missing information rather than hostility.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 10/Infodemic
-
-::HC-W10-010::Which concept is best described as: Overabundance of information, including false or misleading information, that causes confusion and can undermine health action. {
-=Infodemic#Correct. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
-~Infodemic insight#Not the best answer. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
-~Correction#Not the best answer. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
-~Amplification risk#Not the best answer. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
+::HC-W10-M03::A dashboard counts mentions of a rumour and reports that 60 percent of the population believes it. Which diagnosis or concept best identifies the main communication issue? {
+=online volume mistaken for prevalence#Correct. Mention counts do not provide a population denominator.
+~credible messenger with outdated information#Not the best answer. Mention counts do not provide a population denominator.
+~suppression of legitimate questions#Not the best answer. Mention counts do not provide a population denominator.
+~cross-platform migration#Not the best answer. Mention counts do not provide a population denominator.
 }
 
-::HC-W10-011::In a maternal-health campaign, which concept best matches this situation: Overabundance of information, including false or misleading information, that causes confusion and can undermine health action. {
-=Infodemic#Correct. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
-~Misinformation#Not the best answer. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
-~Resilience#Not the best answer. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
-~Harm prioritisation#Not the best answer. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
+::HC-W10-M04::A dashboard counts mentions of a rumour and reports that 60 percent of the population believes it. What is the strongest next response? {
+=Describe volume and trend as platform signals and use representative research for population belief estimates.#Correct. Mention counts do not provide a population denominator.
+~Engage the leader privately, provide updated evidence and support a corrected message to the same audience.#Not the best answer. Mention counts do not provide a population denominator.
+~Differentiate genuine questions from harmful manipulation and respond transparently with evidence.#Not the best answer. Mention counts do not provide a population denominator.
+~Continue community and frontline listening instead of assuming the claim disappeared.#Not the best answer. Mention counts do not provide a population denominator.
 }
 
-::HC-W10-012::A communicator needs to recognise the following idea: Overabundance of information, including false or misleading information, that causes confusion and can undermine health action. Which term is most appropriate? {
-=Infodemic#Correct. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
-~Rumour#Not the best answer. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
-~Social listening#Not the best answer. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
-~Information void#Not the best answer. Overabundance of information, including false or misleading information, that causes confusion and can undermine health action.
+::HC-W10-M05::A trusted religious leader shares outdated treatment guidance from an old leaflet. Which diagnosis or concept best identifies the main communication issue? {
+=credible messenger with outdated information#Correct. Trust can help correction when relationships are maintained.
+~suppression of legitimate questions#Not the best answer. Trust can help correction when relationships are maintained.
+~cross-platform migration#Not the best answer. Trust can help correction when relationships are maintained.
+~prebunking#Not the best answer. Trust can help correction when relationships are maintained.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 10/Information void
-
-::HC-W10-013::Which concept is best described as: Important unanswered question that creates space for speculation or harmful narratives. {
-=Information void#Correct. Important unanswered question that creates space for speculation or harmful narratives.
-~Rumour#Not the best answer. Important unanswered question that creates space for speculation or harmful narratives.
-~Amplification risk#Not the best answer. Important unanswered question that creates space for speculation or harmful narratives.
-~Infodemic insight#Not the best answer. Important unanswered question that creates space for speculation or harmful narratives.
+::HC-W10-M06::A trusted religious leader shares outdated treatment guidance from an old leaflet. What is the strongest next response? {
+=Engage the leader privately, provide updated evidence and support a corrected message to the same audience.#Correct. Trust can help correction when relationships are maintained.
+~Differentiate genuine questions from harmful manipulation and respond transparently with evidence.#Not the best answer. Trust can help correction when relationships are maintained.
+~Continue community and frontline listening instead of assuming the claim disappeared.#Not the best answer. Trust can help correction when relationships are maintained.
+~Continue preparing audiences with accurate expectations before predictable misleading claims spread.#Not the best answer. Trust can help correction when relationships are maintained.
 }
 
-::HC-W10-014::In an HIV prevention programme, which concept best matches this situation: Important unanswered question that creates space for speculation or harmful narratives. {
-=Information void#Correct. Important unanswered question that creates space for speculation or harmful narratives.
-~Disinformation#Not the best answer. Important unanswered question that creates space for speculation or harmful narratives.
-~Social listening#Not the best answer. Important unanswered question that creates space for speculation or harmful narratives.
-~Correction#Not the best answer. Important unanswered question that creates space for speculation or harmful narratives.
+::HC-W10-M07::A programme deletes all posts asking about adverse events because staff fear fuelling hesitancy. Which diagnosis or concept best identifies the main communication issue? {
+=suppression of legitimate questions#Correct. Unanswered legitimate concerns can deepen mistrust.
+~cross-platform migration#Not the best answer. Unanswered legitimate concerns can deepen mistrust.
+~prebunking#Not the best answer. Unanswered legitimate concerns can deepen mistrust.
+~privacy risk in social listening#Not the best answer. Unanswered legitimate concerns can deepen mistrust.
 }
 
-::HC-W10-015::A communicator needs to recognise the following idea: Important unanswered question that creates space for speculation or harmful narratives. Which term is most appropriate? {
-=Information void#Correct. Important unanswered question that creates space for speculation or harmful narratives.
-~Resilience#Not the best answer. Important unanswered question that creates space for speculation or harmful narratives.
-~Harm prioritisation#Not the best answer. Important unanswered question that creates space for speculation or harmful narratives.
-~Infodemic#Not the best answer. Important unanswered question that creates space for speculation or harmful narratives.
+::HC-W10-M08::A programme deletes all posts asking about adverse events because staff fear fuelling hesitancy. What is the strongest next response? {
+=Differentiate genuine questions from harmful manipulation and respond transparently with evidence.#Correct. Unanswered legitimate concerns can deepen mistrust.
+~Continue community and frontline listening instead of assuming the claim disappeared.#Not the best answer. Unanswered legitimate concerns can deepen mistrust.
+~Continue preparing audiences with accurate expectations before predictable misleading claims spread.#Not the best answer. Unanswered legitimate concerns can deepen mistrust.
+~Minimise identifiers, restrict access and document ethical handling of digital listening data.#Not the best answer. Unanswered legitimate concerns can deepen mistrust.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 10/Social listening
-
-::HC-W10-016::Which concept is best described as: Systematic identification and analysis of audience questions and narratives. {
-=Social listening#Correct. Systematic identification and analysis of audience questions and narratives.
-~Rumour#Not the best answer. Systematic identification and analysis of audience questions and narratives.
-~Amplification risk#Not the best answer. Systematic identification and analysis of audience questions and narratives.
-~Information void#Not the best answer. Systematic identification and analysis of audience questions and narratives.
+::HC-W10-M09::A false rumour moves from Facebook into closed messaging groups after a platform takedown. Which diagnosis or concept best identifies the main communication issue? {
+=cross-platform migration#Correct. Information ecosystems extend beyond visible public platforms.
+~prebunking#Not the best answer. Information ecosystems extend beyond visible public platforms.
+~privacy risk in social listening#Not the best answer. Information ecosystems extend beyond visible public platforms.
+~platform engagement substituted for correction outcome#Not the best answer. Information ecosystems extend beyond visible public platforms.
 }
 
-::HC-W10-017::In a malaria-control programme, which concept best matches this situation: Systematic identification and analysis of audience questions and narratives. {
-=Social listening#Correct. Systematic identification and analysis of audience questions and narratives.
-~Resilience#Not the best answer. Systematic identification and analysis of audience questions and narratives.
-~Harm prioritisation#Not the best answer. Systematic identification and analysis of audience questions and narratives.
-~Infodemic#Not the best answer. Systematic identification and analysis of audience questions and narratives.
+::HC-W10-M10::A false rumour moves from Facebook into closed messaging groups after a platform takedown. What is the strongest next response? {
+=Continue community and frontline listening instead of assuming the claim disappeared.#Correct. Information ecosystems extend beyond visible public platforms.
+~Continue preparing audiences with accurate expectations before predictable misleading claims spread.#Not the best answer. Information ecosystems extend beyond visible public platforms.
+~Minimise identifiers, restrict access and document ethical handling of digital listening data.#Not the best answer. Information ecosystems extend beyond visible public platforms.
+~Measure corrected understanding, confidence or intended action among the relevant audience.#Not the best answer. Information ecosystems extend beyond visible public platforms.
 }
 
-::HC-W10-018::A communicator needs to recognise the following idea: Systematic identification and analysis of audience questions and narratives. Which term is most appropriate? {
-=Social listening#Correct. Systematic identification and analysis of audience questions and narratives.
-~Prebunking#Not the best answer. Systematic identification and analysis of audience questions and narratives.
-~Infodemic insight#Not the best answer. Systematic identification and analysis of audience questions and narratives.
-~Disinformation#Not the best answer. Systematic identification and analysis of audience questions and narratives.
+::HC-W10-M11::Before a known seasonal outbreak, communicators explain common manipulation tactics and where verified updates will appear. Which diagnosis or concept best identifies the main communication issue? {
+=prebunking#Correct. Prebunking builds recognition of misinformation before exposure.
+~privacy risk in social listening#Not the best answer. Prebunking builds recognition of misinformation before exposure.
+~platform engagement substituted for correction outcome#Not the best answer. Prebunking builds recognition of misinformation before exposure.
+~coordinated amplification distorting signal volume#Not the best answer. Prebunking builds recognition of misinformation before exposure.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 10/Harm prioritisation
-
-::HC-W10-019::Which concept is best described as: Ranking information problems by likely reach, health impact, vulnerability and response opportunity. {
-=Harm prioritisation#Correct. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
-~Infodemic insight#Not the best answer. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
-~Infodemic#Not the best answer. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
-~Resilience#Not the best answer. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
+::HC-W10-M12::Before a known seasonal outbreak, communicators explain common manipulation tactics and where verified updates will appear. What is the strongest next response? {
+=Continue preparing audiences with accurate expectations before predictable misleading claims spread.#Correct. Prebunking builds recognition of misinformation before exposure.
+~Minimise identifiers, restrict access and document ethical handling of digital listening data.#Not the best answer. Prebunking builds recognition of misinformation before exposure.
+~Measure corrected understanding, confidence or intended action among the relevant audience.#Not the best answer. Prebunking builds recognition of misinformation before exposure.
+~Detect duplication and coordinated behaviour before interpreting volume as organic concern.#Not the best answer. Prebunking builds recognition of misinformation before exposure.
 }
 
-::HC-W10-020::In a school health programme, which concept best matches this situation: Ranking information problems by likely reach, health impact, vulnerability and response opportunity. {
-=Harm prioritisation#Correct. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
-~Correction#Not the best answer. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
-~Information void#Not the best answer. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
-~Social listening#Not the best answer. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
+::HC-W10-M13::A rumour-monitoring spreadsheet contains identifiable screenshots of private individuals although names are not needed. Which diagnosis or concept best identifies the main communication issue? {
+=privacy risk in social listening#Correct. Public-health listening does not remove privacy responsibilities.
+~platform engagement substituted for correction outcome#Not the best answer. Public-health listening does not remove privacy responsibilities.
+~coordinated amplification distorting signal volume#Not the best answer. Public-health listening does not remove privacy responsibilities.
+~category error that delegitimises dissent#Not the best answer. Public-health listening does not remove privacy responsibilities.
 }
 
-::HC-W10-021::A communicator needs to recognise the following idea: Ranking information problems by likely reach, health impact, vulnerability and response opportunity. Which term is most appropriate? {
-=Harm prioritisation#Correct. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
-~Rumour#Not the best answer. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
-~Misinformation#Not the best answer. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
-~Disinformation#Not the best answer. Ranking information problems by likely reach, health impact, vulnerability and response opportunity.
+::HC-W10-M14::A rumour-monitoring spreadsheet contains identifiable screenshots of private individuals although names are not needed. What is the strongest next response? {
+=Minimise identifiers, restrict access and document ethical handling of digital listening data.#Correct. Public-health listening does not remove privacy responsibilities.
+~Measure corrected understanding, confidence or intended action among the relevant audience.#Not the best answer. Public-health listening does not remove privacy responsibilities.
+~Detect duplication and coordinated behaviour before interpreting volume as organic concern.#Not the best answer. Public-health listening does not remove privacy responsibilities.
+~Separate verifiably false factual claims from value disagreements, complaints and uncertainty.#Not the best answer. Public-health listening does not remove privacy responsibilities.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 10/Amplification risk
-
-::HC-W10-022::Which concept is best described as: Possibility that a correction increases exposure to a claim. {
-=Amplification risk#Correct. Possibility that a correction increases exposure to a claim.
-~Rumour#Not the best answer. Possibility that a correction increases exposure to a claim.
-~Correction#Not the best answer. Possibility that a correction increases exposure to a claim.
-~Infodemic insight#Not the best answer. Possibility that a correction increases exposure to a claim.
+::HC-W10-M15::A correction receives few likes, so the team concludes it failed. Which diagnosis or concept best identifies the main communication issue? {
+=platform engagement substituted for correction outcome#Correct. Likes are not the objective of most health corrections.
+~coordinated amplification distorting signal volume#Not the best answer. Likes are not the objective of most health corrections.
+~category error that delegitimises dissent#Not the best answer. Likes are not the objective of most health corrections.
+~multiple mechanisms in outcome interpretation#Not the best answer. Likes are not the objective of most health corrections.
 }
 
-::HC-W10-023::In a refugee-settlement health team, which concept best matches this situation: Possibility that a correction increases exposure to a claim. {
-=Amplification risk#Correct. Possibility that a correction increases exposure to a claim.
-~Misinformation#Not the best answer. Possibility that a correction increases exposure to a claim.
-~Prebunking#Not the best answer. Possibility that a correction increases exposure to a claim.
-~Information void#Not the best answer. Possibility that a correction increases exposure to a claim.
+::HC-W10-M16::A correction receives few likes, so the team concludes it failed. What is the strongest next response? {
+=Measure corrected understanding, confidence or intended action among the relevant audience.#Correct. Likes are not the objective of most health corrections.
+~Detect duplication and coordinated behaviour before interpreting volume as organic concern.#Not the best answer. Likes are not the objective of most health corrections.
+~Separate verifiably false factual claims from value disagreements, complaints and uncertainty.#Not the best answer. Likes are not the objective of most health corrections.
+~Report the belief change and avoid assigning all uptake improvement to communication without stronger causal evidence.#Not the best answer. Likes are not the objective of most health corrections.
+}
+$CATEGORY: LIPPS/Health Communication/Week 10/Institutional
+::HC-W10-I01::Bots generate thousands of identical posts about a medicine, and analysts treat them as thousands of independent people. Which diagnosis or concept best identifies the main communication issue? {
+=coordinated amplification distorting signal volume#Correct. Automated activity can inflate apparent prevalence.
+~category error that delegitimises dissent#Not the best answer. Automated activity can inflate apparent prevalence.
+~multiple mechanisms in outcome interpretation#Not the best answer. Automated activity can inflate apparent prevalence.
+~misinformation#Not the best answer. Automated activity can inflate apparent prevalence.
 }
 
-::HC-W10-024::A communicator needs to recognise the following idea: Possibility that a correction increases exposure to a claim. Which term is most appropriate? {
-=Amplification risk#Correct. Possibility that a correction increases exposure to a claim.
-~Resilience#Not the best answer. Possibility that a correction increases exposure to a claim.
-~Social listening#Not the best answer. Possibility that a correction increases exposure to a claim.
-~Harm prioritisation#Not the best answer. Possibility that a correction increases exposure to a claim.
+::HC-W10-I02::Bots generate thousands of identical posts about a medicine, and analysts treat them as thousands of independent people. What is the strongest next response? {
+=Detect duplication and coordinated behaviour before interpreting volume as organic concern.#Correct. Automated activity can inflate apparent prevalence.
+~Separate verifiably false factual claims from value disagreements, complaints and uncertainty.#Not the best answer. Automated activity can inflate apparent prevalence.
+~Report the belief change and avoid assigning all uptake improvement to communication without stronger causal evidence.#Not the best answer. Automated activity can inflate apparent prevalence.
+~Correct respectfully with accurate information and address the underlying concern without accusing the parent of deception.#Not the best answer. Automated activity can inflate apparent prevalence.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 10/Correction
-
-::HC-W10-025::Which concept is best described as: Communication that replaces false or misleading understanding with accurate, actionable information. {
-=Correction#Correct. Communication that replaces false or misleading understanding with accurate, actionable information.
-~Infodemic insight#Not the best answer. Communication that replaces false or misleading understanding with accurate, actionable information.
-~Resilience#Not the best answer. Communication that replaces false or misleading understanding with accurate, actionable information.
-~Amplification risk#Not the best answer. Communication that replaces false or misleading understanding with accurate, actionable information.
+::HC-W10-I03::A team labels all criticism of a vaccination campaign as misinformation. Which diagnosis or concept best identifies the main communication issue? {
+=category error that delegitimises dissent#Correct. Not every objection is misinformation.
+~multiple mechanisms in outcome interpretation#Not the best answer. Not every objection is misinformation.
+~misinformation#Not the best answer. Not every objection is misinformation.
+~disinformation#Not the best answer. Not every objection is misinformation.
 }
 
-::HC-W10-026::In a noncommunicable-disease screening programme, which concept best matches this situation: Communication that replaces false or misleading understanding with accurate, actionable information. {
-=Correction#Correct. Communication that replaces false or misleading understanding with accurate, actionable information.
-~Information void#Not the best answer. Communication that replaces false or misleading understanding with accurate, actionable information.
-~Infodemic#Not the best answer. Communication that replaces false or misleading understanding with accurate, actionable information.
-~Social listening#Not the best answer. Communication that replaces false or misleading understanding with accurate, actionable information.
+::HC-W10-I04::A team labels all criticism of a vaccination campaign as misinformation. What is the strongest next response? {
+=Separate verifiably false factual claims from value disagreements, complaints and uncertainty.#Correct. Not every objection is misinformation.
+~Report the belief change and avoid assigning all uptake improvement to communication without stronger causal evidence.#Not the best answer. Not every objection is misinformation.
+~Correct respectfully with accurate information and address the underlying concern without accusing the parent of deception.#Not the best answer. Not every objection is misinformation.
+~Issue a rapid authenticated correction, investigate coordinated spread and direct users to verifiable official information.#Not the best answer. Not every objection is misinformation.
 }
 
-::HC-W10-027::A communicator needs to recognise the following idea: Communication that replaces false or misleading understanding with accurate, actionable information. Which term is most appropriate? {
-=Correction#Correct. Communication that replaces false or misleading understanding with accurate, actionable information.
-~Misinformation#Not the best answer. Communication that replaces false or misleading understanding with accurate, actionable information.
-~Disinformation#Not the best answer. Communication that replaces false or misleading understanding with accurate, actionable information.
-~Harm prioritisation#Not the best answer. Communication that replaces false or misleading understanding with accurate, actionable information.
+::HC-W10-I05::Belief in a false claim falls after a correction campaign, but vaccine supply also improves and uptake rises. Which diagnosis or concept best identifies the main communication issue? {
+=multiple mechanisms in outcome interpretation#Correct. Service and communication changes occurred together.
+~misinformation#Not the best answer. Service and communication changes occurred together.
+~disinformation#Not the best answer. Service and communication changes occurred together.
+~harm-based prioritisation#Not the best answer. Service and communication changes occurred together.
 }
 
-$CATEGORY: LIPPS/Health Communication/Week 10/Prebunking
-
-::HC-W10-028::Which concept is best described as: Preparing audiences to recognise misleading claims or manipulation before exposure. {
-=Prebunking#Correct. Preparing audiences to recognise misleading claims or manipulation before exposure.
-~Infodemic insight#Not the best answer. Preparing audiences to recognise misleading claims or manipulation before exposure.
-~Amplification risk#Not the best answer. Preparing audiences to recognise misleading claims or manipulation before exposure.
-~Infodemic#Not the best answer. Preparing audiences to recognise misleading claims or manipulation before exposure.
+::HC-W10-I06::Belief in a false claim falls after a correction campaign, but vaccine supply also improves and uptake rises. What is the strongest next response? {
+=Report the belief change and avoid assigning all uptake improvement to communication without stronger causal evidence.#Correct. Service and communication changes occurred together.
+~Correct respectfully with accurate information and address the underlying concern without accusing the parent of deception.#Not the best answer. Service and communication changes occurred together.
+~Issue a rapid authenticated correction, investigate coordinated spread and direct users to verifiable official information.#Not the best answer. Service and communication changes occurred together.
+~Prioritise the rapidly spreading claim that could delay urgent care.#Not the best answer. Service and communication changes occurred together.
 }
 
-::HC-W10-029::In an outbreak response team, which concept best matches this situation: Preparing audiences to recognise misleading claims or manipulation before exposure. {
-=Prebunking#Correct. Preparing audiences to recognise misleading claims or manipulation before exposure.
-~Disinformation#Not the best answer. Preparing audiences to recognise misleading claims or manipulation before exposure.
-~Correction#Not the best answer. Preparing audiences to recognise misleading claims or manipulation before exposure.
-~Social listening#Not the best answer. Preparing audiences to recognise misleading claims or manipulation before exposure.
-}
-
-::HC-W10-030::A communicator needs to recognise the following idea: Preparing audiences to recognise misleading claims or manipulation before exposure. Which term is most appropriate? {
-=Prebunking#Correct. Preparing audiences to recognise misleading claims or manipulation before exposure.
-~Misinformation#Not the best answer. Preparing audiences to recognise misleading claims or manipulation before exposure.
-~Harm prioritisation#Not the best answer. Preparing audiences to recognise misleading claims or manipulation before exposure.
-~Rumour#Not the best answer. Preparing audiences to recognise misleading claims or manipulation before exposure.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 10/Resilience
-
-::HC-W10-031::Which concept is best described as: Capacity to recognise, question and recover from misleading information. {
-=Resilience#Correct. Capacity to recognise, question and recover from misleading information.
-~Infodemic insight#Not the best answer. Capacity to recognise, question and recover from misleading information.
-~Misinformation#Not the best answer. Capacity to recognise, question and recover from misleading information.
-~Disinformation#Not the best answer. Capacity to recognise, question and recover from misleading information.
-}
-
-::HC-W10-032::In a youth-friendly service, which concept best matches this situation: Capacity to recognise, question and recover from misleading information. {
-=Resilience#Correct. Capacity to recognise, question and recover from misleading information.
-~Harm prioritisation#Not the best answer. Capacity to recognise, question and recover from misleading information.
-~Correction#Not the best answer. Capacity to recognise, question and recover from misleading information.
-~Information void#Not the best answer. Capacity to recognise, question and recover from misleading information.
-}
-
-::HC-W10-033::A communicator needs to recognise the following idea: Capacity to recognise, question and recover from misleading information. Which term is most appropriate? {
-=Resilience#Correct. Capacity to recognise, question and recover from misleading information.
-~Social listening#Not the best answer. Capacity to recognise, question and recover from misleading information.
-~Infodemic#Not the best answer. Capacity to recognise, question and recover from misleading information.
-~Prebunking#Not the best answer. Capacity to recognise, question and recover from misleading information.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 10/Infodemic insight
-
-::HC-W10-034::Which concept is best described as: Synthesised finding that links information-environment evidence to a recommended communication or programme action. {
-=Infodemic insight#Correct. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-~Prebunking#Not the best answer. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-~Harm prioritisation#Not the best answer. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-~Amplification risk#Not the best answer. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-}
-
-::HC-W10-035::In a rural health centre, which concept best matches this situation: Synthesised finding that links information-environment evidence to a recommended communication or programme action. {
-=Infodemic insight#Correct. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-~Social listening#Not the best answer. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-~Misinformation#Not the best answer. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-~Rumour#Not the best answer. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-}
-
-::HC-W10-036::A communicator needs to recognise the following idea: Synthesised finding that links information-environment evidence to a recommended communication or programme action. Which term is most appropriate? {
-=Infodemic insight#Correct. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-~Disinformation#Not the best answer. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-~Information void#Not the best answer. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-~Infodemic#Not the best answer. Synthesised finding that links information-environment evidence to a recommended communication or programme action.
-}
-
-$CATEGORY: LIPPS/Health Communication/Week 10/Applied decision
-
-::HC-W10-037::In Week 10 (Misinformation, Disinformation and Infodemic Management), in an urban community clinic, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W10-038::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a national public-health campaign, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W10-039::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a district vaccination programme, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W10-040::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a maternal-health campaign, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-}
-
-::HC-W10-041::In Week 10 (Misinformation, Disinformation and Infodemic Management), in an HIV prevention programme, a campaign uses a striking statistic with no denominator or baseline. What is the main communication risk? {
-=The audience may misinterpret the magnitude of risk or effect#Correct. Risk information needs context, denominators and appropriate framing.
-~The message will always be too long#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~Denominators are irrelevant in communication#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~The source becomes automatically credible#Not the best answer. Risk information needs context, denominators and appropriate framing.
-}
-
-::HC-W10-042::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a malaria-control programme, a team labels non-adoption as “ignorance” without studying access, norms or service barriers. What should happen first? {
-=Conduct formative diagnosis of behavioural and communication determinants#Correct. Audience and behavioural diagnosis should precede message selection.
-~Design a harsher slogan#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Increase fear immediately#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Assume knowledge is the only determinant#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-}
-
-::HC-W10-043::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a school health programme, an organisation changes guidance when new evidence arrives but tries to hide the earlier advice. What would better protect trust? {
-=Explain what changed, why it changed, and what people should do now#Correct. Transparent updates can preserve credibility when evidence evolves.
-~Delete all previous communication without explanation#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Claim the guidance never changed#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Delay future updates until certainty is complete#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-}
-
-::HC-W10-044::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a refugee-settlement health team, a communication strategy works well for smartphone users but misses people without data access. Which principle needs stronger attention? {
-=Equity and accessibility#Correct. Effectiveness should be assessed across groups, including those facing access barriers.
-~Message saturation#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Brand visibility#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Technical complexity#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-}
-
-::HC-W10-045::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a noncommunicable-disease screening programme, a team immediately chooses Instagram before defining the audience or objective. What is the BEST correction? {
-=Diagnose the communication problem and audience before selecting a channel#Correct. Channel choice should follow the communication problem, audience and objective.
-~Increase posting frequency#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Use more technical terminology#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-~Remove all audience feedback#Not the best answer. Channel choice should follow the communication problem, audience and objective.
-}
-
-::HC-W10-046::In Week 10 (Misinformation, Disinformation and Infodemic Management), in an outbreak response team, a programme reports success only because many people saw its content. What is the strongest critique? {
-=Exposure is an implementation measure and does not by itself prove understanding or behaviour change#Correct. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~High reach proves the health outcome improved#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~Reach and behaviour are the same measure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-~The programme should stop measuring exposure#Not the best answer. Reach matters, but it sits earlier in the pathway than comprehension, action or health outcomes.
-}
-
-::HC-W10-047::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a youth-friendly service, a message is scientifically accurate but the intended audience cannot act because the service is unavailable. What is the best interpretation? {
-=The communication may be accurate but is not operationally actionable#Correct. Actionability requires a feasible pathway to the recommended behaviour.
-~The audience lacks motivation by definition#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~More repetition will solve the service barrier#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-~Accuracy automatically makes the intervention effective#Not the best answer. Actionability requires a feasible pathway to the recommended behaviour.
-}
-
-::HC-W10-048::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a rural health centre, community members repeatedly raise the same concern, but the programme never records or responds to it. Which system is most clearly missing? {
-=A feedback and adaptation loop#Correct. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A larger logo#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A longer technical report#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-~A higher advertising budget#Not the best answer. Listening only creates value when insight is documented, acted on where appropriate, and reported back.
-}
-
-::HC-W10-049::In Week 10 (Misinformation, Disinformation and Infodemic Management), in an urban community clinic, a campaign uses a striking statistic with no denominator or baseline. What is the main communication risk? {
-=The audience may misinterpret the magnitude of risk or effect#Correct. Risk information needs context, denominators and appropriate framing.
-~The message will always be too long#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~Denominators are irrelevant in communication#Not the best answer. Risk information needs context, denominators and appropriate framing.
-~The source becomes automatically credible#Not the best answer. Risk information needs context, denominators and appropriate framing.
-}
-
-::HC-W10-050::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a national public-health campaign, a team labels non-adoption as “ignorance” without studying access, norms or service barriers. What should happen first? {
-=Conduct formative diagnosis of behavioural and communication determinants#Correct. Audience and behavioural diagnosis should precede message selection.
-~Design a harsher slogan#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Increase fear immediately#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-~Assume knowledge is the only determinant#Not the best answer. Audience and behavioural diagnosis should precede message selection.
-}
-
-::HC-W10-051::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a district vaccination programme, an organisation changes guidance when new evidence arrives but tries to hide the earlier advice. What would better protect trust? {
-=Explain what changed, why it changed, and what people should do now#Correct. Transparent updates can preserve credibility when evidence evolves.
-~Delete all previous communication without explanation#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Claim the guidance never changed#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-~Delay future updates until certainty is complete#Not the best answer. Transparent updates can preserve credibility when evidence evolves.
-}
-
-::HC-W10-052::In Week 10 (Misinformation, Disinformation and Infodemic Management), in a maternal-health campaign, a communication strategy works well for smartphone users but misses people without data access. Which principle needs stronger attention? {
-=Equity and accessibility#Correct. Effectiveness should be assessed across groups, including those facing access barriers.
-~Message saturation#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Brand visibility#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-~Technical complexity#Not the best answer. Effectiveness should be assessed across groups, including those facing access barriers.
-}

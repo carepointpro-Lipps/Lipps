@@ -1,2 +1,88 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>LIPPS Admin</title><style>body{margin:0;background:#f7f4ed;font-family:Inter,system-ui,sans-serif}.boot{max-width:760px;margin:8vh auto;padding:32px;color:#171717}.brand{font-size:2rem;font-weight:800}.tag{color:#695f50}.note{margin-top:24px;padding:16px;border-left:4px solid #a96d21;background:#fff}</style></head><body><div class="boot"><div class="brand">LIPPS.</div><div class="tag">Evidence is never the whole story.</div><div class="note"><strong>Admin authoring</strong><br>This interface edits the Git-backed LIPPS source. Sign in with the authorised GitHub account or token configured for this deployment.</div></div><script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>LIPPS Admin</title>
+</head>
+<body>
+
+<script>
+  // We need to register Quarto's .qmd format before Sveltia starts.
+  window.CMS_MANUAL_INIT = true;
+</script>
+
+<script src="https://unpkg.com/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+
+<script>
+CMS.registerCustomFormat('qmd', 'qmd', {
+
+  fromFile: (text) => {
+    text = text.replace(/^\uFEFF/, '');
+
+    let frontMatter = {};
+    let body = text;
+
+    const match = text.match(
+      /^---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(?:\r?\n|$)([\s\S]*)$/
+    );
+
+    if (match) {
+      frontMatter = jsyaml.load(match[1]) || {};
+      body = match[2];
+    }
+
+    return {
+      ...frontMatter,
+      _raw_frontmatter: JSON.stringify(frontMatter),
+      body
+    };
+  },
+
+  toFile: (data) => {
+    const {
+      body = '',
+      _raw_frontmatter = '',
+      ...edited
+    } = data;
+
+    let frontMatter = {};
+
+    try {
+      frontMatter = _raw_frontmatter
+        ? JSON.parse(_raw_frontmatter)
+        : {};
+    } catch (error) {
+      frontMatter = {};
+    }
+
+    // Overlay CMS-edited values while retaining any Quarto options
+    // that are not exposed as form fields.
+    for (const [key, value] of Object.entries(edited)) {
+
+      if (value === undefined || value === null || value === '') {
+        // Don't introduce new empty optional properties.
+        // Preserve an existing empty property if it was already present.
+        if (!(key in frontMatter)) continue;
+      }
+
+      frontMatter[key] = value;
+    }
+
+    const yaml = jsyaml.dump(frontMatter, {
+      noRefs: true,
+      lineWidth: -1,
+      sortKeys: false
+    });
+
+    return `---\n${yaml}---\n${body}`;
+  }
+});
+
+CMS.init();
+</script>
+
+</body>
+</html>

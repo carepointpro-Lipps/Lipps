@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Advanced graduate epidemiology: Make time, censoring and competing events explicit parts of the estimand.">
+
+<title>Epidemiology II Week 5 — Survival and Longitudinal Epidemiology | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-time-to-event-data-are-not-ordinary-binary-outcomes" id="toc-orient-time-to-event-data-are-not-ordinary-binary-outcomes" class="nav-link" data-scroll-target="#orient-time-to-event-data-are-not-ordinary-binary-outcomes">ORIENT · Time-to-event data are not ordinary binary outcomes</a></li>
+  <li><a href="#learn-1-survival-hazards-and-cumulative-incidence" id="toc-learn-1-survival-hazards-and-cumulative-incidence" class="nav-link" data-scroll-target="#learn-1-survival-hazards-and-cumulative-incidence">LEARN 1 · Survival, hazards and cumulative incidence</a></li>
+  <li><a href="#learn-2-censoring-assumptions" id="toc-learn-2-censoring-assumptions" class="nav-link" data-scroll-target="#learn-2-censoring-assumptions">LEARN 2 · Censoring assumptions</a></li>
+  <li><a href="#learn-3-cox-model-and-proportional-hazards" id="toc-learn-3-cox-model-and-proportional-hazards" class="nav-link" data-scroll-target="#learn-3-cox-model-and-proportional-hazards">LEARN 3 · Cox model and proportional hazards</a></li>
+  <li><a href="#learn-4-competing-risks" id="toc-learn-4-competing-risks" class="nav-link" data-scroll-target="#learn-4-competing-risks">LEARN 4 · Competing risks</a></li>
+  <li><a href="#learn-5-recurrent-events-and-multi-state-processes" id="toc-learn-5-recurrent-events-and-multi-state-processes" class="nav-link" data-scroll-target="#learn-5-recurrent-events-and-multi-state-processes">LEARN 5 · Recurrent events and multi-state processes</a></li>
+  <li><a href="#learn-6-time-dependent-covariates" id="toc-learn-6-time-dependent-covariates" class="nav-link" data-scroll-target="#learn-6-time-dependent-covariates">LEARN 6 · Time-dependent covariates</a></li>
+  <li><a href="#r-lab" id="toc-r-lab" class="nav-link" data-scroll-target="#r-lab">R LAB</a></li>
+  <li><a href="#methods-workshop-move-from-a-survival-curve-to-a-defensible-estimand" id="toc-methods-workshop-move-from-a-survival-curve-to-a-defensible-estimand" class="nav-link" data-scroll-target="#methods-workshop-move-from-a-survival-curve-to-a-defensible-estimand">METHODS WORKSHOP · Move from a survival curve to a defensible estimand</a>
+  <ul class="collapse">
+  <li><a href="#kaplan-meier-first" id="toc-kaplan-meier-first" class="nav-link" data-scroll-target="#kaplan-meier-first">Kaplan-Meier first</a></li>
+  <li><a href="#cox-model-second" id="toc-cox-model-second" class="nav-link" data-scroll-target="#cox-model-second">Cox model second</a></li>
+  <li><a href="#absolute-survival-contrasts" id="toc-absolute-survival-contrasts" class="nav-link" data-scroll-target="#absolute-survival-contrasts">Absolute survival contrasts</a></li>
+  <li><a href="#left-truncation" id="toc-left-truncation" class="nav-link" data-scroll-target="#left-truncation">Left truncation</a></li>
+  <li><a href="#time-dependent-exposure" id="toc-time-dependent-exposure" class="nav-link" data-scroll-target="#time-dependent-exposure">Time-dependent exposure</a></li>
+  <li><a href="#competing-risk-worked-example" id="toc-competing-risk-worked-example" class="nav-link" data-scroll-target="#competing-risk-worked-example">Competing risk worked example</a></li>
+  <li><a href="#recurrent-event-strategies" id="toc-recurrent-event-strategies" class="nav-link" data-scroll-target="#recurrent-event-strategies">Recurrent event strategies</a></li>
+  <li><a href="#multi-state-models" id="toc-multi-state-models" class="nav-link" data-scroll-target="#multi-state-models">Multi-state models</a></li>
+  <li><a href="#doctoral-extension-causal-survival" id="toc-doctoral-extension-causal-survival" class="nav-link" data-scroll-target="#doctoral-extension-causal-survival">Doctoral extension · Causal survival</a></li>
+  </ul></li>
+  <li><a href="#seminar-notes-time-scales-hazards-and-clinically-meaningful-contrasts" id="toc-seminar-notes-time-scales-hazards-and-clinically-meaningful-contrasts" class="nav-link" data-scroll-target="#seminar-notes-time-scales-hazards-and-clinically-meaningful-contrasts">SEMINAR NOTES · Time scales, hazards and clinically meaningful contrasts</a>
+  <ul class="collapse">
+  <li><a href="#choosing-the-time-scale" id="toc-choosing-the-time-scale" class="nav-link" data-scroll-target="#choosing-the-time-scale">Choosing the time scale</a></li>
+  <li><a href="#non-proportional-hazards" id="toc-non-proportional-hazards" class="nav-link" data-scroll-target="#non-proportional-hazards">Non-proportional hazards</a></li>
+  <li><a href="#informative-entry" id="toc-informative-entry" class="nav-link" data-scroll-target="#informative-entry">Informative entry</a></li>
+  <li><a href="#competing-event-estimands" id="toc-competing-event-estimands" class="nav-link" data-scroll-target="#competing-event-estimands">Competing-event estimands</a></li>
+  <li><a href="#administrative-versus-informative-censoring" id="toc-administrative-versus-informative-censoring" class="nav-link" data-scroll-target="#administrative-versus-informative-censoring">Administrative versus informative censoring</a></li>
+  <li><a href="#recurrent-events-and-terminal-events" id="toc-recurrent-events-and-terminal-events" class="nav-link" data-scroll-target="#recurrent-events-and-terminal-events">Recurrent events and terminal events</a></li>
+  <li><a href="#dynamic-prediction-versus-causal-effect" id="toc-dynamic-prediction-versus-causal-effect" class="nav-link" data-scroll-target="#dynamic-prediction-versus-causal-effect">Dynamic prediction versus causal effect</a></li>
+  </ul></li>
+  <li><a href="#advanced-synthesis-time-to-event-data-require-a-risk-set-way-of-thinking" id="toc-advanced-synthesis-time-to-event-data-require-a-risk-set-way-of-thinking" class="nav-link" data-scroll-target="#advanced-synthesis-time-to-event-data-require-a-risk-set-way-of-thinking">ADVANCED SYNTHESIS · Time-to-event data require a risk-set way of thinking</a>
+  <ul class="collapse">
+  <li><a href="#survival-hazard-and-cumulative-hazard" id="toc-survival-hazard-and-cumulative-hazard" class="nav-link" data-scroll-target="#survival-hazard-and-cumulative-hazard">Survival, hazard and cumulative hazard</a></li>
+  <li><a href="#kaplan-meier-estimator" id="toc-kaplan-meier-estimator" class="nav-link" data-scroll-target="#kaplan-meier-estimator">Kaplan-Meier estimator</a></li>
+  <li><a href="#informative-censoring" id="toc-informative-censoring" class="nav-link" data-scroll-target="#informative-censoring">Informative censoring</a></li>
+  <li><a href="#cox-proportional-hazards" id="toc-cox-proportional-hazards" class="nav-link" data-scroll-target="#cox-proportional-hazards">Cox proportional hazards</a></li>
+  <li><a href="#absolute-survival-contrasts-1" id="toc-absolute-survival-contrasts-1" class="nav-link" data-scroll-target="#absolute-survival-contrasts-1">Absolute survival contrasts</a></li>
+  <li><a href="#restricted-mean-survival-time" id="toc-restricted-mean-survival-time" class="nav-link" data-scroll-target="#restricted-mean-survival-time">Restricted mean survival time</a></li>
+  <li><a href="#competing-risks" id="toc-competing-risks" class="nav-link" data-scroll-target="#competing-risks">Competing risks</a></li>
+  <li><a href="#recurrent-events" id="toc-recurrent-events" class="nav-link" data-scroll-target="#recurrent-events">Recurrent events</a></li>
+  <li><a href="#time-varying-covariates" id="toc-time-varying-covariates" class="nav-link" data-scroll-target="#time-varying-covariates">Time-varying covariates</a></li>
+  <li><a href="#immortal-time-bias" id="toc-immortal-time-bias" class="nav-link" data-scroll-target="#immortal-time-bias">Immortal-time bias</a></li>
+  <li><a href="#msc-standard" id="toc-msc-standard" class="nav-link" data-scroll-target="#msc-standard">MSc standard</a></li>
+  <li><a href="#phd-standard" id="toc-phd-standard" class="nav-link" data-scroll-target="#phd-standard">PhD standard</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-graduate-standard" id="toc-demonstrate-graduate-standard" class="nav-link" data-scroll-target="#demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY II · WEEK 05</p>
+</div>
+<section id="survival-and-longitudinal-epidemiology" class="level1">
+<h1>Survival and Longitudinal Epidemiology</h1>
+<section id="make-time-censoring-and-competing-events-explicit-parts-of-the-estimand." class="level2">
+<h2 class="anchored" data-anchor-id="make-time-censoring-and-competing-events-explicit-parts-of-the-estimand.">Make time, censoring and competing events explicit parts of the estimand.</h2>
+<p><span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span></p>
+</section>
+</section>
+</div>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>state the target estimand in population, strategy, outcome, time and effect-measure terms;</li>
+<li>identify the assumptions required for the week’s method;</li>
+<li>distinguish identification from estimation;</li>
+<li>select an analysis that corresponds to the scientific question;</li>
+<li>interpret absolute and relative effects with uncertainty;</li>
+<li>diagnose at least one failure mode using subject-matter reasoning;</li>
+<li>implement or outline a reproducible analysis in R; and</li>
+<li>defend what the resulting estimate can and cannot support.</li>
+</ol>
+</section>
+<section id="orient-time-to-event-data-are-not-ordinary-binary-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-time-to-event-data-are-not-ordinary-binary-outcomes">ORIENT · Time-to-event data are not ordinary binary outcomes</h2>
+<p>Two participants can both be event-free at study end but contribute very different information if one is followed for six years and another for six weeks. Survival methods use partial follow-up rather than discarding it.</p>
+</section>
+<section id="learn-1-survival-hazards-and-cumulative-incidence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-survival-hazards-and-cumulative-incidence">LEARN 1 · Survival, hazards and cumulative incidence</h2>
+<p>The survival function <span class="math inline">\(S(t)\)</span> is the probability of remaining event-free beyond <span class="math inline">\(t\)</span>. The hazard is an instantaneous rate among those currently event-free. Cumulative incidence describes the probability of experiencing an event by time <span class="math inline">\(t\)</span>.</p>
+<p>These are linked but not interchangeable. Scientific communication is often clearer when a hazard ratio is accompanied by absolute survival or cumulative-incidence estimates at clinically meaningful times.</p>
+</section>
+<section id="learn-2-censoring-assumptions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-censoring-assumptions">LEARN 2 · Censoring assumptions</h2>
+<p>Right censoring is not automatically harmless. Standard survival estimators require censoring to be independent of future outcome under appropriate conditioning. Administrative end of follow-up is often easier to defend than dropout due to worsening illness.</p>
+<p>Inverse-probability-of-censoring weights can address informative loss under measured predictors, but extreme weights reveal weak support.</p>
+</section>
+<section id="learn-3-cox-model-and-proportional-hazards" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-cox-model-and-proportional-hazards">LEARN 3 · Cox model and proportional hazards</h2>
+<p>The Cox model estimates hazard ratios without specifying the baseline hazard. Check proportional hazards using graphical and residual-based diagnostics. If the effect varies over time, report time-specific effects or use a model that represents non-proportionality.</p>
+<p>A statistically significant proportional-hazards test in a very large sample does not automatically make the model useless; judge the magnitude and substantive importance of non-proportionality.</p>
+</section>
+<section id="learn-4-competing-risks" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-competing-risks">LEARN 4 · Competing risks</h2>
+<p>When competing events prevent the event of interest, choose between cause-specific hazard questions and real-world cumulative-incidence questions. The Fine-Gray subdistribution hazard is one modelling approach, but its coefficient should not be casually interpreted as a causal risk ratio.</p>
+<p>Often the most interpretable outputs are standardised cumulative incidences under clearly defined strategies.</p>
+</section>
+<section id="learn-5-recurrent-events-and-multi-state-processes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-recurrent-events-and-multi-state-processes">LEARN 5 · Recurrent events and multi-state processes</h2>
+<p>Hospital admissions, malaria episodes and exacerbations can recur. First-event analyses discard later events. Depending on the question, consider event-rate models, Andersen-Gill approaches, gap-time models, frailty models or multi-state models.</p>
+<p>Multi-state thinking is useful even without complex software: patients may transition from diagnosis → treatment → suppression → loss → re-engagement → death. The process itself may be the epidemiological object.</p>
+</section>
+<section id="learn-6-time-dependent-covariates" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-time-dependent-covariates">LEARN 6 · Time-dependent covariates</h2>
+<p>CD4 count, viral load, medication adherence and employment can change during follow-up. A time-updated Cox model can incorporate changing predictors, but if a time-varying confounder is itself affected by prior treatment, conventional adjustment can block part of the treatment effect and induce bias. That problem motivates Week 8.</p>
+</section>
+<section id="r-lab" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="r-lab">R LAB</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/labs/lab-03-survival.html">Advanced Lab 3 — Survival, competing risks and time-updated covariates →</a></p>
+</section>
+<section id="methods-workshop-move-from-a-survival-curve-to-a-defensible-estimand" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="methods-workshop-move-from-a-survival-curve-to-a-defensible-estimand">METHODS WORKSHOP · Move from a survival curve to a defensible estimand</h2>
+<p>Suppose an oncology cohort compares treatment A with treatment B for 3-year mortality.</p>
+<section id="kaplan-meier-first" class="level3">
+<h3 class="anchored" data-anchor-id="kaplan-meier-first">Kaplan-Meier first</h3>
+<p>Plot unadjusted survival and numbers at risk. This reveals follow-up support and whether one group has little information late in time.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>km <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, death) <span class="sc">~</span> treatment, <span class="at">data=</span>d)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(km)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Do not report survival curves without numbers at risk; tails based on very few participants are unstable.</p>
+</section>
+<section id="cox-model-second" class="level3">
+<h3 class="anchored" data-anchor-id="cox-model-second">Cox model second</h3>
+<p>Fit the model only after defining covariates and time scale.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cox <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, death) <span class="sc">~</span> treatment <span class="sc">+</span> age <span class="sc">+</span> stage, <span class="at">data=</span>d)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cox.zph</span>(cox)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The time scale itself matters. Age-as-time-scale can control age finely in some chronic-disease cohorts, while time-since-entry may better match the clinical process in others.</p>
+</section>
+<section id="absolute-survival-contrasts" class="level3">
+<h3 class="anchored" data-anchor-id="absolute-survival-contrasts">Absolute survival contrasts</h3>
+<p>Use the fitted model to estimate standardised survival curves under each treatment and report survival probabilities at 1 and 3 years. This often communicates treatment impact more clearly than a hazard ratio alone.</p>
+</section>
+<section id="left-truncation" class="level3">
+<h3 class="anchored" data-anchor-id="left-truncation">Left truncation</h3>
+<p>Participants who enter a cohort after becoming at risk contribute only after entry. If the analysis ignores delayed entry, survivors who live long enough to enrol can create length or survivor bias. Survival objects can represent start-stop intervals.</p>
+</section>
+<section id="time-dependent-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="time-dependent-exposure">Time-dependent exposure</h3>
+<p>For medication initiation during follow-up, split person-time at treatment changes. Never assign the eventual treatment status backward to baseline.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># conceptual start-stop structure</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Surv</span>(tstart, tstop, event)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="competing-risk-worked-example" class="level3">
+<h3 class="anchored" data-anchor-id="competing-risk-worked-example">Competing risk worked example</h3>
+<p>If recurrence is the event and death precludes recurrence, report cumulative incidence of recurrence in the presence of death. A cause-specific Cox model addresses etiologic rate questions; a cumulative-incidence function addresses real-world probability. Choose based on the scientific objective.</p>
+</section>
+<section id="recurrent-event-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="recurrent-event-strategies">Recurrent event strategies</h3>
+<p>For hospital readmission: - time-to-first-event ignores later admissions; - Andersen-Gill treats recurrent events on a common time scale; - Prentice-Williams-Peterson models ordered events; - frailty models introduce latent heterogeneity.</p>
+<p>No method is universally best. Ask whether the policy question concerns any admission, total burden, gap time or transition process.</p>
+</section>
+<section id="multi-state-models" class="level3">
+<h3 class="anchored" data-anchor-id="multi-state-models">Multi-state models</h3>
+<p>Represent states such as “in care,” “lost,” “re-engaged,” and “dead.” Estimate transition hazards or probabilities. This is useful when programme pathways matter more than a single endpoint.</p>
+</section>
+<section id="doctoral-extension-causal-survival" class="level3">
+<h3 class="anchored" data-anchor-id="doctoral-extension-causal-survival">Doctoral extension · Causal survival</h3>
+<p>Causal survival analysis requires careful handling of competing events, censoring and treatment changes. Marginal structural survival models and g-formula approaches can estimate standardised survival under interventions, but interpretation depends on whether competing events are treated as part of the outcome process or hypothetical censoring events.</p>
+</section>
+</section>
+<section id="seminar-notes-time-scales-hazards-and-clinically-meaningful-contrasts" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="seminar-notes-time-scales-hazards-and-clinically-meaningful-contrasts">SEMINAR NOTES · Time scales, hazards and clinically meaningful contrasts</h2>
+<section id="choosing-the-time-scale" class="level3">
+<h3 class="anchored" data-anchor-id="choosing-the-time-scale">Choosing the time scale</h3>
+<p>Time since treatment initiation, age and calendar time each answer different questions. Age can be used as the underlying time scale when age is the dominant risk process, with delayed entry at age of cohort enrolment. Calendar time may matter during epidemics or policy changes.</p>
+</section>
+<section id="non-proportional-hazards" class="level3">
+<h3 class="anchored" data-anchor-id="non-proportional-hazards">Non-proportional hazards</h3>
+<p>If survival curves cross, one hazard ratio can obscure early harm and later benefit. Options include time-varying coefficients, restricted mean survival time (RMST) differences and time-specific survival contrasts.</p>
+<p>RMST up to time <span class="math inline">\(\tau\)</span> is the area under the survival curve:</p>
+<p><span class="math display">\[RMST(\tau)=\int_0^\tau S(t)dt.\]</span></p>
+<p>The difference in RMST has a direct interpretation as average event-free time gained within the horizon.</p>
+</section>
+<section id="informative-entry" class="level3">
+<h3 class="anchored" data-anchor-id="informative-entry">Informative entry</h3>
+<p>Left truncation assumes individuals are observed only after an entry time and survived event-free until entry. Failing to account for delayed entry can produce survivor bias in occupational and chronic-disease cohorts.</p>
+</section>
+<section id="competing-event-estimands" class="level3">
+<h3 class="anchored" data-anchor-id="competing-event-estimands">Competing-event estimands</h3>
+<p>If death competes with kidney failure, an intervention that reduces death may paradoxically increase observed kidney failure because more people survive long enough to experience it. This is not necessarily harm. Separate etiologic effects on cause-specific hazards from policy effects on cumulative incidence.</p>
+</section>
+<section id="administrative-versus-informative-censoring" class="level3">
+<h3 class="anchored" data-anchor-id="administrative-versus-informative-censoring">Administrative versus informative censoring</h3>
+<p>Study end is often plausibly independent of prognosis conditional on calendar time. Loss because a patient becomes too sick to attend clinic is not. Distinguish reasons for censoring and model them when possible.</p>
+</section>
+<section id="recurrent-events-and-terminal-events" class="level3">
+<h3 class="anchored" data-anchor-id="recurrent-events-and-terminal-events">Recurrent events and terminal events</h3>
+<p>For repeated hospitalisations followed by death, treating death as ordinary censoring can distort recurrent-event estimates. Joint frailty or multi-state models can account for dependence between recurrent events and terminal death.</p>
+</section>
+<section id="dynamic-prediction-versus-causal-effect" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-prediction-versus-causal-effect">Dynamic prediction versus causal effect</h3>
+<p>Survival models are also used for prognosis. A strong prognostic Cox model may include post-treatment biomarkers and be inappropriate for estimating a treatment effect. Again, prediction and causal inference have different variable-selection rules.</p>
+</section>
+</section>
+<section id="advanced-synthesis-time-to-event-data-require-a-risk-set-way-of-thinking" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="advanced-synthesis-time-to-event-data-require-a-risk-set-way-of-thinking">ADVANCED SYNTHESIS · Time-to-event data require a risk-set way of thinking</h2>
+<p>Survival analysis is not simply “regression with time.” The fundamental object is the evolving risk set: at each event time, who was still under observation and capable of experiencing the event?</p>
+<section id="survival-hazard-and-cumulative-hazard" class="level3">
+<h3 class="anchored" data-anchor-id="survival-hazard-and-cumulative-hazard">Survival, hazard and cumulative hazard</h3>
+<p>The survival function is</p>
+<p><span class="math display">\[S(t)=P(T&gt;t).\]</span></p>
+<p>The hazard <span class="math inline">\(h(t)\)</span> is the instantaneous event rate among those event-free immediately before <span class="math inline">\(t\)</span>. The cumulative hazard <span class="math inline">\(H(t)\)</span> integrates hazard over time, and under standard conditions:</p>
+<p><span class="math display">\[S(t)=\exp[-H(t)].\]</span></p>
+<p>Hazards and risks answer different questions. A hazard ratio is a ratio of instantaneous rates conditional on survival to that time; it is not generally a ratio of cumulative risks.</p>
+</section>
+<section id="kaplan-meier-estimator" class="level3">
+<h3 class="anchored" data-anchor-id="kaplan-meier-estimator">Kaplan-Meier estimator</h3>
+<p>The Kaplan-Meier estimator updates survival at each event time:</p>
+<p><span class="math display">\[\hat S(t)=\prod_{t_j\le t}\left(1-\frac{d_j}{n_j}\right),\]</span></p>
+<p>where <span class="math inline">\(d_j\)</span> events occur among <span class="math inline">\(n_j\)</span> people at risk. Censoring removes people from later risk sets. The estimator relies on censoring being conditionally independent of the future event process, given what has been accounted for.</p>
+</section>
+<section id="informative-censoring" class="level3">
+<h3 class="anchored" data-anchor-id="informative-censoring">Informative censoring</h3>
+<p>Loss to follow-up is not harmless merely because the proportion is small. If people with worsening disease preferentially leave care, censoring may be informative. Compare baseline and time-updated characteristics of censored versus retained participants; use inverse-probability-of-censoring weights when justified.</p>
+</section>
+<section id="cox-proportional-hazards" class="level3">
+<h3 class="anchored" data-anchor-id="cox-proportional-hazards">Cox proportional hazards</h3>
+<p>Cox regression leaves baseline hazard unspecified while assuming covariate effects multiply the hazard proportionally. Assess proportional hazards using time interactions, Schoenfeld residuals and substantive knowledge. If proportional hazards fails, consider time-varying coefficients, stratified Cox models or alternative estimands.</p>
+</section>
+<section id="absolute-survival-contrasts-1" class="level3">
+<h3 class="anchored" data-anchor-id="absolute-survival-contrasts-1">Absolute survival contrasts</h3>
+<p>Even when Cox regression is used, present standardised survival curves or risks at clinically meaningful times. A hazard ratio alone can conceal how much absolute event probability differs.</p>
+</section>
+<section id="restricted-mean-survival-time" class="level3">
+<h3 class="anchored" data-anchor-id="restricted-mean-survival-time">Restricted mean survival time</h3>
+<p>The restricted mean survival time (RMST) up to <span class="math inline">\(\tau\)</span> is the expected event-free time through <span class="math inline">\(\tau\)</span>:</p>
+<p><span class="math display">\[RMST(\tau)=\int_0^\tau S(t)dt.\]</span></p>
+<p>The difference in RMST provides an absolute time-scale contrast and does not require proportional hazards.</p>
+</section>
+<section id="competing-risks" class="level3">
+<h3 class="anchored" data-anchor-id="competing-risks">Competing risks</h3>
+<p>If death prevents subsequent occurrence of the non-fatal outcome, censoring death as though it were ordinary loss to follow-up changes interpretation. The cause-specific hazard addresses the instantaneous event process among those currently event-free; the cumulative incidence function estimates the probability of the event in the presence of competing events. Fine-Gray subdistribution hazards answer yet another question. Match method to estimand.</p>
+</section>
+<section id="recurrent-events" class="level3">
+<h3 class="anchored" data-anchor-id="recurrent-events">Recurrent events</h3>
+<p>Repeated malaria episodes, hospitalisations or exacerbations violate a single-failure framework. Options include event-rate models, Andersen-Gill models, gap-time models and frailty approaches. Define whether the scientific target is total event burden, first event, recurrent intensity or subject-specific heterogeneity.</p>
+</section>
+<section id="time-varying-covariates" class="level3">
+<h3 class="anchored" data-anchor-id="time-varying-covariates">Time-varying covariates</h3>
+<p>Biomarkers, adherence and treatment can change during follow-up. Update covariate histories using start-stop data structures. Beware adjusting conventionally for time-varying variables that are both confounders and consequences of earlier treatment; that problem motivates marginal structural models.</p>
+</section>
+<section id="immortal-time-bias" class="level3">
+<h3 class="anchored" data-anchor-id="immortal-time-bias">Immortal-time bias</h3>
+<p>If exposure is defined by surviving long enough to receive treatment, the pre-treatment period can be incorrectly credited to the exposed group. Align eligibility, exposure assignment and follow-up; use time-varying exposure or target-trial designs when necessary.</p>
+</section>
+<section id="msc-standard" class="level3">
+<h3 class="anchored" data-anchor-id="msc-standard">MSc standard</h3>
+<p>Produce a Kaplan-Meier curve, estimate survival at prespecified times, fit/diagnose a Cox model, and report at least one absolute measure. Explain censoring assumptions.</p>
+</section>
+<section id="phd-standard" class="level3">
+<h3 class="anchored" data-anchor-id="phd-standard">PhD standard</h3>
+<p>Defend the causal meaning of the survival estimand, handle competing events and informative censoring explicitly, consider RMST and time-varying effects, and distinguish statistical proportionality from substantive causal assumptions.</p>
+</section>
+</section>
+<section id="demonstrate-graduate-standard" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</h2>
+<p>Submit one short methods memo or reproducible analysis in which you <strong>name the estimand first</strong>, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-04.html">← Week 4</a></p>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-06.html">Week 6 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

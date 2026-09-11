@@ -186,10 +186,6 @@ window.Quarto = {
   <li><a href="#learn-9-time-varying-exposure" id="toc-learn-9-time-varying-exposure" class="nav-link" data-scroll-target="#learn-9-time-varying-exposure">LEARN 9 · Time-varying exposure</a></li>
   <li><a href="#learn-10-strengths-and-limitations" id="toc-learn-10-strengths-and-limitations" class="nav-link" data-scroll-target="#learn-10-strengths-and-limitations">LEARN 10 · Strengths and limitations</a></li>
   <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
-  <li><a href="#demonstrate-week-7-mastery-quiz" id="toc-demonstrate-week-7-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-7-mastery-quiz">DEMONSTRATE · Week 7 mastery quiz</a></li>
-  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul>
 </nav>
     </div>
@@ -380,6 +376,49 @@ Formal survival-analysis methods are beyond this introductory week, but learners
 <li>Write a defensible conclusion.</li>
 </ol>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-time-to-event-analysis-censoring-and-immortal-time" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-time-to-event-analysis-censoring-and-immortal-time">GRADUATE DEEPEN · Time-to-event analysis, censoring and immortal time</h2>
+<p>Once follow-up varies across people, a single risk at the end of study can hide important information. Survival analysis treats <strong>when</strong> an event occurs as part of the outcome.</p>
+<section id="survival-and-hazard-are-different-quantities" class="level3">
+<h3 class="anchored" data-anchor-id="survival-and-hazard-are-different-quantities">Survival and hazard are different quantities</h3>
+<p>The survival function is:</p>
+<p><span class="math display">\[
+S(t)=P(T&gt;t)
+\]</span></p>
+<p>It gives the probability of remaining event-free beyond time <span class="math inline">\(t\)</span>.</p>
+<p>The hazard describes the instantaneous event rate among those still event-free. A hazard ratio therefore compares hazards, not cumulative risks. Even when hazards are proportional, a hazard ratio of 0.70 does not literally mean a 30% lower risk at every time point.</p>
+</section>
+<section id="kaplan-meier-estimation" class="level3">
+<h3 class="anchored" data-anchor-id="kaplan-meier-estimation">Kaplan-Meier estimation</h3>
+<p>The Kaplan-Meier estimator updates survival whenever an event occurs and can accommodate right censoring. It assumes that, conditional on the information used, censored participants are sufficiently comparable to those remaining under observation. If people leave because they are deteriorating and that process is not addressed, the estimate can be biased.</p>
+</section>
+<section id="cox-proportional-hazards-model" class="level3">
+<h3 class="anchored" data-anchor-id="cox-proportional-hazards-model">Cox proportional-hazards model</h3>
+<p>The Cox model relates covariates to the hazard without specifying the baseline hazard:</p>
+<p><span class="math display">\[
+h(t|X)=h_0(t)\exp(\beta X)
+\]</span></p>
+<p>The proportional-hazards assumption implies a stable hazard ratio over time. Check it rather than merely report a Cox model because software made it convenient. If the effect changes over time, consider time interactions, flexible models or reporting time-specific absolute risks.</p>
+</section>
+<section id="competing-risks" class="level3">
+<h3 class="anchored" data-anchor-id="competing-risks">Competing risks</h3>
+<p>If death prevents the outcome of interest, standard Kaplan-Meier methods that censor deaths can overstate the real-world probability of that outcome. Decide whether your scientific question concerns a <strong>cause-specific hazard</strong> or the <strong>cumulative incidence</strong> of the outcome in the presence of competing events.</p>
+</section>
+<section id="immortal-time-bias" class="level3">
+<h3 class="anchored" data-anchor-id="immortal-time-bias">Immortal-time bias</h3>
+<p>Immortal time is a period during which, by design, a participant must remain outcome-free to be classified as exposed. Suppose “treated” means receiving a drug within 90 days after diagnosis, but follow-up begins at diagnosis. Anyone who dies on day 20 can never become treated, while those eventually treated must survive long enough to receive treatment. Misclassifying the pre-treatment period as exposed creates an artificial survival advantage.</p>
+<p>Time-varying exposure coding or explicit target-trial alignment can prevent this bias.</p>
+</section>
+<section id="loss-to-follow-up-as-informative-censoring" class="level3">
+<h3 class="anchored" data-anchor-id="loss-to-follow-up-as-informative-censoring">Loss to follow-up as informative censoring</h3>
+<p>Instead of reporting only the percentage lost, model the causal structure of loss. Ask whether determinants of dropout also predict the outcome and whether they differ across exposure groups. In advanced work, inverse-probability-of-censoring weights can be used under explicit assumptions.</p>
+</section>
+<section id="r-laboratory" class="level3">
+<h3 class="anchored" data-anchor-id="r-laboratory">R laboratory</h3>
+<p><a href="../../learn/epidemiology/labs/lab-05-survival.html">Graduate Lab 5 — Kaplan-Meier, Cox regression and time-dependent bias →</a></p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <ol type="1">
@@ -415,6 +454,7 @@ The quiz is designed so that a prepared learner can read, reason and answer effi
 </section>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

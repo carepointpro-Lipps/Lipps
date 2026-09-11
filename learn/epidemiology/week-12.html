@@ -161,10 +161,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#learn-13-the-lipps-evidence-framework" id="toc-learn-13-the-lipps-evidence-framework" class="nav-link" data-scroll-target="#learn-13-the-lipps-evidence-framework">LEARN 13 · The LIPPS EVIDENCE framework</a></li>
   <li><a href="#learn-14-a-final-interpretation-workflow" id="toc-learn-14-a-final-interpretation-workflow" class="nav-link" data-scroll-target="#learn-14-a-final-interpretation-workflow">LEARN 14 · A final interpretation workflow</a></li>
   <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
-  <li><a href="#demonstrate-week-12-mastery-quiz" id="toc-demonstrate-week-12-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-12-mastery-quiz">DEMONSTRATE · Week 12 mastery quiz</a></li>
-  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul>
 </nav>
     </div>
@@ -449,6 +445,71 @@ Does the wording of the conclusion match what the evidence supports?</p>
 <li>State whether the findings could still support a pilot expansion and what additional evaluation you would request.</li>
 </ol>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-identification-assumptions-sensitivity-analysis-and-transportability" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-identification-assumptions-sensitivity-analysis-and-transportability">GRADUATE DEEPEN · Identification assumptions, sensitivity analysis and transportability</h2>
+<p>Critical appraisal at graduate level should end with more than a list of strengths and limitations. It should identify which assumptions are required for the reported estimate to answer the scientific question.</p>
+<section id="four-causal-identification-ideas" class="level3">
+<h3 class="anchored" data-anchor-id="four-causal-identification-ideas">Four causal identification ideas</h3>
+<p>For a simple point exposure, a causal interpretation commonly relies on versions of:</p>
+<p><strong>Exchangeability:</strong> compared groups are sufficiently similar with respect to causes of the outcome after the chosen adjustment strategy.</p>
+<p><strong>Positivity:</strong> every relevant covariate pattern has a non-zero probability of receiving each exposure strategy being compared.</p>
+<p><strong>Consistency:</strong> the observed outcome under the exposure actually received corresponds to the potential outcome under the defined intervention strategy. Poorly defined exposures make this assumption difficult to defend.</p>
+<p><strong>Correct time ordering and measurement:</strong> exposure, covariates and outcome are measured in a way that aligns with the causal question and avoids important selection or information bias.</p>
+<p>These assumptions are not guaranteed by a regression model.</p>
+</section>
+<section id="missing-data-are-part-of-the-causal-structure" class="level3">
+<h3 class="anchored" data-anchor-id="missing-data-are-part-of-the-causal-structure">Missing data are part of the causal structure</h3>
+<p>“Complete-case analysis” is not neutral. If inclusion in the complete-case sample depends jointly on determinants of exposure and outcome, restricting to complete records can induce selection bias.</p>
+<p>Distinguish:</p>
+<ul>
+<li>data missing completely at random;</li>
+<li>data missing at random conditional on observed variables;</li>
+<li>data missing not at random even after conditioning on observed data.</li>
+</ul>
+<p>Multiple imputation, inverse-probability weighting and sensitivity analysis each rely on assumptions. Report those assumptions rather than presenting the chosen software command as the solution.</p>
+</section>
+<section id="sensitivity-analysis-should-target-the-weak-link" class="level3">
+<h3 class="anchored" data-anchor-id="sensitivity-analysis-should-target-the-weak-link">Sensitivity analysis should target the weak link</h3>
+<p>Useful sensitivity analyses vary assumptions that threaten the inference:</p>
+<ul>
+<li>alternate outcome/exposure definitions;</li>
+<li>plausible unmeasured confounding;</li>
+<li>misclassification parameters;</li>
+<li>missing-data mechanisms;</li>
+<li>different censoring assumptions;</li>
+<li>alternative model specifications;</li>
+<li>exclusion of influential sites or periods;</li>
+<li>negative-control analyses where defensible.</li>
+</ul>
+<p>A sensitivity analysis is not a fishing expedition for the model that produces the preferred p-value.</p>
+</section>
+<section id="internal-validity-and-transportability-are-distinct" class="level3">
+<h3 class="anchored" data-anchor-id="internal-validity-and-transportability-are-distinct">Internal validity and transportability are distinct</h3>
+<p>A study can estimate its study-population effect well but still fail to transport to another population. Transportability depends on whether effect modifiers and intervention delivery differ between populations and whether there is adequate overlap.</p>
+<p>Ask:</p>
+<ol type="1">
+<li>What is the target population?</li>
+<li>Which characteristics modify the effect?</li>
+<li>Are those characteristics distributed differently in the target?</li>
+<li>Are all relevant strata represented in the study?</li>
+<li>Would the intervention actually be delivered in the same way?</li>
+</ol>
+</section>
+<section id="triangulation" class="level3">
+<h3 class="anchored" data-anchor-id="triangulation">Triangulation</h3>
+<p>No single design resolves every bias. Strong causal conclusions often emerge when evidence from different designs, populations, measurements and analytic approaches points toward a coherent explanation despite having different sources of bias.</p>
+<div class="lipps-callout">
+<p><strong>Doctoral standard</strong><br>
+Do not ask only, “Is the association statistically significant?” Ask: <strong>What causal contrast is being estimated, what assumptions identify it, what evidence supports those assumptions, and how sensitive is the conclusion when they are weakened?</strong></p>
+</div>
+</section>
+<section id="progression" class="level3">
+<h3 class="anchored" data-anchor-id="progression">Progression</h3>
+<p>This week completes Epidemiology I. Learners ready for regression-based adjustment, DAG identification, g-methods, time-varying confounding, quantitative bias analysis and target-trial emulation should continue to <strong>Epidemiology II — Advanced Epidemiologic Methods and Causal Inference</strong>.</p>
+<p><a href="../../learn/epidemiology-ii.html" class="lipps-btn primary">Continue to Epidemiology II →</a></p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <ol type="1">
@@ -487,6 +548,7 @@ The quiz is designed so that a prepared learner can read, reason and answer effi
 </section>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

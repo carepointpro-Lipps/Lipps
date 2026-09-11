@@ -158,10 +158,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#learn-10-interaction-depends-on-scale" id="toc-learn-10-interaction-depends-on-scale" class="nav-link" data-scroll-target="#learn-10-interaction-depends-on-scale">LEARN 10 · Interaction depends on scale</a></li>
   <li><a href="#learn-11-a-practical-adjustment-workflow" id="toc-learn-11-a-practical-adjustment-workflow" class="nav-link" data-scroll-target="#learn-11-a-practical-adjustment-workflow">LEARN 11 · A practical adjustment workflow</a></li>
   <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
-  <li><a href="#demonstrate-week-9-mastery-quiz" id="toc-demonstrate-week-9-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-9-mastery-quiz">DEMONSTRATE · Week 9 mastery quiz</a></li>
-  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul>
 </nav>
     </div>
@@ -369,6 +365,43 @@ Evidence becomes useful when you can explain not only what the analysis shows, b
 <li>State what further design and measurement information you would need before causal interpretation.</li>
 </ol>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-causal-diagrams-adjustment-strategies-and-interaction" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-causal-diagrams-adjustment-strategies-and-interaction">GRADUATE DEEPEN · Causal diagrams, adjustment strategies and interaction</h2>
+<p>Confounding control should begin with a causal model, not a p-value table. Directed acyclic graphs (DAGs) are useful because they force assumptions about causal structure to be drawn before variables are selected for adjustment.</p>
+<section id="three-roles-that-look-similar-in-a-dataset-but-behave-differently" class="level3">
+<h3 class="anchored" data-anchor-id="three-roles-that-look-similar-in-a-dataset-but-behave-differently">Three roles that look similar in a dataset but behave differently</h3>
+<p>A <strong>confounder</strong> is a common cause of exposure and outcome (or a variable that helps block a confounding path). Adjustment may be needed.</p>
+<p>A <strong>mediator</strong> lies on a causal pathway from exposure to outcome. Adjusting for it changes the estimand from a total effect toward some form of direct effect and can introduce additional bias.</p>
+<p>A <strong>collider</strong> is caused by two variables on a path. Conditioning on it can open a non-causal association between its causes.</p>
+<p>The same measured variable can play different roles in different causal questions. There is no universal list of “confounders.”</p>
+</section>
+<section id="minimally-sufficient-adjustment-sets" class="level3">
+<h3 class="anchored" data-anchor-id="minimally-sufficient-adjustment-sets">Minimally sufficient adjustment sets</h3>
+<p>A good adjustment set blocks open backdoor paths between exposure and outcome without conditioning on descendants that create bias. More variables are not automatically better. Automated selection based only on statistical significance can omit weak but important confounders or include colliders and mediators.</p>
+</section>
+<section id="regression-is-one-adjustment-method-not-the-definition-of-adjustment" class="level3">
+<h3 class="anchored" data-anchor-id="regression-is-one-adjustment-method-not-the-definition-of-adjustment">Regression is one adjustment method, not the definition of adjustment</h3>
+<p>Confounding can be addressed through design (randomisation, restriction, matching) or analysis (stratification, standardisation, regression, weighting, matching on propensity scores, g-methods). These approaches can estimate different marginal or conditional quantities.</p>
+</section>
+<section id="effect-modification-and-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="effect-modification-and-interaction">Effect modification and interaction</h3>
+<p>Effect-measure modification asks whether the effect differs across levels of another variable. Always name the scale:</p>
+<ul>
+<li>additive interaction concerns differences in risk differences;</li>
+<li>multiplicative interaction concerns ratios of risk ratios or other multiplicative measures.</li>
+</ul>
+<p>A single product-term p-value does not fully describe heterogeneity. Report stratum-specific effects with uncertainty and discuss whether subgroup analyses were prespecified, sufficiently powered and plausible.</p>
+</section>
+<section id="quantitative-bias-analysis-preview" class="level3">
+<h3 class="anchored" data-anchor-id="quantitative-bias-analysis-preview">Quantitative bias analysis preview</h3>
+<p>Instead of writing “residual confounding may remain,” advanced epidemiology asks how strong an unmeasured confounder or misclassification would have to be to explain the result. Quantitative bias analysis converts vague limitations into explicit sensitivity parameters.</p>
+</section>
+<section id="phd-bridge" class="level3">
+<h3 class="anchored" data-anchor-id="phd-bridge">PhD bridge</h3>
+<p>Epidemiology II develops DAG-based identification, standardisation, inverse-probability weighting, marginal structural models and quantitative bias analysis. The key shift is from <strong>“Which covariates are statistically associated?”</strong> to <strong>“Which assumptions identify the causal contrast?”</strong></p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <ol type="1">
@@ -405,6 +438,7 @@ The quiz is designed so that a prepared learner can read, reason and answer effi
 </section>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

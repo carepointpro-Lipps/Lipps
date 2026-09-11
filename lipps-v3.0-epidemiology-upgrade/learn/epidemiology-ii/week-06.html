@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Advanced graduate epidemiology: Draw the assumptions before adjusting for variables.">
+
+<title>Epidemiology II Week 6 — DAGs and Identification | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-a-covariate-table-does-not-reveal-causal-structure" id="toc-orient-a-covariate-table-does-not-reveal-causal-structure" class="nav-link" data-scroll-target="#orient-a-covariate-table-does-not-reveal-causal-structure">ORIENT · A covariate table does not reveal causal structure</a></li>
+  <li><a href="#learn-1-paths-and-d-separation" id="toc-learn-1-paths-and-d-separation" class="nav-link" data-scroll-target="#learn-1-paths-and-d-separation">LEARN 1 · Paths and d-separation</a></li>
+  <li><a href="#learn-2-colliders" id="toc-learn-2-colliders" class="nav-link" data-scroll-target="#learn-2-colliders">LEARN 2 · Colliders</a></li>
+  <li><a href="#learn-3-mediators-and-total-versus-direct-effects" id="toc-learn-3-mediators-and-total-versus-direct-effects" class="nav-link" data-scroll-target="#learn-3-mediators-and-total-versus-direct-effects">LEARN 3 · Mediators and total versus direct effects</a></li>
+  <li><a href="#learn-4-descendants-and-selection" id="toc-learn-4-descendants-and-selection" class="nav-link" data-scroll-target="#learn-4-descendants-and-selection">LEARN 4 · Descendants and selection</a></li>
+  <li><a href="#learn-5-dags-cannot-encode-everything" id="toc-learn-5-dags-cannot-encode-everything" class="nav-link" data-scroll-target="#learn-5-dags-cannot-encode-everything">LEARN 5 · DAGs cannot encode everything</a></li>
+  <li><a href="#learn-6-from-graph-to-estimand" id="toc-learn-6-from-graph-to-estimand" class="nav-link" data-scroll-target="#learn-6-from-graph-to-estimand">LEARN 6 · From graph to estimand</a></li>
+  <li><a href="#assessment-dag-defence" id="toc-assessment-dag-defence" class="nav-link" data-scroll-target="#assessment-dag-defence">ASSESSMENT · DAG defence</a></li>
+  <li><a href="#methods-workshop-dags-as-a-protocol-language" id="toc-methods-workshop-dags-as-a-protocol-language" class="nav-link" data-scroll-target="#methods-workshop-dags-as-a-protocol-language">METHODS WORKSHOP · DAGs as a protocol language</a>
+  <ul class="collapse">
+  <li><a href="#backdoor-criterion-in-practice" id="toc-backdoor-criterion-in-practice" class="nav-link" data-scroll-target="#backdoor-criterion-in-practice">Backdoor criterion in practice</a></li>
+  <li><a href="#m-bias-and-collider-intuition" id="toc-m-bias-and-collider-intuition" class="nav-link" data-scroll-target="#m-bias-and-collider-intuition">M-bias and collider intuition</a></li>
+  <li><a href="#selection-diagrams" id="toc-selection-diagrams" class="nav-link" data-scroll-target="#selection-diagrams">Selection diagrams</a></li>
+  <li><a href="#measurement-nodes" id="toc-measurement-nodes" class="nav-link" data-scroll-target="#measurement-nodes">Measurement nodes</a></li>
+  <li><a href="#dags-and-instrumental-variables" id="toc-dags-and-instrumental-variables" class="nav-link" data-scroll-target="#dags-and-instrumental-variables">DAGs and instrumental variables</a></li>
+  <li><a href="#minimal-versus-maximal-adjustment" id="toc-minimal-versus-maximal-adjustment" class="nav-link" data-scroll-target="#minimal-versus-maximal-adjustment">Minimal versus maximal adjustment</a></li>
+  <li><a href="#temporal-dags" id="toc-temporal-dags" class="nav-link" data-scroll-target="#temporal-dags">Temporal DAGs</a></li>
+  <li><a href="#practical-exercise" id="toc-practical-exercise" class="nav-link" data-scroll-target="#practical-exercise">Practical exercise</a></li>
+  <li><a href="#doctoral-extension-swigs" id="toc-doctoral-extension-swigs" class="nav-link" data-scroll-target="#doctoral-extension-swigs">Doctoral extension · SWIGs</a></li>
+  </ul></li>
+  <li><a href="#seminar-notes-graphical-mistakes-that-matter-in-real-analyses" id="toc-seminar-notes-graphical-mistakes-that-matter-in-real-analyses" class="nav-link" data-scroll-target="#seminar-notes-graphical-mistakes-that-matter-in-real-analyses">SEMINAR NOTES · Graphical mistakes that matter in real analyses</a>
+  <ul class="collapse">
+  <li><a href="#conditioning-on-healthcare-use" id="toc-conditioning-on-healthcare-use" class="nav-link" data-scroll-target="#conditioning-on-healthcare-use">Conditioning on healthcare use</a></li>
+  <li><a href="#survivor-bias" id="toc-survivor-bias" class="nav-link" data-scroll-target="#survivor-bias">Survivor bias</a></li>
+  <li><a href="#mediator-outcome-confounders-affected-by-exposure" id="toc-mediator-outcome-confounders-affected-by-exposure" class="nav-link" data-scroll-target="#mediator-outcome-confounders-affected-by-exposure">Mediator-outcome confounders affected by exposure</a></li>
+  <li><a href="#precision-variables-and-instruments" id="toc-precision-variables-and-instruments" class="nav-link" data-scroll-target="#precision-variables-and-instruments">Precision variables and instruments</a></li>
+  <li><a href="#unmeasured-nodes" id="toc-unmeasured-nodes" class="nav-link" data-scroll-target="#unmeasured-nodes">Unmeasured nodes</a></li>
+  <li><a href="#dag-falsification-limits" id="toc-dag-falsification-limits" class="nav-link" data-scroll-target="#dag-falsification-limits">DAG falsification limits</a></li>
+  <li><a href="#selection-into-measurement" id="toc-selection-into-measurement" class="nav-link" data-scroll-target="#selection-into-measurement">Selection into measurement</a></li>
+  <li><a href="#documentation-standard" id="toc-documentation-standard" class="nav-link" data-scroll-target="#documentation-standard">Documentation standard</a></li>
+  </ul></li>
+  <li><a href="#advanced-synthesis-dags-are-tools-for-identification-not-decorative-figures" id="toc-advanced-synthesis-dags-are-tools-for-identification-not-decorative-figures" class="nav-link" data-scroll-target="#advanced-synthesis-dags-are-tools-for-identification-not-decorative-figures">ADVANCED SYNTHESIS · DAGs are tools for identification, not decorative figures</a>
+  <ul class="collapse">
+  <li><a href="#nodes-arrows-and-acyclicity" id="toc-nodes-arrows-and-acyclicity" class="nav-link" data-scroll-target="#nodes-arrows-and-acyclicity">Nodes, arrows and acyclicity</a></li>
+  <li><a href="#backdoor-paths" id="toc-backdoor-paths" class="nav-link" data-scroll-target="#backdoor-paths">Backdoor paths</a></li>
+  <li><a href="#colliders" id="toc-colliders" class="nav-link" data-scroll-target="#colliders">Colliders</a></li>
+  <li><a href="#mediators" id="toc-mediators" class="nav-link" data-scroll-target="#mediators">Mediators</a></li>
+  <li><a href="#minimal-sufficient-adjustment-sets" id="toc-minimal-sufficient-adjustment-sets" class="nav-link" data-scroll-target="#minimal-sufficient-adjustment-sets">Minimal sufficient adjustment sets</a></li>
+  <li><a href="#m-bias-and-practical-judgement" id="toc-m-bias-and-practical-judgement" class="nav-link" data-scroll-target="#m-bias-and-practical-judgement">M-bias and practical judgement</a></li>
+  <li><a href="#selection-bias-on-a-dag" id="toc-selection-bias-on-a-dag" class="nav-link" data-scroll-target="#selection-bias-on-a-dag">Selection bias on a DAG</a></li>
+  <li><a href="#measurement-nodes-1" id="toc-measurement-nodes-1" class="nav-link" data-scroll-target="#measurement-nodes-1">Measurement nodes</a></li>
+  <li><a href="#from-dag-to-estimand" id="toc-from-dag-to-estimand" class="nav-link" data-scroll-target="#from-dag-to-estimand">From DAG to estimand</a></li>
+  <li><a href="#swigs-and-counterfactual-graphs" id="toc-swigs-and-counterfactual-graphs" class="nav-link" data-scroll-target="#swigs-and-counterfactual-graphs">SWIGs and counterfactual graphs</a></li>
+  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example">Worked example</a></li>
+  <li><a href="#msc-standard" id="toc-msc-standard" class="nav-link" data-scroll-target="#msc-standard">MSc standard</a></li>
+  <li><a href="#phd-standard" id="toc-phd-standard" class="nav-link" data-scroll-target="#phd-standard">PhD standard</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-graduate-standard" id="toc-demonstrate-graduate-standard" class="nav-link" data-scroll-target="#demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY II · WEEK 06</p>
+</div>
+<section id="dags-and-identification" class="level1">
+<h1>DAGs and Identification</h1>
+<section id="draw-the-assumptions-before-adjusting-for-variables." class="level2">
+<h2 class="anchored" data-anchor-id="draw-the-assumptions-before-adjusting-for-variables.">Draw the assumptions before adjusting for variables.</h2>
+<p><span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span></p>
+</section>
+</section>
+</div>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>state the target estimand in population, strategy, outcome, time and effect-measure terms;</li>
+<li>identify the assumptions required for the week’s method;</li>
+<li>distinguish identification from estimation;</li>
+<li>select an analysis that corresponds to the scientific question;</li>
+<li>interpret absolute and relative effects with uncertainty;</li>
+<li>diagnose at least one failure mode using subject-matter reasoning;</li>
+<li>implement or outline a reproducible analysis in R; and</li>
+<li>defend what the resulting estimate can and cannot support.</li>
+</ol>
+</section>
+<section id="orient-a-covariate-table-does-not-reveal-causal-structure" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-a-covariate-table-does-not-reveal-causal-structure">ORIENT · A covariate table does not reveal causal structure</h2>
+<p>The same variable can be a confounder, mediator or collider depending on the causal question. DAGs make those assumptions explicit and allow adjustment strategies to be discussed before models are fit.</p>
+</section>
+<section id="learn-1-paths-and-d-separation" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-paths-and-d-separation">LEARN 1 · Paths and d-separation</h2>
+<p>A path between exposure and outcome can transmit association even when it is not causal. Backdoor paths enter the exposure through an arrow pointing into it. A sufficient adjustment set blocks all open non-causal backdoor paths without blocking the causal path of interest.</p>
+<p>D-separation is the graphical rule used to determine whether paths are open or blocked after conditioning.</p>
+</section>
+<section id="learn-2-colliders" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-colliders">LEARN 2 · Colliders</h2>
+<p>If <span class="math inline">\(A \rightarrow C \leftarrow U\)</span>, conditioning on collider <span class="math inline">\(C\)</span> can create association between <span class="math inline">\(A\)</span> and <span class="math inline">\(U\)</span>. If <span class="math inline">\(U\)</span> also affects outcome <span class="math inline">\(Y\)</span>, conditioning on <span class="math inline">\(C\)</span> can create a spurious path from <span class="math inline">\(A\)</span> to <span class="math inline">\(Y\)</span>.</p>
+<p>Common colliders include hospital admission, study participation, test receipt and survival to recruitment when each is affected by multiple causes.</p>
+</section>
+<section id="learn-3-mediators-and-total-versus-direct-effects" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-mediators-and-total-versus-direct-effects">LEARN 3 · Mediators and total versus direct effects</h2>
+<p>If <span class="math inline">\(A \rightarrow M \rightarrow Y\)</span>, adjusting for <span class="math inline">\(M\)</span> changes the question. A total effect allows the mediated pathway to operate; a controlled direct effect compares exposure strategies while fixing the mediator to a specified value. Natural direct and indirect effects require additional cross-world assumptions and are treated later.</p>
+</section>
+<section id="learn-4-descendants-and-selection" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-descendants-and-selection">LEARN 4 · Descendants and selection</h2>
+<p>Conditioning on descendants of colliders can also open biasing paths. Restricting analysis to people who attend clinic, survive long enough, have complete laboratory data or consent to a sub-study may create selection bias if those processes are common effects of exposure-related and outcome-related causes.</p>
+</section>
+<section id="learn-5-dags-cannot-encode-everything" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-dags-cannot-encode-everything">LEARN 5 · DAGs cannot encode everything</h2>
+<p>DAGs encode qualitative causal structure, not effect sizes, measurement error, functional form or random error. They are only as credible as the subject-matter assumptions used to draw them.</p>
+<p>Cycles are also excluded from simple DAGs; feedback over time is represented by time-indexed variables rather than a literal directed cycle.</p>
+</section>
+<section id="learn-6-from-graph-to-estimand" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-from-graph-to-estimand">LEARN 6 · From graph to estimand</h2>
+<p>The graph supports identification; it does not choose the estimator. Once an adjustment set is identified, effects can be estimated by standardisation, regression, matching, weighting or other approaches.</p>
+<p>A useful workflow is: <strong>question → target trial/estimand → DAG → identification set → estimator → diagnostics → sensitivity analysis.</strong></p>
+</section>
+<section id="assessment-dag-defence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="assessment-dag-defence">ASSESSMENT · DAG defence</h2>
+<p>Draw a DAG for one of your own research questions, identify a minimally sufficient adjustment set and defend why at least three measured covariates should or should not be adjusted for. Include one plausible unmeasured variable and describe how it threatens identification.</p>
+</section>
+<section id="methods-workshop-dags-as-a-protocol-language" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="methods-workshop-dags-as-a-protocol-language">METHODS WORKSHOP · DAGs as a protocol language</h2>
+<p>Take the question: does facility-level staffing improve viral suppression? Let staffing <span class="math inline">\(A\)</span> affect counselling quality <span class="math inline">\(M\)</span>, which affects suppression <span class="math inline">\(Y\)</span>. Facility resources <span class="math inline">\(L\)</span> affect both staffing and suppression. Patient severity <span class="math inline">\(S\)</span> influences facility choice and suppression.</p>
+<p>A DAG forces you to decide whether facility choice is a confounder pathway, a selection mechanism or both.</p>
+<section id="backdoor-criterion-in-practice" class="level3">
+<h3 class="anchored" data-anchor-id="backdoor-criterion-in-practice">Backdoor criterion in practice</h3>
+<p>A set <span class="math inline">\(Z\)</span> is sufficient if it blocks every backdoor path from <span class="math inline">\(A\)</span> to <span class="math inline">\(Y\)</span> without including descendants that induce bias. In the staffing example, facility resources and patient mix may be required. Counselling quality should not be adjusted for when estimating the total staffing effect because it is a mediator.</p>
+</section>
+<section id="m-bias-and-collider-intuition" class="level3">
+<h3 class="anchored" data-anchor-id="m-bias-and-collider-intuition">M-bias and collider intuition</h3>
+<p>Suppose staffing is influenced by district funding and patient complexity; suppression is influenced by patient complexity and NGO support; selection of “well-documented facilities” depends on both staffing and NGO support. Restricting to well-documented facilities may open a path between staffing and NGO support through the collider selection variable.</p>
+</section>
+<section id="selection-diagrams" class="level3">
+<h3 class="anchored" data-anchor-id="selection-diagrams">Selection diagrams</h3>
+<p>Add a selection node <span class="math inline">\(S\)</span> indicating inclusion in the analytic sample. Arrows into <span class="math inline">\(S\)</span> encode variables influencing participation or data completeness. This makes complete-case analysis a causal selection problem rather than a purely statistical missing-data issue.</p>
+</section>
+<section id="measurement-nodes" class="level3">
+<h3 class="anchored" data-anchor-id="measurement-nodes">Measurement nodes</h3>
+<p>A DAG can distinguish true exposure <span class="math inline">\(A\)</span> from measured exposure <span class="math inline">\(A^*\)</span> and true outcome <span class="math inline">\(Y\)</span> from recorded outcome <span class="math inline">\(Y^*\)</span>. Differential measurement can arise when <span class="math inline">\(A\)</span> influences how <span class="math inline">\(Y\)</span> is measured or vice versa.</p>
+</section>
+<section id="dags-and-instrumental-variables" class="level3">
+<h3 class="anchored" data-anchor-id="dags-and-instrumental-variables">DAGs and instrumental variables</h3>
+<p>A proposed instrument <span class="math inline">\(Z\)</span> should affect treatment <span class="math inline">\(A\)</span>, have no direct path to outcome <span class="math inline">\(Y\)</span> except through <span class="math inline">\(A\)</span>, and share no unblocked common causes with <span class="math inline">\(Y\)</span>. DAGs make the exclusion restriction and independence assumptions visible, though they cannot prove them.</p>
+</section>
+<section id="minimal-versus-maximal-adjustment" class="level3">
+<h3 class="anchored" data-anchor-id="minimal-versus-maximal-adjustment">Minimal versus maximal adjustment</h3>
+<p>A minimally sufficient set may improve precision by avoiding unnecessary variables. A larger valid set may sometimes improve precision if variables strongly predict outcome without inducing bias. The graph identifies valid sets; efficiency remains an estimation question.</p>
+</section>
+<section id="temporal-dags" class="level3">
+<h3 class="anchored" data-anchor-id="temporal-dags">Temporal DAGs</h3>
+<p>Longitudinal settings require time-indexed variables: <span class="math inline">\(A_0 \rightarrow L_1 \rightarrow A_1 \rightarrow Y\)</span>. Feedback is represented across time rather than through cycles. This structure reveals why <span class="math inline">\(L_1\)</span> can simultaneously mediate <span class="math inline">\(A_0\)</span> and confound <span class="math inline">\(A_1\)</span>.</p>
+</section>
+<section id="practical-exercise" class="level3">
+<h3 class="anchored" data-anchor-id="practical-exercise">Practical exercise</h3>
+<p>For your dissertation: 1. draw a pre-data DAG; 2. label measured and unmeasured nodes; 3. identify a minimal sufficient adjustment set; 4. identify variables you must not adjust for in the total-effect analysis; 5. identify the selection mechanism; 6. identify at least one measurement process; 7. write one sentence describing the untestable assumptions encoded by the graph.</p>
+</section>
+<section id="doctoral-extension-swigs" class="level3">
+<h3 class="anchored" data-anchor-id="doctoral-extension-swigs">Doctoral extension · SWIGs</h3>
+<p>Single-world intervention graphs (SWIGs) merge graphical and potential-outcome notation to represent interventions and counterfactual independencies. They are useful when advanced doctoral work requires a more formal link between graphs and causal identification.</p>
+</section>
+</section>
+<section id="seminar-notes-graphical-mistakes-that-matter-in-real-analyses" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="seminar-notes-graphical-mistakes-that-matter-in-real-analyses">SEMINAR NOTES · Graphical mistakes that matter in real analyses</h2>
+<section id="conditioning-on-healthcare-use" class="level3">
+<h3 class="anchored" data-anchor-id="conditioning-on-healthcare-use">Conditioning on healthcare use</h3>
+<p>Suppose obesity increases clinic attendance and diabetes symptoms also increase attendance. A study restricted to clinic attendees conditions on a collider influenced by obesity and latent diabetes risk, potentially distorting their association.</p>
+</section>
+<section id="survivor-bias" class="level3">
+<h3 class="anchored" data-anchor-id="survivor-bias">Survivor bias</h3>
+<p>If exposure and unmeasured frailty both influence survival to study enrolment, conditioning on being alive at enrolment opens a path between exposure and frailty. This is common in studies of long-term survivors.</p>
+</section>
+<section id="mediator-outcome-confounders-affected-by-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="mediator-outcome-confounders-affected-by-exposure">Mediator-outcome confounders affected by exposure</h3>
+<p>Suppose treatment affects depression, depression influences adherence, and adherence mediates the treatment effect on viral suppression. Depression is then a treatment-induced confounder of the adherence-outcome relation. Standard mediation regression is biased; longitudinal g-methods or interventional effects may be required.</p>
+</section>
+<section id="precision-variables-and-instruments" class="level3">
+<h3 class="anchored" data-anchor-id="precision-variables-and-instruments">Precision variables and instruments</h3>
+<p>DAGs identify variables required for bias control but do not always dictate variables useful for precision. Distinguish a <strong>valid adjustment set</strong> from the <strong>statistically efficient set</strong> within valid options.</p>
+</section>
+<section id="unmeasured-nodes" class="level3">
+<h3 class="anchored" data-anchor-id="unmeasured-nodes">Unmeasured nodes</h3>
+<p>Do not omit a node because it was not measured. DAGs represent the causal world, not the columns available in the dataset. Mark unmeasured variables explicitly; that makes residual confounding visible rather than silently assumed away.</p>
+</section>
+<section id="dag-falsification-limits" class="level3">
+<h3 class="anchored" data-anchor-id="dag-falsification-limits">DAG falsification limits</h3>
+<p>A DAG can imply conditional independencies testable in data, but failure to reject an implication does not prove the graph is correct. Multiple graphs can be compatible with the same observed distribution.</p>
+</section>
+<section id="selection-into-measurement" class="level3">
+<h3 class="anchored" data-anchor-id="selection-into-measurement">Selection into measurement</h3>
+<p>Laboratory testing may depend on symptoms and clinician suspicion. Analysing only tested patients conditions on a post-exposure selection process. This is particularly important in diagnostic and electronic health-record studies.</p>
+</section>
+<section id="documentation-standard" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-standard">Documentation standard</h3>
+<p>Include the DAG, node definitions, temporal ordering, minimally sufficient set and rationale in the analysis plan. If the final adjustment differs from the prespecified graph, explain why.</p>
+</section>
+</section>
+<section id="advanced-synthesis-dags-are-tools-for-identification-not-decorative-figures" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="advanced-synthesis-dags-are-tools-for-identification-not-decorative-figures">ADVANCED SYNTHESIS · DAGs are tools for identification, not decorative figures</h2>
+<p>A directed acyclic graph (DAG) represents assumptions about causal relations. Its value is not visual sophistication; it forces the analyst to state which variables are causes of exposure, causes of outcome, consequences of exposure, shared causes and selection variables.</p>
+<section id="nodes-arrows-and-acyclicity" class="level3">
+<h3 class="anchored" data-anchor-id="nodes-arrows-and-acyclicity">Nodes, arrows and acyclicity</h3>
+<p>An arrow <span class="math inline">\(X\rightarrow Y\)</span> means that <span class="math inline">\(X\)</span> is assumed to be a direct cause of <span class="math inline">\(Y\)</span> relative to the graph’s level of detail. Absence of an arrow is also an assumption. A DAG cannot contain directed cycles, so feedback processes must be represented across time (for example <span class="math inline">\(L_0\rightarrow A_0\rightarrow L_1\rightarrow A_1\)</span>).</p>
+</section>
+<section id="backdoor-paths" class="level3">
+<h3 class="anchored" data-anchor-id="backdoor-paths">Backdoor paths</h3>
+<p>A backdoor path from exposure <span class="math inline">\(A\)</span> to outcome <span class="math inline">\(Y\)</span> begins with an arrow into <span class="math inline">\(A\)</span>. Such paths create non-causal association. A sufficient adjustment set blocks all open backdoor paths without blocking the causal pathway of interest or opening collider paths.</p>
+</section>
+<section id="colliders" class="level3">
+<h3 class="anchored" data-anchor-id="colliders">Colliders</h3>
+<p>If <span class="math inline">\(A\rightarrow C\leftarrow U\)</span>, <span class="math inline">\(C\)</span> is a collider. The path through <span class="math inline">\(C\)</span> is naturally blocked; conditioning on <span class="math inline">\(C\)</span> or its descendants can open an association between its causes. Hospital-based samples frequently create collider structures when both exposure and disease influence admission.</p>
+</section>
+<section id="mediators" class="level3">
+<h3 class="anchored" data-anchor-id="mediators">Mediators</h3>
+<p>If <span class="math inline">\(A\rightarrow M\rightarrow Y\)</span>, adjusting for <span class="math inline">\(M\)</span> removes part of the total effect and can introduce additional bias if mediator-outcome confounding is affected by exposure. Whether to adjust depends on whether the target is a total effect, controlled direct effect, natural/interventional direct effect or something else.</p>
+</section>
+<section id="minimal-sufficient-adjustment-sets" class="level3">
+<h3 class="anchored" data-anchor-id="minimal-sufficient-adjustment-sets">Minimal sufficient adjustment sets</h3>
+<p>There may be several sufficient sets. A minimal set blocks confounding without unnecessary variables. More adjustment is not always safer. Variables that only predict exposure can worsen positivity and precision; colliders can create bias; mediators change the estimand.</p>
+</section>
+<section id="m-bias-and-practical-judgement" class="level3">
+<h3 class="anchored" data-anchor-id="m-bias-and-practical-judgement">M-bias and practical judgement</h3>
+<p>Theoretical structures exist where adjustment for a pre-exposure variable introduces bias. In practice, concern should be proportional to plausible causal structure and effect size. DAGs do not replace substantive knowledge; they organise it.</p>
+</section>
+<section id="selection-bias-on-a-dag" class="level3">
+<h3 class="anchored" data-anchor-id="selection-bias-on-a-dag">Selection bias on a DAG</h3>
+<p>Introduce a selection node <span class="math inline">\(S\)</span> representing entry or remaining in the analysed sample. Conditioning on <span class="math inline">\(S=1\)</span> can create associations if selection is caused by exposure/outcome or their causes. Loss to follow-up, complete-case analysis and conditioning on testing can all be framed this way.</p>
+</section>
+<section id="measurement-nodes-1" class="level3">
+<h3 class="anchored" data-anchor-id="measurement-nodes-1">Measurement nodes</h3>
+<p>The recorded variable <span class="math inline">\(A^*\)</span> is not always the causal exposure <span class="math inline">\(A\)</span>. Explicitly representing measurement error can reveal pathways that ordinary adjustment diagrams omit. The same is true for outcome misclassification and mismeasured confounders.</p>
+</section>
+<section id="from-dag-to-estimand" class="level3">
+<h3 class="anchored" data-anchor-id="from-dag-to-estimand">From DAG to estimand</h3>
+<p>A DAG can identify a covariate set for total-effect estimation, but it does not choose the effect measure, time horizon or target population. Start with the estimand; use the DAG to ask whether the effect is identifiable from measured variables.</p>
+</section>
+<section id="swigs-and-counterfactual-graphs" class="level3">
+<h3 class="anchored" data-anchor-id="swigs-and-counterfactual-graphs">SWIGs and counterfactual graphs</h3>
+<p>Single-world intervention graphs (SWIGs) split treatment nodes into observed and intervened components and connect graphical assumptions directly to counterfactual independencies. They are useful for advanced identification arguments but require comfort with potential outcomes.</p>
+</section>
+<section id="worked-example" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example">Worked example</h3>
+<p>Consider socioeconomic position <span class="math inline">\(L\)</span>, vaccination <span class="math inline">\(A\)</span>, infection <span class="math inline">\(Y\)</span> and health-service use <span class="math inline">\(H\)</span>. If <span class="math inline">\(L\rightarrow A\)</span>, <span class="math inline">\(L\rightarrow H\)</span>, and <span class="math inline">\(H\rightarrow Y\)</span> through exposure opportunities or care, then <span class="math inline">\(L\)</span> and/or <span class="math inline">\(H\)</span> may be needed depending on the exact structure. If vaccination itself changes later healthcare use, post-vaccination <span class="math inline">\(H\)</span> is no longer a simple baseline confounder. Time ordering changes the adjustment strategy.</p>
+</section>
+<section id="msc-standard" class="level3">
+<h3 class="anchored" data-anchor-id="msc-standard">MSc standard</h3>
+<p>Draw a DAG from substantive knowledge, identify at least one sufficient adjustment set, explain why mediators/colliders are excluded, and translate the set into an analysis plan.</p>
+</section>
+<section id="phd-standard" class="level3">
+<h3 class="anchored" data-anchor-id="phd-standard">PhD standard</h3>
+<p>Defend missing arrows, selection mechanisms and measurement structures; consider time-indexed DAGs or SWIGs; and distinguish graphical identification from empirical estimator performance.</p>
+</section>
+</section>
+<section id="demonstrate-graduate-standard" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</h2>
+<p>Submit one short methods memo or reproducible analysis in which you <strong>name the estimand first</strong>, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-05.html">← Week 5</a></p>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-07.html">Week 7 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

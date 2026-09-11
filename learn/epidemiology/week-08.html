@@ -157,10 +157,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#learn-9-quasi-experimental-designs" id="toc-learn-9-quasi-experimental-designs" class="nav-link" data-scroll-target="#learn-9-quasi-experimental-designs">LEARN 9 · Quasi-experimental designs</a></li>
   <li><a href="#learn-10-design-does-not-compensate-for-poor-execution" id="toc-learn-10-design-does-not-compensate-for-poor-execution" class="nav-link" data-scroll-target="#learn-10-design-does-not-compensate-for-poor-execution">LEARN 10 · Design does not compensate for poor execution</a></li>
   <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
-  <li><a href="#demonstrate-week-8-mastery-quiz" id="toc-demonstrate-week-8-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-8-mastery-quiz">DEMONSTRATE · Week 8 mastery quiz</a></li>
-  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul>
 </nav>
     </div>
@@ -329,6 +325,50 @@ C. Use 24 monthly observations before and 12 after national rollout, with no con
 <li>Rank the three designs for causal strength under otherwise good execution and justify your ranking.</li>
 </ol>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-trials-estimands-and-quasi-experimental-alternatives" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-trials-estimands-and-quasi-experimental-alternatives">GRADUATE DEEPEN · Trials, estimands and quasi-experimental alternatives</h2>
+<p>Randomisation protects against confounding <strong>at assignment</strong>, but trials still require careful decisions about adherence, missing outcomes, clustering and the effect actually being estimated.</p>
+<section id="intention-to-treat-and-per-protocol-questions" class="level3">
+<h3 class="anchored" data-anchor-id="intention-to-treat-and-per-protocol-questions">Intention-to-treat and per-protocol questions</h3>
+<p>An <strong>intention-to-treat (ITT)</strong> effect compares groups according to randomised assignment regardless of subsequent adherence. It preserves the randomisation and often answers a policy question about offering or assigning an intervention.</p>
+<p>A <strong>per-protocol effect</strong> asks what would happen if participants adhered to a specified protocol. A naïve analysis that simply compares adherers with non-adherers usually destroys randomisation because adherence is itself associated with prognosis. Causal per-protocol analyses require adjustment for predictors of adherence and censoring.</p>
+</section>
+<section id="cluster-randomised-trials" class="level3">
+<h3 class="anchored" data-anchor-id="cluster-randomised-trials">Cluster-randomised trials</h3>
+<p>When schools, facilities or villages are randomised, outcomes within clusters are correlated. Sample-size calculations and analysis must account for the intracluster correlation coefficient (ICC). A large number of participants in very few clusters does not create the same information as many independent clusters.</p>
+</section>
+<section id="stepped-wedge-designs" class="level3">
+<h3 class="anchored" data-anchor-id="stepped-wedge-designs">Stepped-wedge designs</h3>
+<p>In a stepped-wedge cluster trial, clusters cross from control to intervention at different scheduled periods. The design can be attractive when phased rollout is operationally necessary, but secular time trends become inseparable from intervention rollout unless the design and analysis account for calendar time.</p>
+</section>
+<section id="difference-in-differences" class="level3">
+<h3 class="anchored" data-anchor-id="difference-in-differences">Difference-in-differences</h3>
+<p>A difference-in-differences analysis compares <strong>changes over time</strong> between intervention and comparison groups. Its central identification assumption is not that groups have equal baseline levels, but that they would have followed sufficiently similar trends in the absence of intervention.</p>
+<p>Examine pre-intervention trends and avoid treating one pre-period and one post-period as automatic proof of parallel trends.</p>
+</section>
+<section id="interrupted-time-series" class="level3">
+<h3 class="anchored" data-anchor-id="interrupted-time-series">Interrupted time series</h3>
+<p>Interrupted time series uses repeated observations before and after an intervention to estimate changes in level and/or slope. It is stronger than a simple before-after comparison because it models the pre-intervention trajectory. Threats include concurrent interventions, seasonality, autocorrelation and changes in measurement.</p>
+</section>
+<section id="regression-discontinuity-and-instrumental-variables" class="level3">
+<h3 class="anchored" data-anchor-id="regression-discontinuity-and-instrumental-variables">Regression discontinuity and instrumental variables</h3>
+<p>These designs exploit special assignment mechanisms:</p>
+<ul>
+<li><strong>Regression discontinuity</strong> uses a treatment rule based on a threshold, such as eligibility below a CD4 count cutoff.</li>
+<li><strong>Instrumental-variable methods</strong> use a variable that changes exposure but affects the outcome only through that exposure under strong assumptions.</li>
+</ul>
+<p>Both can support causal inference when assumptions are credible; neither is a shortcut around subject-matter reasoning.</p>
+</section>
+<section id="reporting-standard" class="level3">
+<h3 class="anchored" data-anchor-id="reporting-standard">Reporting standard</h3>
+<p>For randomised trials, CONSORT 2025 supersedes CONSORT 2010 and emphasises transparent reporting of design, analysis, participant flow, missing data, open-science elements and how interventions were actually delivered.</p>
+</section>
+<section id="r-laboratory" class="level3">
+<h3 class="anchored" data-anchor-id="r-laboratory">R laboratory</h3>
+<p><a href="../../learn/epidemiology/labs/lab-06-trials-quasi.html">Graduate Lab 6 — Cluster trials, difference-in-differences and interrupted time series →</a></p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <ol type="1">
@@ -364,6 +404,7 @@ The quiz is designed so that a prepared learner can read, reason and answer effi
 </section>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

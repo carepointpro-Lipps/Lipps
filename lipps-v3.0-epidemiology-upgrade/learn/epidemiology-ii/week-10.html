@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Advanced graduate epidemiology: Replace the limitations paragraph with explicit assumptions and sensitivity parameters.">
+
+<title>Epidemiology II Week 10 — Missing Data, Measurement Error and Quantitative Bias Analysis | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-bias-does-not-disappear-because-it-is-acknowledged" id="toc-orient-bias-does-not-disappear-because-it-is-acknowledged" class="nav-link" data-scroll-target="#orient-bias-does-not-disappear-because-it-is-acknowledged">ORIENT · Bias does not disappear because it is acknowledged</a></li>
+  <li><a href="#learn-1-missing-data-mechanisms" id="toc-learn-1-missing-data-mechanisms" class="nav-link" data-scroll-target="#learn-1-missing-data-mechanisms">LEARN 1 · Missing-data mechanisms</a></li>
+  <li><a href="#learn-2-complete-case-analysis" id="toc-learn-2-complete-case-analysis" class="nav-link" data-scroll-target="#learn-2-complete-case-analysis">LEARN 2 · Complete-case analysis</a></li>
+  <li><a href="#learn-3-multiple-imputation" id="toc-learn-3-multiple-imputation" class="nav-link" data-scroll-target="#learn-3-multiple-imputation">LEARN 3 · Multiple imputation</a></li>
+  <li><a href="#learn-4-misclassification" id="toc-learn-4-misclassification" class="nav-link" data-scroll-target="#learn-4-misclassification">LEARN 4 · Misclassification</a></li>
+  <li><a href="#learn-5-unmeasured-confounding" id="toc-learn-5-unmeasured-confounding" class="nav-link" data-scroll-target="#learn-5-unmeasured-confounding">LEARN 5 · Unmeasured confounding</a></li>
+  <li><a href="#learn-6-negative-controls" id="toc-learn-6-negative-controls" class="nav-link" data-scroll-target="#learn-6-negative-controls">LEARN 6 · Negative controls</a></li>
+  <li><a href="#r-lab" id="toc-r-lab" class="nav-link" data-scroll-target="#r-lab">R LAB</a></li>
+  <li><a href="#methods-workshop-turn-uncertainty-about-bias-into-numbers" id="toc-methods-workshop-turn-uncertainty-about-bias-into-numbers" class="nav-link" data-scroll-target="#methods-workshop-turn-uncertainty-about-bias-into-numbers">METHODS WORKSHOP · Turn uncertainty about bias into numbers</a>
+  <ul class="collapse">
+  <li><a href="#unmeasured-confounding-scenario" id="toc-unmeasured-confounding-scenario" class="nav-link" data-scroll-target="#unmeasured-confounding-scenario">Unmeasured confounding scenario</a></li>
+  <li><a href="#probabilistic-bias-analysis" id="toc-probabilistic-bias-analysis" class="nav-link" data-scroll-target="#probabilistic-bias-analysis">Probabilistic bias analysis</a></li>
+  <li><a href="#multiple-imputation-workflow" id="toc-multiple-imputation-workflow" class="nav-link" data-scroll-target="#multiple-imputation-workflow">Multiple imputation workflow</a></li>
+  <li><a href="#imputation-model-compatibility" id="toc-imputation-model-compatibility" class="nav-link" data-scroll-target="#imputation-model-compatibility">Imputation model compatibility</a></li>
+  <li><a href="#mnar-sensitivity" id="toc-mnar-sensitivity" class="nav-link" data-scroll-target="#mnar-sensitivity">MNAR sensitivity</a></li>
+  <li><a href="#measurement-error-in-continuous-variables" id="toc-measurement-error-in-continuous-variables" class="nav-link" data-scroll-target="#measurement-error-in-continuous-variables">Measurement error in continuous variables</a></li>
+  <li><a href="#validation-subsamples" id="toc-validation-subsamples" class="nav-link" data-scroll-target="#validation-subsamples">Validation subsamples</a></li>
+  <li><a href="#e-values-carefully" id="toc-e-values-carefully" class="nav-link" data-scroll-target="#e-values-carefully">E-values carefully</a></li>
+  <li><a href="#negative-controls" id="toc-negative-controls" class="nav-link" data-scroll-target="#negative-controls">Negative controls</a></li>
+  <li><a href="#doctoral-extension-joint-bias-analysis" id="toc-doctoral-extension-joint-bias-analysis" class="nav-link" data-scroll-target="#doctoral-extension-joint-bias-analysis">Doctoral extension · Joint bias analysis</a></li>
+  </ul></li>
+  <li><a href="#seminar-notes-bias-parameter-elicitation" id="toc-seminar-notes-bias-parameter-elicitation" class="nav-link" data-scroll-target="#seminar-notes-bias-parameter-elicitation">SEMINAR NOTES · Bias parameter elicitation</a>
+  <ul class="collapse">
+  <li><a href="#sources-for-parameters" id="toc-sources-for-parameters" class="nav-link" data-scroll-target="#sources-for-parameters">Sources for parameters</a></li>
+  <li><a href="#correlated-sensitivity-parameters" id="toc-correlated-sensitivity-parameters" class="nav-link" data-scroll-target="#correlated-sensitivity-parameters">Correlated sensitivity parameters</a></li>
+  <li><a href="#differential-misclassification" id="toc-differential-misclassification" class="nav-link" data-scroll-target="#differential-misclassification">Differential misclassification</a></li>
+  <li><a href="#selection-bias-weights" id="toc-selection-bias-weights" class="nav-link" data-scroll-target="#selection-bias-weights">Selection bias weights</a></li>
+  <li><a href="#missing-outcomes-versus-missing-confounders" id="toc-missing-outcomes-versus-missing-confounders" class="nav-link" data-scroll-target="#missing-outcomes-versus-missing-confounders">Missing outcomes versus missing confounders</a></li>
+  <li><a href="#auxiliary-variables" id="toc-auxiliary-variables" class="nav-link" data-scroll-target="#auxiliary-variables">Auxiliary variables</a></li>
+  <li><a href="#delta-adjustment" id="toc-delta-adjustment" class="nav-link" data-scroll-target="#delta-adjustment">Delta adjustment</a></li>
+  <li><a href="#bias-analysis-reporting" id="toc-bias-analysis-reporting" class="nav-link" data-scroll-target="#bias-analysis-reporting">Bias-analysis reporting</a></li>
+  </ul></li>
+  <li><a href="#advanced-synthesis-bias-analysis-turns-limitations-into-quantitative-questions" id="toc-advanced-synthesis-bias-analysis-turns-limitations-into-quantitative-questions" class="nav-link" data-scroll-target="#advanced-synthesis-bias-analysis-turns-limitations-into-quantitative-questions">ADVANCED SYNTHESIS · Bias analysis turns “limitations” into quantitative questions</a>
+  <ul class="collapse">
+  <li><a href="#missing-data-mechanisms" id="toc-missing-data-mechanisms" class="nav-link" data-scroll-target="#missing-data-mechanisms">Missing-data mechanisms</a></li>
+  <li><a href="#complete-case-analysis" id="toc-complete-case-analysis" class="nav-link" data-scroll-target="#complete-case-analysis">Complete-case analysis</a></li>
+  <li><a href="#multiple-imputation" id="toc-multiple-imputation" class="nav-link" data-scroll-target="#multiple-imputation">Multiple imputation</a></li>
+  <li><a href="#sensitivity-to-mnar" id="toc-sensitivity-to-mnar" class="nav-link" data-scroll-target="#sensitivity-to-mnar">Sensitivity to MNAR</a></li>
+  <li><a href="#measurement-error" id="toc-measurement-error" class="nav-link" data-scroll-target="#measurement-error">Measurement error</a></li>
+  <li><a href="#probabilistic-quantitative-bias-analysis" id="toc-probabilistic-quantitative-bias-analysis" class="nav-link" data-scroll-target="#probabilistic-quantitative-bias-analysis">Probabilistic quantitative bias analysis</a></li>
+  <li><a href="#unmeasured-confounding" id="toc-unmeasured-confounding" class="nav-link" data-scroll-target="#unmeasured-confounding">Unmeasured confounding</a></li>
+  <li><a href="#e-values" id="toc-e-values" class="nav-link" data-scroll-target="#e-values">E-values</a></li>
+  <li><a href="#negative-controls-1" id="toc-negative-controls-1" class="nav-link" data-scroll-target="#negative-controls-1">Negative controls</a></li>
+  <li><a href="#bias-direction-is-often-uncertain" id="toc-bias-direction-is-often-uncertain" class="nav-link" data-scroll-target="#bias-direction-is-often-uncertain">Bias direction is often uncertain</a></li>
+  <li><a href="#msc-standard" id="toc-msc-standard" class="nav-link" data-scroll-target="#msc-standard">MSc standard</a></li>
+  <li><a href="#phd-standard" id="toc-phd-standard" class="nav-link" data-scroll-target="#phd-standard">PhD standard</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-graduate-standard" id="toc-demonstrate-graduate-standard" class="nav-link" data-scroll-target="#demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY II · WEEK 10</p>
+</div>
+<section id="missing-data-measurement-error-and-quantitative-bias-analysis" class="level1">
+<h1>Missing Data, Measurement Error and Quantitative Bias Analysis</h1>
+<section id="replace-the-limitations-paragraph-with-explicit-assumptions-and-sensitivity-parameters." class="level2">
+<h2 class="anchored" data-anchor-id="replace-the-limitations-paragraph-with-explicit-assumptions-and-sensitivity-parameters.">Replace the limitations paragraph with explicit assumptions and sensitivity parameters.</h2>
+<p><span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span></p>
+</section>
+</section>
+</div>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>state the target estimand in population, strategy, outcome, time and effect-measure terms;</li>
+<li>identify the assumptions required for the week’s method;</li>
+<li>distinguish identification from estimation;</li>
+<li>select an analysis that corresponds to the scientific question;</li>
+<li>interpret absolute and relative effects with uncertainty;</li>
+<li>diagnose at least one failure mode using subject-matter reasoning;</li>
+<li>implement or outline a reproducible analysis in R; and</li>
+<li>defend what the resulting estimate can and cannot support.</li>
+</ol>
+</section>
+<section id="orient-bias-does-not-disappear-because-it-is-acknowledged" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-bias-does-not-disappear-because-it-is-acknowledged">ORIENT · Bias does not disappear because it is acknowledged</h2>
+<p>“Recall bias may have occurred” tells the reader little about the likely direction or magnitude of error. Advanced epidemiology turns missingness, misclassification and unmeasured confounding into explicit sensitivity analyses.</p>
+</section>
+<section id="learn-1-missing-data-mechanisms" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-missing-data-mechanisms">LEARN 1 · Missing-data mechanisms</h2>
+<p><strong>MCAR:</strong> missingness is unrelated to observed or unobserved data relevant to the analysis.</p>
+<p><strong>MAR:</strong> after conditioning on observed variables, missingness is independent of the missing value.</p>
+<p><strong>MNAR:</strong> missingness still depends on unobserved information after conditioning on observed data.</p>
+<p>These are modelling assumptions, not labels that software can verify conclusively.</p>
+</section>
+<section id="learn-2-complete-case-analysis" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-complete-case-analysis">LEARN 2 · Complete-case analysis</h2>
+<p>Complete-case analysis is unbiased only under particular missingness structures and can lose substantial precision. It can also change the target population to people with complete data.</p>
+<p>Always report the extent and pattern of missingness by key variables and exposure/outcome groups.</p>
+</section>
+<section id="learn-3-multiple-imputation" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-multiple-imputation">LEARN 3 · Multiple imputation</h2>
+<p>Multiple imputation draws plausible values from an imputation model, analyses each completed dataset and combines estimates using Rubin’s rules. The imputation model should include variables that predict missingness and the missing values, the outcome, exposure and analysis-model structure.</p>
+<p>Imputation cannot recover information absent from the data without assumptions. Sensitivity analyses for departures from MAR may be needed.</p>
+</section>
+<section id="learn-4-misclassification" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-misclassification">LEARN 4 · Misclassification</h2>
+<p>For binary variables, define sensitivity and specificity of classification. Non-differential misclassification does not universally bias associations toward the null, especially with multiple categories, correlated errors or adjusted analyses.</p>
+<p>Probabilistic bias analysis samples plausible misclassification parameters and propagates them into corrected effect estimates.</p>
+</section>
+<section id="learn-5-unmeasured-confounding" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-unmeasured-confounding">LEARN 5 · Unmeasured confounding</h2>
+<p>Sensitivity analysis can specify plausible associations of an unmeasured confounder with exposure and outcome, then estimate how much the observed effect could shift. E-values are one summary of the minimum confounding strength needed to explain a risk-ratio estimate under specific assumptions, but they do not replace a full bias model.</p>
+</section>
+<section id="learn-6-negative-controls" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-negative-controls">LEARN 6 · Negative controls</h2>
+<p>A negative-control outcome should not plausibly be affected by the exposure but should share similar confounding or measurement structures. A negative-control exposure should not causally affect the outcome. Unexpected associations can reveal residual bias, though null results do not prove absence of confounding.</p>
+</section>
+<section id="r-lab" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="r-lab">R LAB</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/labs/lab-06-bias.html">Advanced Lab 6 — Missing data and quantitative bias analysis →</a></p>
+</section>
+<section id="methods-workshop-turn-uncertainty-about-bias-into-numbers" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="methods-workshop-turn-uncertainty-about-bias-into-numbers">METHODS WORKSHOP · Turn uncertainty about bias into numbers</h2>
+<p>Suppose an adjusted cohort analysis estimates RR=1.80 for occupational exposure and respiratory disease.</p>
+<section id="unmeasured-confounding-scenario" class="level3">
+<h3 class="anchored" data-anchor-id="unmeasured-confounding-scenario">Unmeasured confounding scenario</h3>
+<p>Postulate an unmeasured confounder <span class="math inline">\(U\)</span> that is twice as common among exposed participants and triples disease risk. Use algebraic or simulation-based bias formulas to estimate the confounding-adjusted RR under this scenario. Repeat across plausible parameter ranges.</p>
+<p>The purpose is not to discover the “true” value but to show what combinations of bias parameters would materially change the conclusion.</p>
+</section>
+<section id="probabilistic-bias-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="probabilistic-bias-analysis">Probabilistic bias analysis</h3>
+<p>Instead of one sensitivity value, assign distributions to bias parameters, such as exposure-classification sensitivity and specificity. Draw thousands of parameter sets, correct the data under each and obtain a distribution of bias-adjusted estimates.</p>
+<p>This separates <strong>systematic uncertainty</strong> from ordinary sampling uncertainty.</p>
+</section>
+<section id="multiple-imputation-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-imputation-workflow">Multiple imputation workflow</h3>
+<ol type="1">
+<li>inspect missingness patterns;</li>
+<li>identify variables predicting missingness and missing values;</li>
+<li>include exposure, outcome and analysis-model terms;</li>
+<li>create multiple imputed datasets;</li>
+<li>fit the substantive model within each;</li>
+<li>combine estimates using Rubin’s rules;</li>
+<li>compare with complete-case and alternative assumptions.</li>
+</ol>
+</section>
+<section id="imputation-model-compatibility" class="level3">
+<h3 class="anchored" data-anchor-id="imputation-model-compatibility">Imputation model compatibility</h3>
+<p>If the analysis includes non-linear terms or interactions, the imputation model should preserve those structures. Passive imputation or substantive-model-compatible methods may be needed.</p>
+</section>
+<section id="mnar-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="mnar-sensitivity">MNAR sensitivity</h3>
+<p>Pattern-mixture models can shift imputed values by a delta representing how missing values might differ from MAR predictions. Tipping-point analyses identify how large departures from MAR must be to change a conclusion.</p>
+</section>
+<section id="measurement-error-in-continuous-variables" class="level3">
+<h3 class="anchored" data-anchor-id="measurement-error-in-continuous-variables">Measurement error in continuous variables</h3>
+<p>Classical random error in a continuous exposure often attenuates simple linear associations but can have more complicated effects in nonlinear/multivariable models. Regression calibration and simulation-extrapolation (SIMEX) are possible correction methods when validation information is available.</p>
+</section>
+<section id="validation-subsamples" class="level3">
+<h3 class="anchored" data-anchor-id="validation-subsamples">Validation subsamples</h3>
+<p>A gold-standard measure on a subset can estimate misclassification or measurement-error parameters. Two-phase methods can then correct the full analysis. Validation design should be planned, not treated as a post-hoc convenience sample.</p>
+</section>
+<section id="e-values-carefully" class="level3">
+<h3 class="anchored" data-anchor-id="e-values-carefully">E-values carefully</h3>
+<p>For ratio measures, an E-value summarises the minimum joint strength of association that an unmeasured confounder would need with exposure and outcome to explain away an effect, under assumptions. It says nothing about whether such confounding is plausible. Pair it with subject-matter bias scenarios.</p>
+</section>
+<section id="negative-controls" class="level3">
+<h3 class="anchored" data-anchor-id="negative-controls">Negative controls</h3>
+<p>If an exposure is associated with an outcome it cannot plausibly cause, residual bias is suggested. Choose controls that share the same data-generation mechanisms; an arbitrary unrelated variable is not a useful negative control.</p>
+</section>
+<section id="doctoral-extension-joint-bias-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="doctoral-extension-joint-bias-analysis">Doctoral extension · Joint bias analysis</h3>
+<p>Real studies may have confounding, selection, missingness and measurement error simultaneously. Monte Carlo bias analysis can propagate multiple bias processes, but parameter elicitation becomes the central scientific task.</p>
+</section>
+</section>
+<section id="seminar-notes-bias-parameter-elicitation" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="seminar-notes-bias-parameter-elicitation">SEMINAR NOTES · Bias parameter elicitation</h2>
+<p>Quantitative bias analysis is only as credible as its sensitivity parameters. Do not choose values solely to show robustness.</p>
+<section id="sources-for-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="sources-for-parameters">Sources for parameters</h3>
+<p>Use validation studies, repeatability studies, expert elicitation, previous literature and internal subsamples. Document why the chosen ranges are plausible in your setting.</p>
+</section>
+<section id="correlated-sensitivity-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="correlated-sensitivity-parameters">Correlated sensitivity parameters</h3>
+<p>Sensitivity and specificity may vary together by site, disease severity or instrument version. Independent draws can be unrealistic. Probabilistic bias analysis can model correlation when information permits.</p>
+</section>
+<section id="differential-misclassification" class="level3">
+<h3 class="anchored" data-anchor-id="differential-misclassification">Differential misclassification</h3>
+<p>Allow classification parameters to differ by outcome or exposure status. Differential error can produce bias in any direction and can even create an association from a null truth.</p>
+</section>
+<section id="selection-bias-weights" class="level3">
+<h3 class="anchored" data-anchor-id="selection-bias-weights">Selection bias weights</h3>
+<p>If selection probabilities can be modelled from observed data, inverse-probability-of-selection weights can target the source population. If important selection determinants are unmeasured, conduct sensitivity analysis over selection odds.</p>
+</section>
+<section id="missing-outcomes-versus-missing-confounders" class="level3">
+<h3 class="anchored" data-anchor-id="missing-outcomes-versus-missing-confounders">Missing outcomes versus missing confounders</h3>
+<p>Missing outcomes can reduce event ascertainment and create censoring problems; missing confounders affect adjustment. The same imputation strategy is not automatically appropriate for both.</p>
+</section>
+<section id="auxiliary-variables" class="level3">
+<h3 class="anchored" data-anchor-id="auxiliary-variables">Auxiliary variables</h3>
+<p>Variables not in the substantive model can improve imputation if they predict missingness or the missing value. Include them without confusing them with causal confounders.</p>
+</section>
+<section id="delta-adjustment" class="level3">
+<h3 class="anchored" data-anchor-id="delta-adjustment">Delta adjustment</h3>
+<p>After MAR imputation, shift imputed continuous values by plausible deltas or alter binary-event odds among missing records to evaluate MNAR sensitivity. Plot the causal estimate against delta to identify a tipping point.</p>
+</section>
+<section id="bias-analysis-reporting" class="level3">
+<h3 class="anchored" data-anchor-id="bias-analysis-reporting">Bias-analysis reporting</h3>
+<p>Report both conventional and bias-adjusted estimates, parameter ranges/distributions, data sources for parameters and which biases were not modelled. Quantitative sensitivity analysis should increase transparency, not create false certainty.</p>
+</section>
+</section>
+<section id="advanced-synthesis-bias-analysis-turns-limitations-into-quantitative-questions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="advanced-synthesis-bias-analysis-turns-limitations-into-quantitative-questions">ADVANCED SYNTHESIS · Bias analysis turns “limitations” into quantitative questions</h2>
+<p>A mature epidemiological analysis asks not only whether bias is possible, but <strong>how large and in what direction the bias would need to be to change the conclusion</strong>.</p>
+<section id="missing-data-mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="missing-data-mechanisms">Missing-data mechanisms</h3>
+<p>Let <span class="math inline">\(R\)</span> indicate whether a value is observed. Under MCAR, missingness is independent of observed and unobserved data. Under MAR, missingness may depend on observed variables but not the missing value after conditioning. Under MNAR, missingness still depends on the unobserved value or related unmeasured information.</p>
+<p>These labels are assumptions about the data-generating process, not testable categories assigned by software.</p>
+</section>
+<section id="complete-case-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="complete-case-analysis">Complete-case analysis</h3>
+<p>Complete-case estimates can be unbiased under conditions weaker than MCAR for some regression parameters, but the target population changes and precision is lost. Draw the missingness mechanism and ask whether conditioning on complete observation creates selection bias.</p>
+</section>
+<section id="multiple-imputation" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-imputation">Multiple imputation</h3>
+<p>Multiple imputation creates repeated plausible values from an imputation model, analyses each completed dataset and pools estimates using Rubin’s rules. The imputation model should include outcome, exposure, confounders, auxiliary predictors of missingness and nonlinear/interacting terms needed by the analysis.</p>
+</section>
+<section id="sensitivity-to-mnar" class="level3">
+<h3 class="anchored" data-anchor-id="sensitivity-to-mnar">Sensitivity to MNAR</h3>
+<p>Pattern-mixture models, selection models or delta adjustments can evaluate departures from MAR. Report conclusions across clinically plausible departures rather than presenting MAR as certain.</p>
+</section>
+<section id="measurement-error" class="level3">
+<h3 class="anchored" data-anchor-id="measurement-error">Measurement error</h3>
+<p>For binary exposure/outcome, describe sensitivity and specificity of classification and whether errors differ by true outcome/exposure status. Nondifferential misclassification does <strong>not</strong> universally bias toward the null, particularly with multi-category variables or correlated errors.</p>
+<p>For continuous variables, classical random measurement error in an exposure often attenuates linear-regression slopes, but more complex settings behave differently. Regression calibration, validation subsamples and SIMEX are possible correction approaches.</p>
+</section>
+<section id="probabilistic-quantitative-bias-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="probabilistic-quantitative-bias-analysis">Probabilistic quantitative bias analysis</h3>
+<p>Assign probability distributions to bias parameters rather than single values, repeatedly correct the observed data, and obtain a distribution of bias-adjusted effects. This separates systematic-error uncertainty from ordinary sampling uncertainty.</p>
+</section>
+<section id="unmeasured-confounding" class="level3">
+<h3 class="anchored" data-anchor-id="unmeasured-confounding">Unmeasured confounding</h3>
+<p>A simple bias factor for a binary unmeasured confounder depends on its prevalence imbalance across exposure groups and its association with outcome. More realistic QBA uses external data or elicited distributions. The point is to quantify what confounding structure would be required to explain the association.</p>
+</section>
+<section id="e-values" class="level3">
+<h3 class="anchored" data-anchor-id="e-values">E-values</h3>
+<p>E-values summarise the minimum strength of association that an unmeasured confounder would need with both exposure and outcome, conditional on measured covariates, to explain away a risk-ratio association. They are one sensitivity metric, not proof of robustness, and do not address selection or measurement bias.</p>
+</section>
+<section id="negative-controls-1" class="level3">
+<h3 class="anchored" data-anchor-id="negative-controls-1">Negative controls</h3>
+<p>A negative-control outcome should not plausibly be affected by exposure but may share confounding pathways; a negative-control exposure should not causally affect the outcome but may share bias structures. Unexpected associations can reveal residual bias, although null controls cannot prove absence of bias.</p>
+</section>
+<section id="bias-direction-is-often-uncertain" class="level3">
+<h3 class="anchored" data-anchor-id="bias-direction-is-often-uncertain">Bias direction is often uncertain</h3>
+<p>Selection, confounding and misclassification can interact. Avoid ritual statements such as “bias was toward the null” unless justified. Construct a causal/bias diagram and specify plausible parameter ranges.</p>
+</section>
+<section id="msc-standard" class="level3">
+<h3 class="anchored" data-anchor-id="msc-standard">MSc standard</h3>
+<p>Perform multiple imputation under MAR and at least one deterministic sensitivity analysis for misclassification or unmeasured confounding.</p>
+</section>
+<section id="phd-standard" class="level3">
+<h3 class="anchored" data-anchor-id="phd-standard">PhD standard</h3>
+<p>Develop a probabilistic QBA, justify bias-parameter distributions from external evidence, examine joint biases, and show whether inferential conclusions are robust to credible systematic-error scenarios.</p>
+</section>
+</section>
+<section id="demonstrate-graduate-standard" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</h2>
+<p>Submit one short methods memo or reproducible analysis in which you <strong>name the estimand first</strong>, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-09.html">← Week 9</a></p>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-11.html">Week 11 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

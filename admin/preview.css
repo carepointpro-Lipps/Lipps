@@ -1,0 +1,12 @@
+
+:root{--ink:#1b1a17;--paper:#fffdf8;--ivory:#f4efe4;--ochre:#a9671e;--stone:#6f695f;--rule:#ded6c8}
+html,body{background:var(--ivory);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0}
+.lipps-preview{max-width:920px;margin:34px auto 70px;background:var(--paper);border:1px solid var(--rule);box-shadow:0 18px 60px rgba(53,43,27,.08)}
+.lp-header{padding:64px 64px 42px;border-bottom:1px solid var(--rule)}
+.lp-kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--ochre)}
+.lp-header h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(36px,6vw,62px);line-height:1.02;letter-spacing:-.035em;margin:14px 0 18px;max-width:800px}
+.lp-deck{font-family:Georgia,"Times New Roman",serif;font-size:21px;line-height:1.5;color:#4f4a42;max-width:730px}
+.lp-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;font-size:12px;color:var(--stone)}
+.lp-meta span{border:1px solid var(--rule);border-radius:999px;padding:7px 11px;background:#faf6ed}.lp-status{text-transform:uppercase;font-weight:800;letter-spacing:.07em}
+.lp-body{padding:48px 64px 64px;font-size:17px;line-height:1.72}.lp-body h1,.lp-body h2,.lp-body h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.02em;line-height:1.15}.lp-body h2{font-size:31px;margin-top:2em;border-top:1px solid var(--rule);padding-top:.85em}.lp-body h3{font-size:23px;margin-top:1.7em}.lp-body a{color:#7b4b16;text-decoration-thickness:1px;text-underline-offset:3px}.lp-body blockquote{margin:28px 0;padding:20px 24px;border-left:4px solid var(--ochre);background:#f8f1e5;color:#4c463e}.lp-body table{width:100%;border-collapse:collapse;font-size:14px}.lp-body th,.lp-body td{padding:10px;border-bottom:1px solid var(--rule);text-align:left}.lp-body code{background:#eee8dd;border-radius:5px;padding:.1em .3em}.lp-body pre{overflow:auto;background:#1d1c19;color:#f7f3e9;border-radius:10px;padding:18px}.lp-footer{padding:24px 64px;border-top:1px solid var(--rule);font-family:Georgia,serif;font-style:italic;color:var(--stone)}
+@media(max-width:700px){.lipps-preview{margin:0;border:0}.lp-header,.lp-body,.lp-footer{padding-left:24px;padding-right:24px}.lp-header{padding-top:38px}}

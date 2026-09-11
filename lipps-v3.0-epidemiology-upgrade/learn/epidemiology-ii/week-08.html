@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Advanced graduate epidemiology: When prior treatment changes future confounders, standard regression can adjust away part of the effect.">
+
+<title>Epidemiology II Week 8 — Time-varying Treatment and Confounding | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-treatment-confounder-feedback" id="toc-orient-treatment-confounder-feedback" class="nav-link" data-scroll-target="#orient-treatment-confounder-feedback">ORIENT · Treatment-confounder feedback</a></li>
+  <li><a href="#learn-1-longitudinal-treatment-strategies" id="toc-learn-1-longitudinal-treatment-strategies" class="nav-link" data-scroll-target="#learn-1-longitudinal-treatment-strategies">LEARN 1 · Longitudinal treatment strategies</a></li>
+  <li><a href="#learn-2-sequential-exchangeability" id="toc-learn-2-sequential-exchangeability" class="nav-link" data-scroll-target="#learn-2-sequential-exchangeability">LEARN 2 · Sequential exchangeability</a></li>
+  <li><a href="#learn-3-marginal-structural-models" id="toc-learn-3-marginal-structural-models" class="nav-link" data-scroll-target="#learn-3-marginal-structural-models">LEARN 3 · Marginal structural models</a></li>
+  <li><a href="#learn-4-diagnostics" id="toc-learn-4-diagnostics" class="nav-link" data-scroll-target="#learn-4-diagnostics">LEARN 4 · Diagnostics</a></li>
+  <li><a href="#learn-5-cloning-censoring-and-weighting" id="toc-learn-5-cloning-censoring-and-weighting" class="nav-link" data-scroll-target="#learn-5-cloning-censoring-and-weighting">LEARN 5 · Cloning, censoring and weighting</a></li>
+  <li><a href="#phd-extension" id="toc-phd-extension" class="nav-link" data-scroll-target="#phd-extension">PHD EXTENSION</a></li>
+  <li><a href="#r-lab" id="toc-r-lab" class="nav-link" data-scroll-target="#r-lab">R LAB</a></li>
+  <li><a href="#methods-workshop-construct-longitudinal-weights-without-hiding-instability" id="toc-methods-workshop-construct-longitudinal-weights-without-hiding-instability" class="nav-link" data-scroll-target="#methods-workshop-construct-longitudinal-weights-without-hiding-instability">METHODS WORKSHOP · Construct longitudinal weights without hiding instability</a>
+  <ul class="collapse">
+  <li><a href="#long-format" id="toc-long-format" class="nav-link" data-scroll-target="#long-format">Long format</a></li>
+  <li><a href="#denominator-treatment-model" id="toc-denominator-treatment-model" class="nav-link" data-scroll-target="#denominator-treatment-model">Denominator treatment model</a></li>
+  <li><a href="#numerator-treatment-model" id="toc-numerator-treatment-model" class="nav-link" data-scroll-target="#numerator-treatment-model">Numerator treatment model</a></li>
+  <li><a href="#censoring-weights" id="toc-censoring-weights" class="nav-link" data-scroll-target="#censoring-weights">Censoring weights</a></li>
+  <li><a href="#positivity-diagnostics-over-time" id="toc-positivity-diagnostics-over-time" class="nav-link" data-scroll-target="#positivity-diagnostics-over-time">Positivity diagnostics over time</a></li>
+  <li><a href="#weight-truncation" id="toc-weight-truncation" class="nav-link" data-scroll-target="#weight-truncation">Weight truncation</a></li>
+  <li><a href="#marginal-structural-model" id="toc-marginal-structural-model" class="nav-link" data-scroll-target="#marginal-structural-model">Marginal structural model</a></li>
+  <li><a href="#artificial-censoring" id="toc-artificial-censoring" class="nav-link" data-scroll-target="#artificial-censoring">Artificial censoring</a></li>
+  <li><a href="#grace-period-example" id="toc-grace-period-example" class="nav-link" data-scroll-target="#grace-period-example">Grace-period example</a></li>
+  <li><a href="#doctoral-extension-parametric-g-formula" id="toc-doctoral-extension-parametric-g-formula" class="nav-link" data-scroll-target="#doctoral-extension-parametric-g-formula">Doctoral extension · Parametric g-formula</a></li>
+  <li><a href="#research-discipline" id="toc-research-discipline" class="nav-link" data-scroll-target="#research-discipline">Research discipline</a></li>
+  </ul></li>
+  <li><a href="#seminar-notes-data-requirements-for-longitudinal-causal-inference" id="toc-seminar-notes-data-requirements-for-longitudinal-causal-inference" class="nav-link" data-scroll-target="#seminar-notes-data-requirements-for-longitudinal-causal-inference">SEMINAR NOTES · Data requirements for longitudinal causal inference</a>
+  <ul class="collapse">
+  <li><a href="#measurement-interval" id="toc-measurement-interval" class="nav-link" data-scroll-target="#measurement-interval">Measurement interval</a></li>
+  <li><a href="#time-varying-confounder-measurement" id="toc-time-varying-confounder-measurement" class="nav-link" data-scroll-target="#time-varying-confounder-measurement">Time-varying confounder measurement</a></li>
+  <li><a href="#weight-model-specification" id="toc-weight-model-specification" class="nav-link" data-scroll-target="#weight-model-specification">Weight-model specification</a></li>
+  <li><a href="#censoring-due-to-death" id="toc-censoring-due-to-death" class="nav-link" data-scroll-target="#censoring-due-to-death">Censoring due to death</a></li>
+  <li><a href="#artificial-censoring-and-adherence" id="toc-artificial-censoring-and-adherence" class="nav-link" data-scroll-target="#artificial-censoring-and-adherence">Artificial censoring and adherence</a></li>
+  <li><a href="#weight-explosion" id="toc-weight-explosion" class="nav-link" data-scroll-target="#weight-explosion">Weight explosion</a></li>
+  <li><a href="#simulation-as-a-design-tool" id="toc-simulation-as-a-design-tool" class="nav-link" data-scroll-target="#simulation-as-a-design-tool">Simulation as a design tool</a></li>
+  </ul></li>
+  <li><a href="#advanced-synthesis-longitudinal-causal-inference-is-about-treatment-confounder-feedback" id="toc-advanced-synthesis-longitudinal-causal-inference-is-about-treatment-confounder-feedback" class="nav-link" data-scroll-target="#advanced-synthesis-longitudinal-causal-inference-is-about-treatment-confounder-feedback">ADVANCED SYNTHESIS · Longitudinal causal inference is about treatment-confounder feedback</a>
+  <ul class="collapse">
+  <li><a href="#longitudinal-notation" id="toc-longitudinal-notation" class="nav-link" data-scroll-target="#longitudinal-notation">Longitudinal notation</a></li>
+  <li><a href="#sequential-exchangeability" id="toc-sequential-exchangeability" class="nav-link" data-scroll-target="#sequential-exchangeability">Sequential exchangeability</a></li>
+  <li><a href="#why-standard-time-updated-regression-can-fail" id="toc-why-standard-time-updated-regression-can-fail" class="nav-link" data-scroll-target="#why-standard-time-updated-regression-can-fail">Why standard time-updated regression can fail</a></li>
+  <li><a href="#marginal-structural-models" id="toc-marginal-structural-models" class="nav-link" data-scroll-target="#marginal-structural-models">Marginal structural models</a></li>
+  <li><a href="#weight-instability-over-time" id="toc-weight-instability-over-time" class="nav-link" data-scroll-target="#weight-instability-over-time">Weight instability over time</a></li>
+  <li><a href="#parametric-g-formula" id="toc-parametric-g-formula" class="nav-link" data-scroll-target="#parametric-g-formula">Parametric g-formula</a></li>
+  <li><a href="#structural-nested-models-and-g-estimation" id="toc-structural-nested-models-and-g-estimation" class="nav-link" data-scroll-target="#structural-nested-models-and-g-estimation">Structural nested models and g-estimation</a></li>
+  <li><a href="#cloning-censoring-and-weighting" id="toc-cloning-censoring-and-weighting" class="nav-link" data-scroll-target="#cloning-censoring-and-weighting">Cloning, censoring and weighting</a></li>
+  <li><a href="#grace-periods" id="toc-grace-periods" class="nav-link" data-scroll-target="#grace-periods">Grace periods</a></li>
+  <li><a href="#time-varying-effect-modification" id="toc-time-varying-effect-modification" class="nav-link" data-scroll-target="#time-varying-effect-modification">Time-varying effect modification</a></li>
+  <li><a href="#msc-standard" id="toc-msc-standard" class="nav-link" data-scroll-target="#msc-standard">MSc standard</a></li>
+  <li><a href="#phd-standard" id="toc-phd-standard" class="nav-link" data-scroll-target="#phd-standard">PhD standard</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-graduate-standard" id="toc-demonstrate-graduate-standard" class="nav-link" data-scroll-target="#demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY II · WEEK 08</p>
+</div>
+<section id="time-varying-treatment-and-confounding" class="level1">
+<h1>Time-varying Treatment and Confounding</h1>
+<section id="when-prior-treatment-changes-future-confounders-standard-regression-can-adjust-away-part-of-the-effect." class="level2">
+<h2 class="anchored" data-anchor-id="when-prior-treatment-changes-future-confounders-standard-regression-can-adjust-away-part-of-the-effect.">When prior treatment changes future confounders, standard regression can adjust away part of the effect.</h2>
+<p><span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span></p>
+</section>
+</section>
+</div>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>state the target estimand in population, strategy, outcome, time and effect-measure terms;</li>
+<li>identify the assumptions required for the week’s method;</li>
+<li>distinguish identification from estimation;</li>
+<li>select an analysis that corresponds to the scientific question;</li>
+<li>interpret absolute and relative effects with uncertainty;</li>
+<li>diagnose at least one failure mode using subject-matter reasoning;</li>
+<li>implement or outline a reproducible analysis in R; and</li>
+<li>defend what the resulting estimate can and cannot support.</li>
+</ol>
+</section>
+<section id="orient-treatment-confounder-feedback" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-treatment-confounder-feedback">ORIENT · Treatment-confounder feedback</h2>
+<p>Consider ART adherence measured monthly. Prior adherence improves viral load; viral load predicts future adherence and mortality. Viral load is therefore both a predictor of subsequent treatment and a consequence of prior treatment.</p>
+<p>A conventional model that adjusts for current viral load can block part of the prior treatment effect while trying to control confounding of later treatment.</p>
+</section>
+<section id="learn-1-longitudinal-treatment-strategies" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-longitudinal-treatment-strategies">LEARN 1 · Longitudinal treatment strategies</h2>
+<p>The estimand may compare sustained strategies such as “remain ≥95% adherent each month” versus “remain &lt;95% adherent.” A strategy must define what happens over time, not just baseline exposure.</p>
+<p>Time-varying regimes can also be dynamic: initiate treatment when a biomarker crosses a threshold rather than at a fixed calendar time.</p>
+</section>
+<section id="learn-2-sequential-exchangeability" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-sequential-exchangeability">LEARN 2 · Sequential exchangeability</h2>
+<p>Longitudinal causal inference requires exchangeability at each treatment decision conditional on prior measured history. This is stronger than baseline adjustment because all important time-varying determinants of subsequent treatment and outcome must be measured appropriately.</p>
+</section>
+<section id="learn-3-marginal-structural-models" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-marginal-structural-models">LEARN 3 · Marginal structural models</h2>
+<p>Inverse-probability weights can reweight each observed treatment history by the inverse probability of receiving that history given past covariates. The weighted pseudo-population aims to break the association between time-varying confounders and subsequent treatment while preserving pathways from earlier treatment through those confounders.</p>
+<p>A simple stabilised treatment weight is a product over time:</p>
+<p><span class="math display">\[SW_i=\prod_t \frac{P(A_t\mid \bar A_{t-1})}{P(A_t\mid \bar A_{t-1},\bar L_t)}.\]</span></p>
+<p>Censoring weights can be multiplied in when loss to follow-up is informative conditional on measured history.</p>
+</section>
+<section id="learn-4-diagnostics" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-diagnostics">LEARN 4 · Diagnostics</h2>
+<p>Longitudinal weights can become extremely variable. Examine weight distributions, means, tails, positivity by time, effective sample size and sensitivity to truncation.</p>
+<p>A model that converges is not evidence that the weighted population is credible.</p>
+</section>
+<section id="learn-5-cloning-censoring-and-weighting" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-cloning-censoring-and-weighting">LEARN 5 · Cloning, censoring and weighting</h2>
+<p>When sustained strategies are indistinguishable at baseline, one target-trial emulation approach clones eligible individuals into each strategy, censors a clone when it deviates from that strategy, and weights to adjust for informative artificial censoring.</p>
+<p>This approach makes treatment strategies explicit but depends heavily on data granularity and measured time-varying confounding.</p>
+</section>
+<section id="phd-extension" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="phd-extension">PHD EXTENSION</h2>
+<p>The parametric longitudinal g-formula and structural nested models are alternative g-methods. Understanding why ordinary conditioning fails in treatment-confounder feedback is more important than memorising one estimator.</p>
+</section>
+<section id="r-lab" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="r-lab">R LAB</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/labs/lab-05-msm.html">Advanced Lab 5 — Time-varying treatment and marginal structural weighting →</a></p>
+</section>
+<section id="methods-workshop-construct-longitudinal-weights-without-hiding-instability" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="methods-workshop-construct-longitudinal-weights-without-hiding-instability">METHODS WORKSHOP · Construct longitudinal weights without hiding instability</h2>
+<p>Suppose patients are observed monthly for six months with adherence <span class="math inline">\(A_t\)</span>, viral load <span class="math inline">\(L_t\)</span> and death <span class="math inline">\(Y\)</span>. Prior adherence affects future viral load, and viral load affects subsequent adherence.</p>
+<section id="long-format" class="level3">
+<h3 class="anchored" data-anchor-id="long-format">Long format</h3>
+<p>Each participant contributes one row per decision time with baseline covariates, prior treatment history, current time-varying covariates, current treatment and censoring status.</p>
+</section>
+<section id="denominator-treatment-model" class="level3">
+<h3 class="anchored" data-anchor-id="denominator-treatment-model">Denominator treatment model</h3>
+<p>Estimate the probability of observed treatment given full measured history:</p>
+<p><span class="math display">\[P(A_t\mid \bar A_{t-1}, \bar L_t, V).\]</span></p>
+</section>
+<section id="numerator-treatment-model" class="level3">
+<h3 class="anchored" data-anchor-id="numerator-treatment-model">Numerator treatment model</h3>
+<p>For stabilised weights, estimate a reduced probability often conditional on baseline variables and prior treatment:</p>
+<p><span class="math display">\[P(A_t\mid \bar A_{t-1}, V).\]</span></p>
+<p>Multiply numerator/denominator ratios over time.</p>
+</section>
+<section id="censoring-weights" class="level3">
+<h3 class="anchored" data-anchor-id="censoring-weights">Censoring weights</h3>
+<p>Similarly estimate the probability of remaining uncensored. Multiply treatment and censoring weights to create a pseudo-population where treatment/censoring are independent of measured time-varying prognostic factors conditional on the model.</p>
+</section>
+<section id="positivity-diagnostics-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="positivity-diagnostics-over-time">Positivity diagnostics over time</h3>
+<p>A treatment strategy may be feasible at baseline but impossible later for certain histories. For example, severely ill patients may always intensify treatment. Inspect predicted treatment probabilities at each time and by clinically important histories.</p>
+</section>
+<section id="weight-truncation" class="level3">
+<h3 class="anchored" data-anchor-id="weight-truncation">Weight truncation</h3>
+<p>Truncating weights at the 1st/99th percentiles can reduce variance but introduces bias and changes the effective target. Report untruncated and several truncation thresholds as sensitivity analyses.</p>
+</section>
+<section id="marginal-structural-model" class="level3">
+<h3 class="anchored" data-anchor-id="marginal-structural-model">Marginal structural model</h3>
+<p>A weighted pooled logistic model can approximate a discrete-time hazard model and estimate survival under treatment histories. The MSM should represent the causal contrast of interest; it is not simply the model used to calculate weights.</p>
+</section>
+<section id="artificial-censoring" class="level3">
+<h3 class="anchored" data-anchor-id="artificial-censoring">Artificial censoring</h3>
+<p>For sustained strategy comparisons, participants can be censored when their observed history deviates from the strategy. This censoring is informative by construction, so censoring weights are essential.</p>
+</section>
+<section id="grace-period-example" class="level3">
+<h3 class="anchored" data-anchor-id="grace-period-example">Grace-period example</h3>
+<p>Compare “initiate therapy within 30 days” versus “do not initiate within 30 days.” At baseline, both strategies can be compatible with the same observed patient. Cloning assigns a copy to each strategy, then copies are censored when their data become incompatible. Weighted follow-up approximates randomised assignment to dynamic strategies under assumptions.</p>
+</section>
+<section id="doctoral-extension-parametric-g-formula" class="level3">
+<h3 class="anchored" data-anchor-id="doctoral-extension-parametric-g-formula">Doctoral extension · Parametric g-formula</h3>
+<p>Instead of weighting, model the full longitudinal data process, simulate covariate and outcome trajectories under each intervention, and average outcomes. This requires models for time-varying covariates and outcomes and can be sensitive to cumulative model misspecification.</p>
+</section>
+<section id="research-discipline" class="level3">
+<h3 class="anchored" data-anchor-id="research-discipline">Research discipline</h3>
+<p>Longitudinal causal analyses should include a timeline diagram. If readers cannot see when covariates, treatment, censoring and outcomes occur, they cannot assess the identification strategy.</p>
+</section>
+</section>
+<section id="seminar-notes-data-requirements-for-longitudinal-causal-inference" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="seminar-notes-data-requirements-for-longitudinal-causal-inference">SEMINAR NOTES · Data requirements for longitudinal causal inference</h2>
+<p>Longitudinal g-methods fail when the data are too coarse to represent treatment decisions. Monthly treatment data paired with annual confounder measurements may not capture the temporal ordering needed for sequential exchangeability.</p>
+<section id="measurement-interval" class="level3">
+<h3 class="anchored" data-anchor-id="measurement-interval">Measurement interval</h3>
+<p>Choose intervals short enough that treatment, confounders and outcomes can be ordered. If adherence changes weekly but viral load is measured every six months, the analysis must acknowledge substantial latent history.</p>
+</section>
+<section id="time-varying-confounder-measurement" class="level3">
+<h3 class="anchored" data-anchor-id="time-varying-confounder-measurement">Time-varying confounder measurement</h3>
+<p>Variables used in treatment models should be measured before the treatment decision they predict. Using a lab value recorded after dispensing can accidentally adjust for a treatment consequence.</p>
+</section>
+<section id="weight-model-specification" class="level3">
+<h3 class="anchored" data-anchor-id="weight-model-specification">Weight-model specification</h3>
+<p>Include flexible time functions, prior treatment and relevant interactions. Fit separate models by time when treatment mechanisms change sharply, or include treatment-time interactions.</p>
+</section>
+<section id="censoring-due-to-death" class="level3">
+<h3 class="anchored" data-anchor-id="censoring-due-to-death">Censoring due to death</h3>
+<p>Death may be an outcome, competing event or censoring event depending on the estimand. Do not mechanically create inverse-probability censoring weights for death without defining the hypothetical intervention that makes death censorable.</p>
+</section>
+<section id="artificial-censoring-and-adherence" class="level3">
+<h3 class="anchored" data-anchor-id="artificial-censoring-and-adherence">Artificial censoring and adherence</h3>
+<p>In per-protocol analyses, censor participants when they deviate from the assigned strategy. This creates informative censoring because deviation is related to prognosis; censoring weights attempt to restore comparability.</p>
+</section>
+<section id="weight-explosion" class="level3">
+<h3 class="anchored" data-anchor-id="weight-explosion">Weight explosion</h3>
+<p>Products of many probabilities can generate extreme longitudinal weights. Stabilisation, truncation and strategy simplification can help. If positivity is fundamentally absent, redefine the question.</p>
+</section>
+<section id="simulation-as-a-design-tool" class="level3">
+<h3 class="anchored" data-anchor-id="simulation-as-a-design-tool">Simulation as a design tool</h3>
+<p>Before analysing real data, simulate a simplified longitudinal process with known treatment effects and confounding. Verify that your code recovers the known effect under correct models and fails in expected ways under misspecification. This is excellent doctoral practice.</p>
+</section>
+</section>
+<section id="advanced-synthesis-longitudinal-causal-inference-is-about-treatment-confounder-feedback" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="advanced-synthesis-longitudinal-causal-inference-is-about-treatment-confounder-feedback">ADVANCED SYNTHESIS · Longitudinal causal inference is about treatment-confounder feedback</h2>
+<p>The hardest longitudinal problem occurs when a time-varying variable both predicts future treatment and predicts outcome <strong>and has itself been affected by earlier treatment</strong>. Standard regression adjustment can then block part of the treatment effect or induce selection bias.</p>
+<section id="longitudinal-notation" class="level3">
+<h3 class="anchored" data-anchor-id="longitudinal-notation">Longitudinal notation</h3>
+<p>Let <span class="math inline">\(A_t\)</span> denote treatment at time <span class="math inline">\(t\)</span>, <span class="math inline">\(L_t\)</span> time-varying covariates and <span class="math inline">\(Y\)</span> the final outcome. A treatment history is <span class="math inline">\(\bar A_t=(A_0,\ldots,A_t)\)</span> and covariate history is <span class="math inline">\(\bar L_t\)</span>. A sustained strategy might be “treat at every visit while eligible” or a dynamic rule such as “initiate treatment when CD4 &lt; 350.”</p>
+</section>
+<section id="sequential-exchangeability" class="level3">
+<h3 class="anchored" data-anchor-id="sequential-exchangeability">Sequential exchangeability</h3>
+<p>Longitudinal identification requires that, at each time, treatment assignment is conditionally exchangeable given measured history:</p>
+<p><span class="math display">\[Y^{\bar a}\perp A_t\mid \bar A_{t-1},\bar L_t.\]</span></p>
+<p>This is stronger than baseline exchangeability because confounders must be adequately measured over time.</p>
+</section>
+<section id="why-standard-time-updated-regression-can-fail" class="level3">
+<h3 class="anchored" data-anchor-id="why-standard-time-updated-regression-can-fail">Why standard time-updated regression can fail</h3>
+<p>Suppose earlier ART improves CD4 count, CD4 predicts later ART continuation, and CD4 also predicts mortality. Adjusting for current CD4 in an ordinary outcome model conditions on a mediator of earlier ART while trying to control confounding of later ART. This mixes two roles and can bias sustained-treatment effects.</p>
+</section>
+<section id="marginal-structural-models" class="level3">
+<h3 class="anchored" data-anchor-id="marginal-structural-models">Marginal structural models</h3>
+<p>Inverse-probability treatment weights create a pseudo-population in which treatment history is independent of measured time-varying confounder history. A stabilised weight is the product of treatment probabilities across visits, with simpler history in the numerator and full confounder history in the denominator.</p>
+<p><span class="math display">\[SW_i=\prod_t \frac{P(A_t\mid \bar A_{t-1},L_0)}{P(A_t\mid \bar A_{t-1},\bar L_t)}.\]</span></p>
+<p>Censoring weights can be multiplied in when loss to follow-up is informative under measured history.</p>
+</section>
+<section id="weight-instability-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="weight-instability-over-time">Weight instability over time</h3>
+<p>Products of probabilities generate more extreme weights as follow-up grows. Diagnose weights at each interval and cumulatively. Consider model flexibility, pooling sparse treatment categories, redefining strategies or restricting the target population before resorting to arbitrary truncation.</p>
+</section>
+<section id="parametric-g-formula" class="level3">
+<h3 class="anchored" data-anchor-id="parametric-g-formula">Parametric g-formula</h3>
+<p>The longitudinal g-formula models the joint evolution of time-varying covariates and outcome, then simulates outcomes under specified treatment strategies. It is powerful for dynamic regimes but depends on correct models for multiple components of the data-generating process.</p>
+</section>
+<section id="structural-nested-models-and-g-estimation" class="level3">
+<h3 class="anchored" data-anchor-id="structural-nested-models-and-g-estimation">Structural nested models and g-estimation</h3>
+<p>Structural nested models parameterise causal effects of treatment “blips” over time and use g-estimation to exploit treatment-assignment models. They are less commonly taught operationally but are important in the theory of time-varying treatment.</p>
+</section>
+<section id="cloning-censoring-and-weighting" class="level3">
+<h3 class="anchored" data-anchor-id="cloning-censoring-and-weighting">Cloning, censoring and weighting</h3>
+<p>For strategies defined by future adherence (for example “initiate within 30 days” versus “do not initiate”), each person may initially be compatible with multiple strategies. Clone records into each compatible strategy, censor a clone when observed behaviour deviates, and weight for that artificial censoring. This is widely used in target-trial emulations of sustained strategies.</p>
+</section>
+<section id="grace-periods" class="level3">
+<h3 class="anchored" data-anchor-id="grace-periods">Grace periods</h3>
+<p>A treatment strategy may permit initiation within a window. Naïvely classifying people based on whether they initiate during the window creates immortal-time bias. Proper emulation treats strategy assignment and follow-up carefully, often using cloning/censoring/weighting or sequential trials.</p>
+</section>
+<section id="time-varying-effect-modification" class="level3">
+<h3 class="anchored" data-anchor-id="time-varying-effect-modification">Time-varying effect modification</h3>
+<p>Treatment effects may differ by evolving disease state. Dynamic treatment regimes make such state-dependence explicit. The scientific question becomes: which treatment rule performs best for which evolving history?</p>
+</section>
+<section id="msc-standard" class="level3">
+<h3 class="anchored" data-anchor-id="msc-standard">MSc standard</h3>
+<p>Recognise treatment-confounder feedback, build a person-period dataset, estimate stabilised weights and fit a simple marginal structural model.</p>
+</section>
+<section id="phd-standard" class="level3">
+<h3 class="anchored" data-anchor-id="phd-standard">PhD standard</h3>
+<p>Formally state sequential exchangeability and positivity, evaluate dynamic interventions, use longitudinal g-formula or MSMs appropriately, and justify handling of grace periods, artificial censoring and competing events.</p>
+</section>
+</section>
+<section id="demonstrate-graduate-standard" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</h2>
+<p>Submit one short methods memo or reproducible analysis in which you <strong>name the estimand first</strong>, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-07.html">← Week 7</a></p>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-09.html">Week 9 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Advanced graduate epidemiology: Control sampling is part of the estimator, not a recruitment detail.">
+
+<title>Epidemiology II Week 4 — Advanced Case-Control Methods | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-the-case-control-odds-ratio-has-several-possible-targets" id="toc-orient-the-case-control-odds-ratio-has-several-possible-targets" class="nav-link" data-scroll-target="#orient-the-case-control-odds-ratio-has-several-possible-targets">ORIENT · The case-control odds ratio has several possible targets</a></li>
+  <li><a href="#learn-1-incidence-density-sampling" id="toc-learn-1-incidence-density-sampling" class="nav-link" data-scroll-target="#learn-1-incidence-density-sampling">LEARN 1 · Incidence-density sampling</a></li>
+  <li><a href="#learn-2-cumulative-incidence-sampling" id="toc-learn-2-cumulative-incidence-sampling" class="nav-link" data-scroll-target="#learn-2-cumulative-incidence-sampling">LEARN 2 · Cumulative-incidence sampling</a></li>
+  <li><a href="#learn-3-matching-and-conditional-logistic-regression" id="toc-learn-3-matching-and-conditional-logistic-regression" class="nav-link" data-scroll-target="#learn-3-matching-and-conditional-logistic-regression">LEARN 3 · Matching and conditional logistic regression</a></li>
+  <li><a href="#learn-4-case-cohort-designs" id="toc-learn-4-case-cohort-designs" class="nav-link" data-scroll-target="#learn-4-case-cohort-designs">LEARN 4 · Case-cohort designs</a></li>
+  <li><a href="#learn-5-selection-bias-through-control-choice" id="toc-learn-5-selection-bias-through-control-choice" class="nav-link" data-scroll-target="#learn-5-selection-bias-through-control-choice">LEARN 5 · Selection bias through control choice</a></li>
+  <li><a href="#learn-6-exposure-measurement-after-diagnosis" id="toc-learn-6-exposure-measurement-after-diagnosis" class="nav-link" data-scroll-target="#learn-6-exposure-measurement-after-diagnosis">LEARN 6 · Exposure measurement after diagnosis</a></li>
+  <li><a href="#r-lab" id="toc-r-lab" class="nav-link" data-scroll-target="#r-lab">R LAB</a></li>
+  <li><a href="#phd-extension" id="toc-phd-extension" class="nav-link" data-scroll-target="#phd-extension">PHD EXTENSION</a></li>
+  <li><a href="#methods-workshop-design-the-control-sampling-before-calculating-an-or" id="toc-methods-workshop-design-the-control-sampling-before-calculating-an-or" class="nav-link" data-scroll-target="#methods-workshop-design-the-control-sampling-before-calculating-an-or">METHODS WORKSHOP · Design the control sampling before calculating an OR</a>
+  <ul class="collapse">
+  <li><a href="#incidence-density-design" id="toc-incidence-density-design" class="nav-link" data-scroll-target="#incidence-density-design">Incidence-density design</a></li>
+  <li><a href="#conditional-logistic-model" id="toc-conditional-logistic-model" class="nav-link" data-scroll-target="#conditional-logistic-model">Conditional logistic model</a></li>
+  <li><a href="#matching-ratio-and-efficiency" id="toc-matching-ratio-and-efficiency" class="nav-link" data-scroll-target="#matching-ratio-and-efficiency">Matching ratio and efficiency</a></li>
+  <li><a href="#countermatching" id="toc-countermatching" class="nav-link" data-scroll-target="#countermatching">Countermatching</a></li>
+  <li><a href="#case-cohort-analysis" id="toc-case-cohort-analysis" class="nav-link" data-scroll-target="#case-cohort-analysis">Case-cohort analysis</a></li>
+  <li><a href="#two-phase-designs" id="toc-two-phase-designs" class="nav-link" data-scroll-target="#two-phase-designs">Two-phase designs</a></li>
+  <li><a href="#control-selection-and-transportability" id="toc-control-selection-and-transportability" class="nav-link" data-scroll-target="#control-selection-and-transportability">Control selection and transportability</a></li>
+  <li><a href="#bias-analysis-for-exposure-misclassification" id="toc-bias-analysis-for-exposure-misclassification" class="nav-link" data-scroll-target="#bias-analysis-for-exposure-misclassification">Bias analysis for exposure misclassification</a></li>
+  <li><a href="#doctoral-extension-semiparametric-efficiency" id="toc-doctoral-extension-semiparametric-efficiency" class="nav-link" data-scroll-target="#doctoral-extension-semiparametric-efficiency">Doctoral extension · Semiparametric efficiency</a></li>
+  </ul></li>
+  <li><a href="#seminar-notes-sampling-fractions-and-what-can-be-recovered" id="toc-seminar-notes-sampling-fractions-and-what-can-be-recovered" class="nav-link" data-scroll-target="#seminar-notes-sampling-fractions-and-what-can-be-recovered">SEMINAR NOTES · Sampling fractions and what can be recovered</a>
+  <ul class="collapse">
+  <li><a href="#recovering-absolute-risk" id="toc-recovering-absolute-risk" class="nav-link" data-scroll-target="#recovering-absolute-risk">Recovering absolute risk</a></li>
+  <li><a href="#incidence-density-or" id="toc-incidence-density-or" class="nav-link" data-scroll-target="#incidence-density-or">Incidence-density OR</a></li>
+  <li><a href="#matching-variable-paradox" id="toc-matching-variable-paradox" class="nav-link" data-scroll-target="#matching-variable-paradox">Matching variable paradox</a></li>
+  <li><a href="#frequency-matching" id="toc-frequency-matching" class="nav-link" data-scroll-target="#frequency-matching">Frequency matching</a></li>
+  <li><a href="#selection-diagrams-for-hospital-controls" id="toc-selection-diagrams-for-hospital-controls" class="nav-link" data-scroll-target="#selection-diagrams-for-hospital-controls">Selection diagrams for hospital controls</a></li>
+  <li><a href="#rare-exposure-designs" id="toc-rare-exposure-designs" class="nav-link" data-scroll-target="#rare-exposure-designs">Rare exposure designs</a></li>
+  <li><a href="#etiologic-heterogeneity" id="toc-etiologic-heterogeneity" class="nav-link" data-scroll-target="#etiologic-heterogeneity">Etiologic heterogeneity</a></li>
+  </ul></li>
+  <li><a href="#advanced-synthesis-the-case-control-odds-ratio-is-created-by-the-sampling-design" id="toc-advanced-synthesis-the-case-control-odds-ratio-is-created-by-the-sampling-design" class="nav-link" data-scroll-target="#advanced-synthesis-the-case-control-odds-ratio-is-created-by-the-sampling-design">ADVANCED SYNTHESIS · The case-control odds ratio is created by the sampling design</a>
+  <ul class="collapse">
+  <li><a href="#source-population-principle" id="toc-source-population-principle" class="nav-link" data-scroll-target="#source-population-principle">Source population principle</a></li>
+  <li><a href="#three-major-control-sampling-schemes" id="toc-three-major-control-sampling-schemes" class="nav-link" data-scroll-target="#three-major-control-sampling-schemes">Three major control-sampling schemes</a></li>
+  <li><a href="#matching" id="toc-matching" class="nav-link" data-scroll-target="#matching">Matching</a></li>
+  <li><a href="#conditional-logistic-regression" id="toc-conditional-logistic-regression" class="nav-link" data-scroll-target="#conditional-logistic-regression">Conditional logistic regression</a></li>
+  <li><a href="#nested-case-control-studies" id="toc-nested-case-control-studies" class="nav-link" data-scroll-target="#nested-case-control-studies">Nested case-control studies</a></li>
+  <li><a href="#case-cohort-studies" id="toc-case-cohort-studies" class="nav-link" data-scroll-target="#case-cohort-studies">Case-cohort studies</a></li>
+  <li><a href="#case-crossover-design" id="toc-case-crossover-design" class="nav-link" data-scroll-target="#case-crossover-design">Case-crossover design</a></li>
+  <li><a href="#recall-and-information-bias" id="toc-recall-and-information-bias" class="nav-link" data-scroll-target="#recall-and-information-bias">Recall and information bias</a></li>
+  <li><a href="#selection-diagrams" id="toc-selection-diagrams" class="nav-link" data-scroll-target="#selection-diagrams">Selection diagrams</a></li>
+  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example">Worked example</a></li>
+  <li><a href="#msc-standard" id="toc-msc-standard" class="nav-link" data-scroll-target="#msc-standard">MSc standard</a></li>
+  <li><a href="#phd-standard" id="toc-phd-standard" class="nav-link" data-scroll-target="#phd-standard">PhD standard</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-graduate-standard" id="toc-demonstrate-graduate-standard" class="nav-link" data-scroll-target="#demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY II · WEEK 04</p>
+</div>
+<section id="advanced-case-control-methods" class="level1">
+<h1>Advanced Case-Control Methods</h1>
+<section id="control-sampling-is-part-of-the-estimator-not-a-recruitment-detail." class="level2">
+<h2 class="anchored" data-anchor-id="control-sampling-is-part-of-the-estimator-not-a-recruitment-detail.">Control sampling is part of the estimator, not a recruitment detail.</h2>
+<p><span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span></p>
+</section>
+</section>
+</div>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>state the target estimand in population, strategy, outcome, time and effect-measure terms;</li>
+<li>identify the assumptions required for the week’s method;</li>
+<li>distinguish identification from estimation;</li>
+<li>select an analysis that corresponds to the scientific question;</li>
+<li>interpret absolute and relative effects with uncertainty;</li>
+<li>diagnose at least one failure mode using subject-matter reasoning;</li>
+<li>implement or outline a reproducible analysis in R; and</li>
+<li>defend what the resulting estimate can and cannot support.</li>
+</ol>
+</section>
+<section id="orient-the-case-control-odds-ratio-has-several-possible-targets" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-the-case-control-odds-ratio-has-several-possible-targets">ORIENT · The case-control odds ratio has several possible targets</h2>
+<p>Case-control efficiency comes from sampling outcomes unevenly. That efficiency is paid for with a more complicated link between sample quantities and population quantities.</p>
+</section>
+<section id="learn-1-incidence-density-sampling" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-incidence-density-sampling">LEARN 1 · Incidence-density sampling</h2>
+<p>For each incident case, sample controls from individuals still at risk when the case occurs. Controls represent person-time at risk and may later become cases. Under this design, the exposure odds ratio estimates the incidence-rate ratio without requiring a rare disease.</p>
+<p>This is often the cleanest conceptual foundation for nested case-control studies.</p>
+</section>
+<section id="learn-2-cumulative-incidence-sampling" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-cumulative-incidence-sampling">LEARN 2 · Cumulative-incidence sampling</h2>
+<p>Controls are selected from people who remain non-cases over the risk period. The sample odds ratio approximates a risk ratio when disease is uncommon, but the approximation worsens as the outcome becomes common.</p>
+<p>Do not teach the “rare disease assumption” as a universal property of case-control studies; it is tied to the sampling scheme and target measure.</p>
+</section>
+<section id="learn-3-matching-and-conditional-logistic-regression" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-matching-and-conditional-logistic-regression">LEARN 3 · Matching and conditional logistic regression</h2>
+<p>Individual matching creates sets of cases and controls sharing matching variables. Conditional logistic regression conditions on the matched set, comparing exposure within sets. The matching variables may disappear from the regression coefficient table because their effect is conditioned out.</p>
+<p>Matching can improve efficiency, but overmatching can erase useful exposure variation or make controls too similar to cases on variables related to exposure but not confounding.</p>
+</section>
+<section id="learn-4-case-cohort-designs" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-case-cohort-designs">LEARN 4 · Case-cohort designs</h2>
+<p>A case-cohort study samples a subcohort from the baseline cohort and adds cases occurring outside the subcohort. Because the same subcohort can support analyses of several outcomes, case-cohort designs are attractive when biomarkers are expensive.</p>
+<p>Weighted Cox-type methods account for the sampling. The analysis should preserve the cohort’s risk-set logic rather than treating the data as an ordinary cross-sectional case-control sample.</p>
+</section>
+<section id="learn-5-selection-bias-through-control-choice" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-selection-bias-through-control-choice">LEARN 5 · Selection bias through control choice</h2>
+<p>Hospital controls can be convenient but dangerous if the exposure influences the diseases that bring controls to hospital. Friend controls may be too similar to cases in socioeconomic or behavioural exposures. Population controls can have lower participation.</p>
+<p>The correct control group is determined by the source population and case-ascertainment mechanism, not convenience.</p>
+</section>
+<section id="learn-6-exposure-measurement-after-diagnosis" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-exposure-measurement-after-diagnosis">LEARN 6 · Exposure measurement after diagnosis</h2>
+<p>Recall bias is one form of differential measurement. More generally, disease status can influence record completeness, interviewer probing, biomarker availability or willingness to report sensitive exposures.</p>
+<p>Prefer exposure data recorded before disease when feasible. If measurement differs by case status, conduct quantitative sensitivity analysis rather than only mention “recall bias.”</p>
+</section>
+<section id="r-lab" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="r-lab">R LAB</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/labs/lab-02-case-control.html">Advanced Lab 2 — Risk-set sampling and matched analysis →</a></p>
+</section>
+<section id="phd-extension" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="phd-extension">PHD EXTENSION</h2>
+<p>Outcome-dependent sampling appears beyond classic case-control studies, including two-phase designs, case-cohort sampling and nested biomarker studies. Efficient analysis requires understanding the sampling probabilities and the full cohort quantity being targeted.</p>
+</section>
+<section id="methods-workshop-design-the-control-sampling-before-calculating-an-or" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="methods-workshop-design-the-control-sampling-before-calculating-an-or">METHODS WORKSHOP · Design the control sampling before calculating an OR</h2>
+<p>Imagine a dynamic cohort of 100,000 adults followed for myocardial infarction. Stored blood samples make biomarker assays expensive. Rather than assay everyone, investigators identify all incident MIs and sample controls.</p>
+<section id="incidence-density-design" class="level3">
+<h3 class="anchored" data-anchor-id="incidence-density-design">Incidence-density design</h3>
+<p>For each MI at time <span class="math inline">\(t\)</span>, sample controls from people still at risk at <span class="math inline">\(t\)</span>. Matching might be on age, sex and calendar time. A participant can be sampled as a control more than once and later become a case.</p>
+<p>This surprises learners but is correct because controls sample <strong>person-time</strong>, not “people who will never become cases.” Excluding future cases from control eligibility would distort the risk set.</p>
+</section>
+<section id="conditional-logistic-model" class="level3">
+<h3 class="anchored" data-anchor-id="conditional-logistic-model">Conditional logistic model</h3>
+<p>With matched risk sets:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">clogit</span>(case <span class="sc">~</span> biomarker <span class="sc">+</span> smoking <span class="sc">+</span> <span class="fu">strata</span>(risk_set), <span class="at">data=</span>ncc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The model compares exposures within risk sets. The estimated odds ratio corresponds to an incidence-rate ratio under the incidence-density sampling design.</p>
+</section>
+<section id="matching-ratio-and-efficiency" class="level3">
+<h3 class="anchored" data-anchor-id="matching-ratio-and-efficiency">Matching ratio and efficiency</h3>
+<p>Adding controls per case increases precision, but returns diminish after roughly four controls per case in many simple settings. The optimal ratio depends on assay costs, case numbers, matching constraints and covariate distributions.</p>
+</section>
+<section id="countermatching" class="level3">
+<h3 class="anchored" data-anchor-id="countermatching">Countermatching</h3>
+<p>Sometimes controls are deliberately sampled to increase exposure variation within matched sets. This can improve efficiency for rare exposures but requires analysis weights based on the sampling scheme.</p>
+</section>
+<section id="case-cohort-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="case-cohort-analysis">Case-cohort analysis</h3>
+<p>A random subcohort sampled at baseline can serve as the comparison group for multiple outcomes. Cases outside the subcohort are added. Because risk sets are reconstructed with sampling weights, standard Cox analysis without weights is not appropriate.</p>
+</section>
+<section id="two-phase-designs" class="level3">
+<h3 class="anchored" data-anchor-id="two-phase-designs">Two-phase designs</h3>
+<p>Expensive covariates can be measured in a phase-2 subsample selected using cheap phase-1 variables. Inverse-probability weighting or likelihood methods use known sampling probabilities to recover target estimates. This design is powerful when biospecimens or genotyping are expensive.</p>
+</section>
+<section id="control-selection-and-transportability" class="level3">
+<h3 class="anchored" data-anchor-id="control-selection-and-transportability">Control selection and transportability</h3>
+<p>If controls come from a hospital, the source population may be “people who would attend that hospital if they developed the disease,” not the geographic community. Make the catchment logic explicit.</p>
+</section>
+<section id="bias-analysis-for-exposure-misclassification" class="level3">
+<h3 class="anchored" data-anchor-id="bias-analysis-for-exposure-misclassification">Bias analysis for exposure misclassification</h3>
+<p>Suppose self-reported occupational exposure has sensitivity 0.75 among cases and 0.60 among controls, with specificity 0.90 in both. This differential sensitivity can bias the OR away from or toward the null. A probabilistic bias analysis can sample sensitivity/specificity values from plausible distributions and correct the 2×2 table repeatedly.</p>
+</section>
+<section id="doctoral-extension-semiparametric-efficiency" class="level3">
+<h3 class="anchored" data-anchor-id="doctoral-extension-semiparametric-efficiency">Doctoral extension · Semiparametric efficiency</h3>
+<p>Nested case-control and case-cohort designs can be analysed using weighted partial likelihood, pseudo-likelihood and augmented estimators. Methodological work asks how to use phase-1 information efficiently while retaining validity under the sampling design.</p>
+</section>
+</section>
+<section id="seminar-notes-sampling-fractions-and-what-can-be-recovered" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="seminar-notes-sampling-fractions-and-what-can-be-recovered">SEMINAR NOTES · Sampling fractions and what can be recovered</h2>
+<p>Case-control data contain deliberately distorted case fractions. Therefore intercepts and absolute risks from an ordinary logistic model do not represent population risks unless the sampling fractions are known and incorporated.</p>
+<section id="recovering-absolute-risk" class="level3">
+<h3 class="anchored" data-anchor-id="recovering-absolute-risk">Recovering absolute risk</h3>
+<p>If the source cohort and case sampling fractions are known, weighted or likelihood-based methods can recover absolute risks. In a nested design, cohort incidence information may be available separately. Do not estimate PPV, prevalence or risk directly from a case-control sample whose case fraction was investigator-controlled.</p>
+</section>
+<section id="incidence-density-or" class="level3">
+<h3 class="anchored" data-anchor-id="incidence-density-or">Incidence-density OR</h3>
+<p>Under risk-set sampling, the odds of exposure among sampled cases versus controls correspond to the rate ratio because controls sample the person-time distribution of exposure. This is why no rare-disease approximation is required.</p>
+</section>
+<section id="matching-variable-paradox" class="level3">
+<h3 class="anchored" data-anchor-id="matching-variable-paradox">Matching variable paradox</h3>
+<p>A matched design forces case and control distributions to be similar on matching factors by construction. The association between a matching variable and disease cannot usually be estimated from the matched sample in the ordinary way. Matching variables were selected for design efficiency/confounding control, not substantive estimation.</p>
+</section>
+<section id="frequency-matching" class="level3">
+<h3 class="anchored" data-anchor-id="frequency-matching">Frequency matching</h3>
+<p>If cases and controls are frequency matched on age groups rather than individual sets, analyse with unconditional logistic regression while adjusting for the matching factor. Do not automatically use conditional logistic regression.</p>
+</section>
+<section id="selection-diagrams-for-hospital-controls" class="level3">
+<h3 class="anchored" data-anchor-id="selection-diagrams-for-hospital-controls">Selection diagrams for hospital controls</h3>
+<p>Draw hospitalisation <span class="math inline">\(H\)</span> as a selection node. If exposure affects another condition that causes hospitalisation and outcome status also affects hospitalisation, conditioning on <span class="math inline">\(H=1\)</span> can create collider bias. This is the graphical explanation for classic Berkson-type bias.</p>
+</section>
+<section id="rare-exposure-designs" class="level3">
+<h3 class="anchored" data-anchor-id="rare-exposure-designs">Rare exposure designs</h3>
+<p>Case-control studies can be efficient for rare outcomes, while cohort studies are efficient for rare exposures. If the exposure is rare, control sampling may yield too few exposed controls unless special sampling or large source populations are used.</p>
+</section>
+<section id="etiologic-heterogeneity" class="level3">
+<h3 class="anchored" data-anchor-id="etiologic-heterogeneity">Etiologic heterogeneity</h3>
+<p>When disease subtypes have different causes, combining them into one case definition can dilute associations. Polytomous logistic regression or subtype-specific case-control analyses may reveal etiologic heterogeneity, but multiple testing and subtype misclassification must be considered.</p>
+</section>
+</section>
+<section id="advanced-synthesis-the-case-control-odds-ratio-is-created-by-the-sampling-design" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="advanced-synthesis-the-case-control-odds-ratio-is-created-by-the-sampling-design">ADVANCED SYNTHESIS · The case-control odds ratio is created by the sampling design</h2>
+<p>Advanced case-control methods become much easier when controls are understood as a <strong>sample of the exposure experience of the source population</strong>, not simply “people without disease.” The validity of the odds ratio depends on how that sampling was performed.</p>
+<section id="source-population-principle" class="level3">
+<h3 class="anchored" data-anchor-id="source-population-principle">Source population principle</h3>
+<p>Every case should arise from a population in which the selected controls could have become cases. A hospital control with a condition caused by the exposure of interest may distort exposure prevalence; neighbourhood controls may overmatch environmental or socioeconomic exposures; friend controls may overmatch behaviour. Convenience is not a design justification.</p>
+</section>
+<section id="three-major-control-sampling-schemes" class="level3">
+<h3 class="anchored" data-anchor-id="three-major-control-sampling-schemes">Three major control-sampling schemes</h3>
+<p><strong>Cumulative-incidence sampling</strong> selects controls from people who remain non-cases at the end of follow-up. The resulting exposure odds ratio approximates the risk ratio under the rare-disease condition.</p>
+<p><strong>Incidence-density (risk-set) sampling</strong> selects controls from those at risk at the time each case occurs. A person can serve as a control before later becoming a case. The odds ratio estimates the incidence-rate ratio without requiring the disease to be rare.</p>
+<p><strong>Case-base (case-cohort) sampling</strong> selects controls from the source cohort at baseline, regardless of future case status. With appropriate analysis, this design can estimate risk or rate contrasts and enables one subcohort to support multiple outcomes.</p>
+</section>
+<section id="matching" class="level3">
+<h3 class="anchored" data-anchor-id="matching">Matching</h3>
+<p>Matching can improve efficiency and control design-stage confounding, but it creates an analysis obligation. Individually matched studies generally require conditional logistic regression or equivalent matched analysis. Matching does not remove confounding automatically; the matching factor has been conditioned on by design.</p>
+<p>Overmatching can occur when controls are matched on a variable closely related to exposure but not a true confounder, reducing exposure contrast. Matching on a mediator or collider can introduce bias.</p>
+</section>
+<section id="conditional-logistic-regression" class="level3">
+<h3 class="anchored" data-anchor-id="conditional-logistic-regression">Conditional logistic regression</h3>
+<p>For matched sets, the conditional likelihood compares exposure configurations within risk sets or matched strata and removes nuisance intercepts. The resulting coefficient estimates a matched conditional odds ratio. Understand what was conditioned on before interpreting it.</p>
+</section>
+<section id="nested-case-control-studies" class="level3">
+<h3 class="anchored" data-anchor-id="nested-case-control-studies">Nested case-control studies</h3>
+<p>Within a defined cohort, risk-set sampling can drastically reduce biomarker assay costs while preserving valid rate-ratio estimation. Sampling fractions may vary, and specialised weighting may be needed for some estimands or secondary analyses.</p>
+</section>
+<section id="case-cohort-studies" class="level3">
+<h3 class="anchored" data-anchor-id="case-cohort-studies">Case-cohort studies</h3>
+<p>A random subcohort is selected at baseline, and all incident cases are included. Because cases outside the subcohort enter when they fail, standard Cox partial likelihood variance formulas are not automatically valid. Prentice-type weights and robust variance methods are commonly used.</p>
+</section>
+<section id="case-crossover-design" class="level3">
+<h3 class="anchored" data-anchor-id="case-crossover-design">Case-crossover design</h3>
+<p>Each case serves as their own control by comparing exposure during a hazard window with exposure during control windows. Time-invariant confounders are controlled by design, but time trends, carryover and selection of control periods are critical. This is suited to transient exposures with acute effects, not stable chronic exposures.</p>
+</section>
+<section id="recall-and-information-bias" class="level3">
+<h3 class="anchored" data-anchor-id="recall-and-information-bias">Recall and information bias</h3>
+<p>Case-control studies are especially vulnerable when exposure ascertainment occurs after disease. Differential recall, interviewer probing and proxy reporting can create spurious associations. Objective exposure records, blinded interviewers and identical instruments reduce—but do not eliminate—these concerns.</p>
+</section>
+<section id="selection-diagrams" class="level3">
+<h3 class="anchored" data-anchor-id="selection-diagrams">Selection diagrams</h3>
+<p>At doctoral level, draw the mechanism by which inclusion into the case-control sample depends on disease, exposure and covariates. Conditioning on sample inclusion can induce associations. The sampling design must be incorporated into the causal argument.</p>
+</section>
+<section id="worked-example" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example">Worked example</h3>
+<p>Suppose 500 incident TB cases arise from a cohort of healthcare workers. For each case, four controls are sampled from workers still at risk on the diagnosis date. The exposure is recent work in a high-risk ward. Because controls are selected by incidence-density sampling, the matched OR estimates the rate ratio even if TB is not rare. Calling it a “rare disease approximation” would misunderstand the design.</p>
+</section>
+<section id="msc-standard" class="level3">
+<h3 class="anchored" data-anchor-id="msc-standard">MSc standard</h3>
+<p>Given a case-control paper, identify the source population, control-sampling scheme, matching structure, estimand and appropriate regression analysis.</p>
+</section>
+<section id="phd-standard" class="level3">
+<h3 class="anchored" data-anchor-id="phd-standard">PhD standard</h3>
+<p>Derive why risk-set sampling yields a rate-ratio estimate, critique selection mechanisms using causal diagrams, and specify weighted/robust analyses for nested case-control or case-cohort designs.</p>
+</section>
+</section>
+<section id="demonstrate-graduate-standard" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</h2>
+<p>Submit one short methods memo or reproducible analysis in which you <strong>name the estimand first</strong>, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-03.html">← Week 3</a></p>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii/week-05.html">Week 5 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

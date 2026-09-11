@@ -157,10 +157,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#learn-9-description-generates-hypotheses-it-rarely-settles-them" id="toc-learn-9-description-generates-hypotheses-it-rarely-settles-them" class="nav-link" data-scroll-target="#learn-9-description-generates-hypotheses-it-rarely-settles-them">LEARN 9 · Description generates hypotheses; it rarely settles them</a></li>
   <li><a href="#learn-10-observed-versus-expected" id="toc-learn-10-observed-versus-expected" class="nav-link" data-scroll-target="#learn-10-observed-versus-expected">LEARN 10 · Observed versus expected</a></li>
   <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
-  <li><a href="#demonstrate-week-4-mastery-quiz" id="toc-demonstrate-week-4-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-4-mastery-quiz">DEMONSTRATE · Week 4 mastery quiz</a></li>
-  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul>
 </nav>
     </div>
@@ -404,6 +400,63 @@ Inspect the line list before you admire the curve.</p>
 </ol>
 <p>The point is not to guess the cause. The point is to produce a description strong enough to justify the next question.</p>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-describing-populations-without-being-fooled-by-composition" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-describing-populations-without-being-fooled-by-composition">GRADUATE DEEPEN · Describing populations without being fooled by composition</h2>
+<p>Descriptive epidemiology is not a lower form of analysis. At graduate level, it requires careful denominator construction, standardisation, uncertainty assessment and awareness that visual patterns can arise from population structure or unstable counts.</p>
+<section id="rates-before-maps" class="level3">
+<h3 class="anchored" data-anchor-id="rates-before-maps">Rates before maps</h3>
+<p>A map of case counts often maps population density rather than disease risk. Before interpreting spatial concentration, ask whether the map uses counts, crude rates or standardised rates. Small populations can produce extreme rates from only a few events; large populations can dominate count maps simply because more people live there.</p>
+<p>For small areas, report event counts alongside rates and confidence intervals. Consider multi-year pooling or statistical smoothing when annual denominators are small, but make clear that smoothing trades local variability for stability.</p>
+</section>
+<section id="age-standardisation-as-descriptive-control" class="level3">
+<h3 class="anchored" data-anchor-id="age-standardisation-as-descriptive-control">Age standardisation as descriptive control</h3>
+<p>Age is a powerful determinant of many outcomes. If two districts have different age structures, compare age-specific rates or age-standardised rates before attributing crude differences to health-system performance or environmental exposure.</p>
+<p>A useful descriptive workflow is:</p>
+<ol type="1">
+<li>inspect the crude rate;</li>
+<li>stratify by age and sex where relevant;</li>
+<li>calculate directly standardised rates using a declared standard population;</li>
+<li>inspect whether the ranking changes;</li>
+<li>investigate substantive explanations only after composition is understood.</li>
+</ol>
+</section>
+<section id="time-trends-and-denominator-drift" class="level3">
+<h3 class="anchored" data-anchor-id="time-trends-and-denominator-drift">Time trends and denominator drift</h3>
+<p>A time series can change because the numerator changes, the denominator changes, ascertainment changes, or the case definition changes. A vaccination coverage trend, for example, can move because the target-population estimate was revised even if the number vaccinated is stable.</p>
+<p>Mark major surveillance or programme changes on time-series plots. A discontinuity that coincides with electronic reporting rollout may be a data-generation change rather than a sudden epidemiological event.</p>
+</section>
+<section id="age-period-and-cohort-are-not-interchangeable" class="level3">
+<h3 class="anchored" data-anchor-id="age-period-and-cohort-are-not-interchangeable">Age, period and cohort are not interchangeable</h3>
+<p>An apparent temporal pattern may reflect:</p>
+<ul>
+<li><strong>age effects:</strong> risk changes as people age;</li>
+<li><strong>period effects:</strong> an event affects all ages at a calendar time;</li>
+<li><strong>cohort effects:</strong> people born or entering exposure during a particular period carry a distinct risk profile.</li>
+</ul>
+<p>Age-period-cohort analyses require stronger modelling assumptions because age, period and cohort are deterministically related. At Epidemiology I level, the goal is to recognise the ambiguity rather than fit a complex model.</p>
+</section>
+<section id="ecological-inference" class="level3">
+<h3 class="anchored" data-anchor-id="ecological-inference">Ecological inference</h3>
+<p>Area-level associations do not automatically describe individual-level relationships. If districts with higher urbanisation have higher diabetes prevalence, it does not follow that urban residents within each district are necessarily at higher risk. The reverse problem can also occur: individual-level associations may not hold at area level.</p>
+<div class="lipps-callout">
+<p><strong>What could fool us?</strong><br>
+A beautiful map can make a denominator error look convincing. Treat geography as a measurement and comparison problem before treating it as a causal explanation.</p>
+</div>
+</section>
+<section id="graduate-field-task" class="level3">
+<h3 class="anchored" data-anchor-id="graduate-field-task">Graduate field task</h3>
+<p>Using a district-level dataset, produce a one-page descriptive epidemiology brief that includes:</p>
+<ul>
+<li>one table of person characteristics;</li>
+<li>one time trend with denominators clearly defined;</li>
+<li>one place comparison using rates rather than counts;</li>
+<li>one standardised comparison if population structures differ;</li>
+<li>two plausible explanations for the pattern;</li>
+<li>one explicit statement of what the descriptive analysis cannot establish.</li>
+</ul>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <ol type="1">
@@ -441,6 +494,7 @@ The quiz is designed so that a prepared learner can read, reason and answer effi
 </section>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

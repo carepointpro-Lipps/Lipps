@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -235,23 +264,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#point-prevalence-on-friday" id="toc-point-prevalence-on-friday" class="nav-link" data-scroll-target="#point-prevalence-on-friday">3. Point prevalence on Friday</a></li>
   <li><a href="#why-attack-rate-and-friday-prevalence-differ" id="toc-why-attack-rate-and-friday-prevalence-differ" class="nav-link" data-scroll-target="#why-attack-rate-and-friday-prevalence-differ">4. Why attack rate and Friday prevalence differ</a></li>
   </ul></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a>
-  <ul class="collapse">
-  <li><a href="#which-statement-best-distinguishes-a-proportion-from-a-general-ratio" id="toc-which-statement-best-distinguishes-a-proportion-from-a-general-ratio" class="nav-link" data-scroll-target="#which-statement-best-distinguishes-a-proportion-from-a-general-ratio">1. Which statement BEST distinguishes a proportion from a general ratio?</a></li>
-  <li><a href="#a-district-reports-500-tb-cases.-what-additional-information-is-most-important-for-comparing-tb-occurrence-with-another-district" id="toc-a-district-reports-500-tb-cases.-what-additional-information-is-most-important-for-comparing-tb-occurrence-with-another-district" class="nav-link" data-scroll-target="#a-district-reports-500-tb-cases.-what-additional-information-is-most-important-for-comparing-tb-occurrence-with-another-district">2. A district reports 500 TB cases. What additional information is MOST important for comparing TB occurrence with another district?</a></li>
-  <li><a href="#which-numerator-belongs-in-an-incidence-proportion" id="toc-which-numerator-belongs-in-an-incidence-proportion" class="nav-link" data-scroll-target="#which-numerator-belongs-in-an-incidence-proportion">3. Which numerator belongs in an incidence proportion?</a></li>
-  <li><a href="#twenty-new-cases-occur-during-2000-person-years.-which-measure-is-being-calculated" id="toc-twenty-new-cases-occur-during-2000-person-years.-which-measure-is-being-calculated" class="nav-link" data-scroll-target="#twenty-new-cases-occur-during-2000-person-years.-which-measure-is-being-calculated">4. Twenty new cases occur during 2,000 person-years. Which measure is being calculated?</a></li>
-  <li><a href="#which-statement-about-prevalence-is-correct" id="toc-which-statement-about-prevalence-is-correct" class="nav-link" data-scroll-target="#which-statement-about-prevalence-is-correct">5. Which statement about prevalence is correct?</a></li>
-  <li><a href="#a-chronic-condition-has-low-incidence-but-very-long-duration.-what-could-happen-to-prevalence" id="toc-a-chronic-condition-has-low-incidence-but-very-long-duration.-what-could-happen-to-prevalence" class="nav-link" data-scroll-target="#a-chronic-condition-has-low-incidence-but-very-long-duration.-what-could-happen-to-prevalence">6. A chronic condition has low incidence but very long duration. What could happen to prevalence?</a></li>
-  <li><a href="#eight-deaths-occur-among-200-identified-cases.-what-measure-is-8200-100" id="toc-eight-deaths-occur-among-200-identified-cases.-what-measure-is-8200-100" class="nav-link" data-scroll-target="#eight-deaths-occur-among-200-identified-cases.-what-measure-is-8200-100">7. Eight deaths occur among 200 identified cases. What measure is 8/200 × 100?</a></li>
-  <li><a href="#fifty-road-traffic-deaths-occur-among-500-deaths-from-all-causes.-what-does-50500-100-describe" id="toc-fifty-road-traffic-deaths-occur-among-500-deaths-from-all-causes.-what-does-50500-100-describe" class="nav-link" data-scroll-target="#fifty-road-traffic-deaths-occur-among-500-deaths-from-all-causes.-what-does-50500-100-describe">8. Fifty road-traffic deaths occur among 500 deaths from all causes. What does 50/500 × 100 describe?</a></li>
-  <li><a href="#why-might-crude-mortality-be-higher-in-one-district-even-if-its-age-specific-mortality-is-not-consistently-higher" id="toc-why-might-crude-mortality-be-higher-in-one-district-even-if-its-age-specific-mortality-is-not-consistently-higher" class="nav-link" data-scroll-target="#why-might-crude-mortality-be-higher-in-one-district-even-if-its-age-specific-mortality-is-not-consistently-higher">9. Why might crude mortality be higher in one district even if its age-specific mortality is not consistently higher?</a></li>
-  <li><a href="#which-statement-best-reflects-the-main-week-2-lesson" id="toc-which-statement-best-reflects-the-main-week-2-lesson" class="nav-link" data-scroll-target="#which-statement-best-reflects-the-main-week-2-lesson">10. Which statement BEST reflects the main Week 2 lesson?</a></li>
-  </ul></li>
-  <li><a href="#demonstrate-week-2-mastery-quiz" id="toc-demonstrate-week-2-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-2-mastery-quiz">DEMONSTRATE · Week 2 Mastery Quiz</a></li>
-  <li><a href="#summary-the-week-2-decision-tree" id="toc-summary-the-week-2-decision-tree" class="nav-link" data-scroll-target="#summary-the-week-2-decision-tree">SUMMARY · The Week 2 decision tree</a></li>
-  <li><a href="#what-moves-to-week-3" id="toc-what-moves-to-week-3" class="nav-link" data-scroll-target="#what-moves-to-week-3">What moves to Week 3</a></li>
-  <li><a href="#primary-source-used-to-build-this-lesson" id="toc-primary-source-used-to-build-this-lesson" class="nav-link" data-scroll-target="#primary-source-used-to-build-this-lesson">Primary source used to build this lesson</a></li>
   </ul>
 </nav>
     </div>
@@ -699,6 +711,59 @@ Do not infer the speed of disease occurrence from prevalence alone. Prevalence i
 </div>
 </section>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-standardisation-attributable-burden-and-dynamic-populations" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-standardisation-attributable-burden-and-dynamic-populations">GRADUATE DEEPEN · Standardisation, attributable burden and dynamic populations</h2>
+<p>Crude rates are often unsuitable for comparing populations with different structures. If District A has an older population than District B, a higher crude mortality rate may reflect age composition rather than a higher age-specific mortality experience.</p>
+<section id="direct-standardisation" class="level3">
+<h3 class="anchored" data-anchor-id="direct-standardisation">Direct standardisation</h3>
+<p>Direct standardisation applies each population’s stratum-specific rates to a common standard population:</p>
+<p><span class="math display">\[
+R_{std}=\frac{\sum_i w_i r_i}{\sum_i w_i}
+\]</span></p>
+<p>where <span class="math inline">\(r_i\)</span> is the stratum-specific rate and <span class="math inline">\(w_i\)</span> is the standard population weight. The resulting rate is a <strong>weighted summary for comparison</strong>, not the literal rate observed in either population.</p>
+<p>Good practice is to report the crude and standardised estimates together. The crude rate describes the observed burden; the standardised rate helps compare underlying rate patterns after controlling for the standardising variable.</p>
+</section>
+<section id="indirect-standardisation-and-the-smr" class="level3">
+<h3 class="anchored" data-anchor-id="indirect-standardisation-and-the-smr">Indirect standardisation and the SMR</h3>
+<p>When stratum-specific rates in the study population are unstable, you can apply external standard rates to the study population to obtain an expected number of events. The <strong>standardised mortality ratio (SMR)</strong> is:</p>
+<p><span class="math display">\[
+SMR=\frac{Observed\ deaths}{Expected\ deaths}
+\]</span></p>
+<p>An SMR above 1 indicates more deaths than expected under the standard rates. An SMR is relative to its chosen standard and is not interchangeable with a directly standardised rate.</p>
+</section>
+<section id="population-attributable-impact" class="level3">
+<h3 class="anchored" data-anchor-id="population-attributable-impact">Population attributable impact</h3>
+<p>Relative effects can be large while population impact remains small if exposure is rare. Conversely, a modest effect from a very common exposure can generate substantial population burden.</p>
+<p>For a simple dichotomous exposure under strong causal assumptions:</p>
+<p><span class="math display">\[
+PAF=\frac{P(D)-P(D\mid E=0)}{P(D)}
+\]</span></p>
+<p>or, when an adjusted causal risk ratio and exposure prevalence can appropriately be combined, an equivalent formulation may be used. The interpretation is counterfactual: the proportion of disease that would be prevented if the exposure were eliminated <strong>under the assumptions of the causal model</strong>. A PAF is therefore not merely a descriptive percentage of cases who are exposed.</p>
+</section>
+<section id="risk-rate-and-odds-answer-different-questions" class="level3">
+<h3 class="anchored" data-anchor-id="risk-rate-and-odds-answer-different-questions">Risk, rate and odds answer different questions</h3>
+<p>Risk concerns the probability of an event over a specified interval. A rate concerns the speed at which events occur per unit person-time. Odds compare event probability with non-event probability. These quantities are related but not interchangeable.</p>
+<p>A graduate-level interpretation should always retain the time component:</p>
+<blockquote class="blockquote">
+<p>“The 2-year risk was 8%” is interpretable. “The risk was 8%” is incomplete.</p>
+</blockquote>
+<p>Similarly, a rate of 12 per 1,000 person-years does not imply that exactly 12 of every 1,000 persons will experience the event in a year unless additional assumptions hold.</p>
+</section>
+<section id="competing-events-and-recurrent-events" class="level3">
+<h3 class="anchored" data-anchor-id="competing-events-and-recurrent-events">Competing events and recurrent events</h3>
+<p>A simple cumulative-incidence calculation becomes more complicated when another event prevents the outcome from occurring. Death can compete with development of end-stage renal disease; hysterectomy can prevent future cervical cancer incidence. Treating competing events as ordinary censoring can answer a different question from the one decision-makers care about.</p>
+<p>Some outcomes can also recur. Malaria episodes, hospital admissions and asthma exacerbations are not naturally reduced to “ever/never” without losing information. Event rates, recurrent-event methods or multi-state models may be more appropriate.</p>
+<div class="lipps-callout">
+<p><strong>MSc standard</strong><br>
+For every frequency measure, state the numerator, denominator, population, time period and whether repeated events or competing events are possible.</p>
+</div>
+</section>
+<section id="r-laboratory" class="level3">
+<h3 class="anchored" data-anchor-id="r-laboratory">R laboratory</h3>
+<p><a href="../../learn/epidemiology/labs/lab-01-standardisation.html">Graduate Lab 1 — Disease frequency, standardisation and absolute effects →</a></p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <section id="which-statement-best-distinguishes-a-proportion-from-a-general-ratio" class="level3">
@@ -841,6 +906,7 @@ The assessment is not protected by disabling copy and paste. It is protected by 
 </div>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

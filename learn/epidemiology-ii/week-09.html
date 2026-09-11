@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Advanced graduate epidemiology: Decompose variation in effects without turning subgroup analyses into a search for significance.">
+
+<title>Epidemiology II Week 9 — Interaction, Mediation and Heterogeneous Effects | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-the-effect-was-significant-in-women-but-not-men-is-not-an-interaction-test" id="toc-orient-the-effect-was-significant-in-women-but-not-men-is-not-an-interaction-test" class="nav-link" data-scroll-target="#orient-the-effect-was-significant-in-women-but-not-men-is-not-an-interaction-test">ORIENT · “The effect was significant in women but not men” is not an interaction test</a></li>
+  <li><a href="#learn-1-additive-and-multiplicative-interaction" id="toc-learn-1-additive-and-multiplicative-interaction" class="nav-link" data-scroll-target="#learn-1-additive-and-multiplicative-interaction">LEARN 1 · Additive and multiplicative interaction</a></li>
+  <li><a href="#learn-2-effect-measure-modification" id="toc-learn-2-effect-measure-modification" class="nav-link" data-scroll-target="#learn-2-effect-measure-modification">LEARN 2 · Effect-measure modification</a></li>
+  <li><a href="#learn-3-mediation-questions" id="toc-learn-3-mediation-questions" class="nav-link" data-scroll-target="#learn-3-mediation-questions">LEARN 3 · Mediation questions</a></li>
+  <li><a href="#learn-4-mediator-outcome-confounding" id="toc-learn-4-mediator-outcome-confounding" class="nav-link" data-scroll-target="#learn-4-mediator-outcome-confounding">LEARN 4 · Mediator-outcome confounding</a></li>
+  <li><a href="#learn-5-heterogeneous-treatment-effects-and-multiplicity" id="toc-learn-5-heterogeneous-treatment-effects-and-multiplicity" class="nav-link" data-scroll-target="#learn-5-heterogeneous-treatment-effects-and-multiplicity">LEARN 5 · Heterogeneous treatment effects and multiplicity</a></li>
+  <li><a href="#phd-extension" id="toc-phd-extension" class="nav-link" data-scroll-target="#phd-extension">PHD EXTENSION</a></li>
+  <li><a href="#apply" id="toc-apply" class="nav-link" data-scroll-target="#apply">APPLY</a></li>
+  <li><a href="#methods-workshop-separate-heterogeneity-from-mediation" id="toc-methods-workshop-separate-heterogeneity-from-mediation" class="nav-link" data-scroll-target="#methods-workshop-separate-heterogeneity-from-mediation">METHODS WORKSHOP · Separate heterogeneity from mediation</a>
+  <ul class="collapse">
+  <li><a href="#effect-modification-analysis" id="toc-effect-modification-analysis" class="nav-link" data-scroll-target="#effect-modification-analysis">Effect modification analysis</a></li>
+  <li><a href="#reri" id="toc-reri" class="nav-link" data-scroll-target="#reri">RERI</a></li>
+  <li><a href="#mediation-dag" id="toc-mediation-dag" class="nav-link" data-scroll-target="#mediation-dag">Mediation DAG</a></li>
+  <li><a href="#controlled-direct-effect" id="toc-controlled-direct-effect" class="nav-link" data-scroll-target="#controlled-direct-effect">Controlled direct effect</a></li>
+  <li><a href="#natural-effects" id="toc-natural-effects" class="nav-link" data-scroll-target="#natural-effects">Natural effects</a></li>
+  <li><a href="#interventional-effects" id="toc-interventional-effects" class="nav-link" data-scroll-target="#interventional-effects">Interventional effects</a></li>
+  <li><a href="#avoiding-subgroup-fallacies" id="toc-avoiding-subgroup-fallacies" class="nav-link" data-scroll-target="#avoiding-subgroup-fallacies">Avoiding subgroup fallacies</a></li>
+  <li><a href="#multiplicity-and-prior-plausibility" id="toc-multiplicity-and-prior-plausibility" class="nav-link" data-scroll-target="#multiplicity-and-prior-plausibility">Multiplicity and prior plausibility</a></li>
+  <li><a href="#doctoral-extension-principal-stratification" id="toc-doctoral-extension-principal-stratification" class="nav-link" data-scroll-target="#doctoral-extension-principal-stratification">Doctoral extension · Principal stratification</a></li>
+  </ul></li>
+  <li><a href="#seminar-notes-choosing-the-scale-that-matters" id="toc-seminar-notes-choosing-the-scale-that-matters" class="nav-link" data-scroll-target="#seminar-notes-choosing-the-scale-that-matters">SEMINAR NOTES · Choosing the scale that matters</a>
+  <ul class="collapse">
+  <li><a href="#additive-scale-for-impact" id="toc-additive-scale-for-impact" class="nav-link" data-scroll-target="#additive-scale-for-impact">Additive scale for impact</a></li>
+  <li><a href="#multiplicative-scale-for-etiologic-comparison" id="toc-multiplicative-scale-for-etiologic-comparison" class="nav-link" data-scroll-target="#multiplicative-scale-for-etiologic-comparison">Multiplicative scale for etiologic comparison</a></li>
+  <li><a href="#standardised-interaction" id="toc-standardised-interaction" class="nav-link" data-scroll-target="#standardised-interaction">Standardised interaction</a></li>
+  <li><a href="#continuous-modifiers" id="toc-continuous-modifiers" class="nav-link" data-scroll-target="#continuous-modifiers">Continuous modifiers</a></li>
+  <li><a href="#mediation-and-timing" id="toc-mediation-and-timing" class="nav-link" data-scroll-target="#mediation-and-timing">Mediation and timing</a></li>
+  <li><a href="#proportion-mediated" id="toc-proportion-mediated" class="nav-link" data-scroll-target="#proportion-mediated">Proportion mediated</a></li>
+  <li><a href="#policy-mediation" id="toc-policy-mediation" class="nav-link" data-scroll-target="#policy-mediation">Policy mediation</a></li>
+  </ul></li>
+  <li><a href="#advanced-synthesis-effect-heterogeneity-interaction-and-mediation-answer-different-scientific-questions" id="toc-advanced-synthesis-effect-heterogeneity-interaction-and-mediation-answer-different-scientific-questions" class="nav-link" data-scroll-target="#advanced-synthesis-effect-heterogeneity-interaction-and-mediation-answer-different-scientific-questions">ADVANCED SYNTHESIS · Effect heterogeneity, interaction and mediation answer different scientific questions</a>
+  <ul class="collapse">
+  <li><a href="#additive-interaction" id="toc-additive-interaction" class="nav-link" data-scroll-target="#additive-interaction">Additive interaction</a></li>
+  <li><a href="#multiplicative-interaction" id="toc-multiplicative-interaction" class="nav-link" data-scroll-target="#multiplicative-interaction">Multiplicative interaction</a></li>
+  <li><a href="#effect-measure-modification" id="toc-effect-measure-modification" class="nav-link" data-scroll-target="#effect-measure-modification">Effect-measure modification</a></li>
+  <li><a href="#heterogeneity-and-transportability" id="toc-heterogeneity-and-transportability" class="nav-link" data-scroll-target="#heterogeneity-and-transportability">Heterogeneity and transportability</a></li>
+  <li><a href="#mediation-questions" id="toc-mediation-questions" class="nav-link" data-scroll-target="#mediation-questions">Mediation questions</a></li>
+  <li><a href="#controlled-direct-effect-1" id="toc-controlled-direct-effect-1" class="nav-link" data-scroll-target="#controlled-direct-effect-1">Controlled direct effect</a></li>
+  <li><a href="#natural-effects-1" id="toc-natural-effects-1" class="nav-link" data-scroll-target="#natural-effects-1">Natural effects</a></li>
+  <li><a href="#interventional-indirect-effects" id="toc-interventional-indirect-effects" class="nav-link" data-scroll-target="#interventional-indirect-effects">Interventional indirect effects</a></li>
+  <li><a href="#mediation-versus-adjustment" id="toc-mediation-versus-adjustment" class="nav-link" data-scroll-target="#mediation-versus-adjustment">Mediation versus adjustment</a></li>
+  <li><a href="#heterogeneous-treatment-effects-with-machine-learning" id="toc-heterogeneous-treatment-effects-with-machine-learning" class="nav-link" data-scroll-target="#heterogeneous-treatment-effects-with-machine-learning">Heterogeneous treatment effects with machine learning</a></li>
+  <li><a href="#equity" id="toc-equity" class="nav-link" data-scroll-target="#equity">Equity</a></li>
+  <li><a href="#msc-standard" id="toc-msc-standard" class="nav-link" data-scroll-target="#msc-standard">MSc standard</a></li>
+  <li><a href="#phd-standard" id="toc-phd-standard" class="nav-link" data-scroll-target="#phd-standard">PhD standard</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-graduate-standard" id="toc-demonstrate-graduate-standard" class="nav-link" data-scroll-target="#demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY II · WEEK 09</p>
+</div>
+<section id="interaction-mediation-and-heterogeneous-effects" class="level1">
+<h1>Interaction, Mediation and Heterogeneous Effects</h1>
+<section id="decompose-variation-in-effects-without-turning-subgroup-analyses-into-a-search-for-significance." class="level2">
+<h2 class="anchored" data-anchor-id="decompose-variation-in-effects-without-turning-subgroup-analyses-into-a-search-for-significance.">Decompose variation in effects without turning subgroup analyses into a search for significance.</h2>
+<p><span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span></p>
+</section>
+</section>
+</div>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>state the target estimand in population, strategy, outcome, time and effect-measure terms;</li>
+<li>identify the assumptions required for the week’s method;</li>
+<li>distinguish identification from estimation;</li>
+<li>select an analysis that corresponds to the scientific question;</li>
+<li>interpret absolute and relative effects with uncertainty;</li>
+<li>diagnose at least one failure mode using subject-matter reasoning;</li>
+<li>implement or outline a reproducible analysis in R; and</li>
+<li>defend what the resulting estimate can and cannot support.</li>
+</ol>
+</section>
+<section id="orient-the-effect-was-significant-in-women-but-not-men-is-not-an-interaction-test" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-the-effect-was-significant-in-women-but-not-men-is-not-an-interaction-test">ORIENT · “The effect was significant in women but not men” is not an interaction test</h2>
+<p>Effect heterogeneity requires comparing effects, not comparing p-values. It also requires specifying the scale on which heterogeneity matters.</p>
+</section>
+<section id="learn-1-additive-and-multiplicative-interaction" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-additive-and-multiplicative-interaction">LEARN 1 · Additive and multiplicative interaction</h2>
+<p>For binary exposures <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, additive interaction asks whether their joint excess risk differs from the sum of individual excess risks. One measure is the relative excess risk due to interaction (RERI):</p>
+<p><span class="math display">\[RERI=RR_{11}-RR_{10}-RR_{01}+1.\]</span></p>
+<p>Multiplicative interaction asks whether the joint relative effect differs from the product of separate relative effects.</p>
+<p>Public-health planning often benefits from additive interaction because it corresponds more directly to excess cases.</p>
+</section>
+<section id="learn-2-effect-measure-modification" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-effect-measure-modification">LEARN 2 · Effect-measure modification</h2>
+<p>Effect modification is a property of the chosen measure and population. A treatment may have a constant relative effect but larger absolute benefit in higher-risk groups.</p>
+<p>Report stratum-specific absolute and relative effects with confidence intervals. Avoid dichotomising continuous modifiers without strong justification.</p>
+</section>
+<section id="learn-3-mediation-questions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-mediation-questions">LEARN 3 · Mediation questions</h2>
+<p>If treatment <span class="math inline">\(A\)</span> affects mediator <span class="math inline">\(M\)</span>, which affects outcome <span class="math inline">\(Y\)</span>, several estimands are possible:</p>
+<ul>
+<li>total effect of <span class="math inline">\(A\)</span>;</li>
+<li>controlled direct effect fixing <span class="math inline">\(M\)</span> to a specified value;</li>
+<li>natural direct and indirect effects comparing mediator values that would arise under different exposure states;</li>
+<li>interventional analogues that may require less cross-world interpretation.</li>
+</ul>
+<p>Each estimand answers a different scientific question.</p>
+</section>
+<section id="learn-4-mediator-outcome-confounding" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-mediator-outcome-confounding">LEARN 4 · Mediator-outcome confounding</h2>
+<p>Natural direct and indirect effects require strong assumptions about confounding of the exposure-outcome, exposure-mediator and mediator-outcome relationships. Exposure-induced mediator-outcome confounders create additional complexity.</p>
+<p>Therefore, “adjusting for the mediator and comparing coefficients” is not a general mediation analysis.</p>
+</section>
+<section id="learn-5-heterogeneous-treatment-effects-and-multiplicity" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-heterogeneous-treatment-effects-and-multiplicity">LEARN 5 · Heterogeneous treatment effects and multiplicity</h2>
+<p>Exploring many subgroups creates false-positive findings and unstable estimates. Prespecify important modifiers, use shrinkage or hierarchical approaches where appropriate, and distinguish exploratory heterogeneity from confirmatory evidence.</p>
+</section>
+<section id="phd-extension" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="phd-extension">PHD EXTENSION</h2>
+<p>Modern heterogeneous-treatment-effect methods include causal forests and Bayesian hierarchical models. These methods can discover complex effect variation but still rely on identification assumptions and require careful external validation.</p>
+</section>
+<section id="apply" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="apply">APPLY</h2>
+<p>Using one intervention, specify a total-effect question, a mediation question and an effect-modification question. For each, define the estimand and explain why the same regression model cannot answer all three automatically.</p>
+</section>
+<section id="methods-workshop-separate-heterogeneity-from-mediation" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="methods-workshop-separate-heterogeneity-from-mediation">METHODS WORKSHOP · Separate heterogeneity from mediation</h2>
+<p>Suppose a community intervention reduces 1-year hypertension risk. You observe larger absolute benefit in older adults and hypothesise that medication adherence mediates part of the effect.</p>
+<p>These are two different questions.</p>
+<section id="effect-modification-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="effect-modification-analysis">Effect modification analysis</h3>
+<p>Estimate standardised risks under intervention/control within prespecified age strata. Report both risk differences and risk ratios. If baseline risk is higher in older adults, absolute benefit can be larger even when the relative effect is constant.</p>
+<p>A formal interaction contrast on the additive scale can be estimated by standardised risks rather than relying solely on product terms.</p>
+</section>
+<section id="reri" class="level3">
+<h3 class="anchored" data-anchor-id="reri">RERI</h3>
+<p>For binary exposure <span class="math inline">\(A\)</span> and modifier <span class="math inline">\(B\)</span> with a causal interpretation:</p>
+<p><span class="math display">\[RERI=RR_{11}-RR_{10}-RR_{01}+1.\]</span></p>
+<p>RERI &gt; 0 suggests positive interaction on the additive scale relative to the reference group, under assumptions. Confidence intervals require appropriate delta-method, bootstrap or model-based calculations.</p>
+</section>
+<section id="mediation-dag" class="level3">
+<h3 class="anchored" data-anchor-id="mediation-dag">Mediation DAG</h3>
+<p>Draw <span class="math inline">\(A\rightarrow M\rightarrow Y\)</span>, with baseline confounders of each relation. Decide whether any mediator-outcome confounder is itself affected by exposure. If yes, conventional natural-effect mediation formulas can fail.</p>
+</section>
+<section id="controlled-direct-effect" class="level3">
+<h3 class="anchored" data-anchor-id="controlled-direct-effect">Controlled direct effect</h3>
+<p>Compare <span class="math inline">\(Y^{a,m}\)</span> under two exposure levels while fixing mediator <span class="math inline">\(M\)</span> to a specified value <span class="math inline">\(m\)</span>. This may be policy-relevant if the mediator could actually be controlled.</p>
+</section>
+<section id="natural-effects" class="level3">
+<h3 class="anchored" data-anchor-id="natural-effects">Natural effects</h3>
+<p>Natural direct effects compare exposure while setting the mediator to the value it would naturally take under a specified exposure state. These estimands rely on stronger cross-world assumptions and can be difficult to interpret for non-manipulable mediators.</p>
+</section>
+<section id="interventional-effects" class="level3">
+<h3 class="anchored" data-anchor-id="interventional-effects">Interventional effects</h3>
+<p>Stochastic/interventional mediation effects replace individual-level natural mediator values with draws from mediator distributions, sometimes avoiding the most problematic cross-world interpretation.</p>
+</section>
+<section id="avoiding-subgroup-fallacies" class="level3">
+<h3 class="anchored" data-anchor-id="avoiding-subgroup-fallacies">Avoiding subgroup fallacies</h3>
+<p>A significant effect in subgroup A and non-significant effect in subgroup B does not prove heterogeneity. Test the contrast directly and report confidence intervals for subgroup effects.</p>
+</section>
+<section id="multiplicity-and-prior-plausibility" class="level3">
+<h3 class="anchored" data-anchor-id="multiplicity-and-prior-plausibility">Multiplicity and prior plausibility</h3>
+<p>If 20 modifiers are tested, some “interactions” will appear by chance. Prespecify a small set grounded in biology, social theory or implementation logic. Treat post-hoc subgroup findings as exploratory unless replicated.</p>
+</section>
+<section id="doctoral-extension-principal-stratification" class="level3">
+<h3 class="anchored" data-anchor-id="doctoral-extension-principal-stratification">Doctoral extension · Principal stratification</h3>
+<p>When post-treatment events such as survival determine whether an outcome is defined, principal-stratification estimands compare latent groups defined by potential values of the post-treatment variable. These methods are conceptually powerful but often weakly identified without strong assumptions.</p>
+</section>
+</section>
+<section id="seminar-notes-choosing-the-scale-that-matters" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="seminar-notes-choosing-the-scale-that-matters">SEMINAR NOTES · Choosing the scale that matters</h2>
+<section id="additive-scale-for-impact" class="level3">
+<h3 class="anchored" data-anchor-id="additive-scale-for-impact">Additive scale for impact</h3>
+<p>If treatment reduces risk from 30% to 20% in group A and from 3% to 2% in group B, both have RR≈0.67 but risk differences of −10 and −1 percentage points. Resource allocation may prioritise group A because more events are preventable.</p>
+</section>
+<section id="multiplicative-scale-for-etiologic-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="multiplicative-scale-for-etiologic-comparison">Multiplicative scale for etiologic comparison</h3>
+<p>Relative effects can be useful when comparing across populations with different baseline risks. But homogeneity on a multiplicative scale does not imply homogeneity on the additive scale.</p>
+</section>
+<section id="standardised-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="standardised-interaction">Standardised interaction</h3>
+<p>Fit a flexible outcome model with treatment, modifier and interaction, then predict counterfactual risks in each modifier stratum. Compute additive and multiplicative contrasts from predictions rather than relying solely on raw regression product terms.</p>
+</section>
+<section id="continuous-modifiers" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-modifiers">Continuous modifiers</h3>
+<p>Avoid median splits. Estimate treatment effects across meaningful values of a continuous modifier using interaction splines or stratified standardisation, with simultaneous confidence bands if many points are shown.</p>
+</section>
+<section id="mediation-and-timing" class="level3">
+<h3 class="anchored" data-anchor-id="mediation-and-timing">Mediation and timing</h3>
+<p>Mediator measurement must occur after exposure and before outcome, and mediator-outcome confounders must be measured at the correct time. Cross-sectional mediator data cannot establish temporal mediation merely because software decomposes coefficients.</p>
+</section>
+<section id="proportion-mediated" class="level3">
+<h3 class="anchored" data-anchor-id="proportion-mediated">Proportion mediated</h3>
+<p>The “proportion mediated” can be unstable or nonsensical when direct and indirect effects have opposite signs or total effects are near zero. Report component effects and scales rather than relying on one percentage.</p>
+</section>
+<section id="policy-mediation" class="level3">
+<h3 class="anchored" data-anchor-id="policy-mediation">Policy mediation</h3>
+<p>Sometimes the useful question is not “how much is mediated?” but “what would happen if we intervened on the mediator distribution?” Interventional mediation estimands can align better with realistic policy interventions.</p>
+</section>
+</section>
+<section id="advanced-synthesis-effect-heterogeneity-interaction-and-mediation-answer-different-scientific-questions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="advanced-synthesis-effect-heterogeneity-interaction-and-mediation-answer-different-scientific-questions">ADVANCED SYNTHESIS · Effect heterogeneity, interaction and mediation answer different scientific questions</h2>
+<p>Epidemiologists often use “interaction” loosely. At graduate level distinguish at least three ideas: statistical interaction in a chosen model, effect-measure modification across strata, and causal mechanisms involving joint interventions.</p>
+<section id="additive-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="additive-interaction">Additive interaction</h3>
+<p>For two binary exposures <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, additive interaction can be examined through risk differences. The relative excess risk due to interaction (RERI) is:</p>
+<p><span class="math display">\[RERI = RR_{11}-RR_{10}-RR_{01}+1.\]</span></p>
+<p>A positive RERI indicates more joint effect on the risk-difference scale than expected from adding the individual excess risks. The attributable proportion due to interaction and synergy index provide related summaries.</p>
+</section>
+<section id="multiplicative-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="multiplicative-interaction">Multiplicative interaction</h3>
+<p>A product term in a log-link model tests departure from multiplicativity of risks/rates; in logistic regression it tests multiplicativity of odds. Presence or absence of interaction can differ by scale. Therefore “there is no interaction” is incomplete without naming the scale.</p>
+</section>
+<section id="effect-measure-modification" class="level3">
+<h3 class="anchored" data-anchor-id="effect-measure-modification">Effect-measure modification</h3>
+<p>Report stratum-specific estimates with uncertainty rather than only a product-term p-value. A clinically important contrast may exist despite weak statistical evidence for heterogeneity, particularly in small subgroups.</p>
+</section>
+<section id="heterogeneity-and-transportability" class="level3">
+<h3 class="anchored" data-anchor-id="heterogeneity-and-transportability">Heterogeneity and transportability</h3>
+<p>Effect modifiers help explain why an intervention may perform differently across populations. Pre-specifying plausible modifiers can improve interpretation and transportability. Post hoc subgroup searches create multiplicity and selective-reporting problems.</p>
+</section>
+<section id="mediation-questions" class="level3">
+<h3 class="anchored" data-anchor-id="mediation-questions">Mediation questions</h3>
+<p>If <span class="math inline">\(A\)</span> affects mediator <span class="math inline">\(M\)</span>, which affects <span class="math inline">\(Y\)</span>, one may ask about total effects, controlled direct effects, natural direct/indirect effects or interventional analogues. These estimands require different assumptions and have different policy interpretations.</p>
+</section>
+<section id="controlled-direct-effect-1" class="level3">
+<h3 class="anchored" data-anchor-id="controlled-direct-effect-1">Controlled direct effect</h3>
+<p>A controlled direct effect compares outcomes under different exposure values while fixing the mediator to a particular value for everyone:</p>
+<p><span class="math display">\[E(Y^{1,m})-E(Y^{0,m}).\]</span></p>
+<p>This may correspond to an intervention if setting <span class="math inline">\(M=m\)</span> is meaningful.</p>
+</section>
+<section id="natural-effects-1" class="level3">
+<h3 class="anchored" data-anchor-id="natural-effects-1">Natural effects</h3>
+<p>Natural direct and indirect effects compare mediator values that would naturally arise under different exposure states. They require strong cross-world assumptions and are problematic when exposure-induced mediator-outcome confounders exist.</p>
+</section>
+<section id="interventional-indirect-effects" class="level3">
+<h3 class="anchored" data-anchor-id="interventional-indirect-effects">Interventional indirect effects</h3>
+<p>Interventional approaches replace person-specific cross-world mediator values with draws from mediator distributions under interventions. They can be more policy-relevant and avoid some cross-world constructs, though identification assumptions remain substantial.</p>
+</section>
+<section id="mediation-versus-adjustment" class="level3">
+<h3 class="anchored" data-anchor-id="mediation-versus-adjustment">Mediation versus adjustment</h3>
+<p>Do not “control for the mediator” in a standard regression and label the change in exposure coefficient the mediated effect. Nonlinearity, exposure-mediator interaction and mediator-outcome confounding make this decomposition generally invalid.</p>
+</section>
+<section id="heterogeneous-treatment-effects-with-machine-learning" class="level3">
+<h3 class="anchored" data-anchor-id="heterogeneous-treatment-effects-with-machine-learning">Heterogeneous treatment effects with machine learning</h3>
+<p>Causal forests and related methods can explore treatment-effect heterogeneity, but apparent subgroup variation can be noisy and non-replicable. Separate discovery from confirmation, use honest sample splitting/cross-fitting, and evaluate whether heterogeneity produces actionable treatment rules.</p>
+</section>
+<section id="equity" class="level3">
+<h3 class="anchored" data-anchor-id="equity">Equity</h3>
+<p>Effect heterogeneity across sex, socioeconomic position, geography or vulnerability should not be interpreted without considering differential baseline risk. A constant relative effect can generate much larger absolute benefit in high-risk groups. Equity decisions often require absolute effects and access constraints, not only subgroup interaction p-values.</p>
+</section>
+<section id="msc-standard" class="level3">
+<h3 class="anchored" data-anchor-id="msc-standard">MSc standard</h3>
+<p>Estimate and interpret interaction on additive and multiplicative scales, produce stratum-specific absolute effects, and distinguish effect modification from confounding.</p>
+</section>
+<section id="phd-standard" class="level3">
+<h3 class="anchored" data-anchor-id="phd-standard">PhD standard</h3>
+<p>Define mediation estimands formally, defend identification assumptions, address exposure-induced mediator-outcome confounding, and separate confirmatory heterogeneity analyses from exploratory subgroup discovery.</p>
+</section>
+</section>
+<section id="demonstrate-graduate-standard" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</h2>
+<p>Submit one short methods memo or reproducible analysis in which you <strong>name the estimand first</strong>, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../learn/epidemiology-ii/week-08.html">← Week 8</a></p>
+<p><a href="../../learn/epidemiology-ii/week-10.html">Week 10 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

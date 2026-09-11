@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Advanced graduate epidemiology: Define the causal quantity before selecting the model.">
+
+<title>Epidemiology II Week 1 — Estimands and Counterfactual Reasoning | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-one-dataset-can-answer-several-different-questions" id="toc-orient-one-dataset-can-answer-several-different-questions" class="nav-link" data-scroll-target="#orient-one-dataset-can-answer-several-different-questions">ORIENT · One dataset can answer several different questions</a></li>
+  <li><a href="#learn-1-potential-outcomes-and-causal-effects" id="toc-learn-1-potential-outcomes-and-causal-effects" class="nav-link" data-scroll-target="#learn-1-potential-outcomes-and-causal-effects">LEARN 1 · Potential outcomes and causal effects</a></li>
+  <li><a href="#learn-2-the-estimand-has-components" id="toc-learn-2-the-estimand-has-components" class="nav-link" data-scroll-target="#learn-2-the-estimand-has-components">LEARN 2 · The estimand has components</a></li>
+  <li><a href="#learn-3-consistency-and-well-defined-interventions" id="toc-learn-3-consistency-and-well-defined-interventions" class="nav-link" data-scroll-target="#learn-3-consistency-and-well-defined-interventions">LEARN 3 · Consistency and well-defined interventions</a></li>
+  <li><a href="#learn-4-exchangeability-and-positivity" id="toc-learn-4-exchangeability-and-positivity" class="nav-link" data-scroll-target="#learn-4-exchangeability-and-positivity">LEARN 4 · Exchangeability and positivity</a></li>
+  <li><a href="#learn-5-time-zero-and-immortal-time" id="toc-learn-5-time-zero-and-immortal-time" class="nav-link" data-scroll-target="#learn-5-time-zero-and-immortal-time">LEARN 5 · Time zero and immortal time</a></li>
+  <li><a href="#worked-example-same-day-art" id="toc-worked-example-same-day-art" class="nav-link" data-scroll-target="#worked-example-same-day-art">WORKED EXAMPLE · Same-day ART</a></li>
+  <li><a href="#what-could-fool-us" id="toc-what-could-fool-us" class="nav-link" data-scroll-target="#what-could-fool-us">WHAT COULD FOOL US?</a></li>
+  <li><a href="#phd-extension-identification-is-not-estimation" id="toc-phd-extension-identification-is-not-estimation" class="nav-link" data-scroll-target="#phd-extension-identification-is-not-estimation">PHD EXTENSION · Identification is not estimation</a></li>
+  <li><a href="#apply" id="toc-apply" class="nav-link" data-scroll-target="#apply">APPLY</a></li>
+  <li><a href="#methods-workshop-write-the-protocol-before-the-model" id="toc-methods-workshop-write-the-protocol-before-the-model" class="nav-link" data-scroll-target="#methods-workshop-write-the-protocol-before-the-model">METHODS WORKSHOP · Write the protocol before the model</a>
+  <ul class="collapse">
+  <li><a href="#grace-periods" id="toc-grace-periods" class="nav-link" data-scroll-target="#grace-periods">Grace periods</a></li>
+  <li><a href="#competing-events" id="toc-competing-events" class="nav-link" data-scroll-target="#competing-events">Competing events</a></li>
+  <li><a href="#descriptive-versus-causal-contrasts" id="toc-descriptive-versus-causal-contrasts" class="nav-link" data-scroll-target="#descriptive-versus-causal-contrasts">Descriptive versus causal contrasts</a></li>
+  <li><a href="#estimands-beyond-ate" id="toc-estimands-beyond-ate" class="nav-link" data-scroll-target="#estimands-beyond-ate">Estimands beyond ATE</a></li>
+  <li><a href="#a-practical-estimand-template" id="toc-a-practical-estimand-template" class="nav-link" data-scroll-target="#a-practical-estimand-template">A practical estimand template</a></li>
+  <li><a href="#r-design-object-before-data-analysis" id="toc-r-design-object-before-data-analysis" class="nav-link" data-scroll-target="#r-design-object-before-data-analysis">R design object before data analysis</a></li>
+  <li><a href="#common-failure-modes" id="toc-common-failure-modes" class="nav-link" data-scroll-target="#common-failure-modes">Common failure modes</a></li>
+  <li><a href="#doctoral-exercise" id="toc-doctoral-exercise" class="nav-link" data-scroll-target="#doctoral-exercise">Doctoral exercise</a></li>
+  </ul></li>
+  <li><a href="#seminar-notes-ambiguity-audits" id="toc-seminar-notes-ambiguity-audits" class="nav-link" data-scroll-target="#seminar-notes-ambiguity-audits">SEMINAR NOTES · Ambiguity audits</a>
+  <ul class="collapse">
+  <li><a href="#eligibility-and-treatment-assignment-are-linked" id="toc-eligibility-and-treatment-assignment-are-linked" class="nav-link" data-scroll-target="#eligibility-and-treatment-assignment-are-linked">Eligibility and treatment assignment are linked</a></li>
+  <li><a href="#multiple-versions-of-treatment" id="toc-multiple-versions-of-treatment" class="nav-link" data-scroll-target="#multiple-versions-of-treatment">Multiple versions of treatment</a></li>
+  <li><a href="#interference" id="toc-interference" class="nav-link" data-scroll-target="#interference">Interference</a></li>
+  <li><a href="#dynamic-treatment-strategies" id="toc-dynamic-treatment-strategies" class="nav-link" data-scroll-target="#dynamic-treatment-strategies">Dynamic treatment strategies</a></li>
+  <li><a href="#estimands-and-decision-makers" id="toc-estimands-and-decision-makers" class="nav-link" data-scroll-target="#estimands-and-decision-makers">Estimands and decision makers</a></li>
+  <li><a href="#reproducibility-check" id="toc-reproducibility-check" class="nav-link" data-scroll-target="#reproducibility-check">Reproducibility check</a></li>
+  </ul></li>
+  <li><a href="#advanced-synthesis-from-a-vague-question-to-an-estimand-that-can-actually-be-estimated" id="toc-advanced-synthesis-from-a-vague-question-to-an-estimand-that-can-actually-be-estimated" class="nav-link" data-scroll-target="#advanced-synthesis-from-a-vague-question-to-an-estimand-that-can-actually-be-estimated">ADVANCED SYNTHESIS · From a vague question to an estimand that can actually be estimated</a>
+  <ul class="collapse">
+  <li><a href="#potential-outcomes-and-individual-causal-effects" id="toc-potential-outcomes-and-individual-causal-effects" class="nav-link" data-scroll-target="#potential-outcomes-and-individual-causal-effects">Potential outcomes and individual causal effects</a></li>
+  <li><a href="#consistency" id="toc-consistency" class="nav-link" data-scroll-target="#consistency">Consistency</a></li>
+  <li><a href="#exchangeability" id="toc-exchangeability" class="nav-link" data-scroll-target="#exchangeability">Exchangeability</a></li>
+  <li><a href="#positivity" id="toc-positivity" class="nav-link" data-scroll-target="#positivity">Positivity</a></li>
+  <li><a href="#identification-versus-estimation" id="toc-identification-versus-estimation" class="nav-link" data-scroll-target="#identification-versus-estimation">Identification versus estimation</a></li>
+  <li><a href="#target-population-versus-study-sample" id="toc-target-population-versus-study-sample" class="nav-link" data-scroll-target="#target-population-versus-study-sample">Target population versus study sample</a></li>
+  <li><a href="#time-zero-is-part-of-the-estimand" id="toc-time-zero-is-part-of-the-estimand" class="nav-link" data-scroll-target="#time-zero-is-part-of-the-estimand">Time zero is part of the estimand</a></li>
+  <li><a href="#competing-events-and-intercurrent-events" id="toc-competing-events-and-intercurrent-events" class="nav-link" data-scroll-target="#competing-events-and-intercurrent-events">Competing events and intercurrent events</a></li>
+  <li><a href="#msc-standard" id="toc-msc-standard" class="nav-link" data-scroll-target="#msc-standard">MSc standard</a></li>
+  <li><a href="#phd-standard" id="toc-phd-standard" class="nav-link" data-scroll-target="#phd-standard">PhD standard</a></li>
+  <li><a href="#oral-examination-prompts" id="toc-oral-examination-prompts" class="nav-link" data-scroll-target="#oral-examination-prompts">Oral examination prompts</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-graduate-standard" id="toc-demonstrate-graduate-standard" class="nav-link" data-scroll-target="#demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY II · WEEK 01</p>
+</div>
+<section id="estimands-and-counterfactual-reasoning" class="level1">
+<h1>Estimands and Counterfactual Reasoning</h1>
+<section id="define-the-causal-quantity-before-selecting-the-model." class="level2">
+<h2 class="anchored" data-anchor-id="define-the-causal-quantity-before-selecting-the-model.">Define the causal quantity before selecting the model.</h2>
+<p><span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span></p>
+</section>
+</section>
+</div>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>state the target estimand in population, strategy, outcome, time and effect-measure terms;</li>
+<li>identify the assumptions required for the week’s method;</li>
+<li>distinguish identification from estimation;</li>
+<li>select an analysis that corresponds to the scientific question;</li>
+<li>interpret absolute and relative effects with uncertainty;</li>
+<li>diagnose at least one failure mode using subject-matter reasoning;</li>
+<li>implement or outline a reproducible analysis in R; and</li>
+<li>defend what the resulting estimate can and cannot support.</li>
+</ol>
+</section>
+<section id="orient-one-dataset-can-answer-several-different-questions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-one-dataset-can-answer-several-different-questions">ORIENT · One dataset can answer several different questions</h2>
+<p>Suppose a national HIV programme wants to know whether same-day ART initiation reduces 12-month mortality. A routine database contains treatment dates, baseline CD4 counts, facility characteristics, follow-up visits and deaths.</p>
+<p>A naïve question is: <strong>“Is same-day ART associated with lower mortality?”</strong> An advanced epidemiological question specifies:</p>
+<ul>
+<li>the target population;</li>
+<li>eligibility criteria;</li>
+<li>the treatment strategies being compared;</li>
+<li>time zero;</li>
+<li>the outcome and follow-up horizon;</li>
+<li>the causal contrast or estimand;</li>
+<li>the assumptions needed to identify it from observed data.</li>
+</ul>
+<p>If these pieces are not aligned, a sophisticated model can estimate a precise answer to the wrong question.</p>
+</section>
+<section id="learn-1-potential-outcomes-and-causal-effects" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-potential-outcomes-and-causal-effects">LEARN 1 · Potential outcomes and causal effects</h2>
+<p>Let <span class="math inline">\(Y^1\)</span> denote the outcome that would occur under treatment strategy 1 and <span class="math inline">\(Y^0\)</span> under strategy 0. For a binary outcome, a population average treatment effect can be expressed as:</p>
+<p><span class="math display">\[ATE=E(Y^1)-E(Y^0)\]</span></p>
+<p>or on a ratio scale:</p>
+<p><span class="math display">\[RR=E(Y^1)/E(Y^0).\]</span></p>
+<p>The individual causal effect <span class="math inline">\(Y^1-Y^0\)</span> cannot be observed because each person follows only one treatment history. Epidemiology therefore uses groups plus assumptions to estimate population contrasts between unobserved potential outcomes.</p>
+<p>This notation is useful because it prevents the word “effect” from floating free of a defined intervention and population.</p>
+</section>
+<section id="learn-2-the-estimand-has-components" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-the-estimand-has-components">LEARN 2 · The estimand has components</h2>
+<p>A defensible estimand usually requires at least:</p>
+<ol type="1">
+<li><strong>Population:</strong> who is targeted?</li>
+<li><strong>Treatment/exposure strategies:</strong> what exactly is compared?</li>
+<li><strong>Outcome:</strong> what is measured and how?</li>
+<li><strong>Time horizon:</strong> by when?</li>
+<li><strong>Summary measure:</strong> risk difference, risk ratio, mean difference, survival difference, etc.</li>
+<li><strong>Intercurrent events:</strong> how are competing events, treatment switching or death handled?</li>
+</ol>
+<p>Modern trial guidance increasingly emphasises these components because ambiguous treatment effects lead to ambiguous analyses.</p>
+</section>
+<section id="learn-3-consistency-and-well-defined-interventions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-consistency-and-well-defined-interventions">LEARN 3 · Consistency and well-defined interventions</h2>
+<p>Consistency links observed outcomes to potential outcomes under the strategy actually received. It is difficult to defend when “exposure” bundles together many versions with different consequences.</p>
+<p>“High-quality care” is not one intervention. “A facility delivers quarterly medication review, automated refill reminders and pharmacist reconciliation” is more specific. For non-manipulable attributes such as sex or genotype, causal questions need additional care because hypothetical interventions are not straightforward.</p>
+</section>
+<section id="learn-4-exchangeability-and-positivity" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-exchangeability-and-positivity">LEARN 4 · Exchangeability and positivity</h2>
+<p><strong>Conditional exchangeability</strong> requires that, after conditioning on appropriate covariates <span class="math inline">\(L\)</span>, treatment groups are comparable with respect to potential outcomes:</p>
+<p><span class="math display">\[Y^a \perp A \mid L.\]</span></p>
+<p>This is an assumption, not a test result.</p>
+<p><strong>Positivity</strong> requires that every covariate pattern relevant to the target population has a non-zero probability of receiving each strategy under comparison. If no critically ill patient ever remains untreated, the untreated counterfactual for critically ill patients is unsupported by the data.</p>
+<p>Near-violations create unstable weights and model extrapolation even when mathematical positivity is not exactly zero.</p>
+</section>
+<section id="learn-5-time-zero-and-immortal-time" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-time-zero-and-immortal-time">LEARN 5 · Time zero and immortal time</h2>
+<p>Eligibility, treatment assignment/classification and start of follow-up should align. If treatment is defined using information that occurs after follow-up has begun, participants may have to survive event-free to be classified as treated. This creates immortal time.</p>
+<p>A target-trial mindset asks: <strong>At what moment would a real trial randomise eligible participants?</strong> Observational emulation should align exposure assignment and outcome follow-up to that same moment.</p>
+</section>
+<section id="worked-example-same-day-art" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="worked-example-same-day-art">WORKED EXAMPLE · Same-day ART</h2>
+<p>Target population: treatment-naïve adults newly eligible for ART at participating facilities.</p>
+<p>Strategies: initiate ART on the day of eligibility versus initiate 1–7 days later.</p>
+<p>Time zero: date eligibility is confirmed.</p>
+<p>Outcome: all-cause mortality by 12 months.</p>
+<p>Estimand: 12-month risk difference and risk ratio under the two strategies.</p>
+<p>Identification concerns: baseline disease severity, pregnancy, TB status, facility readiness and calendar time may influence both treatment timing and mortality; loss to follow-up may be informative; treatment strategy needs a rule for people who die before delayed initiation.</p>
+</section>
+<section id="what-could-fool-us" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="what-could-fool-us">WHAT COULD FOOL US?</h2>
+<ul>
+<li>Defining the treatment using future information.</li>
+<li>Adjusting for variables measured after treatment begins.</li>
+<li>Estimating an odds ratio when the policy question concerns absolute 12-month risk.</li>
+<li>Claiming exchangeability because covariate balance “looks good.”</li>
+<li>Ignoring patients with covariate patterns for whom one strategy never occurs.</li>
+</ul>
+</section>
+<section id="phd-extension-identification-is-not-estimation" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="phd-extension-identification-is-not-estimation">PHD EXTENSION · Identification is not estimation</h2>
+<p>Identification asks whether the causal estimand can be expressed as a function of the observed-data distribution under stated assumptions. Estimation asks how to approximate that function with finite data. A better estimator cannot repair a non-identified causal question.</p>
+<p>This distinction becomes central when comparing g-computation, weighting, matching and doubly robust estimators later in the course.</p>
+</section>
+<section id="apply" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="apply">APPLY</h2>
+<p>Write a one-page estimand specification for a dissertation question. Include a hypothetical target trial even if your final study is observational. Explicitly state one exchangeability, one positivity and one consistency concern.</p>
+</section>
+<section id="methods-workshop-write-the-protocol-before-the-model" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="methods-workshop-write-the-protocol-before-the-model">METHODS WORKSHOP · Write the protocol before the model</h2>
+<p>A useful discipline is to write the observational analysis as though a protocol committee will reject any ambiguity. For the same-day ART example, specify each component in operational language.</p>
+<p><strong>Eligibility:</strong> adults aged 18 years or older, treatment-naïve, confirmed eligible for ART, with no prior ART in the preceding 12 months, entering one of the participating facilities during the study period.</p>
+<p><strong>Strategy 1:</strong> initiate ART on the eligibility date.<br>
+<strong>Strategy 2:</strong> initiate ART between day 1 and day 7 after eligibility, provided the patient remains alive and eligible.</p>
+<p>Immediately a problem appears: strategy 2 is not defined for patients who die before day 7. A real trial would assign them to a strategy at baseline, not wait to see whether they survive. That forces the analyst to decide whether the intervention is <em>assignment to delayed initiation</em> or <em>actual initiation in a grace period</em>. Those are different strategies.</p>
+<section id="grace-periods" class="level3">
+<h3 class="anchored" data-anchor-id="grace-periods">Grace periods</h3>
+<p>A grace period allows treatment to start within a window after eligibility. Observational emulation must avoid giving treated patients guaranteed survival time during the grace period. Approaches include cloning individuals into compatible strategies and censoring clones when their observed treatment history becomes incompatible, then weighting for the induced censoring.</p>
+<p>At MSc level, the important point is conceptual: <strong>a grace period changes the treatment strategy and the analysis.</strong> At doctoral level, the implementation should be explicit enough that another analyst could reproduce the person-time classification.</p>
+</section>
+<section id="competing-events" class="level3">
+<h3 class="anchored" data-anchor-id="competing-events">Competing events</h3>
+<p>Suppose the outcome is TB diagnosis by 12 months and death prevents future TB diagnosis. Two estimands are possible:</p>
+<ul>
+<li>the risk of TB in a hypothetical world where death is somehow eliminated;</li>
+<li>the real-world cumulative incidence of TB where death is allowed to compete.</li>
+</ul>
+<p>These correspond to different decision questions. A study must not treat the handling of death as a technical afterthought.</p>
+</section>
+<section id="descriptive-versus-causal-contrasts" class="level3">
+<h3 class="anchored" data-anchor-id="descriptive-versus-causal-contrasts">Descriptive versus causal contrasts</h3>
+<p>The observed difference</p>
+<p><span class="math display">\[E(Y\mid A=1)-E(Y\mid A=0)\]</span></p>
+<p>is an associational contrast. The causal contrast</p>
+<p><span class="math display">\[E(Y^1)-E(Y^0)\]</span></p>
+<p>requires identification assumptions. The two coincide under conditions such as exchangeability, positivity and consistency. This distinction is the intellectual centre of advanced epidemiology.</p>
+</section>
+<section id="estimands-beyond-ate" class="level3">
+<h3 class="anchored" data-anchor-id="estimands-beyond-ate">Estimands beyond ATE</h3>
+<p>The <strong>ATE</strong> asks about the whole target population. The <strong>ATT</strong> asks about people who actually received treatment. The <strong>ATU</strong> asks about untreated people. Policy questions may target one rather than another. If a programme is deciding whether to expand an intervention to those not currently receiving it, the ATU can sometimes be more directly relevant than the ATE.</p>
+</section>
+<section id="a-practical-estimand-template" class="level3">
+<h3 class="anchored" data-anchor-id="a-practical-estimand-template">A practical estimand template</h3>
+<p>Complete this before any analysis:</p>
+<blockquote class="blockquote">
+<p>Among <strong>[target population]</strong> eligible at <strong>[time zero]</strong>, what is the <strong>[time horizon]</strong> risk/mean/rate of <strong>[outcome]</strong> if everyone followed <strong>[strategy A]</strong> compared with if everyone followed <strong>[strategy B]</strong>, summarised as <strong>[risk difference/risk ratio/etc.]</strong>?</p>
+</blockquote>
+<p>Then add:</p>
+<blockquote class="blockquote">
+<p>Identification requires <strong>[exchangeability statement]</strong>, <strong>[positivity statement]</strong>, <strong>[consistency statement]</strong>, and valid measurement/selection assumptions.</p>
+</blockquote>
+</section>
+<section id="r-design-object-before-data-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="r-design-object-before-data-analysis">R design object before data analysis</h3>
+<p>Even without a specialised package, encode the protocol in an analysis object or script header:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>estimand <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">population =</span> <span class="st">"ART-naive adults newly eligible for ART"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">treatment_a =</span> <span class="st">"same-day initiation"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">treatment_b =</span> <span class="st">"initiation days 1-7"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">time_zero =</span> <span class="st">"eligibility date"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">outcome =</span> <span class="st">"all-cause mortality"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">horizon_days =</span> <span class="dv">365</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">measure =</span> <span class="fu">c</span>(<span class="st">"risk_difference"</span>, <span class="st">"risk_ratio"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This may seem trivial, but it prevents analytic drift when code becomes complex.</p>
+</section>
+<section id="common-failure-modes" class="level3">
+<h3 class="anchored" data-anchor-id="common-failure-modes">Common failure modes</h3>
+<ul>
+<li><strong>Prevalent-user bias:</strong> including long-term users selects survivors and mixes treatment history.</li>
+<li><strong>Depletion of susceptibles:</strong> early adverse events may remove vulnerable users before study entry.</li>
+<li><strong>Time-lag bias:</strong> treatment groups differ in disease duration or severity because they enter at different treatment stages.</li>
+<li><strong>Eligibility drift:</strong> inclusion criteria change across calendar periods or facilities.</li>
+<li><strong>Outcome-window asymmetry:</strong> one group is observed longer or from a different starting point.</li>
+</ul>
+</section>
+<section id="doctoral-exercise" class="level3">
+<h3 class="anchored" data-anchor-id="doctoral-exercise">Doctoral exercise</h3>
+<p>Take a published observational causal study and reconstruct its target trial. If you cannot determine one of the seven protocol components from the paper, record that as a reporting or design ambiguity. Then state whether the published analysis estimates the same effect as the reconstructed trial.</p>
+</section>
+</section>
+<section id="seminar-notes-ambiguity-audits" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="seminar-notes-ambiguity-audits">SEMINAR NOTES · Ambiguity audits</h2>
+<p>Before analysing a causal question, conduct an <strong>ambiguity audit</strong>. Circle every word that could represent more than one intervention or outcome. “Early treatment,” “high exposure,” “adequate care,” “improved survival” and “routine follow-up” all require operational definitions.</p>
+<p>For each ambiguous phrase, specify what data would distinguish alternative versions. If “early ART” means within 7 days, determine whether time is measured from diagnosis, eligibility, enrolment or first prescription. Different anchors create different cohorts and can change the estimate.</p>
+<section id="eligibility-and-treatment-assignment-are-linked" class="level3">
+<h3 class="anchored" data-anchor-id="eligibility-and-treatment-assignment-are-linked">Eligibility and treatment assignment are linked</h3>
+<p>In a well-specified trial, eligibility is determined before assignment. Observational analyses often violate this by using information accumulated after treatment to define eligibility. For example, excluding patients who die within 30 days because they lacked a follow-up viral load conditions on a post-baseline event. This can create survivor selection.</p>
+</section>
+<section id="multiple-versions-of-treatment" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-versions-of-treatment">Multiple versions of treatment</h3>
+<p>Consistency assumes that the observed treatment corresponds sufficiently to the strategy being evaluated. If “community ART” includes home delivery, peer groups, outreach vans and pharmacy pickup, each with different effects, a single binary variable may conceal treatment-version heterogeneity. Either define a composite intervention deliberately or model versions separately.</p>
+</section>
+<section id="interference" class="level3">
+<h3 class="anchored" data-anchor-id="interference">Interference</h3>
+<p>Standard causal notation often assumes one person’s treatment does not affect another person’s outcome. This can fail in infectious disease, vaccination, network interventions and facility-level programmes. Vaccinating one person changes exposure risk for others; improving one facility can shift patients from neighbouring facilities.</p>
+<p>When interference is plausible, specify whether the estimand is a direct effect, indirect/spillover effect, total effect or policy effect under a coverage strategy. Cluster-level interventions may be a more natural unit.</p>
+</section>
+<section id="dynamic-treatment-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-treatment-strategies">Dynamic treatment strategies</h3>
+<p>Some causal questions compare rules rather than fixed treatments. Example: “start antihypertensive therapy when systolic BP exceeds 160 mmHg” versus “start when it exceeds 140 mmHg.” The intervention depends on evolving patient history. This distinction becomes critical in longitudinal g-methods.</p>
+</section>
+<section id="estimands-and-decision-makers" class="level3">
+<h3 class="anchored" data-anchor-id="estimands-and-decision-makers">Estimands and decision makers</h3>
+<p>A ministry may care about population-average risk reduction; a clinician may care about individual predicted benefit; an implementation team may care about effect among those reachable by the programme. These are not merely communication preferences—they can correspond to different target populations and estimands.</p>
+</section>
+<section id="reproducibility-check" class="level3">
+<h3 class="anchored" data-anchor-id="reproducibility-check">Reproducibility check</h3>
+<p>A colleague who sees only your estimand statement should be able to construct the skeleton of the study design. If they cannot determine who enters, when follow-up starts, what strategies are compared and when outcome is measured, the estimand is still too vague.</p>
+</section>
+</section>
+<section id="advanced-synthesis-from-a-vague-question-to-an-estimand-that-can-actually-be-estimated" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="advanced-synthesis-from-a-vague-question-to-an-estimand-that-can-actually-be-estimated">ADVANCED SYNTHESIS · From a vague question to an estimand that can actually be estimated</h2>
+<p>At advanced level, the phrase <strong>“the effect of exposure A on outcome Y” is incomplete</strong>. Before any modelling, specify at least five components: the target population, the treatment or exposure strategies being contrasted, the outcome, the time horizon, and the summary measure. For a vaccine example, “effectiveness” could mean the 6-month risk ratio for laboratory-confirmed infection among vaccine-eligible adults, the 12-month risk difference for hospitalisation in the national adult population, or the per-protocol effect among people who would adhere to either strategy. These are different scientific questions.</p>
+<section id="potential-outcomes-and-individual-causal-effects" class="level3">
+<h3 class="anchored" data-anchor-id="potential-outcomes-and-individual-causal-effects">Potential outcomes and individual causal effects</h3>
+<p>Let <span class="math inline">\(Y^1\)</span> denote the outcome that would be observed under treatment and <span class="math inline">\(Y^0\)</span> the outcome under no treatment. The individual causal effect <span class="math inline">\(Y^1-Y^0\)</span> cannot generally be observed because only one treatment is received. Epidemiology therefore targets population summaries such as:</p>
+<p><span class="math display">\[ATE = E(Y^1)-E(Y^0).\]</span></p>
+<p>For binary outcomes, the same counterfactual risks can be summarised as a risk difference, risk ratio or odds ratio. The effect measure is not cosmetic: additive effects answer questions about excess burden and prevention; relative effects answer proportional questions; odds ratios can be useful for some designs but are less directly interpretable as risk contrasts.</p>
+</section>
+<section id="consistency" class="level3">
+<h3 class="anchored" data-anchor-id="consistency">Consistency</h3>
+<p>Consistency links the observed outcome to the corresponding potential outcome: if a person actually receives strategy <span class="math inline">\(A=a\)</span>, then under a sufficiently well-defined intervention <span class="math inline">\(Y=Y^a\)</span>. This becomes difficult when “treatment” hides multiple versions. “Received hypertension care” might include different drugs, doses, adherence patterns and co-interventions. A causal estimand is only as coherent as the intervention it describes.</p>
+</section>
+<section id="exchangeability" class="level3">
+<h3 class="anchored" data-anchor-id="exchangeability">Exchangeability</h3>
+<p>Conditional exchangeability means that after controlling for a sufficient set of pre-exposure variables <span class="math inline">\(L\)</span>:</p>
+<p><span class="math display">\[Y^a \perp A \mid L.\]</span></p>
+<p>This is the formal version of “no uncontrolled confounding” for the specified contrast. It is not a statistical property that can be proved from the observed data. It is an argument based on design, subject-matter knowledge, causal structure and measurement quality.</p>
+</section>
+<section id="positivity" class="level3">
+<h3 class="anchored" data-anchor-id="positivity">Positivity</h3>
+<p>For every covariate pattern included in the target population, each treatment strategy must have a non-zero probability:</p>
+<p><span class="math display">\[0 &lt; P(A=a\mid L=l) &lt; 1.\]</span></p>
+<p>If critically ill patients always receive treatment A and never treatment B, the data contain no direct information about the B counterfactual in that stratum. Flexible models may still output predictions, but that is extrapolation, not recovered evidence.</p>
+</section>
+<section id="identification-versus-estimation" class="level3">
+<h3 class="anchored" data-anchor-id="identification-versus-estimation">Identification versus estimation</h3>
+<p>Identification asks whether the causal estimand can be expressed as a function of the observed-data distribution under stated assumptions. Estimation asks how to calculate that function from a finite sample. A beautifully estimated quantity can still lack causal identification. Conversely, an identifiable causal effect may be estimated imprecisely because of small samples or weak overlap.</p>
+</section>
+<section id="target-population-versus-study-sample" class="level3">
+<h3 class="anchored" data-anchor-id="target-population-versus-study-sample">Target population versus study sample</h3>
+<p>A study sample is not automatically the target population. If a cohort is drawn from tertiary hospitals, the causal effect among those patients may differ from the effect among all people with the condition. Define whether the target is the source population, trial-eligible population, treated population, overlap population or a larger population to which results will later be transported.</p>
+</section>
+<section id="time-zero-is-part-of-the-estimand" class="level3">
+<h3 class="anchored" data-anchor-id="time-zero-is-part-of-the-estimand">Time zero is part of the estimand</h3>
+<p>Eligibility, treatment assignment and start of follow-up should align. If treatment is classified using information collected after follow-up begins, immortal-time and selection problems can arise. A doctoral-level protocol should be able to point to one unambiguous <strong>time zero</strong> for each strategy.</p>
+</section>
+<section id="competing-events-and-intercurrent-events" class="level3">
+<h3 class="anchored" data-anchor-id="competing-events-and-intercurrent-events">Competing events and intercurrent events</h3>
+<p>Death, treatment switching, loss to follow-up and rescue therapy may alter what the causal question means. Do you want a total effect regardless of switching, an effect under sustained treatment, an effect in a hypothetical world without the competing event, or an effect on a composite endpoint? Naming the estimand forces these decisions into the protocol rather than burying them in analysis.</p>
+</section>
+<section id="msc-standard" class="level3">
+<h3 class="anchored" data-anchor-id="msc-standard">MSc standard</h3>
+<p>Given a substantive question, write a one-paragraph estimand statement and identify consistency, exchangeability and positivity assumptions. Then show how a crude association differs from the intended causal contrast.</p>
+</section>
+<section id="phd-standard" class="level3">
+<h3 class="anchored" data-anchor-id="phd-standard">PhD standard</h3>
+<p>Translate the question into potential-outcome notation, state the identification assumptions formally, distinguish the observed-data functional from the estimator, and defend the target population and intercurrent-event strategy. If any assumption is implausible, reformulate the question rather than merely adding a limitation paragraph.</p>
+</section>
+<section id="oral-examination-prompts" class="level3">
+<h3 class="anchored" data-anchor-id="oral-examination-prompts">Oral examination prompts</h3>
+<ol type="1">
+<li>What exactly would have to be randomised in your ideal experiment?</li>
+<li>Which part of your causal question is not encoded by the regression model?</li>
+<li>Where does positivity fail, and what population remains supportable?</li>
+<li>Which versions of treatment threaten consistency?</li>
+<li>If death prevents the outcome, what estimand are you actually targeting?</li>
+</ol>
+</section>
+</section>
+<section id="demonstrate-graduate-standard" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</h2>
+<p>Submit one short methods memo or reproducible analysis in which you <strong>name the estimand first</strong>, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../learn/epidemiology.html">← Epidemiology I</a></p>
+<p><a href="../../learn/epidemiology-ii/week-02.html">Week 2 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

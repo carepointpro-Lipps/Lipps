@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -216,20 +245,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#what-did-we-learn" id="toc-what-did-we-learn" class="nav-link" data-scroll-target="#what-did-we-learn">What did we learn?</a></li>
   </ul></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a>
-  <ul class="collapse">
-  <li><a href="#which-part-of-the-epidemiological-definition-is-mainly-concerned-with-person-place-and-time" id="toc-which-part-of-the-epidemiological-definition-is-mainly-concerned-with-person-place-and-time" class="nav-link" data-scroll-target="#which-part-of-the-epidemiological-definition-is-mainly-concerned-with-person-place-and-time">1. Which part of the epidemiological definition is mainly concerned with person, place and time?</a></li>
-  <li><a href="#why-is-a-denominator-important-when-comparing-two-populations" id="toc-why-is-a-denominator-important-when-comparing-two-populations" class="nav-link" data-scroll-target="#why-is-a-denominator-important-when-comparing-two-populations">2. Why is a denominator important when comparing two populations?</a></li>
-  <li><a href="#which-activity-is-most-clearly-analytic-epidemiology" id="toc-which-activity-is-most-clearly-analytic-epidemiology" class="nav-link" data-scroll-target="#which-activity-is-most-clearly-analytic-epidemiology">3. Which activity is most clearly analytic epidemiology?</a></li>
-  <li><a href="#a-surveillance-programme-broadens-its-case-definition.-what-is-the-most-immediate-concern-when-interpreting-the-subsequent-rise-in-cases" id="toc-a-surveillance-programme-broadens-its-case-definition.-what-is-the-most-immediate-concern-when-interpreting-the-subsequent-rise-in-cases" class="nav-link" data-scroll-target="#a-surveillance-programme-broadens-its-case-definition.-what-is-the-most-immediate-concern-when-interpreting-the-subsequent-rise-in-cases">4. A surveillance programme broadens its case definition. What is the most immediate concern when interpreting the subsequent rise in cases?</a></li>
-  <li><a href="#which-statement-best-distinguishes-epidemiology-from-clinical-care" id="toc-which-statement-best-distinguishes-epidemiology-from-clinical-care" class="nav-link" data-scroll-target="#which-statement-best-distinguishes-epidemiology-from-clinical-care">5. Which statement best distinguishes epidemiology from clinical care?</a></li>
-  <li><a href="#which-sequence-best-captures-john-snows-epidemiological-contribution-as-presented-in-this-lesson" id="toc-which-sequence-best-captures-john-snows-epidemiological-contribution-as-presented-in-this-lesson" class="nav-link" data-scroll-target="#which-sequence-best-captures-john-snows-epidemiological-contribution-as-presented-in-this-lesson">6. Which sequence best captures John Snow’s epidemiological contribution as presented in this lesson?</a></li>
-  <li><a href="#which-is-not-one-of-the-core-public-health-epidemiology-functions-introduced-this-week" id="toc-which-is-not-one-of-the-core-public-health-epidemiology-functions-introduced-this-week" class="nav-link" data-scroll-target="#which-is-not-one-of-the-core-public-health-epidemiology-functions-introduced-this-week">7. Which is NOT one of the core public-health epidemiology functions introduced this week?</a></li>
-  <li><a href="#a-district-reports-300-cases-this-year-and-200-last-year.-what-should-be-your-first-epidemiological-reaction" id="toc-a-district-reports-300-cases-this-year-and-200-last-year.-what-should-be-your-first-epidemiological-reaction" class="nav-link" data-scroll-target="#a-district-reports-300-cases-this-year-and-200-last-year.-what-should-be-your-first-epidemiological-reaction">8. A district reports 300 cases this year and 200 last year. What should be your first epidemiological reaction?</a></li>
-  </ul></li>
-  <li><a href="#demonstrate-week-1-mastery-quiz" id="toc-demonstrate-week-1-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-1-mastery-quiz">DEMONSTRATE · Week 1 Mastery Quiz</a></li>
-  <li><a href="#summary-the-week-1-mental-model" id="toc-summary-the-week-1-mental-model" class="nav-link" data-scroll-target="#summary-the-week-1-mental-model">SUMMARY · The Week 1 mental model</a></li>
-  <li><a href="#primary-source-used-to-build-this-lesson" id="toc-primary-source-used-to-build-this-lesson" class="nav-link" data-scroll-target="#primary-source-used-to-build-this-lesson">Primary source used to build this lesson</a></li>
   </ul>
 </nav>
     </div>
@@ -723,6 +738,57 @@ When an analysis produces an impressive number, trace backwards: How was the eve
 <p>The sentence separates <strong>what was observed</strong> from <strong>what is being inferred</strong>.</p>
 </section>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-from-a-topic-to-an-estimand" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-from-a-topic-to-an-estimand">GRADUATE DEEPEN · From a topic to an estimand</h2>
+<p>At graduate level, an epidemiological question is not complete merely because it names a population, exposure and outcome. You should also be able to state <strong>what quantity you want to estimate</strong> and what comparison gives that quantity meaning.</p>
+<p>A useful progression is:</p>
+<p><strong>Topic → question → target population → exposure/intervention strategy → outcome → time horizon → contrast → estimand → design → estimator.</strong></p>
+<p>Consider the vague topic <em>hypertension control among adults with HIV</em>. Several different questions can hide inside it:</p>
+<ul>
+<li><strong>Descriptive:</strong> What proportion of adults receiving ART have uncontrolled blood pressure in 2026?</li>
+<li><strong>Predictive:</strong> Among adults with controlled blood pressure today, who is most likely to become uncontrolled within 12 months?</li>
+<li><strong>Causal:</strong> What would the 12-month risk of uncontrolled blood pressure be if eligible adults received pharmacist-led medication review compared with usual care?</li>
+<li><strong>Implementation:</strong> Among facilities adopting pharmacist review, what proportion deliver the intervention with adequate fidelity and reach?</li>
+</ul>
+<p>These questions require different designs and analyses. A prediction model can perform well without estimating a causal effect. A prevalence survey can describe a burden without identifying what would happen under an intervention.</p>
+<section id="the-target-population-is-not-automatically-the-study-sample" class="level3">
+<h3 class="anchored" data-anchor-id="the-target-population-is-not-automatically-the-study-sample">The target population is not automatically the study sample</h3>
+<p>The <strong>target population</strong> is the population about which you want to make an inference. The <strong>study population</strong> is the population that is actually eligible and accessible through the study setting. The <strong>analytic sample</strong> is the subset with sufficient data for a particular analysis.</p>
+<p>A common graduate-level error is to move silently from one to another. If your target is <em>all adults with HIV in Uganda</em>, but the study population is <em>adults attending six urban referral clinics</em>, the difference must be acknowledged. External validity is not a decorative paragraph at the end; it begins with how the target population was defined.</p>
+</section>
+<section id="define-exposure-strategies-precisely" class="level3">
+<h3 class="anchored" data-anchor-id="define-exposure-strategies-precisely">Define exposure strategies precisely</h3>
+<p>“Exposed versus unexposed” can be too vague for causal work. Ask whether the exposure corresponds to a strategy that could, at least conceptually, be compared.</p>
+<p>For example, “high BMI versus low BMI” is a description of states. “A sustained weight-management intervention that reduces BMI by at least 5% versus usual care” is closer to an intervention strategy. The distinction matters because causal effects are easiest to interpret when the compared conditions are well defined.</p>
+</section>
+<section id="time-zero-must-be-aligned" class="level3">
+<h3 class="anchored" data-anchor-id="time-zero-must-be-aligned">Time zero must be aligned</h3>
+<p>Exposure eligibility, assignment/classification and start of outcome follow-up should align around a defensible <strong>time zero</strong>. If treated participants start follow-up on the date treatment begins but untreated participants are allowed to accumulate disease-free time before entering the comparison, the design can manufacture an advantage for treatment. This family of problems includes immortal-time and time-alignment biases.</p>
+<div class="lipps-callout">
+<p><strong>LIPPS rule</strong><br>
+Before choosing a model, write one sentence beginning: <strong>“I want to estimate…”</strong> If that sentence is ambiguous, no statistical method can rescue the study.</p>
+</div>
+</section>
+<section id="phd-bridge-counterfactual-language" class="level3">
+<h3 class="anchored" data-anchor-id="phd-bridge-counterfactual-language">PhD bridge · Counterfactual language</h3>
+<p>Advanced causal inference expresses an individual causal effect by comparing outcomes under mutually exclusive exposure strategies, such as <span class="math inline">\(Y^{a=1}\)</span> and <span class="math inline">\(Y^{a=0}\)</span>. We cannot observe both potential outcomes for the same person at the same time, which is the fundamental problem of causal inference. Population causal effects therefore require assumptions and designs that make groups informative about those missing counterfactual outcomes.</p>
+<p>You do not need potential-outcome notation to practise good epidemiology. You do need its discipline: <strong>state the comparison, state the target population, state the time horizon, and state the assumptions that connect observed data to the quantity you want.</strong></p>
+</section>
+<section id="graduate-checkpoint" class="level3">
+<h3 class="anchored" data-anchor-id="graduate-checkpoint">Graduate checkpoint</h3>
+<p>Take a proposed dissertation title and identify:</p>
+<ol type="1">
+<li>the target population;</li>
+<li>the exposure/intervention strategies;</li>
+<li>the outcome and time horizon;</li>
+<li>whether the question is descriptive, predictive, causal or implementation-oriented;</li>
+<li>the estimand you would report;</li>
+<li>the design that could identify it;</li>
+<li>one assumption that, if false, would make the estimate misleading.</li>
+</ol>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <section id="which-part-of-the-epidemiological-definition-is-mainly-concerned-with-person-place-and-time" class="level3">
@@ -827,6 +893,7 @@ D. Fit a regression model.</p>
 </div>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

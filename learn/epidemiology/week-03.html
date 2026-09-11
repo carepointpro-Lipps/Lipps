@@ -261,20 +261,6 @@ window.Quarto = {
   <li><a href="#attributable-proportion-among-the-exposed" id="toc-attributable-proportion-among-the-exposed" class="nav-link" data-scroll-target="#attributable-proportion-among-the-exposed">6. Attributable proportion among the exposed</a></li>
   <li><a href="#what-could-fool-us" id="toc-what-could-fool-us" class="nav-link" data-scroll-target="#what-could-fool-us">What could fool us?</a></li>
   </ul></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a>
-  <ul class="collapse">
-  <li><a href="#which-value-is-the-null-for-a-risk-ratio" id="toc-which-value-is-the-null-for-a-risk-ratio" class="nav-link" data-scroll-target="#which-value-is-the-null-for-a-risk-ratio">1. Which value is the null for a risk ratio?</a></li>
-  <li><a href="#which-value-is-the-null-for-a-risk-difference" id="toc-which-value-is-the-null-for-a-risk-difference" class="nav-link" data-scroll-target="#which-value-is-the-null-for-a-risk-difference">2. Which value is the null for a risk difference?</a></li>
-  <li><a href="#risk-is-30-in-the-exposed-group-and-10-in-the-unexposed-group.-what-is-the-rr" id="toc-risk-is-30-in-the-exposed-group-and-10-in-the-unexposed-group.-what-is-the-rr" class="nav-link" data-scroll-target="#risk-is-30-in-the-exposed-group-and-10-in-the-unexposed-group.-what-is-the-rr">3. Risk is 30% in the exposed group and 10% in the unexposed group. What is the RR?</a></li>
-  <li><a href="#using-the-same-data-what-is-the-risk-difference" id="toc-using-the-same-data-what-is-the-risk-difference" class="nav-link" data-scroll-target="#using-the-same-data-what-is-the-risk-difference">4. Using the same data, what is the risk difference?</a></li>
-  <li><a href="#which-measure-is-most-natural-in-a-typical-case-control-study" id="toc-which-measure-is-most-natural-in-a-typical-case-control-study" class="nav-link" data-scroll-target="#which-measure-is-most-natural-in-a-typical-case-control-study">5. Which measure is most natural in a typical case-control study?</a></li>
-  <li><a href="#why-should-an-or-of-4.0-not-automatically-be-described-as-four-times-the-risk" id="toc-why-should-an-or-of-4.0-not-automatically-be-described-as-four-times-the-risk" class="nav-link" data-scroll-target="#why-should-an-or-of-4.0-not-automatically-be-described-as-four-times-the-risk">6. Why should an OR of 4.0 not automatically be described as “four times the risk”?</a></li>
-  <li><a href="#in-a-cross-sectional-survey-hypertension-prevalence-is-36-in-group-a-and-18-in-group-b.-what-is-the-prevalence-ratio" id="toc-in-a-cross-sectional-survey-hypertension-prevalence-is-36-in-group-a-and-18-in-group-b.-what-is-the-prevalence-ratio" class="nav-link" data-scroll-target="#in-a-cross-sectional-survey-hypertension-prevalence-is-36-in-group-a-and-18-in-group-b.-what-is-the-prevalence-ratio">7. In a cross-sectional survey, hypertension prevalence is 36% in Group A and 18% in Group B. What is the prevalence ratio?</a></li>
-  <li><a href="#a-vaccine-study-gives-rr-0.25-for-vaccinated-versus-unvaccinated-participants.-what-is-the-corresponding-relative-vaccine-efficacyeffectiveness" id="toc-a-vaccine-study-gives-rr-0.25-for-vaccinated-versus-unvaccinated-participants.-what-is-the-corresponding-relative-vaccine-efficacyeffectiveness" class="nav-link" data-scroll-target="#a-vaccine-study-gives-rr-0.25-for-vaccinated-versus-unvaccinated-participants.-what-is-the-corresponding-relative-vaccine-efficacyeffectiveness">8. A vaccine study gives RR = 0.25 for vaccinated versus unvaccinated participants. What is the corresponding relative vaccine efficacy/effectiveness?</a></li>
-  </ul></li>
-  <li><a href="#mastery-week-3-quiz" id="toc-mastery-week-3-quiz" class="nav-link" data-scroll-target="#mastery-week-3-quiz">MASTERY · Week 3 quiz</a></li>
-  <li><a href="#week-3-summary" id="toc-week-3-summary" class="nav-link" data-scroll-target="#week-3-summary">WEEK 3 SUMMARY</a></li>
-  <li><a href="#source-and-adaptation-note" id="toc-source-and-adaptation-note" class="nav-link" data-scroll-target="#source-and-adaptation-note">Source and adaptation note</a></li>
   </ul>
 </nav>
     </div>
@@ -1028,6 +1014,46 @@ AP_E = \frac{0.60-0.20}{0.60}\times100 = 66.7\%
 <p>This is exactly why <strong>evidence is never the whole story</strong>.</p>
 </section>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-crude-adjusted-marginal-and-conditional-effects" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-crude-adjusted-marginal-and-conditional-effects">GRADUATE DEEPEN · Crude, adjusted, marginal and conditional effects</h2>
+<p>At graduate level, “adjusted odds ratio” is not a sufficient interpretation. You need to know <strong>what was adjusted for, why those variables were chosen, what model produced the estimate, and whether the model parameter corresponds to the scientific effect of interest.</strong></p>
+<section id="crude-versus-adjusted" class="level3">
+<h3 class="anchored" data-anchor-id="crude-versus-adjusted">Crude versus adjusted</h3>
+<p>A crude estimate compares the observed groups as they are. An adjusted estimate attempts to compare them after accounting for selected covariates. Adjustment can reduce confounding, but adjustment is not automatically improvement. Adjusting for a mediator can remove part of the effect you intended to estimate; adjusting for a collider can create an association that did not exist.</p>
+</section>
+<section id="marginal-versus-conditional-effects" class="level3">
+<h3 class="anchored" data-anchor-id="marginal-versus-conditional-effects">Marginal versus conditional effects</h3>
+<p>A <strong>marginal effect</strong> describes a population-average contrast, such as the risk under intervention A if the whole target population received A versus the risk if the whole population received B. A <strong>conditional effect</strong> describes a contrast among people with specified covariate values, often arising naturally from a regression coefficient.</p>
+<p>The distinction matters because policy decisions often concern marginal population effects while conventional regression software returns conditional model parameters.</p>
+</section>
+<section id="odds-ratio-non-collapsibility" class="level3">
+<h3 class="anchored" data-anchor-id="odds-ratio-non-collapsibility">Odds-ratio non-collapsibility</h3>
+<p>The odds ratio has a special complication: conditional and marginal odds ratios can differ even without confounding. This is called <strong>non-collapsibility</strong>. Therefore, seeing an odds ratio change after adding a prognostic variable to a logistic model does not prove that the variable was a confounder.</p>
+<p>This is one reason to avoid translating every logistic-regression odds ratio into causal language. Where possible, estimate and communicate risks, risk differences or risk ratios that map more directly to the decision problem.</p>
+</section>
+<section id="absolute-effects-belong-beside-relative-effects" class="level3">
+<h3 class="anchored" data-anchor-id="absolute-effects-belong-beside-relative-effects">Absolute effects belong beside relative effects</h3>
+<p>Suppose a treatment reduces 5-year disease risk from 20% to 10% in one population and from 2% to 1% in another. The risk ratio is 0.50 in both populations, but the risk differences are 10 and 1 percentage points. The intervention has very different absolute implications.</p>
+<p>When the risk difference is causal and the horizon is meaningful, the <strong>number needed to treat</strong> is:</p>
+<p><span class="math display">\[
+NNT=\frac{1}{|RD|}
+\]</span></p>
+<p>with risk difference expressed as a proportion. NNT should not be reported without a time horizon, comparator and uncertainty interval.</p>
+</section>
+<section id="interaction-depends-on-scale" class="level3">
+<h3 class="anchored" data-anchor-id="interaction-depends-on-scale">Interaction depends on scale</h3>
+<p>Two exposures may interact on an additive scale but not a multiplicative scale, or vice versa. Public-health decisions often care about additive interaction because it addresses excess cases that might be prevented in a subgroup. Biological or mechanistic claims cannot be read directly from a regression-product term.</p>
+<div class="lipps-callout">
+<p><strong>LIPPS interpretation sequence</strong><br>
+Name the measure → give the numerical contrast → give the time horizon → distinguish relative from absolute effect → state whether the estimate is crude or adjusted → state whether a causal interpretation is justified.</p>
+</div>
+</section>
+<section id="r-laboratory" class="level3">
+<h3 class="anchored" data-anchor-id="r-laboratory">R laboratory</h3>
+<p><a href="../../learn/epidemiology/labs/lab-02-effects.html">Graduate Lab 2 — Crude and adjusted effects, standardised risks and interaction →</a></p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <section id="which-value-is-the-null-for-a-risk-ratio" class="level3">
@@ -1144,6 +1170,7 @@ A prepared learner should be able to read, reason and answer. A learner attempti
 </div>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

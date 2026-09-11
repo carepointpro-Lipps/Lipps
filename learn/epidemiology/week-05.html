@@ -186,10 +186,6 @@ window.Quarto = {
   <li><a href="#learn-9-prevalence-can-select-survivors" id="toc-learn-9-prevalence-can-select-survivors" class="nav-link" data-scroll-target="#learn-9-prevalence-can-select-survivors">LEARN 9 · Prevalence can select survivors</a></li>
   <li><a href="#learn-10-cross-sectional-does-not-mean-weak" id="toc-learn-10-cross-sectional-does-not-mean-weak" class="nav-link" data-scroll-target="#learn-10-cross-sectional-does-not-mean-weak">LEARN 10 · Cross-sectional does not mean weak</a></li>
   <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
-  <li><a href="#demonstrate-week-5-mastery-quiz" id="toc-demonstrate-week-5-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-5-mastery-quiz">DEMONSTRATE · Week 5 mastery quiz</a></li>
-  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul>
 </nav>
     </div>
@@ -368,6 +364,55 @@ The attached text explains that prevalence depends on incidence and duration. Th
 </ol>
 <p>A defensible version might say that low activity was <strong>associated with higher hypertension prevalence</strong>, while causal direction requires stronger temporal and confounding evidence.</p>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-sampling-survey-weights-and-prevalence-modelling" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-sampling-survey-weights-and-prevalence-modelling">GRADUATE DEEPEN · Sampling, survey weights and prevalence modelling</h2>
+<p>Cross-sectional studies are often analysed as though every observation were an independent simple random sample. That assumption is frequently false in public-health surveys.</p>
+<section id="probability-sampling-and-inclusion-probabilities" class="level3">
+<h3 class="anchored" data-anchor-id="probability-sampling-and-inclusion-probabilities">Probability sampling and inclusion probabilities</h3>
+<p>In a probability sample, each sampled unit has a known or calculable probability of selection. A basic sampling weight is the inverse of that probability:</p>
+<p><span class="math display">\[
+w_i=1/\pi_i
+\]</span></p>
+<p>If one household had a 1-in-50 chance of selection and another had a 1-in-100 chance, treating both as equally representative distorts population estimates unless the design is self-weighting for the estimand of interest.</p>
+<p>Weights may also incorporate non-response adjustment, calibration or post-stratification. Each additional adjustment adds assumptions; weights should never be described simply as “applied” without explaining how they were constructed.</p>
+</section>
+<section id="clustering-and-stratification" class="level3">
+<h3 class="anchored" data-anchor-id="clustering-and-stratification">Clustering and stratification</h3>
+<p>Cluster sampling reduces field costs but observations within clusters tend to be correlated. Ignoring clustering usually produces standard errors that are too small. Stratification can improve precision when strata are internally homogeneous and appropriately represented.</p>
+<p>A survey analysis should therefore identify at least:</p>
+<ul>
+<li>the primary sampling unit;</li>
+<li>strata;</li>
+<li>final survey weight;</li>
+<li>whether finite-population corrections matter;</li>
+<li>how variance estimation accounts for the design.</li>
+</ul>
+</section>
+<section id="the-prevalence-ratio-is-often-more-interpretable-than-the-odds-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="the-prevalence-ratio-is-often-more-interpretable-than-the-odds-ratio">The prevalence ratio is often more interpretable than the odds ratio</h3>
+<p>For common cross-sectional outcomes, odds ratios can exaggerate the impression created by a prevalence ratio when casually interpreted as a relative prevalence. Common approaches for adjusted prevalence ratios include log-binomial models or Poisson regression with robust standard errors.</p>
+<p>The model choice should follow the estimand, not software habit.</p>
+</section>
+<section id="non-response-is-a-selection-problem" class="level3">
+<h3 class="anchored" data-anchor-id="non-response-is-a-selection-problem">Non-response is a selection problem</h3>
+<p>A 90% response rate is reassuring only if the missing 10% would not materially alter the estimate. Conversely, a lower response rate may still yield useful estimates if non-response is well understood and adjusted using strong auxiliary information.</p>
+<p>Ask whether participation depends on both exposure and outcome-related characteristics. If so, weighting by observed variables may not fully repair the selection process.</p>
+</section>
+<section id="temporality-and-reverse-causation" class="level3">
+<h3 class="anchored" data-anchor-id="temporality-and-reverse-causation">Temporality and reverse causation</h3>
+<p>Cross-sectional data can support causal reasoning only under special conditions. For stable historical exposures, temporality may be defensible even if the outcome is measured concurrently. But for behaviours that can change after disease develops, reverse causation is a major concern.</p>
+<p>Example: an association between low physical activity and chronic pain may reflect physical inactivity causing pain, pain causing inactivity, or both.</p>
+</section>
+<section id="reporting-standard" class="level3">
+<h3 class="anchored" data-anchor-id="reporting-standard">Reporting standard</h3>
+<p>STROBE asks cross-sectional reports to describe participant selection, variables, measurement, bias, study size, statistical methods, missing data and—where relevant—analysis that accounts for the sampling strategy. Treat the checklist as a reporting aid, not a substitute for good design.</p>
+</section>
+<section id="r-laboratory" class="level3">
+<h3 class="anchored" data-anchor-id="r-laboratory">R laboratory</h3>
+<p><a href="../../learn/epidemiology/labs/lab-03-survey.html">Graduate Lab 3 — Survey prevalence, weighting and adjusted prevalence ratios →</a></p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <ol type="1">
@@ -405,6 +450,7 @@ The quiz is designed so that a prepared learner can read, reason and answer effi
 </section>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

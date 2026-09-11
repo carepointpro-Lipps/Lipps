@@ -188,10 +188,6 @@ window.Quarto = {
   <li><a href="#learn-11-agreement-is-not-accuracy" id="toc-learn-11-agreement-is-not-accuracy" class="nav-link" data-scroll-target="#learn-11-agreement-is-not-accuracy">LEARN 11 · Agreement is not accuracy</a></li>
   <li><a href="#learn-12-what-could-fool-us-in-a-diagnostic-study" id="toc-learn-12-what-could-fool-us-in-a-diagnostic-study" class="nav-link" data-scroll-target="#learn-12-what-could-fool-us-in-a-diagnostic-study">LEARN 12 · What could fool us in a diagnostic study?</a></li>
   <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
-  <li><a href="#demonstrate-week-10-mastery-quiz" id="toc-demonstrate-week-10-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-10-mastery-quiz">DEMONSTRATE · Week 10 mastery quiz</a></li>
-  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul>
 </nav>
     </div>
@@ -438,6 +434,52 @@ LR- = \frac{1-Sensitivity}{Specificity}
 <li>Write a counselling statement that avoids telling every positive patient that they “have typhoid” with certainty.</li>
 </ol>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-from-test-accuracy-to-clinical-and-public-health-consequences" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-from-test-accuracy-to-clinical-and-public-health-consequences">GRADUATE DEEPEN · From test accuracy to clinical and public-health consequences</h2>
+<p>Sensitivity and specificity are only the beginning. A test is useful when its results change decisions in a population where those decisions improve outcomes relative to their costs and harms.</p>
+<section id="bayesian-updating-with-likelihood-ratios" class="level3">
+<h3 class="anchored" data-anchor-id="bayesian-updating-with-likelihood-ratios">Bayesian updating with likelihood ratios</h3>
+<p>Pre-test odds are converted to post-test odds by:</p>
+<p><span class="math display">\[
+Posttest\ odds = Pretest\ odds \times LR
+\]</span></p>
+<p>where:</p>
+<p><span class="math display">\[
+LR^+=\frac{Sensitivity}{1-Specificity},\qquad LR^-=\frac{1-Sensitivity}{Specificity}
+\]</span></p>
+<p>This makes prevalence or prior probability explicit. A positive result from the same assay can imply very different post-test probabilities in a high-risk referral clinic versus a low-prevalence screening programme.</p>
+</section>
+<section id="roc-curves-are-not-decision-curves" class="level3">
+<h3 class="anchored" data-anchor-id="roc-curves-are-not-decision-curves">ROC curves are not decision curves</h3>
+<p>The ROC curve summarises sensitivity and specificity across thresholds. The area under the curve describes ranking/discrimination, not calibration, clinical benefit or the best threshold for a programme.</p>
+<p>A model can discriminate well while producing poorly calibrated probabilities. Conversely, a modest change in AUC can still be clinically useful if it moves patients across a meaningful treatment threshold.</p>
+</section>
+<section id="spectrum-effects" class="level3">
+<h3 class="anchored" data-anchor-id="spectrum-effects">Spectrum effects</h3>
+<p>Accuracy depends on who is tested. A case-control accuracy study comparing obvious severe cases with exceptionally healthy controls can overestimate performance relative to routine practice, where disease severity and alternative diagnoses form a broader spectrum.</p>
+</section>
+<section id="verification-and-incorporation-bias" class="level3">
+<h3 class="anchored" data-anchor-id="verification-and-incorporation-bias">Verification and incorporation bias</h3>
+<p>If only participants with positive index tests receive the reference standard, estimates can be biased. If the index test forms part of the reference standard, agreement is partly built into the definition of truth. Blinding and prespecified handling of indeterminate results also matter.</p>
+</section>
+<section id="comparing-two-tests" class="level3">
+<h3 class="anchored" data-anchor-id="comparing-two-tests">Comparing two tests</h3>
+<p>When two tests are applied to the same participants, their results are paired. Analyses should preserve that pairing rather than compare sensitivity estimates as though they came from independent samples.</p>
+</section>
+<section id="imperfect-reference-standards" class="level3">
+<h3 class="anchored" data-anchor-id="imperfect-reference-standards">Imperfect reference standards</h3>
+<p>Some conditions have no error-free gold standard. Options include composite reference standards, expert adjudication, follow-up information or latent-class approaches, but each adds assumptions. Report the intended use and clinical role of the index test rather than describing accuracy in the abstract.</p>
+</section>
+<section id="stard-and-transparent-reporting" class="level3">
+<h3 class="anchored" data-anchor-id="stard-and-transparent-reporting">STARD and transparent reporting</h3>
+<p>STARD 2015 asks diagnostic-accuracy studies to report participant selection, index and reference test methods, prespecified thresholds, blinding, handling of indeterminate and missing results, variability analyses, sample-size rationale and precision of accuracy estimates.</p>
+</section>
+<section id="r-laboratory" class="level3">
+<h3 class="anchored" data-anchor-id="r-laboratory">R laboratory</h3>
+<p>Use the diagnostic component in <a href="../../learn/epidemiology/labs/lab-07-diagnostics.html">Graduate Lab 7 — Diagnostic accuracy, predictive values and decision thresholds →</a>.</p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <ol type="1">
@@ -474,6 +516,7 @@ The quiz is designed so that a prepared learner can read, reason and answer effi
 </section>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

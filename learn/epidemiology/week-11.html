@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -161,10 +190,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#learn-13-action-under-uncertainty" id="toc-learn-13-action-under-uncertainty" class="nav-link" data-scroll-target="#learn-13-action-under-uncertainty">LEARN 13 · Action under uncertainty</a></li>
   <li><a href="#learn-14-communication-closes-the-loop" id="toc-learn-14-communication-closes-the-loop" class="nav-link" data-scroll-target="#learn-14-communication-closes-the-loop">LEARN 14 · Communication closes the loop</a></li>
   <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
-  <li><a href="#demonstrate-week-11-mastery-quiz" id="toc-demonstrate-week-11-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-11-mastery-quiz">DEMONSTRATE · Week 11 mastery quiz</a></li>
-  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul>
 </nav>
     </div>
@@ -405,6 +430,44 @@ Evidence becomes useful when you can explain not only what the analysis shows, b
 <li>Describe what evidence would make you revise your leading hypothesis.</li>
 </ol>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-surveillance-evaluation-aberration-detection-and-modern-outbreak-inference" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-surveillance-evaluation-aberration-detection-and-modern-outbreak-inference">GRADUATE DEEPEN · Surveillance evaluation, aberration detection and modern outbreak inference</h2>
+<p>Surveillance is a measurement system embedded in organisations. Its output depends on who seeks care, who is tested, who reports, how definitions change, and how quickly data move through the system.</p>
+<section id="evaluate-the-system-not-just-the-disease-curve" class="level3">
+<h3 class="anchored" data-anchor-id="evaluate-the-system-not-just-the-disease-curve">Evaluate the system, not just the disease curve</h3>
+<p>Key surveillance attributes include usefulness, simplicity, flexibility, data quality, acceptability, sensitivity, predictive value positive, representativeness, timeliness and stability. Improvements in one attribute can worsen another. A highly sensitive alert definition may generate many false signals and overwhelm response teams.</p>
+</section>
+<section id="baselines-and-aberration-detection" class="level3">
+<h3 class="anchored" data-anchor-id="baselines-and-aberration-detection">Baselines and aberration detection</h3>
+<p>A threshold should reflect the expected distribution of reports, seasonality and reporting delay. Simple approaches include historical limits and moving averages. More formal approaches include CUSUM, EWMA and regression models for count data.</p>
+<p>The method is less important than recognising that a signal is not automatically an outbreak. Signals require verification, denominator checks and assessment of reporting artefacts.</p>
+</section>
+<section id="capture-recapture-preview" class="level3">
+<h3 class="anchored" data-anchor-id="capture-recapture-preview">Capture-recapture preview</h3>
+<p>When no single surveillance source is complete, overlapping lists can sometimes be used to estimate the number of unobserved cases. Two-source capture-recapture makes strong independence and equal-catchability assumptions that are often violated in health data. The method is therefore a sensitivity tool, not a magic correction for underreporting.</p>
+</section>
+<section id="delayed-reporting-and-nowcasting" class="level3">
+<h3 class="anchored" data-anchor-id="delayed-reporting-and-nowcasting">Delayed reporting and nowcasting</h3>
+<p>Recent counts are often incomplete because cases diagnosed today may be reported days later. Naïve epidemic curves can therefore create a false appearance of decline at the right edge. Nowcasting methods model reporting delay to estimate recent incidence before all reports arrive.</p>
+</section>
+<section id="reproduction-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="reproduction-numbers">Reproduction numbers</h3>
+<p>The basic reproduction number <span class="math inline">\(R_0\)</span> is a theoretical quantity for a fully susceptible population under specified conditions. The effective reproduction number <span class="math inline">\(R_t\)</span> changes over time with immunity, behaviour and control measures. Neither should be interpreted without uncertainty and the generation-interval assumptions used to estimate it.</p>
+</section>
+<section id="genomic-epidemiology" class="level3">
+<h3 class="anchored" data-anchor-id="genomic-epidemiology">Genomic epidemiology</h3>
+<p>Pathogen sequencing can help link cases, identify introductions and characterise transmission clusters, but genetic similarity does not automatically prove direct transmission. Sampling density, within-host evolution and unsampled intermediates matter.</p>
+</section>
+<section id="field-analysis-standard" class="level3">
+<h3 class="anchored" data-anchor-id="field-analysis-standard">Field analysis standard</h3>
+<p>During an outbreak, speed matters, but speed should not erase design principles. Descriptive epidemiology identifies who, where and when; analytic epidemiology uses a valid comparison group when a causal hypothesis needs testing. The CDC text explicitly treats comparison groups, rates, two-by-two tables and more advanced modelling as part of analytic field epidemiology.</p>
+</section>
+<section id="r-laboratory" class="level3">
+<h3 class="anchored" data-anchor-id="r-laboratory">R laboratory</h3>
+<p><a href="../../learn/epidemiology/labs/lab-08-surveillance.html">Graduate Lab 8 — Surveillance signals, epidemic curves and outbreak comparisons →</a></p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <ol type="1">
@@ -441,6 +504,7 @@ The quiz is designed so that a prepared learner can read, reason and answer effi
 </section>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

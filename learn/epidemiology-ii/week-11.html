@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Advanced graduate epidemiology: Use design features to strengthen causal inference when randomisation is unavailable.">
+
+<title>Epidemiology II Week 11 — Quasi-experiments and Target-Trial Emulation | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-observational-data-do-not-become-trial-like-just-because-propensity-scores-are-used" id="toc-orient-observational-data-do-not-become-trial-like-just-because-propensity-scores-are-used" class="nav-link" data-scroll-target="#orient-observational-data-do-not-become-trial-like-just-because-propensity-scores-are-used">ORIENT · Observational data do not become trial-like just because propensity scores are used</a></li>
+  <li><a href="#learn-1-difference-in-differences" id="toc-learn-1-difference-in-differences" class="nav-link" data-scroll-target="#learn-1-difference-in-differences">LEARN 1 · Difference-in-differences</a></li>
+  <li><a href="#learn-2-interrupted-time-series" id="toc-learn-2-interrupted-time-series" class="nav-link" data-scroll-target="#learn-2-interrupted-time-series">LEARN 2 · Interrupted time series</a></li>
+  <li><a href="#learn-3-regression-discontinuity" id="toc-learn-3-regression-discontinuity" class="nav-link" data-scroll-target="#learn-3-regression-discontinuity">LEARN 3 · Regression discontinuity</a></li>
+  <li><a href="#learn-4-instrumental-variables" id="toc-learn-4-instrumental-variables" class="nav-link" data-scroll-target="#learn-4-instrumental-variables">LEARN 4 · Instrumental variables</a></li>
+  <li><a href="#learn-5-target-trial-emulation" id="toc-learn-5-target-trial-emulation" class="nav-link" data-scroll-target="#learn-5-target-trial-emulation">LEARN 5 · Target-trial emulation</a></li>
+  <li><a href="#learn-6-new-user-active-comparator-designs" id="toc-learn-6-new-user-active-comparator-designs" class="nav-link" data-scroll-target="#learn-6-new-user-active-comparator-designs">LEARN 6 · New-user active-comparator designs</a></li>
+  <li><a href="#worked-example-vaccine-policy" id="toc-worked-example-vaccine-policy" class="nav-link" data-scroll-target="#worked-example-vaccine-policy">WORKED EXAMPLE · Vaccine policy</a></li>
+  <li><a href="#phd-extension" id="toc-phd-extension" class="nav-link" data-scroll-target="#phd-extension">PHD EXTENSION</a></li>
+  <li><a href="#methods-workshop-design-quasi-experiments-as-carefully-as-trials" id="toc-methods-workshop-design-quasi-experiments-as-carefully-as-trials" class="nav-link" data-scroll-target="#methods-workshop-design-quasi-experiments-as-carefully-as-trials">METHODS WORKSHOP · Design quasi-experiments as carefully as trials</a>
+  <ul class="collapse">
+  <li><a href="#difference-in-differences-event-studies" id="toc-difference-in-differences-event-studies" class="nav-link" data-scroll-target="#difference-in-differences-event-studies">Difference-in-differences event studies</a></li>
+  <li><a href="#controlled-interrupted-time-series" id="toc-controlled-interrupted-time-series" class="nav-link" data-scroll-target="#controlled-interrupted-time-series">Controlled interrupted time series</a></li>
+  <li><a href="#regression-discontinuity-diagnostics" id="toc-regression-discontinuity-diagnostics" class="nav-link" data-scroll-target="#regression-discontinuity-diagnostics">Regression discontinuity diagnostics</a></li>
+  <li><a href="#instrument-strength-and-weak-instruments" id="toc-instrument-strength-and-weak-instruments" class="nav-link" data-scroll-target="#instrument-strength-and-weak-instruments">Instrument strength and weak instruments</a></li>
+  <li><a href="#target-trial-specification-table" id="toc-target-trial-specification-table" class="nav-link" data-scroll-target="#target-trial-specification-table">Target-trial specification table</a></li>
+  <li><a href="#time-zero-alignment" id="toc-time-zero-alignment" class="nav-link" data-scroll-target="#time-zero-alignment">Time zero alignment</a></li>
+  <li><a href="#sequential-target-trials" id="toc-sequential-target-trials" class="nav-link" data-scroll-target="#sequential-target-trials">Sequential target trials</a></li>
+  <li><a href="#active-comparator" id="toc-active-comparator" class="nav-link" data-scroll-target="#active-comparator">Active comparator</a></li>
+  <li><a href="#falsification-analyses" id="toc-falsification-analyses" class="nav-link" data-scroll-target="#falsification-analyses">Falsification analyses</a></li>
+  <li><a href="#doctoral-extension-synthetic-controls" id="toc-doctoral-extension-synthetic-controls" class="nav-link" data-scroll-target="#doctoral-extension-synthetic-controls">Doctoral extension · Synthetic controls</a></li>
+  </ul></li>
+  <li><a href="#seminar-notes-when-quasi-experimental-assumptions-break" id="toc-seminar-notes-when-quasi-experimental-assumptions-break" class="nav-link" data-scroll-target="#seminar-notes-when-quasi-experimental-assumptions-break">SEMINAR NOTES · When quasi-experimental assumptions break</a>
+  <ul class="collapse">
+  <li><a href="#did-and-anticipation" id="toc-did-and-anticipation" class="nav-link" data-scroll-target="#did-and-anticipation">DiD and anticipation</a></li>
+  <li><a href="#spillovers" id="toc-spillovers" class="nav-link" data-scroll-target="#spillovers">Spillovers</a></li>
+  <li><a href="#concurrent-shocks" id="toc-concurrent-shocks" class="nav-link" data-scroll-target="#concurrent-shocks">Concurrent shocks</a></li>
+  <li><a href="#rd-manipulation" id="toc-rd-manipulation" class="nav-link" data-scroll-target="#rd-manipulation">RD manipulation</a></li>
+  <li><a href="#iv-exclusion-restriction" id="toc-iv-exclusion-restriction" class="nav-link" data-scroll-target="#iv-exclusion-restriction">IV exclusion restriction</a></li>
+  <li><a href="#target-trial-data-sufficiency" id="toc-target-trial-data-sufficiency" class="nav-link" data-scroll-target="#target-trial-data-sufficiency">Target-trial data sufficiency</a></li>
+  <li><a href="#protocol-deviations-table" id="toc-protocol-deviations-table" class="nav-link" data-scroll-target="#protocol-deviations-table">Protocol deviations table</a></li>
+  <li><a href="#estimating-policy-effects" id="toc-estimating-policy-effects" class="nav-link" data-scroll-target="#estimating-policy-effects">Estimating policy effects</a></li>
+  </ul></li>
+  <li><a href="#advanced-synthesis-strong-observational-inference-starts-by-designing-the-comparison" id="toc-advanced-synthesis-strong-observational-inference-starts-by-designing-the-comparison" class="nav-link" data-scroll-target="#advanced-synthesis-strong-observational-inference-starts-by-designing-the-comparison">ADVANCED SYNTHESIS · Strong observational inference starts by designing the comparison</a>
+  <ul class="collapse">
+  <li><a href="#difference-in-differences-estimand" id="toc-difference-in-differences-estimand" class="nav-link" data-scroll-target="#difference-in-differences-estimand">Difference-in-differences estimand</a></li>
+  <li><a href="#staggered-adoption" id="toc-staggered-adoption" class="nav-link" data-scroll-target="#staggered-adoption">Staggered adoption</a></li>
+  <li><a href="#interrupted-time-series" id="toc-interrupted-time-series" class="nav-link" data-scroll-target="#interrupted-time-series">Interrupted time series</a></li>
+  <li><a href="#regression-discontinuity" id="toc-regression-discontinuity" class="nav-link" data-scroll-target="#regression-discontinuity">Regression discontinuity</a></li>
+  <li><a href="#instrumental-variables" id="toc-instrumental-variables" class="nav-link" data-scroll-target="#instrumental-variables">Instrumental variables</a></li>
+  <li><a href="#target-trial-emulation-protocol" id="toc-target-trial-emulation-protocol" class="nav-link" data-scroll-target="#target-trial-emulation-protocol">Target-trial emulation protocol</a></li>
+  <li><a href="#new-user-active-comparator-design" id="toc-new-user-active-comparator-design" class="nav-link" data-scroll-target="#new-user-active-comparator-design">New-user active-comparator design</a></li>
+  <li><a href="#grace-periods-and-adherence" id="toc-grace-periods-and-adherence" class="nav-link" data-scroll-target="#grace-periods-and-adherence">Grace periods and adherence</a></li>
+  <li><a href="#emulating-intention-to-treat-and-per-protocol-effects" id="toc-emulating-intention-to-treat-and-per-protocol-effects" class="nav-link" data-scroll-target="#emulating-intention-to-treat-and-per-protocol-effects">Emulating intention-to-treat and per-protocol effects</a></li>
+  <li><a href="#falsification-and-robustness" id="toc-falsification-and-robustness" class="nav-link" data-scroll-target="#falsification-and-robustness">Falsification and robustness</a></li>
+  <li><a href="#msc-standard" id="toc-msc-standard" class="nav-link" data-scroll-target="#msc-standard">MSc standard</a></li>
+  <li><a href="#phd-standard" id="toc-phd-standard" class="nav-link" data-scroll-target="#phd-standard">PhD standard</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-graduate-standard" id="toc-demonstrate-graduate-standard" class="nav-link" data-scroll-target="#demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY II · WEEK 11</p>
+</div>
+<section id="quasi-experiments-and-target-trial-emulation" class="level1">
+<h1>Quasi-experiments and Target-Trial Emulation</h1>
+<section id="use-design-features-to-strengthen-causal-inference-when-randomisation-is-unavailable." class="level2">
+<h2 class="anchored" data-anchor-id="use-design-features-to-strengthen-causal-inference-when-randomisation-is-unavailable.">Use design features to strengthen causal inference when randomisation is unavailable.</h2>
+<p><span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span></p>
+</section>
+</section>
+</div>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>state the target estimand in population, strategy, outcome, time and effect-measure terms;</li>
+<li>identify the assumptions required for the week’s method;</li>
+<li>distinguish identification from estimation;</li>
+<li>select an analysis that corresponds to the scientific question;</li>
+<li>interpret absolute and relative effects with uncertainty;</li>
+<li>diagnose at least one failure mode using subject-matter reasoning;</li>
+<li>implement or outline a reproducible analysis in R; and</li>
+<li>defend what the resulting estimate can and cannot support.</li>
+</ol>
+</section>
+<section id="orient-observational-data-do-not-become-trial-like-just-because-propensity-scores-are-used" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-observational-data-do-not-become-trial-like-just-because-propensity-scores-are-used">ORIENT · Observational data do not become trial-like just because propensity scores are used</h2>
+<p>Design comes before adjustment. Quasi-experimental methods exploit assignment rules, timing or natural variation that can make counterfactual comparisons more credible.</p>
+</section>
+<section id="learn-1-difference-in-differences" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-difference-in-differences">LEARN 1 · Difference-in-differences</h2>
+<p>Difference-in-differences compares outcome changes in treated and comparison groups. The key assumption is that, absent treatment, trends would have evolved similarly.</p>
+<p>Use multiple pre-treatment periods to examine trend plausibility. Modern DiD methods are needed when treatment timing varies and effects are heterogeneous; conventional two-way fixed-effects models can produce unintuitive weighted averages.</p>
+</section>
+<section id="learn-2-interrupted-time-series" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-interrupted-time-series">LEARN 2 · Interrupted time series</h2>
+<p>Interrupted time series estimates changes in level and trend after an intervention while using the pre-intervention series as a counterfactual trajectory. Model seasonality, autocorrelation and concurrent events. Controlled interrupted time series adds a comparison series when available.</p>
+</section>
+<section id="learn-3-regression-discontinuity" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-regression-discontinuity">LEARN 3 · Regression discontinuity</h2>
+<p>When treatment eligibility changes sharply at a cutoff, units just above and below the threshold may be comparable. The effect is local to the cutoff. Check for manipulation of the running variable, continuity of covariates and sensitivity to bandwidth and functional form.</p>
+</section>
+<section id="learn-4-instrumental-variables" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-instrumental-variables">LEARN 4 · Instrumental variables</h2>
+<p>A valid instrument influences treatment, is independent of unmeasured causes of the outcome, and affects the outcome only through treatment. Under additional monotonicity assumptions, IV methods can estimate a local average treatment effect among compliers.</p>
+<p>Instrument validity is primarily a substantive argument; strong first-stage association alone is insufficient.</p>
+</section>
+<section id="learn-5-target-trial-emulation" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-target-trial-emulation">LEARN 5 · Target-trial emulation</h2>
+<p>Specify the hypothetical trial before analysing observational data:</p>
+<ol type="1">
+<li>eligibility criteria;</li>
+<li>treatment strategies;</li>
+<li>assignment procedure;</li>
+<li>start and end of follow-up;</li>
+<li>outcome;</li>
+<li>causal contrast;</li>
+<li>analysis plan.</li>
+</ol>
+<p>Then emulate each component as closely as data permit. This structure helps prevent immortal-time bias, prevalent-user bias and ambiguous treatment definitions.</p>
+</section>
+<section id="learn-6-new-user-active-comparator-designs" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-new-user-active-comparator-designs">LEARN 6 · New-user active-comparator designs</h2>
+<p>In pharmacoepidemiology, comparing new users of treatment A with new users of an alternative treatment for the same indication can improve exchangeability and align time zero better than comparing prevalent users with non-users.</p>
+</section>
+<section id="worked-example-vaccine-policy" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="worked-example-vaccine-policy">WORKED EXAMPLE · Vaccine policy</h2>
+<p>Suppose a vaccine is introduced in some districts earlier than others. A naïve post-introduction comparison is confounded by district differences. A stronger design might combine pre/post data, matched comparison districts and explicit trend assessment. If individual eligibility and vaccination dates are available, a target-trial emulation may be possible.</p>
+</section>
+<section id="phd-extension" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="phd-extension">PHD EXTENSION</h2>
+<p>Advanced target-trial emulations address grace periods, sustained treatment, competing events, cloning/censoring/weighting and sequential trial emulation. The framework clarifies design but does not guarantee exchangeability.</p>
+</section>
+<section id="methods-workshop-design-quasi-experiments-as-carefully-as-trials" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="methods-workshop-design-quasi-experiments-as-carefully-as-trials">METHODS WORKSHOP · Design quasi-experiments as carefully as trials</h2>
+<section id="difference-in-differences-event-studies" class="level3">
+<h3 class="anchored" data-anchor-id="difference-in-differences-event-studies">Difference-in-differences event studies</h3>
+<p>With staggered intervention timing, estimate event-time effects relative to treatment adoption rather than relying on a single post indicator. Plot pre-treatment coefficients to assess trend plausibility and post-treatment dynamics.</p>
+<p>Modern estimators group units by treatment cohort to avoid problematic weighting that can occur in conventional two-way fixed-effects models when effects vary over time.</p>
+</section>
+<section id="controlled-interrupted-time-series" class="level3">
+<h3 class="anchored" data-anchor-id="controlled-interrupted-time-series">Controlled interrupted time series</h3>
+<p>Add a comparison series unaffected by the intervention but exposed to similar secular forces. This improves protection against coincident national trends. Still assess whether the comparison itself experienced different shocks.</p>
+</section>
+<section id="regression-discontinuity-diagnostics" class="level3">
+<h3 class="anchored" data-anchor-id="regression-discontinuity-diagnostics">Regression discontinuity diagnostics</h3>
+<p>Before estimating an RD effect: - plot outcome against the running variable; - test for density manipulation near the cutoff; - inspect covariate continuity; - choose bandwidth transparently; - compare local linear specifications; - report the effect as local to the threshold.</p>
+</section>
+<section id="instrument-strength-and-weak-instruments" class="level3">
+<h3 class="anchored" data-anchor-id="instrument-strength-and-weak-instruments">Instrument strength and weak instruments</h3>
+<p>A weak instrument produces unstable estimates and magnifies bias. Report first-stage strength but do not confuse strength with validity. An invalid strong instrument is worse than a weak valid one.</p>
+</section>
+<section id="target-trial-specification-table" class="level3">
+<h3 class="anchored" data-anchor-id="target-trial-specification-table">Target-trial specification table</h3>
+<p>For observational emulation, create a table with columns <strong>Protocol component</strong>, <strong>Ideal trial</strong>, <strong>Available data</strong>, <strong>Emulation rule</strong>, <strong>Remaining deviation</strong>. This makes compromises visible.</p>
+</section>
+<section id="time-zero-alignment" class="level3">
+<h3 class="anchored" data-anchor-id="time-zero-alignment">Time zero alignment</h3>
+<p>Many observational biases are time-zero problems: - eligibility measured before exposure classification; - covariates measured after treatment begins; - treatment assignment defined using future exposure; - follow-up beginning at different times by group.</p>
+<p>Fix these in design before modelling.</p>
+</section>
+<section id="sequential-target-trials" class="level3">
+<h3 class="anchored" data-anchor-id="sequential-target-trials">Sequential target trials</h3>
+<p>When eligibility recurs over time, each eligible person-time can initiate a new emulated trial. Pool sequential trials and use appropriate weighting/standard errors. This increases information but requires careful treatment of repeated participation.</p>
+</section>
+<section id="active-comparator" class="level3">
+<h3 class="anchored" data-anchor-id="active-comparator">Active comparator</h3>
+<p>Choose a comparator with the same indication when possible. Comparing two plausible treatment choices can reduce confounding by healthcare-seeking and indication compared with treated-versus-untreated contrasts.</p>
+</section>
+<section id="falsification-analyses" class="level3">
+<h3 class="anchored" data-anchor-id="falsification-analyses">Falsification analyses</h3>
+<p>Before claiming a quasi-experimental effect, test outcomes that should not respond at the intervention date, placebo intervention dates or unaffected subgroups where appropriate. These do not prove validity but can reveal implausible patterns.</p>
+</section>
+<section id="doctoral-extension-synthetic-controls" class="level3">
+<h3 class="anchored" data-anchor-id="doctoral-extension-synthetic-controls">Doctoral extension · Synthetic controls</h3>
+<p>When one or few units receive an intervention, synthetic-control methods construct a weighted combination of untreated units that reproduces the pre-intervention trajectory. Inference and robustness require careful donor-pool selection and placebo analyses.</p>
+</section>
+</section>
+<section id="seminar-notes-when-quasi-experimental-assumptions-break" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="seminar-notes-when-quasi-experimental-assumptions-break">SEMINAR NOTES · When quasi-experimental assumptions break</h2>
+<section id="did-and-anticipation" class="level3">
+<h3 class="anchored" data-anchor-id="did-and-anticipation">DiD and anticipation</h3>
+<p>If facilities change behaviour before official intervention start because they know rollout is coming, the pre-period is contaminated. Redefine treatment timing or model anticipation windows.</p>
+</section>
+<section id="spillovers" class="level3">
+<h3 class="anchored" data-anchor-id="spillovers">Spillovers</h3>
+<p>Comparison areas may be affected by the intervention through patient movement, media or neighbouring policy. This violates no-interference assumptions and can attenuate or distort estimates.</p>
+</section>
+<section id="concurrent-shocks" class="level3">
+<h3 class="anchored" data-anchor-id="concurrent-shocks">Concurrent shocks</h3>
+<p>A national drug shortage beginning at the same time as an intervention can mimic an intervention effect. Controlled series and negative-control outcomes can help diagnose this.</p>
+</section>
+<section id="rd-manipulation" class="level3">
+<h3 class="anchored" data-anchor-id="rd-manipulation">RD manipulation</h3>
+<p>If clinicians can manipulate the running variable to cross an eligibility threshold, units around the cutoff are no longer quasi-random. Inspect density and institutional rules.</p>
+</section>
+<section id="iv-exclusion-restriction" class="level3">
+<h3 class="anchored" data-anchor-id="iv-exclusion-restriction">IV exclusion restriction</h3>
+<p>Distance to facility may affect outcome through access to other services, violating exclusion. Physician prescribing preference may correlate with quality of care. Instruments require deep institutional knowledge.</p>
+</section>
+<section id="target-trial-data-sufficiency" class="level3">
+<h3 class="anchored" data-anchor-id="target-trial-data-sufficiency">Target-trial data sufficiency</h3>
+<p>A database may lack exact eligibility dates, treatment start, reasons for treatment or time-varying confounders. Do not force target-trial language onto data that cannot emulate key protocol components.</p>
+</section>
+<section id="protocol-deviations-table" class="level3">
+<h3 class="anchored" data-anchor-id="protocol-deviations-table">Protocol deviations table</h3>
+<p>For each target-trial component, classify emulation quality as <strong>close</strong>, <strong>approximate</strong>, or <strong>unavailable</strong> and describe likely bias. This is more informative than a generic limitations paragraph.</p>
+</section>
+<section id="estimating-policy-effects" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-policy-effects">Estimating policy effects</h3>
+<p>Quasi-experiments often estimate local effects tied to a threshold, treated region or rollout period. Avoid transporting them automatically to populations far from the assignment mechanism.</p>
+</section>
+</section>
+<section id="advanced-synthesis-strong-observational-inference-starts-by-designing-the-comparison" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="advanced-synthesis-strong-observational-inference-starts-by-designing-the-comparison">ADVANCED SYNTHESIS · Strong observational inference starts by designing the comparison</h2>
+<p>Quasi-experimental methods are valuable because they seek sources of variation that make treatment groups more comparable <strong>by design</strong>, rather than relying entirely on statistical adjustment after exposure has occurred.</p>
+<section id="difference-in-differences-estimand" class="level3">
+<h3 class="anchored" data-anchor-id="difference-in-differences-estimand">Difference-in-differences estimand</h3>
+<p>For two groups and two periods, the basic DiD contrast is:</p>
+<p><span class="math display">\[[E(Y_{post}\mid G=1)-E(Y_{pre}\mid G=1)]-[E(Y_{post}\mid G=0)-E(Y_{pre}\mid G=0)].\]</span></p>
+<p>The critical identifying assumption is parallel untreated trends, not equality of baseline outcome levels. Multiple pre-periods help assess plausibility but cannot prove what post-treatment counterfactual trends would have been.</p>
+</section>
+<section id="staggered-adoption" class="level3">
+<h3 class="anchored" data-anchor-id="staggered-adoption">Staggered adoption</h3>
+<p>When units adopt intervention at different times and treatment effects vary, conventional two-way fixed-effects estimators can combine comparisons with negative or unintuitive weights, including already-treated groups acting as controls. Use cohort/time-specific estimators designed for staggered treatment.</p>
+</section>
+<section id="interrupted-time-series" class="level3">
+<h3 class="anchored" data-anchor-id="interrupted-time-series">Interrupted time series</h3>
+<p>Segmented regression may model level and slope changes:</p>
+<p><span class="math display">\[Y_t=\beta_0+\beta_1t+\beta_2I_t+\beta_3(t\times I_t)+\epsilon_t.\]</span></p>
+<p>Account for seasonality, autocorrelation, nonlinearity and changes in measurement. The intervention date should be substantively justified, and a controlled series can help distinguish the intervention from coincident shocks.</p>
+</section>
+<section id="regression-discontinuity" class="level3">
+<h3 class="anchored" data-anchor-id="regression-discontinuity">Regression discontinuity</h3>
+<p>Sharp RD identifies a local effect when treatment changes deterministically at a cutoff; fuzzy RD uses the cutoff as an instrument when treatment probability jumps but compliance is imperfect. Use local polynomial methods, report bandwidth choices and inspect manipulation around the threshold.</p>
+</section>
+<section id="instrumental-variables" class="level3">
+<h3 class="anchored" data-anchor-id="instrumental-variables">Instrumental variables</h3>
+<p>A valid IV requires relevance, independence from unmeasured outcome causes, and exclusion of pathways to outcome other than through treatment. Under monotonicity, a binary IV often identifies a local average treatment effect among compliers. The estimand may not generalise to always-takers, never-takers or other populations.</p>
+</section>
+<section id="target-trial-emulation-protocol" class="level3">
+<h3 class="anchored" data-anchor-id="target-trial-emulation-protocol">Target-trial emulation protocol</h3>
+<p>Specify eligibility, treatment strategies, assignment procedure, time zero, follow-up, outcome, causal contrast and analysis. Then map each ideal component to observable data. This reveals where observational emulation deviates from the trial question.</p>
+</section>
+<section id="new-user-active-comparator-design" class="level3">
+<h3 class="anchored" data-anchor-id="new-user-active-comparator-design">New-user active-comparator design</h3>
+<p>Restricting to people initiating alternative treatments for the same indication can reduce confounding by disease severity, healthcare access and treatment indication. Align covariate assessment before initiation and follow from a common time zero.</p>
+</section>
+<section id="grace-periods-and-adherence" class="level3">
+<h3 class="anchored" data-anchor-id="grace-periods-and-adherence">Grace periods and adherence</h3>
+<p>A protocol allowing treatment initiation within 30 days cannot classify exposure using future information without care. Clone-censor-weight or sequential-trial approaches can emulate strategies with grace periods and sustained adherence.</p>
+</section>
+<section id="emulating-intention-to-treat-and-per-protocol-effects" class="level3">
+<h3 class="anchored" data-anchor-id="emulating-intention-to-treat-and-per-protocol-effects">Emulating intention-to-treat and per-protocol effects</h3>
+<p>Observational data can target an assignment-like effect based on initiation strategy or a sustained-treatment effect. The latter requires adjustment for post-baseline adherence and censoring processes. Clearly distinguish them.</p>
+</section>
+<section id="falsification-and-robustness" class="level3">
+<h3 class="anchored" data-anchor-id="falsification-and-robustness">Falsification and robustness</h3>
+<p>Use negative-control outcomes, placebo intervention dates, alternative comparison groups, bandwidths, donor pools or pre-trend windows as design-specific stress tests. Robustness across arbitrary specifications is less meaningful than robustness across scientifically plausible alternatives.</p>
+</section>
+<section id="msc-standard" class="level3">
+<h3 class="anchored" data-anchor-id="msc-standard">MSc standard</h3>
+<p>Construct and analyse a simple DiD or interrupted-time-series study, articulate its identifying assumptions and perform at least two design-specific diagnostics.</p>
+</section>
+<section id="phd-standard" class="level3">
+<h3 class="anchored" data-anchor-id="phd-standard">PhD standard</h3>
+<p>Handle staggered adoption, local estimands, weak instruments or complex target-trial strategies; explicitly map protocol deviations; and justify why the quasi-experimental variation plausibly identifies the stated causal effect.</p>
+</section>
+</section>
+<section id="demonstrate-graduate-standard" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</h2>
+<p>Submit one short methods memo or reproducible analysis in which you <strong>name the estimand first</strong>, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../learn/epidemiology-ii/week-10.html">← Week 10</a></p>
+<p><a href="../../learn/epidemiology-ii/week-12.html">Week 12 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Advanced graduate epidemiology: Different estimators can target the same causal effect—and fail for different reasons.">
+
+<title>Epidemiology II Week 7 — G-formula, Propensity Scores and IP Weighting | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-separate-the-causal-estimand-from-the-estimator" id="toc-orient-separate-the-causal-estimand-from-the-estimator" class="nav-link" data-scroll-target="#orient-separate-the-causal-estimand-from-the-estimator">ORIENT · Separate the causal estimand from the estimator</a></li>
+  <li><a href="#learn-1-parametric-g-formula" id="toc-learn-1-parametric-g-formula" class="nav-link" data-scroll-target="#learn-1-parametric-g-formula">LEARN 1 · Parametric g-formula</a></li>
+  <li><a href="#learn-2-propensity-score" id="toc-learn-2-propensity-score" class="nav-link" data-scroll-target="#learn-2-propensity-score">LEARN 2 · Propensity score</a></li>
+  <li><a href="#learn-3-inverse-probability-weighting" id="toc-learn-3-inverse-probability-weighting" class="nav-link" data-scroll-target="#learn-3-inverse-probability-weighting">LEARN 3 · Inverse-probability weighting</a></li>
+  <li><a href="#learn-4-balance-diagnostics" id="toc-learn-4-balance-diagnostics" class="nav-link" data-scroll-target="#learn-4-balance-diagnostics">LEARN 4 · Balance diagnostics</a></li>
+  <li><a href="#learn-5-doubly-robust-estimators" id="toc-learn-5-doubly-robust-estimators" class="nav-link" data-scroll-target="#learn-5-doubly-robust-estimators">LEARN 5 · Doubly robust estimators</a></li>
+  <li><a href="#phd-extension-tmle-and-machine-learning" id="toc-phd-extension-tmle-and-machine-learning" class="nav-link" data-scroll-target="#phd-extension-tmle-and-machine-learning">PHD EXTENSION · TMLE and machine learning</a></li>
+  <li><a href="#r-lab" id="toc-r-lab" class="nav-link" data-scroll-target="#r-lab">R LAB</a></li>
+  <li><a href="#methods-workshop-compare-estimators-on-the-same-causal-question" id="toc-methods-workshop-compare-estimators-on-the-same-causal-question" class="nav-link" data-scroll-target="#methods-workshop-compare-estimators-on-the-same-causal-question">METHODS WORKSHOP · Compare estimators on the same causal question</a>
+  <ul class="collapse">
+  <li><a href="#propensity-model-construction" id="toc-propensity-model-construction" class="nav-link" data-scroll-target="#propensity-model-construction">Propensity model construction</a></li>
+  <li><a href="#overlap" id="toc-overlap" class="nav-link" data-scroll-target="#overlap">Overlap</a></li>
+  <li><a href="#stabilised-weights" id="toc-stabilised-weights" class="nav-link" data-scroll-target="#stabilised-weights">Stabilised weights</a></li>
+  <li><a href="#covariate-balance" id="toc-covariate-balance" class="nav-link" data-scroll-target="#covariate-balance">Covariate balance</a></li>
+  <li><a href="#weighted-outcome-model" id="toc-weighted-outcome-model" class="nav-link" data-scroll-target="#weighted-outcome-model">Weighted outcome model</a></li>
+  <li><a href="#matching" id="toc-matching" class="nav-link" data-scroll-target="#matching">Matching</a></li>
+  <li><a href="#doubly-robust-analysis" id="toc-doubly-robust-analysis" class="nav-link" data-scroll-target="#doubly-robust-analysis">Doubly robust analysis</a></li>
+  <li><a href="#machine-learning-nuisance-models" id="toc-machine-learning-nuisance-models" class="nav-link" data-scroll-target="#machine-learning-nuisance-models">Machine learning nuisance models</a></li>
+  <li><a href="#estimator-comparison-table" id="toc-estimator-comparison-table" class="nav-link" data-scroll-target="#estimator-comparison-table">Estimator comparison table</a></li>
+  <li><a href="#doctoral-extension-efficiency-bound" id="toc-doctoral-extension-efficiency-bound" class="nav-link" data-scroll-target="#doctoral-extension-efficiency-bound">Doctoral extension · Efficiency bound</a></li>
+  </ul></li>
+  <li><a href="#seminar-notes-positivity-and-the-geometry-of-causal-estimation" id="toc-seminar-notes-positivity-and-the-geometry-of-causal-estimation" class="nav-link" data-scroll-target="#seminar-notes-positivity-and-the-geometry-of-causal-estimation">SEMINAR NOTES · Positivity and the geometry of causal estimation</a>
+  <ul class="collapse">
+  <li><a href="#structural-positivity" id="toc-structural-positivity" class="nav-link" data-scroll-target="#structural-positivity">Structural positivity</a></li>
+  <li><a href="#practical-positivity" id="toc-practical-positivity" class="nav-link" data-scroll-target="#practical-positivity">Practical positivity</a></li>
+  <li><a href="#redefining-the-target-population" id="toc-redefining-the-target-population" class="nav-link" data-scroll-target="#redefining-the-target-population">Redefining the target population</a></li>
+  <li><a href="#matching-estimands" id="toc-matching-estimands" class="nav-link" data-scroll-target="#matching-estimands">Matching estimands</a></li>
+  <li><a href="#weight-diagnostics-beyond-mean" id="toc-weight-diagnostics-beyond-mean" class="nav-link" data-scroll-target="#weight-diagnostics-beyond-mean">Weight diagnostics beyond mean</a></li>
+  <li><a href="#balance-beyond-means" id="toc-balance-beyond-means" class="nav-link" data-scroll-target="#balance-beyond-means">Balance beyond means</a></li>
+  <li><a href="#outcome-model-extrapolation" id="toc-outcome-model-extrapolation" class="nav-link" data-scroll-target="#outcome-model-extrapolation">Outcome-model extrapolation</a></li>
+  <li><a href="#doubly-robust-misconception" id="toc-doubly-robust-misconception" class="nav-link" data-scroll-target="#doubly-robust-misconception">Doubly robust misconception</a></li>
+  <li><a href="#bootstrap-with-matchingweighting" id="toc-bootstrap-with-matchingweighting" class="nav-link" data-scroll-target="#bootstrap-with-matchingweighting">Bootstrap with matching/weighting</a></li>
+  </ul></li>
+  <li><a href="#advanced-synthesis-estimator-choice-should-expose-not-hide-the-identifying-assumptions" id="toc-advanced-synthesis-estimator-choice-should-expose-not-hide-the-identifying-assumptions" class="nav-link" data-scroll-target="#advanced-synthesis-estimator-choice-should-expose-not-hide-the-identifying-assumptions">ADVANCED SYNTHESIS · Estimator choice should expose, not hide, the identifying assumptions</a>
+  <ul class="collapse">
+  <li><a href="#g-computation-in-more-detail" id="toc-g-computation-in-more-detail" class="nav-link" data-scroll-target="#g-computation-in-more-detail">G-computation in more detail</a></li>
+  <li><a href="#inverse-probability-weighting-as-population-reconstruction" id="toc-inverse-probability-weighting-as-population-reconstruction" class="nav-link" data-scroll-target="#inverse-probability-weighting-as-population-reconstruction">Inverse-probability weighting as population reconstruction</a></li>
+  <li><a href="#positivity-diagnostics" id="toc-positivity-diagnostics" class="nav-link" data-scroll-target="#positivity-diagnostics">Positivity diagnostics</a></li>
+  <li><a href="#trimming-and-truncation" id="toc-trimming-and-truncation" class="nav-link" data-scroll-target="#trimming-and-truncation">Trimming and truncation</a></li>
+  <li><a href="#matching-estimands-1" id="toc-matching-estimands-1" class="nav-link" data-scroll-target="#matching-estimands-1">Matching estimands</a></li>
+  <li><a href="#augmented-ipw-and-double-robustness" id="toc-augmented-ipw-and-double-robustness" class="nav-link" data-scroll-target="#augmented-ipw-and-double-robustness">Augmented IPW and double robustness</a></li>
+  <li><a href="#targeted-maximum-likelihood-estimation" id="toc-targeted-maximum-likelihood-estimation" class="nav-link" data-scroll-target="#targeted-maximum-likelihood-estimation">Targeted maximum likelihood estimation</a></li>
+  <li><a href="#cross-fitting" id="toc-cross-fitting" class="nav-link" data-scroll-target="#cross-fitting">Cross-fitting</a></li>
+  <li><a href="#choosing-between-methods" id="toc-choosing-between-methods" class="nav-link" data-scroll-target="#choosing-between-methods">Choosing between methods</a></li>
+  <li><a href="#sensitivity-to-unmeasured-confounding" id="toc-sensitivity-to-unmeasured-confounding" class="nav-link" data-scroll-target="#sensitivity-to-unmeasured-confounding">Sensitivity to unmeasured confounding</a></li>
+  <li><a href="#msc-standard" id="toc-msc-standard" class="nav-link" data-scroll-target="#msc-standard">MSc standard</a></li>
+  <li><a href="#phd-standard" id="toc-phd-standard" class="nav-link" data-scroll-target="#phd-standard">PhD standard</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-graduate-standard" id="toc-demonstrate-graduate-standard" class="nav-link" data-scroll-target="#demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY II · WEEK 07</p>
+</div>
+<section id="g-formula-propensity-scores-and-ip-weighting" class="level1">
+<h1>G-formula, Propensity Scores and IP Weighting</h1>
+<section id="different-estimators-can-target-the-same-causal-effectand-fail-for-different-reasons." class="level2">
+<h2 class="anchored" data-anchor-id="different-estimators-can-target-the-same-causal-effectand-fail-for-different-reasons.">Different estimators can target the same causal effect—and fail for different reasons.</h2>
+<p><span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span></p>
+</section>
+</section>
+</div>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>state the target estimand in population, strategy, outcome, time and effect-measure terms;</li>
+<li>identify the assumptions required for the week’s method;</li>
+<li>distinguish identification from estimation;</li>
+<li>select an analysis that corresponds to the scientific question;</li>
+<li>interpret absolute and relative effects with uncertainty;</li>
+<li>diagnose at least one failure mode using subject-matter reasoning;</li>
+<li>implement or outline a reproducible analysis in R; and</li>
+<li>defend what the resulting estimate can and cannot support.</li>
+</ol>
+</section>
+<section id="orient-separate-the-causal-estimand-from-the-estimator" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-separate-the-causal-estimand-from-the-estimator">ORIENT · Separate the causal estimand from the estimator</h2>
+<p>Suppose the target is the 1-year risk difference under treatment versus no treatment. Outcome regression, standardisation, propensity-score matching and inverse-probability weighting can all target that contrast under related identification assumptions, but their modelling choices and diagnostics differ.</p>
+</section>
+<section id="learn-1-parametric-g-formula" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-parametric-g-formula">LEARN 1 · Parametric g-formula</h2>
+<p>For a point treatment, fit an outcome model conditional on treatment and confounders, predict each person’s outcome under each strategy, then average predictions over the target population.</p>
+<p>Strengths: direct estimation of marginal risks and flexible contrasts. Weakness: dependence on correct outcome modelling, especially in sparse regions.</p>
+</section>
+<section id="learn-2-propensity-score" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-propensity-score">LEARN 2 · Propensity score</h2>
+<p>The propensity score is <span class="math inline">\(e(L)=P(A=1\mid L)\)</span>. Conditioning on a correctly specified propensity score can balance measured confounders between treatment groups.</p>
+<p>Uses include matching, stratification, covariate adjustment and weighting. A high c-statistic is not the objective; <strong>covariate balance and overlap</strong> are.</p>
+</section>
+<section id="learn-3-inverse-probability-weighting" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-inverse-probability-weighting">LEARN 3 · Inverse-probability weighting</h2>
+<p>For an ATE, simple treatment weights are:</p>
+<p><span class="math display">\[w_i=\frac{A_i}{e(L_i)}+\frac{1-A_i}{1-e(L_i)}.\]</span></p>
+<p>These create a pseudo-population in which measured baseline confounders are independent of treatment when the propensity model is correct and positivity holds.</p>
+<p>Stabilised weights reduce variance. Truncation can control extreme weights but changes the effective estimand and should be treated as a sensitivity choice rather than an invisible cleaning step.</p>
+</section>
+<section id="learn-4-balance-diagnostics" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-balance-diagnostics">LEARN 4 · Balance diagnostics</h2>
+<p>After weighting or matching, assess standardised mean differences, distributional overlap and effective sample size. Do not declare success because the propensity model coefficients are statistically significant or because treatment prediction is accurate.</p>
+<p>Inspect the tails of the propensity distribution. If treated and untreated populations barely overlap, the causal question may be unsupported for part of the target population.</p>
+</section>
+<section id="learn-5-doubly-robust-estimators" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-doubly-robust-estimators">LEARN 5 · Doubly robust estimators</h2>
+<p>Augmented inverse-probability weighting combines an outcome model and a treatment model. Under appropriate regularity conditions it can remain consistent if one of the two nuisance models is correctly specified.</p>
+<p>“Doubly robust” does not mean robust to unmeasured confounding, positivity violations or measurement error.</p>
+</section>
+<section id="phd-extension-tmle-and-machine-learning" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="phd-extension-tmle-and-machine-learning">PHD EXTENSION · TMLE and machine learning</h2>
+<p>Targeted maximum likelihood estimation and related semiparametric approaches can combine flexible nuisance estimation with targeted causal parameters. Cross-fitting and ensemble learners can reduce overfitting bias. These tools increase estimation flexibility but do not weaken causal identification assumptions.</p>
+</section>
+<section id="r-lab" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="r-lab">R LAB</h2>
+<p><a href="../../learn/epidemiology-ii/labs/lab-04-adjustment.html">Advanced Lab 4 — G-computation, propensity weighting and balance →</a></p>
+</section>
+<section id="methods-workshop-compare-estimators-on-the-same-causal-question" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="methods-workshop-compare-estimators-on-the-same-causal-question">METHODS WORKSHOP · Compare estimators on the same causal question</h2>
+<p>Use one dataset and estimate the same ATE four ways: outcome standardisation, propensity-score weighting, matching and augmented IPW. Differences reveal estimator sensitivity rather than different scientific questions.</p>
+<section id="propensity-model-construction" class="level3">
+<h3 class="anchored" data-anchor-id="propensity-model-construction">Propensity model construction</h3>
+<p>Include baseline causes of treatment and outcome, guided by the DAG. Variables strongly predicting outcome can improve precision. Do not include post-treatment variables.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ps <span class="ot">&lt;-</span> <span class="fu">glm</span>(a <span class="sc">~</span> age <span class="sc">+</span> severity <span class="sc">+</span> comorbidity <span class="sc">+</span> facility,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">family=</span><span class="fu">binomial</span>(), <span class="at">data=</span>d)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>e <span class="ot">&lt;-</span> <span class="fu">predict</span>(ps, <span class="at">type=</span><span class="st">"response"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="overlap" class="level3">
+<h3 class="anchored" data-anchor-id="overlap">Overlap</h3>
+<p>Plot propensity distributions by treatment. If treated participants have scores near 1 while controls have scores near 0, weights explode. Consider redefining the target population to an overlap population rather than pretending unsupported counterfactuals exist.</p>
+</section>
+<section id="stabilised-weights" class="level3">
+<h3 class="anchored" data-anchor-id="stabilised-weights">Stabilised weights</h3>
+<p>For ATE weighting:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pA <span class="ot">&lt;-</span> <span class="fu">mean</span>(d<span class="sc">$</span>a)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>sw <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(d<span class="sc">$</span>a<span class="sc">==</span><span class="dv">1</span>, pA<span class="sc">/</span>d<span class="sc">$</span>e, (<span class="dv">1</span><span class="sc">-</span>pA)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">-</span>d<span class="sc">$</span>e))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(d<span class="sc">$</span>sw)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Inspect mean, percentiles, maxima and effective sample size. A weighted pseudo-population with a handful of observations carrying enormous weights is fragile.</p>
+</section>
+<section id="covariate-balance" class="level3">
+<h3 class="anchored" data-anchor-id="covariate-balance">Covariate balance</h3>
+<p>Use standardised mean differences before and after weighting. Balance should be assessed on the covariates themselves, not by p-values that depend on sample size.</p>
+</section>
+<section id="weighted-outcome-model" class="level3">
+<h3 class="anchored" data-anchor-id="weighted-outcome-model">Weighted outcome model</h3>
+<p>A marginal structural model for a point treatment can estimate the weighted outcome contrast. Use robust standard errors appropriate to weighting.</p>
+</section>
+<section id="matching" class="level3">
+<h3 class="anchored" data-anchor-id="matching">Matching</h3>
+<p>Nearest-neighbour propensity matching estimates an effect in the matched population and may discard non-overlapping participants. Caliper choices and matching with/without replacement affect precision and target population.</p>
+</section>
+<section id="doubly-robust-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="doubly-robust-analysis">Doubly robust analysis</h3>
+<p>AIPW combines outcome predictions with inverse-probability residual corrections. If either nuisance model is correctly specified—under the relevant conditions—the estimator can remain consistent. But both models can fail in the same unsupported region.</p>
+</section>
+<section id="machine-learning-nuisance-models" class="level3">
+<h3 class="anchored" data-anchor-id="machine-learning-nuisance-models">Machine learning nuisance models</h3>
+<p>Random forests, boosting or super learner can flexibly estimate propensity or outcome functions. Cross-fitting separates nuisance-model training from causal-effect evaluation, reducing overfitting bias. However, black-box nuisance models do not make the causal assumptions less important.</p>
+</section>
+<section id="estimator-comparison-table" class="level3">
+<h3 class="anchored" data-anchor-id="estimator-comparison-table">Estimator comparison table</h3>
+<p>Your report should contain a table like:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Estimator</th>
+<th style="text-align: right;">Risk under A=1</th>
+<th style="text-align: right;">Risk under A=0</th>
+<th style="text-align: right;">RD</th>
+<th>Key diagnostic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>G-computation</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td>outcome-model checks</td>
+</tr>
+<tr class="even">
+<td>IPTW</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td>balance + weight tails</td>
+</tr>
+<tr class="odd">
+<td>Matching</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td>balance + matched target</td>
+</tr>
+<tr class="even">
+<td>AIPW</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td>both nuisance models</td>
+</tr>
+</tbody>
+</table>
+<p>If estimates differ materially, investigate support, modelling and target-population differences rather than averaging them.</p>
+</section>
+<section id="doctoral-extension-efficiency-bound" class="level3">
+<h3 class="anchored" data-anchor-id="doctoral-extension-efficiency-bound">Doctoral extension · Efficiency bound</h3>
+<p>Semiparametric theory characterises the lowest achievable asymptotic variance among regular estimators under a model. Efficient influence functions underpin AIPW and TMLE. This is the bridge from applied causal inference to methodological research.</p>
+</section>
+</section>
+<section id="seminar-notes-positivity-and-the-geometry-of-causal-estimation" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="seminar-notes-positivity-and-the-geometry-of-causal-estimation">SEMINAR NOTES · Positivity and the geometry of causal estimation</h2>
+<section id="structural-positivity" class="level3">
+<h3 class="anchored" data-anchor-id="structural-positivity">Structural positivity</h3>
+<p>If national guidelines prohibit treatment B for pregnant patients, there is no data-supported causal contrast of A versus B among pregnant patients. No amount of modelling can create that counterfactual.</p>
+</section>
+<section id="practical-positivity" class="level3">
+<h3 class="anchored" data-anchor-id="practical-positivity">Practical positivity</h3>
+<p>Treatment B may technically occur but in only 1% of very severe patients. Estimates then depend on a few observations and become unstable.</p>
+</section>
+<section id="redefining-the-target-population" class="level3">
+<h3 class="anchored" data-anchor-id="redefining-the-target-population">Redefining the target population</h3>
+<p>Instead of truncating extreme weights without discussion, consider restricting the estimand to people with clinical equipoise or using overlap weights that emphasise patients with substantial probability of either treatment.</p>
+</section>
+<section id="matching-estimands" class="level3">
+<h3 class="anchored" data-anchor-id="matching-estimands">Matching estimands</h3>
+<p>1:1 propensity matching without replacement often targets the effect in the matched treated population rather than the original ATE. Report who was discarded and how the matched population differs from the source population.</p>
+</section>
+<section id="weight-diagnostics-beyond-mean" class="level3">
+<h3 class="anchored" data-anchor-id="weight-diagnostics-beyond-mean">Weight diagnostics beyond mean</h3>
+<p>Report min/max, percentiles, coefficient of variation and effective sample size. Plot weights against key covariates to identify which clinical profiles drive instability.</p>
+</section>
+<section id="balance-beyond-means" class="level3">
+<h3 class="anchored" data-anchor-id="balance-beyond-means">Balance beyond means</h3>
+<p>Standardised mean differences assess first moments. For continuous variables, compare distributions, variance ratios and density plots. Interactions and nonlinear terms that confound treatment effects should also be balanced.</p>
+</section>
+<section id="outcome-model-extrapolation" class="level3">
+<h3 class="anchored" data-anchor-id="outcome-model-extrapolation">Outcome-model extrapolation</h3>
+<p>G-computation can hide positivity problems because predictions are produced even where no untreated patients exist. Therefore inspect propensity overlap even when the final estimator does not use propensity weights.</p>
+</section>
+<section id="doubly-robust-misconception" class="level3">
+<h3 class="anchored" data-anchor-id="doubly-robust-misconception">Doubly robust misconception</h3>
+<p>If both treatment and outcome models use the same mismeasured confounders, double robustness does not help. It protects against some nuisance-model misspecification, not wrong causal variables.</p>
+</section>
+<section id="bootstrap-with-matchingweighting" class="level3">
+<h3 class="anchored" data-anchor-id="bootstrap-with-matchingweighting">Bootstrap with matching/weighting</h3>
+<p>Variance estimation must reflect the estimator. Some matching estimators have non-standard bootstrap behaviour; use established package procedures or analytic variance methods rather than blindly resampling.</p>
+</section>
+</section>
+<section id="advanced-synthesis-estimator-choice-should-expose-not-hide-the-identifying-assumptions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="advanced-synthesis-estimator-choice-should-expose-not-hide-the-identifying-assumptions">ADVANCED SYNTHESIS · Estimator choice should expose, not hide, the identifying assumptions</h2>
+<p>G-computation, propensity-score weighting, matching and augmented estimators are often presented as competing “methods.” A more useful view is that they are different numerical strategies for recovering the same counterfactual contrast under common causal assumptions.</p>
+<section id="g-computation-in-more-detail" class="level3">
+<h3 class="anchored" data-anchor-id="g-computation-in-more-detail">G-computation in more detail</h3>
+<p>For the ATE with baseline confounders <span class="math inline">\(L\)</span>:</p>
+<p><span class="math display">\[E(Y^a)=\sum_l E(Y\mid A=a,L=l)P(L=l).\]</span></p>
+<p>In practice, estimate <span class="math inline">\(m(a,l)=E(Y\mid A=a,L=l)\)</span>, predict <span class="math inline">\(m(1,L_i)\)</span> and <span class="math inline">\(m(0,L_i)\)</span> for every member of the target population, and average. This makes the target population explicit. Flexible modelling is particularly important when outcome risk is nonlinear or treatment effects vary with <span class="math inline">\(L\)</span>.</p>
+</section>
+<section id="inverse-probability-weighting-as-population-reconstruction" class="level3">
+<h3 class="anchored" data-anchor-id="inverse-probability-weighting-as-population-reconstruction">Inverse-probability weighting as population reconstruction</h3>
+<p>Weights create a pseudo-population in which measured baseline confounders are balanced across treatment strategies. For binary treatment, unstabilised ATE weights are <span class="math inline">\(1/e(L)\)</span> for treated and <span class="math inline">\(1/[1-e(L)]\)</span> for untreated. Stabilised weights retain the same target under ideal conditions while often reducing variance.</p>
+</section>
+<section id="positivity-diagnostics" class="level3">
+<h3 class="anchored" data-anchor-id="positivity-diagnostics">Positivity diagnostics</h3>
+<p>Report treatment-specific propensity distributions, extreme weight percentiles, effective sample size and covariate balance. An average weight near one does not rule out dangerous tails. Practical positivity problems often occur in clinically recognisable strata; inspect which patients generate extreme weights.</p>
+</section>
+<section id="trimming-and-truncation" class="level3">
+<h3 class="anchored" data-anchor-id="trimming-and-truncation">Trimming and truncation</h3>
+<p>Capping weights can improve precision but may introduce bias and alter the implicit target. Report thresholds and re-estimate under alternative thresholds. Restricting to a pre-specified overlap population can be scientifically cleaner than arbitrary post hoc trimming.</p>
+</section>
+<section id="matching-estimands-1" class="level3">
+<h3 class="anchored" data-anchor-id="matching-estimands-1">Matching estimands</h3>
+<p>Nearest-neighbour matching often estimates an effect among matched treated persons, not the population ATE. Calipers, replacement and ratio matching change who contributes. Report both balance and the population retained after matching.</p>
+</section>
+<section id="augmented-ipw-and-double-robustness" class="level3">
+<h3 class="anchored" data-anchor-id="augmented-ipw-and-double-robustness">Augmented IPW and double robustness</h3>
+<p>AIPW combines treatment and outcome models. Its consistency if either nuisance model is correct is valuable, but “double robust” does not protect against an omitted confounder, measurement error, violations of consistency or absent overlap.</p>
+</section>
+<section id="targeted-maximum-likelihood-estimation" class="level3">
+<h3 class="anchored" data-anchor-id="targeted-maximum-likelihood-estimation">Targeted maximum likelihood estimation</h3>
+<p>TMLE starts with initial outcome and treatment models and then updates the outcome prediction along a fluctuation submodel targeted to the parameter of interest. The efficient influence curve supports valid inference under suitable conditions. Super Learner can combine candidate algorithms for nuisance estimation.</p>
+</section>
+<section id="cross-fitting" class="level3">
+<h3 class="anchored" data-anchor-id="cross-fitting">Cross-fitting</h3>
+<p>When machine-learning methods are used for nuisance functions, using the same observations to fit complex models and estimate the target can overfit. Cross-fitting separates nuisance learning from target evaluation across folds and is central to modern double/debiased machine-learning approaches.</p>
+</section>
+<section id="choosing-between-methods" class="level3">
+<h3 class="anchored" data-anchor-id="choosing-between-methods">Choosing between methods</h3>
+<p>Use g-computation when outcome modelling and direct marginal risks are natural; weighting when balance diagnostics and pseudo-population interpretation are attractive; matching when a region of common support and treated-population effect are substantively useful; doubly robust methods when nuisance modelling flexibility is needed. The causal assumptions remain largely shared.</p>
+</section>
+<section id="sensitivity-to-unmeasured-confounding" class="level3">
+<h3 class="anchored" data-anchor-id="sensitivity-to-unmeasured-confounding">Sensitivity to unmeasured confounding</h3>
+<p>No measured-confounding estimator solves unmeasured confounding. Add quantitative sensitivity analyses, negative controls, instrumental-variable arguments or triangulation where appropriate. E-values can summarise one type of sensitivity but should not substitute for a realistic bias model.</p>
+</section>
+<section id="msc-standard" class="level3">
+<h3 class="anchored" data-anchor-id="msc-standard">MSc standard</h3>
+<p>Estimate the same ATE by at least two approaches, compare diagnostics and effect estimates, and explain why differences arise.</p>
+</section>
+<section id="phd-standard" class="level3">
+<h3 class="anchored" data-anchor-id="phd-standard">PhD standard</h3>
+<p>Use flexible nuisance models with cross-fitting, justify the target parameter, report influence-function-based uncertainty where appropriate, and distinguish estimator robustness from causal-identification robustness.</p>
+</section>
+</section>
+<section id="demonstrate-graduate-standard" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-graduate-standard">DEMONSTRATE · Graduate standard</h2>
+<p>Submit one short methods memo or reproducible analysis in which you <strong>name the estimand first</strong>, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../learn/epidemiology-ii/week-06.html">← Week 6</a></p>
+<p><a href="../../learn/epidemiology-ii/week-08.html">Week 8 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Integrate design, measurement, comparison, bias, confounding, precision and context to decide what an epidemiological result means, what it does not mean and how confidently it can guide action.">
+
+<title>Week 12 — Causal Interpretation and Critical Appraisal | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-week-in-one-sentence" id="toc-this-week-in-one-sentence" class="nav-link active" data-scroll-target="#this-week-in-one-sentence">This week in one sentence</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-the-p-value-is-0.001.-so-what" id="toc-orient-the-p-value-is-0.001.-so-what" class="nav-link" data-scroll-target="#orient-the-p-value-is-0.001.-so-what">ORIENT · The p-value is 0.001. So what?</a></li>
+  <li><a href="#learn-1-first-identify-the-kind-of-claim" id="toc-learn-1-first-identify-the-kind-of-claim" class="nav-link" data-scroll-target="#learn-1-first-identify-the-kind-of-claim">LEARN 1 · First identify the kind of claim</a></li>
+  <li><a href="#learn-2-name-the-estimand-before-interpreting-the-estimate" id="toc-learn-2-name-the-estimand-before-interpreting-the-estimate" class="nav-link" data-scroll-target="#learn-2-name-the-estimand-before-interpreting-the-estimate">LEARN 2 · Name the estimand before interpreting the estimate</a></li>
+  <li><a href="#learn-3-start-critical-appraisal-with-design-not-the-results-table" id="toc-learn-3-start-critical-appraisal-with-design-not-the-results-table" class="nav-link" data-scroll-target="#learn-3-start-critical-appraisal-with-design-not-the-results-table">LEARN 3 · Start critical appraisal with design, not the Results table</a></li>
+  <li><a href="#learn-4-temporality-is-necessary-but-not-sufficient" id="toc-learn-4-temporality-is-necessary-but-not-sufficient" class="nav-link" data-scroll-target="#learn-4-temporality-is-necessary-but-not-sufficient">LEARN 4 · Temporality is necessary but not sufficient</a></li>
+  <li><a href="#learn-5-measurement-determines-what-the-variables-actually-mean" id="toc-learn-5-measurement-determines-what-the-variables-actually-mean" class="nav-link" data-scroll-target="#learn-5-measurement-determines-what-the-variables-actually-mean">LEARN 5 · Measurement determines what the variables actually mean</a></li>
+  <li><a href="#learn-6-bias-and-confounding-are-alternative-explanations" id="toc-learn-6-bias-and-confounding-are-alternative-explanations" class="nav-link" data-scroll-target="#learn-6-bias-and-confounding-are-alternative-explanations">LEARN 6 · Bias and confounding are alternative explanations</a></li>
+  <li><a href="#learn-7-p-values-address-compatibility-with-a-null-model-not-importance" id="toc-learn-7-p-values-address-compatibility-with-a-null-model-not-importance" class="nav-link" data-scroll-target="#learn-7-p-values-address-compatibility-with-a-null-model-not-importance">LEARN 7 · P-values address compatibility with a null model, not importance</a></li>
+  <li><a href="#learn-8-confidence-intervals-carry-magnitude-and-precision-together" id="toc-learn-8-confidence-intervals-carry-magnitude-and-precision-together" class="nav-link" data-scroll-target="#learn-8-confidence-intervals-carry-magnitude-and-precision-together">LEARN 8 · Confidence intervals carry magnitude and precision together</a></li>
+  <li><a href="#learn-9-statistical-significance-is-not-public-health-importance" id="toc-learn-9-statistical-significance-is-not-public-health-importance" class="nav-link" data-scroll-target="#learn-9-statistical-significance-is-not-public-health-importance">LEARN 9 · Statistical significance is not public-health importance</a></li>
+  <li><a href="#learn-10-internal-validity-versus-applicability" id="toc-learn-10-internal-validity-versus-applicability" class="nav-link" data-scroll-target="#learn-10-internal-validity-versus-applicability">LEARN 10 · Internal validity versus applicability</a></li>
+  <li><a href="#learn-11-causal-language-has-levels" id="toc-learn-11-causal-language-has-levels" class="nav-link" data-scroll-target="#learn-11-causal-language-has-levels">LEARN 11 · Causal language has levels</a></li>
+  <li><a href="#learn-12-evidence-can-support-action-without-proving-everything" id="toc-learn-12-evidence-can-support-action-without-proving-everything" class="nav-link" data-scroll-target="#learn-12-evidence-can-support-action-without-proving-everything">LEARN 12 · Evidence can support action without proving everything</a></li>
+  <li><a href="#learn-13-the-lipps-evidence-framework" id="toc-learn-13-the-lipps-evidence-framework" class="nav-link" data-scroll-target="#learn-13-the-lipps-evidence-framework">LEARN 13 · The LIPPS EVIDENCE framework</a></li>
+  <li><a href="#learn-14-a-final-interpretation-workflow" id="toc-learn-14-a-final-interpretation-workflow" class="nav-link" data-scroll-target="#learn-14-a-final-interpretation-workflow">LEARN 14 · A final interpretation workflow</a></li>
+  <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY · WEEK 12</p>
+</div>
+<section id="causal-interpretation-and-critical-appraisal" class="level1">
+<h1>Causal Interpretation and Critical Appraisal</h1>
+<section id="the-final-skill-is-not-producing-an-estimate-it-is-knowing-what-the-estimate-can-support." class="level2">
+<h2 class="anchored" data-anchor-id="the-final-skill-is-not-producing-an-estimate-it-is-knowing-what-the-estimate-can-support.">The final skill is not producing an estimate; it is knowing what the estimate can support.</h2>
+<p><span class="lipps-chip">Capstone</span> <span class="lipps-chip">Causal reasoning</span> <span class="lipps-chip">Critical appraisal</span> <span class="lipps-chip">Interpretation</span></p>
+</section>
+</section>
+</div>
+<section id="this-week-in-one-sentence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="this-week-in-one-sentence">This week in one sentence</h2>
+<p><strong>Integrate design, measurement, comparison, bias, confounding, precision and context to decide what an epidemiological result means, what it does not mean and how confidently it can guide action.</strong></p>
+<div class="lipps-callout">
+<p><strong>The LIPPS lens</strong><br>
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.</p>
+</div>
+</section>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of Week 12, you should be able to:</p>
+<ol type="1">
+<li>distinguish description, association, prediction and causal effect questions;</li>
+<li>identify the estimand implied by a research question and reported measure at an introductory level;</li>
+<li>judge whether the study design establishes a credible temporal and counterfactual comparison;</li>
+<li>evaluate outcome, exposure and covariate measurement as potential sources of error;</li>
+<li>assess selection bias, information bias and confounding as threats to interpretation;</li>
+<li>interpret effect size together with confidence intervals rather than p-values alone;</li>
+<li>distinguish statistical significance from scientific and public-health importance;</li>
+<li>separate internal validity from applicability to another population;</li>
+<li>recognise competing explanations and residual uncertainty;</li>
+<li>write conclusions using causal language only when the design and assumptions justify it;</li>
+<li>recommend action under uncertainty without pretending evidence is complete;</li>
+<li>apply the LIPPS EVIDENCE appraisal framework to a paper, report or programme claim.</li>
+</ol>
+</section>
+<section id="orient-the-p-value-is-0.001.-so-what" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-the-p-value-is-0.001.-so-what">ORIENT · The p-value is 0.001. So what?</h2>
+<p>A study reports:</p>
+<blockquote class="blockquote">
+<p>“Participants exposed to Programme X had 35% lower mortality, p=0.001.”</p>
+</blockquote>
+<p>Before celebrating, an epidemiologist should ask:</p>
+<ul>
+<li>Was Programme X assigned or self-selected?</li>
+<li>When was exposure measured relative to mortality?</li>
+<li>Who entered the study and who was lost?</li>
+<li>Were mortality outcomes measured equally?</li>
+<li>Which variables influenced both programme participation and prognosis?</li>
+<li>What was the absolute mortality difference?</li>
+<li>What does the confidence interval allow?</li>
+<li>Does the study population resemble the population where a decision will be made?</li>
+</ul>
+<p>A small p-value cannot answer those questions.</p>
+</section>
+<section id="learn-1-first-identify-the-kind-of-claim" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-first-identify-the-kind-of-claim">LEARN 1 · First identify the kind of claim</h2>
+<p>Four claims are often confused.</p>
+<p><strong>Description:</strong> What is happening?<br>
+Example: hypertension prevalence is 28%.</p>
+<p><strong>Association:</strong> How does an outcome differ between groups?<br>
+Example: hypertension prevalence is higher among Group A.</p>
+<p><strong>Prediction:</strong> How well can measured information forecast an outcome?<br>
+Example: a risk model identifies people likely to be hospitalised.</p>
+<p><strong>Causal effect:</strong> What would differ if the exposure or intervention were changed?<br>
+Example: what would mortality have been if the same population had received versus not received the intervention?</p>
+<p>The analysis should be judged against the type of claim, not merely against whether a model was fitted.</p>
+</section>
+<section id="learn-2-name-the-estimand-before-interpreting-the-estimate" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-name-the-estimand-before-interpreting-the-estimate">LEARN 2 · Name the estimand before interpreting the estimate</h2>
+<div class="lipps-callout">
+<p><strong>LIPPS extension</strong> The attached CDC course does not use modern estimand terminology explicitly. It is introduced here because it clarifies what an analysis is trying to estimate.</p>
+</div>
+<p>An <strong>estimand</strong> is the target quantity defined by the scientific question.</p>
+<p>Examples:</p>
+<ul>
+<li>prevalence in a target population;</li>
+<li>risk ratio over 12 months;</li>
+<li>risk difference under intervention versus no intervention;</li>
+<li>odds ratio for prior exposure in a case-control design;</li>
+<li>incidence rate ratio;</li>
+<li>effect of assignment to a programme.</li>
+</ul>
+<p>An estimate can be mathematically correct while targeting the wrong estimand for the decision question.</p>
+</section>
+<section id="learn-3-start-critical-appraisal-with-design-not-the-results-table" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-start-critical-appraisal-with-design-not-the-results-table">LEARN 3 · Start critical appraisal with design, not the Results table</h2>
+<p>The attached CDC material repeatedly emphasises comparison groups and distinguishes observational from experimental study designs.</p>
+<p>Ask:</p>
+<ol type="1">
+<li>How were participants selected?</li>
+<li>What determined exposure or intervention status?</li>
+<li>When was exposure measured relative to outcome?</li>
+<li>What comparison group represents the expected or counterfactual experience?</li>
+<li>Did follow-up and measurement differ across groups?</li>
+<li>What quantity can the design estimate directly?</li>
+</ol>
+<p>A study design does not determine truth, but it constrains which interpretations are defensible.</p>
+</section>
+<section id="learn-4-temporality-is-necessary-but-not-sufficient" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-temporality-is-necessary-but-not-sufficient">LEARN 4 · Temporality is necessary but not sufficient</h2>
+<p>A cause must precede its effect, so temporal ordering matters.</p>
+<p>Cross-sectional simultaneous measurement often creates ambiguity. Cohort follow-up improves temporal ordering. Randomised assignment can strengthen causal interpretation further.</p>
+<p>But even perfect temporality does not remove confounding or selection bias. Smoking can precede an outcome without being the cause if smoking is simply correlated with the true cause.</p>
+<p>Temporality answers <strong>when</strong>; causal identification also requires a credible comparison.</p>
+</section>
+<section id="learn-5-measurement-determines-what-the-variables-actually-mean" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-measurement-determines-what-the-variables-actually-mean">LEARN 5 · Measurement determines what the variables actually mean</h2>
+<p>A variable label can hide measurement problems.</p>
+<p>“Vaccinated” might mean card-confirmed dose, caregiver recall or registry entry.<br>
+“Hypertension” might mean one reading, repeated readings, medication history or diagnosis code.<br>
+“Exposure” might mean current status even though the biologically relevant window was years earlier.</p>
+<p>Critical appraisal asks:</p>
+<ul>
+<li>Is the operational definition appropriate?</li>
+<li>Is measurement equally valid across groups?</li>
+<li>Is timing appropriate?</li>
+<li>Are cut-offs defensible?</li>
+<li>How much missingness exists?</li>
+<li>Could misclassification change the association?</li>
+</ul>
+<p>You cannot interpret an estimate more precisely than the variables from which it was constructed.</p>
+</section>
+<section id="learn-6-bias-and-confounding-are-alternative-explanations" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-bias-and-confounding-are-alternative-explanations">LEARN 6 · Bias and confounding are alternative explanations</h2>
+<p>The attached source defines selection bias, information bias and confounding and emphasises valid comparison groups.</p>
+<p>A useful appraisal question is:</p>
+<blockquote class="blockquote">
+<p><strong>What process, other than the proposed causal mechanism, could have generated this estimate?</strong></p>
+</blockquote>
+<p>Possible answers include:</p>
+<ul>
+<li>differential enrolment;</li>
+<li>differential loss to follow-up;</li>
+<li>exposure recall differences;</li>
+<li>outcome ascertainment differences;</li>
+<li>uncontrolled confounding;</li>
+<li>post-exposure adjustment;</li>
+<li>unmeasured structural factors; or</li>
+<li>data-processing error.</li>
+</ul>
+<p>The goal is not to invent endless hypothetical bias. It is to identify plausible mechanisms strong enough to matter.</p>
+</section>
+<section id="learn-7-p-values-address-compatibility-with-a-null-model-not-importance" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-7-p-values-address-compatibility-with-a-null-model-not-importance">LEARN 7 · P-values address compatibility with a null model, not importance</h2>
+<p>The attached CDC outbreak lesson describes the p-value as the probability of observing an association as large or larger if the null hypothesis were true, and cautions that statistical tests are guides rather than guarantees.</p>
+<p>A small p-value does <strong>not</strong> tell you:</p>
+<ul>
+<li>the probability that the null hypothesis is true;</li>
+<li>the probability the alternative hypothesis is true;</li>
+<li>whether the result is clinically important;</li>
+<li>whether bias is absent;</li>
+<li>whether the study is well designed; or</li>
+<li>whether the effect will generalise.</li>
+</ul>
+<p>Likewise, p &gt; 0.05 does not prove “no effect,” especially when the study is imprecise.</p>
+</section>
+<section id="learn-8-confidence-intervals-carry-magnitude-and-precision-together" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-8-confidence-intervals-carry-magnitude-and-precision-together">LEARN 8 · Confidence intervals carry magnitude and precision together</h2>
+<p>The attached CDC material notes that wide confidence intervals are compatible with a broad range of effect sizes, while narrow intervals indicate greater precision.</p>
+<p>For ratio measures such as RR or OR, the usual null value is 1.<br>
+For absolute differences, the usual null value is 0.</p>
+<p>But interpretation should go beyond whether the interval crosses the null.</p>
+<p>Example:</p>
+<p><strong>RR 0.72, 95% CI 0.50–1.04</strong></p>
+<p>The data are compatible with effects ranging from a substantial reduction to little or modest increase. “Not statistically significant” throws away most of that information.</p>
+<p>Ask whether the interval includes effects that would change a public-health decision.</p>
+</section>
+<section id="learn-9-statistical-significance-is-not-public-health-importance" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-9-statistical-significance-is-not-public-health-importance">LEARN 9 · Statistical significance is not public-health importance</h2>
+<p>Suppose an enormous study estimates a risk reduction from 10.00% to 9.80% with p &lt; 0.001.</p>
+<p>The relative reduction is small and the absolute reduction is 0.2 percentage points. Depending on intervention cost, harm and scale, that may be trivial—or it may still matter if millions are exposed and the intervention is cheap.</p>
+<p>Now consider a small emergency study suggesting mortality reduction from 30% to 20% but with a wide confidence interval. The estimate may be operationally important despite statistical uncertainty.</p>
+<p>Decision relevance requires <strong>magnitude, precision, burden, feasibility, harms and context</strong>.</p>
+</section>
+<section id="learn-10-internal-validity-versus-applicability" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-10-internal-validity-versus-applicability">LEARN 10 · Internal validity versus applicability</h2>
+<div class="lipps-callout">
+<p><strong>LIPPS extension</strong> The attached CDC course discusses representativeness and practical public-health application, but the explicit internal/external validity framework is developed here.</p>
+</div>
+<p><strong>Internal validity:</strong> Is the study’s estimate credible for the population actually studied?</p>
+<p><strong>External validity / applicability:</strong> Would the estimate be expected to hold in another population, place, time or implementation condition?</p>
+<p>A perfectly representative sample does not rescue internal bias. Conversely, a highly internally valid study in a narrow population can still be useful elsewhere when mechanisms and context support transport.</p>
+<p>Generalisation is an argument, not a checkbox.</p>
+</section>
+<section id="learn-11-causal-language-has-levels" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-11-causal-language-has-levels">LEARN 11 · Causal language has levels</h2>
+<p>Consider increasing levels of causal commitment:</p>
+<p><strong>Descriptive:</strong> “Mortality was lower among participants receiving the programme.”</p>
+<p><strong>Associational:</strong> “Programme receipt was associated with lower mortality.”</p>
+<p><strong>Adjusted associational:</strong> “After adjustment for measured confounders, programme receipt remained associated with lower mortality.”</p>
+<p><strong>Causal:</strong> “The programme reduced mortality.”</p>
+<p>The final sentence requires a design and assumptions capable of supporting a causal effect estimate.</p>
+<p>Words such as <strong>impact, effect, attributable, prevented, caused, reduced</strong> carry causal meaning and should be used intentionally.</p>
+</section>
+<section id="learn-12-evidence-can-support-action-without-proving-everything" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-12-evidence-can-support-action-without-proving-everything">LEARN 12 · Evidence can support action without proving everything</h2>
+<p>The attached CDC course makes an important practical point: epidemiology may not prove a causal relationship with certainty, yet it can provide enough evidence for appropriate prevention and control.</p>
+<p>Public-health decisions often balance:</p>
+<ul>
+<li>strength and coherence of evidence;</li>
+<li>severity and urgency of the problem;</li>
+<li>plausibility of benefit;</li>
+<li>potential harms;</li>
+<li>reversibility of the intervention;</li>
+<li>cost and feasibility; and</li>
+<li>consequences of waiting.</li>
+</ul>
+<p>The correct communication is not false certainty. It is a transparent statement of what is known, uncertain and reasonable to do next.</p>
+</section>
+<section id="learn-13-the-lipps-evidence-framework" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-13-the-lipps-evidence-framework">LEARN 13 · The LIPPS EVIDENCE framework</h2>
+<div class="lipps-callout">
+<p><strong>LIPPS synthesis</strong> <strong>EVIDENCE</strong> is a LIPPS-created appraisal mnemonic, not an acronym from the attached CDC source.</p>
+</div>
+<p>Use it when reading a manuscript, programme report, dashboard or headline.</p>
+<p><strong>E — Exact question</strong><br>
+What population, exposure/intervention, outcome and time are actually being studied?</p>
+<p><strong>V — Valid design</strong><br>
+Does the design create a credible comparison for that question?</p>
+<p><strong>I — Information quality</strong><br>
+How well were exposure, outcome and covariates measured?</p>
+<p><strong>D — Denominators and data structure</strong><br>
+Are the correct populations, sampling design, clustering, follow-up and missing data handled?</p>
+<p><strong>E — Explanations competing</strong><br>
+What bias, confounding, reverse causation or alternative mechanism could explain the result?</p>
+<p><strong>N — Numerical meaning</strong><br>
+What are the absolute and relative effects, uncertainty intervals and practical magnitude?</p>
+<p><strong>C — Context</strong><br>
+Does the evidence apply to this population, health system and decision?</p>
+<p><strong>E — Expression</strong><br>
+Does the wording of the conclusion match what the evidence supports?</p>
+<p>The framework operationalises the LIPPS motto: <strong>Evidence is never the whole story.</strong></p>
+</section>
+<section id="learn-14-a-final-interpretation-workflow" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-14-a-final-interpretation-workflow">LEARN 14 · A final interpretation workflow</h2>
+<p>When presented with any epidemiological result:</p>
+<ol type="1">
+<li>Restate the question.</li>
+<li>Identify the design.</li>
+<li>Identify the measure and its denominator.</li>
+<li>Inspect absolute and relative results.</li>
+<li>Read the confidence interval.</li>
+<li>Check temporal ordering.</li>
+<li>Examine selection and measurement.</li>
+<li>Identify plausible confounding.</li>
+<li>Ask what was adjusted for and why.</li>
+<li>Consider competing explanations.</li>
+<li>Judge applicability.</li>
+<li>Rewrite the conclusion in language the design earns.</li>
+<li>State what decision, if any, the evidence reasonably supports.</li>
+</ol>
+<p>If you can do this reliably, you are no longer merely calculating epidemiological statistics—you are <strong>thinking epidemiologically</strong>.</p>
+</section>
+<section id="apply-integrated-public-health-problem" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="apply-integrated-public-health-problem">APPLY · Integrated public-health problem</h2>
+<p>A fictional paper reports a cohort study of 8,000 adults comparing users and non-users of a new community health programme. Mortality over two years is 3.0% among programme users and 4.5% among non-users. The adjusted hazard ratio is 0.70 (95% CI 0.52–0.95; p=0.02). Programme participation was voluntary. Users were younger, wealthier and lived closer to facilities; adjustment included age and sex but not distance or wealth. Loss to follow-up was 4% among users and 14% among non-users.</p>
+<p>Apply <strong>LIPPS EVIDENCE</strong>:</p>
+<ol type="1">
+<li>State the exact causal and associational questions separately.</li>
+<li>Identify what the cohort design contributes.</li>
+<li>Calculate the crude risk ratio and risk difference from the reported risks.</li>
+<li>Interpret the adjusted hazard ratio without equating it automatically to risk ratio.</li>
+<li>Explain what the confidence interval says about precision and compatibility.</li>
+<li>Identify major selection and confounding concerns.</li>
+<li>Explain why voluntary programme uptake matters.</li>
+<li>Explain why differential loss to follow-up matters.</li>
+<li>State what information is missing about measurement.</li>
+<li>Evaluate the claim: “Programme X reduced mortality by 30%.”</li>
+<li>Rewrite the conclusion more defensibly.</li>
+<li>State whether the findings could still support a pilot expansion and what additional evaluation you would request.</li>
+</ol>
+</section>
+<div class="lipps-section">
+<section id="graduate-deepen-identification-assumptions-sensitivity-analysis-and-transportability" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-identification-assumptions-sensitivity-analysis-and-transportability">GRADUATE DEEPEN · Identification assumptions, sensitivity analysis and transportability</h2>
+<p>Critical appraisal at graduate level should end with more than a list of strengths and limitations. It should identify which assumptions are required for the reported estimate to answer the scientific question.</p>
+<section id="four-causal-identification-ideas" class="level3">
+<h3 class="anchored" data-anchor-id="four-causal-identification-ideas">Four causal identification ideas</h3>
+<p>For a simple point exposure, a causal interpretation commonly relies on versions of:</p>
+<p><strong>Exchangeability:</strong> compared groups are sufficiently similar with respect to causes of the outcome after the chosen adjustment strategy.</p>
+<p><strong>Positivity:</strong> every relevant covariate pattern has a non-zero probability of receiving each exposure strategy being compared.</p>
+<p><strong>Consistency:</strong> the observed outcome under the exposure actually received corresponds to the potential outcome under the defined intervention strategy. Poorly defined exposures make this assumption difficult to defend.</p>
+<p><strong>Correct time ordering and measurement:</strong> exposure, covariates and outcome are measured in a way that aligns with the causal question and avoids important selection or information bias.</p>
+<p>These assumptions are not guaranteed by a regression model.</p>
+</section>
+<section id="missing-data-are-part-of-the-causal-structure" class="level3">
+<h3 class="anchored" data-anchor-id="missing-data-are-part-of-the-causal-structure">Missing data are part of the causal structure</h3>
+<p>“Complete-case analysis” is not neutral. If inclusion in the complete-case sample depends jointly on determinants of exposure and outcome, restricting to complete records can induce selection bias.</p>
+<p>Distinguish:</p>
+<ul>
+<li>data missing completely at random;</li>
+<li>data missing at random conditional on observed variables;</li>
+<li>data missing not at random even after conditioning on observed data.</li>
+</ul>
+<p>Multiple imputation, inverse-probability weighting and sensitivity analysis each rely on assumptions. Report those assumptions rather than presenting the chosen software command as the solution.</p>
+</section>
+<section id="sensitivity-analysis-should-target-the-weak-link" class="level3">
+<h3 class="anchored" data-anchor-id="sensitivity-analysis-should-target-the-weak-link">Sensitivity analysis should target the weak link</h3>
+<p>Useful sensitivity analyses vary assumptions that threaten the inference:</p>
+<ul>
+<li>alternate outcome/exposure definitions;</li>
+<li>plausible unmeasured confounding;</li>
+<li>misclassification parameters;</li>
+<li>missing-data mechanisms;</li>
+<li>different censoring assumptions;</li>
+<li>alternative model specifications;</li>
+<li>exclusion of influential sites or periods;</li>
+<li>negative-control analyses where defensible.</li>
+</ul>
+<p>A sensitivity analysis is not a fishing expedition for the model that produces the preferred p-value.</p>
+</section>
+<section id="internal-validity-and-transportability-are-distinct" class="level3">
+<h3 class="anchored" data-anchor-id="internal-validity-and-transportability-are-distinct">Internal validity and transportability are distinct</h3>
+<p>A study can estimate its study-population effect well but still fail to transport to another population. Transportability depends on whether effect modifiers and intervention delivery differ between populations and whether there is adequate overlap.</p>
+<p>Ask:</p>
+<ol type="1">
+<li>What is the target population?</li>
+<li>Which characteristics modify the effect?</li>
+<li>Are those characteristics distributed differently in the target?</li>
+<li>Are all relevant strata represented in the study?</li>
+<li>Would the intervention actually be delivered in the same way?</li>
+</ol>
+</section>
+<section id="triangulation" class="level3">
+<h3 class="anchored" data-anchor-id="triangulation">Triangulation</h3>
+<p>No single design resolves every bias. Strong causal conclusions often emerge when evidence from different designs, populations, measurements and analytic approaches points toward a coherent explanation despite having different sources of bias.</p>
+<div class="lipps-callout">
+<p><strong>Doctoral standard</strong><br>
+Do not ask only, “Is the association statistically significant?” Ask: <strong>What causal contrast is being estimated, what assumptions identify it, what evidence supports those assumptions, and how sensitive is the conclusion when they are weakened?</strong></p>
+</div>
+</section>
+<section id="progression" class="level3">
+<h3 class="anchored" data-anchor-id="progression">Progression</h3>
+<p>This week completes Epidemiology I. Learners ready for regression-based adjustment, DAG identification, g-methods, time-varying confounding, quantitative bias analysis and target-trial emulation should continue to <strong>Epidemiology II — Advanced Epidemiologic Methods and Causal Inference</strong>.</p>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology-ii.html" class="lipps-btn primary">Continue to Epidemiology II →</a></p>
+</section>
+</section>
+<section id="practise-check-your-reasoning" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
+<ol type="1">
+<li>What is the difference between an association question and a causal-effect question?</li>
+<li>Why should critical appraisal begin with study design rather than the p-value?</li>
+<li>Does temporality by itself establish causation?</li>
+<li>What does a wide 95% confidence interval primarily tell you about precision?</li>
+<li>Why can p &lt; 0.05 coexist with serious bias?</li>
+<li>What is the difference between internal validity and applicability to another population?</li>
+<li>Which words in a conclusion usually carry stronger causal meaning?</li>
+<li>Apply the first and last letters of LIPPS EVIDENCE to a claim: what exact question is being asked, and does the expression match the evidence?</li>
+</ol>
+<p>Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.</p>
+</section>
+<section id="demonstrate-week-12-mastery-quiz" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-week-12-mastery-quiz">DEMONSTRATE · Week 12 mastery quiz</h2>
+<p><strong>Pilot Mastery Quiz:</strong> 20 objective questions sampled from a Week 12 bank of 65 items.</p>
+<p><strong>Initial time limit:</strong> 15 minutes.<br>
+<strong>Blueprint:</strong> claim classification, design-based interpretation, bias/confounding, confidence intervals, p-value misconceptions, absolute versus relative effects, causal language and EVIDENCE-framework scenarios.<br>
+<strong>Capstone emphasis:</strong> students must choose the <strong>most defensible interpretation</strong>, not merely identify a formula.</p>
+<div class="lipps-callout">
+<p><strong>Assessment principle</strong><br>
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.</p>
+</div>
+</section>
+<section id="source-foundation-and-lipps-extensions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</h2>
+<p><strong>Primary source foundation:</strong> the attached CDC course’s repeated emphasis on population comparison, systematic and unbiased methods, the distinction between observational and experimental studies, cautious causal inference, p-values, confidence intervals and applying epidemiological evidence to public-health action.</p>
+<p><strong>LIPPS extensions:</strong> estimands, internal/external validity terminology, the structured causal-language ladder and the <strong>LIPPS EVIDENCE</strong> appraisal framework are clearly identified as original instructional extensions rather than content from the source.</p>
+<p><strong>Reference:</strong> Centers for Disease Control and Prevention. <em>Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics</em>. October 2006; updated May 2012.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology/week-11.html">← Week 11</a></p>
+<p><a href="../../../lipps-v3.0-epidemiology-upgrade/learn/epidemiology.html">Return to Epidemiology course →</a></p>
+</section>
+
+
+</div>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

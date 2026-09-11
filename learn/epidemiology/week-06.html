@@ -187,10 +187,6 @@ window.Quarto = {
   <li><a href="#learn-10-matching-is-a-design-tool-not-a-badge-of-quality" id="toc-learn-10-matching-is-a-design-tool-not-a-badge-of-quality" class="nav-link" data-scroll-target="#learn-10-matching-is-a-design-tool-not-a-badge-of-quality">LEARN 10 · Matching is a design tool, not a badge of quality</a></li>
   <li><a href="#learn-11-when-case-control-designs-are-especially-useful" id="toc-learn-11-when-case-control-designs-are-especially-useful" class="nav-link" data-scroll-target="#learn-11-when-case-control-designs-are-especially-useful">LEARN 11 · When case-control designs are especially useful</a></li>
   <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
-  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
-  <li><a href="#demonstrate-week-6-mastery-quiz" id="toc-demonstrate-week-6-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-6-mastery-quiz">DEMONSTRATE · Week 6 mastery quiz</a></li>
-  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul>
 </nav>
     </div>
@@ -417,6 +413,48 @@ OR = \frac{60\times70}{40\times30}=3.5
 <li>List additional evidence needed before claiming the herbal preparation caused the syndrome.</li>
 </ol>
 </section>
+<div class="lipps-section">
+<section id="graduate-deepen-case-control-sampling-determines-what-the-odds-ratio-estimates" class="level2">
+<h2 class="anchored" data-anchor-id="graduate-deepen-case-control-sampling-determines-what-the-odds-ratio-estimates">GRADUATE DEEPEN · Case-control sampling determines what the odds ratio estimates</h2>
+<p>A case-control study is not defined merely by “looking backwards.” Its defining feature is <strong>sampling on outcome status</strong>. The interpretation of the odds ratio depends on how controls were sampled from the source population.</p>
+<section id="three-common-sampling-schemes" class="level3">
+<h3 class="anchored" data-anchor-id="three-common-sampling-schemes">Three common sampling schemes</h3>
+<p><strong>Cumulative-incidence sampling</strong> selects controls from people who remain non-cases through a defined risk period. Under a rare-outcome approximation, the odds ratio can approximate the risk ratio.</p>
+<p><strong>Incidence-density sampling</strong> selects controls from the risk set at the time each case occurs. A person can serve as a control and later become a case. The resulting odds ratio estimates the incidence-rate ratio without requiring the outcome to be rare.</p>
+<p><strong>Case-base sampling</strong> selects controls from the population at risk at the beginning of follow-up. With appropriate analysis, the exposure odds among cases can be compared with the exposure distribution in the base population to recover a risk-based contrast.</p>
+<p>A graduate student should therefore ask not “Is the disease rare?” first, but <strong>“How were controls sampled?”</strong></p>
+</section>
+<section id="the-source-population-principle" class="level3">
+<h3 class="anchored" data-anchor-id="the-source-population-principle">The source-population principle</h3>
+<p>Controls should represent the exposure distribution in the population that generated the cases. A useful thought experiment is:</p>
+<blockquote class="blockquote">
+<p>If this control had developed the outcome during the case-ascertainment period, would they have been eligible to become a case?</p>
+</blockquote>
+<p>If the answer is no, the control may not represent the relevant source population.</p>
+</section>
+<section id="matching-changes-the-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="matching-changes-the-analysis">Matching changes the analysis</h3>
+<p>Matching can improve efficiency and control strong confounding by design, but it does not magically remove confounding. Individual matching usually requires analysis that respects the matched sets, commonly conditional logistic regression. Frequency matching is handled differently.</p>
+<p>Do not adjust mechanically for every matching variable without understanding the sampling and model. Overmatching can reduce the ability to study exposures closely related to the matching factor and can even induce selection problems.</p>
+</section>
+<section id="nested-case-control-and-case-cohort-designs" class="level3">
+<h3 class="anchored" data-anchor-id="nested-case-control-and-case-cohort-designs">Nested case-control and case-cohort designs</h3>
+<p>When exposure measurement is expensive, you can sample informative subsets from a large cohort.</p>
+<ul>
+<li>A <strong>nested case-control study</strong> samples controls from risk sets within the cohort.</li>
+<li>A <strong>case-cohort study</strong> uses a subcohort sampled from the baseline cohort plus all cases.</li>
+</ul>
+<p>These designs preserve much of the cohort’s temporal structure while reducing measurement cost, but require appropriate weighted or risk-set analyses.</p>
+</section>
+<section id="recall-and-measurement-bias" class="level3">
+<h3 class="anchored" data-anchor-id="recall-and-measurement-bias">Recall and measurement bias</h3>
+<p>Case-control studies are especially vulnerable when past exposure is reconstructed after disease diagnosis. Cases may search their memory differently from controls, and interviewers may probe cases more intensively. Blinded standardised exposure ascertainment, records collected before disease and objective biomarkers can reduce this problem.</p>
+</section>
+<section id="r-laboratory" class="level3">
+<h3 class="anchored" data-anchor-id="r-laboratory">R laboratory</h3>
+<p><a href="../../learn/epidemiology/labs/lab-04-case-control.html">Graduate Lab 4 — Unmatched and matched case-control analysis →</a></p>
+</section>
+</section>
 <section id="practise-check-your-reasoning" class="level2 lipps-section">
 <h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
 <ol type="1">
@@ -453,6 +491,7 @@ The quiz is designed so that a prepared learner can read, reason and answer effi
 </section>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

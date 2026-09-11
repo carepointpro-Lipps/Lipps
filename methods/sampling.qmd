@@ -1,0 +1,19 @@
+---
+title: "Sampling"
+---
+
+# Sampling
+
+Sampling determines **who or what can enter the evidence** and how uncertainty should later be estimated.
+
+## Probability sampling
+
+Simple random sampling, systematic sampling, stratified sampling, cluster sampling, multistage sampling and probability proportional to size.
+
+## Non-probability and hard-to-reach designs
+
+Purposive sampling, convenience sampling, snowball sampling, respondent-driven sampling and time-location sampling.
+
+## Sample-size pathways
+
+LIPPS will provide separate guidance for prevalence estimation, means, two-group comparisons, cohort and case-control studies, diagnostic studies, cluster surveys, survival studies, regression and finite populations.

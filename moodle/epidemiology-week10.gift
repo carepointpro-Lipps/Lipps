@@ -1,0 +1,507 @@
+$CATEGORY: LIPPS/Epidemiology/Week 10/2x2 table
+
+::EPI-W10-001::Which cell contains people who test negative despite truly having the disease? {
+=False negatives#Correct.
+~False positives#A false negative has disease but a negative index test.
+~True positives#A false negative has disease but a negative index test.
+~True negatives#A false negative has disease but a negative index test.
+}
+
+::EPI-W10-002::In a malaria testing study, which cell contains people who test negative despite truly having the disease? {
+=False negatives#Correct.
+~False positives#A false negative has disease but a negative index test.
+~True positives#A false negative has disease but a negative index test.
+~True negatives#A false negative has disease but a negative index test.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 10/Sensitivity
+
+::EPI-W10-003::What does sensitivity condition on? {
+=People who truly have the disease#Correct.
+~People who test positive#Review which population is in the denominator and what the test comparison represents.
+~People who truly do not have disease#Review which population is in the denominator and what the test comparison represents.
+~All screened people regardless of status#Review which population is in the denominator and what the test comparison represents.
+}
+
+::EPI-W10-004::A diagnostic table has TP 40, FN 10, FP 15, TN 135. What is sensitivity? {
+=80.0%#Correct. Sensitivity is TP divided by TP plus FN.
+~90.0%#Use the truly diseased column as the denominator.
+~72.7%#Use the truly diseased column as the denominator.
+~93.1%#Use the truly diseased column as the denominator.
+}
+
+::EPI-W10-005::A diagnostic table has TP 45, FN 12, FP 18, TN 142. What is sensitivity? {
+=78.9%#Correct. Sensitivity is TP divided by TP plus FN.
+~88.8%#Use the truly diseased column as the denominator.
+~71.4%#Use the truly diseased column as the denominator.
+~92.2%#Use the truly diseased column as the denominator.
+}
+
+::EPI-W10-006::A diagnostic table has TP 50, FN 14, FP 21, TN 149. What is sensitivity? {
+=78.1%#Correct. Sensitivity is TP divided by TP plus FN.
+~87.6%#Use the truly diseased column as the denominator.
+~70.4%#Use the truly diseased column as the denominator.
+~91.4%#Use the truly diseased column as the denominator.
+}
+
+::EPI-W10-007::A diagnostic table has TP 55, FN 16, FP 24, TN 156. What is sensitivity? {
+=77.5%#Correct. Sensitivity is TP divided by TP plus FN.
+~86.7%#Use the truly diseased column as the denominator.
+~69.6%#Use the truly diseased column as the denominator.
+~90.7%#Use the truly diseased column as the denominator.
+}
+
+::EPI-W10-008::A diagnostic table has TP 60, FN 10, FP 27, TN 163. What is sensitivity? {
+=85.7%#Correct. Sensitivity is TP divided by TP plus FN.
+~85.8%#Use the truly diseased column as the denominator.
+~69.0%#Use the truly diseased column as the denominator.
+~94.2%#Use the truly diseased column as the denominator.
+}
+
+::EPI-W10-009::A diagnostic table has TP 65, FN 12, FP 30, TN 170. What is sensitivity? {
+=84.4%#Correct. Sensitivity is TP divided by TP plus FN.
+~85.0%#Use the truly diseased column as the denominator.
+~68.4%#Use the truly diseased column as the denominator.
+~93.4%#Use the truly diseased column as the denominator.
+}
+
+::EPI-W10-010::A diagnostic table has TP 70, FN 14, FP 33, TN 177. What is sensitivity? {
+=83.3%#Correct. Sensitivity is TP divided by TP plus FN.
+~84.3%#Use the truly diseased column as the denominator.
+~68.0%#Use the truly diseased column as the denominator.
+~92.7%#Use the truly diseased column as the denominator.
+}
+
+::EPI-W10-011::A diagnostic table has TP 75, FN 16, FP 36, TN 184. What is sensitivity? {
+=82.4%#Correct. Sensitivity is TP divided by TP plus FN.
+~83.6%#Use the truly diseased column as the denominator.
+~67.6%#Use the truly diseased column as the denominator.
+~92.0%#Use the truly diseased column as the denominator.
+}
+
+::EPI-W10-012::A diagnostic table has TP 80, FN 10, FP 39, TN 191. What is sensitivity? {
+=88.9%#Correct. Sensitivity is TP divided by TP plus FN.
+~83.0%#Use the truly diseased column as the denominator.
+~67.2%#Use the truly diseased column as the denominator.
+~95.0%#Use the truly diseased column as the denominator.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 10/Specificity
+
+::EPI-W10-013::What does specificity condition on? {
+=People who truly do not have the disease#Correct.
+~People who test negative#Review which population is in the denominator and what the test comparison represents.
+~People who truly have disease#Review which population is in the denominator and what the test comparison represents.
+~Only people with symptoms#Review which population is in the denominator and what the test comparison represents.
+}
+
+::EPI-W10-014::A diagnostic table has TP 40, FN 10, FP 15, TN 135. What is specificity? {
+=90.0%#Correct. Specificity is TN divided by FP plus TN.
+~80.0%#Use the truly non-diseased column as the denominator.
+~72.7%#Use the truly non-diseased column as the denominator.
+~93.1%#Use the truly non-diseased column as the denominator.
+}
+
+::EPI-W10-015::A diagnostic table has TP 45, FN 12, FP 18, TN 142. What is specificity? {
+=88.8%#Correct. Specificity is TN divided by FP plus TN.
+~78.9%#Use the truly non-diseased column as the denominator.
+~71.4%#Use the truly non-diseased column as the denominator.
+~92.2%#Use the truly non-diseased column as the denominator.
+}
+
+::EPI-W10-016::A diagnostic table has TP 50, FN 14, FP 21, TN 149. What is specificity? {
+=87.6%#Correct. Specificity is TN divided by FP plus TN.
+~78.1%#Use the truly non-diseased column as the denominator.
+~70.4%#Use the truly non-diseased column as the denominator.
+~91.4%#Use the truly non-diseased column as the denominator.
+}
+
+::EPI-W10-017::A diagnostic table has TP 55, FN 16, FP 24, TN 156. What is specificity? {
+=86.7%#Correct. Specificity is TN divided by FP plus TN.
+~77.5%#Use the truly non-diseased column as the denominator.
+~69.6%#Use the truly non-diseased column as the denominator.
+~90.7%#Use the truly non-diseased column as the denominator.
+}
+
+::EPI-W10-018::A diagnostic table has TP 60, FN 10, FP 27, TN 163. What is specificity? {
+=85.8%#Correct. Specificity is TN divided by FP plus TN.
+~85.7%#Use the truly non-diseased column as the denominator.
+~69.0%#Use the truly non-diseased column as the denominator.
+~94.2%#Use the truly non-diseased column as the denominator.
+}
+
+::EPI-W10-019::A diagnostic table has TP 65, FN 12, FP 30, TN 170. What is specificity? {
+=85.0%#Correct. Specificity is TN divided by FP plus TN.
+~84.4%#Use the truly non-diseased column as the denominator.
+~68.4%#Use the truly non-diseased column as the denominator.
+~93.4%#Use the truly non-diseased column as the denominator.
+}
+
+::EPI-W10-020::A diagnostic table has TP 70, FN 14, FP 33, TN 177. What is specificity? {
+=84.3%#Correct. Specificity is TN divided by FP plus TN.
+~83.3%#Use the truly non-diseased column as the denominator.
+~68.0%#Use the truly non-diseased column as the denominator.
+~92.7%#Use the truly non-diseased column as the denominator.
+}
+
+::EPI-W10-021::A diagnostic table has TP 75, FN 16, FP 36, TN 184. What is specificity? {
+=83.6%#Correct. Specificity is TN divided by FP plus TN.
+~82.4%#Use the truly non-diseased column as the denominator.
+~67.6%#Use the truly non-diseased column as the denominator.
+~92.0%#Use the truly non-diseased column as the denominator.
+}
+
+::EPI-W10-022::A diagnostic table has TP 80, FN 10, FP 39, TN 191. What is specificity? {
+=83.0%#Correct. Specificity is TN divided by FP plus TN.
+~88.9%#Use the truly non-diseased column as the denominator.
+~67.2%#Use the truly non-diseased column as the denominator.
+~95.0%#Use the truly non-diseased column as the denominator.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 10/Predictive values
+
+::EPI-W10-023::What does positive predictive value condition on? {
+=People who test positive#Correct.
+~People who truly have disease#Review which population is in the denominator and what the test comparison represents.
+~People who test negative#Review which population is in the denominator and what the test comparison represents.
+~Only people without disease#Review which population is in the denominator and what the test comparison represents.
+}
+
+::EPI-W10-024::A diagnostic table has TP 40, FN 10, FP 15, TN 135. What is PPV? {
+=72.7%#Correct. PPV is TP divided by TP plus FP.
+~80.0%#Use all positive tests in the denominator.
+~90.0%#Use all positive tests in the denominator.
+~93.1%#Use all positive tests in the denominator.
+}
+
+::EPI-W10-025::A diagnostic table has TP 40, FN 10, FP 15, TN 135. What is NPV? {
+=93.1%#Correct. NPV is TN divided by TN plus FN.
+~80.0%#Use all negative tests in the denominator.
+~90.0%#Use all negative tests in the denominator.
+~72.7%#Use all negative tests in the denominator.
+}
+
+::EPI-W10-026::A diagnostic table has TP 45, FN 12, FP 18, TN 142. What is PPV? {
+=71.4%#Correct. PPV is TP divided by TP plus FP.
+~78.9%#Use all positive tests in the denominator.
+~88.8%#Use all positive tests in the denominator.
+~92.2%#Use all positive tests in the denominator.
+}
+
+::EPI-W10-027::A diagnostic table has TP 45, FN 12, FP 18, TN 142. What is NPV? {
+=92.2%#Correct. NPV is TN divided by TN plus FN.
+~78.9%#Use all negative tests in the denominator.
+~88.8%#Use all negative tests in the denominator.
+~71.4%#Use all negative tests in the denominator.
+}
+
+::EPI-W10-028::A diagnostic table has TP 50, FN 14, FP 21, TN 149. What is PPV? {
+=70.4%#Correct. PPV is TP divided by TP plus FP.
+~78.1%#Use all positive tests in the denominator.
+~87.6%#Use all positive tests in the denominator.
+~91.4%#Use all positive tests in the denominator.
+}
+
+::EPI-W10-029::A diagnostic table has TP 50, FN 14, FP 21, TN 149. What is NPV? {
+=91.4%#Correct. NPV is TN divided by TN plus FN.
+~78.1%#Use all negative tests in the denominator.
+~87.6%#Use all negative tests in the denominator.
+~70.4%#Use all negative tests in the denominator.
+}
+
+::EPI-W10-030::A diagnostic table has TP 55, FN 16, FP 24, TN 156. What is PPV? {
+=69.6%#Correct. PPV is TP divided by TP plus FP.
+~77.5%#Use all positive tests in the denominator.
+~86.7%#Use all positive tests in the denominator.
+~90.7%#Use all positive tests in the denominator.
+}
+
+::EPI-W10-031::A diagnostic table has TP 55, FN 16, FP 24, TN 156. What is NPV? {
+=90.7%#Correct. NPV is TN divided by TN plus FN.
+~77.5%#Use all negative tests in the denominator.
+~86.7%#Use all negative tests in the denominator.
+~69.6%#Use all negative tests in the denominator.
+}
+
+::EPI-W10-032::A diagnostic table has TP 60, FN 10, FP 27, TN 163. What is PPV? {
+=69.0%#Correct. PPV is TP divided by TP plus FP.
+~85.7%#Use all positive tests in the denominator.
+~85.8%#Use all positive tests in the denominator.
+~94.2%#Use all positive tests in the denominator.
+}
+
+::EPI-W10-033::A diagnostic table has TP 60, FN 10, FP 27, TN 163. What is NPV? {
+=94.2%#Correct. NPV is TN divided by TN plus FN.
+~85.7%#Use all negative tests in the denominator.
+~85.8%#Use all negative tests in the denominator.
+~69.0%#Use all negative tests in the denominator.
+}
+
+::EPI-W10-034::A diagnostic table has TP 65, FN 12, FP 30, TN 170. What is PPV? {
+=68.4%#Correct. PPV is TP divided by TP plus FP.
+~84.4%#Use all positive tests in the denominator.
+~85.0%#Use all positive tests in the denominator.
+~93.4%#Use all positive tests in the denominator.
+}
+
+::EPI-W10-035::A diagnostic table has TP 65, FN 12, FP 30, TN 170. What is NPV? {
+=93.4%#Correct. NPV is TN divided by TN plus FN.
+~84.4%#Use all negative tests in the denominator.
+~85.0%#Use all negative tests in the denominator.
+~68.4%#Use all negative tests in the denominator.
+}
+
+::EPI-W10-036::A diagnostic table has TP 70, FN 14, FP 33, TN 177. What is PPV? {
+=68.0%#Correct. PPV is TP divided by TP plus FP.
+~83.3%#Use all positive tests in the denominator.
+~84.3%#Use all positive tests in the denominator.
+~92.7%#Use all positive tests in the denominator.
+}
+
+::EPI-W10-037::A diagnostic table has TP 70, FN 14, FP 33, TN 177. What is NPV? {
+=92.7%#Correct. NPV is TN divided by TN plus FN.
+~83.3%#Use all negative tests in the denominator.
+~84.3%#Use all negative tests in the denominator.
+~68.0%#Use all negative tests in the denominator.
+}
+
+::EPI-W10-038::A diagnostic table has TP 75, FN 16, FP 36, TN 184. What is PPV? {
+=67.6%#Correct. PPV is TP divided by TP plus FP.
+~82.4%#Use all positive tests in the denominator.
+~83.6%#Use all positive tests in the denominator.
+~92.0%#Use all positive tests in the denominator.
+}
+
+::EPI-W10-039::A diagnostic table has TP 75, FN 16, FP 36, TN 184. What is NPV? {
+=92.0%#Correct. NPV is TN divided by TN plus FN.
+~82.4%#Use all negative tests in the denominator.
+~83.6%#Use all negative tests in the denominator.
+~67.6%#Use all negative tests in the denominator.
+}
+
+::EPI-W10-040::A diagnostic table has TP 80, FN 10, FP 39, TN 191. What is PPV? {
+=67.2%#Correct. PPV is TP divided by TP plus FP.
+~88.9%#Use all positive tests in the denominator.
+~83.0%#Use all positive tests in the denominator.
+~95.0%#Use all positive tests in the denominator.
+}
+
+::EPI-W10-041::A diagnostic table has TP 80, FN 10, FP 39, TN 191. What is NPV? {
+=95.0%#Correct. NPV is TN divided by TN plus FN.
+~88.9%#Use all negative tests in the denominator.
+~83.0%#Use all negative tests in the denominator.
+~67.2%#Use all negative tests in the denominator.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 10/Prevalence effects
+
+::EPI-W10-042::Holding sensitivity and specificity constant, what usually happens to PPV as disease prevalence rises? {
+=PPV rises#Correct.
+~PPV falls#Review which population is in the denominator and what the test comparison represents.
+~PPV is always unchanged#Review which population is in the denominator and what the test comparison represents.
+~Sensitivity becomes zero#Review which population is in the denominator and what the test comparison represents.
+}
+
+::EPI-W10-043::The same test is moved from a high-prevalence specialist clinic to a low-prevalence screening population in scenario 1. What is the most likely change, all else equal? {
+=PPV decreases and NPV increases#Correct. Predictive values depend on pre-test prevalence.
+~PPV increases and NPV decreases#Sensitivity and specificity may remain stable while predictive values change.
+~Sensitivity necessarily falls to zero#Sensitivity and specificity may remain stable while predictive values change.
+~Specificity necessarily becomes 100%#Sensitivity and specificity may remain stable while predictive values change.
+}
+
+::EPI-W10-044::The same test is moved from a high-prevalence specialist clinic to a low-prevalence screening population in scenario 2. What is the most likely change, all else equal? {
+=PPV decreases and NPV increases#Correct. Predictive values depend on pre-test prevalence.
+~PPV increases and NPV decreases#Sensitivity and specificity may remain stable while predictive values change.
+~Sensitivity necessarily falls to zero#Sensitivity and specificity may remain stable while predictive values change.
+~Specificity necessarily becomes 100%#Sensitivity and specificity may remain stable while predictive values change.
+}
+
+::EPI-W10-045::The same test is moved from a high-prevalence specialist clinic to a low-prevalence screening population in scenario 3. What is the most likely change, all else equal? {
+=PPV decreases and NPV increases#Correct. Predictive values depend on pre-test prevalence.
+~PPV increases and NPV decreases#Sensitivity and specificity may remain stable while predictive values change.
+~Sensitivity necessarily falls to zero#Sensitivity and specificity may remain stable while predictive values change.
+~Specificity necessarily becomes 100%#Sensitivity and specificity may remain stable while predictive values change.
+}
+
+::EPI-W10-046::The same test is moved from a high-prevalence specialist clinic to a low-prevalence screening population in scenario 4. What is the most likely change, all else equal? {
+=PPV decreases and NPV increases#Correct. Predictive values depend on pre-test prevalence.
+~PPV increases and NPV decreases#Sensitivity and specificity may remain stable while predictive values change.
+~Sensitivity necessarily falls to zero#Sensitivity and specificity may remain stable while predictive values change.
+~Specificity necessarily becomes 100%#Sensitivity and specificity may remain stable while predictive values change.
+}
+
+::EPI-W10-047::The same test is moved from a high-prevalence specialist clinic to a low-prevalence screening population in scenario 5. What is the most likely change, all else equal? {
+=PPV decreases and NPV increases#Correct. Predictive values depend on pre-test prevalence.
+~PPV increases and NPV decreases#Sensitivity and specificity may remain stable while predictive values change.
+~Sensitivity necessarily falls to zero#Sensitivity and specificity may remain stable while predictive values change.
+~Specificity necessarily becomes 100%#Sensitivity and specificity may remain stable while predictive values change.
+}
+
+::EPI-W10-048::The same test is moved from a high-prevalence specialist clinic to a low-prevalence screening population in scenario 6. What is the most likely change, all else equal? {
+=PPV decreases and NPV increases#Correct. Predictive values depend on pre-test prevalence.
+~PPV increases and NPV decreases#Sensitivity and specificity may remain stable while predictive values change.
+~Sensitivity necessarily falls to zero#Sensitivity and specificity may remain stable while predictive values change.
+~Specificity necessarily becomes 100%#Sensitivity and specificity may remain stable while predictive values change.
+}
+
+::EPI-W10-049::The same test is moved from a high-prevalence specialist clinic to a low-prevalence screening population in scenario 7. What is the most likely change, all else equal? {
+=PPV decreases and NPV increases#Correct. Predictive values depend on pre-test prevalence.
+~PPV increases and NPV decreases#Sensitivity and specificity may remain stable while predictive values change.
+~Sensitivity necessarily falls to zero#Sensitivity and specificity may remain stable while predictive values change.
+~Specificity necessarily becomes 100%#Sensitivity and specificity may remain stable while predictive values change.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 10/Likelihood ratios
+
+::EPI-W10-050::A test has sensitivity 75% and specificity 80.0%. What is LR+ approximately? {
+=3.75#Correct. LR+ is sensitivity divided by one minus specificity.
+~0.31#Use sensitivity / (1-specificity).
+~0.94#Use sensitivity / (1-specificity).
+~0.27#Use sensitivity / (1-specificity).
+}
+
+::EPI-W10-051::A test has sensitivity 77% and specificity 81.5%. What is LR- approximately? {
+=0.28#Correct. LR- is one minus sensitivity divided by specificity.
+~4.16#Use (1-sensitivity) / specificity.
+~0.94#Use (1-sensitivity) / specificity.
+~0.24#Use (1-sensitivity) / specificity.
+}
+
+::EPI-W10-052::A test has sensitivity 79% and specificity 83.0%. What is LR+ approximately? {
+=4.65#Correct. LR+ is sensitivity divided by one minus specificity.
+~0.25#Use sensitivity / (1-specificity).
+~0.95#Use sensitivity / (1-specificity).
+~0.22#Use sensitivity / (1-specificity).
+}
+
+::EPI-W10-053::A test has sensitivity 81% and specificity 84.5%. What is LR- approximately? {
+=0.22#Correct. LR- is one minus sensitivity divided by specificity.
+~5.23#Use (1-sensitivity) / specificity.
+~0.96#Use (1-sensitivity) / specificity.
+~0.19#Use (1-sensitivity) / specificity.
+}
+
+::EPI-W10-054::A test has sensitivity 83% and specificity 86.0%. What is LR+ approximately? {
+=5.93#Correct. LR+ is sensitivity divided by one minus specificity.
+~0.20#Use sensitivity / (1-specificity).
+~0.97#Use sensitivity / (1-specificity).
+~0.17#Use sensitivity / (1-specificity).
+}
+
+::EPI-W10-055::A test has sensitivity 85% and specificity 87.5%. What is LR- approximately? {
+=0.17#Correct. LR- is one minus sensitivity divided by specificity.
+~6.80#Use (1-sensitivity) / specificity.
+~0.97#Use (1-sensitivity) / specificity.
+~0.15#Use (1-sensitivity) / specificity.
+}
+
+::EPI-W10-056::A test has sensitivity 87% and specificity 89.0%. What is LR+ approximately? {
+=7.91#Correct. LR+ is sensitivity divided by one minus specificity.
+~0.15#Use sensitivity / (1-specificity).
+~0.98#Use sensitivity / (1-specificity).
+~0.13#Use sensitivity / (1-specificity).
+}
+
+::EPI-W10-057::A test has sensitivity 89% and specificity 90.5%. What is LR- approximately? {
+=0.12#Correct. LR- is one minus sensitivity divided by specificity.
+~9.37#Use (1-sensitivity) / specificity.
+~0.98#Use (1-sensitivity) / specificity.
+~0.11#Use (1-sensitivity) / specificity.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 10/Thresholds and ROC
+
+::EPI-W10-058::Lowering a positivity threshold usually has what effect? {
+=Sensitivity tends to rise and specificity tends to fall#Correct.
+~Both always rise#Review which population is in the denominator and what the test comparison represents.
+~Sensitivity falls and specificity rises#Review which population is in the denominator and what the test comparison represents.
+~Neither can change#Review which population is in the denominator and what the test comparison represents.
+}
+
+::EPI-W10-059::Which statement about AUC is most defensible? {
+=AUC summarises discrimination across thresholds but does not by itself determine clinical usefulness or PPV#Correct.
+~AUC equals PPV#AUC is a discrimination summary, not a complete decision metric.
+~AUC identifies the universally optimal threshold#AUC is a discrimination summary, not a complete decision metric.
+~AUC proves the reference standard is correct#AUC is a discrimination summary, not a complete decision metric.
+}
+
+::EPI-W10-060::In an HIV screening study, which statement about AUC is most defensible? {
+=AUC summarises discrimination across thresholds but does not by itself determine clinical usefulness or PPV#Correct.
+~AUC equals PPV#AUC is a discrimination summary, not a complete decision metric.
+~AUC identifies the universally optimal threshold#AUC is a discrimination summary, not a complete decision metric.
+~AUC proves the reference standard is correct#AUC is a discrimination summary, not a complete decision metric.
+}
+
+::EPI-W10-061::In a typhoid diagnostic study, which statement about AUC is most defensible? {
+=AUC summarises discrimination across thresholds but does not by itself determine clinical usefulness or PPV#Correct.
+~AUC equals PPV#AUC is a discrimination summary, not a complete decision metric.
+~AUC identifies the universally optimal threshold#AUC is a discrimination summary, not a complete decision metric.
+~AUC proves the reference standard is correct#AUC is a discrimination summary, not a complete decision metric.
+}
+
+::EPI-W10-062::In a TB screening programme, which statement about AUC is most defensible? {
+=AUC summarises discrimination across thresholds but does not by itself determine clinical usefulness or PPV#Correct.
+~AUC equals PPV#AUC is a discrimination summary, not a complete decision metric.
+~AUC identifies the universally optimal threshold#AUC is a discrimination summary, not a complete decision metric.
+~AUC proves the reference standard is correct#AUC is a discrimination summary, not a complete decision metric.
+}
+
+::EPI-W10-063::In a cervical screening study, which statement about AUC is most defensible? {
+=AUC summarises discrimination across thresholds but does not by itself determine clinical usefulness or PPV#Correct.
+~AUC equals PPV#AUC is a discrimination summary, not a complete decision metric.
+~AUC identifies the universally optimal threshold#AUC is a discrimination summary, not a complete decision metric.
+~AUC proves the reference standard is correct#AUC is a discrimination summary, not a complete decision metric.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 10/Testing algorithms
+
+::EPI-W10-064::What is the usual effect of requiring two tests to be positive in series? {
+=Overall specificity tends to increase while sensitivity can decrease#Correct.
+~Overall sensitivity always becomes 100%#Review which population is in the denominator and what the test comparison represents.
+~Both sensitivity and specificity become zero#Review which population is in the denominator and what the test comparison represents.
+~Prevalence doubles#Review which population is in the denominator and what the test comparison represents.
+}
+
+::EPI-W10-065::If either of two screening tests being positive is enough to classify a person positive, what broad strategy is this? {
+=Parallel testing#Correct.
+~Serial testing#Parallel algorithms tend to prioritise sensitivity.
+~Case-control sampling#Parallel algorithms tend to prioritise sensitivity.
+~Blinded verification#Parallel algorithms tend to prioritise sensitivity.
+}
+
+::EPI-W10-066::In a laboratory evaluation, if either of two screening tests being positive is enough to classify a person positive, what broad strategy is this? {
+=Parallel testing#Correct.
+~Serial testing#Parallel algorithms tend to prioritise sensitivity.
+~Case-control sampling#Parallel algorithms tend to prioritise sensitivity.
+~Blinded verification#Parallel algorithms tend to prioritise sensitivity.
+}
+
+::EPI-W10-067::In a point-of-care test study, if either of two screening tests being positive is enough to classify a person positive, what broad strategy is this? {
+=Parallel testing#Correct.
+~Serial testing#Parallel algorithms tend to prioritise sensitivity.
+~Case-control sampling#Parallel algorithms tend to prioritise sensitivity.
+~Blinded verification#Parallel algorithms tend to prioritise sensitivity.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 10/Bias and interpretation
+
+::EPI-W10-068::Why does high agreement between two tests not prove diagnostic accuracy? {
+=Both tests could agree and still be wrong relative to true disease status#Correct.
+~Agreement is mathematically impossible#Review which population is in the denominator and what the test comparison represents.
+~Accuracy never needs a reference standard#Review which population is in the denominator and what the test comparison represents.
+~Specificity equals agreement#Review which population is in the denominator and what the test comparison represents.
+}
+
+::EPI-W10-069::Only patients with a positive index test receive the reference standard. What is the key diagnostic-study concern? {
+=Verification bias#Correct.
+~Effect modification#Verification depends on the index test result, distorting observed accuracy.
+~Ecological fallacy#Verification depends on the index test result, distorting observed accuracy.
+~Randomisation failure#Verification depends on the index test result, distorting observed accuracy.
+}
+
+::EPI-W10-070::In a fever-screening study, only patients with a positive index test receive the reference standard. What is the key diagnostic-study concern? {
+=Verification bias#Correct.
+~Effect modification#Verification depends on the index test result, distorting observed accuracy.
+~Ecological fallacy#Verification depends on the index test result, distorting observed accuracy.
+~Randomisation failure#Verification depends on the index test result, distorting observed accuracy.
+}

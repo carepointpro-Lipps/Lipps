@@ -1,0 +1,557 @@
+---
+title: ""
+pagetitle: "Week 1 — Epidemiology and Epidemiological Thinking | LIPPS"
+description: "Week 1 of LIPPS Epidemiology: foundations of epidemiological thinking, population reasoning, distribution, determinants, comparison and public-health action."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 01
+:::
+
+# Epidemiology and Epidemiological Thinking
+
+## Before the formula, learn to see the population.
+
+Epidemiology is not primarily a collection of statistical tests. It is a disciplined way of asking what is happening to health in a population, how often it is happening, to whom, where, when, why it may be happening, and what should be done with that knowledge.
+
+<span class="lipps-chip">Foundation</span> <span class="lipps-chip">Population thinking</span> <span class="lipps-chip">Applied reasoning</span> <span class="lipps-chip">Objective quiz</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Define the health event, locate it in a population, put the number in context, compare what you observe with what you would expect, and use the result to inform action.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+A number is not yet evidence. A trend is not yet an explanation. A statistical association is not yet a cause. Epidemiological thinking begins by asking what else must be known before the observation can support a conclusion.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 1, you should be able to:
+
+1. define epidemiology and explain the meaning of **distribution, determinants, specified populations, and application**;
+2. distinguish the **clinical** view of an individual patient from the **epidemiological** view of a population;
+3. organise a public-health problem using **what, who, where, when, and why/how**;
+4. distinguish **frequency** from **pattern**, and explain why a denominator matters;
+5. distinguish introductory **descriptive** from **analytic** epidemiological reasoning;
+6. explain why valid **comparison groups** are central to analytic epidemiology;
+7. identify major historical contributions of Hippocrates, John Graunt, William Farr, and John Snow;
+8. describe major **uses and core functions** of epidemiology in public-health practice;
+9. explain the simple epidemiological sequence **define → count → divide → compare → interpret → act**; and
+10. convert a vague health concern into a focused epidemiological question.
+:::
+
+::: {.lipps-section}
+## ORIENT · A district says malaria has doubled
+
+Consider this fictional teaching scenario.
+
+> A district health team reports **240 laboratory-confirmed malaria cases this month**, compared with **120 last month**. A message quickly circulates that malaria transmission has doubled.
+
+It sounds straightforward. It is not.
+
+Before accepting that conclusion, an epidemiologist would ask:
+
+- Did the number of people tested also change?
+- Did the case definition change?
+- Did more facilities report this month?
+- Did a new diagnostic test become available?
+- Are both months comparable in season and population size?
+- Are cases concentrated in particular places or groups?
+- Is the increase above what is normally expected at this time of year?
+
+### Your first decision
+
+Which statement is the most defensible from the information given?
+
+A. Malaria incidence doubled.  
+B. Malaria transmission doubled.  
+C. The **reported number of confirmed cases** doubled.  
+D. A malaria outbreak has been confirmed.
+
+**Best answer: C.** The other statements require information that has not yet been supplied.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · What is epidemiology?
+
+A widely used public-health definition describes epidemiology as the study of the **distribution** and **determinants** of health-related states or events in specified populations, together with the **application** of that study to the control of health problems.
+
+The definition is short, but almost every word matters.
+
+### Study
+
+Epidemiology is systematic inquiry. It depends on deliberate collection, analysis and interpretation of observations. Quantitative reasoning is important, but epidemiology also draws on biological, behavioural, social and other knowledge when explaining patterns.
+
+### Distribution
+
+Distribution asks **how health events are distributed in the population**.
+
+It has two ideas:
+
+**Frequency** — How much disease or another health event is occurring?  
+**Pattern** — How is it distributed by **person, place and time**?
+
+A count tells you how many events were observed. It does not, by itself, tell you how common the event is relative to the population from which the events arose.
+
+### Determinants
+
+Determinants are factors that influence the occurrence of health-related events. Epidemiologists examine differences in exposures, behaviours, environments, demographic characteristics and other factors that may help explain why some groups experience more disease than others.
+
+### Health-related states or events
+
+Modern epidemiology is not limited to infectious disease. Its methods can be applied to chronic disease, injury, disability, maternal and child health, occupational and environmental health, behaviours, service use and many other conditions affecting population health.
+
+### Specified populations
+
+Epidemiology is explicitly population-based. We need to know **which population** the observations came from and **which population** our conclusion is intended to describe.
+
+### Application
+
+Epidemiology is not complete when the analysis ends. In public-health practice, the knowledge generated should help guide prevention, control, planning, policy, evaluation or another appropriate action.
+
+::: {.lipps-callout}
+**Do not memorise the definition as a sentence.**  
+Be able to interrogate it. What was measured? In whom? How was occurrence distributed? What might explain it? What decision could the evidence inform?
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 2 · The five questions behind epidemiological thinking
+
+A useful way to organise a health event is the familiar **five-W** structure.
+
+| Question | Epidemiological equivalent | Example question |
+|---|---|---|
+| **What?** | Health event / case definition | What exactly counts as a malaria case? |
+| **Who?** | Person | Which age, sex, occupation or risk groups are affected? |
+| **Where?** | Place | Which villages, facilities or geographic areas are affected? |
+| **When?** | Time | When did the increase begin, and is there a seasonal pattern? |
+| **Why / how?** | Determinants, causes, risk factors, transmission | What exposures or conditions could explain the pattern? |
+
+The first four questions mainly help us **characterise what we observe**. The fifth moves us toward explaining it.
+
+### A useful discipline
+
+When you encounter a health claim, delay the question **“Which statistical test should I use?”**
+
+First ask:
+
+1. What is the health event?
+2. What is the population?
+3. What is the relevant time period?
+4. What is the denominator?
+5. What is the comparison?
+6. What alternative explanations could produce the observation?
+
+Only then should the analytical method enter the discussion.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · The epidemiologist's patient is the population
+
+Clinical medicine and epidemiology often examine the same disease from different levels.
+
+| Clinical question | Epidemiological question |
+|---|---|
+| Does this patient have cholera? | Is cholera occurrence higher than expected in this population? |
+| What treatment does this patient need? | What source or exposure could be driving cases? |
+| What is this patient's prognosis? | Which groups have the highest risk, and how is risk changing? |
+| What investigation should I order? | What data and comparisons are needed to explain the population pattern? |
+
+The clinician's immediate unit of concern is usually the **individual**. Epidemiology views individuals collectively to understand the **health of the population**.
+
+The disciplines are complementary. Clinical observations can generate epidemiological signals, while epidemiological evidence can change clinical and public-health practice.
+
+### LIPPS checkpoint
+
+A hospital reports 18 children with severe diarrhoea in one week. The hospital ordinarily sees 6–10 such cases per week.
+
+The clinician asks: **How should each child be treated?**  
+The epidemiologist asks: **Is this increase real, who is affected, what exposures are shared, and is anyone else at risk?**
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Frequency is not just a count
+
+Suppose:
+
+- District A reports **200** cases.
+- District B reports **100** cases.
+
+It is tempting to say District A has more disease.
+
+But suppose District A has 1,000,000 residents and District B has 100,000.
+
+The counts still matter for planning resources, but comparing population occurrence requires a denominator. This is the logic behind rates, risks and proportions that we will study formally in Week 2.
+
+### The foundational habit
+
+Whenever you see a number, ask:
+
+> **Out of how many?**
+
+Whenever you see a percentage, ask:
+
+> **What exactly is in the numerator and denominator?**
+
+::: {.lipps-callout}
+**Evidence can mislead through denominator blindness.**  
+A district can report more cases because it has more people, more testing, more complete reporting, or a different population structure. Week 1 teaches you to notice that problem; Week 2 teaches you how to quantify it.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Descriptive and analytic epidemiology
+
+### Descriptive epidemiology: what is happening?
+
+Descriptive epidemiology characterises health events by **time, place and person**. It helps identify patterns and generate hypotheses.
+
+Typical questions include:
+
+- When did cases increase?
+- Where are cases concentrated?
+- Which groups are most affected?
+- Is the pattern seasonal?
+
+### Analytic epidemiology: why might it be happening?
+
+Analytic epidemiology goes further by comparing groups in order to examine whether an exposure or characteristic is associated with an outcome.
+
+A critical idea is the **comparison group**.
+
+If nearly every person with an illness ate a particular food, that observation may look persuasive. But if nearly everyone who remained well also ate that food, it becomes much less informative. The comparison gives the exposure history meaning.
+
+### Descriptive does not mean unimportant
+
+Description can itself guide immediate action when a pattern is striking and delay could cause harm. More commonly, descriptive patterns generate hypotheses that are subsequently examined more rigorously.
+
+We return to descriptive epidemiology in Week 4 and individual analytic study designs in Weeks 5–8. For now, understand the logic connecting **pattern → hypothesis → comparison → interpretation**.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Four people who changed epidemiological thinking
+
+### Hippocrates — look for natural explanations
+
+Around 400 BCE, Hippocratic thinking challenged purely supernatural explanations of disease and considered environmental and host-related influences on illness.
+
+**LIPPS lesson:** health patterns may have systematic explanations that can be investigated.
+
+### John Graunt — count population events
+
+In 1662, John Graunt analysed mortality records and quantified patterns in births, deaths, infant mortality, sex differences, seasonal variation and urban-rural differences.
+
+**LIPPS lesson:** routinely collected records can reveal population patterns when organised and compared.
+
+### William Farr — make population measurement systematic
+
+Farr advanced the systematic collection, classification, analysis and reporting of mortality statistics and helped establish practices associated with vital statistics and surveillance.
+
+**LIPPS lesson:** useful evidence requires systems that produce comparable information over time.
+
+### John Snow — description, comparison and action
+
+During the 1854 London cholera investigations, Snow mapped where deaths occurred, investigated water sources, compared cholera mortality across populations receiving water from different companies, and used the findings to support public-health action.
+
+The famous map matters, but the deeper lesson is the **sequence of reasoning**:
+
+**observe → describe → hypothesise → compare → interpret → act**.
+
+In one comparison reproduced in the CDC lesson, districts supplied only by Southwark and Vauxhall had a cholera death rate of **5.0 per 1,000**, while districts supplied only by Lambeth had **0.9 per 1,000**. This supported the contaminated-water hypothesis, while still leaving room to ask whether the populations differed in other relevant ways.
+
+### Quick calculation
+
+Without yet worrying about the formal name of the measure, approximately how many times larger is 5.0 than 0.9?
+
+**5.0 ÷ 0.9 ≈ 5.6.**
+
+Week 3 will formalise this kind of comparison.
+
+::: {.lipps-callout}
+**What made Snow's work epidemiological was not simply drawing a map.**  
+It was the combination of defined observations, population pattern, a plausible hypothesis, comparison, critical interpretation and action.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 7 · What is epidemiology used for?
+
+The CDC lesson presents several broad uses that remain useful for organising public-health thinking.
+
+### Assess the health of a community
+
+Epidemiological information helps determine what health problems exist, where they occur, which groups are at greater risk, which problems are increasing or declining, and whether services correspond to population need.
+
+### Inform individual decisions
+
+Population evidence eventually influences personal choices and clinical recommendations through knowledge about risks and preventive interventions.
+
+### Complete the clinical picture
+
+When a new or poorly understood condition emerges, aggregation of cases can help define its clinical spectrum, natural history and groups at risk.
+
+### Search for causes and prevent recurrence
+
+Epidemiological studies can identify exposures and other factors that support prevention and control. Epidemiology may not, by itself, establish every element of biological causation, but it can generate evidence strong enough to support appropriate public-health action.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Core epidemiological functions in public-health practice
+
+Epidemiology is not a single activity. The CDC framework identifies several interconnected functions.
+
+| Function | What it means in practice | Example |
+|---|---|---|
+| **Surveillance** | Ongoing collection, analysis, interpretation and dissemination of health information for action | Reviewing weekly disease reports and looking for unusual patterns |
+| **Field investigation** | Investigating cases, clusters or signals in their real-world setting | Visiting affected communities and tracing likely exposures |
+| **Analytic studies** | Using structured comparisons to test explanations | Comparing exposure histories of affected and unaffected groups |
+| **Evaluation** | Assessing whether programmes or systems are relevant, effective, efficient or achieving intended results | Evaluating whether a screening programme reaches its target population |
+| **Linkages** | Working across disciplines, institutions and jurisdictions | Epidemiologists working with clinicians, laboratories, environmental health teams and community leaders |
+| **Policy development** | Translating evidence and local understanding into recommendations or policy input | Using evidence to recommend a prevention or control measure |
+
+A single problem may move through several functions: surveillance detects a signal, field investigation clarifies it, analytic work tests hypotheses, evaluation examines the response, linkages make implementation possible, and policy turns evidence into action.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Define → count → divide → compare
+
+The CDC lesson reduces the basic epidemiological approach to three memorable operations: **count, divide and compare**. LIPPS places the decisions that must happen before and after those operations around them.
+
+### 1. Define
+
+Before counting cases, decide what qualifies as the health event. A **case definition** provides standard criteria for classification.
+
+In outbreak work, a case definition may include clinical criteria and restrictions on **time, place and person**. If the case definition changes during surveillance, reported case numbers can change even when underlying disease occurrence does not.
+
+### 2. Count
+
+How many events occurred?
+
+Counts are essential for workload, commodity and service planning. But they often cannot support fair population comparisons by themselves.
+
+### 3. Divide
+
+Relate events to an appropriate population denominator. Week 2 develops this formally.
+
+### 4. Compare
+
+Compare across populations, exposure groups, places or time periods. Ask what would normally be expected.
+
+### 5. Interpret
+
+Consider design, measurement, chance, bias, confounding, context and alternative explanations.
+
+### 6. Act
+
+Communicate what the evidence supports and use it appropriately for public-health decision making.
+
+::: {.lipps-callout}
+**A LIPPS habit worth keeping for the entire course**  
+When an analysis produces an impressive number, trace backwards: How was the event defined? Who entered the numerator? Who belonged in the denominator? What was the comparison? What else could produce the pattern?
+:::
+:::
+
+::: {.lipps-section}
+## APPLY · Turn a vague concern into an epidemiological question
+
+### Fictional scenario
+
+A district health officer says:
+
+> “Teenage pregnancy is becoming a serious problem in our district.”
+
+That is a concern, not yet an epidemiological question.
+
+### Step 1 — What?
+
+What exactly will count as the outcome? Pregnancy among girls aged 15–19? Births among girls aged 15–19? First pregnancy? Current pregnancy? A routine-service indicator?
+
+### Step 2 — Who?
+
+Which population are we describing? All girls aged 15–19 resident in the district? Girls attending health facilities? School-going adolescents?
+
+These are not interchangeable populations.
+
+### Step 3 — Where?
+
+The entire district, selected sub-counties, schools, facilities or communities?
+
+### Step 4 — When?
+
+Current prevalence? Annual occurrence? Change from 2024 to 2026? A five-year trend?
+
+### Step 5 — Compared with what?
+
+Previous years? Another district? Different sub-counties? Different school-attendance groups?
+
+### A more useful question
+
+> **How did a clearly defined adolescent-pregnancy measure change across sub-counties in District X from 2024 to 2026?**
+
+The denominator and data source still need scrutiny, but the question is now measurable.
+
+### Your task
+
+Rewrite this statement as an epidemiological question:
+
+> “Hypertension is very common among our patients.”
+
+Specify **what, who, where, when and the comparison or denominator you need**.
+:::
+
+::: {.lipps-section}
+## WORKED EXAMPLE · Reported increase or real increase?
+
+Return to the fictional malaria scenario.
+
+| Month | Confirmed cases | People tested | Reporting facilities |
+|---|---:|---:|---:|
+| Month 1 | 120 | 600 | 18 |
+| Month 2 | 240 | 1,600 | 30 |
+
+The number of confirmed cases doubled.
+
+But positivity among those tested changed from:
+
+- Month 1: 120 / 600 = **20%**
+- Month 2: 240 / 1,600 = **15%**
+
+This still does **not** tell us the true incidence of malaria in the district. Testing may be selective; the tested population may differ; seasonality and facility reporting changed. But it demonstrates why a raw count can produce a misleading first impression.
+
+### What did we learn?
+
+The defensible statement is:
+
+> **Reported confirmed case counts increased, while positivity among those tested decreased; additional information is required to infer what happened to population disease occurrence.**
+
+The sentence separates **what was observed** from **what is being inferred**.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+### 1. Which part of the epidemiological definition is mainly concerned with person, place and time?
+
+A. Application  
+B. Distribution  
+C. Determinants  
+D. Intervention
+
+**Answer: B.** Distribution includes frequency and pattern, including person, place and time.
+
+### 2. Why is a denominator important when comparing two populations?
+
+A. It guarantees there is no bias.  
+B. It provides population context for the number of events.  
+C. It proves causation.  
+D. It eliminates confounding.
+
+**Answer: B.** A denominator tells us the population in which the events occurred.
+
+### 3. Which activity is most clearly analytic epidemiology?
+
+A. Plotting cases by village.  
+B. Tabulating cases by age.  
+C. Comparing prior exposures in people with and without disease.  
+D. Counting weekly case reports.
+
+**Answer: C.** The defining feature is an appropriate comparison used to assess an exposure-outcome relationship.
+
+### 4. A surveillance programme broadens its case definition. What is the most immediate concern when interpreting the subsequent rise in cases?
+
+A. The disease must have become more severe.  
+B. The apparent increase may partly reflect changed classification.  
+C. The denominator is no longer relevant.  
+D. Analytic epidemiology cannot be used.
+
+**Answer: B.** A broader definition can identify more cases even without a true change in underlying occurrence.
+
+### 5. Which statement best distinguishes epidemiology from clinical care?
+
+A. Epidemiology never considers individuals.  
+B. Clinical care never uses population evidence.  
+C. Epidemiology primarily examines health collectively in defined populations.  
+D. Epidemiology is concerned only with infectious diseases.
+
+**Answer: C.** The distinction is primarily the level of concern, not complete separation of the disciplines.
+
+### 6. Which sequence best captures John Snow's epidemiological contribution as presented in this lesson?
+
+A. Model → p-value → publication  
+B. Description → hypothesis → comparison → action  
+C. Diagnosis → treatment → discharge  
+D. Randomisation → blinding → trial
+
+**Answer: B.** His work illustrates movement from observed population pattern to hypothesis, comparison and public-health action.
+
+### 7. Which is NOT one of the core public-health epidemiology functions introduced this week?
+
+A. Surveillance  
+B. Field investigation  
+C. Analytic studies  
+D. Individual prescribing
+
+**Answer: D.** Individual prescribing is primarily a clinical function.
+
+### 8. A district reports 300 cases this year and 200 last year. What should be your first epidemiological reaction?
+
+A. The disease increased by 50%.  
+B. An outbreak has occurred.  
+C. Determine whether definitions, population, detection and reporting are comparable.  
+D. Fit a regression model.
+
+**Answer: C.** Comparability of measurement and population must be established before interpreting the change.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 1 Mastery Quiz
+
+The Moodle mastery quiz is designed as a **short, objective, scenario-based assessment**.
+
+**Pilot specification**
+
+- 15 questions sampled from a 40-item Week 1 bank;
+- 10 minutes initially, then calibrated using real student response-time data;
+- one question at a time;
+- question order and answer positions randomised where appropriate;
+- one graded attempt in Mastery mode;
+- explanatory feedback available in Practice mode; and
+- approved extra-time accommodations supported in institutional use.
+
+The quiz tests whether you can **recognise and apply epidemiological reasoning**, not whether you can search for definitions quickly.
+:::
+
+::: {.lipps-section}
+## SUMMARY · The Week 1 mental model
+
+**DEFINE** — What exactly counts as the event?  
+**LOCATE** — Who, where and when?  
+**COUNT** — How many?  
+**CONTEXTUALISE** — Out of how many, and under what measurement system?  
+**COMPARE** — Different from what?  
+**EXPLAIN** — What hypotheses could account for the pattern?  
+**INTERPRET** — What does the evidence support, and what does it not support?  
+**ACT** — What is the appropriate public-health response?
+
+If you learn that habit, the statistics that follow will make substantially more sense.
+:::
+
+::: {.lipps-section}
+## Primary source used to build this lesson
+
+This LIPPS lesson is an original teaching adaptation of **Centers for Disease Control and Prevention (CDC), _Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics_, Lesson One: Introduction to Epidemiology (updated May 2012).**
+
+The definition, historical sequence, uses, core functions, case-definition logic, descriptive/analytic distinction and the **count–divide–compare** framework are adapted from that source. **Scenarios labelled fictional or LIPPS examples were created for this course and are not claims about actual Ugandan districts or programmes.**
+:::
+
+::: {.lipps-section}
+[← Back to Epidemiology](../epidemiology.qmd){.lipps-btn .secondary} [Week 2 →](week-02.qmd){.lipps-btn}
+:::

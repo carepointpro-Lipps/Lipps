@@ -1,0 +1,172 @@
+---
+title: ""
+pagetitle: "Week 9 — Risk and Crisis Communication | LIPPS"
+description: "Communicate rapidly and transparently during health threats while acknowledging uncertainty, supporting protective action, listening to affected communities and adapting as evidence changes."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 09
+:::
+
+# Risk and Crisis Communication
+
+## In an emergency, people need useful information before uncertainty disappears.
+
+<span class="lipps-chip">RCCE</span> <span class="lipps-chip">Uncertainty</span> <span class="lipps-chip">Trust</span> <span class="lipps-chip">Emergency</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Communicate rapidly and transparently during health threats while acknowledging uncertainty, supporting protective action, listening to affected communities and adapting as evidence changes.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. define emergency risk communication and distinguish it from routine health promotion;
+2. explain why timeliness and trust are operational assets during crises;
+3. communicate what is known, unknown and being done to reduce uncertainty;
+4. identify factors influencing risk perception;
+5. develop concise action-oriented emergency messages;
+6. coordinate messengers and information across response partners;
+7. integrate community engagement and feedback into emergency communication;
+8. manage corrections and changing guidance without pretending certainty;
+9. design a basic communication response across preparedness, initial response and recovery phases.
+:::
+
+::: {.lipps-section}
+## ORIENT · Waiting for perfect information
+
+Several patients develop severe unexplained haemorrhagic illness. Laboratory confirmation is pending. Officials delay public communication because they fear being wrong. Meanwhile, rumours spread that the hospital is hiding deaths and people begin avoiding care.
+
+In emergencies, silence also communicates. The question is not whether uncertainty exists; it is how to communicate responsibly while uncertainty exists.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Risk communication is real-time exchange for protective decisions
+
+WHO defines risk communication as the real-time exchange of information, advice and opinions between experts or officials and people facing a hazard. The purpose is to enable informed decisions that reduce harm. It includes media work, digital communication and community engagement.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Speed and accuracy are not opposites
+
+Communicate early with what is verified, clearly distinguish preliminary information, and update as evidence changes. Delaying until every detail is certain creates information voids and can allow rumours to define the situation.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Say what is known, unknown and being done
+
+A useful uncertainty structure is: **What we know now → what we do not yet know → what people should do now → what authorities are doing to learn more → when the next update will come.** This preserves usefulness without false certainty.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Risk perception is not determined by probability alone
+
+People may perceive greater risk when hazards are unfamiliar, involuntary, catastrophic, invisible, unfair or associated with low institutional trust. Communicators should understand these perceptions rather than dismiss them as irrational.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Action messages should be feasible and prioritised
+
+During a crisis, cognitive load is high. Prioritise a small number of protective actions, explain who should act, where and when, and update instructions as the situation changes. Avoid flooding audiences with every technical detail at once.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Empathy and respect support credibility
+
+Acknowledge fear, loss, inconvenience and uncertainty. Empathy does not mean exaggerating emotion; it signals that public concerns are understood. Dismissive language can undermine technically accurate guidance.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Coordination prevents contradiction
+
+Response agencies should align core facts, terminology, action recommendations and update schedules. Differences in institutional roles can be explained, but preventable contradictions rapidly damage confidence.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Community engagement is part of emergency communication
+
+WHO’s current RCCE approach emphasises community-centred emergency programmes. Listening mechanisms should identify questions, rumours, barriers and unintended effects of response measures, and those insights should reach operational teams.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Changing guidance should be explained, not hidden
+
+When evidence changes, explain what changed and why. A transparent revision can strengthen credibility; pretending that earlier guidance never existed invites distrust.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Prepare before the emergency
+
+Build spokesperson capacity, audience maps, channel agreements, translation workflows, social-listening systems, approval pathways and simulation exercises before a crisis. Preparedness reduces the delay between signal and useful communication.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A district reports suspected cholera after severe flooding. Laboratory confirmation will take 24 hours. Several water points are damaged, social media claims that chlorine is poisonous, and residents say previous emergency messages arrived only in English.
+
+1. Draft the first public statement using known/unknown/action/update structure.
+2. Select three immediate protective actions and explain why they are prioritised.
+3. Identify audiences requiring different operational information.
+4. Choose messengers and channels for the first 12 hours.
+5. Design a community-listening mechanism.
+6. Plan how to respond to the chlorine concern without amplifying it unnecessarily.
+7. State what you would communicate when laboratory confirmation arrives.
+8. Identify one operational response problem that communication must escalate.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why can silence worsen a crisis even when facts are uncertain?
+2. What four elements should accompany communication of uncertainty?
+3. Name two factors that can increase perceived risk beyond statistical probability.
+4. Why should changing guidance be explained?
+5. How does community engagement improve risk communication?
+6. What should be prepared before an emergency rather than improvised during it?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 9 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 9 bank of 52 items.
+
+**Initial time limit:** 12 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **WHO Communicating Risk in Public Health Emergencies, 2018.** Evidence-based guideline for emergency risk communication.
+- **WHO RCCE Competency Framework, 2024.** Community-centred competencies before, during and after emergencies.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 8](week-08.qmd)
+
+[Week 10 →](week-10.qmd)
+:::

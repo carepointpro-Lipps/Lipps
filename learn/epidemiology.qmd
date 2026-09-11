@@ -1,0 +1,129 @@
+---
+title: ""
+pagetitle: "Epidemiology | LIPPS"
+description: "A 12-week applied Epidemiology course on LIPPS Learn."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · 12 WEEKS
+:::
+
+# Epidemiology
+
+## Learn to think in populations, not just memorise formulas.
+
+This course introduces epidemiological reasoning through public-health problems. Students learn how to measure disease, compare populations, choose and critique study designs, recognise threats to validity, evaluate screening tests and interpret evidence without making claims the design cannot support.
+
+<span class="lipps-chip">12 weeks</span> <span class="lipps-chip">Objective quizzes</span> <span class="lipps-chip">Applied cases</span> <span class="lipps-chip">Public-health focus</span>
+:::
+
+::: {.lipps-section}
+## By the end of the course, learners should be able to
+
+- frame answerable epidemiological questions;
+- calculate and interpret common measures of disease frequency;
+- select and interpret measures of association and effect;
+- distinguish major observational and experimental study designs;
+- identify common sources of bias, confounding and effect modification;
+- interpret screening and diagnostic-test performance in context;
+- describe the logic of surveillance and outbreak investigation;
+- distinguish association from defensible causal interpretation; and
+- critically appraise epidemiological claims in reports, papers and programme data.
+:::
+
+::: {.lipps-section}
+## The 12-week course
+
+<div class="lipps-week-grid">
+
+<div class="lipps-week"><span>01</span><div><h3>Epidemiology and Epidemiological Thinking</h3><p>Population thinking, distributions, determinants, comparison groups and the difference between a clinical question and an epidemiological question.</p><strong>Applied task:</strong> Turn a vague district health concern into an answerable epidemiological question.<br><a href="epidemiology/week-01.qmd"><strong>Start Week 1 →</strong></a></div></div>
+
+<div class="lipps-week"><span>02</span><div><h3>Measuring Disease Frequency and Population Health</h3><p>Counts, proportions, prevalence, incidence, mortality and the importance of the denominator.</p><strong>Applied task:</strong> Decide which measure correctly describes three different service and disease scenarios.<br><a href="epidemiology/week-02.qmd"><strong>Start Week 2 →</strong></a></div></div>
+
+<div class="lipps-week"><span>03</span><div><h3>Measures of Association and Effect</h3><p>Risk ratios, odds ratios, prevalence ratios, risk differences and interpretation of relative versus absolute effects.</p><strong>Applied task:</strong> Choose the most informative effect measure for contrasting public-health questions.<br><a href="epidemiology/week-03.qmd"><strong>Start Week 3 →</strong></a></div></div>
+
+<div class="lipps-week"><span>04</span><div><h3>Descriptive Epidemiology: Person, Place and Time</h3><p>Case definition, epidemic curves, spot maps, stratification, pattern recognition and hypothesis generation.</p><strong>Applied task:</strong> Describe an outbreak dataset and identify the next question the pattern raises.<br><a href="epidemiology/week-04.qmd"><strong>Start Week 4 →</strong></a></div></div>
+
+<div class="lipps-week"><span>05</span><div><h3>Cross-sectional Studies</h3><p>Prevalence, simultaneous measurement, temporality, sampling and appropriate causal restraint.</p><strong>Applied task:</strong> Critique a cross-sectional study that uses causal language.<br><a href="epidemiology/week-05.qmd"><strong>Start Week 5 →</strong></a></div></div>
+
+<div class="lipps-week"><span>06</span><div><h3>Case-Control Studies</h3><p>Cases, controls, source populations, exposure ascertainment, odds ratios and selection challenges.</p><strong>Applied task:</strong> Select an appropriate control group for an outbreak investigation.<br><a href="epidemiology/week-06.qmd"><strong>Start Week 6 →</strong></a></div></div>
+
+<div class="lipps-week"><span>07</span><div><h3>Cohort Studies</h3><p>Follow-up, risk, rates, losses to follow-up, person-time and prospective versus retrospective cohorts.</p><strong>Applied task:</strong> Interpret incidence and relative risk from a cohort table.<br><a href="epidemiology/week-07.qmd"><strong>Start Week 7 →</strong></a></div></div>
+
+<div class="lipps-week"><span>08</span><div><h3>Experimental and Quasi-Experimental Designs</h3><p>Randomisation, allocation, comparison groups, before-after designs and when causal claims become stronger.</p><strong>Applied task:</strong> Choose between a trial and feasible quasi-experimental alternatives for a service intervention.<br><a href="epidemiology/week-08.qmd"><strong>Start Week 8 →</strong></a></div></div>
+
+<div class="lipps-week"><span>09</span><div><h3>Bias, Confounding and Effect Modification</h3><p>Selection bias, information bias, confounding, interaction and why adjustment can sometimes make an analysis worse.</p><strong>Applied task:</strong> Separate a confounder, mediator and effect modifier in a simple causal scenario.<br><a href="epidemiology/week-09.qmd"><strong>Start Week 9 →</strong></a></div></div>
+
+<div class="lipps-week"><span>10</span><div><h3>Screening and Diagnostic-Test Evaluation</h3><p>Sensitivity, specificity, predictive values, likelihood ratios, thresholds, serial testing and the role of prevalence.</p><strong>Applied task:</strong> Explain why the same test can have a different positive predictive value in two populations.<br><a href="epidemiology/week-10.qmd"><strong>Start Week 10 →</strong></a></div></div>
+
+<div class="lipps-week"><span>11</span><div><h3>Surveillance, Outbreak Investigation and Field Epidemiology</h3><p>Surveillance attributes, signals, verification, line lists, descriptive analysis and outbreak investigation logic.</p><strong>Applied task:</strong> Move from an unusual surveillance signal to a defensible initial investigation plan.<br><a href="epidemiology/week-11.qmd"><strong>Start Week 11 →</strong></a></div></div>
+
+<div class="lipps-week"><span>12</span><div><h3>Causal Interpretation and Critical Appraisal</h3><p>Association, causality, effect, impact, precision, validity, applicability and disciplined interpretation of evidence.</p><strong>Applied task:</strong> Rewrite an overstated conclusion so it matches the design and results.<br><a href="epidemiology/week-12.qmd"><strong>Start Week 12 →</strong></a></div></div>
+
+</div>
+:::
+
+::: {.lipps-section}
+## What happens each week
+
+::: {.lipps-grid .three}
+::: {.lipps-card}
+### Learn
+A focused explanatory lesson introduces the week's concepts with public-health examples rather than software commands.
+:::
+
+::: {.lipps-card}
+### Apply
+Cases and worked examples require learners to make design, measurement or interpretation decisions.
+:::
+
+::: {.lipps-card}
+### Demonstrate
+A timed objective quiz samples scenario-based questions from the week's question bank.
+:::
+:::
+:::
+
+::: {.lipps-section}
+## Assessment model
+
+**Practice questions** are formative, allow normal study time and provide explanatory feedback.
+
+**Weekly mastery quizzes** are timed, objective and designed for a learner who has already studied the material. Questions are presented in a compact format, emphasise application, and may be randomised from a larger bank.
+
+**Institutional assessment mode** can use scheduled windows, institution-defined attempt rules, delayed feedback and approved extra-time accommodations.
+
+::: {.lipps-callout}
+**The principle**  
+The quiz should be fast enough that knowing the material is the efficient strategy, but not so fast that reading speed replaces epidemiological understanding.
+:::
+
+[Read the full assessment model →](assessment-model.qmd)  
+[University pilot assessment blueprint →](pilot-assessment-blueprints.qmd)
+:::
+
+::: {.lipps-section}
+## Core reading and course status
+
+The attached CDC epidemiology text is the primary foundational source, with modern LIPPS extensions clearly separated. The course is suitable for a **teaching pilot**; the Moodle banks are candidate practice/mastery items and require subject-matter review and pilot psychometrics before high-stakes use.
+
+[Core readings and source notes →](epidemiology/core-readings.qmd)
+:::
+
+::: {.lipps-section}
+## LIPPS Methods connections
+
+The course introduces concepts sequentially; the Methods library provides the deeper reference material. Course weeks will link directly to relevant Methods pages on study design, sampling, diagnostic studies, bias and causal reasoning, survey analysis, measurement and interpretation.
+
+[Browse Methods →](../methods/index.qmd){.lipps-btn .secondary}
+:::
+
+::: {.lipps-section}
+## Course access
+
+The public syllabus remains open here. Lessons, quizzes, grades and learner progress will be delivered through **LIPPS Learn on Moodle**.
+
+**Moodle enrolment link:** will be connected when the LIPPS Learn installation is live.
+:::

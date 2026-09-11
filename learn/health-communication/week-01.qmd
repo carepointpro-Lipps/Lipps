@@ -1,0 +1,171 @@
+---
+title: ""
+pagetitle: "Week 1 — Foundations of Health Communication | LIPPS"
+description: "Explain health communication as a strategic public-health process that connects evidence, audiences, messages, channels, feedback and action."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 01
+:::
+
+# Foundations of Health Communication
+
+## Communication is not the last step after a health programme. It is part of how the programme works.
+
+<span class="lipps-chip">Foundation</span> <span class="lipps-chip">Communication process</span> <span class="lipps-chip">Trust</span> <span class="lipps-chip">Actionability</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Explain health communication as a strategic public-health process that connects evidence, audiences, messages, channels, feedback and action.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. define health communication and distinguish it from information dissemination, publicity and health education alone;
+2. describe communication as a transactional process involving message, channel, audience, context, feedback and noise;
+3. distinguish communication objectives from broader programme and health outcomes;
+4. identify major levels of health communication: interpersonal, organisational, community, mass-media and digital;
+5. explain why credibility, accessibility, relevance, timeliness, understandability and actionability matter;
+6. recognise that audiences interpret messages through prior beliefs, trust, language, experience and social context;
+7. identify common reasons technically accurate health messages fail;
+8. apply a basic communication diagnosis before proposing a message or channel.
+:::
+
+::: {.lipps-section}
+## ORIENT · The poster that nobody understood
+
+A district launches a technically accurate poster telling caregivers to seek care promptly for childhood danger signs. The poster contains dense clinical language, appears only at health facilities, and was developed without talking to caregivers. Staff later conclude that “the community is resistant” because care-seeking does not change.
+
+A health communicator asks different questions: Who needed the information? What decision were they expected to make? Could they understand the message? Did they trust the source? Did the message reach them before the decision point? Was the recommended action actually feasible?
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Health communication is a public-health function, not decoration
+
+Health communication is the strategic use of communication processes to inform and influence decisions that improve health. It includes much more than producing posters, giving health talks or posting on social media. It begins with a defined health or behavioural problem, identifies who must make or support a decision, studies the context in which that decision occurs, and then selects messages, messengers and channels that can realistically help.
+
+A communication product is therefore not the intervention by itself. A radio spot, counselling script or WhatsApp post is one component of a larger communication strategy.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Information sent is not the same as communication achieved
+
+A simple linear model imagines a sender transmitting a message through a channel to a receiver. That model is useful, but real health communication is more transactional: people interpret, question, resist, reinterpret and respond. Feedback changes subsequent communication. Social norms, language, power, trust, competing messages and practical barriers all shape meaning.
+
+A message can be delivered exactly as intended and still fail because the audience did not notice it, did not understand it, did not believe it, or could not act on it.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · The communication chain
+
+A practical diagnostic sequence is **source → message → channel → audience → interpretation → response → feedback**. Around that chain sits **context**: culture, politics, health-system experience, urgency, media environment, literacy, cost and access. “Noise” can be literal, such as a poor radio signal, or conceptual, such as conflicting advice from trusted people.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Start with the decision you want to support
+
+Communication objectives should describe what a defined audience should know, feel, decide or do as a result of communication. They are different from distal health outcomes. “Reduce maternal mortality” is a programme goal; “increase the proportion of pregnant women who can correctly identify three emergency danger signs and know where to seek urgent care” is closer to a communication objective.
+
+The more specific the intended decision, the easier it is to design and evaluate communication.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Levels of health communication interact
+
+**Interpersonal communication** includes counselling, clinical encounters and peer dialogue. **Organisational communication** includes communication within facilities and institutions. **Community communication** involves dialogue with groups, leaders and local structures. **Mass communication** includes radio, television, print and large-reach campaigns. **Digital communication** includes social media, messaging platforms, websites, apps and SMS.
+
+These levels reinforce one another. A radio campaign may create awareness, while a village health worker answers questions and a clinic makes the recommended service available.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Effective communication has quality dimensions
+
+WHO’s strategic communication approach emphasises communication that is **actionable, accessible, relevant, timely, understandable and credible**. These are useful design tests. A message can be scientifically correct but arrive too late. It can be clear but impossible to act on. It can be accessible online but not to people without data bundles or smartphones.
+
+LIPPS adds one question: **What evidence would show that the communication actually helped the intended decision?**
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Trust is part of the message
+
+People evaluate not only *what* is said but *who* says it and whether that source has behaved credibly before. Trust is affected by consistency, transparency, competence, respect, fairness and previous experience with health services. Borrowing a famous spokesperson cannot compensate for an institution that repeatedly gives contradictory or dismissive information.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Communication failure is often misdiagnosed as audience failure
+
+When behaviour does not change, communicators should resist blaming “ignorance”, “culture” or “resistance” too quickly. The failure may lie in unclear objectives, poor audience insight, inaccessible services, contradictory recommendations, weak messenger credibility, inappropriate timing or a channel that never reached the intended group.
+
+The first skill in health communication is therefore **diagnosis**, not message writing.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A district wants adults with persistent cough to seek tuberculosis testing earlier. Current posters say: “All presumptive TB clients should report to the nearest DOTS facility for sputum evaluation.” Testing is free, but community interviews show that many people do not know what “presumptive”, “DOTS” or “sputum evaluation” mean. Some worry that being seen at the TB clinic will expose their HIV status. Others cannot leave work during clinic hours.
+
+1. State the health problem separately from the communication problem.
+2. Identify the primary audience and at least two secondary audiences.
+3. Write one measurable communication objective.
+4. Identify source, message, channel, audience, context, feedback and likely noise.
+5. List at least three non-communication barriers that messaging alone cannot solve.
+6. Explain why “more posters” may not be the best first response.
+7. Propose one interpersonal, one community and one mass/digital communication component that could work together.
+8. State what you would measure before claiming success.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why is exposure to a message not the same as understanding it?
+2. Give one example of a programme goal and a narrower communication objective for the same health problem.
+3. What is the difference between a channel problem and a message problem?
+4. Why can a credible messenger matter even when the information itself is accurate?
+5. A campaign reaches 90% of an audience but only 25% understand the recommended action. What should be investigated next?
+6. Name two barriers that communication cannot solve by itself.
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 1 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 1 bank of 48 items.
+
+**Initial time limit:** 10 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **WHO Strategic Communications Framework.** WHO principles for actionable, accessible, relevant, timely, understandable and credible communication.
+- **National Cancer Institute, Making Health Communication Programs Work.** Classic planning framework for audience-centred health communication programmes.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Health Communication course](../health-communication.qmd)
+
+[Week 2 →](week-02.qmd)
+:::

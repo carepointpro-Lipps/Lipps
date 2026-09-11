@@ -1,0 +1,445 @@
+// LIPPS Epidemiology — Week 3: Measures of Association and Effect
+// 60-item objective question bank for Moodle GIFT import.
+// Questions are original LIPPS teaching items informed primarily by CDC Principles of Epidemiology, Lesson Three.
+// Prevalence-ratio items are a clearly labelled LIPPS extension because the attached CDC lesson does not explicitly teach PR.
+// Review item statistics and response times before high-stakes institutional use.
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Comparison and two-by-two tables
+
+::EPI-W3-001::What is the central purpose of a measure of association in analytic epidemiology? {
+=To quantify how disease occurrence differs between comparison groups#Correct. Association measures formalise a comparison between groups.
+~To count all cases without a denominator#Counts describe burden but do not quantify between-group association.
+~To prove that an exposure caused an outcome#A measure of association alone does not prove causation.
+~To replace the need for a comparison group#Comparison is the foundation of analytic epidemiology.
+}
+
+::EPI-W3-002::In a standard two-by-two table, the exposed group has a disease count a and a non-disease count b. Which expression gives risk among the exposed? {
+=a/(a+b)#Correct. The denominator is everyone exposed and at risk in that row.
+~a/(a+c)#That denominator is the total number of cases, not the exposed group.
+~a/b#That is the odds among the exposed, not the risk.
+~ad/bc#That is the cross-product formula for the odds ratio.
+}
+
+::EPI-W3-003::A cohort table shows 30 cases and 70 non-cases among exposed people, and 10 cases and 90 non-cases among unexposed people. What is the risk among the exposed? {
+=30%#Correct. 30/(30+70) = 30%.
+~10%#That is the risk among the unexposed.
+~3%#The denominator has been misidentified.
+~43%#Risk uses all exposed people, not only non-cases.
+}
+
+::EPI-W3-004::What is the null value for ratio measures such as RR, rate ratio, OR and PR? {
+=1.0#Correct. A ratio of 1 means equal measures in the two comparison groups.
+~0#Zero is the null value for a difference measure.
+~50#There is no general null value of 50 for these ratios.
+~-1#These ratio measures cannot be interpreted with -1 as the null.
+}
+
+::EPI-W3-005::What is the null value for a risk difference? {
+=0#Correct. A difference of zero means no absolute difference in risk.
+~1#One is the null value for many ratio measures, not a risk difference.
+~100#A 100 percentage-point difference is maximal, not null.
+~-1#A negative difference can indicate lower risk; it is not the null.
+}
+
+::EPI-W3-006::Which issue matters MOST before interpreting any calculated association? {
+=Whether the comparison group is a defensible representation of the expected level#Correct. A valid calculation cannot repair an inappropriate comparison.
+~Whether the software produced many decimal places#Decimal precision does not create epidemiological validity.
+~Whether the ratio is greater than 1#A ratio can be meaningful above, below or at 1.
+~Whether the table has exactly 100 participants#No fixed sample size is required for the concept of comparison.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Risk ratio
+
+::EPI-W3-007::Risk is 30% in the exposed group and 10% in the unexposed group. What is the risk ratio? {
+=3.0#Correct. 0.30/0.10 = 3.0.
+~0.20#That is the absolute risk difference expressed as a proportion.
+~20#The percentage-point difference is 20, not the ratio.
+~0.33#This reverses the comparison.
+}
+
+::EPI-W3-008::A study reports RR = 0.50 for exposed versus unexposed participants. Which interpretation is BEST? {
+=The exposed group had half the risk observed in the unexposed group#Correct. RR 0.50 means risk in the numerator group is 50% of comparison-group risk.
+~The exposed group had 50 percentage points less risk#A relative ratio does not by itself give the absolute percentage-point difference.
+~The exposed group had half the odds#That would describe an odds ratio, not a risk ratio.
+~The exposure prevented exactly half of all cases in the population#That causal population claim is not established by RR alone.
+}
+
+::EPI-W3-009::If RR = 1.0, which statement is correct? {
+=The measured risks are equal in the two groups#Correct. RR 1.0 is the ratio null.
+~There were no cases in either group#Equal risks can occur at many nonzero values.
+~Risk was reduced by 100%#RR 0, not RR 1, would correspond to zero risk in the numerator group.
+~The study proves no causal effect#A point estimate at the null does not by itself prove absence of a causal effect.
+}
+
+::EPI-W3-010::Disease risk is 12% in Group A and 4% in Group B. What is the RR for A versus B? {
+=3.0#Correct. 0.12/0.04 = 3.0.
+~8.0#Eight percentage points is the absolute difference, not the RR.
+~0.33#That reverses the comparison.
+~16.0#Adding the percentages does not give a risk ratio.
+}
+
+::EPI-W3-011::Risk is 8% in the exposed group and 20% in the comparison group. What is the RR? {
+=0.40#Correct. 0.08/0.20 = 0.40.
+~0.60#That is the relative reduction, 1 - RR, not the RR.
+~2.50#That is the reciprocal comparison.
+~12.0#Twelve percentage points is the absolute difference in magnitude.
+}
+
+::EPI-W3-012::An observational cohort reports RR = 2.4. Which wording is MOST defensible without additional causal assumptions? {
+=Exposure was associated with 2.4 times the risk of the outcome#Correct. This states the observed association without automatically asserting causation.
+~Exposure caused a 2.4-fold increase in disease#The ratio alone does not establish causation.
+~Exposure explains 240% of all disease#RR is not an attributable proportion.
+~The odds were exactly 2.4 times higher#RR compares risks, not odds.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Rate ratio
+
+::EPI-W3-013::An incidence rate is 20 per 1,000 person-years in Group A and 10 per 1,000 person-years in Group B. What is the rate ratio? {
+=2.0#Correct. 20/10 = 2.0.
+~10#That is the absolute rate difference per 1,000 person-years.
+~0.5#That reverses the comparison.
+~30#Adding the rates does not yield a rate ratio.
+}
+
+::EPI-W3-014::The exposed group has 48 cases during 2,400 person-years and the unexposed group has 30 cases during 3,000 person-years. What is the rate ratio? {
+=2.0#Correct. Rates are 20 and 10 per 1,000 person-years, so the rate ratio is 2.
+~1.6#Dividing case counts alone ignores unequal person-time.
+~0.5#That reverses the comparison.
+~18#That is not a valid ratio of the incidence rates.
+}
+
+::EPI-W3-015::Which denominator most strongly signals that a rate ratio rather than a risk ratio is appropriate? {
+=Person-time#Correct. A rate ratio compares incidence rates built from person-time or equivalent rate denominators.
+~Number initially at risk only#That is typical for an incidence proportion and risk ratio.
+~Number of controls selected by the investigator#That is typical of a case-control design and odds ratio.
+~Total number of existing cases#That does not define an incidence rate denominator.
+}
+
+::EPI-W3-016::Which statement BEST distinguishes a risk ratio from a rate ratio? {
+=A risk ratio compares incidence proportions; a rate ratio compares incidence rates#Correct. The two measures compare different frequency quantities.
+~A risk ratio can be below 1 but a rate ratio cannot#Both can be below, equal to or above 1.
+~Only the rate ratio has a comparison group#Both are comparative measures.
+~Only the risk ratio can be used in epidemiology#Both are standard epidemiological measures.
+}
+
+::EPI-W3-017::The incidence rate is 3.5 per 1,000 person-years in the exposed group and 7.0 per 1,000 person-years in the comparison group. What is the rate ratio? {
+=0.50#Correct. 3.5/7.0 = 0.50.
+~2.0#That is the reciprocal comparison.
+~3.5#That is the absolute rate difference in magnitude, not the ratio.
+~10.5#Adding rates does not give a rate ratio.
+}
+
+::EPI-W3-018::A rate ratio of 1.4 is reported for exposed versus unexposed participants. Which interpretation is BEST? {
+=The incidence rate was 40% higher in the exposed group#Correct. A rate ratio of 1.4 means the numerator rate is 1.4 times the comparison rate.
+~Risk was exactly 40 percentage points higher#A rate ratio does not provide a percentage-point risk difference.
+~Odds were 1.4 times higher#The measure compares rates, not odds.
+~The exposure caused 40% of all cases#That is an unsupported causal/attributable interpretation.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Absolute effects and risk difference
+
+::EPI-W3-019::Risk is 30% in the exposed group and 10% in the unexposed group. What is the risk difference? {
+=20 percentage points#Correct. 30% - 10% = 20 percentage points.
+~3 percentage points#Three is the risk ratio, not the difference.
+~30 percentage points#That is the exposed-group risk itself.
+~200 percentage points#This confuses relative and absolute change.
+}
+
+::EPI-W3-020::Risk is 2% in Group A and 1% in Group B. What is the absolute risk difference? {
+=1 percentage point#Correct. 2% - 1% = 1 percentage point.
+~2 percentage points#That is the risk in Group A, not the difference.
+~100 percentage points#The relative increase is 100%, but the absolute difference is 1 percentage point.
+~0.5 percentage points#That does not equal the subtraction of the two risks.
+}
+
+::EPI-W3-021::Two comparisons both have RR = 2.0. In one, risks are 20% versus 10%; in the other, 2% versus 1%. What does this demonstrate? {
+=The same relative association can correspond to very different absolute differences#Correct. The RRs match, while the risk differences are 10 and 1 percentage points.
+~Risk difference is always equal to risk ratio#They are different scales.
+~Absolute measures are unnecessary when RR is known#Absolute information can materially change public-health interpretation.
+~A ratio of 2 proves causation in both settings#Magnitude alone does not establish causation.
+}
+
+::EPI-W3-022::Risk is 10% in an intervention group and 15% in a comparison group. If RD is defined as intervention minus comparison, what is RD? {
+=-5 percentage points#Correct. 10% - 15% = -5 percentage points.
+~0.67#That is the risk ratio, approximately.
+~5% higher#The intervention risk is lower, not higher.
+~1.5#That is the reciprocal risk ratio.
+}
+
+::EPI-W3-023::Which value indicates no absolute difference in risk between groups? {
+=RD = 0#Correct. Zero is the null for a difference measure.
+~RD = 1#A difference of 1 is not the null.
+~RR = 0#RR 0 means zero risk in the numerator group when comparison risk is positive.
+~OR = 0#OR 0 is not the ratio null.
+}
+
+::EPI-W3-024::A risk difference of 0.12 is most naturally communicated as: {
+=12 additional cases per 100 people at risk, if the exposed risk is higher#Correct. 0.12 corresponds to 12 percentage points.
+~12 times the risk#That would be a ratio interpretation.
+~A 12% odds ratio#Risk difference does not compare odds.
+~A null association#A difference of 0.12 is not zero.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Odds and odds ratio
+
+::EPI-W3-025::Twenty of 100 people develop disease. What are the odds of disease? {
+=20/80 = 0.25#Correct. Odds compare cases with non-cases.
+~20/100 = 0.20#That is risk, not odds.
+~80/20 = 4.0#That is the odds of non-disease relative to disease.
+~100/20 = 5.0#That is not the disease odds.
+}
+
+::EPI-W3-026::A two-by-two table has a=40, b=60, c=20, d=80. What is the odds ratio? {
+=2.67#Correct. OR = (40×80)/(60×20) = 2.67.
+~2.0#That is not the cross-product ratio for these values.
+~4.0#This overstates the cross-product calculation.
+~0.375#That is the reciprocal of approximately 2.67.
+}
+
+::EPI-W3-027::Which formula gives the odds ratio from a standard two-by-two table? {
+=ad/bc#Correct. This is the cross-product formula.
+~a/(a+b)#That is risk among exposed.
+~c/(c+d)#That is risk among unexposed.
+~(a+b)/(c+d)#That compares group sizes rather than disease odds.
+}
+
+::EPI-W3-028::An OR of 0.50 for exposed versus unexposed participants is BEST interpreted as: {
+=The odds of the outcome were 50% lower in the exposed group#Correct. 1 - 0.50 = 0.50, or 50% lower odds.
+~The risk was necessarily 50% lower#OR and RR are not generally identical.
+~There was a 50 percentage-point risk reduction#OR does not provide an absolute risk difference.
+~There was no association#The ratio null is 1, not 0.5.
+}
+
+::EPI-W3-029::If OR = 1.0, what does the point estimate indicate? {
+=Equal odds of the outcome in the two groups#Correct. OR 1 is the null for an odds ratio.
+~No cases occurred#Equal odds can be nonzero.
+~A 100% increase in odds#That would correspond to OR 2.0.
+~A risk difference of 1#OR and risk difference are different scales.
+}
+
+::EPI-W3-030::Why is the odds ratio the standard association measure in a typical case-control study? {
+=Cases and controls are sampled by outcome status, so population risks usually cannot be calculated directly but exposure odds can be compared#Correct. The sampling structure permits OR estimation even when population risks are unavailable.
+~Because odds ratios always equal risk ratios#They only approximate RRs under particular conditions such as uncommon outcomes.
+~Because case-control studies contain no comparison group#Controls are the comparison group.
+~Because odds ratios prove causation#No association measure alone proves causation.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Odds ratio versus risk ratio
+
+::EPI-W3-031::Risk is 60% in the exposed group and 20% in the unexposed group. What are the RR and OR, respectively? {
+=RR = 3.0; OR = 6.0#Correct. RR=0.60/0.20=3; OR=(0.60/0.40)/(0.20/0.80)=6.
+~RR = 6.0; OR = 3.0#The two measures have been reversed.
+~RR = 3.0; OR = 3.0#With a common outcome, odds and risk can differ substantially.
+~RR = 0.33; OR = 0.17#Those are reciprocal comparisons.
+}
+
+::EPI-W3-032::Risk is 5% in one group and 1% in the comparison group. Which pair is approximately correct? {
+=RR = 5.0 and OR ≈ 5.2#Correct. With uncommon outcomes, OR and RR are close.
+~RR = 5.0 and OR = 25#The OR does not become five squared.
+~RR = 0.2 and OR ≈ 0.19#That reverses the group comparison.
+~RR = 4.0 and OR = 4.0#RR is 5%/1% = 5.
+}
+
+::EPI-W3-033::A report states “OR = 4.0, therefore exposed people were four times as likely to develop disease.” What is the main problem? {
+=The statement interprets an odds ratio as though it were a risk ratio#Correct. OR compares odds; “times as likely” usually implies risk.
+~An odds ratio can never be 4.0#OR can take values above 1.
+~Any ratio above 1 is automatically causal#That is also wrong, but the immediate numerical-language error is odds being described as risk.
+~The report should subtract 4 from 1#That would not correctly interpret OR 4.
+}
+
+::EPI-W3-034::As an outcome becomes more common, what generally happens to the numerical closeness of OR and RR for the same two risks? {
+=They can diverge substantially#Correct. The rare-outcome approximation weakens as the outcome becomes common.
+~They become exactly identical#They are not algebraically identical.
+~The RR becomes an odds ratio#The measures remain conceptually distinct.
+~Both must become 1#Outcome frequency does not force the association to the null.
+}
+
+::EPI-W3-035::Why can a typical case-control study not directly calculate a risk ratio from the sampled 2×2 table? {
+=The investigator usually fixes the number of cases and controls, so sampled case proportions do not represent population risks#Correct. Outcome-based sampling breaks direct risk estimation from the sample totals.
+~There are no exposed participants#Case-control studies can include exposed and unexposed participants.
+~Risk ratios require laboratory confirmation#Laboratory confirmation is not what defines whether RR is estimable.
+~Risk ratios can only be calculated with exactly equal group sizes#Equal group sizes are not required.
+}
+
+::EPI-W3-036::When is an OR most likely to be numerically close to the corresponding RR? {
+=When the outcome is uncommon#Correct. This is the classic rare-outcome approximation.
+~When the outcome occurs in nearly everyone#Odds and risk diverge more at high outcome frequencies.
+~Only when RR equals zero#The approximation is not limited to zero risk.
+~Only in cross-sectional studies#The principle is mathematical, not restricted to cross-sectional design.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Prevalence ratio — LIPPS extension
+
+::EPI-W3-037::In a cross-sectional survey, outcome prevalence is 36% in Group A and 18% in Group B. What is the prevalence ratio? {
+=2.0#Correct. 0.36/0.18 = 2.0.
+~18 percentage points#That is the prevalence difference.
+~0.5#That reverses the comparison.
+~54%#Adding the prevalences does not give a prevalence ratio.
+}
+
+::EPI-W3-038::Which wording BEST interprets PR = 2.0 from a cross-sectional survey? {
+=Outcome prevalence was twice as high in Group A as in Group B#Correct. This stays on the prevalence scale.
+~Group A had twice the future risk of developing the outcome#Cross-sectional prevalence does not directly estimate future risk.
+~Group A had twice the incidence rate#No person-time incidence rate was estimated.
+~Exposure doubled the outcome#That is an unsupported causal statement.
+}
+
+::EPI-W3-039::What is the main causal limitation when exposure and outcome are measured at the same cross-sectional assessment? {
+=Temporality may be unclear#Correct. It may be uncertain whether exposure preceded outcome.
+~Prevalence cannot be calculated#Prevalence is a natural measure in cross-sectional data.
+~A comparison group is impossible#Groups can be compared cross-sectionally.
+~The sample can never be representative#Representativeness depends on sampling, not on cross-sectional timing alone.
+}
+
+::EPI-W3-040::What is the null value for a prevalence ratio? {
+=1.0#Correct. Equal prevalences give PR = 1.
+~0#Zero is the null for a prevalence difference.
+~100#Percent scales do not change the ratio null.
+~-1#A prevalence ratio is nonnegative.
+}
+
+::EPI-W3-041::Which quantity does a prevalence ratio compare? {
+=The proportion with the outcome in one group relative to the proportion with the outcome in another group#Correct. PR is a ratio of prevalences.
+~New cases per person-time#That describes incidence rates.
+~Odds of prior exposure among cases and controls#That points to a case-control odds ratio.
+~Deaths from one cause as a share of all deaths#That describes proportionate mortality.
+}
+
+::EPI-W3-042::Hypertension prevalence is 45% in one survey group and 30% in another. What is the prevalence ratio? {
+=1.5#Correct. 0.45/0.30 = 1.5.
+~15#Fifteen percentage points is the prevalence difference.
+~0.67#That reverses the comparison.
+~75%#That is the sum, not a ratio.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Attributable proportion among exposed
+
+::EPI-W3-043::Risk is 30% among exposed people and 10% among unexposed people. What is the attributable proportion among the exposed? {
+=66.7%#Correct. (0.30-0.10)/0.30 × 100 = 66.7%.
+~20%#That is the risk difference in percentage points.
+~33.3%#That is the unexposed risk as a fraction of exposed risk, not the attributable proportion.
+~3.0%#Three is the risk ratio, not AP%.
+}
+
+::EPI-W3-044::Which formula represents attributable proportion among the exposed? {
+=(Risk exposed - Risk unexposed) / Risk exposed × 100%#Correct. The excess risk is expressed as a proportion of exposed-group risk.
+~Risk exposed / Risk unexposed × 100%#That is based on the risk ratio, not directly the AP formula.
+~Risk unexposed / Risk exposed × 100%#This gives the complement component rather than AP itself.
+~(Risk exposed + Risk unexposed) / 2#That is an average, not attributable proportion.
+}
+
+::EPI-W3-045::Which condition is MOST important before interpreting an attributable proportion causally? {
+=The exposure-outcome relationship must be plausibly causal and alternative explanations adequately addressed#Correct. “Attributable” requires stronger assumptions than simple association.
+~The OR must be greater than 10#Magnitude alone does not establish attribution.
+~The outcome must occur in exactly 50% of participants#No such frequency requirement exists.
+~The study must use a pie chart#Graph choice does not establish causation.
+}
+
+::EPI-W3-046::Risk is 20% in exposed people and 5% in unexposed people. What is the attributable proportion among the exposed? {
+=75%#Correct. (0.20-0.05)/0.20 = 0.75.
+~15%#Fifteen percentage points is the risk difference.
+~4%#Four is the RR, not the attributable proportion.
+~25%#That is the baseline risk as a proportion of exposed risk.
+}
+
+::EPI-W3-047::Which statement BEST distinguishes risk difference from attributable proportion among the exposed? {
+=Risk difference is an absolute difference; attributable proportion expresses that excess as a fraction of risk among the exposed#Correct. They use related information but answer different questions.
+~They are always numerically identical#They are on different scales.
+~Attributable proportion does not depend on causal interpretation#Attribution requires causal assumptions.
+~Risk difference is an odds measure#Risk difference is based on risks.
+}
+
+::EPI-W3-048::An observational study has substantial uncontrolled confounding but reports AP = 70%. What wording is safest? {
+=Treat the 70% attributable interpretation cautiously because a causal basis has not been established#Correct. Confounding undermines causal attribution.
+~Exactly 70% of cases were caused by the exposure#That overstates what the study can support.
+~The exposure prevented 70% of cases#The direction is wrong.
+~The OR must also be 70#AP is not an odds ratio.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Vaccine efficacy and effectiveness
+
+::EPI-W3-049::Disease risk is 8% among vaccinated participants and 20% among unvaccinated participants. What is VE? {
+=60%#Correct. (0.20-0.08)/0.20 = 0.60.
+~12%#Twelve percentage points is the absolute risk difference.
+~40%#That is the RR expressed as a percentage.
+~150%#That is not the proportionate reduction.
+}
+
+::EPI-W3-050::A vaccine study reports RR = 0.25 for vaccinated versus unvaccinated people. What is VE using 1 - RR? {
+=75%#Correct. (1-0.25)×100 = 75%.
+~25%#That is the RR expressed as a percentage.
+~125%#Subtracting in the wrong direction produces an invalid result here.
+~0.75%#The decimal must be converted to a percentage.
+}
+
+::EPI-W3-051::Which distinction matches the attached CDC lesson? {
+=Efficacy refers to ideal study conditions; effectiveness refers to typical field conditions#Correct. This is the distinction used in the source.
+~Effectiveness is laboratory-only and efficacy is field-only#The terms are reversed.
+~Efficacy is always observational and effectiveness is always randomised#The source distinguishes ideal versus typical field conditions, not this rule.
+~There is no conceptual distinction#The source explicitly distinguishes the terms.
+}
+
+::EPI-W3-052::If risk is identical in vaccinated and unvaccinated groups, what are RR and VE? {
+=RR = 1.0 and VE = 0%#Correct. Equal risks imply no relative reduction.
+~RR = 0 and VE = 100%#That would correspond to zero vaccinated-group risk if unvaccinated risk is positive.
+~RR = 2 and VE = 50%#Equal risks cannot give RR 2.
+~RR = 1 and VE = 100%#VE = 1-RR, so RR 1 gives VE 0.
+}
+
+::EPI-W3-053::If RR for vaccinated versus unvaccinated people is 1.20, what does 1-RR imply before considering bias or confounding? {
+=A negative relative effectiveness estimate of -20%, indicating higher observed risk in the vaccinated group#Correct. 1-1.20 = -0.20, though causal interpretation still requires care.
+~A vaccine effectiveness of 120%#VE is not the RR expressed directly as a percentage.
+~A vaccine effectiveness of 20%#The sign is important.
+~No association because RR is near 1#RR 1.20 is not exactly the null, though uncertainty must also be considered.
+}
+
+::EPI-W3-054::Risk is 20% unvaccinated and 8% vaccinated. Which pair is correct? {
+=Absolute reduction = 12 percentage points; relative VE = 60%#Correct. 20%-8%=12 points and (20%-8%)/20%=60%.
+~Absolute reduction = 60 points; relative VE = 12%#The absolute and relative measures are reversed.
+~Absolute reduction = 12%; RR = 1.5#RR is 0.40.
+~Absolute reduction = 20 points; VE = 8%#Those are the raw group risks, not the comparative measures.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 03/Measure selection and interpretation
+
+::EPI-W3-055::Two disease-free groups are followed for one year and the proportion developing disease is known in each group. Which pair is most directly available? {
+=Risk ratio and risk difference#Correct. Risks are directly estimable from the cohort structure.
+~Odds ratio only#OR can be calculated, but RR and RD are more direct when risks are known.
+~Prevalence ratio only#The outcome measure described is incidence risk, not prevalence.
+~Proportionate mortality ratio only#No mortality-proportion comparison is described.
+}
+
+::EPI-W3-056::Two groups contribute unequal amounts of person-time and new cases are counted. Which relative measure best matches the data structure? {
+=Rate ratio#Correct. The underlying frequency measures are incidence rates.
+~Risk difference only#A risk difference requires risks rather than person-time rates.
+~Prevalence ratio#Prevalence is not the frequency quantity described.
+~Case-fatality ratio#The data concern new disease over person-time, not deaths among cases.
+}
+
+::EPI-W3-057::Investigators select 150 cases and 300 controls, then assess prior exposure. Which association measure is the natural choice? {
+=Odds ratio#Correct. This is the classic case-control structure.
+~Risk ratio calculated from 150/450#The investigator-set case fraction is not population risk.
+~Incidence rate ratio from the sample totals#No person-time denominator is available.
+~Risk difference from the proportion of cases#The sampled case proportion does not estimate population risk.
+}
+
+::EPI-W3-058::A representative cross-sectional survey compares current diabetes prevalence between two exposure groups. Which relative measure most directly stays on the prevalence scale? {
+=Prevalence ratio#Correct. PR compares the two prevalences directly.
+~Incidence rate ratio#No incident cases per person-time were measured.
+~Risk ratio for future diabetes#The cross-sectional snapshot does not directly provide future risk.
+~Vaccine effectiveness#No vaccine comparison is described.
+}
+
+::EPI-W3-059::Which reporting package gives the reader the most useful picture when data permit? {
+=Outcome frequency in each group, a relative measure, an absolute measure, and an uncertainty interval#Correct. This prevents a single relative number from hiding baseline frequency or precision.
+~Only the largest ratio in the analysis#Selective reporting can mislead.
+~Only a p-value#A p-value does not convey magnitude or baseline risk.
+~Only the exposed-group percentage#Without comparison, association cannot be quantified.
+}
+
+::EPI-W3-060::Why should a point estimate such as RR = 2.0 not be treated as exact truth? {
+=It has sampling uncertainty and may also be affected by bias, confounding and measurement limitations#Correct. The point estimate is one component of the evidence.
+~Any RR above 1 is mathematically impossible#RR can exceed 1.
+~Ratios never have confidence intervals#Confidence intervals can be calculated for RRs and other measures.
+~A point estimate is always a causal effect#Causal interpretation requires design and assumptions beyond the number itself.
+}

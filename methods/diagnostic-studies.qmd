@@ -1,0 +1,24 @@
+---
+title: "Diagnostic and Screening Studies"
+---
+
+# Diagnostic and Screening Studies
+
+This domain covers the design, analysis and interpretation of studies evaluating screening and diagnostic tests.
+
+## Core topics
+
+- Sensitivity and specificity
+- Predictive values and prevalence
+- Likelihood ratios
+- ROC curves and threshold selection
+- Serial and parallel testing algorithms
+- Agreement and kappa
+- Reference standards
+- Verification and spectrum bias
+- Evaluation without a perfect gold standard
+
+::: {.lipps-callout}
+**Why predictive value is not a property of the test alone**  
+PPV and NPV depend on the population in which the test is used because disease prevalence changes the composition of positive and negative test results.
+:::

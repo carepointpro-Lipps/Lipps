@@ -1,0 +1,413 @@
+---
+title: ""
+pagetitle: "Week 12 — Causal Interpretation and Critical Appraisal | LIPPS"
+description: "Integrate design, measurement, comparison, bias, confounding, precision and context to decide what an epidemiological result means, what it does not mean and how confidently it can guide action."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 12
+:::
+
+# Causal Interpretation and Critical Appraisal
+
+## The final skill is not producing an estimate; it is knowing what the estimate can support.
+
+<span class="lipps-chip">Capstone</span> <span class="lipps-chip">Causal reasoning</span> <span class="lipps-chip">Critical appraisal</span> <span class="lipps-chip">Interpretation</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Integrate design, measurement, comparison, bias, confounding, precision and context to decide what an epidemiological result means, what it does not mean and how confidently it can guide action.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 12, you should be able to:
+
+1. distinguish description, association, prediction and causal effect questions;
+2. identify the estimand implied by a research question and reported measure at an introductory level;
+3. judge whether the study design establishes a credible temporal and counterfactual comparison;
+4. evaluate outcome, exposure and covariate measurement as potential sources of error;
+5. assess selection bias, information bias and confounding as threats to interpretation;
+6. interpret effect size together with confidence intervals rather than p-values alone;
+7. distinguish statistical significance from scientific and public-health importance;
+8. separate internal validity from applicability to another population;
+9. recognise competing explanations and residual uncertainty;
+10. write conclusions using causal language only when the design and assumptions justify it;
+11. recommend action under uncertainty without pretending evidence is complete;
+12. apply the LIPPS EVIDENCE appraisal framework to a paper, report or programme claim.
+:::
+
+::: {.lipps-section}
+## ORIENT · The p-value is 0.001. So what?
+
+A study reports:
+
+> “Participants exposed to Programme X had 35% lower mortality, p=0.001.”
+
+Before celebrating, an epidemiologist should ask:
+
+- Was Programme X assigned or self-selected?
+- When was exposure measured relative to mortality?
+- Who entered the study and who was lost?
+- Were mortality outcomes measured equally?
+- Which variables influenced both programme participation and prognosis?
+- What was the absolute mortality difference?
+- What does the confidence interval allow?
+- Does the study population resemble the population where a decision will be made?
+
+A small p-value cannot answer those questions.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · First identify the kind of claim
+
+Four claims are often confused.
+
+**Description:** What is happening?  
+Example: hypertension prevalence is 28%.
+
+**Association:** How does an outcome differ between groups?  
+Example: hypertension prevalence is higher among Group A.
+
+**Prediction:** How well can measured information forecast an outcome?  
+Example: a risk model identifies people likely to be hospitalised.
+
+**Causal effect:** What would differ if the exposure or intervention were changed?  
+Example: what would mortality have been if the same population had received versus not received the intervention?
+
+The analysis should be judged against the type of claim, not merely against whether a model was fitted.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Name the estimand before interpreting the estimate
+
+::: {.lipps-callout}
+**LIPPS extension**
+The attached CDC course does not use modern estimand terminology explicitly. It is introduced here because it clarifies what an analysis is trying to estimate.
+:::
+
+An **estimand** is the target quantity defined by the scientific question.
+
+Examples:
+
+- prevalence in a target population;
+- risk ratio over 12 months;
+- risk difference under intervention versus no intervention;
+- odds ratio for prior exposure in a case-control design;
+- incidence rate ratio;
+- effect of assignment to a programme.
+
+An estimate can be mathematically correct while targeting the wrong estimand for the decision question.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Start critical appraisal with design, not the Results table
+
+The attached CDC material repeatedly emphasises comparison groups and distinguishes observational from experimental study designs.
+
+Ask:
+
+1. How were participants selected?
+2. What determined exposure or intervention status?
+3. When was exposure measured relative to outcome?
+4. What comparison group represents the expected or counterfactual experience?
+5. Did follow-up and measurement differ across groups?
+6. What quantity can the design estimate directly?
+
+A study design does not determine truth, but it constrains which interpretations are defensible.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Temporality is necessary but not sufficient
+
+A cause must precede its effect, so temporal ordering matters.
+
+Cross-sectional simultaneous measurement often creates ambiguity. Cohort follow-up improves temporal ordering. Randomised assignment can strengthen causal interpretation further.
+
+But even perfect temporality does not remove confounding or selection bias. Smoking can precede an outcome without being the cause if smoking is simply correlated with the true cause.
+
+Temporality answers **when**; causal identification also requires a credible comparison.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Measurement determines what the variables actually mean
+
+A variable label can hide measurement problems.
+
+“Vaccinated” might mean card-confirmed dose, caregiver recall or registry entry.  
+“Hypertension” might mean one reading, repeated readings, medication history or diagnosis code.  
+“Exposure” might mean current status even though the biologically relevant window was years earlier.
+
+Critical appraisal asks:
+
+- Is the operational definition appropriate?
+- Is measurement equally valid across groups?
+- Is timing appropriate?
+- Are cut-offs defensible?
+- How much missingness exists?
+- Could misclassification change the association?
+
+You cannot interpret an estimate more precisely than the variables from which it was constructed.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Bias and confounding are alternative explanations
+
+The attached source defines selection bias, information bias and confounding and emphasises valid comparison groups.
+
+A useful appraisal question is:
+
+> **What process, other than the proposed causal mechanism, could have generated this estimate?**
+
+Possible answers include:
+
+- differential enrolment;
+- differential loss to follow-up;
+- exposure recall differences;
+- outcome ascertainment differences;
+- uncontrolled confounding;
+- post-exposure adjustment;
+- unmeasured structural factors; or
+- data-processing error.
+
+The goal is not to invent endless hypothetical bias. It is to identify plausible mechanisms strong enough to matter.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · P-values address compatibility with a null model, not importance
+
+The attached CDC outbreak lesson describes the p-value as the probability of observing an association as large or larger if the null hypothesis were true, and cautions that statistical tests are guides rather than guarantees.
+
+A small p-value does **not** tell you:
+
+- the probability that the null hypothesis is true;
+- the probability the alternative hypothesis is true;
+- whether the result is clinically important;
+- whether bias is absent;
+- whether the study is well designed; or
+- whether the effect will generalise.
+
+Likewise, p > 0.05 does not prove “no effect,” especially when the study is imprecise.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Confidence intervals carry magnitude and precision together
+
+The attached CDC material notes that wide confidence intervals are compatible with a broad range of effect sizes, while narrow intervals indicate greater precision.
+
+For ratio measures such as RR or OR, the usual null value is 1.  
+For absolute differences, the usual null value is 0.
+
+But interpretation should go beyond whether the interval crosses the null.
+
+Example:
+
+**RR 0.72, 95% CI 0.50–1.04**
+
+The data are compatible with effects ranging from a substantial reduction to little or modest increase. “Not statistically significant” throws away most of that information.
+
+Ask whether the interval includes effects that would change a public-health decision.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Statistical significance is not public-health importance
+
+Suppose an enormous study estimates a risk reduction from 10.00% to 9.80% with p < 0.001.
+
+The relative reduction is small and the absolute reduction is 0.2 percentage points. Depending on intervention cost, harm and scale, that may be trivial—or it may still matter if millions are exposed and the intervention is cheap.
+
+Now consider a small emergency study suggesting mortality reduction from 30% to 20% but with a wide confidence interval. The estimate may be operationally important despite statistical uncertainty.
+
+Decision relevance requires **magnitude, precision, burden, feasibility, harms and context**.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Internal validity versus applicability
+
+::: {.lipps-callout}
+**LIPPS extension**
+The attached CDC course discusses representativeness and practical public-health application, but the explicit internal/external validity framework is developed here.
+:::
+
+**Internal validity:** Is the study's estimate credible for the population actually studied?
+
+**External validity / applicability:** Would the estimate be expected to hold in another population, place, time or implementation condition?
+
+A perfectly representative sample does not rescue internal bias. Conversely, a highly internally valid study in a narrow population can still be useful elsewhere when mechanisms and context support transport.
+
+Generalisation is an argument, not a checkbox.
+:::
+
+::: {.lipps-section}
+## LEARN 11 · Causal language has levels
+
+Consider increasing levels of causal commitment:
+
+**Descriptive:** “Mortality was lower among participants receiving the programme.”
+
+**Associational:** “Programme receipt was associated with lower mortality.”
+
+**Adjusted associational:** “After adjustment for measured confounders, programme receipt remained associated with lower mortality.”
+
+**Causal:** “The programme reduced mortality.”
+
+The final sentence requires a design and assumptions capable of supporting a causal effect estimate.
+
+Words such as **impact, effect, attributable, prevented, caused, reduced** carry causal meaning and should be used intentionally.
+:::
+
+::: {.lipps-section}
+## LEARN 12 · Evidence can support action without proving everything
+
+The attached CDC course makes an important practical point: epidemiology may not prove a causal relationship with certainty, yet it can provide enough evidence for appropriate prevention and control.
+
+Public-health decisions often balance:
+
+- strength and coherence of evidence;
+- severity and urgency of the problem;
+- plausibility of benefit;
+- potential harms;
+- reversibility of the intervention;
+- cost and feasibility; and
+- consequences of waiting.
+
+The correct communication is not false certainty. It is a transparent statement of what is known, uncertain and reasonable to do next.
+:::
+
+::: {.lipps-section}
+## LEARN 13 · The LIPPS EVIDENCE framework
+
+::: {.lipps-callout}
+**LIPPS synthesis**
+**EVIDENCE** is a LIPPS-created appraisal mnemonic, not an acronym from the attached CDC source.
+:::
+
+Use it when reading a manuscript, programme report, dashboard or headline.
+
+**E — Exact question**  
+What population, exposure/intervention, outcome and time are actually being studied?
+
+**V — Valid design**  
+Does the design create a credible comparison for that question?
+
+**I — Information quality**  
+How well were exposure, outcome and covariates measured?
+
+**D — Denominators and data structure**  
+Are the correct populations, sampling design, clustering, follow-up and missing data handled?
+
+**E — Explanations competing**  
+What bias, confounding, reverse causation or alternative mechanism could explain the result?
+
+**N — Numerical meaning**  
+What are the absolute and relative effects, uncertainty intervals and practical magnitude?
+
+**C — Context**  
+Does the evidence apply to this population, health system and decision?
+
+**E — Expression**  
+Does the wording of the conclusion match what the evidence supports?
+
+The framework operationalises the LIPPS motto: **Evidence is never the whole story.**
+:::
+
+::: {.lipps-section}
+## LEARN 14 · A final interpretation workflow
+
+When presented with any epidemiological result:
+
+1. Restate the question.
+2. Identify the design.
+3. Identify the measure and its denominator.
+4. Inspect absolute and relative results.
+5. Read the confidence interval.
+6. Check temporal ordering.
+7. Examine selection and measurement.
+8. Identify plausible confounding.
+9. Ask what was adjusted for and why.
+10. Consider competing explanations.
+11. Judge applicability.
+12. Rewrite the conclusion in language the design earns.
+13. State what decision, if any, the evidence reasonably supports.
+
+If you can do this reliably, you are no longer merely calculating epidemiological statistics—you are **thinking epidemiologically**.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A fictional paper reports a cohort study of 8,000 adults comparing users and non-users of a new community health programme. Mortality over two years is 3.0% among programme users and 4.5% among non-users. The adjusted hazard ratio is 0.70 (95% CI 0.52–0.95; p=0.02). Programme participation was voluntary. Users were younger, wealthier and lived closer to facilities; adjustment included age and sex but not distance or wealth. Loss to follow-up was 4% among users and 14% among non-users.
+
+Apply **LIPPS EVIDENCE**:
+
+1. State the exact causal and associational questions separately.
+2. Identify what the cohort design contributes.
+3. Calculate the crude risk ratio and risk difference from the reported risks.
+4. Interpret the adjusted hazard ratio without equating it automatically to risk ratio.
+5. Explain what the confidence interval says about precision and compatibility.
+6. Identify major selection and confounding concerns.
+7. Explain why voluntary programme uptake matters.
+8. Explain why differential loss to follow-up matters.
+9. State what information is missing about measurement.
+10. Evaluate the claim: “Programme X reduced mortality by 30%.”
+11. Rewrite the conclusion more defensibly.
+12. State whether the findings could still support a pilot expansion and what additional evaluation you would request.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. What is the difference between an association question and a causal-effect question?
+2. Why should critical appraisal begin with study design rather than the p-value?
+3. Does temporality by itself establish causation?
+4. What does a wide 95% confidence interval primarily tell you about precision?
+5. Why can p < 0.05 coexist with serious bias?
+6. What is the difference between internal validity and applicability to another population?
+7. Which words in a conclusion usually carry stronger causal meaning?
+8. Apply the first and last letters of LIPPS EVIDENCE to a claim: what exact question is being asked, and does the expression match the evidence?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 12 mastery quiz
+
+**Pilot Mastery Quiz:** 20 objective questions sampled from a Week 12 bank of 65 items.
+
+**Initial time limit:** 15 minutes.  
+**Blueprint:** claim classification, design-based interpretation, bias/confounding, confidence intervals, p-value misconceptions, absolute versus relative effects, causal language and EVIDENCE-framework scenarios.  
+**Capstone emphasis:** students must choose the **most defensible interpretation**, not merely identify a formula.
+
+::: {.lipps-callout}
+**Assessment principle**  
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.
+:::
+:::
+
+::: {.lipps-section}
+## Source foundation and LIPPS extensions
+
+**Primary source foundation:** the attached CDC course's repeated emphasis on population comparison, systematic and unbiased methods, the distinction between observational and experimental studies, cautious causal inference, p-values, confidence intervals and applying epidemiological evidence to public-health action.
+
+**LIPPS extensions:** estimands, internal/external validity terminology, the structured causal-language ladder and the **LIPPS EVIDENCE** appraisal framework are clearly identified as original instructional extensions rather than content from the source.
+
+**Reference:** Centers for Disease Control and Prevention. *Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics*. October 2006; updated May 2012.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 11](week-11.qmd)
+
+[Return to Epidemiology course →](../epidemiology.qmd)
+:::

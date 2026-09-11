@@ -1,0 +1,172 @@
+---
+title: ""
+pagetitle: "Week 7 — Communication Channels and Media Strategy | LIPPS"
+description: "Select and combine communication channels and messengers according to audience access, trust, objective, reach, frequency, interactivity, cost and decision timing."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 07
+:::
+
+# Communication Channels and Media Strategy
+
+## The best channel is not the newest channel. It is the channel that reaches the right people, at the right moment, with enough credibility and opportunity for action.
+
+<span class="lipps-chip">Channels</span> <span class="lipps-chip">Media mix</span> <span class="lipps-chip">Reach</span> <span class="lipps-chip">Messengers</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Select and combine communication channels and messengers according to audience access, trust, objective, reach, frequency, interactivity, cost and decision timing.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. distinguish interpersonal, community, mass-media and digital channels;
+2. choose channels according to communication objective rather than fashion;
+3. explain reach, frequency, exposure and engagement;
+4. assess channel credibility, accessibility and cost;
+5. distinguish owned, earned, paid and shared media;
+6. design an integrated channel mix;
+7. select and prepare credible messengers and spokespersons;
+8. recognise channel-specific risks including exclusion and message distortion;
+9. develop a basic media plan and monitoring framework.
+:::
+
+::: {.lipps-section}
+## ORIENT · “Put it on social media” is not a strategy
+
+A programme wants to increase childhood immunisation in remote communities. The communications team proposes TikTok because it is “where everyone is.” Data show that many caregivers use basic phones, local radio has high reach, village health teams are trusted, and missed vaccination is strongly associated with clinic distance and uncertainty about outreach dates.
+
+Channel choice should follow audience and objective evidence—not team preference.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Channels perform different communication jobs
+
+Interpersonal channels are strong for dialogue and personalised questions. Community channels can support norms, local problem solving and trust. Mass media provide broad reach. Digital channels can offer speed, targeting and interaction. Print can provide durable reference information. No channel dominates every objective.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Choose channels against explicit criteria
+
+Consider **reach, frequency, credibility, accessibility, cost, speed, interactivity, privacy, message complexity, language and proximity to the decision point**. A long counselling conversation can explain complex trade-offs; a roadside billboard cannot.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Reach is not frequency and neither is impact
+
+**Reach** is the number or proportion exposed. **Frequency** is how often they are exposed. **Engagement** indicates some interaction. None of these alone proves comprehension, behaviour change or health impact.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Owned, earned, paid and shared media
+
+**Owned** channels are controlled by the organisation, such as a website or SMS list. **Earned** media is attention obtained through journalism or public interest. **Paid** media purchases placement. **Shared** media circulates through social networks and communities. Each has different control, credibility and cost.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Integrated communication creates reinforcement
+
+A radio announcement can create awareness, an SMS can provide date and location, a community health worker can answer questions, and a facility sign can confirm the service point. Integration should reduce contradiction and make the pathway to action easier.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Messengers are strategic choices
+
+A messenger should have credibility with the intended audience, understand the content and be able to communicate respectfully. The most senior official is not automatically the most trusted messenger. Health workers, peers, religious leaders, teachers, survivors or local experts may be more appropriate for particular objectives.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Media relations require preparation
+
+Spokespersons should know key messages, likely questions, uncertainty boundaries and what cannot yet be answered. Bridges back to core points should not become evasive. Correct errors quickly and maintain consistency across spokespeople.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Channel choice can create inequity
+
+Digital-only strategies can exclude people without smartphones, data, literacy or privacy. Public loudspeakers can expose sensitive information. Printed materials may fail for visually impaired audiences. Every channel plan should include an exclusion analysis.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Timing is part of channel strategy
+
+A reminder after the clinic has closed is useless. Communication should reach people before and during the decision window. Frequency should be sufficient for recall without creating fatigue.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Monitor delivery and decision outcomes
+
+Track whether content was delivered, who was reached, who understood, whether intended actions became easier and whether some groups were missed. Channel metrics are implementation evidence, not substitutes for programme outcomes.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A district wants to increase uptake of scheduled hypertension screening days among adults over 40. Urban residents commonly use WhatsApp and radio; rural residents rely more on radio, churches, markets and village health teams. Screening is offered monthly at fixed sites. Men are less likely to attend during working hours.
+
+1. State the communication objective.
+2. Compare at least five potential channels using reach, trust, timing, interactivity and cost.
+3. Design an integrated urban and rural media mix.
+4. Choose appropriate messengers.
+5. Explain how the strategy changes if confidentiality becomes a concern.
+6. Identify one channel that looks attractive but is poorly matched to the objective.
+7. Specify reach, frequency and action indicators.
+8. Identify one service change that should accompany communication.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why can the channel with the largest audience still be the wrong choice?
+2. What is the difference between reach and frequency?
+3. Give one example of earned media.
+4. Why might a peer messenger outperform a senior official?
+5. What is one equity risk of a digital-only strategy?
+6. Why should media metrics not be reported as behaviour-change outcomes?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 7 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 7 bank of 48 items.
+
+**Initial time limit:** 10 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **WHO Strategic Communications Framework.** Audience, channel and communication-quality principles.
+- **NCI Making Health Communication Programs Work.** Channel selection and integrated communication planning.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 6](week-06.qmd)
+
+[Week 8 →](week-08.qmd)
+:::

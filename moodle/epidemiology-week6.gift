@@ -1,0 +1,396 @@
+$CATEGORY: LIPPS/Epidemiology/Week 06/Design recognition
+
+::EPI-W6-001::Investigators enrol people with a disease and people without it, then compare previous exposure. What design is this? {
+=Case-control study#Correct.
+~Cohort study#Review case-control sampling logic.
+~Cross-sectional study#Review case-control sampling logic.
+~Randomised trial#Review case-control sampling logic.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 06/Cases and controls
+
+::EPI-W6-002::What should controls primarily represent? {
+=The exposure distribution in the population that gave rise to the cases#Correct.
+~People who are maximally different from cases#Review case-control sampling logic.
+~Only healthy volunteers from anywhere#Review case-control sampling logic.
+~A group with the same disease#Review case-control sampling logic.
+}
+
+::EPI-W6-003::For case-control scenario 1, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+::EPI-W6-004::For case-control scenario 2, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+::EPI-W6-005::For case-control scenario 3, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+::EPI-W6-006::For case-control scenario 4, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+::EPI-W6-007::For case-control scenario 5, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+::EPI-W6-008::For case-control scenario 6, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+::EPI-W6-009::For case-control scenario 7, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+::EPI-W6-010::For case-control scenario 8, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+::EPI-W6-011::For case-control scenario 9, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+::EPI-W6-012::For case-control scenario 10, which control principle is most important? {
+=Controls should come from the same source population as cases#Correct.
+~Controls should be selected because they have low exposure#Control selection should estimate expected exposure in the source population.
+~Controls should always be friends of cases#Control selection should estimate expected exposure in the source population.
+~Controls should outnumber cases by at least ten to one#Control selection should estimate expected exposure in the source population.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 06/Source population
+
+::EPI-W6-013::A useful control-selection question is: {
+=Would this person have had a reasonable chance to be identified as a case if they developed the outcome?#Correct.
+~Does this person have exactly the same age as every case?#Review case-control sampling logic.
+~Can this person remember every exposure?#Review case-control sampling logic.
+~Does this person live furthest from the cases?#Review case-control sampling logic.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 06/Odds ratio
+
+::EPI-W6-014::In a case-control table, exposed cases\=10, unexposed cases\=8, exposed controls\=20, unexposed controls\=30. What is the odds ratio ad/bc? {
+=1.88#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~1.58#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.13#Use the cross-product formula ad/bc.
+~1.39#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-015::In a case-control table, exposed cases\=12, unexposed cases\=9, exposed controls\=21, unexposed controls\=32. What is the odds ratio ad/bc? {
+=2.03#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~1.66#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.16#Use the cross-product formula ad/bc.
+~1.44#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-016::In a case-control table, exposed cases\=14, unexposed cases\=10, exposed controls\=22, unexposed controls\=34. What is the odds ratio ad/bc? {
+=2.16#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~1.71#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.19#Use the cross-product formula ad/bc.
+~1.48#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-017::In a case-control table, exposed cases\=16, unexposed cases\=11, exposed controls\=23, unexposed controls\=36. What is the odds ratio ad/bc? {
+=2.28#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~1.75#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.21#Use the cross-product formula ad/bc.
+~1.52#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-018::In a case-control table, exposed cases\=18, unexposed cases\=12, exposed controls\=24, unexposed controls\=38. What is the odds ratio ad/bc? {
+=2.38#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~1.79#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.24#Use the cross-product formula ad/bc.
+~1.55#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-019::In a case-control table, exposed cases\=20, unexposed cases\=13, exposed controls\=25, unexposed controls\=40. What is the odds ratio ad/bc? {
+=2.46#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~1.81#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.26#Use the cross-product formula ad/bc.
+~1.58#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-020::In a case-control table, exposed cases\=22, unexposed cases\=14, exposed controls\=26, unexposed controls\=42. What is the odds ratio ad/bc? {
+=2.54#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~1.83#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.28#Use the cross-product formula ad/bc.
+~1.60#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-021::In a case-control table, exposed cases\=24, unexposed cases\=8, exposed controls\=27, unexposed controls\=44. What is the odds ratio ad/bc? {
+=4.89#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~3.06#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.16#Use the cross-product formula ad/bc.
+~1.97#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-022::In a case-control table, exposed cases\=26, unexposed cases\=9, exposed controls\=28, unexposed controls\=46. What is the odds ratio ad/bc? {
+=4.75#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~2.94#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.18#Use the cross-product formula ad/bc.
+~1.96#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-023::In a case-control table, exposed cases\=28, unexposed cases\=10, exposed controls\=29, unexposed controls\=48. What is the odds ratio ad/bc? {
+=4.63#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~2.85#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.20#Use the cross-product formula ad/bc.
+~1.96#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-024::In a case-control table, exposed cases\=30, unexposed cases\=11, exposed controls\=30, unexposed controls\=50. What is the odds ratio ad/bc? {
+=4.55#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~2.77#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.22#Use the cross-product formula ad/bc.
+~1.95#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-025::In a case-control table, exposed cases\=32, unexposed cases\=12, exposed controls\=31, unexposed controls\=52. What is the odds ratio ad/bc? {
+=4.47#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~2.71#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.24#Use the cross-product formula ad/bc.
+~1.95#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-026::In a case-control table, exposed cases\=34, unexposed cases\=13, exposed controls\=32, unexposed controls\=54. What is the odds ratio ad/bc? {
+=4.41#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~2.66#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.26#Use the cross-product formula ad/bc.
+~1.94#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-027::In a case-control table, exposed cases\=36, unexposed cases\=14, exposed controls\=33, unexposed controls\=56. What is the odds ratio ad/bc? {
+=4.36#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~2.61#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.27#Use the cross-product formula ad/bc.
+~1.94#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-028::In a case-control table, exposed cases\=38, unexposed cases\=8, exposed controls\=34, unexposed controls\=58. What is the odds ratio ad/bc? {
+=8.10#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~4.35#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.15#Use the cross-product formula ad/bc.
+~2.24#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-029::In a case-control table, exposed cases\=40, unexposed cases\=9, exposed controls\=35, unexposed controls\=60. What is the odds ratio ad/bc? {
+=7.62#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~4.09#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.17#Use the cross-product formula ad/bc.
+~2.22#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-030::In a case-control table, exposed cases\=42, unexposed cases\=10, exposed controls\=36, unexposed controls\=62. What is the odds ratio ad/bc? {
+=7.23#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~3.88#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.19#Use the cross-product formula ad/bc.
+~2.20#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-031::In a case-control table, exposed cases\=44, unexposed cases\=11, exposed controls\=37, unexposed controls\=64. What is the odds ratio ad/bc? {
+=6.92#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~3.70#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.20#Use the cross-product formula ad/bc.
+~2.18#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-032::In a case-control table, exposed cases\=46, unexposed cases\=12, exposed controls\=38, unexposed controls\=66. What is the odds ratio ad/bc? {
+=6.66#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~3.56#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.22#Use the cross-product formula ad/bc.
+~2.17#Use the cross-product formula ad/bc.
+}
+
+::EPI-W6-033::In a case-control table, exposed cases\=48, unexposed cases\=13, exposed controls\=39, unexposed controls\=68. What is the odds ratio ad/bc? {
+=6.44#Correct. OR equals exposed cases × unexposed controls divided by unexposed cases × exposed controls.
+~3.44#This treats sampled case/control totals like risks; standard case-control sampling does not support a directly estimated risk ratio.
+~0.24#Use the cross-product formula ad/bc.
+~2.16#Use the cross-product formula ad/bc.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 06/Bias
+
+::EPI-W6-034::Why can hospital controls create bias? {
+=Their reason for hospital attendance may be related to the exposure#Correct.
+~Hospital controls always have the outcome#Review case-control sampling logic.
+~They prevent calculation of any odds ratio#Review case-control sampling logic.
+~They make sample size infinite#Review case-control sampling logic.
+}
+
+::EPI-W6-035::Cases remember a past food exposure more carefully than controls. What is the main concern? {
+=Recall bias#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+::EPI-W6-036::Interviewers probe cases more intensely because they know the hypothesis. What is the main concern? {
+=Interviewer information bias#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+::EPI-W6-037::Controls are selected from a clinic whose patients commonly have the exposure. What is the main concern? {
+=Selection bias#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+::EPI-W6-038::Cases are defined partly by having the suspected exposure. What is the main concern? {
+=Information/design bias from non-independent case definition#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+::EPI-W6-039::Exposure records are missing more often for controls than cases. What is the main concern? {
+=Differential information bias#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+::EPI-W6-040::In an outbreak investigation, cases remember a past food exposure more carefully than controls. What is the main concern? {
+=Recall bias#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+::EPI-W6-041::In a rare-cancer study, interviewers probe cases more intensely because they know the hypothesis. What is the main concern? {
+=Interviewer information bias#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+::EPI-W6-042::In a hospital case-control study, controls are selected from a clinic whose patients commonly have the exposure. What is the main concern? {
+=Selection bias#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+::EPI-W6-043::In an occupational study, cases are defined partly by having the suspected exposure. What is the main concern? {
+=Information/design bias from non-independent case definition#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+::EPI-W6-044::In a foodborne-disease study, exposure records are missing more often for controls than cases. What is the main concern? {
+=Differential information bias#Correct.
+~Random error only#Identify whether selection or measurement differs systematically by group.
+~Effect modification#Identify whether selection or measurement differs systematically by group.
+~No epidemiological concern#Identify whether selection or measurement differs systematically by group.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 06/Interpretation
+
+::EPI-W6-045::Why can risk generally not be estimated directly from a standard case-control sample? {
+=The investigator selects the numbers of cases and controls#Correct.
+~Cases never have exposures#Review case-control sampling logic.
+~Controls are followed prospectively#Review case-control sampling logic.
+~Odds cannot be calculated#Review case-control sampling logic.
+}
+
+::EPI-W6-046::An odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}
+
+::EPI-W6-047::In a medication-safety study, an odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}
+
+::EPI-W6-048::In an environmental exposure study, an odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}
+
+::EPI-W6-049::In an infectious-disease study, an odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}
+
+::EPI-W6-050::In a maternal-health study, an odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}
+
+::EPI-W6-051::In a genetic epidemiology study, an odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}
+
+::EPI-W6-052::In a community case-control study, an odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}
+
+::EPI-W6-053::In a vaccine-safety study, an odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}
+
+::EPI-W6-054::In an outbreak investigation, an odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}
+
+::EPI-W6-055::In a rare-cancer study, an odds ratio is 4.0 in a case-control study of a rare disease. Which wording is safest? {
+=Cases had four times the odds of prior exposure compared with controls#Correct.
+~Exposed people had exactly four times the risk of disease#Use odds language and avoid causal overstatement.
+~Exposure caused four times more disease#Use odds language and avoid causal overstatement.
+~Disease prevalence was 400% higher#Use odds language and avoid causal overstatement.
+}

@@ -1,0 +1,49 @@
+---
+title: "Methods"
+description: "The LIPPS public-health research methods library."
+---
+
+# Methods
+
+Methods is organised around **research decisions**. Start with the problem you are trying to solve, then move to the design, sampling, measurement, analytical strategy and interpretation appropriate to the evidence.
+
+::: {.lipps-method-map}
+[Study Design](study-design.qmd)
+[Sampling](sampling.qmd)
+[Survey Methodology](survey-analysis.qmd)
+[Survey Analysis](survey-analysis.qmd)
+[Measurement](measurement.qmd)
+[Statistical Analysis](analysis-strategies.qmd)
+[Diagnostic Studies](diagnostic-studies.qmd)
+[Bias & Causal Reasoning](bias-causality.qmd)
+[Data Quality](data-quality.qmd)
+[Qualitative & Mixed Methods](qualitative-mixed.qmd)
+[Visualisation](visualisation.qmd)
+[Interpretation & Reporting](interpretation-reporting.qmd)
+:::
+
+## Signature structure
+
+Each major article answers:
+
+**The problem → When the method is used → What question it answers → Assumptions → Analytical approach → Worked example → Common errors → What could fool us? → Interpretation → Related methods → Project application**
+
+## Featured methodological pathways
+
+### Survey analysis strategies
+
+- Cross-sectional population surveys
+- Cluster surveys
+- Stratified surveys
+- Multistage household surveys
+- DHS-style surveys
+- Health-facility assessments
+- Coverage surveys
+- KAP surveys
+- Humanitarian assessments
+- Repeated cross-sectional surveys
+- Panel/longitudinal surveys
+- Online surveys
+- Hard-to-reach population surveys
+
+[Explore survey analysis →](survey-analysis.qmd)

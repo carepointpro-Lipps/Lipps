@@ -1,0 +1,292 @@
+---
+title: ""
+pagetitle: "Week 7 — Cohort Studies | LIPPS"
+description: "Use cohort designs to estimate incidence and compare outcome occurrence between exposure groups while accounting for follow-up, person-time and loss to observation."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 07
+:::
+
+# Cohort Studies
+
+## Start with exposure, preserve the timeline, and watch what happens next.
+
+<span class="lipps-chip">Intermediate</span> <span class="lipps-chip">Cohort</span> <span class="lipps-chip">Incidence</span> <span class="lipps-chip">Follow-up</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Use cohort designs to estimate incidence and compare outcome occurrence between exposure groups while accounting for follow-up, person-time and loss to observation.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 7, you should be able to:
+
+1. recognise a cohort study from exposure-based grouping and subsequent outcome ascertainment;
+2. distinguish prospective and retrospective cohort studies;
+3. explain why cohort studies can estimate incidence directly;
+4. calculate and interpret risk ratios and risk differences in cohort data;
+5. explain when person-time incidence rates are needed;
+6. describe censoring and unequal follow-up conceptually;
+7. recognise how loss to follow-up can reduce precision or introduce selection bias;
+8. choose an appropriate unexposed or comparison cohort;
+9. distinguish fixed from changing exposures conceptually;
+10. identify major strengths and limitations of cohort designs.
+:::
+
+::: {.lipps-section}
+## ORIENT · Exposure comes first
+
+A cohort study starts with a group defined by exposure or another baseline characteristic and asks what happens afterwards.
+
+Imagine 2,000 health workers without active tuberculosis at baseline. Half work in high-exposure clinical areas and half in lower-exposure settings. They are followed for two years and new tuberculosis diagnoses are recorded.
+
+Because outcome-free people are observed over time, the design can estimate **incidence**, not merely prevalence.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · The core structure
+
+The attached CDC text describes cohort studies as observational designs in which participants are grouped by exposure and then followed to document disease occurrence.
+
+Conceptually:
+
+**Exposed → outcome / no outcome**  
+**Unexposed → outcome / no outcome**
+
+The comparison group estimates what disease occurrence might have looked like without the exposure pattern of primary interest.
+
+Unlike an experiment, the investigator does not assign exposure; the exposure occurs under natural or existing conditions.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Prospective and retrospective cohorts
+
+In a **prospective cohort**, participants are enrolled before the outcome occurs and are followed forward.
+
+In a **retrospective cohort**, both exposure and outcome may already have occurred when the study begins, but the logical sequence remains exposure → outcome. Existing records reconstruct the cohort and follow-up.
+
+The attached CDC material emphasises this important point: retrospective does not mean case-control. A retrospective cohort still groups people by exposure and compares subsequent disease occurrence.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Cohorts estimate incidence directly
+
+If all participants are outcome-free at baseline and follow-up is defined, you can calculate risk:
+
+$$
+Risk_E = \frac{\text{new cases among exposed}}{\text{exposed population at risk at baseline}}
+$$
+
+and similarly for the unexposed group.
+
+You can then calculate:
+
+$$
+RR = Risk_E / Risk_U
+$$
+
+and:
+
+$$
+RD = Risk_E - Risk_U
+$$
+
+These have direct interpretations because the denominators arise from actual populations at risk rather than investigator-selected numbers of cases and controls.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · A worked risk comparison
+
+Suppose 80 of 800 exposed workers develop a condition, compared with 20 of 1,000 unexposed workers.
+
+$$
+Risk_E = 80/800 = 10\%
+$$
+
+$$
+Risk_U = 20/1000 = 2\%
+$$
+
+$$
+RR = 10\%/2\% = 5.0
+$$
+
+$$
+RD = 10\%-2\% = 8\text{ percentage points}
+$$
+
+A careful interpretation is:
+
+> During the specified follow-up, exposed workers had five times the risk and eight additional cases per 100 workers compared with the unexposed group.
+
+Whether that difference is causal depends on confounding, bias, measurement and the wider design.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Person-time when follow-up differs
+
+Participants do not always contribute equal follow-up. Some enter late, migrate, die, withdraw or develop the outcome early.
+
+Person-time accumulates the time each person remains under observation and at risk.
+
+$$
+Incidence\ rate = \frac{new\ cases}{total\ person-time\ at\ risk}
+$$
+
+The attached CDC text explains that person-time is useful precisely because it can accommodate different observation periods.
+
+A rate ratio then compares person-time incidence rates between groups.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Censoring is not the same as failure
+
+A participant who leaves follow-up without developing the outcome does not necessarily become a case or a non-case for the whole intended period. Their observed disease-free time can still contribute information.
+
+This is the idea behind **censoring**.
+
+::: {.lipps-callout}
+**LIPPS extension**  
+Formal survival-analysis methods are beyond this introductory week, but learners should understand that incomplete follow-up is handled through time-to-event methods rather than by pretending everyone was observed equally.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Loss to follow-up can create bias
+
+Loss to follow-up first reduces information, but it becomes a threat to validity when loss is related to both exposure and outcome risk.
+
+Example: if highly exposed workers who develop early symptoms are more likely to leave employment and disappear from records, the observed exposed cohort may look healthier than the true cohort.
+
+Ask:
+
+- How much follow-up is missing?
+- Why did participants leave?
+- Does loss differ by exposure group?
+- Is outcome risk plausibly related to the reason for loss?
+
+The percentage lost is important, but the **mechanism of loss** matters more.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Comparison cohort quality
+
+An unexposed cohort should represent a credible baseline for the exposed group.
+
+If exposed workers differ from unexposed workers in age, socioeconomic status, access to care or baseline disease risk, crude outcome differences may reflect those factors rather than exposure.
+
+Restriction, matching, stratification and regression can sometimes address measured differences, but design-stage comparability remains fundamental.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Time-varying exposure
+
+::: {.lipps-callout}
+**LIPPS extension**
+Many real exposures change during follow-up. A participant may start medication, change occupation, stop smoking or move between exposure categories.
+:::
+
+Treating a changing exposure as if it remained fixed can misclassify person-time and obscure temporal relationships.
+
+At introductory level, the key question is simple:
+
+> **Does the exposure value at baseline still represent the participant's exposure throughout the period being analysed?**
+
+If not, a more advanced longitudinal analysis may be needed.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Strengths and limitations
+
+**Strengths**
+
+- preserves temporal ordering more clearly than a typical cross-sectional design;
+- directly measures incidence;
+- can evaluate multiple outcomes from one exposure;
+- useful for rare exposures;
+- allows study of natural history and change over time.
+
+**Limitations**
+
+- inefficient for very rare outcomes unless the cohort is huge;
+- prospective studies can be slow and expensive;
+- loss to follow-up can threaten validity;
+- exposure may change;
+- observational cohorts remain vulnerable to confounding.
+
+A long follow-up does not automatically mean a strong study. The quality of measurement and comparison remains decisive.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A fictional cohort enrols 3,000 adults free of diabetes. At baseline, 1,000 have a high-risk occupational exposure and 2,000 do not. Over five years, 100 exposed and 80 unexposed participants develop diabetes. Follow-up time totals 4,200 person-years in the exposed group and 8,800 person-years in the unexposed group.
+
+1. Calculate cumulative risk in each group.
+2. Calculate the risk ratio and risk difference.
+3. Calculate incidence rates per 1,000 person-years.
+4. Calculate the rate ratio.
+5. Explain why risk ratio and rate ratio answer related but not identical questions.
+6. Suppose 20% of exposed participants with early symptoms leave employment and cannot be traced. Explain the potential direction of bias.
+7. Identify at least three baseline variables that could confound the association.
+8. Explain whether this observational cohort can establish causation merely because exposure was measured before disease.
+9. If exposure status changed for many participants, state what additional information should have been collected.
+10. Write a defensible conclusion.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. What feature distinguishes a retrospective cohort from a case-control study?
+2. Why can a cohort estimate incidence directly?
+3. When would person-time be preferable to a single baseline denominator?
+4. How can loss to follow-up introduce bias rather than simply imprecision?
+5. If risk is 10% versus 2%, calculate RR and RD.
+6. Why does prospective follow-up improve temporality without eliminating confounding?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 7 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions drawn from a Week 7 bank of 55 items.
+
+**Initial time limit:** 12 minutes because several items use risk and person-time calculations.  
+**Question style:** cohort recognition, prospective/retrospective distinctions, incidence, RR/RD/rate ratios, follow-up and loss-to-follow-up scenarios.
+
+::: {.lipps-callout}
+**Assessment principle**  
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.
+:::
+:::
+
+::: {.lipps-section}
+## Source foundation and LIPPS extensions
+
+**Primary source foundation:** the attached CDC text's cohort definitions, prospective and retrospective cohort examples, incidence comparison and person-time concepts.
+
+**LIPPS extensions:** censoring, time-varying exposure and a more explicit loss-to-follow-up causal framework are included as introductory bridges to survival and longitudinal analysis.
+
+**Reference:** Centers for Disease Control and Prevention. *Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics*. October 2006; updated May 2012.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 6](week-06.qmd)
+
+[Week 8: Experimental and Quasi-Experimental Designs →](week-08.qmd)
+:::

@@ -1,0 +1,69 @@
+---
+title: "University Pilot Assessment Blueprints"
+description: "Proposed LIPPS assessment portfolios for Epidemiology and Health Communication pilots."
+---
+
+# University Pilot Assessment Blueprints
+
+LIPPS uses objective quizzes for efficient weekly retrieval and application checks, but a university course should assess more than recognition under time pressure. These pilot blueprints combine quizzes with authentic public-health work.
+
+## Epidemiology
+
+| Component | Proposed weight | What it assesses |
+|---|---:|---|
+| Weekly mastery quizzes | 15% | Core concepts, calculation, interpretation and rapid design recognition |
+| Applied measurement exercises | 20% | Frequency, association, descriptive epidemiology and diagnostic-test reasoning |
+| Study-design critique | 20% | Design identification, selection, information bias, confounding and causal restraint |
+| Field/outbreak analysis | 20% | Line-list reasoning, person-place-time analysis, hypothesis generation and investigation planning |
+| Final critical-appraisal memo | 25% | Integrated interpretation of effect, precision, validity, applicability and claim strength |
+
+### Recommended capstone
+
+Give the learner a short report, table set or manuscript extract. Require a concise memo that answers:
+
+1. What is the epidemiological question?
+2. What design was used, and what comparison creates the estimate?
+3. What measure of frequency/effect is most informative?
+4. What could selection, measurement, confounding or missingness be doing?
+5. What does the confidence interval say about magnitude and precision?
+6. What conclusion is supported?
+7. What conclusion is **not** supported?
+8. What action or next study would be justified?
+
+## Health Communication
+
+| Component | Proposed weight | What it assesses |
+|---|---:|---|
+| Weekly mastery quizzes | 15% | Core concepts and rapid application |
+| Audience + behaviour diagnosis brief | 20% | Audience insight, determinants, theory selection and communication/non-communication diagnosis |
+| Message design + pre-test | 20% | Message hierarchy, actionability, plain language, pre-testing and revision |
+| Risk-communication simulation | 15% | Speed, uncertainty, credibility, empathy, protective action and update logic |
+| Campaign capstone | 30% | Integrated strategy, channels, engagement, implementation, evaluation, ethics and equity |
+
+### Recommended capstone
+
+Using **LIPPS SIGNAL**, students develop a communication strategy for a defined public-health problem:
+
+- **S — Situation:** define the health and communication problem;
+- **I — Intended audience and insight:** identify decision-makers, supporters, constraints and evidence;
+- **G — Goal:** state measurable communication objectives;
+- **N — Narrative and needed action:** develop the message hierarchy and priority action;
+- **A — Access:** select messengers, channels, formats and service pathways;
+- **L — Listen and learn:** design feedback, monitoring, evaluation and adaptation.
+
+The submission should also include a short ethics/equity review and one revised communication product based on documented pre-test feedback.
+
+## How to use the current question banks
+
+The current banks should be divided into three pools:
+
+**Practice pool** — definitions, terminology and repeated calculations. Immediate explanatory feedback is appropriate.
+
+**Mastery pool** — novel scenarios, data displays, short decisions and interpretation questions. These are suitable for weekly timed quizzes.
+
+**Institutional assessment pool** — separately reviewed items that are not routinely exposed in practice, mapped to a formal blueprint and analysed after use.
+
+::: {.lipps-callout}
+**Quality before quantity**  
+A bank of 30 genuinely different reasoning questions is more valuable than 60 paraphrases of the same definition.
+:::

@@ -1,0 +1,148 @@
+---
+title: ""
+pagetitle: "Learn | LIPPS"
+description: "Structured 12-week LIPPS courses in Epidemiology and Health Communication."
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN
+:::
+
+# Learn the discipline. Practise the reasoning.
+
+LIPPS Learn delivers structured public-health courses that move from explanation to application to assessment. The goal is not to memorise terminology, but to recognise a problem, choose a defensible approach and interpret evidence correctly.
+
+::: {.lipps-actions}
+[Explore Epidemiology](epidemiology.qmd){.lipps-btn .primary}
+[Explore Health Communication](health-communication.qmd){.lipps-btn .secondary}
+:::
+:::
+
+::: {.lipps-section}
+## Flagship courses
+
+::: {.lipps-grid .two}
+::: {.lipps-card .lipps-course-card}
+<span class="lipps-chip">12 weeks</span> <span class="lipps-chip">Weekly quiz</span> <span class="lipps-chip">Applied cases</span>
+
+### Epidemiology
+
+Learn how epidemiologists define health problems, measure disease, compare groups, choose study designs, recognise bias, evaluate screening tests, investigate outbreaks and judge causal claims.
+
+**Best suited to:** public-health, medicine, nursing, allied-health and postgraduate learners.
+
+[View the 12-week course →](epidemiology.qmd)
+:::
+
+::: {.lipps-card .lipps-course-card}
+<span class="lipps-chip">12 weeks</span> <span class="lipps-chip">Weekly quiz</span> <span class="lipps-chip">Applied cases</span>
+
+### Health Communication
+
+Learn how people receive, interpret and act on health information—from interpersonal communication and audience analysis to campaign design, digital media, misinformation and risk communication.
+
+**Best suited to:** public-health, health-promotion, clinical and communication learners.
+
+[View the 12-week course →](health-communication.qmd)
+:::
+:::
+:::
+
+::: {.lipps-section}
+## The LIPPS weekly learning cycle
+
+Every week uses the same structure so students know exactly how to study.
+
+::: {.lipps-learning-cycle}
+::: {.lipps-step}
+**01 — ORIENT**  
+Learning outcomes, key question and why the topic matters.
+:::
+
+::: {.lipps-step}
+**02 — LEARN**  
+Narrative teaching with diagrams, examples and core concepts.
+:::
+
+::: {.lipps-step}
+**03 — APPLY**  
+A realistic public-health case, worked example or decision problem.
+:::
+
+::: {.lipps-step}
+**04 — PRACTISE**  
+Objective questions with immediate explanatory feedback.
+:::
+
+::: {.lipps-step}
+**05 — DEMONSTRATE**  
+A timed weekly quiz that tests recognition, application and interpretation.
+:::
+:::
+:::
+
+::: {.lipps-section}
+## Assessment that rewards preparation
+
+LIPPS uses objective questions for weekly checks, but the **mastery target is application rather than recall**. The current v1 pilot banks contain a mixture of strong applied items, repeated calculation variants and foundation-level concept checks. Before high-stakes institutional use, the mastery pools must be separated from practice items and reviewed against a formal blueprint.
+
+::: {.lipps-grid .three}
+::: {.lipps-card}
+### Scenario first
+Instead of asking for a definition, questions present a short public-health situation and ask the learner to identify the best interpretation, design, measure or action.
+:::
+
+::: {.lipps-card}
+### Time-disciplined
+Weekly mastery quizzes use a short, transparent time limit that gives a prepared learner enough time to read, reason and answer without rewarding extensive external searching.
+:::
+
+::: {.lipps-card}
+### Randomised
+Questions are sampled from larger topic banks, options can be shuffled, and calculation questions can use parameterised values so learners do not all receive identical tests.
+:::
+:::
+
+::: {.lipps-callout}
+**Accessible by design**  
+Copy and paste remain available. LIPPS does not depend on disabling normal browser functions to protect an assessment. Institutions can provide approved extra-time accommodations while retaining the same question blueprint.
+:::
+
+[Read the LIPPS assessment model →](assessment-model.qmd)  
+[See the university pilot assessment blueprints →](pilot-assessment-blueprints.qmd)
+:::
+
+::: {.lipps-section}
+## Public syllabus. Private learning record.
+
+The public LIPPS website explains each course and keeps the syllabus discoverable. **LIPPS Learn**, powered by Moodle, handles enrolment, lessons, quizzes, grades and progress.
+
+::: {.lipps-path}
+LIPPS website → Choose a course → LIPPS Learn (Moodle) → Study → Practise → Timed quiz → Progress
+:::
+
+This separation keeps LIPPS open and discoverable while giving enrolled learners and universities a proper learning-management environment.
+:::
+
+::: {.lipps-section}
+## For universities
+
+LIPPS courses are designed so they can be used as **supplementary digital courseware** rather than replacing the lecturer or the institution's curriculum.
+
+A university-facing implementation can provide:
+
+- a 12-week structured course;
+- weekly objective quizzes and reusable question banks;
+- instructor access to grades and completion;
+- cohort-level performance reporting;
+- institution-defined assessment timing and accommodations;
+- links from course lessons into the public LIPPS Methods library and Projects;
+- Moodle/LMS integration options as the institutional product develops.
+
+[Talk to LIPPS Studio about institutional use →](../studio.qmd){.lipps-btn .secondary}
+:::

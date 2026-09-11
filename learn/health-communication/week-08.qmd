@@ -1,0 +1,173 @@
+---
+title: ""
+pagetitle: "Week 8 — Digital Health and Social Media Communication | LIPPS"
+description: "Design and evaluate digital health communication while accounting for platform dynamics, privacy, accessibility, digital exclusion and the difference between engagement metrics and health outcomes."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 08
+:::
+
+# Digital Health and Social Media Communication
+
+## Digital communication is fast, measurable and scalable—but its metrics can be seductive and its exclusions easy to ignore.
+
+<span class="lipps-chip">Social media</span> <span class="lipps-chip">Digital metrics</span> <span class="lipps-chip">Privacy</span> <span class="lipps-chip">Low bandwidth</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Design and evaluate digital health communication while accounting for platform dynamics, privacy, accessibility, digital exclusion and the difference between engagement metrics and health outcomes.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. describe strengths and limitations of major digital communication formats;
+2. select digital platforms according to audience behaviour and objective;
+3. distinguish impressions, reach, engagement, click-through and conversion;
+4. explain algorithmic amplification and attention dynamics;
+5. design social-listening and moderation approaches;
+6. identify privacy, consent and confidentiality risks;
+7. apply mobile-first and low-bandwidth design principles;
+8. recognise digital exclusion and inequity;
+9. use digital analytics without overstating impact;
+10. identify appropriate roles and risks of automated and AI-assisted communication.
+:::
+
+::: {.lipps-section}
+## ORIENT · The campaign had two million impressions. Did it work?
+
+A social-media campaign reports two million impressions, 60,000 likes and 12,000 shares. The objective was to increase uptake of adolescent HIV self-testing. The campaign does not track whether the intended age group saw the content, whether viewers understood where to obtain tests, or whether testing increased.
+
+Digital platforms make some things easy to count. Easy-to-count metrics are not automatically the outcomes that matter.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Digital channels change speed, scale and interaction
+
+Websites, SMS, messaging apps, social platforms, chatbots and mobile apps can support rapid dissemination, reminders, dialogue and tailored content. Their value depends on the communication task and user context.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Platform selection begins with audience behaviour
+
+Do not choose a platform because it is fashionable. Ask who uses it, how often, for what purpose, at what cost, with what privacy, and whether the desired action can follow naturally from the platform experience.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Understand the metric ladder
+
+**Impressions** count displays. **Reach** estimates unique users exposed. **Engagement** includes reactions, comments or shares. **Click-through** indicates movement to another resource. **Conversion** captures a defined action. Each metric is further from health impact than teams sometimes imply.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Algorithms shape visibility
+
+Social platforms rank and recommend content using proprietary systems. Emotional, novel or controversial material can receive disproportionate attention. Organic reach can change without any change in message quality. Platform metrics should therefore be interpreted as products of both audience response and platform design.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Social listening is systematic observation, not surveillance of individuals
+
+Social listening identifies recurring questions, concerns, narratives and information gaps in public or appropriately consented spaces. It should be conducted with a defined purpose, privacy safeguards and caution about representativeness. Online conversation does not equal population opinion.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Moderation is part of communication design
+
+Comment spaces can contain genuine questions, abuse, misinformation, disclosure of personal health information or requests for clinical advice. Establish rules for response, escalation, deletion and crisis handling before the campaign launches.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Privacy can be harmed by seemingly harmless features
+
+A reproductive-health SMS appearing on a shared phone, a geotagged HIV-service check-in, or a public reply from a clinic account can disclose sensitive information. Collect the minimum data required and consider who else may see notifications or account activity.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Mobile-first means more than shrinking a desktop page
+
+Use readable text, large touch targets, compressed assets, captions, alt text, transcripts and forms that work on low-cost devices. A low-bandwidth path should preserve the essential message and action even when video or interactive content fails.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Digital exclusion is an epidemiological issue
+
+If the people most likely to need an intervention are least likely to have data, devices, literacy or private access, digital-only communication can widen inequity. Monitor reach by meaningful subgroups and provide non-digital alternatives.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · AI can assist, but human accountability remains
+
+Automated drafting, translation, summarisation and chatbots can increase speed. They can also hallucinate, reproduce bias, mishandle sensitive data or provide unsafe clinical advice. Use human review, defined scope, source verification, privacy controls and escalation to qualified professionals.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A youth-friendly service plans a WhatsApp and Instagram campaign offering information about STI testing. Young people report concerns about privacy, some share phones with family, rural data costs are high, and staff cannot answer messages 24 hours a day.
+
+1. Define the communication objective and conversion event.
+2. Decide what should be public content versus private interaction.
+3. Specify privacy safeguards for notifications and direct messages.
+4. Design a low-bandwidth alternative.
+5. Create a moderation and escalation policy for clinical questions and abuse.
+6. Select five digital metrics and state what each can and cannot prove.
+7. Explain how social listening would be conducted ethically.
+8. Identify where AI assistance could be useful and where human review is mandatory.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. What is the difference between impressions and reach?
+2. Why does engagement not prove behaviour change?
+3. Give one privacy risk of health communication through messaging apps.
+4. Why is online social listening not automatically representative of the population?
+5. What makes a digital experience genuinely low-bandwidth?
+6. Name two safeguards for AI-assisted health communication.
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 8 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 8 bank of 48 items.
+
+**Initial time limit:** 11 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **WHO Strategic Communications Framework.** Digital and online communication within strategic health communication.
+- **WHO Infodemic and social-listening resources.** Use of digital listening to understand information needs and harmful narratives.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 7](week-07.qmd)
+
+[Week 9 →](week-09.qmd)
+:::

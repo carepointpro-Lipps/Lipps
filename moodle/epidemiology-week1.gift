@@ -1,0 +1,302 @@
+// LIPPS Epidemiology — Week 1: Epidemiology and Epidemiological Thinking
+// 40-item objective question bank for Moodle GIFT import.
+// Questions are original LIPPS teaching items informed by CDC Principles of Epidemiology,
+// Lesson One. Review locally before high-stakes institutional use.
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/Foundations
+
+::EPI-W1-001::Which statement BEST captures epidemiology as introduced in Week 1? {
+=The study of the distribution and determinants of health-related states or events in specified populations and application of that study to health problems.#Correct. The definition combines population distribution, determinants and application.
+~The clinical diagnosis and treatment of disease in individual patients.#Clinical care is important, but epidemiology primarily examines health collectively in populations.
+~The use of statistical software to analyse health datasets.#Software is a tool; it does not define epidemiology.
+~The investigation of infectious disease outbreaks only.#Modern epidemiology applies far beyond infectious disease.
+}
+
+::EPI-W1-002::A team describes cases by age, village and week of onset. Which component of epidemiology are they addressing MOST directly? {
+=Distribution#Correct. Person, place and time characterise distribution.
+~Determinants#Determinants focus on factors that help explain occurrence.
+~Application#Application concerns using epidemiological knowledge for action.
+~Randomisation#Randomisation is a design feature, not a component of the definition.
+}
+
+::EPI-W1-003::Which question is MOST directly about a determinant? {
+~How many cases occurred?#That addresses frequency.
+~Which villages reported cases?#That addresses place.
+=Was untreated drinking water associated with illness?#Correct. This asks whether an exposure may help explain disease occurrence.
+~When did the first case occur?#That addresses time.
+}
+
+::EPI-W1-004::Why does the phrase “specified populations” matter in epidemiology? {
+=Because observations and conclusions must be tied to a defined population.#Correct. Epidemiological measures and inferences require clarity about the population represented.
+~Because epidemiology can only be performed using a national census.#A census is one possible data source, not a requirement.
+~Because every epidemiological study must include the whole population.#Samples are commonly used.
+~Because population size automatically removes bias.#Population size does not remove systematic error.
+}
+
+::EPI-W1-005::Which activity BEST represents the “application” component of epidemiology? {
+~Listing cases by age group.#This is description.
+~Calculating a positivity proportion.#This is measurement.
+~Comparing exposed and unexposed groups.#This is analytic reasoning.
+=Using the findings to recommend an appropriate prevention measure.#Correct. Application means using epidemiological knowledge to address health problems.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/Population thinking
+
+::EPI-W1-006::A clinician and an epidemiologist are both concerned about diarrhoeal disease. Which question is MOST characteristically epidemiological? {
+~Which intravenous fluid should this patient receive?#This is primarily a clinical management question.
+=Are cases occurring more frequently than expected in this community?#Correct. It asks about occurrence at population level.
+~What is this patient's serum potassium?#This concerns an individual patient.
+~Should this patient be admitted?#This is primarily clinical.
+}
+
+::EPI-W1-007::Which statement BEST describes the relationship between clinical medicine and epidemiology? {
+~They are unrelated disciplines.#They frequently inform one another.
+~Epidemiology replaces clinical diagnosis during outbreaks.#Clinical diagnosis remains important.
+=They may examine the same disease but usually emphasise different levels of concern: individual and population.#Correct.
+~Only epidemiology can inform prevention.#Clinical evidence can also inform prevention.
+}
+
+::EPI-W1-008::A hospital identifies three patients with an unusual syndrome. What turns this clinical observation into an epidemiological concern? {
+~All three patients receive the same treatment.#Treatment similarity alone does not create the population question.
+=The possibility that the cases represent a wider population pattern requiring investigation.#Correct.
+~A laboratory test is expensive.#Cost is not the defining issue.
+~The clinician writes a case report.#A case report may be useful, but the epidemiological concern is the population pattern.
+}
+
+::EPI-W1-009::A district health officer says, “Hypertension is common among our patients.” Which missing element MOST limits population interpretation? {
+=The population or denominator to which “common” refers.#Correct. Without the population at risk, the statement cannot be properly contextualised.
+~The name of the statistical software.#Software does not define the population measure.
+~The colour of the blood-pressure machine.#Irrelevant to the epidemiological claim.
+~Whether the report contains a p-value.#A p-value is not the first missing element.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/Distribution
+
+::EPI-W1-010::In epidemiology, “frequency” refers MOST importantly to: {
+~The number of tables in a report.#No.
+=The amount of a health event considered in relation to the population in which it occurs.#Correct.
+~How often a researcher opens a dataset.#No.
+~Whether an event is statistically significant.#Frequency and significance are different ideas.
+}
+
+::EPI-W1-011::Which set correctly represents the main dimensions of descriptive epidemiological pattern? {
+=Person, place and time#Correct.
+~Exposure, outcome and p-value#These are not the standard descriptive dimensions.
+~Sensitivity, specificity and prevalence#These belong to diagnostic evaluation.
+~Randomisation, masking and allocation#These are trial concepts.
+}
+
+::EPI-W1-012::District A records 300 cases and District B records 150. What is the BEST next question before comparing disease occurrence? {
+~Which district used prettier charts?#Irrelevant.
+=What are the relevant population denominators and are case ascertainment systems comparable?#Correct.
+~Which district has the smaller p-value?#A p-value is not the first requirement.
+~Which district reported first?#Reporting order does not establish occurrence.
+}
+
+::EPI-W1-013::Which variable is an example of “place” in descriptive epidemiology? {
+~Age group#Person.
+=Village of residence#Correct.
+~Week of symptom onset#Time.
+~Vaccination status#A person/exposure characteristic, not place.
+}
+
+::EPI-W1-014::Which observation is a TIME pattern? {
+~Cases are concentrated near a market.#Place.
+~Cases are more common among children.#Person.
+=Cases rise during the rainy season.#Correct.
+~Cases are associated with untreated water.#This is moving toward a determinant.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/History
+
+::EPI-W1-015::Which historical contribution is MOST closely associated with John Graunt in the Week 1 source? {
+=Quantifying patterns in births, deaths and disease using mortality records.#Correct.
+~Developing the first randomised vaccine trial.#Not his contribution here.
+~Discovering the cholera bacterium.#No.
+~Inventing logistic regression.#No.
+}
+
+::EPI-W1-016::William Farr is especially associated with: {
+~Discovery of antibiotics.#No.
+=Systematic collection, analysis, classification and reporting of vital statistics.#Correct.
+~The Broad Street pump investigation.#That is associated with John Snow.
+~Development of molecular epidemiology.#Much later.
+}
+
+::EPI-W1-017::What is the MOST important epidemiological lesson from John Snow's cholera investigations? {
+~A map by itself proves causation.#A map is descriptive evidence, not proof by itself.
+~Laboratory confirmation must precede public-health action.#Snow's work preceded knowledge of the causative microorganism.
+=Description, hypothesis, comparison and action can form a coherent epidemiological sequence.#Correct.
+~Every outbreak requires a randomised trial.#No.
+}
+
+::EPI-W1-018::Hippocratic epidemiological thinking is important mainly because it: {
+=Considered natural, environmental and host-related explanations for disease occurrence.#Correct.
+~Introduced multivariable regression.#No.
+~Created modern disease surveillance software.#No.
+~Established the first national census.#No.
+}
+
+::EPI-W1-019::In the CDC example, cholera mortality was 5.0 per 1,000 in one water-supply group and 0.9 per 1,000 in another. Approximately how many times larger was 5.0 than 0.9? {
+~2.0#Too low.
+~3.1#Too low.
+=5.6#Correct. 5.0 divided by 0.9 is approximately 5.6.
+~9.0#Too high.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/Descriptive and analytic reasoning
+
+::EPI-W1-020::The hallmark of analytic epidemiology introduced in Week 1 is: {
+~A complicated statistical model.#Complexity is not the defining feature.
+=A valid comparison group.#Correct.
+~A laboratory-confirmed outcome in every study.#Not always required.
+~A sample larger than 1,000 participants.#No fixed sample size defines analytic epidemiology.
+}
+
+::EPI-W1-021::Investigators map all reported cases of a new febrile illness by residence. What are they doing MOST directly? {
+=Descriptive epidemiology#Correct.
+~Randomised experimentation#No.
+~Meta-analysis#No.
+~Blinded outcome assessment#No.
+}
+
+::EPI-W1-022::Investigators compare drinking-water sources between people with and without acute diarrhoea. This moves from description toward: {
+~Case counting only.#A comparison is being introduced.
+=Analytic epidemiology.#Correct.
+~Clinical prescribing.#No.
+~Ecological mapping only.#No.
+}
+
+::EPI-W1-023::Why can asking only sick people what they ate fail to identify the responsible food during an outbreak? {
+~Sick people cannot remember any food.#Not necessarily.
+=Popular foods may be commonly eaten by both sick and well people, so a comparison group is needed.#Correct.
+~Food exposure can never be measured epidemiologically.#False.
+~Only laboratory data can identify exposures.#False.
+}
+
+::EPI-W1-024::Which sequence BEST represents the relationship between descriptive and analytic epidemiology? {
+=Describe pattern → generate hypothesis → compare groups → evaluate hypothesis.#Correct.
+~Compare groups → ignore pattern → declare causation.#No.
+~Run regression → define cases → choose population.#The logical order is wrong.
+~Choose p-value → collect data → invent hypothesis.#No.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/Core functions
+
+::EPI-W1-025::A district reviews weekly reports of measles cases and distributes trend summaries to decision makers. Which core function is MOST directly represented? {
+=Public-health surveillance#Correct.
+~Randomised trial conduct#No.
+~Clinical diagnosis#No.
+~Laboratory quality control#Not the main function described.
+}
+
+::EPI-W1-026::A team visits villages after an unusual cluster of illness is reported, interviews affected households and looks for common exposures. This is MOST directly: {
+~Policy development#Not primarily.
+=Field investigation#Correct.
+~Vital registration#No.
+~Clinical audit#No.
+}
+
+::EPI-W1-027::A programme systematically examines whether a vaccination campaign achieved intended coverage and outcomes. Which core epidemiological function is MOST directly involved? {
+=Evaluation#Correct.
+~Case diagnosis#No.
+~Random allocation#Not necessarily.
+~Data entry#Data entry may occur but does not define the function.
+}
+
+::EPI-W1-028::Why are “linkages” considered a core public-health epidemiology function? {
+~Epidemiologists should avoid multidisciplinary teams.#The opposite is true.
+=Public-health problems often require collaboration across clinical, laboratory, environmental, community and policy actors.#Correct.
+~Only national agencies are allowed to investigate outbreaks.#False.
+~Linkages refer only to hyperlinks in reports.#No.
+}
+
+::EPI-W1-029::Which activity BEST represents policy development? {
+~Counting weekly cases.#Surveillance/descriptive work.
+~Interviewing exposed households.#Field investigation.
+=Using epidemiological evidence and local context to recommend a prevention guideline.#Correct.
+~Entering laboratory values in a spreadsheet.#Data management, not policy development.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/Case definition and comparability
+
+::EPI-W1-030::A surveillance system broadens its case definition in July. Reported cases increase immediately. What is the BEST interpretation? {
+~The true incidence definitely increased.#Not established.
+=Part of the increase may reflect changed classification rather than changed disease occurrence.#Correct.
+~The denominator no longer matters.#False.
+~The new definition proves an outbreak.#False.
+}
+
+::EPI-W1-031::Why is a standard case definition useful when comparing disease occurrence over time? {
+=It helps ensure that what is counted is classified consistently.#Correct.
+~It guarantees every true case is found.#No case definition guarantees complete ascertainment.
+~It removes all measurement error.#No.
+~It replaces the need for laboratory testing in every condition.#No.
+}
+
+::EPI-W1-032::Which elements may be used to restrict an outbreak case definition in addition to clinical criteria? {
+=Time, place and person#Correct.
+~P-value, confidence interval and regression coefficient#These are analytic outputs.
+~Mean, median and mode#These are summary statistics.
+~Randomisation, masking and allocation concealment#Trial design concepts.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/Count divide compare
+
+::EPI-W1-033::The CDC's simplified epidemiological approach can be summarised as: {
+=Count, divide, compare.#Correct.
+~Diagnose, prescribe, discharge.#Clinical sequence.
+~Randomise, blind, publish.#Not the general epidemiological approach.
+~Code, graph, regress.#Software operations are not the conceptual framework.
+}
+
+::EPI-W1-034::Why can counts still be useful even when rates are needed for comparison? {
+=Counts help quantify workload and resource requirements.#Correct.
+~Counts automatically adjust for population size.#They do not.
+~Counts remove selection bias.#They do not.
+~Counts prove whether an outbreak exists.#Not without context and expectation.
+}
+
+::EPI-W1-035::A district has 80 cases this week. Which information is MOST necessary to judge whether this is unusually high? {
+~The font used in the report.#Irrelevant.
+=An appropriate expected or comparison level for the same condition and population.#Correct.
+~The analyst's preferred software.#Irrelevant.
+~Whether 80 is an even number.#Irrelevant.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/Applied reasoning
+
+::EPI-W1-036::A district reports 240 confirmed malaria cases this month versus 120 last month. Testing increased from 600 to 1,600 people and more facilities reported. Which conclusion is MOST defensible? {
+~Malaria transmission doubled.#Not supported by the information given.
+~Malaria incidence doubled.#A population incidence denominator is not supplied.
+=The reported confirmed case count doubled, but the underlying change in population occurrence remains uncertain.#Correct.
+~There was definitely no increase in malaria.#Also unsupported.
+}
+
+::EPI-W1-037::In the same malaria scenario, positivity among those tested changed from 120/600 to 240/1600. Which statement is correct? {
+~Positivity rose from 20% to 40%.#Incorrect calculation.
+=Positivity fell from 20% to 15%.#Correct.
+~Positivity remained 20%.#No.
+~The calculation proves malaria incidence fell.#Test positivity is not the same as population incidence.
+}
+
+::EPI-W1-038::A report states, “Teenage pregnancy is increasing.” Which reformulation is MOST epidemiologically useful? {
+~Why are teenagers irresponsible?#This is value-laden and not a measurable epidemiological question.
+~Is teenage pregnancy bad?#Too vague.
+=How did a clearly defined adolescent-pregnancy measure change over a specified period in a defined population?#Correct.
+~Which software can analyse teenage pregnancy?#Software follows the question, not the other way around.
+}
+
+::EPI-W1-039::A researcher sees a strong association and immediately writes, “Exposure X causes Outcome Y.” Which Week 1 principle is MOST relevant? {
+~Every association is causal if the sample is large.#False.
+=Observed associations require interpretation in light of design, comparison, alternative explanations and other evidence.#Correct.
+~Causality depends only on p-values.#False.
+~Causal claims are never possible in public health.#Too absolute.
+}
+
+::EPI-W1-040::Which statement BEST captures the LIPPS Week 1 approach? {
+~Begin by selecting the most advanced statistical model available.#No.
+~A larger dataset makes study design unimportant.#False.
+=Define the event and population, understand the pattern, use appropriate denominators and comparisons, then interpret before acting.#Correct.
+~If data are routinely collected, they can be accepted without checking definitions or reporting processes.#False.
+}

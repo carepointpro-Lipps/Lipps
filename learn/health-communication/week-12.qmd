@@ -1,0 +1,185 @@
+---
+title: ""
+pagetitle: "Week 12 — Ethics, Equity and the Future of Health Communication | LIPPS"
+description: "Evaluate health communication for ethical integrity, equity, accessibility and responsible use of emerging technologies, then integrate the full course using the LIPPS SIGNAL framework."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 12
+:::
+
+# Ethics, Equity and the Future of Health Communication
+
+## Effective communication that manipulates, exposes or excludes people is not good health communication.
+
+<span class="lipps-chip">Ethics</span> <span class="lipps-chip">Equity</span> <span class="lipps-chip">AI</span> <span class="lipps-chip">Capstone</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Evaluate health communication for ethical integrity, equity, accessibility and responsible use of emerging technologies, then integrate the full course using the LIPPS SIGNAL framework.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. apply autonomy, beneficence, non-maleficence, justice and truthfulness to communication decisions;
+2. distinguish persuasion from manipulation and coercion;
+3. identify stigma, fear and dignity risks in campaign design;
+4. assess privacy and data-protection risks in digital communication;
+5. design communication for equity and inclusion;
+6. recognise representation and power issues in imagery and storytelling;
+7. identify risks of AI-generated and personalised health communication;
+8. specify human oversight and verification requirements for AI use;
+9. evaluate unintended effects and conflicts of interest;
+10. apply the LIPPS SIGNAL framework to a complete communication problem.
+:::
+
+::: {.lipps-section}
+## ORIENT · High reach, low dignity
+
+A campaign to encourage HIV testing uses images of visibly ill people and the slogan “Do not be the one who infects your family.” Reach is high and testing increases briefly, but people living with HIV report increased stigma and some avoid clinics because they fear being recognised.
+
+A communication programme should not be judged only by whether it changes behaviour. Ethical harms and unequal burdens are outcomes too.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Ethics applies to both content and process
+
+Health communication should respect autonomy, promote benefit, minimise avoidable harm and distribute benefits and burdens fairly. Truthfulness, transparency and respect for persons are especially important because health messages can influence intimate decisions.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Persuasion has limits
+
+Public health legitimately tries to encourage protective behaviour. Persuasion becomes ethically problematic when it relies on deception, hidden sponsorship, humiliation, coercive threats or manipulation that undermines informed choice. Urgency does not remove the need for honesty.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Fear can produce harm
+
+Fear appeals may attract attention, but exaggerated threats, shame or blame can increase stigma, fatalism or avoidance. When serious risk is communicated, pair it with clear, feasible protective action and avoid assigning moral worth to disease status.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Images and stories carry power
+
+Consent for a photograph does not automatically make every future use appropriate. Consider dignity, context, re-identification, unequal power and whether stories portray communities only as victims. Representation should avoid tokenism and stereotypes.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Privacy is part of communication ethics
+
+Digital targeting, message history, location data, chat transcripts and audience segmentation can reveal sensitive health information. Use data minimisation, purpose limitation, secure handling and clear consent where applicable. Do not collect personal data merely because analytics make it possible.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Equity means more than translating a poster
+
+Ask which groups have less access to information, trusted messengers, digital devices, literacy support or health services. Universal design, accessible formats, local languages, low-bandwidth options and alternative channels can reduce exclusion.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · AI creates speed and new failure modes
+
+Generative AI can draft, translate, summarise and personalise communication. It can also invent facts, reproduce stereotypes, expose confidential information, produce unsafe medical advice and create convincing synthetic media. High-stakes health communication requires verified sources and accountable human review.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Personalisation can become manipulation or surveillance
+
+Targeting messages based on behaviour or inferred vulnerability can improve relevance but may become intrusive, discriminatory or exploitative. Ask whether people reasonably expect the data use, whether sensitive attributes are inferred, and whether the targeting could harm them.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Conflicts of interest should be visible
+
+Audiences should know when sponsors, commercial interests or political incentives may affect communication. Hidden sponsorship can undermine trust even when the factual content is correct.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · LIPPS SIGNAL: a capstone planning framework
+
+Use **S — Situation:** define the health and communication problem. **I — Intended audience and insight:** identify who must decide and what evidence says about context. **G — Goal:** specify the communication objective and intended mechanism. **N — Narrative and needed action:** decide what people need to understand, feel or do. **A — Access:** select messenger, channel, timing, accessibility and service pathway. **L — Listen and learn:** build feedback, monitoring, evaluation and adaptation.
+
+SIGNAL is a LIPPS synthesis for structuring—not replacing—more detailed programme planning.
+:::
+
+::: {.lipps-section}
+## LEARN 11 · Final test: does the communication earn its effect ethically?
+
+A strong plan should be understandable, evidence-based, feasible, inclusive, respectful and measurable. Ask not only “Will this work?” but also “For whom?”, “At what cost?”, “Who could be harmed?”, and “What would make us change course?”
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A health authority wants to use an AI chatbot and targeted social-media advertising to increase uptake of mental-health services among university students. The advertising platform can target users inferred to be interested in depression-related content. The chatbot can answer common questions but occasionally gives overconfident clinical advice. Students fear that counselling use could become known to peers or administrators.
+
+Apply **LIPPS SIGNAL**:
+1. Define the situation and communication problem.
+2. Identify intended audiences and required formative insight.
+3. Write a measurable goal.
+4. Define the narrative and action without stigmatising users.
+5. Design access: channels, privacy, low-bandwidth options and escalation to human care.
+6. Decide whether inferred mental-health targeting is ethically acceptable and justify your position.
+7. Specify AI guardrails, source verification and human oversight.
+8. Build listening and evaluation mechanisms.
+9. Identify at least four possible unintended harms.
+10. State the conditions under which the programme should be paused or redesigned.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. What is the difference between persuasion and coercion?
+2. Why can a campaign that changes behaviour still be ethically poor?
+3. Give one privacy risk of personalised digital health communication.
+4. What additional safeguard is needed when AI produces high-stakes health information?
+5. How does equity differ from giving everyone exactly the same communication?
+6. Apply the six letters of LIPPS SIGNAL to a simple health communication problem.
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 12 mastery quiz
+
+**Pilot Mastery Quiz:** 20 objective questions sampled from a Week 12 bank of 60 items.
+
+**Initial time limit:** 15 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **WHO Strategic Communications Framework.** Credibility, accessibility and audience-centred communication principles.
+- **WHO RCCE Competency Framework, 2024.** Inclusive and community-centred emergency communication competencies.
+- **WHO Infodemic resources.** Ethical, evidence-informed management of information environments.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 11](week-11.qmd)
+
+[Return to Health Communication course →](../health-communication.qmd)
+:::

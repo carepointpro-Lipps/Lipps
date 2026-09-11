@@ -1,0 +1,943 @@
+---
+title: ""
+pagetitle: "Week 3 — Measures of Association and Effect | LIPPS"
+description: "Week 3 of LIPPS Epidemiology: comparison, two-by-two tables, risk ratios, rate ratios, odds ratios, prevalence ratios, risk differences, attributable proportion, vaccine effectiveness and disciplined interpretation."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 03
+:::
+
+# Measures of Association and Effect
+
+## Comparison turns frequency into epidemiological meaning.
+
+Week 2 asked **how often** disease or another health event occurs. Week 3 asks the next question: **how does occurrence differ between groups?** We move from counting and measuring frequency to quantifying association, absolute difference, and selected measures of public-health impact.
+
+<span class="lipps-chip">Foundation</span> <span class="lipps-chip">Comparison</span> <span class="lipps-chip">2 × 2 tables</span> <span class="lipps-chip">Effect measures</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Measure the outcome in each comparison group first; only then choose a measure that expresses the comparison in a form that answers the public-health question.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+A large relative association can correspond to a small absolute difference, and a small relative association can matter greatly when the outcome is common. **Never interpret the ratio without looking at the underlying risks or rates.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 3, you should be able to:
+
+1. explain why **comparison** is central to analytic epidemiology;
+2. organise binary exposure and outcome data in a **two-by-two table**;
+3. calculate and interpret **risk ratios**;
+4. calculate and interpret **rate ratios**;
+5. calculate and interpret **risk differences / excess risk**;
+6. distinguish **odds** from **risk** and calculate an **odds ratio**;
+7. explain why an odds ratio can approximate a risk ratio when an outcome is uncommon and why the two can diverge when the outcome is common;
+8. identify when an odds ratio is the natural measure in a **case-control study**;
+9. calculate and interpret a **prevalence ratio** in cross-sectional data;
+10. distinguish **relative** from **absolute** measures of association;
+11. calculate and interpret an **attributable proportion among the exposed** under appropriate causal assumptions;
+12. calculate and interpret **vaccine efficacy/effectiveness** from risks or a risk ratio; and
+13. interpret measures of association without making causal claims that the design and evidence cannot support.
+:::
+
+::: {.lipps-section}
+## ORIENT · “Three times higher” — but three times what?
+
+Consider two fictional communities followed for one year.
+
+| Community | Population initially at risk | New cases | One-year risk |
+|---|---:|---:|---:|
+| A | 1,000 | 60 | 6% |
+| B | 1,000 | 20 | 2% |
+
+A report could state:
+
+> “Community A had three times the risk of disease compared with Community B.”
+
+That is true because:
+
+$$
+RR = 0.06 / 0.02 = 3.0
+$$
+
+But the same data can also be expressed as an **absolute difference**:
+
+$$
+RD = 0.06 - 0.02 = 0.04 = 4\text{ percentage points}
+$$
+
+So both of these statements describe the same comparison:
+
+- **relative:** risk was three times as high;
+- **absolute:** there were 4 additional cases per 100 people at risk.
+
+Neither description is automatically “better.” The useful measure depends on the question.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Comparison is the hallmark of analytic epidemiology
+
+The attached CDC text emphasises that the key to epidemiological analysis is **comparison**. A high disease frequency in one group becomes more interpretable when compared with an appropriate group representing what might otherwise be expected.
+
+The broad structure is:
+
+**Observed group**  
+versus  
+**Comparison group**
+
+Examples include:
+
+- exposed versus unexposed;
+- vaccinated versus unvaccinated;
+- intervention versus control;
+- one district versus another;
+- one time period versus another; or
+- people with one characteristic versus people without it.
+
+The source lists risk ratio, rate ratio, odds ratio and proportionate mortality ratio as examples of comparative measures.
+
+### Before calculating anything
+
+Ask:
+
+1. What exactly are the **two groups**?
+2. What outcome is being compared?
+3. Is the outcome measured as a **risk, rate, prevalence, odds or mortality proportion**?
+4. Is the comparison group a defensible representation of the expected level?
+5. Does the design allow this quantity to be estimated directly?
+
+::: {.lipps-callout}
+**A measure of association cannot rescue a bad comparison group.**  
+If the groups are not meaningfully comparable, a beautifully calculated ratio can still be misleading.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 2 · The two-by-two table
+
+For a binary exposure and a binary outcome, epidemiologists often begin with a two-by-two table.
+
+|  | Outcome + | Outcome − | Total |
+|---|---:|---:|---:|
+| **Exposed** | a | b | a + b |
+| **Unexposed** | c | d | c + d |
+| **Total** | a + c | b + d | N |
+
+From this table:
+
+$$
+Risk_E = \frac{a}{a+b}
+$$
+
+$$
+Risk_U = \frac{c}{c+d}
+$$
+
+$$
+RR = \frac{Risk_E}{Risk_U}
+$$
+
+$$
+RD = Risk_E - Risk_U
+$$
+
+$$
+OR = \frac{ad}{bc}
+$$
+
+### The table is not the analysis by itself
+
+A two-by-two table is an organising device. What you calculate from it depends on the **study design** and the **question**.
+
+For example, in a typical case-control study the investigator selects the number of cases and controls. The row or column totals therefore do not reconstruct population risks. In that setting, the odds ratio remains estimable, while risk and risk ratio generally are not.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Risk ratio: a relative comparison of risks
+
+The attached CDC source defines the **risk ratio (RR)**, also called relative risk, as the risk in the group of primary interest divided by the risk in the comparison group.
+
+$$
+RR = \frac{Risk_E}{Risk_U}
+$$
+
+### Interpreting the null value
+
+**RR = 1.0**  
+The risks are equal in the two groups.
+
+**RR > 1.0**  
+Risk is higher in the numerator group.
+
+**RR < 1.0**  
+Risk is lower in the numerator group.
+
+### Fictional example
+
+During an outbreak, 45 of 150 people who attended Event A became ill. Among 200 people who attended Event B, 20 became ill.
+
+$$
+Risk_A = 45/150 = 0.30
+$$
+
+$$
+Risk_B = 20/200 = 0.10
+$$
+
+$$
+RR = 0.30/0.10 = 3.0
+$$
+
+Interpretation:
+
+> People in Event A had **three times the risk** of illness during the observation period compared with people in Event B.
+
+Do not automatically write:
+
+> Event A **caused** three times more illness.
+
+That causal wording requires more than the ratio alone.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · The same ratio can hide very different public-health consequences
+
+Consider two comparisons.
+
+### Comparison 1
+
+Risk in exposed = 20%  
+Risk in unexposed = 10%
+
+$$
+RR = 2.0
+$$
+
+$$
+RD = 20\%-10\%=10\text{ percentage points}
+$$
+
+### Comparison 2
+
+Risk in exposed = 2%  
+Risk in unexposed = 1%
+
+$$
+RR = 2.0
+$$
+
+$$
+RD = 2\%-1\%=1\text{ percentage point}
+$$
+
+The **relative association is identical** in both examples: RR = 2.0.
+
+But the **absolute difference** is very different.
+
+This is why a report should not rely on the relative measure alone when an absolute measure can also be communicated meaningfully.
+
+::: {.lipps-callout}
+**Relative measures answer:** “How many times as high?”  
+**Absolute measures answer:** “How much higher?”
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Risk difference / excess risk
+
+The attached CDC chapter explicitly uses the term **risk difference or excess risk** in its vaccine-effectiveness section for the difference between risks in two groups. LIPPS expands that idea here because it is fundamental to interpreting absolute effects.
+
+$$
+RD = Risk_E - Risk_U
+$$
+
+### Fictional example
+
+Risk among exposed = 18%  
+Risk among unexposed = 6%
+
+$$
+RD = 0.18 - 0.06 = 0.12
+$$
+
+The risk difference is **0.12**, or **12 percentage points**.
+
+Interpretation:
+
+> There were 12 additional cases per 100 people at risk in the exposed group compared with the unexposed group during the specified period.
+
+### Null value
+
+For a **difference measure**, the null value is **0**, not 1.
+
+- ratio measure → null = **1**;
+- difference measure → null = **0**.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Rate ratio: compare speeds, not just proportions
+
+When the outcome is measured using **person-time**, the corresponding relative comparison is a **rate ratio**.
+
+$$
+Rate\ Ratio = \frac{Incidence\ rate_E}{Incidence\ rate_U}
+$$
+
+The CDC source uses the same interpretive framework as for a risk ratio:
+
+- 1.0 → equal rates;
+- above 1.0 → higher rate in the numerator group;
+- below 1.0 → lower rate in the numerator group.
+
+### Fictional example
+
+A cohort records:
+
+- exposed group: 48 cases during 2,400 person-years;
+- unexposed group: 30 cases during 3,000 person-years.
+
+$$
+Rate_E = 48/2400 = 0.020 = 20/1,000\ person\text{-}years
+$$
+
+$$
+Rate_U = 30/3000 = 0.010 = 10/1,000\ person\text{-}years
+$$
+
+$$
+Rate\ Ratio = 20/10 = 2.0
+$$
+
+Interpretation:
+
+> The incidence rate in the exposed group was **twice** the incidence rate in the unexposed group.
+
+Do not call this a “twofold risk” if what you actually estimated was a rate ratio.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Odds are not risks
+
+Students often treat **odds** and **risk** as interchangeable. They are not.
+
+If 20 people develop disease and 80 do not:
+
+### Risk
+
+$$
+Risk = 20/(20+80) = 0.20
+$$
+
+The risk is **20%**.
+
+### Odds
+
+$$
+Odds = 20/80 = 0.25
+$$
+
+The odds are **0.25**, or **1 to 4**.
+
+Risk compares cases with **all people at risk**.  
+Odds compare cases with **non-cases**.
+
+When disease is rare, risk and odds are numerically close. As disease becomes more common, they diverge.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Odds ratio: the cross-product comparison
+
+From the two-by-two table:
+
+|  | Outcome + | Outcome − |
+|---|---:|---:|
+| Exposed | a | b |
+| Unexposed | c | d |
+
+The odds ratio is:
+
+$$
+OR = \frac{a/b}{c/d} = \frac{ad}{bc}
+$$
+
+The attached CDC text notes that this is sometimes called the **cross-product ratio** because the diagonal products are compared.
+
+### Fictional example
+
+|  | Disease | No disease |
+|---|---:|---:|
+| Exposed | 40 | 60 |
+| Unexposed | 20 | 80 |
+
+$$
+OR = \frac{40\times80}{60\times20} = \frac{3200}{1200} = 2.67
+$$
+
+Interpretation:
+
+> The **odds of disease** among exposed participants were approximately 2.7 times the odds among unexposed participants.
+
+That is the cleanest wording.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Why the odds ratio is central to case-control studies
+
+In a typical case-control study, investigators deliberately enrol people with the outcome and people without it. The number of controls is usually chosen by the investigators rather than arising naturally from the population at risk.
+
+Therefore, the sampled proportion of cases is not the population risk.
+
+The attached CDC text makes the practical consequence explicit:
+
+- risk generally cannot be calculated directly from a typical case-control sample;
+- risk ratio generally cannot therefore be calculated directly;
+- rate ratio generally cannot be calculated directly; but
+- the **odds ratio can be calculated**.
+
+That is why the odds ratio is the standard measure of association for the usual case-control design.
+
+::: {.lipps-callout}
+**Design determines what can be estimated.**  
+Do not choose a measure because it is familiar. Choose it because the sampling and follow-up structure permit it.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 10 · When OR approximates RR — and when it does not
+
+The CDC chapter shows that when an outcome is uncommon, an odds ratio can be close to the corresponding risk ratio. It also warns that the more common the outcome, the further the odds ratio may be from the risk ratio.
+
+### Uncommon outcome
+
+Risk exposed = 5%  
+Risk unexposed = 1%
+
+$$
+RR = 5.0
+$$
+
+The corresponding odds ratio is approximately **5.2** — very close.
+
+### Common outcome
+
+Risk exposed = 60%  
+Risk unexposed = 20%
+
+$$
+RR = 3.0
+$$
+
+But:
+
+$$
+Odds_E = 0.60/0.40 = 1.5
+$$
+
+$$
+Odds_U = 0.20/0.80 = 0.25
+$$
+
+$$
+OR = 1.5/0.25 = 6.0
+$$
+
+The OR is **6.0**, while the RR is **3.0**.
+
+### The interpretation error
+
+It would be incorrect to say:
+
+> “The exposed group was six times as likely to develop the outcome.”
+
+The OR of 6 refers to **odds**, not risk.
+
+When outcomes are common, this distinction becomes especially important.
+:::
+
+::: {.lipps-section}
+## LIPPS EXTENSION · Prevalence ratio in cross-sectional studies
+
+**Source note:** the attached CDC lesson used for Week 3 does not explicitly teach the prevalence ratio. LIPPS includes it as an extension because it is directly relevant to modern cross-sectional public-health analysis.
+
+In a cross-sectional study, the investigator often measures the **prevalence** of an outcome in two groups.
+
+$$
+PR = \frac{Prevalence_E}{Prevalence_U}
+$$
+
+### Fictional example
+
+A survey finds hypertension in:
+
+- 120 of 300 adults with high salt intake → 40%;
+- 60 of 300 adults with lower salt intake → 20%.
+
+$$
+PR = 0.40/0.20 = 2.0
+$$
+
+Interpretation:
+
+> The prevalence of hypertension was **twice as high** among adults in the high-salt group as among adults in the lower-salt group at the time represented by the survey.
+
+Notice the wording:
+
+**prevalence was twice as high** — not “risk was twice as high” and not “high salt doubled the risk.”
+
+A cross-sectional study usually cannot establish whether the exposure preceded the outcome.
+:::
+
+::: {.lipps-section}
+## LEARN 11 · Relative and absolute measures should be read together
+
+Suppose a preventive intervention reduces one-year disease risk from 4% to 2%.
+
+### Relative comparison
+
+$$
+RR = 0.02/0.04 = 0.50
+$$
+
+The intervention group had **half the risk**.
+
+### Absolute comparison
+
+$$
+RD = 0.02 - 0.04 = -0.02
+$$
+
+The absolute risk was **2 percentage points lower**.
+
+A communicator could truthfully say:
+
+> “Risk was reduced by 50%.”
+
+But without the underlying risks, a reader may imagine a much larger absolute change than 4% to 2%.
+
+### LIPPS reporting rule
+
+Where possible, report:
+
+**risk or rate in each group + relative measure + absolute measure + uncertainty**.
+
+That combination gives the reader much more information than a single dramatic ratio.
+:::
+
+::: {.lipps-section}
+## LEARN 12 · Attributable proportion among the exposed
+
+The attached CDC source presents **attributable proportion**, also called attributable risk percent, as a measure of public-health impact.
+
+A common formula is:
+
+$$
+AP_E = \frac{Risk_E - Risk_U}{Risk_E}\times100\%
+$$
+
+It can be expressed similarly using rates.
+
+### Fictional example
+
+Risk among exposed = 30%  
+Risk among unexposed = 10%
+
+$$
+AP_E = \frac{0.30-0.10}{0.30}\times100 = 66.7\%
+$$
+
+Under a **causal interpretation** and assuming the groups are otherwise sufficiently comparable:
+
+> Approximately two-thirds of the disease occurrence among the exposed group could be attributed to the exposure.
+
+### Important restraint
+
+The word **attributable** is stronger than “associated.” If the association is confounded, biased or non-causal, the attributable interpretation is not justified.
+
+The attached source itself cautions that the measure relies on causal assumptions.
+:::
+
+::: {.lipps-section}
+## LEARN 13 · Vaccine efficacy and vaccine effectiveness
+
+The attached CDC text distinguishes:
+
+**Vaccine efficacy** — performance under ideal conditions, such as a clinical trial.  
+**Vaccine effectiveness** — performance under usual field conditions.
+
+Both are expressed as a proportionate reduction in disease among vaccinated people compared with unvaccinated people.
+
+$$
+VE = \frac{Risk_U - Risk_V}{Risk_U}\times100\%
+$$
+
+or equivalently:
+
+$$
+VE = (1-RR)\times100\%
+$$
+
+when the RR is defined as vaccinated risk divided by unvaccinated risk.
+
+### Fictional example
+
+Risk vaccinated = 8%  
+Risk unvaccinated = 20%
+
+$$
+RR = 0.08/0.20 = 0.40
+$$
+
+$$
+VE = (1-0.40)\times100 = 60\%
+$$
+
+Interpretation:
+
+> Disease occurrence was 60% lower among the vaccinated group relative to the unvaccinated group under the conditions represented by the study.
+
+Again, the validity of a causal effectiveness claim depends on the design and control of alternative explanations.
+:::
+
+::: {.lipps-section}
+## LEARN 14 · Protective associations require careful wording
+
+When a ratio is below 1, students sometimes become confused.
+
+Suppose:
+
+$$
+RR = 0.70
+$$
+
+The exposed group has **70% of the risk** observed in the comparison group.
+
+The relative reduction is:
+
+$$
+1 - 0.70 = 0.30 = 30\%
+$$
+
+So one may say:
+
+> Risk was 30% lower in the exposed group.
+
+Do **not** say the exposure “reduced risk by 0.70%.”
+
+Likewise, if:
+
+$$
+OR = 0.70
+$$
+
+the clean interpretation is:
+
+> The odds were 30% lower in the exposed group.
+
+Do not silently turn odds into risk.
+:::
+
+::: {.lipps-section}
+## LEARN 15 · Precision and the null value
+
+A point estimate is not the whole result.
+
+A ratio of 2.0 can be estimated very precisely or very imprecisely. A risk difference of 5 percentage points can be tightly or loosely estimated.
+
+For introductory interpretation, remember:
+
+- **RR, rate ratio, OR, PR:** null value = **1**;
+- **risk difference / prevalence difference:** null value = **0**.
+
+Confidence intervals around these measures provide information about **precision** and the range of values compatible with the data and analysis assumptions.
+
+Detailed interval estimation and critical appraisal are revisited later in the course. For now, avoid treating a point estimate as exact truth.
+:::
+
+::: {.lipps-section}
+## LEARN 16 · Association is not automatically causation
+
+The attached CDC chapter states that measures such as risk ratios, rate ratios and odds ratios provide evidence about relationships between exposure and disease. That is not the same as proving that the exposure caused the disease.
+
+A measured association can be influenced by:
+
+- selection processes;
+- measurement error;
+- confounding;
+- reverse temporality;
+- chance;
+- model choices; or
+- genuine causal effects.
+
+Those issues are developed later in the course.
+
+### Language discipline
+
+For an observational comparison, prefer:
+
+> “Exposure was associated with higher risk…”
+
+rather than:
+
+> “Exposure increased risk…”
+
+unless the design, analysis and assumptions support a causal interpretation.
+
+::: {.lipps-callout}
+**LIPPS rule**  
+The mathematical sign of an association does not tell you whether the relationship is causal.
+:::
+:::
+
+::: {.lipps-section}
+## APPLY · Choose the measure before doing the arithmetic
+
+### Scenario A · Closed cohort
+
+Two groups are followed for one year from a disease-free baseline. You know the number developing disease and the number initially at risk in each group.
+
+**Most direct relative measure:** Risk ratio.  
+**Useful absolute measure:** Risk difference.
+
+### Scenario B · Unequal follow-up time
+
+Two treatment groups contribute different amounts of person-time and new outcomes are counted.
+
+**Most direct relative measure:** Rate ratio.
+
+### Scenario C · Case-control study
+
+Investigators select 200 cases and 400 controls and compare prior exposure.
+
+**Natural measure:** Odds ratio.
+
+### Scenario D · Cross-sectional survey
+
+A survey measures current exposure and current hypertension status in a representative sample.
+
+**Natural descriptive relative measure:** Prevalence ratio.  
+**Causal caution:** Temporality may be unclear.
+
+### Scenario E · Vaccine comparison
+
+Risks are measured among vaccinated and unvaccinated groups.
+
+**Useful measures:** Risk ratio, risk difference and vaccine efficacy/effectiveness where causal interpretation is appropriate.
+:::
+
+::: {.lipps-section}
+## WORKED EXAMPLE · One outbreak table, several answers
+
+Consider a fictional foodborne-outbreak investigation among 180 event attendees.
+
+|  | Became ill | Did not become ill | Total |
+|---|---:|---:|---:|
+| Ate goat stew | 54 | 36 | 90 |
+| Did not eat goat stew | 18 | 72 | 90 |
+
+### 1. Risk among exposed
+
+$$
+54/90 = 0.60 = 60\%
+$$
+
+### 2. Risk among unexposed
+
+$$
+18/90 = 0.20 = 20\%
+$$
+
+### 3. Risk ratio
+
+$$
+RR = 0.60/0.20 = 3.0
+$$
+
+People who ate the goat stew had **three times the risk** of illness compared with those who did not.
+
+### 4. Risk difference
+
+$$
+RD = 0.60-0.20 = 0.40
+$$
+
+There were **40 additional cases per 100 attendees** among goat-stew eaters compared with non-eaters.
+
+### 5. Odds ratio
+
+$$
+OR = \frac{54\times72}{36\times18}=6.0
+$$
+
+The odds of illness among goat-stew eaters were **six times** the odds among non-eaters.
+
+Notice that the OR of 6 is much larger than the RR of 3 because the outcome is common.
+
+### 6. Attributable proportion among the exposed
+
+$$
+AP_E = \frac{0.60-0.20}{0.60}\times100 = 66.7\%
+$$
+
+If the relationship is truly causal and alternative explanations are adequately addressed, approximately two-thirds of illness among exposed attendees could be attributed to the exposure.
+
+### What could fool us?
+
+Even a dramatic table does not settle every question. Ask:
+
+- Was exposure recalled accurately?
+- Were all attendees identified?
+- Were cases defined consistently?
+- Did goat-stew eaters also share another exposure?
+- Could selection into the analysis differ by illness status?
+- Is the timing compatible with the suspected food vehicle?
+
+This is exactly why **evidence is never the whole story**.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+### 1. Which value is the null for a risk ratio?
+
+A. 0  
+B. 1  
+C. 50  
+D. 100
+
+**Answer: B.** A ratio of 1 means the two risks are equal.
+
+### 2. Which value is the null for a risk difference?
+
+A. 0  
+B. 1  
+C. −1  
+D. 100
+
+**Answer: A.** A difference of zero means no absolute difference between the groups.
+
+### 3. Risk is 30% in the exposed group and 10% in the unexposed group. What is the RR?
+
+A. 0.20  
+B. 2.0  
+C. 3.0  
+D. 20
+
+**Answer: C.** 0.30 / 0.10 = 3.0.
+
+### 4. Using the same data, what is the risk difference?
+
+A. 3 percentage points  
+B. 10 percentage points  
+C. 20 percentage points  
+D. 30 percentage points
+
+**Answer: C.** 30% − 10% = 20 percentage points.
+
+### 5. Which measure is most natural in a typical case-control study?
+
+A. Incidence proportion  
+B. Risk ratio  
+C. Odds ratio  
+D. Point prevalence
+
+**Answer: C.** The investigator determines the number of cases and controls, so population risks usually cannot be reconstructed directly.
+
+### 6. Why should an OR of 4.0 not automatically be described as “four times the risk”?
+
+A. Odds and risk are different quantities.  
+B. OR can never exceed 1.  
+C. Risk has no denominator.  
+D. OR is a difference measure.
+
+**Answer: A.** The odds ratio compares odds, not risks.
+
+### 7. In a cross-sectional survey, hypertension prevalence is 36% in Group A and 18% in Group B. What is the prevalence ratio?
+
+A. 0.5  
+B. 1.0  
+C. 2.0  
+D. 18
+
+**Answer: C.** 0.36 / 0.18 = 2.0.
+
+### 8. A vaccine study gives RR = 0.25 for vaccinated versus unvaccinated participants. What is the corresponding relative vaccine efficacy/effectiveness?
+
+A. 25%  
+B. 50%  
+C. 75%  
+D. 125%
+
+**Answer: C.** (1 − 0.25) × 100 = 75%.
+:::
+
+::: {.lipps-section}
+## MASTERY · Week 3 quiz
+
+The Moodle mastery quiz should use **15 randomly selected objective questions** from the larger Week 3 bank.
+
+**Pilot duration:** 12 minutes.  
+**Attempt rule:** one scored attempt in mastery mode.  
+**Navigation:** one question at a time.  
+**Randomisation:** question order and answer options shuffled.  
+**Feedback:** released after submission in learning mode; institution-controlled in formal assessment mode.
+
+The Week 3 bank intentionally mixes:
+
+- conceptual measure selection;
+- two-by-two table reasoning;
+- short calculations;
+- interpretation of values above, below and at the null;
+- risk versus odds distinctions;
+- absolute versus relative comparison;
+- design-specific choice of measure; and
+- causal-language restraint.
+
+::: {.lipps-callout}
+**Timing principle**  
+A prepared learner should be able to read, reason and answer. A learner attempting to outsource every item should lose the time advantage. Timing must still be calibrated with real student response data and approved accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## WEEK 3 SUMMARY
+
+The central sequence is:
+
+**Measure each group → compare the groups → choose relative and/or absolute expression → interpret in the language of the measure → check whether the design supports the claim.**
+
+Remember:
+
+**RR** compares risks.  
+**Rate ratio** compares incidence rates.  
+**OR** compares odds.  
+**PR** compares prevalences.  
+**Risk difference** expresses absolute difference in risk.  
+**Attributable proportion** expresses the proportion of disease among exposed people attributable to the exposure under causal assumptions.  
+**VE/effectiveness** expresses relative reduction in disease among vaccinated people.
+
+The measure is not the conclusion. It is one part of the evidence.
+:::
+
+::: {.lipps-section}
+## Source and adaptation note
+
+This week is primarily adapted from the attached **CDC Principles of Epidemiology in Public Health Practice**, Lesson Three, especially its sections on measures of association and public-health impact (risk ratio, rate ratio, odds ratio, attributable proportion and vaccine efficacy/effectiveness).
+
+The **prevalence ratio** section and the broader teaching emphasis on reporting relative and absolute measures together are **LIPPS extensions** included to support the 12-week course structure. They are not presented as content extracted from the attached CDC lesson.
+
+All fictional examples and Moodle questions created for LIPPS are original teaching material unless explicitly described as source examples.
+:::
+
+::: {.lipps-section}
+[← Week 2](week-02.qmd){.lipps-btn .secondary} [Week 4 →](week-04.qmd){.lipps-btn}
+:::

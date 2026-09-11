@@ -1,0 +1,352 @@
+---
+title: ""
+pagetitle: "Week 11 — Surveillance, Outbreak Investigation and Field Epidemiology | LIPPS"
+description: "Use surveillance data to detect and describe public-health signals, evaluate system performance and move systematically from an unusual signal to outbreak investigation, hypothesis testing and control."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 11
+:::
+
+# Surveillance, Outbreak Investigation and Field Epidemiology
+
+## Surveillance is information for action; investigation turns a signal into a defensible response.
+
+<span class="lipps-chip">Advanced foundation</span> <span class="lipps-chip">Surveillance</span> <span class="lipps-chip">Outbreaks</span> <span class="lipps-chip">Field epidemiology</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Use surveillance data to detect and describe public-health signals, evaluate system performance and move systematically from an unusual signal to outbreak investigation, hypothesis testing and control.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 11, you should be able to:
+
+1. define public-health surveillance and distinguish it from one-off research and direct control activity;
+2. state how surveillance objectives determine data needs and system design;
+3. distinguish passive, active, sentinel and syndromic surveillance approaches;
+4. analyse routine surveillance by time, place and person;
+5. explain key surveillance attributes including timeliness, sensitivity, representativeness, quality and predictive value positive;
+6. distinguish a cluster, outbreak, epidemic and expected background occurrence;
+7. outline the conceptual steps of an outbreak investigation without treating them as a rigid sequence;
+8. develop a workable case definition and case-finding strategy;
+9. organise field data using a line list and descriptive epidemiology;
+10. choose between retrospective cohort and case-control approaches in common outbreak settings;
+11. reconsider hypotheses when analytic results do not fit the descriptive evidence;
+12. explain why control measures may sometimes begin before every uncertainty is resolved;
+13. communicate findings and recommendations in a way that supports action.
+:::
+
+::: {.lipps-section}
+## ORIENT · A surveillance signal is not yet an outbreak
+
+A district dashboard shows 18 suspected meningitis cases this week compared with 4–7 in recent weeks.
+
+That signal should trigger attention, but it does not yet tell you:
+
+- whether all 18 reports meet the same case definition;
+- whether duplicates are present;
+- whether laboratory or reporting practices changed;
+- whether the population denominator changed;
+- whether cases are linked by person, place or time; or
+- whether the increase exceeds an appropriate expected baseline.
+
+Field epidemiology begins by converting **signal → verified problem → description → hypothesis → evidence → action**.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · What surveillance is
+
+The attached CDC course describes public-health surveillance as ongoing, systematic collection, analysis, interpretation and dissemination of health data for public-health decision-making and action.
+
+Surveillance is therefore not just data collection.
+
+A useful surveillance cycle is:
+
+**Define → Collect → Consolidate → Analyse → Interpret → Disseminate → Act → Evaluate**
+
+The surveillance system supplies information for action; the control intervention itself is conceptually distinct from surveillance.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Start with the objective, not the database
+
+Surveillance design should follow the intended use.
+
+If the objective is to identify individual cases quickly for treatment or contact follow-up, timeliness and case-level identification may be critical.
+
+If the objective is to monitor a long-term population trend, weekly individual reports may be unnecessary.
+
+Before building or evaluating a system ask:
+
+- What health event is under surveillance?
+- What is the case definition?
+- Who is the population under surveillance?
+- What action will the information support?
+- How quickly is information needed?
+- Which sources can supply the required data?
+- Who needs the findings and in what form?
+
+A system that collects abundant data with no defined decision use is not automatically a strong surveillance system.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Passive, active, sentinel and syndromic approaches
+
+**Passive surveillance** relies on routine reporting from clinicians, laboratories or facilities without the health authority actively soliciting every report.
+
+**Active surveillance** involves deliberate case finding, for example calling facilities or reviewing records during an outbreak.
+
+**Sentinel surveillance** uses selected reporting sites or providers to monitor a condition or trend rather than attempting full population capture.
+
+**Syndromic surveillance** monitors symptom complexes or proxy signals before definitive diagnosis and can provide earlier warning, but often at the cost of lower specificity and more false alarms.
+
+The attached text explicitly presents syndromic surveillance as a supplement rather than a universal replacement for traditional surveillance.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Analyse surveillance data by time, place and person
+
+Routine surveillance analysis should repeatedly ask:
+
+**Time:** Is occurrence rising, falling, seasonal or unusual compared with prior periods?  
+**Place:** Where are counts and rates concentrated?  
+**Person:** Which age, sex, occupation, exposure or population groups are most affected?
+
+Counts can guide resources; rates can help compare populations.
+
+A single sudden increase deserves data-quality checks before it is interpreted as biological change. The attached source lists possibilities such as population influx, batch reporting, duplicates, laboratory/computer error and changes in reporting practice.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Surveillance attributes are trade-offs
+
+A well-conducted surveillance system is judged against its purpose.
+
+Important attributes discussed in the attached CDC material include:
+
+- **acceptability** — willingness to participate;
+- **flexibility** — ability to adapt;
+- **quality** — completeness and validity of data;
+- **representativeness** — how well observed patterns reflect the population;
+- **sensitivity** — ability to detect true cases or events;
+- **predictive value positive** — proportion of detected signals/cases that are true;
+- **simplicity** — ease of operation;
+- **stability** — reliability and availability;
+- **timeliness** — information arriving soon enough for action; and
+- **validity** — whether the system measures what it intends to measure.
+
+Improving one attribute can worsen another. Higher sensitivity, for example, may increase false alarms and reduce predictive value positive.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Cluster, outbreak and expected background
+
+A **cluster** is an aggregation of cases in time or place that appears unusual, sometimes before the expected number is known.
+
+An **outbreak** or epidemic requires occurrence above what is expected for the population, place and period, although terminology and operational use can vary.
+
+The expected level may come from previous years, previous weeks, a comparable season, registry data or another credible baseline.
+
+Do not interpret “more reports” as “more disease” until you have examined how the observation system changed.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Outbreak investigation is systematic but not rigid
+
+The attached CDC lesson presents outbreak investigation steps as a **conceptual plan**, not a sequence that must always be executed one-by-one in exactly the same order.
+
+A practical sequence is:
+
+1. prepare for field work;
+2. establish whether an outbreak exists;
+3. verify the diagnosis;
+4. develop a workable case definition;
+5. find and record cases systematically;
+6. describe cases by time, place and person;
+7. develop hypotheses;
+8. evaluate hypotheses using epidemiology, laboratory and environmental evidence;
+9. refine hypotheses when needed;
+10. implement and evaluate control measures;
+11. communicate findings.
+
+Several steps often occur simultaneously.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Case definitions must serve case finding
+
+A field case definition commonly combines clinical criteria with appropriate person, place and time restrictions.
+
+Early in an investigation, a relatively sensitive definition may help identify the full extent of illness. Later analytic work may use a more specific subset, depending on the objective.
+
+The hypothesised exposure should generally remain outside the case definition when that same exposure will be tested analytically.
+
+If the outbreak expands geographically or the clinical picture changes, the case definition may need revision. Document version changes because they can alter apparent counts and rates.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Case finding and the line list
+
+After defining a case, investigators actively identify additional cases through facilities, laboratories, communities, schools, workplaces, contacts or media alerts as appropriate.
+
+A line list should allow investigators to:
+
+- detect duplicates;
+- update case status;
+- analyse onset over time;
+- map relevant locations;
+- describe affected populations;
+- track laboratory results and outcomes; and
+- identify missing information.
+
+Good field epidemiology combines speed with disciplined data structure.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Description comes before analytic testing
+
+The attached outbreak lesson emphasises descriptive epidemiology as a critical step because it identifies the population at risk, suggests source and transmission hypotheses, exposes data problems and may support immediate prevention.
+
+Epidemic curves, maps and person-specific rates are not decorative outputs. They help determine what analytic question is worth asking.
+
+A case-control study built on a weak or biologically implausible hypothesis can waste scarce outbreak time.
+:::
+
+::: {.lipps-section}
+## LEARN 11 · Choose the analytic design from the population structure
+
+For a small, well-defined outbreak population—for example, all attendees at a wedding—a **retrospective cohort** can often enumerate the population, calculate food-specific attack rates and compare risk directly.
+
+When the source population is large or cannot be completely enumerated, a **case-control study** may be more efficient. Controls must represent the population that produced the cases, and the odds ratio becomes the natural measure.
+
+The design follows the data-generating setting, not investigator preference.
+:::
+
+::: {.lipps-section}
+## LEARN 12 · When the first hypothesis fails
+
+Analytic epidemiology can be unrevealing because:
+
+- the leading hypothesis was wrong;
+- exposure was measured poorly;
+- the relevant exposure was not included;
+- controls were inappropriate;
+- the outbreak contains multiple mechanisms; or
+- sample size is limited.
+
+The attached text explicitly recommends revisiting descriptive epidemiology, outliers and interviews when initial analyses fail.
+
+Failure to confirm a hypothesis is not failure of the investigation. It is information that should change the next question.
+:::
+
+::: {.lipps-section}
+## LEARN 13 · Action under uncertainty
+
+Field epidemiology is not always afforded the luxury of waiting for perfect evidence.
+
+If a severe and plausible hazard can be controlled with a proportionate, low-harm measure, action may begin while additional evidence is collected.
+
+The standard is not “certainty before action.” It is:
+
+> **Is the evidence sufficient, given the consequences of delay and the harms of acting, to justify the intervention?**
+
+That judgement should be explicit and revisable.
+:::
+
+::: {.lipps-section}
+## LEARN 14 · Communication closes the loop
+
+Surveillance and outbreak findings must reach those who can act.
+
+Communication may include:
+
+- rapid operational updates;
+- technical briefs;
+- feedback to reporting facilities;
+- community communication;
+- formal scientific reports; and
+- recommendations to decision-makers.
+
+The attached CDC material emphasises scientific objectivity, defensible conclusions and written reports that document methods, results, discussion and recommendations.
+
+A field investigation is incomplete if the evidence never reaches the people responsible for control.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A fictional district normally reports 0–2 suspected viral haemorrhagic fever alerts per month. Over four days, six alerts are received from three health facilities. Two alerts appear to refer to the same patient; one facility recently introduced a new triage checklist; two patients attended the same funeral; laboratory confirmation is pending.
+
+Develop an initial investigation plan:
+
+1. Decide what must be verified before calling this an outbreak.
+2. Draft a working case definition without embedding funeral attendance as a requirement.
+3. List the first variables for a line list.
+4. State how you would expand case finding.
+5. Describe the data by time, place and person.
+6. Identify the most important data-quality checks.
+7. Propose at least two early hypotheses.
+8. Explain when a retrospective cohort could be used around the funeral and when a case-control design might be preferable.
+9. Name at least five surveillance-system attributes you would later evaluate.
+10. State what control measures could be justified before final laboratory certainty and what harms those measures could create.
+11. Specify who should receive preliminary findings and in what form.
+12. Describe what evidence would make you revise your leading hypothesis.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why is a surveillance signal not automatically an outbreak?
+2. What is the difference between passive and active surveillance?
+3. Why can increasing surveillance sensitivity reduce predictive value positive?
+4. Why should outbreak-investigation steps be treated as conceptual rather than rigid?
+5. When is a retrospective cohort especially useful in an outbreak?
+6. Why should descriptive epidemiology be revisited when an analytic study is unrevealing?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 11 mastery quiz
+
+**Pilot Mastery Quiz:** 20 objective questions sampled from a Week 11 bank of 75 items.
+
+**Initial time limit:** 15 minutes.  
+**Blueprint:** surveillance concepts and attributes, signal verification, case definitions, case finding, person-place-time interpretation, outbreak-study design, hypothesis refinement and communication.  
+**Assessment emphasis:** rapid recognition of the next defensible epidemiological action rather than memorising a numbered sequence.
+
+::: {.lipps-callout}
+**Assessment principle**  
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.
+:::
+:::
+
+::: {.lipps-section}
+## Source foundation and LIPPS extensions
+
+**Primary source foundation:** the attached CDC course's full lessons on public-health surveillance and outbreak investigation, including surveillance purpose, system attributes, syndromic approaches, outbreak-investigation steps, case definitions, line lists, descriptive epidemiology and analytic design selection.
+
+**LIPPS extensions:** contemporary dashboard language, explicit action-under-uncertainty framing and integrated African public-health scenarios are instructional extensions rather than copied source content.
+
+**Reference:** Centers for Disease Control and Prevention. *Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics*. October 2006; updated May 2012.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 10](week-10.qmd)
+
+[Week 12: Causal Interpretation and Critical Appraisal →](week-12.qmd)
+:::

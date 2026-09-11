@@ -1,0 +1,173 @@
+---
+title: ""
+pagetitle: "Week 6 — Message Development and Pre-testing | LIPPS"
+description: "Develop clear, actionable health messages from defined objectives and improve them through systematic pre-testing with intended audiences."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 06
+:::
+
+# Message Development and Pre-testing
+
+## The first draft is a hypothesis. Pre-testing is how you learn whether the audience interprets it the way you intended.
+
+<span class="lipps-chip">Message design</span> <span class="lipps-chip">Plain language</span> <span class="lipps-chip">Pre-test</span> <span class="lipps-chip">Revision</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Develop clear, actionable health messages from defined objectives and improve them through systematic pre-testing with intended audiences.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. translate a communication objective into a message strategy;
+2. distinguish core message, supporting evidence and call to action;
+3. apply clarity, relevance, credibility and actionability criteria;
+4. use framing carefully without distorting evidence;
+5. write plain-language health messages;
+6. identify visual and numerical communication risks;
+7. design a message pre-test;
+8. distinguish comprehension, relevance, acceptability, credibility and intended action;
+9. revise messages using evidence rather than preference;
+10. recognise when adaptation is needed instead of direct translation.
+:::
+
+::: {.lipps-section}
+## ORIENT · “Scientifically perfect” and communicatively useless
+
+A vaccination poster reads: “Eligible individuals are advised to receive the bivalent booster to optimise immunogenicity and mitigate severe morbidity.” The technical team approves it because every word is accurate. Community pre-testing shows that many people do not know whether they are “eligible,” what “bivalent” means, or where to go.
+
+Accuracy is necessary. It is not sufficient.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Start from an objective and one priority action
+
+A message should serve a defined communication objective. Decide what the audience needs to understand or do first. Trying to place every fact on one poster usually produces information overload.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Use a message hierarchy
+
+A practical hierarchy is **core message → supporting reason/evidence → specific action → where/when/how → source**. The core message should survive even if a person reads or hears only the first few seconds.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Actionability needs operational detail
+
+“Seek care early” is weak if people do not know what “early” means, which symptoms matter, where to go, when services are open or whether the service costs money. Communication should remove avoidable uncertainty around the desired action.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Framing changes perception
+
+Gain frames emphasise benefits of action; loss frames emphasise costs of inaction. Both can be legitimate, but fear or loss framing should not exaggerate risk or shame audiences. Strong emotion without efficacy can produce avoidance rather than action.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Plain language preserves meaning
+
+Use familiar terms, active voice, concrete verbs, short sentences and logical order. Put the important action first. Replace institutional language with audience language, but do not oversimplify to the point of inaccuracy.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Numbers and visuals can mislead unintentionally
+
+Truncated axes, distorted icons, inconsistent denominators, tiny footnotes and decorative graphics can create false impressions. Visual design should make the intended comparison easier, not more dramatic.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Pre-testing asks whether the message works as intended
+
+Key domains include **comprehension**, **attention**, **relevance**, **acceptability**, **credibility**, **cultural fit**, **actionability** and unintended interpretations. Recall can be useful but should not be confused with behaviour change.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Use methods matched to the question
+
+Cognitive interviews can explore how people interpret wording. Focus groups can reveal shared reactions and social meaning. Intercept tests can quickly compare alternatives. Digital A/B tests can compare observable engagement, but clicks alone do not prove understanding or health impact.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Pre-test with intended users, not only colleagues
+
+Experts know too much about the topic to reliably predict what a first-time reader will understand. A message that seems obvious in the programme office may be ambiguous in the real setting.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Revision is part of the design
+
+Document what changed and why. If pre-testing reveals a service barrier rather than a message problem, change the service or expectation rather than trying to “wordsmith” around it.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A family-planning programme drafts: “Modern contraceptive methods are safe, effective and available. Visit your nearest facility today.” Formative research shows that many women worry about side effects, some need discreet access, adolescents fear judgement from providers, and several methods are intermittently out of stock.
+
+1. Identify the communication objective.
+2. Write a core message and supporting information for one priority audience.
+3. Make the call to action specific.
+4. Identify one claim that needs evidence qualification.
+5. Design five pre-test questions covering different domains.
+6. Choose two pre-testing methods and justify them.
+7. Identify one problem that should trigger service change rather than message revision.
+8. Produce a revised message after hypothetical feedback that “safe” was interpreted as “no side effects.”
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. What is the difference between a core message and supporting information?
+2. Why is “seek care early” often not actionable enough?
+3. Name four domains a message pre-test should examine.
+4. Why can expert review not replace audience pre-testing?
+5. What is a risk of fear appeals when efficacy is low?
+6. What does a high click-through rate fail to tell you?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 6 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 6 bank of 48 items.
+
+**Initial time limit:** 11 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **WHO Strategic Communications Framework.** Principles for understandable, actionable and credible communication.
+- **NCI Making Health Communication Programs Work.** Message development, testing and programme planning.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 5](week-05.qmd)
+
+[Week 7 →](week-07.qmd)
+:::

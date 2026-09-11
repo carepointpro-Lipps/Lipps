@@ -1,0 +1,363 @@
+$CATEGORY: LIPPS/Epidemiology/Week 04/Case definitions
+
+::EPI-W4-001::Which element should usually NOT be built into an outbreak case definition when it is the exposure you plan to test? {
+=The hypothesised exposure#Correct. Embedding the exposure can manufacture an association.
+~Clinical criteria#Case definitions may include clinical, time, place and person criteria; the tested exposure should remain independent.
+~A relevant time restriction#Case definitions may include clinical, time, place and person criteria; the tested exposure should remain independent.
+~A relevant place restriction#Case definitions may include clinical, time, place and person criteria; the tested exposure should remain independent.
+}
+
+::EPI-W4-002::What is the main purpose of a standard case definition in descriptive epidemiology? {
+=To classify cases consistently#Correct. Consistent classification makes counts and comparisons interpretable.
+~To prove the cause of disease#The central purpose is consistent classification, not causal proof.
+~To maximise the number of variables collected#The central purpose is consistent classification, not causal proof.
+~To replace laboratory testing in every setting#The central purpose is consistent classification, not causal proof.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 04/Time
+
+::EPI-W4-003::Cases rise every rainy season at roughly the same months each year. Which description best fits? {
+=Seasonal pattern#Repeated within-year timing is seasonality.
+~Secular trend#Choose the description that matches the time scale and shape.
+~Point-source outbreak#Choose the description that matches the time scale and shape.
+~Random error only#Choose the description that matches the time scale and shape.
+}
+
+::EPI-W4-004::A cancer mortality rate falls steadily over 25 years. Which description best fits? {
+=Secular trend#Long-term directional change is a secular trend.
+~Seasonal pattern#Choose the description that matches the time scale and shape.
+~Point-source pattern#Choose the description that matches the time scale and shape.
+~Person-to-person propagation#Choose the description that matches the time scale and shape.
+}
+
+::EPI-W4-005::Most cases occur within one incubation period after a single shared meal. Which description best fits? {
+=Point-source pattern#A compressed cluster within one incubation period is compatible with a point source.
+~Secular trend#Choose the description that matches the time scale and shape.
+~Seasonal pattern#Choose the description that matches the time scale and shape.
+~Propagated pattern#Choose the description that matches the time scale and shape.
+}
+
+::EPI-W4-006::Cases occur in successive waves separated by roughly one incubation period. Which description best fits? {
+=Propagated pattern#Successive waves can suggest person-to-person spread.
+~Point-source pattern#Choose the description that matches the time scale and shape.
+~Secular trend#Choose the description that matches the time scale and shape.
+~No temporal pattern#Choose the description that matches the time scale and shape.
+}
+
+::EPI-W4-007::A patient developed symptoms on day 2 but was reported on day 5. For an epidemic curve intended to approximate transmission timing, which date is generally more informative? {
+=Date of symptom onset#Correct. Onset is usually closer to the biological event being described.
+~Date the report was entered#Reporting dates can be distorted by administrative delay.
+~Date the weekly report was printed#Reporting dates can be distorted by administrative delay.
+~Either date is always identical#Reporting dates can be distorted by administrative delay.
+}
+
+::EPI-W4-008::A patient developed symptoms on day 3 but was reported on day 4. For an epidemic curve intended to approximate transmission timing, which date is generally more informative? {
+=Date of symptom onset#Correct. Onset is usually closer to the biological event being described.
+~Date the report was entered#Reporting dates can be distorted by administrative delay.
+~Date the weekly report was printed#Reporting dates can be distorted by administrative delay.
+~Either date is always identical#Reporting dates can be distorted by administrative delay.
+}
+
+::EPI-W4-009::A patient developed symptoms on day 4 but was reported on day 5. For an epidemic curve intended to approximate transmission timing, which date is generally more informative? {
+=Date of symptom onset#Correct. Onset is usually closer to the biological event being described.
+~Date the report was entered#Reporting dates can be distorted by administrative delay.
+~Date the weekly report was printed#Reporting dates can be distorted by administrative delay.
+~Either date is always identical#Reporting dates can be distorted by administrative delay.
+}
+
+::EPI-W4-010::A patient developed symptoms on day 5 but was reported on day 8. For an epidemic curve intended to approximate transmission timing, which date is generally more informative? {
+=Date of symptom onset#Correct. Onset is usually closer to the biological event being described.
+~Date the report was entered#Reporting dates can be distorted by administrative delay.
+~Date the weekly report was printed#Reporting dates can be distorted by administrative delay.
+~Either date is always identical#Reporting dates can be distorted by administrative delay.
+}
+
+::EPI-W4-011::A patient developed symptoms on day 6 but was reported on day 8. For an epidemic curve intended to approximate transmission timing, which date is generally more informative? {
+=Date of symptom onset#Correct. Onset is usually closer to the biological event being described.
+~Date the report was entered#Reporting dates can be distorted by administrative delay.
+~Date the weekly report was printed#Reporting dates can be distorted by administrative delay.
+~Either date is always identical#Reporting dates can be distorted by administrative delay.
+}
+
+::EPI-W4-012::A patient developed symptoms on day 7 but was reported on day 8. For an epidemic curve intended to approximate transmission timing, which date is generally more informative? {
+=Date of symptom onset#Correct. Onset is usually closer to the biological event being described.
+~Date the report was entered#Reporting dates can be distorted by administrative delay.
+~Date the weekly report was printed#Reporting dates can be distorted by administrative delay.
+~Either date is always identical#Reporting dates can be distorted by administrative delay.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 04/Place
+
+::EPI-W4-013::A map places one dot at the residence of every identified case. What type of display is this? {
+=Spot map#Correct. A spot map shows individual event locations.
+~Population pyramid#A spot map uses a marker for each case or event.
+~Survival curve#A spot map uses a marker for each case or event.
+~Frequency polygon#A spot map uses a marker for each case or event.
+}
+
+::EPI-W4-014::Two districts have 300 and 120 cases, but populations of 600,000 and 60,000 respectively. Which statement is most defensible? {
+=The second district has the higher case rate#Correct. The rates are 0.5 versus 2.0 per 1,000.
+~The first district has the higher case rate because it has more cases#Counts alone do not account for population size.
+~The districts have identical frequency#Counts alone do not account for population size.
+~Rates cannot be compared when counts differ#Counts alone do not account for population size.
+}
+
+::EPI-W4-015::Area A reports 100 cases in 100,000 people. Area B reports 80 cases in 50,000 people. Which area has the higher disease frequency based on population rate? {
+=Area B#Correct. Compare cases relative to population size.
+~Area A#Calculate cases divided by the population for each area.
+~They are exactly equal#Calculate cases divided by the population for each area.
+~Cannot be assessed with denominators provided#Calculate cases divided by the population for each area.
+}
+
+::EPI-W4-016::Area A reports 120 cases in 200,000 people. Area B reports 90 cases in 100,000 people. Which area has the higher disease frequency based on population rate? {
+=Area B#Correct. Compare cases relative to population size.
+~Area A#Calculate cases divided by the population for each area.
+~They are exactly equal#Calculate cases divided by the population for each area.
+~Cannot be assessed with denominators provided#Calculate cases divided by the population for each area.
+}
+
+::EPI-W4-017::Area A reports 140 cases in 300,000 people. Area B reports 100 cases in 150,000 people. Which area has the higher disease frequency based on population rate? {
+=Area B#Correct. Compare cases relative to population size.
+~Area A#Calculate cases divided by the population for each area.
+~They are exactly equal#Calculate cases divided by the population for each area.
+~Cannot be assessed with denominators provided#Calculate cases divided by the population for each area.
+}
+
+::EPI-W4-018::Area A reports 160 cases in 400,000 people. Area B reports 110 cases in 200,000 people. Which area has the higher disease frequency based on population rate? {
+=Area B#Correct. Compare cases relative to population size.
+~Area A#Calculate cases divided by the population for each area.
+~They are exactly equal#Calculate cases divided by the population for each area.
+~Cannot be assessed with denominators provided#Calculate cases divided by the population for each area.
+}
+
+::EPI-W4-019::Area A reports 180 cases in 500,000 people. Area B reports 120 cases in 250,000 people. Which area has the higher disease frequency based on population rate? {
+=Area B#Correct. Compare cases relative to population size.
+~Area A#Calculate cases divided by the population for each area.
+~They are exactly equal#Calculate cases divided by the population for each area.
+~Cannot be assessed with denominators provided#Calculate cases divided by the population for each area.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 04/Person
+
+::EPI-W4-020::Why might a 0 to 4 year age category conceal an important pattern? {
+=Risk may be concentrated within a narrower age band such as infants#Correct. Broad categories can average over important heterogeneity.
+~Age can never be analysed categorically#Category width should preserve epidemiologically meaningful variation.
+~All children under five have identical risk#Category width should preserve epidemiologically meaningful variation.
+~Rates cannot be calculated by age#Category width should preserve epidemiologically meaningful variation.
+}
+
+::EPI-W4-021::Which is the strongest reason to examine disease frequency by occupation? {
+=Occupation may proxy relevant exposures or conditions of work#Correct.
+~Occupation proves causation#Person characteristics can suggest exposure hypotheses but do not themselves prove causes.
+~Occupation replaces age and sex#Person characteristics can suggest exposure hypotheses but do not themselves prove causes.
+~Occupational categories always have equal denominators#Person characteristics can suggest exposure hypotheses but do not themselves prove causes.
+}
+
+::EPI-W4-022::Most cases are concentrated among under 1 year. What is the most appropriate next descriptive step? {
+=Calculate frequency using a denominator for that subgroup if available#Correct. Subgroup-specific denominators make the pattern interpretable.
+~Conclude the subgroup characteristic caused disease#A count without the relevant population at risk can mislead.
+~Ignore the pattern until regression is fitted#A count without the relevant population at risk can mislead.
+~Use the total population denominator for every subgroup#A count without the relevant population at risk can mislead.
+}
+
+::EPI-W4-023::Most cases are concentrated among adolescents. What is the most appropriate next descriptive step? {
+=Calculate frequency using a denominator for that subgroup if available#Correct. Subgroup-specific denominators make the pattern interpretable.
+~Conclude the subgroup characteristic caused disease#A count without the relevant population at risk can mislead.
+~Ignore the pattern until regression is fitted#A count without the relevant population at risk can mislead.
+~Use the total population denominator for every subgroup#A count without the relevant population at risk can mislead.
+}
+
+::EPI-W4-024::Most cases are concentrated among adults aged 65 years or older. What is the most appropriate next descriptive step? {
+=Calculate frequency using a denominator for that subgroup if available#Correct. Subgroup-specific denominators make the pattern interpretable.
+~Conclude the subgroup characteristic caused disease#A count without the relevant population at risk can mislead.
+~Ignore the pattern until regression is fitted#A count without the relevant population at risk can mislead.
+~Use the total population denominator for every subgroup#A count without the relevant population at risk can mislead.
+}
+
+::EPI-W4-025::Most cases are concentrated among health workers. What is the most appropriate next descriptive step? {
+=Calculate frequency using a denominator for that subgroup if available#Correct. Subgroup-specific denominators make the pattern interpretable.
+~Conclude the subgroup characteristic caused disease#A count without the relevant population at risk can mislead.
+~Ignore the pattern until regression is fitted#A count without the relevant population at risk can mislead.
+~Use the total population denominator for every subgroup#A count without the relevant population at risk can mislead.
+}
+
+::EPI-W4-026::Most cases are concentrated among market vendors. What is the most appropriate next descriptive step? {
+=Calculate frequency using a denominator for that subgroup if available#Correct. Subgroup-specific denominators make the pattern interpretable.
+~Conclude the subgroup characteristic caused disease#A count without the relevant population at risk can mislead.
+~Ignore the pattern until regression is fitted#A count without the relevant population at risk can mislead.
+~Use the total population denominator for every subgroup#A count without the relevant population at risk can mislead.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 04/Counts and rates
+
+::EPI-W4-027::Group 1 has 50 cases among 5,000 people; Group 2 has 80 cases among 20,000. Which has the higher rate? {
+=Group 1#Correct. Rates compare event counts relative to population size.
+~Group 2#Do not infer comparative frequency from counts alone.
+~The group with more cases always has the higher rate#Do not infer comparative frequency from counts alone.
+~There is no denominator information#Do not infer comparative frequency from counts alone.
+}
+
+::EPI-W4-028::Group 1 has 60 cases among 6,000 people; Group 2 has 85 cases among 22,000. Which has the higher rate? {
+=Group 1#Correct. Rates compare event counts relative to population size.
+~Group 2#Do not infer comparative frequency from counts alone.
+~The group with more cases always has the higher rate#Do not infer comparative frequency from counts alone.
+~There is no denominator information#Do not infer comparative frequency from counts alone.
+}
+
+::EPI-W4-029::Group 1 has 70 cases among 7,000 people; Group 2 has 90 cases among 24,000. Which has the higher rate? {
+=Group 1#Correct. Rates compare event counts relative to population size.
+~Group 2#Do not infer comparative frequency from counts alone.
+~The group with more cases always has the higher rate#Do not infer comparative frequency from counts alone.
+~There is no denominator information#Do not infer comparative frequency from counts alone.
+}
+
+::EPI-W4-030::Group 1 has 80 cases among 8,000 people; Group 2 has 95 cases among 26,000. Which has the higher rate? {
+=Group 1#Correct. Rates compare event counts relative to population size.
+~Group 2#Do not infer comparative frequency from counts alone.
+~The group with more cases always has the higher rate#Do not infer comparative frequency from counts alone.
+~There is no denominator information#Do not infer comparative frequency from counts alone.
+}
+
+::EPI-W4-031::Group 1 has 90 cases among 9,000 people; Group 2 has 100 cases among 28,000. Which has the higher rate? {
+=Group 1#Correct. Rates compare event counts relative to population size.
+~Group 2#Do not infer comparative frequency from counts alone.
+~The group with more cases always has the higher rate#Do not infer comparative frequency from counts alone.
+~There is no denominator information#Do not infer comparative frequency from counts alone.
+}
+
+::EPI-W4-032::Group 1 has 100 cases among 10,000 people; Group 2 has 105 cases among 30,000. Which has the higher rate? {
+=Group 1#Correct. Rates compare event counts relative to population size.
+~Group 2#Do not infer comparative frequency from counts alone.
+~The group with more cases always has the higher rate#Do not infer comparative frequency from counts alone.
+~There is no denominator information#Do not infer comparative frequency from counts alone.
+}
+
+::EPI-W4-033::Group 1 has 110 cases among 11,000 people; Group 2 has 110 cases among 32,000. Which has the higher rate? {
+=Group 1#Correct. Rates compare event counts relative to population size.
+~Group 2#Do not infer comparative frequency from counts alone.
+~The group with more cases always has the higher rate#Do not infer comparative frequency from counts alone.
+~There is no denominator information#Do not infer comparative frequency from counts alone.
+}
+
+::EPI-W4-034::Group 1 has 120 cases among 12,000 people; Group 2 has 115 cases among 34,000. Which has the higher rate? {
+=Group 1#Correct. Rates compare event counts relative to population size.
+~Group 2#Do not infer comparative frequency from counts alone.
+~The group with more cases always has the higher rate#Do not infer comparative frequency from counts alone.
+~There is no denominator information#Do not infer comparative frequency from counts alone.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 04/Hypothesis generation
+
+::EPI-W4-035::What is the usual relationship between descriptive and analytic epidemiology? {
+=Descriptive patterns generate hypotheses that analytic comparisons can test#Correct.
+~Descriptive epidemiology proves causation#Descriptive person-place-time patterns commonly generate testable hypotheses.
+~Analytic epidemiology should always precede description#Descriptive person-place-time patterns commonly generate testable hypotheses.
+~They are unrelated activities#Descriptive person-place-time patterns commonly generate testable hypotheses.
+}
+
+::EPI-W4-036::A cluster is concentrated near two water points after flooding. What is the best interpretation? {
+=The pattern generates a water-related hypothesis that needs testing#Correct.
+~The water points are proven causes#Pattern is a clue, not proof.
+~Spatial clustering is always random#Pattern is a clue, not proof.
+~No further comparison is useful#Pattern is a clue, not proof.
+}
+
+::EPI-W4-037::An outbreak shows a surprising case 1 incubation period later than most others. What should an investigator do first? {
+=Verify the observation and explore whether it is an error, secondary case or different exposure#Correct. Outliers can be errors or important clues.
+~Delete it automatically#Investigate surprising observations before excluding them.
+~Assume it proves a second outbreak#Investigate surprising observations before excluding them.
+~Ignore it because outliers are never useful#Investigate surprising observations before excluding them.
+}
+
+::EPI-W4-038::An outbreak shows a surprising case 2 incubation periods later than most others. What should an investigator do first? {
+=Verify the observation and explore whether it is an error, secondary case or different exposure#Correct. Outliers can be errors or important clues.
+~Delete it automatically#Investigate surprising observations before excluding them.
+~Assume it proves a second outbreak#Investigate surprising observations before excluding them.
+~Ignore it because outliers are never useful#Investigate surprising observations before excluding them.
+}
+
+::EPI-W4-039::An outbreak shows a surprising case 3 incubation periods later than most others. What should an investigator do first? {
+=Verify the observation and explore whether it is an error, secondary case or different exposure#Correct. Outliers can be errors or important clues.
+~Delete it automatically#Investigate surprising observations before excluding them.
+~Assume it proves a second outbreak#Investigate surprising observations before excluding them.
+~Ignore it because outliers are never useful#Investigate surprising observations before excluding them.
+}
+
+::EPI-W4-040::An outbreak shows a surprising case 4 incubation periods later than most others. What should an investigator do first? {
+=Verify the observation and explore whether it is an error, secondary case or different exposure#Correct. Outliers can be errors or important clues.
+~Delete it automatically#Investigate surprising observations before excluding them.
+~Assume it proves a second outbreak#Investigate surprising observations before excluding them.
+~Ignore it because outliers are never useful#Investigate surprising observations before excluding them.
+}
+
+::EPI-W4-041::An outbreak shows a surprising case 5 incubation periods later than most others. What should an investigator do first? {
+=Verify the observation and explore whether it is an error, secondary case or different exposure#Correct. Outliers can be errors or important clues.
+~Delete it automatically#Investigate surprising observations before excluding them.
+~Assume it proves a second outbreak#Investigate surprising observations before excluding them.
+~Ignore it because outliers are never useful#Investigate surprising observations before excluding them.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 04/Data quality
+
+::EPI-W4-042::A new clinic started reporting during the same week that case counts doubled. What is the key interpretation issue? {
+=The observation system changed, so the apparent increase may not be entirely biological#Correct.
+~The clinic proves an outbreak occurred#Changes in reporting can change counts without equivalent changes in true disease.
+~The population denominator becomes irrelevant#Changes in reporting can change counts without equivalent changes in true disease.
+~No data-quality check is needed#Changes in reporting can change counts without equivalent changes in true disease.
+}
+
+::EPI-W4-043::Duplicate case reports most directly inflate which quantity? {
+=The numerator#Correct.
+~The population denominator#Duplicates add apparent cases.
+~The incubation period#Duplicates add apparent cases.
+~Specificity of the map#Duplicates add apparent cases.
+}
+
+::EPI-W4-044::Before plotting a line list, record 44 has a missing onset date. What is the most defensible action? {
+=Flag and investigate the missing value before deciding how to use the record#Correct.
+~Invent the median onset date#Missing data should be investigated and handling documented.
+~Delete the entire case automatically#Missing data should be investigated and handling documented.
+~Use report date without documenting the substitution#Missing data should be investigated and handling documented.
+}
+
+::EPI-W4-045::Before plotting a line list, record 45 has a missing onset date. What is the most defensible action? {
+=Flag and investigate the missing value before deciding how to use the record#Correct.
+~Invent the median onset date#Missing data should be investigated and handling documented.
+~Delete the entire case automatically#Missing data should be investigated and handling documented.
+~Use report date without documenting the substitution#Missing data should be investigated and handling documented.
+}
+
+::EPI-W4-046::Before plotting a line list, record 46 has a missing onset date. What is the most defensible action? {
+=Flag and investigate the missing value before deciding how to use the record#Correct.
+~Invent the median onset date#Missing data should be investigated and handling documented.
+~Delete the entire case automatically#Missing data should be investigated and handling documented.
+~Use report date without documenting the substitution#Missing data should be investigated and handling documented.
+}
+
+::EPI-W4-047::Before plotting a line list, record 47 has a missing onset date. What is the most defensible action? {
+=Flag and investigate the missing value before deciding how to use the record#Correct.
+~Invent the median onset date#Missing data should be investigated and handling documented.
+~Delete the entire case automatically#Missing data should be investigated and handling documented.
+~Use report date without documenting the substitution#Missing data should be investigated and handling documented.
+}
+
+::EPI-W4-048::Before plotting a line list, record 48 has a missing onset date. What is the most defensible action? {
+=Flag and investigate the missing value before deciding how to use the record#Correct.
+~Invent the median onset date#Missing data should be investigated and handling documented.
+~Delete the entire case automatically#Missing data should be investigated and handling documented.
+~Use report date without documenting the substitution#Missing data should be investigated and handling documented.
+}
+
+::EPI-W4-049::Before plotting a line list, record 49 has a missing onset date. What is the most defensible action? {
+=Flag and investigate the missing value before deciding how to use the record#Correct.
+~Invent the median onset date#Missing data should be investigated and handling documented.
+~Delete the entire case automatically#Missing data should be investigated and handling documented.
+~Use report date without documenting the substitution#Missing data should be investigated and handling documented.
+}
+
+::EPI-W4-050::Before plotting a line list, record 50 has a missing onset date. What is the most defensible action? {
+=Flag and investigate the missing value before deciding how to use the record#Correct.
+~Invent the median onset date#Missing data should be investigated and handling documented.
+~Delete the entire case automatically#Missing data should be investigated and handling documented.
+~Use report date without documenting the substitution#Missing data should be investigated and handling documented.
+}

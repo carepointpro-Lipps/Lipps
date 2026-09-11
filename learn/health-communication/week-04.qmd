@@ -1,0 +1,170 @@
+---
+title: ""
+pagetitle: "Week 4 — Interpersonal and Clinical Communication | LIPPS"
+description: "Use patient-centred interpersonal communication to elicit concerns, explain information clearly, check understanding and support informed decisions."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 04
+:::
+
+# Interpersonal and Clinical Communication
+
+## A technically correct consultation can still fail if the patient leaves without being heard, understanding the plan or being able to act on it.
+
+<span class="lipps-chip">Listening</span> <span class="lipps-chip">Teach-back</span> <span class="lipps-chip">Shared decisions</span> <span class="lipps-chip">Trust</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Use patient-centred interpersonal communication to elicit concerns, explain information clearly, check understanding and support informed decisions.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. describe interpersonal communication as a two-way clinical and public-health process;
+2. use open questions, reflective listening and summarising appropriately;
+3. apply teach-back without shaming the patient;
+4. distinguish informing, counselling, persuasion and shared decision-making;
+5. explain how empathy, respect and non-verbal behaviour influence trust;
+6. communicate risk and uncertainty in understandable terms;
+7. work more safely across language and interpreter needs;
+8. recognise confidentiality, stigma and power problems in clinical communication;
+9. identify when motivational interviewing techniques may support behaviour change without coercion.
+:::
+
+::: {.lipps-section}
+## ORIENT · The patient nodded—but did not understand
+
+A clinician tells a patient with newly diagnosed hypertension to “reduce sodium, adhere to medication and review in four weeks.” The patient nods throughout. At the next visit, the clinician discovers that the patient stopped the tablets after three days because symptoms improved and did not understand what foods contain salt. Nodding was interpreted as comprehension.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · The encounter is a communication system
+
+Clinical communication includes agenda setting, eliciting concerns, explanation, emotional response, decision-making, checking understanding and follow-up. The clinician brings technical expertise; the patient brings goals, lived experience, beliefs, constraints and preferences.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Listening is an intervention
+
+Open questions invite the patient’s account; closed questions can clarify details. Reflective listening tests whether you understood. Summaries organise the conversation and expose disagreement. Interrupting early can make the consultation faster in the short term but less efficient when crucial concerns emerge later.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Empathy is not the same as agreement
+
+Empathy communicates that the person’s experience has been heard and taken seriously. It does not require agreeing with every belief. A response such as “I can see why that result frightened you; let us go through what it means” can maintain trust while correcting misunderstanding.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Teach-back checks the communication, not the intelligence
+
+Teach-back asks the patient to explain the plan in their own words: “I want to make sure I explained this clearly. How will you take these tablets when you get home?” If the explanation is wrong, the communicator re-explains and checks again. The responsibility is placed on the clarity of the explanation.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Shared decision-making requires genuine options
+
+When more than one reasonable option exists, shared decision-making combines clinical evidence with patient values and preferences. It is not simply giving the patient a leaflet or asking them to choose without support.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Motivational interviewing: evoke rather than lecture
+
+Selected motivational interviewing skills—open questions, affirmations, reflections and summaries—can help people explore ambivalence. The approach respects autonomy and tries to elicit the person’s own reasons for change rather than using argument or threat. Full motivational interviewing requires practice beyond one course module.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Risk communication works better with balanced, concrete formats
+
+Use consistent denominators, absolute risks and visual aids when helpful. Explain both potential benefit and harm. Check what the number means to the patient. Avoid presenting a relative reduction without baseline risk when that could exaggerate perceived benefit.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Language barriers require more than speaking slowly
+
+Where professional interpretation is needed and available, use it rather than relying automatically on children or untrained relatives, particularly for sensitive or high-stakes discussions. Speak to the patient, use short segments, avoid jargon and confirm understanding.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Power, stigma and confidentiality change what people are willing to say
+
+Patients may withhold information if they expect judgement, disclosure or discrimination. Privacy, respectful language and explicit confidentiality expectations are therefore part of data quality as well as ethics.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Close with an executable plan
+
+Before ending, clarify what happens next, where, when, what warning signs matter, and what to do if the plan becomes difficult. A plan that cannot be executed is not improved by repeating it more loudly.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A 22-year-old patient newly diagnosed with HIV says, “I feel fine, so I do not understand why I need tablets every day.” The clinic is busy. The patient is worried that family members will discover the diagnosis and has heard online that treatment damages the kidneys.
+
+1. Write two open questions that explore concerns without judgement.
+2. Give one empathic reflection.
+3. Explain the purpose of treatment in plain language without overwhelming the patient.
+4. Address the kidney concern while acknowledging uncertainty appropriately.
+5. Use teach-back to check understanding.
+6. Identify the confidentiality issue.
+7. Use one motivational-interviewing technique to explore readiness.
+8. End with a clear follow-up and safety plan.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. What does teach-back assess?
+2. How does empathy differ from reassurance?
+3. Why are open questions useful early in a consultation?
+4. When is shared decision-making appropriate?
+5. Why might a family member be a problematic interpreter?
+6. Give one example of a closing question that checks whether the plan is feasible.
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 4 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 4 bank of 48 items.
+
+**Initial time limit:** 11 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **AHRQ Health Literacy Universal Precautions / Teach-Back resources.** Practical approaches to checking understanding.
+- **Motivational Interviewing, Miller & Rollnick.** Client-centred communication for ambivalence and behaviour change.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 3](week-03.qmd)
+
+[Week 5 →](week-05.qmd)
+:::

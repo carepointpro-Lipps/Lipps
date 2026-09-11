@@ -1,0 +1,57 @@
+---
+title: "Health Communication — Core Readings"
+description: "Core frameworks and readings supporting the 12-week LIPPS Health Communication course."
+---
+
+# Core readings
+
+LIPPS Health Communication uses a deliberately mixed evidence base: strategic communication, behavioural science, health literacy, community engagement, emergency communication and programme planning.
+
+## Core public-health frameworks
+
+1. **World Health Organization. WHO principles for effective communications.** The framework organizes communication around six qualities: accessible, actionable, credible, relevant, timely and understandable.  
+   <https://www.who.int/about/communications/principles>
+
+2. **World Health Organization. WHO competency framework, risk communication and community engagement: for stronger and more inclusive health emergency programmes. 2024.**  
+   <https://www.who.int/publications/i/item/9789240092501>
+
+3. **World Health Organization. WHO competency framework: Building a response workforce to manage infodemics. 2021.**  
+   <https://www.who.int/publications/i/item/9789240035287>
+
+4. **World Health Organization. Health literacy.** Use alongside Week 3 to connect personal capabilities with organizational responsibility for accessible, understandable and usable information.  
+   <https://www.who.int/news-room/fact-sheets/detail/health-literacy>
+
+5. **Centers for Disease Control and Prevention. The CDC Clear Communication Index.** Use as a practical material-development and review tool, particularly in Week 6.  
+   <https://www.cdc.gov/ccindex/index.html>
+
+6. **Centers for Disease Control and Prevention. Crisis & Emergency Risk Communication (CERC) Manual.** Use alongside Weeks 5 and 9.  
+   <https://www.cdc.gov/cerc/php/cerc-manual/index.html>
+
+7. **National Cancer Institute. Making Health Communication Programs Work (Pink Book).** A programme-planning reference covering strategy development, testing, implementation and evaluation.  
+   <https://www.cancer.gov/publications/health-communication>
+
+## Behavioural-theory backbone
+
+Week 2 introduces the Health Belief Model, Theory of Planned Behaviour, Social Cognitive Theory, social-ecological thinking, COM-B and diffusion of innovations as **diagnostic tools rather than competing slogans**. In institutional delivery, lecturers should assign the theory readings used by their programme and require students to justify why a selected theory fits the specific determinant and context.
+
+## Reading use by week
+
+| Week | Core emphasis |
+|---:|---|
+| 1 | WHO communication principles; NCI programme-planning orientation |
+| 2 | Behavioural theory and COM-B |
+| 3 | WHO health literacy; audience insight |
+| 4 | Person-centred communication, teach-back and informed decisions |
+| 5 | WHO RCCE competency framework |
+| 6 | CDC Clear Communication Index; NCI message/material testing |
+| 7 | NCI channel and programme planning |
+| 8 | Digital accessibility, privacy and platform metrics |
+| 9 | WHO RCCE + CDC CERC |
+| 10 | WHO infodemic-management competency framework |
+| 11 | NCI programme planning and evaluation |
+| 12 | WHO accessibility/credibility principles plus institution-specific ethics and data-governance guidance |
+
+::: {.lipps-callout}
+**Source rule**  
+LIPPS examples and synthesis frameworks are teaching devices. They should not be presented as substitutes for current WHO, ministry, professional or institutional guidance when a learner is making an actual public-health decision.
+:::

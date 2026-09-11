@@ -1,0 +1,292 @@
+---
+title: ""
+pagetitle: "Week 4 — Descriptive Epidemiology: Person, Place and Time | LIPPS"
+description: "Describe health events systematically by person, place and time, use appropriate denominators and displays, and turn observed patterns into testable hypotheses."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 04
+:::
+
+# Descriptive Epidemiology: Person, Place and Time
+
+## Before you explain a pattern, describe it well enough to see what needs explaining.
+
+<span class="lipps-chip">Foundation</span> <span class="lipps-chip">Person · Place · Time</span> <span class="lipps-chip">Epi curves</span> <span class="lipps-chip">Hypothesis generation</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Describe health events systematically by person, place and time, use appropriate denominators and displays, and turn observed patterns into testable hypotheses.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 4, you should be able to:
+
+1. explain what descriptive epidemiology contributes before analytic testing;
+2. distinguish the health event being counted from the characteristics used to describe it;
+3. construct the logic of a useful line list and recognise why data quality matters before plotting;
+4. select an appropriate time scale and distinguish secular, seasonal and outbreak-time patterns;
+5. interpret the basic purpose and limitations of an epidemic curve;
+6. describe disease by place using relevant geographic units, rates and spot maps;
+7. choose person characteristics and category widths that preserve important patterns;
+8. distinguish a high count from a high rate;
+9. use descriptive patterns to identify populations at risk and generate hypotheses;
+10. recognise outliers and apparent increases that may reflect reporting, denominator or measurement changes rather than true disease change.
+:::
+
+::: {.lipps-section}
+## ORIENT · “Cases doubled” — is that enough?
+
+A district reports 80 malaria cases this week compared with 40 during the same week last year. That sounds like a doubling, but an epidemiologist should immediately ask what else changed.
+
+- Did the district population change?
+- Did testing volume change?
+- Did the case definition change?
+- Did a new reporting facility open?
+- Are the cases concentrated in one place, age group or time period?
+- Is the comparison week an appropriate expected baseline?
+
+Descriptive epidemiology is not “just making tables.” It is the disciplined first attempt to understand **what happened, to whom, where and when**, and to decide what deserves explanation.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Start by defining what you are counting
+
+A descriptive analysis is only as coherent as its event definition. Before counting, specify the disease, condition, injury, behaviour or other health event.
+
+For outbreak work, a practical case definition commonly combines **clinical criteria** with restrictions on **time, place and person**. The suspected exposure should generally not be built into the case definition when that exposure will later be evaluated, because doing so can manufacture an association.
+
+A useful first question is therefore:
+
+> **If two analysts used this definition independently, would they classify the same people in the same way?**
+
+Definitions may legitimately evolve as knowledge improves, but changes must be documented because a broader or narrower definition can change the apparent pattern.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Build the line list before the story
+
+A line list is a compact dataset in which each row represents one case or observation and each column represents a variable needed for description or investigation.
+
+A practical outbreak line list might include:
+
+| Domain | Example variables |
+|---|---|
+| Identifier | unique case ID |
+| Person | age, sex, occupation, population group |
+| Place | village, parish, facility, residence or exposure location |
+| Time | date of onset, date reported, date admitted |
+| Clinical | symptoms, laboratory status, outcome |
+| Investigation | selected exposures, contact status, vaccination status |
+
+Before analysis, check duplicates, impossible dates, missing age or location, inconsistent categories and the relationship between onset date and report date.
+
+::: {.lipps-callout}
+**A graph can make bad data look authoritative.**  
+Inspect the line list before you admire the curve.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Time: choose the clock that matches the process
+
+Time can be described at very different scales.
+
+**Secular trend** examines long-term change over years or decades.  
+**Seasonality** examines recurring patterns within the year.  
+**Day-of-week or time-of-day patterns** can reveal scheduled occupational, behavioural or environmental exposures.  
+**Epidemic time** focuses on the short interval relevant to an outbreak.
+
+The x-axis should therefore match the biology and operational question. Annual bins can hide a short outbreak; hourly bins can add noise to a chronic-disease trend.
+
+Events such as a new intervention, a reporting change or a suspected exposure can be annotated on a time plot, but temporal coincidence by itself does not prove effect.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Epidemic curves are compressed epidemiological arguments
+
+An epidemic curve plots the number of cases by time of onset, diagnosis or another clearly stated event. Its shape can suggest—but does not by itself prove—the pattern of spread.
+
+Common patterns include:
+
+- a concentrated peak compatible with a **point-source** exposure;
+- a prolonged or irregular pattern compatible with **continuous or intermittent common-source** exposure;
+- successive waves compatible with **propagated person-to-person transmission**.
+
+The curve can also reveal the magnitude and stage of an outbreak, possible outliers and a plausible exposure window when the incubation period is known.
+
+Do not classify an outbreak from shape alone. Reporting delays, mixed exposures, secondary transmission and missing onset dates can distort the curve.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Outliers can be clues rather than rubbish
+
+An observation far from the main pattern may represent:
+
+- a data-entry or recall error;
+- an unrelated illness;
+- an unusually long or short incubation period;
+- a secondary case;
+- exposure at a different time or place; or
+- the clue that links apparently separate groups.
+
+The correct response is not automatically to delete it. Verify it, understand it, and document any exclusion.
+
+This is a useful LIPPS habit:
+
+> **Investigate surprising observations before deciding they are errors.**
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Place is whatever geography matters to transmission or risk
+
+“Place” is broader than residence. Depending on the question, the relevant location may be a workplace, school, hospital ward, water point, market, travel destination or place of exposure.
+
+Two main mapping approaches have different purposes:
+
+**Spot maps** show where individual events occurred and are useful for small clusters or outbreaks.
+
+**Area maps** compare numbers or rates across geographic units. When populations differ substantially, rates are usually more meaningful than raw counts.
+
+A map shows spatial pattern; it does not automatically identify the mechanism producing that pattern. Population density, access to care, diagnostic capacity and reporting completeness can all create geographic differences.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Person: categories can reveal or conceal risk
+
+Person variables can include age, sex, occupation, socioeconomic measures, behaviours, immune status and other characteristics relevant to the problem.
+
+Age deserves particular care. A broad 0–4 year category may hide that nearly all excess disease is concentrated among infants. Category boundaries should therefore be chosen for epidemiological meaning, not merely because they are convenient.
+
+Similarly, an apparent difference between social groups should not be interpreted as an inherent biological difference without examining exposure, access, measurement and structural context.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Counts answer burden; rates answer comparative frequency
+
+A district with 500 cases may have a lower disease frequency than a district with 100 cases if their populations differ greatly.
+
+**Counts** are useful for operational planning: beds, medicines, staff and laboratory workload.
+
+**Rates or proportions** put events in relation to a population at risk and are more useful for comparing groups of different sizes.
+
+Example:
+
+| District | Cases | Population | Cases per 1,000 |
+|---|---:|---:|---:|
+| A | 500 | 500,000 | 1.0 |
+| B | 100 | 20,000 | 5.0 |
+
+The smaller district has fewer cases but five times the rate.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Description generates hypotheses; it rarely settles them
+
+Suppose cases cluster among children under five, peak after heavy rainfall and are concentrated around two water sources. Those observations can generate hypotheses about exposure and transmission.
+
+A hypothesis should connect the pattern to a mechanism that can be evaluated. For example:
+
+> Households relying on selected surface-water sources experienced higher risk of acute watery diarrhoea than households using protected sources.
+
+That hypothesis now suggests what comparison data must be collected.
+
+Descriptive epidemiology therefore bridges **observation → hypothesis**, while analytic epidemiology adds a comparison capable of testing that hypothesis more rigorously.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Observed versus expected
+
+A cluster is not automatically an outbreak. Investigators must consider whether occurrence exceeds what is expected for that population and period.
+
+The expected level may come from:
+
+- prior weeks, months or years;
+- a comparable season;
+- surveillance records;
+- another population with similar characteristics; or
+- a deliberately constructed baseline.
+
+An apparent increase may instead reflect population growth, improved diagnostics, duplicate reporting, a changed case definition, greater public attention or a more diligent reporting facility.
+
+::: {.lipps-callout}
+**LIPPS question:** What changed in the disease—and what changed in the system that observes the disease?
+:::
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A fictional district receives 46 reports of acute watery diarrhoea over 10 days. Thirty-four reports come from two neighbouring villages. Onset dates show a sharp rise over three days, followed by a slower decline. Most patients are children, but one case occurred a week earlier in an adult trader who regularly visits both villages. A new private clinic also began reporting during the same month.
+
+Work through the problem before looking for an exposure:
+
+1. Draft a usable working case definition.
+2. Identify the minimum variables for the line list.
+3. Decide whether onset date or report date should drive the epidemic curve and explain why.
+4. Calculate village-specific rates if population denominators are available.
+5. Identify which observations might be useful outliers.
+6. List at least three hypotheses suggested by the person-place-time pattern.
+7. Identify at least three non-disease explanations for the apparent increase that must be checked.
+8. State what comparison you would need next to test your leading hypothesis.
+
+The point is not to guess the cause. The point is to produce a description strong enough to justify the next question.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why can an epidemic curve based on report date tell a different story from one based on symptom-onset date?
+2. A village has twice as many cases as another village but ten times the population. Which comparison is more informative: counts or rates, and why?
+3. What is wrong with including “drank from Water Point X” in the case definition when Water Point X is the exposure you plan to test?
+4. Give two plausible explanations for a late outlier on an epidemic curve other than data-entry error.
+5. Why might five-year age bands hide an important disease pattern among infants?
+6. Does a spatial cluster around a health facility prove that the facility is the source of infection? Explain.
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 4 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions randomly drawn from a Week 4 bank of 50 items.
+
+**Initial time limit:** 11 minutes.  
+**Question style:** interpretation of person-place-time displays, denominator choice, case-definition logic, epidemic-curve reasoning and hypothesis generation.  
+**Presentation:** one question per page; options shuffled where appropriate; one graded mastery attempt.  
+**Practice mode:** untimed with explanatory feedback.
+
+::: {.lipps-callout}
+**Assessment principle**  
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.
+:::
+:::
+
+::: {.lipps-section}
+## Source foundation and LIPPS extensions
+
+**Primary source foundation:** *CDC Principles of Epidemiology in Public Health Practice, Third Edition*, especially its treatment of descriptive epidemiology, time, place, person, epidemic curves, spot maps, case definitions and observed-versus-expected reasoning.
+
+**LIPPS additions:** the fictional district cases, the explicit data-quality workflow, modern wording around reporting-system changes, and the integrated “disease versus observation system” reasoning are instructional extensions rather than material reproduced from the source.
+
+**Reference:** Centers for Disease Control and Prevention. *Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics*. October 2006; updated May 2012.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 3](week-03.qmd)
+
+[Week 5: Cross-sectional Studies →](week-05.qmd)
+:::

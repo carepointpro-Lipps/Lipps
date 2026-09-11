@@ -1,0 +1,374 @@
+// LIPPS Epidemiology — Week 2: Measuring Disease Frequency and Population Health
+// 50-item objective question bank for Moodle GIFT import.
+// Questions are original LIPPS teaching items informed by CDC Principles of Epidemiology, Lesson Three.
+// Review item performance and timing before high-stakes institutional use.
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Foundations
+
+::EPI-W2-001::Which statement BEST describes a proportion? {
+=A comparison in which the numerator is part of the denominator#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Any comparison between two unrelated quantities#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~A measure that must contain person-time#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~A number of events without a denominator#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-002::A facility has 36 nurses and 12 clinical officers. The value 36 divided by 12 is BEST described as: {
+=A ratio#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~A prevalence#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~An incidence proportion#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~A mortality rate#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-003::Which statement about a count is MOST accurate? {
+=It can be important for planning resources even when it is insufficient for comparing disease occurrence#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~It automatically adjusts for population size#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~It always measures risk#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~It is never useful in epidemiology#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-004::A report states that 240 of 800 adults have hypertension. The value 240 divided by 800 is mathematically a: {
+=Proportion#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Person-time rate#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Crude mortality rate#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Ratio in which the numerator is not part of the denominator#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-005::Why should an epidemiologist inspect a fraction rather than rely only on the word “rate” in its name? {
+=Some measures conventionally called rates are mathematically proportions or ratios#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~All epidemiological rates are percentages#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Rates never have denominators#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~The numerator is never relevant#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Denominators and population at risk
+
+::EPI-W2-006::A district reports 300 positive malaria tests among 1,000 people tested. Which conclusion is MOST defensible? {
+=Test positivity among those tested was 30%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~District malaria prevalence was 30%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~District malaria incidence was 30%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Thirty percent of all district residents had malaria#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-007::Which denominator is MOST appropriate for an incidence proportion of a disease that can occur only among people with a particular organ? {
+=People with that organ who are disease-free and at risk at the start#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~The total national population regardless of eligibility#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All people already diagnosed with the disease#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All deaths recorded during the year#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-008::What is the main problem with dividing maternal deaths by the entire district population when trying to calculate a birth-based maternal mortality indicator? {
+=The denominator does not correspond to the population represented by the indicator#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~The denominator is too large to calculate#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Maternal deaths cannot be counted#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All mortality indicators must use person-time#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-009::District A has 900 new cases in a population of 450,000 and District B has 600 new cases in a population of 120,000. Which district has the higher simplified case occurrence per 1,000 population? {
+=District B#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~District A#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~They are identical#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Cannot be determined because counts are never useful#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-010::Which question should come FIRST when choosing a denominator? {
+=Who could have contributed a case to the numerator during the relevant period?#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Which software package will produce the smallest p-value?#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~How many decimal places should be reported?#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Which graph looks most attractive?#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Incidence proportion and attack rate
+
+::EPI-W2-011::An initially disease-free cohort of 2,000 adults is followed for one year and 140 develop hypertension. What is the one-year incidence proportion? {
+=7%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~14%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~70%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~0.7%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-012::Which numerator belongs in an incidence proportion? {
+=New cases occurring during the specified period#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~All cases present at the end of the period#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All deaths from any cause#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All people tested#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-013::Which statement BEST describes the denominator of an incidence proportion? {
+=The population at risk at the start of the observation period#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Total person-time accumulated by all participants#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All people who have the disease at the end#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All deaths during the period#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-014::During a wedding outbreak, 32 of 80 people who ate chicken become ill. What is the food-specific attack rate among chicken eaters? {
+=40%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~25%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~32%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~80%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-015::Why is an attack rate usually considered an incidence proportion? {
+=It describes the proportion of an initially at-risk population that becomes ill during an outbreak period#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~It always uses person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~It includes all pre-existing cases#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Its denominator is all deaths#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Secondary attack rate
+
+::EPI-W2-016::Twelve primary cases occur in households containing 58 people in total. Nine additional household members become cases during the secondary-risk period. Using the LIPPS definition, what is the secondary attack rate? {
+=19.6%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~15.5%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~9.0%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~46.0%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-017::Why are primary cases commonly removed from the denominator when calculating a secondary attack rate? {
+=They are not susceptible contacts at risk of becoming secondary cases from themselves#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~They are always immune#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Primary cases are not real cases#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~The denominator must contain deaths only#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-018::Which setting MOST naturally motivates calculation of a secondary attack rate? {
+=Household transmission after primary cases are identified#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~A national census of all-cause mortality#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~A cross-sectional estimate of diabetes prevalence#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~A comparison of two crude birth rates#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-019::A primary case lives with four susceptible contacts and two develop disease during the relevant secondary period. The secondary attack rate is: {
+=50%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~25%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~40%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~200%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-020::Which denominator BEST represents a secondary attack rate? {
+=Susceptible contacts exposed to primary cases#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~All cases in the district since records began#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Total person-years in a cohort#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All deaths from the condition#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Incidence rate and person-time
+
+::EPI-W2-021::A cohort experiences 37 new TB cases during 1,850 person-years of observation. What is the incidence rate per 1,000 person-years? {
+=20 per 1,000 person-years#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~2 per 1,000 person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~200 per 1,000 person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~37%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-022::Which feature MOST clearly identifies an incidence rate rather than an incidence proportion? {
+=Person-time is included in the denominator#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~The numerator contains new cases#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~The measure concerns disease occurrence#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~The result can be compared across groups#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-023::Ten people are each followed disease-free for six months. How much person-time do they contribute in total? {
+=5 person-years#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~10 person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~60 person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~0.5 person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-024::One participant is observed disease-free for 3 complete years. How much follow-up does that person contribute? {
+=3 person-years#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~1 person-year#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~0.3 person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~30 person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-025::Which interpretation BEST fits an incidence rate of 12 per 1,000 person-years? {
+=New cases occurred at a rate of 12 for every 1,000 person-years of observed time at risk#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Twelve percent of the starting population definitely became cases#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Twelve of every 1,000 people had the condition at one point in time#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Twelve percent of all deaths were due to the condition#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Prevalence
+
+::EPI-W2-026::A representative survey finds 360 adults with hypertension among 1,200 adults examined at the survey point. What is the point prevalence? {
+=30%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~3%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~300%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~0.3%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-027::Which cases belong in a point prevalence numerator? {
+=All people who have the condition at the specified point, regardless of when it began#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Only cases diagnosed for the first time that day#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Only cases that will recover#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Only fatal cases#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-028::What distinguishes period prevalence from point prevalence? {
+=Period prevalence includes people who had the condition at any time during a defined interval#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Period prevalence includes new cases only#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Point prevalence requires person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Point prevalence uses deaths as the denominator#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-029::Which statement about prevalence is correct? {
+=High prevalence may reflect high incidence, long duration, or both#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Prevalence contains new cases only#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Prevalence is independent of disease duration#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Low prevalence always means low incidence#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-030::A disease has low incidence but patients often live with it for decades. Which pattern is plausible? {
+=Prevalence may still be high#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Prevalence must be zero#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Incidence rate becomes a proportionate mortality#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~The disease cannot be measured cross-sectionally#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Incidence versus prevalence
+
+::EPI-W2-031::Which statement BEST distinguishes incidence from prevalence? {
+=Incidence concerns new occurrence, while prevalence describes existing cases in the defined population and time#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Incidence includes all old and new cases, while prevalence includes only new cases#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~They are always numerically identical#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Prevalence always uses person-time#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-032::In a one-week outbreak, 75 of 500 students become ill, but only 30 are still ill on Friday. What is the Friday point prevalence if the denominator is still 500? {
+=6%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~15%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~30%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~75%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-033::Using the same outbreak, what is the weekly incidence proportion if 75 of 500 initially well students become ill? {
+=15%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~6%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~75%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~0.15 per 1,000#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-034::Why can point prevalence be lower than cumulative incidence during a short outbreak? {
+=Some people who became cases may have recovered before the prevalence assessment point#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Prevalence includes only deaths#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Incidence excludes new cases#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Point prevalence always uses a larger numerator#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-035::Which measure would be MOST appropriate for estimating the burden of chronic hypertension at one defined survey point? {
+=Point prevalence#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Incidence rate#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Secondary attack rate#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Case fatality#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Mortality measures
+
+::EPI-W2-036::Which denominator is used for a crude population mortality rate? {
+=The relevant population, commonly represented by a mid-period population#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~All deaths only#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All diagnosed cases only#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Person-time can never be used for mortality#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-037::A district has 200 malaria deaths during a year in a population of 2,000,000. What is the cause-specific malaria mortality rate per 100,000? {
+=10 per 100,000#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~1 per 100,000#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~100 per 100,000#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~0.1 per 100,000#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-038::For an age-specific mortality rate among children under five, which denominator is MOST appropriate? {
+=The population of children under five#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~The total population of all ages#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All deaths among children under five#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All live births regardless of the indicator#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-039::Why can crude mortality rates mislead when comparing two populations with very different age structures? {
+=Mortality varies strongly with age, so a crude difference may reflect population composition#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Crude rates automatically remove age differences#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Age does not influence mortality#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Crude rates use no denominator#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-040::Which approach can help when crude mortality differences are driven by different age distributions? {
+=Compare age-specific rates or use age standardisation#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Remove the denominator#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Use case fatality instead of mortality for every question#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Report counts only#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Case fatality and proportionate mortality
+
+::EPI-W2-041::Eight of 200 identified cases die from the disease. What is the case-fatality proportion? {
+=4%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~2%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~8%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~25%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-042::Case fatality primarily describes: {
+=Severity among identified cases#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Disease frequency in the whole population#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~The share of births that are low birth weight#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~The speed of new cases per person-time#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-043::Fifty road-traffic deaths occur among 500 deaths from all causes. What is the proportionate mortality due to road traffic injuries? {
+=10%#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~50%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~5%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~100%#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-044::Why is proportionate mortality NOT a population mortality rate? {
+=Its denominator is all deaths rather than the population in which deaths occurred#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Its numerator contains deaths#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~It cannot be expressed as a percentage#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~It is always age-standardised#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-045::Which pair correctly matches the denominator to the measure? {
+=Case fatality — cases; proportionate mortality — all deaths#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Case fatality — total population; proportionate mortality — person-years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Case fatality — live births; proportionate mortality — cases#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Case fatality — all deaths; proportionate mortality — total population#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 02/Maternal, infant, natality and integration
+
+::EPI-W2-046::Which denominator is conventionally used for the infant mortality rate described in the attached CDC lesson? {
+=Live births during the same period#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Mid-year population of all ages#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All infant cases#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Women aged 15–49 years#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-047::The CDC lesson labels maternal mortality as a rate but explicitly notes that it is really a ratio because the denominator is: {
+=Live births rather than the population of women at risk#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~All deaths rather than births#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Person-years rather than women#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~New pregnancies rather than live births#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-048::Which denominator is used for the crude birth rate? {
+=Mid-period total population#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Women aged 15–44 only#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All live births#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All deaths#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-049::Which denominator is used for the crude fertility rate in the CDC lesson? {
+=Women aged 15–44 years at mid-interval#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~The entire population at mid-interval#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All births#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~All women with at least one child#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}
+
+::EPI-W2-050::Which principle BEST summarises Week 2? {
+=Match the numerator, denominator, population and time to the question before calculating#Correct. This answer matches the numerator, denominator and interpretation required by the measure.
+~Always use the measure with the largest number#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~Convert every result to a percentage#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+~A correct calculation guarantees a correct epidemiological interpretation#Not the best answer. Recheck the population, numerator, denominator, time period, and the question the measure is intended to answer.
+}

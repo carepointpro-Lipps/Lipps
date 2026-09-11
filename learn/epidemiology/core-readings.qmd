@@ -1,0 +1,33 @@
+---
+title: "Epidemiology — Core Readings"
+description: "Core source and reading guidance for the 12-week LIPPS Epidemiology course."
+---
+
+# Core readings
+
+## Primary foundation
+
+**Centers for Disease Control and Prevention. _Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics_.** Originally published in 2006 and subsequently updated. The LIPPS course uses this source for foundational epidemiological reasoning, frequency measures, association, descriptive epidemiology, basic study designs, surveillance and outbreak investigation.
+
+CDC archive: <https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/index.html>  
+CDC Stacks record: <https://stacks.cdc.gov/view/cdc/13178>
+
+## How LIPPS uses an older foundational text
+
+The CDC text remains valuable for introductory applied epidemiology, but LIPPS does **not** treat it as the final word on modern methodology. Course pages explicitly identify later additions such as prevalence ratios, modern causal diagrams, collider bias, cluster-randomised trials, intention-to-treat, quasi-experimental designs, likelihood ratios, ROC analysis and modern critical-appraisal language as LIPPS extensions.
+
+In institutional use, lecturers should pair the course with current discipline-specific reporting standards, ministry/WHO surveillance guidance and contemporary methodological readings appropriate to the programme level.
+
+## Suggested reading pattern
+
+- **Weeks 1–4:** CDC Lessons 1–3 plus the LIPPS lessons.
+- **Weeks 5–8:** CDC study-design sections plus current programme readings on observational and experimental design.
+- **Week 9:** current causal-inference and epidemiological-bias reading selected by the lecturer.
+- **Week 10:** current diagnostic-accuracy reading and reporting guidance selected by the lecturer.
+- **Week 11:** CDC surveillance and outbreak-investigation lessons plus current national/WHO outbreak guidance.
+- **Week 12:** a published epidemiological paper chosen for structured critical appraisal.
+
+::: {.lipps-callout}
+**Important**  
+The course teaches principles. Real surveillance definitions, outbreak protocols and clinical/diagnostic recommendations must be checked against current national and international guidance before operational use.
+:::

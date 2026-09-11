@@ -1,0 +1,433 @@
+$CATEGORY: LIPPS/Epidemiology/Week 09/Bias
+
+::EPI-W9-001::What best defines epidemiological bias? {
+=Systematic error that can shift an estimate or inference away from the truth#Correct.
+~Any random fluctuation#Review causal structure rather than statistical association alone.
+~Intentional fraud only#Review causal structure rather than statistical association alone.
+~A wide confidence interval only#Review causal structure rather than statistical association alone.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 09/Selection bias
+
+::EPI-W9-002::People with severe symptoms are more likely to participate in a clinic-based study. What is the main bias? {
+=Selection bias#Correct.
+~Information bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-003::Exposed participants with early symptoms are more likely to leave the cohort. What is the main bias? {
+=Selection bias#Correct.
+~Information bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-004::In an occupational study, people with severe symptoms are more likely to participate in a clinic-based study. What is the main bias? {
+=Selection bias#Correct.
+~Information bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-005::In a cohort analysis, exposed participants with early symptoms are more likely to leave the cohort. What is the main bias? {
+=Selection bias#Correct.
+~Information bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-006::In a case-control analysis, people with severe symptoms are more likely to participate in a clinic-based study. What is the main bias? {
+=Selection bias#Correct.
+~Information bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-007::In a cross-sectional survey, exposed participants with early symptoms are more likely to leave the cohort. What is the main bias? {
+=Selection bias#Correct.
+~Information bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-008::In a programme evaluation, people with severe symptoms are more likely to participate in a clinic-based study. What is the main bias? {
+=Selection bias#Correct.
+~Information bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-009::In a maternal-health study, exposed participants with early symptoms are more likely to leave the cohort. What is the main bias? {
+=Selection bias#Correct.
+~Information bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 09/Information bias
+
+::EPI-W9-010::Cases remember an exposure more intensely than controls. What is the main bias? {
+=Information bias#Correct.
+~Selection bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-011::Outcome assessors know which treatment participants received and classify borderline outcomes differently. What is the main bias? {
+=Information bias#Correct.
+~Selection bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-012::In an infectious-disease study, cases remember an exposure more intensely than controls. What is the main bias? {
+=Information bias#Correct.
+~Selection bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-013::In an NCD study, outcome assessors know which treatment participants received and classify borderline outcomes differently. What is the main bias? {
+=Information bias#Correct.
+~Selection bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-014::In a workplace study, cases remember an exposure more intensely than controls. What is the main bias? {
+=Information bias#Correct.
+~Selection bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-015::In a facility study, outcome assessors know which treatment participants received and classify borderline outcomes differently. What is the main bias? {
+=Information bias#Correct.
+~Selection bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-016::In a behavioural study, cases remember an exposure more intensely than controls. What is the main bias? {
+=Information bias#Correct.
+~Selection bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+::EPI-W9-017::In an environmental study, outcome assessors know which treatment participants received and classify borderline outcomes differently. What is the main bias? {
+=Information bias#Correct.
+~Selection bias#Classify whether the systematic difference concerns selection or measurement.
+~Confounding#Classify whether the systematic difference concerns selection or measurement.
+~Effect modification#Classify whether the systematic difference concerns selection or measurement.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 09/Confounding
+
+::EPI-W9-018::What is confounding? {
+=Distortion of an exposure-outcome association by a third variable related to both#Correct.
+~Any measurement error#Review causal structure rather than statistical association alone.
+~Any statistically significant result#Review causal structure rather than statistical association alone.
+~Effect heterogeneity across subgroups#Review causal structure rather than statistical association alone.
+}
+
+::EPI-W9-019::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 1, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-020::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 2, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-021::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 3, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-022::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 4, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-023::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 5, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-024::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 6, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-025::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 7, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-026::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 8, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-027::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 9, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-028::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 10, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-029::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 11, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+::EPI-W9-030::Variable Z causes the outcome and is associated with exposure in the source population, but is not caused by exposure. In scenario 12, what role is Z plausibly playing? {
+=Confounder#Correct.
+~Mediator#A pre-exposure common cause structure is compatible with confounding.
+~Collider#A pre-exposure common cause structure is compatible with confounding.
+~Random error#A pre-exposure common cause structure is compatible with confounding.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 09/Mediator collider
+
+::EPI-W9-031::Why can adjustment for a mediator be inappropriate when estimating a total effect? {
+=It can block part of the causal pathway of interest#Correct.
+~It always increases sample size#Review causal structure rather than statistical association alone.
+~It guarantees selection bias#Review causal structure rather than statistical association alone.
+~It changes a cohort into a case-control study#Review causal structure rather than statistical association alone.
+}
+
+::EPI-W9-032::Why can conditioning on a collider be harmful? {
+=It can create a spurious association between causes of the collider#Correct.
+~It always removes confounding#Review causal structure rather than statistical association alone.
+~It increases sensitivity#Review causal structure rather than statistical association alone.
+~It makes the outcome rare#Review causal structure rather than statistical association alone.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 09/Effect modification
+
+::EPI-W9-033::How does effect modification differ from confounding? {
+=It represents genuine variation in effect across levels of another variable rather than distortion to be removed#Correct.
+~It is always a data-entry error#Review causal structure rather than statistical association alone.
+~It means the sample is too small#Review causal structure rather than statistical association alone.
+~It is identical to selection bias#Review causal structure rather than statistical association alone.
+}
+
+::EPI-W9-034::An exposure has RR 1.0 in subgroup A and RR 2.5 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+::EPI-W9-035::An exposure has RR 1.1 in subgroup A and RR 2.6 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+::EPI-W9-036::An exposure has RR 1.2 in subgroup A and RR 2.7 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+::EPI-W9-037::An exposure has RR 1.3 in subgroup A and RR 2.8 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+::EPI-W9-038::An exposure has RR 1.4 in subgroup A and RR 2.9 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+::EPI-W9-039::An exposure has RR 1.5 in subgroup A and RR 3.0 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+::EPI-W9-040::An exposure has RR 1.6 in subgroup A and RR 3.1 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+::EPI-W9-041::An exposure has RR 1.7 in subgroup A and RR 3.2 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+::EPI-W9-042::An exposure has RR 1.8 in subgroup A and RR 3.3 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+::EPI-W9-043::An exposure has RR 1.9 in subgroup A and RR 3.4 in subgroup B after appropriate control of confounding. What should be considered? {
+=Effect modification or heterogeneity#Correct.
+~Automatic data deletion#Meaningfully different stratum-specific effects can indicate effect modification.
+~A single common effect without checking#Meaningfully different stratum-specific effects can indicate effect modification.
+~Case-control sampling bias by definition#Meaningfully different stratum-specific effects can indicate effect modification.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 09/Adjustment
+
+::EPI-W9-044::Which variable-selection rule is safest? {
+=Choose adjustment variables using causal and subject-matter reasoning, not p-values alone#Correct.
+~Adjust for every measured variable#Review causal structure rather than statistical association alone.
+~Adjust only variables with p below 0.05#Review causal structure rather than statistical association alone.
+~Never adjust observational studies#Review causal structure rather than statistical association alone.
+}
+
+::EPI-W9-045::What is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-046::In an occupational study, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-047::In a cohort analysis, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-048::In a case-control analysis, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-049::In a cross-sectional survey, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-050::In a programme evaluation, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-051::In a maternal-health study, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-052::In an infectious-disease study, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-053::In an NCD study, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-054::In a workplace study, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-055::In a facility study, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-056::In a behavioural study, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-057::In an environmental study, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-058::In an occupational study, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? [scenario EPI-W9-058] {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-059::In a cohort analysis, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? [scenario EPI-W9-059] {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}
+
+::EPI-W9-060::In a case-control analysis, what is wrong with the statement 'we adjusted for everything, therefore confounding is gone'? [scenario EPI-W9-060] {
+=Some variables may be mediators or colliders, and unmeasured or residual confounding can remain#Correct.
+~More variables always guarantee validity#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Confounding exists only in small samples#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+~Adjustment makes measurement error impossible#Adjustment quality depends on causal structure and measurement, not the number of covariates.
+}

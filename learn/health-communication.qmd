@@ -1,0 +1,118 @@
+---
+title: ""
+pagetitle: "Health Communication | LIPPS"
+description: "A complete 12-week applied Health Communication course on LIPPS Learn."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · 12 WEEKS
+:::
+
+# Health Communication
+
+## Communicate so that information can be understood, trusted and used.
+
+This applied course connects communication theory to real public-health decisions. Learners move from communication fundamentals and behavioural theory through audience insight, clinical communication, community engagement, message design, media strategy, digital communication, risk communication, infodemic management, evaluation and ethics.
+
+<span class="lipps-chip">12 weeks</span> <span class="lipps-chip">Applied cases</span> <span class="lipps-chip">Timed objective quizzes</span> <span class="lipps-chip">Moodle-ready</span>
+:::
+
+::: {.lipps-section}
+## Course philosophy
+
+LIPPS Health Communication is built around one principle:
+
+> **Communication succeeds only when the intended audience can access it, interpret it, trust it and use it in a real decision.**
+
+The course therefore treats communication as a public-health intervention that must be diagnosed, designed, implemented and evaluated—not as the production of posters or social-media content.
+:::
+
+::: {.lipps-section}
+## By the end of the course, learners should be able to
+
+- diagnose health communication problems before selecting messages or channels;
+- use behavioural and communication theory to explain determinants of action;
+- analyse audiences, culture, health literacy, accessibility and communication environments;
+- conduct effective interpersonal and clinical communication;
+- design participatory community engagement and feedback systems;
+- develop and pre-test clear, actionable messages;
+- select integrated channel and media strategies;
+- design safer, more equitable digital health communication;
+- communicate uncertainty and risk during public-health emergencies;
+- identify and manage misinformation, disinformation and infodemic problems;
+- design and evaluate health communication campaigns; and
+- apply ethical, equity and AI-governance principles to health communication.
+:::
+
+::: {.lipps-section}
+## The 12-week course
+
+<div class="lipps-week-grid">
+
+<div class="lipps-week"><span>01</span><div><h3><a href="health-communication/week-01.qmd">Foundations of Health Communication</a></h3><p>Explain health communication as a strategic public-health process that connects evidence, audiences, messages, channels, feedback and action.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 48.</div></div>
+
+<div class="lipps-week"><span>02</span><div><h3><a href="health-communication/week-02.qmd">Communication and Behaviour-Change Theory</a></h3><p>Use behavioural and communication theory to diagnose why a health behaviour occurs and to select plausible communication and non-communication responses.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 48.</div></div>
+
+<div class="lipps-week"><span>03</span><div><h3><a href="health-communication/week-03.qmd">Audience Analysis, Culture and Health Literacy</a></h3><p>Use formative audience insight, health-literacy principles and cultural context to design communication that people can access, understand and use.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 48.</div></div>
+
+<div class="lipps-week"><span>04</span><div><h3><a href="health-communication/week-04.qmd">Interpersonal and Clinical Communication</a></h3><p>Use patient-centred interpersonal communication to elicit concerns, explain information clearly, check understanding and support informed decisions.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 48.</div></div>
+
+<div class="lipps-week"><span>05</span><div><h3><a href="health-communication/week-05.qmd">Community Engagement and Participatory Communication</a></h3><p>Design community engagement as a two-way, accountable process that shares information, listens, adapts interventions and builds workable solutions with affected communities.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 48.</div></div>
+
+<div class="lipps-week"><span>06</span><div><h3><a href="health-communication/week-06.qmd">Message Development and Pre-testing</a></h3><p>Develop clear, actionable health messages from defined objectives and improve them through systematic pre-testing with intended audiences.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 48.</div></div>
+
+<div class="lipps-week"><span>07</span><div><h3><a href="health-communication/week-07.qmd">Communication Channels and Media Strategy</a></h3><p>Select and combine communication channels and messengers according to audience access, trust, objective, reach, frequency, interactivity, cost and decision timing.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 48.</div></div>
+
+<div class="lipps-week"><span>08</span><div><h3><a href="health-communication/week-08.qmd">Digital Health and Social Media Communication</a></h3><p>Design and evaluate digital health communication while accounting for platform dynamics, privacy, accessibility, digital exclusion and the difference between engagement metrics and health outcomes.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 48.</div></div>
+
+<div class="lipps-week"><span>09</span><div><h3><a href="health-communication/week-09.qmd">Risk and Crisis Communication</a></h3><p>Communicate rapidly and transparently during health threats while acknowledging uncertainty, supporting protective action, listening to affected communities and adapting as evidence changes.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 52.</div></div>
+
+<div class="lipps-week"><span>10</span><div><h3><a href="health-communication/week-10.qmd">Misinformation, Disinformation and Infodemic Management</a></h3><p>Identify harmful information problems, prioritise them by likely health impact and respond through listening, accurate communication, trusted messengers, community engagement and resilience-building.</p><strong>Mastery:</strong> 15 timed objective questions from a bank of 52.</div></div>
+
+<div class="lipps-week"><span>11</span><div><h3><a href="health-communication/week-11.qmd">Communication Campaign Design and Evaluation</a></h3><p>Design a coherent health communication campaign from problem diagnosis through objectives, strategy, implementation, monitoring and evaluation.</p><strong>Mastery:</strong> 20 timed objective questions from a bank of 56.</div></div>
+
+<div class="lipps-week"><span>12</span><div><h3><a href="health-communication/week-12.qmd">Ethics, Equity and the Future of Health Communication</a></h3><p>Evaluate health communication for ethical integrity, equity, accessibility and responsible use of emerging technologies, then integrate the full course using the LIPPS SIGNAL framework.</p><strong>Mastery:</strong> 20 timed objective questions from a bank of 60.</div></div>
+
+</div>
+:::
+
+::: {.lipps-section}
+## How every week works
+
+**ORIENT** — begin with a realistic public-health communication problem.  
+**LEARN** — build concepts and decision frameworks.  
+**APPLY** — work through an integrated case.  
+**PRACTISE** — answer untimed reasoning questions with feedback in Moodle.  
+**DEMONSTRATE** — complete a short timed mastery quiz drawn from a larger question bank.
+
+The weekly quizzes are designed to be **AI-resilient rather than “AI-proof.”** Scenario-based items, random banks, shuffled options and calibrated time limits make knowing the material the most efficient strategy while preserving normal accessibility and approved accommodations.
+
+[Read the LIPPS assessment model →](assessment-model.qmd)
+:::
+
+::: {.lipps-section}
+## Source backbone
+
+The course draws on established health-communication and behavioural-science literature, with particular emphasis on the **WHO Strategic Communications Framework**, **WHO Risk Communication and Community Engagement guidance and competency framework**, **WHO infodemic-management resources**, behavioural theories commonly used in health promotion, and programme-planning principles from *Making Health Communication Programs Work*.
+
+LIPPS adds original instructional syntheses, African public-health scenarios, structured decision problems and the **LIPPS SIGNAL** capstone framework.
+
+[Open the core reading list →](health-communication/core-readings.qmd)
+:::
+
+::: {.lipps-section}
+## Core readings and pilot status
+
+The course is suitable for a **university teaching pilot**, but the current Moodle banks should not yet be used as a high-stakes examination bank. Many foundation items are useful for practice; mastery items must be separated, rewritten toward novel scenarios and then piloted.
+
+[Core readings →](health-communication/core-readings.qmd)  
+[University pilot assessment blueprint →](pilot-assessment-blueprints.qmd)
+:::
+
+::: {.lipps-section}
+## Course access
+
+The public syllabus remains open. Lessons, quizzes, grades and learner progress are designed for **LIPPS Learn on Moodle**. Until the Moodle instance is connected, these pages serve as the **core lesson source and public preview**. For a university pilot, weekly lessons should be paired with the assigned readings, facilitated activities and authentic assessments described in the pilot blueprint.
+:::

@@ -1,0 +1,470 @@
+$CATEGORY: LIPPS/Epidemiology/Week 12/Claim type
+
+::EPI-W12-001::'Hypertension prevalence is 28%' is primarily what type of claim? {
+=Descriptive#Correct.
+~Causal#Review the appraisal question before choosing an interpretation.
+~Predictive#Review the appraisal question before choosing an interpretation.
+~Experimental#Review the appraisal question before choosing an interpretation.
+}
+
+::EPI-W12-002::'Programme receipt was associated with lower mortality' is primarily what type of claim? {
+=Associational#Correct.
+~Purely descriptive#Review the appraisal question before choosing an interpretation.
+~Necessarily causal#Review the appraisal question before choosing an interpretation.
+~A diagnostic-accuracy claim#Review the appraisal question before choosing an interpretation.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 12/Design and temporality
+
+::EPI-W12-003::Why should critical appraisal begin with design? {
+=Design determines how participants, exposure, comparison and outcome were generated#Correct.
+~P values determine design quality#Review the appraisal question before choosing an interpretation.
+~Large samples make design irrelevant#Review the appraisal question before choosing an interpretation.
+~Only software choice matters#Review the appraisal question before choosing an interpretation.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 12/Bias and confounding
+
+::EPI-W12-004::Exposure was self-selected and participants were wealthier than non-participants. What is the most important appraisal point? {
+=Residual confounding or selection may explain some association#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-005::Exposure and outcome were measured at the same visit. What is the most important appraisal point? {
+=Temporal order may be ambiguous#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-006::Loss to follow-up was 15% in one group and 3% in the other. What is the most important appraisal point? {
+=Differential attrition may introduce selection bias#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-007::Outcome assessors knew treatment status for a subjective outcome. What is the most important appraisal point? {
+=Differential outcome measurement may introduce information bias#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-008::The confidence interval includes clinically important benefit and harm. What is the most important appraisal point? {
+=The result is imprecise for decision-making#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-009::A statistically significant effect is only 0.1 percentage points. What is the most important appraisal point? {
+=Statistical significance does not establish practical importance#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-010::When appraising a cohort paper, exposure was self-selected and participants were wealthier than non-participants. What is the most important appraisal point? {
+=Residual confounding or selection may explain some association#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-011::When reviewing a cross-sectional report, exposure and outcome were measured at the same visit. What is the most important appraisal point? {
+=Temporal order may be ambiguous#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-012::When reading a case-control study, loss to follow-up was 15% in one group and 3% in the other. What is the most important appraisal point? {
+=Differential attrition may introduce selection bias#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-013::When evaluating a trial, outcome assessors knew treatment status for a subjective outcome. What is the most important appraisal point? {
+=Differential outcome measurement may introduce information bias#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-014::When reviewing a programme report, the confidence interval includes clinically important benefit and harm. What is the most important appraisal point? {
+=The result is imprecise for decision-making#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-015::When reading a surveillance analysis, a statistically significant effect is only 0.1 percentage points. What is the most important appraisal point? {
+=Statistical significance does not establish practical importance#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-016::When appraising an outbreak report, exposure was self-selected and participants were wealthier than non-participants. What is the most important appraisal point? {
+=Residual confounding or selection may explain some association#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-017::When reviewing a diagnostic study, exposure and outcome were measured at the same visit. What is the most important appraisal point? {
+=Temporal order may be ambiguous#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-018::When evaluating a policy analysis, loss to follow-up was 15% in one group and 3% in the other. What is the most important appraisal point? {
+=Differential attrition may introduce selection bias#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-019::When reading a systematic report, outcome assessors knew treatment status for a subjective outcome. What is the most important appraisal point? {
+=Differential outcome measurement may introduce information bias#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-020::When reviewing a health-systems study, the confidence interval includes clinically important benefit and harm. What is the most important appraisal point? {
+=The result is imprecise for decision-making#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+::EPI-W12-021::When appraising a manuscript, a statistically significant effect is only 0.1 percentage points. What is the most important appraisal point? {
+=Statistical significance does not establish practical importance#Correct.
+~The p-value removes this concern#Identify the plausible mechanism that could change interpretation.
+~The study is automatically invalid in every respect#Identify the plausible mechanism that could change interpretation.
+~No denominator is needed#Identify the plausible mechanism that could change interpretation.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 12/Effect and precision
+
+::EPI-W12-022::What does a wide confidence interval usually indicate? {
+=Low precision and compatibility with a wider range of effect sizes#Correct.
+~No bias by definition#Review the appraisal question before choosing an interpretation.
+~No effect by definition#Review the appraisal question before choosing an interpretation.
+~Perfect generalisability#Review the appraisal question before choosing an interpretation.
+}
+
+::EPI-W12-023::Outcome risk is 5% in the exposed/intervention group and 8% in comparison. What is the risk ratio approximately? {
+=0.62#Correct. Divide the two risks.
+~1.60#Relative effect is a ratio, not an absolute difference.
+~3.00#Relative effect is a ratio, not an absolute difference.
+~0.38#Relative effect is a ratio, not an absolute difference.
+}
+
+::EPI-W12-024::Outcome risk is 5% versus 8%. What is the absolute risk difference, intervention minus comparison? {
+=-3 percentage points#Correct. Risk difference subtracts the comparison risk from intervention/exposure risk.
+~0.62 percentage points#Keep the direction of subtraction explicit.
+~3 percentage points#Keep the direction of subtraction explicit.
+~13 percentage points#Keep the direction of subtraction explicit.
+}
+
+::EPI-W12-025::Outcome risk is 6% in the exposed/intervention group and 9% in comparison. What is the risk ratio approximately? {
+=0.67#Correct. Divide the two risks.
+~1.50#Relative effect is a ratio, not an absolute difference.
+~3.00#Relative effect is a ratio, not an absolute difference.
+~0.33#Relative effect is a ratio, not an absolute difference.
+}
+
+::EPI-W12-026::Outcome risk is 6% versus 9%. What is the absolute risk difference, intervention minus comparison? {
+=-3 percentage points#Correct. Risk difference subtracts the comparison risk from intervention/exposure risk.
+~0.67 percentage points#Keep the direction of subtraction explicit.
+~3 percentage points#Keep the direction of subtraction explicit.
+~15 percentage points#Keep the direction of subtraction explicit.
+}
+
+::EPI-W12-027::Outcome risk is 7% in the exposed/intervention group and 10% in comparison. What is the risk ratio approximately? {
+=0.70#Correct. Divide the two risks.
+~1.43#Relative effect is a ratio, not an absolute difference.
+~3.00#Relative effect is a ratio, not an absolute difference.
+~0.30#Relative effect is a ratio, not an absolute difference.
+}
+
+::EPI-W12-028::Outcome risk is 7% versus 10%. What is the absolute risk difference, intervention minus comparison? {
+=-3 percentage points#Correct. Risk difference subtracts the comparison risk from intervention/exposure risk.
+~0.70 percentage points#Keep the direction of subtraction explicit.
+~3 percentage points#Keep the direction of subtraction explicit.
+~17 percentage points#Keep the direction of subtraction explicit.
+}
+
+::EPI-W12-029::Outcome risk is 8% in the exposed/intervention group and 11% in comparison. What is the risk ratio approximately? {
+=0.73#Correct. Divide the two risks.
+~1.38#Relative effect is a ratio, not an absolute difference.
+~3.00#Relative effect is a ratio, not an absolute difference.
+~0.27#Relative effect is a ratio, not an absolute difference.
+}
+
+::EPI-W12-030::Outcome risk is 8% versus 11%. What is the absolute risk difference, intervention minus comparison? {
+=-3 percentage points#Correct. Risk difference subtracts the comparison risk from intervention/exposure risk.
+~0.73 percentage points#Keep the direction of subtraction explicit.
+~3 percentage points#Keep the direction of subtraction explicit.
+~19 percentage points#Keep the direction of subtraction explicit.
+}
+
+::EPI-W12-031::Outcome risk is 9% in the exposed/intervention group and 12% in comparison. What is the risk ratio approximately? {
+=0.75#Correct. Divide the two risks.
+~1.33#Relative effect is a ratio, not an absolute difference.
+~3.00#Relative effect is a ratio, not an absolute difference.
+~0.25#Relative effect is a ratio, not an absolute difference.
+}
+
+::EPI-W12-032::Outcome risk is 9% versus 12%. What is the absolute risk difference, intervention minus comparison? {
+=-3 percentage points#Correct. Risk difference subtracts the comparison risk from intervention/exposure risk.
+~0.75 percentage points#Keep the direction of subtraction explicit.
+~3 percentage points#Keep the direction of subtraction explicit.
+~21 percentage points#Keep the direction of subtraction explicit.
+}
+
+::EPI-W12-033::Outcome risk is 10% in the exposed/intervention group and 13% in comparison. What is the risk ratio approximately? {
+=0.77#Correct. Divide the two risks.
+~1.30#Relative effect is a ratio, not an absolute difference.
+~3.00#Relative effect is a ratio, not an absolute difference.
+~0.23#Relative effect is a ratio, not an absolute difference.
+}
+
+::EPI-W12-034::Outcome risk is 10% versus 13%. What is the absolute risk difference, intervention minus comparison? {
+=-3 percentage points#Correct. Risk difference subtracts the comparison risk from intervention/exposure risk.
+~0.77 percentage points#Keep the direction of subtraction explicit.
+~3 percentage points#Keep the direction of subtraction explicit.
+~23 percentage points#Keep the direction of subtraction explicit.
+}
+
+::EPI-W12-035::Outcome risk is 11% in the exposed/intervention group and 14% in comparison. What is the risk ratio approximately? {
+=0.79#Correct. Divide the two risks.
+~1.27#Relative effect is a ratio, not an absolute difference.
+~3.00#Relative effect is a ratio, not an absolute difference.
+~0.21#Relative effect is a ratio, not an absolute difference.
+}
+
+::EPI-W12-036::Outcome risk is 11% versus 14%. What is the absolute risk difference, intervention minus comparison? {
+=-3 percentage points#Correct. Risk difference subtracts the comparison risk from intervention/exposure risk.
+~0.79 percentage points#Keep the direction of subtraction explicit.
+~3 percentage points#Keep the direction of subtraction explicit.
+~25 percentage points#Keep the direction of subtraction explicit.
+}
+
+::EPI-W12-037::Outcome risk is 12% in the exposed/intervention group and 15% in comparison. What is the risk ratio approximately? {
+=0.80#Correct. Divide the two risks.
+~1.25#Relative effect is a ratio, not an absolute difference.
+~3.00#Relative effect is a ratio, not an absolute difference.
+~0.20#Relative effect is a ratio, not an absolute difference.
+}
+
+::EPI-W12-038::Outcome risk is 12% versus 15%. What is the absolute risk difference, intervention minus comparison? {
+=-3 percentage points#Correct. Risk difference subtracts the comparison risk from intervention/exposure risk.
+~0.80 percentage points#Keep the direction of subtraction explicit.
+~3 percentage points#Keep the direction of subtraction explicit.
+~27 percentage points#Keep the direction of subtraction explicit.
+}
+
+::EPI-W12-039::Outcome risk is 13% in the exposed/intervention group and 16% in comparison. What is the risk ratio approximately? {
+=0.81#Correct. Divide the two risks.
+~1.23#Relative effect is a ratio, not an absolute difference.
+~3.00#Relative effect is a ratio, not an absolute difference.
+~0.19#Relative effect is a ratio, not an absolute difference.
+}
+
+::EPI-W12-040::Outcome risk is 13% versus 16%. What is the absolute risk difference, intervention minus comparison? {
+=-3 percentage points#Correct. Risk difference subtracts the comparison risk from intervention/exposure risk.
+~0.81 percentage points#Keep the direction of subtraction explicit.
+~3 percentage points#Keep the direction of subtraction explicit.
+~29 percentage points#Keep the direction of subtraction explicit.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 12/P values
+
+::EPI-W12-041::What does a small p-value NOT tell you? {
+=That bias and confounding are absent#Correct.
+~That the observed data are less compatible with a specified null model#Review the appraisal question before choosing an interpretation.
+~That a statistical test was performed#Review the appraisal question before choosing an interpretation.
+~That sample size can influence inference#Review the appraisal question before choosing an interpretation.
+}
+
+::EPI-W12-042::A study reports p\=0.08 with a wide confidence interval spanning meaningful benefit and harm. Which conclusion is best? {
+=The study is imprecise and does not establish absence of an important effect#Correct.
+~There is definitively no effect#Non-significance is not proof of no meaningful effect.
+~The null hypothesis has an 8% probability of being true#Non-significance is not proof of no meaningful effect.
+~Bias is impossible#Non-significance is not proof of no meaningful effect.
+}
+
+::EPI-W12-043::When appraising a cohort paper, a study reports p\=0.08 with a wide confidence interval spanning meaningful benefit and harm. Which conclusion is best? {
+=The study is imprecise and does not establish absence of an important effect#Correct.
+~There is definitively no effect#Non-significance is not proof of no meaningful effect.
+~The null hypothesis has an 8% probability of being true#Non-significance is not proof of no meaningful effect.
+~Bias is impossible#Non-significance is not proof of no meaningful effect.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 12/Applicability
+
+::EPI-W12-044::What is internal validity primarily concerned with? {
+=Credibility of the estimate for the study population under the design#Correct.
+~Whether every country will have the same effect#Review the appraisal question before choosing an interpretation.
+~Whether the result has a small p-value#Review the appraisal question before choosing an interpretation.
+~Whether participants liked the intervention#Review the appraisal question before choosing an interpretation.
+}
+
+::EPI-W12-045::A highly internally valid trial was conducted in a specialised urban hospital. What must be considered before applying it to rural primary care? {
+=Differences in population, implementation conditions and causal mechanisms#Correct.
+~Only whether p is below 0.05#Applicability requires a context argument.
+~Nothing; internal validity guarantees universal transport#Applicability requires a context argument.
+~Only the font used in the report#Applicability requires a context argument.
+}
+
+::EPI-W12-046::When reviewing a cross-sectional report, a highly internally valid trial was conducted in a specialised urban hospital. What must be considered before applying it to rural primary care? {
+=Differences in population, implementation conditions and causal mechanisms#Correct.
+~Only whether p is below 0.05#Applicability requires a context argument.
+~Nothing; internal validity guarantees universal transport#Applicability requires a context argument.
+~Only the font used in the report#Applicability requires a context argument.
+}
+
+::EPI-W12-047::When reading a case-control study, a highly internally valid trial was conducted in a specialised urban hospital. What must be considered before applying it to rural primary care? {
+=Differences in population, implementation conditions and causal mechanisms#Correct.
+~Only whether p is below 0.05#Applicability requires a context argument.
+~Nothing; internal validity guarantees universal transport#Applicability requires a context argument.
+~Only the font used in the report#Applicability requires a context argument.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 12/Causal language
+
+::EPI-W12-048::Which wording makes the strongest causal claim? {
+=The programme reduced mortality#Correct.
+~Mortality was lower among programme participants#Review the appraisal question before choosing an interpretation.
+~Programme receipt was associated with lower mortality#Review the appraisal question before choosing an interpretation.
+~Participants receiving the programme had lower observed mortality#Review the appraisal question before choosing an interpretation.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 12/EVIDENCE framework
+
+::EPI-W12-049::In LIPPS EVIDENCE, what does the first E ask you to identify? {
+=The exact question#Correct.
+~The effect size only#Review the appraisal question before choosing an interpretation.
+~The ethics committee#Review the appraisal question before choosing an interpretation.
+~The equation used#Review the appraisal question before choosing an interpretation.
+}
+
+::EPI-W12-050::In the LIPPS EVIDENCE framework, which element focuses on population, exposure or intervention, outcome and time? {
+=Exact question#Correct.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+~Denominators and data structure#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-051::In the LIPPS EVIDENCE framework, which element focuses on whether the design creates a credible comparison? {
+=Valid design#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+~Denominators and data structure#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-052::In the LIPPS EVIDENCE framework, which element focuses on how well key variables were measured? {
+=Information quality#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Denominators and data structure#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-053::In the LIPPS EVIDENCE framework, which element focuses on population at risk, sampling, clustering, follow-up and missingness? {
+=Denominators and data structure#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-054::In the LIPPS EVIDENCE framework, which element focuses on bias, confounding, reverse causation and alternative mechanisms? {
+=Explanations competing#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-055::In the LIPPS EVIDENCE framework, which element focuses on absolute and relative effects plus uncertainty? {
+=Numerical meaning#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-056::In the LIPPS EVIDENCE framework, which element focuses on applicability to the population and health system? {
+=Context#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-057::In the LIPPS EVIDENCE framework, which element focuses on whether the conclusion wording matches the evidence? {
+=Expression#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-058::When evaluating a trial, in the LIPPS EVIDENCE framework, which element focuses on population, exposure or intervention, outcome and time? {
+=Exact question#Correct.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+~Denominators and data structure#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-059::When reviewing a programme report, in the LIPPS EVIDENCE framework, which element focuses on whether the design creates a credible comparison? {
+=Valid design#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+~Denominators and data structure#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-060::When reading a surveillance analysis, in the LIPPS EVIDENCE framework, which element focuses on how well key variables were measured? {
+=Information quality#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Denominators and data structure#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-061::When appraising an outbreak report, in the LIPPS EVIDENCE framework, which element focuses on population at risk, sampling, clustering, follow-up and missingness? {
+=Denominators and data structure#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-062::When reviewing a diagnostic study, in the LIPPS EVIDENCE framework, which element focuses on bias, confounding, reverse causation and alternative mechanisms? {
+=Explanations competing#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-063::When evaluating a policy analysis, in the LIPPS EVIDENCE framework, which element focuses on absolute and relative effects plus uncertainty? {
+=Numerical meaning#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-064::When reading a systematic report, in the LIPPS EVIDENCE framework, which element focuses on applicability to the population and health system? {
+=Context#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}
+
+::EPI-W12-065::When reviewing a health-systems study, in the LIPPS EVIDENCE framework, which element focuses on whether the conclusion wording matches the evidence? {
+=Expression#Correct.
+~Exact question#Match the appraisal task to the EVIDENCE element.
+~Valid design#Match the appraisal task to the EVIDENCE element.
+~Information quality#Match the appraisal task to the EVIDENCE element.
+}

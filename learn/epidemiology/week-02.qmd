@@ -1,0 +1,742 @@
+---
+title: ""
+pagetitle: "Week 2 — Measuring Disease Frequency and Population Health | LIPPS"
+description: "Week 2 of LIPPS Epidemiology: ratios, proportions, rates, incidence, prevalence, mortality, natality, denominators and population-health interpretation."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 02
+:::
+
+# Measuring Disease Frequency and Population Health
+
+## The numerator tells you what happened. The denominator tells you what it means.
+
+Epidemiology becomes useful when counts are placed in the population and time from which they arose. This week develops the language used to describe disease occurrence: **ratios, proportions, rates, incidence, prevalence, mortality and selected population-health measures**.
+
+<span class="lipps-chip">Foundation</span> <span class="lipps-chip">Disease frequency</span> <span class="lipps-chip">Denominators</span> <span class="lipps-chip">Applied calculations</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Choose the numerator, choose the correct population and time denominator, calculate the measure, and interpret exactly what that measure describes.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Most errors in introductory epidemiology are not arithmetic errors. They are **denominator errors, population errors, time errors or interpretation errors**. A perfectly calculated fraction can still answer the wrong question.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 2, you should be able to:
+
+1. distinguish a **count, ratio, proportion and rate**;
+2. identify the appropriate **numerator, denominator, population at risk and time period** for a frequency measure;
+3. calculate and interpret **incidence proportion (risk)**;
+4. calculate and interpret **attack rates and secondary attack rates** in outbreak settings;
+5. calculate and interpret **incidence rates using person-time**;
+6. calculate and distinguish **point and period prevalence**;
+7. explain conceptually why prevalence is influenced by both **incidence and duration**;
+8. calculate and distinguish major **mortality measures** including crude, cause-specific and stratum-specific mortality;
+9. distinguish **case fatality** and **proportionate mortality** from population mortality rates;
+10. interpret selected maternal, neonatal, infant and natality measures; and
+11. recognise when population structure makes a crude comparison potentially misleading.
+:::
+
+::: {.lipps-section}
+## ORIENT · Which district has more malaria?
+
+Consider this fictional teaching scenario.
+
+| District | New malaria cases in June | Population |
+|---|---:|---:|
+| A | 900 | 450,000 |
+| B | 600 | 120,000 |
+
+District A has the larger **count**.
+
+But if the question is, **“Where was new malaria occurrence higher relative to population size?”**, the count alone cannot answer it.
+
+For a simplified population comparison:
+
+- District A: 900 / 450,000 = **2.0 per 1,000**
+- District B: 600 / 120,000 = **5.0 per 1,000**
+
+So District A has more reported new cases, while District B has the higher occurrence relative to its population.
+
+### Two answers can both be correct
+
+**Where is the larger workload?** Possibly District A.  
+**Where is disease occurrence higher relative to population size?** District B.
+
+The measure must match the decision.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Count, ratio, proportion and rate are not interchangeable
+
+### Count
+
+A **count** is simply the number of events observed: 120 measles cases, 18 maternal deaths, 450 positive tests.
+
+Counts matter for planning beds, medicines, vaccines, staff and laboratory supplies. But counts alone usually do not permit fair comparisons between populations of different sizes.
+
+### Ratio
+
+A **ratio** compares one quantity with another. The numerator does not have to be part of the denominator.
+
+For example, if a facility has 30 nurses and 10 clinical officers, the nurse-to-clinical-officer ratio is **3:1**.
+
+### Proportion
+
+A **proportion** is a ratio in which the numerator is included within the denominator.
+
+If 240 of 800 surveyed adults have hypertension:
+
+**240 / 800 = 0.30 = 30%**.
+
+All 240 people in the numerator are part of the 800 people in the denominator.
+
+### Rate
+
+The attached CDC text defines a rate as a measure of how frequently an event occurs in a defined population over a specified period. The term **rate** is also used loosely in epidemiology for some measures that are mathematically proportions, such as attack rate and case-fatality rate.
+
+::: {.lipps-callout}
+**Do not argue from the label alone. Inspect the fraction.**  
+Ask whether the numerator is contained within the denominator, whether time is incorporated, and what population the denominator represents.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 2 · The denominator is part of the scientific question
+
+A denominator should represent the population capable of contributing to the numerator.
+
+If the numerator is **new ovarian cancer cases**, a denominator including people who cannot develop ovarian cancer would not represent the true population at risk. The CDC lesson uses this kind of example to show that denominators are conceptual decisions, not merely numbers taken from a census.
+
+Before calculating any epidemiological measure, ask:
+
+1. **Who could have become a case?**
+2. **Who was actually under observation?**
+3. **At what time were they at risk?**
+4. **Does the denominator correspond to the numerator?**
+5. **Is this denominator complete and comparable across groups?**
+
+### Denominator mismatch
+
+Suppose a hospital reports 300 positive malaria tests among 1,000 people tested. That gives **test positivity of 30% among those tested**.
+
+It does **not** automatically give malaria prevalence in the district, because the denominator is people tested, not the district population or a representative sample of it.
+
+The arithmetic may be flawless while the epidemiological interpretation is wrong.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Incidence proportion: the probability of becoming a case
+
+**Incidence** concerns **new events**.
+
+The attached CDC lesson distinguishes two common incidence measures: **incidence proportion** and **incidence rate**.
+
+### Incidence proportion
+
+Incidence proportion is the proportion of an initially disease-free population that develops the health event during a specified period.
+
+\[
+\text{Incidence proportion} = \frac{\text{new cases during the period}}{\text{population at risk at the start of the period}}
+\]
+
+It may also be called **risk**, **cumulative incidence**, or—particularly during an outbreak—**attack rate**.
+
+### Fictional example
+
+A cohort begins with 2,000 adults without hypertension. During one year, 140 develop hypertension.
+
+\[
+140 / 2,000 = 0.07 = 7\%
+\]
+
+Interpretation:
+
+> **Seven percent of the initially hypertension-free cohort developed hypertension during the one-year period.**
+
+Notice what the measure requires:
+
+- new cases;
+- an initially disease-free population;
+- a defined period;
+- a denominator representing people who could become new cases.
+
+### What incidence proportion is NOT
+
+It is not the proportion who have hypertension at the end of the year. Some participants may already have had hypertension before follow-up, and those belong in a prevalence calculation rather than the new-case numerator.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Attack rates and secondary attack rates
+
+During outbreaks, **attack rate** is commonly used as another name for incidence proportion.
+
+### Overall attack rate
+
+\[
+\frac{\text{new cases during the outbreak}}{\text{population at risk at outbreak start}} \times 100
+\]
+
+### Exposure-specific attack rate
+
+Suppose 80 wedding guests ate chicken and 32 became ill.
+
+\[
+32/80 = 40\%
+\]
+
+The food-specific attack rate among chicken eaters is **40%**.
+
+But this still does not tell us whether chicken was associated with illness. We also need the attack rate among people who **did not** eat chicken. The comparison itself belongs in Week 3.
+
+### Secondary attack rate
+
+The CDC lesson describes secondary attack rate as useful for examining transmission among contacts of primary cases in households or other closed populations.
+
+A common form is:
+
+\[
+\text{Secondary attack rate} = \frac{\text{new cases among susceptible contacts}}{\text{susceptible contacts exposed to primary cases}} \times 100
+\]
+
+Primary cases are generally excluded from the contact denominator because they are not at risk of becoming secondary cases from themselves.
+
+### Fictional example
+
+Twelve primary cases occur in 12 households containing 58 people in total. During the relevant secondary transmission period, 9 additional household members develop the disease.
+
+Contacts at risk = 58 − 12 = **46**.
+
+\[
+9/46 \times 100 = 19.6\%
+\]
+
+The secondary attack rate is approximately **19.6%**.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Incidence rate: when follow-up time differs
+
+Incidence proportion treats the starting population as the denominator. That works best when the cohort is reasonably closed and the observation period is clearly defined.
+
+But people often contribute **different amounts of follow-up**. They enrol late, migrate, die, are lost to follow-up, or develop the outcome at different times.
+
+### Person-time solves a different denominator problem
+
+The attached CDC text defines incidence rate (person-time rate) using:
+
+\[
+\text{Incidence rate} = \frac{\text{new cases}}{\text{total person-time at risk}}
+\]
+
+One person followed disease-free for two years contributes **2 person-years**. Ten people each followed for six months contribute **5 person-years** in total.
+
+### Fictional example
+
+A cohort contributes **1,850 person-years** of disease-free observation and 37 participants develop tuberculosis.
+
+\[
+37 / 1,850 = 0.020
+\]
+
+or **20 new TB cases per 1,000 person-years**.
+
+This means disease occurred at a rate of 20 new cases for every 1,000 person-years of observed time at risk.
+
+### Risk and rate are not the same quantity
+
+**Incidence proportion** answers approximately: *What proportion of this initially at-risk population became cases during this period?*
+
+**Incidence rate** answers approximately: *How quickly are new cases occurring in the accumulated time at risk?*
+
+Do not attach a percent sign to a person-time rate.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Prevalence: who has the condition?
+
+Prevalence includes **existing cases**, not only new ones.
+
+### Point prevalence
+
+\[
+\text{Point prevalence} = \frac{\text{people with the condition at a specified point}}{\text{population at that same point}}
+\]
+
+If 360 of 1,200 adults surveyed today meet the definition of hypertension:
+
+\[
+360/1,200 = 30\%
+\]
+
+The point prevalence is **30%**.
+
+### Period prevalence
+
+Period prevalence includes people who had the condition at **any time during a specified interval**, whether it was already present when the interval began or developed during it.
+
+### Incidence versus prevalence
+
+The source makes the distinction through the numerator:
+
+**Incidence numerator → new cases only**  
+**Prevalence numerator → all cases present in the relevant period**
+
+This is one of the most important distinctions in introductory epidemiology.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Why high prevalence does not necessarily mean high incidence
+
+Prevalence is influenced by both **new occurrence** and **duration**.
+
+A condition may have high prevalence because:
+
+- many new cases are developing;
+- people remain affected for a long time;
+- survival has improved without cure; or
+- several of these processes occur together.
+
+A condition may have low prevalence because:
+
+- few new cases occur;
+- recovery is rapid; or
+- mortality is rapid.
+
+### Two diseases, same incidence, different prevalence
+
+Imagine two conditions generate the same number of new cases each year.
+
+**Condition A** usually resolves in 5 days.  
+**Condition B** commonly persists for 20 years.
+
+A cross-sectional survey is much more likely to find a larger pool of existing Condition B cases.
+
+::: {.lipps-callout}
+**LIPPS warning**  
+Do not infer the speed of disease occurrence from prevalence alone. Prevalence is a snapshot of the pool of existing disease; that pool is filled by incidence and emptied by recovery, death or other exits.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Mortality measures: death needs a denominator too
+
+A population mortality rate relates deaths occurring during a period to the population in which those deaths occurred.
+
+### Crude mortality rate
+
+All deaths in the population, from all causes, divided by the relevant population.
+
+### Cause-specific mortality rate
+
+Deaths from one specified cause divided by the population in which those deaths occurred.
+
+### Age-, sex- or other stratum-specific mortality rate
+
+Both numerator and denominator are restricted to the same subgroup.
+
+For example:
+
+\[
+\frac{\text{malaria deaths among children under 5}}{\text{population of children under 5}}
+\]
+
+is an age- and cause-specific mortality measure.
+
+### Why specificity matters
+
+If the numerator contains deaths among women aged 15–49, but the denominator is the entire district population, the numerator and denominator do not describe the same population.
+
+Always ask:
+
+> **Who is represented in the numerator, and is the denominator the population from which those deaths could arise?**
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Crude rates can be distorted by population structure
+
+The CDC text uses the contrast between Alaska and Florida to demonstrate an important idea: one population can have a higher **crude mortality rate** simply because it contains more older people.
+
+When mortality strongly varies with age, comparing crude mortality between populations with different age structures can be misleading.
+
+### Two approaches
+
+**Stratification:** compare age-specific rates within comparable age groups.  
+**Standardisation/adjustment:** calculate a summary rate that removes the effect of different age distributions.
+
+Detailed age standardisation is beyond the core calculations for this week, but the reasoning matters now:
+
+> **A crude difference may partly represent population composition rather than a difference in underlying age-specific mortality.**
+
+This same principle will return later when we discuss confounding.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Case fatality is not population mortality
+
+### Case-fatality measure
+
+The CDC lesson defines case fatality as the proportion of people with a particular condition who die from that condition.
+
+\[
+\text{Case fatality} = \frac{\text{deaths from the disease among the cases}}{\text{cases of that disease}} \times 100
+\]
+
+It is mainly a measure of **severity among identified cases**, not the frequency of death in the entire population.
+
+If 8 of 200 confirmed cases die:
+
+\[
+8/200 = 4\%
+\]
+
+Case fatality = **4%**.
+
+### Proportionate mortality
+
+Proportionate mortality asks what share of **all deaths** is due to a particular cause.
+
+\[
+\frac{\text{deaths from a specified cause}}{\text{deaths from all causes}} \times 100
+\]
+
+If 50 of 500 recorded deaths were from road traffic injuries, proportionate mortality due to road traffic injuries is **10%**.
+
+This does **not** mean 10% of the population died from road traffic injuries. The denominator contains deaths, not people in the population.
+
+### Three different questions
+
+**Population mortality:** How often are people in the population dying?  
+**Case fatality:** Among people with the disease, what proportion die from it?  
+**Proportionate mortality:** Among all deaths, what share is due to this cause?
+:::
+
+::: {.lipps-section}
+## LEARN 11 · Maternal, neonatal and infant mortality measures
+
+The attached CDC lesson presents several mortality measures that use **live births** rather than a mid-period population as the denominator.
+
+### Neonatal mortality
+
+Deaths among infants younger than 28 days during a period divided by live births during that period, commonly expressed per 1,000 live births.
+
+### Postneonatal mortality
+
+Deaths from 28 days to under one year divided by live births, commonly expressed per 1,000 live births.
+
+### Infant mortality
+
+Deaths before one year of age divided by live births in the same period, commonly expressed per 1,000 live births.
+
+The source explicitly notes an important terminology point: the traditional **infant mortality rate** is not a pure population rate in the strict mathematical sense because its denominator is live births rather than the mid-year population of infants.
+
+### Maternal mortality terminology in the source
+
+The CDC text labels the measure **maternal mortality rate**, but also explicitly says it is really a **ratio**, because pregnancy-related maternal deaths are divided by live births rather than by the population of women at risk.
+
+That observation is a useful reminder:
+
+> **The conventional name of an indicator does not remove the need to understand its numerator and denominator.**
+:::
+
+::: {.lipps-section}
+## LEARN 12 · Natality measures
+
+The CDC lesson also introduces population-based measures of birth.
+
+### Crude birth rate
+
+\[
+\frac{\text{live births during the period}}{\text{mid-period population}} \times 1,000
+\]
+
+### Crude fertility rate
+
+\[
+\frac{\text{live births during the period}}{\text{women of reproductive age at mid-period}} \times 1,000
+\]
+
+### Low-birth-weight ratio
+
+\[
+\frac{\text{live births below 2,500 g}}{\text{all live births}} \times 100
+\]
+
+The important lesson is not to memorise a table of indicators. It is to inspect how the denominator changes the question.
+
+A crude birth rate describes births relative to the **whole population**. A fertility rate narrows the denominator to a population more directly related to childbearing. The low-birth-weight measure asks what **proportion of births** meet a defined birth-weight criterion.
+:::
+
+::: {.lipps-section}
+## GO DEEPER · Years of potential life lost
+
+The CDC lesson includes **years of potential life lost (YPLL)** as a way to describe premature mortality. Rather than treating every death as contributing equally, YPLL gives more weight to deaths occurring earlier than a selected endpoint.
+
+Conceptually:
+
+\[
+\text{YPLL for an individual} = \text{selected endpoint age} - \text{age at death}
+\]
+
+for deaths occurring before the endpoint.
+
+This can highlight causes that produce death at younger ages even when they are not the leading causes by total death count.
+
+YPLL is presented here as an **extension concept** rather than a core Week 2 mastery calculation. The source itself notes that the choice of endpoint embeds a value judgement because earlier deaths contribute more potential years lost.
+:::
+
+::: {.lipps-section}
+## APPLY · Choose the measure before calculating
+
+For each scenario, identify the most appropriate measure and explain the denominator.
+
+### Scenario A · New hypertension diagnoses
+
+A closed cohort of 1,500 adults without hypertension is followed for 12 months. Ninety develop hypertension.
+
+**Best measure:** Incidence proportion.  
+**Denominator:** The 1,500 adults at risk at the start.
+
+### Scenario B · Different follow-up time
+
+A TB cohort experiences 22 new recurrences during 940 person-years of post-treatment observation.
+
+**Best measure:** Incidence rate.  
+**Denominator:** 940 person-years at risk.
+
+### Scenario C · Burden today
+
+A representative district survey finds 420 people with diabetes among 3,000 adults examined during the survey.
+
+**Best measure:** Point prevalence, if status refers to the survey point/period as defined.  
+**Denominator:** The examined target population represented by the survey, subject to the survey design and weighting.
+
+### Scenario D · Severity among cases
+
+An outbreak produces 160 confirmed cases and 12 of those people die from the disease.
+
+**Best measure:** Case fatality.  
+**Denominator:** The 160 cases.
+
+### Scenario E · Cause among deaths
+
+A district records 1,100 deaths, of which 220 are attributed to malaria.
+
+**Best measure:** Proportionate mortality due to malaria.  
+**Denominator:** All 1,100 deaths.
+:::
+
+::: {.lipps-section}
+## WORKED EXAMPLE · One dataset, four different measures
+
+Consider a fictional boarding-school outbreak.
+
+At the beginning of the week there are **500 students**, none currently ill. During the week **75 students become ill**. The 75 cases occur across several dormitories. In the dormitories of the first 20 cases, there are **80 additional susceptible roommates**, and **24 of those roommates develop illness during the relevant secondary period**. At the end of Friday, **30 students are still ill**.
+
+### 1. Weekly incidence proportion / attack rate
+
+\[
+75/500 \times 100 = 15\%
+\]
+
+**Interpretation:** 15% of students at risk at the beginning became cases during the week.
+
+### 2. Secondary attack rate among susceptible roommates
+
+\[
+24/80 \times 100 = 30\%
+\]
+
+**Interpretation:** 30% of the defined susceptible contacts developed illness during the secondary-risk period.
+
+### 3. Point prevalence on Friday
+
+\[
+30/500 \times 100 = 6\%
+\]
+
+**Interpretation:** 6% of the school population was ill at the specified Friday assessment point, assuming the denominator remains appropriate.
+
+### 4. Why attack rate and Friday prevalence differ
+
+The attack rate counts **new cases accumulated during the week**. Friday point prevalence counts **people still ill at one point in time**. Students who became ill and recovered before Friday contribute to incidence but not Friday point prevalence.
+
+::: {.lipps-callout}
+**Same population. Same outbreak. Different questions. Different numerators. Different measures.**
+:::
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+### 1. Which statement BEST distinguishes a proportion from a general ratio?
+
+A. A proportion must include time in the denominator.  
+B. In a proportion, the numerator is included in the denominator.  
+C. A proportion must be expressed per 100,000.  
+D. A proportion can never describe disease.
+
+**Answer: B.** A proportion describes a part relative to the whole containing that part.
+
+### 2. A district reports 500 TB cases. What additional information is MOST important for comparing TB occurrence with another district?
+
+A. The font used in the report.  
+B. The corresponding population denominator, case definition and time period.  
+C. The number of pages in the report.  
+D. Whether the analyst used R or Stata.
+
+**Answer: B.** A count requires population and measurement context before fair comparison.
+
+### 3. Which numerator belongs in an incidence proportion?
+
+A. All existing cases.  
+B. New cases occurring during the specified period.  
+C. All positive tests ever recorded.  
+D. Deaths from all causes.
+
+**Answer: B.** Incidence concerns new occurrence.
+
+### 4. Twenty new cases occur during 2,000 person-years. Which measure is being calculated?
+
+A. Point prevalence.  
+B. Period prevalence.  
+C. Incidence rate.  
+D. Proportionate mortality.
+
+**Answer: C.** Person-time in the denominator identifies an incidence rate.
+
+### 5. Which statement about prevalence is correct?
+
+A. It contains new cases only.  
+B. It is unaffected by disease duration.  
+C. It includes existing cases in the defined population and time.  
+D. It always estimates causal risk.
+
+**Answer: C.** Prevalence describes the pool of existing disease or attributes.
+
+### 6. A chronic condition has low incidence but very long duration. What could happen to prevalence?
+
+A. It must be zero.  
+B. It may still be high.  
+C. It becomes an incidence rate.  
+D. Duration cannot affect prevalence.
+
+**Answer: B.** Long duration can maintain a large pool of existing cases.
+
+### 7. Eight deaths occur among 200 identified cases. What measure is 8/200 × 100?
+
+A. Cause-specific mortality rate.  
+B. Case fatality.  
+C. Incidence rate.  
+D. Crude birth rate.
+
+**Answer: B.** The denominator is cases, so the measure describes severity among cases.
+
+### 8. Fifty road-traffic deaths occur among 500 deaths from all causes. What does 50/500 × 100 describe?
+
+A. Risk of dying in the population.  
+B. Proportionate mortality.  
+C. Incidence proportion.  
+D. Case fatality.
+
+**Answer: B.** It describes the share of deaths attributable to that cause.
+
+### 9. Why might crude mortality be higher in one district even if its age-specific mortality is not consistently higher?
+
+A. The district may have an older population.  
+B. A crude rate automatically adjusts for age.  
+C. Mortality is unrelated to age.  
+D. The denominator is always deaths.
+
+**Answer: A.** Population age structure can distort crude comparisons.
+
+### 10. Which statement BEST reflects the main Week 2 lesson?
+
+A. Memorise every multiplier.  
+B. Always express health measures as percentages.  
+C. Match the numerator, denominator, population and time to the question before calculating.  
+D. Counts should never be reported.
+
+**Answer: C.** Correct calculation begins with correct measurement logic.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 2 Mastery Quiz
+
+The Week 2 Moodle bank is built around **measure selection, denominator recognition, compact calculations and interpretation**.
+
+**Pilot specification**
+
+- 15 questions sampled from a 50-item Week 2 bank;
+- 12 minutes initially because this week includes short calculations;
+- one question at a time;
+- question and answer order randomised where appropriate;
+- calculated items varied across equivalent numerical scenarios;
+- one graded attempt in Mastery mode;
+- Practice mode gives explanatory feedback; and
+- institutional accommodations can extend the time without changing the learning objective.
+
+::: {.lipps-callout}
+**AI-resilient by design**  
+The assessment is not protected by disabling copy and paste. It is protected by preparation: a learner who understands the measure can identify the denominator and calculate the answer faster than someone repeatedly outsourcing each question.
+:::
+:::
+
+::: {.lipps-section}
+## SUMMARY · The Week 2 decision tree
+
+When you need to describe frequency, ask:
+
+**Do I only need the number of events?** → Count.  
+**Am I comparing two quantities?** → Ratio.  
+**Is the numerator part of the denominator?** → Proportion.  
+**Am I measuring new occurrence among an initially at-risk population?** → Incidence proportion / risk.  
+**Does follow-up time differ across people?** → Incidence rate / person-time.  
+**Am I measuring all existing cases at a point or during a period?** → Prevalence.  
+**Am I measuring deaths in a population?** → Mortality rate.  
+**Am I measuring deaths among cases?** → Case fatality.  
+**Am I asking what share of all deaths came from one cause?** → Proportionate mortality.
+
+Then ask one final LIPPS question:
+
+> **Does this denominator actually represent the population and time about which I intend to make the claim?**
+:::
+
+::: {.lipps-section}
+## What moves to Week 3
+
+The attached CDC Lesson Three continues from frequency measures into **risk ratios, rate ratios, odds ratios and measures of public-health impact**. LIPPS deliberately separates these topics.
+
+Week 2 asks:
+
+> **How often is the outcome occurring?**
+
+Week 3 asks:
+
+> **How different is occurrence between groups, and how should that difference be expressed?**
+
+This separation keeps measurement of frequency conceptually distinct from measurement of association and effect.
+:::
+
+::: {.lipps-section}
+## Primary source used to build this lesson
+
+This LIPPS lesson is an original teaching adaptation of **Centers for Disease Control and Prevention (CDC), _Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics_, Lesson Three: Measures of Risk (updated May 2012).**
+
+The source material used here includes its treatment of ratios, proportions and rates; morbidity frequency measures; incidence proportion; attack rates; person-time incidence rates; point and period prevalence; mortality measures; age adjustment; case fatality; proportionate mortality; YPLL; and natality measures. **Fictional Ugandan and school examples were created for LIPPS and are not claims about actual districts, facilities or outbreaks.**
+:::
+
+::: {.lipps-section}
+[← Week 1](week-01.qmd){.lipps-btn .secondary} [Week 3 →](week-03.qmd){.lipps-btn}
+:::

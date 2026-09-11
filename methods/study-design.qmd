@@ -1,0 +1,27 @@
+---
+title: "Study Design"
+---
+
+# Study Design
+
+Choosing a study design means matching a **research question, estimand, source population, feasible data-collection process and threat-to-validity profile**.
+
+## Core designs
+
+- Cross-sectional studies
+- Case-control studies
+- Cohort studies
+- Randomised controlled trials
+- Quasi-experimental designs
+- Before-and-after studies
+- Interrupted time-series studies
+- Ecological studies
+- Diagnostic-accuracy studies
+- Implementation research designs
+- Operational research
+- Programme evaluation designs
+
+::: {.lipps-callout}
+**What could fool us?**  
+A sophisticated analysis cannot rescue a design that cannot answer the stated question. LIPPS therefore treats causal language—*effect, impact, outcome, attributable to*—as a design decision, not a writing preference.
+:::

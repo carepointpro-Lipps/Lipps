@@ -1,0 +1,354 @@
+---
+title: ""
+pagetitle: "Week 10 — Screening and Diagnostic-Test Evaluation | LIPPS"
+description: "Evaluate screening and diagnostic classification using sensitivity, specificity and predictive values, then extend interpretation to likelihood ratios, thresholds and multi-test strategies."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 10
+:::
+
+# Screening and Diagnostic-Test Evaluation
+
+## A test result changes probability; it does not create certainty.
+
+<span class="lipps-chip">Intermediate</span> <span class="lipps-chip">Screening</span> <span class="lipps-chip">Sensitivity · Specificity</span> <span class="lipps-chip">Predictive values</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Evaluate screening and diagnostic classification using sensitivity, specificity and predictive values, then extend interpretation to likelihood ratios, thresholds and multi-test strategies.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 10, you should be able to:
+
+1. construct a two-by-two table comparing an index test with a reference classification;
+2. calculate and interpret sensitivity and specificity;
+3. calculate and interpret positive and negative predictive values;
+4. explain why predictive values change with disease prevalence even when sensitivity and specificity remain constant;
+5. distinguish sensitivity/specificity from predictive values by their conditioning direction;
+6. calculate and interpret likelihood ratios at an introductory level;
+7. explain how changing a test threshold trades sensitivity against specificity;
+8. interpret ROC curves and AUC conceptually without treating AUC as a complete measure of usefulness;
+9. compare serial and parallel testing strategies conceptually;
+10. distinguish diagnostic accuracy from agreement between tests;
+11. recognise verification, spectrum and imperfect-reference-standard problems;
+12. interpret a positive result in clinical and public-health context rather than as certainty of disease.
+:::
+
+::: {.lipps-section}
+## ORIENT · A positive test is not the same as disease
+
+A screening programme uses a test with 90% sensitivity and 95% specificity in a population where disease prevalence is 1%.
+
+Many students hear “95% specificity” and expect nearly every positive test to be a true case.
+
+That intuition is wrong because the number of false positives also depends on **how many people without disease are tested**.
+
+Diagnostic interpretation is a problem of conditional probability.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Build the diagnostic two-by-two table
+
+Start with true disease status determined by the best available reference classification.
+
+|  | Disease + | Disease − |
+|---|---:|---:|
+| **Test +** | True positive (TP) | False positive (FP) |
+| **Test −** | False negative (FN) | True negative (TN) |
+
+The attached CDC material uses the same logic for surveillance-system sensitivity, specificity and predictive value positive.
+
+The denominator determines the question being answered.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Sensitivity
+
+Sensitivity asks:
+
+> Among people who truly have the condition, what proportion does the test identify as positive?
+
+$$
+Sensitivity = \frac{TP}{TP+FN}
+$$
+
+High sensitivity means relatively few false negatives.
+
+Sensitivity is useful when missing true cases carries important consequences, but maximising sensitivity alone can create many false positives if specificity falls.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Specificity
+
+Specificity asks:
+
+> Among people who truly do not have the condition, what proportion does the test correctly classify as negative?
+
+$$
+Specificity = \frac{TN}{FP+TN}
+$$
+
+High specificity means relatively few false positives.
+
+Sensitivity and specificity condition on **true disease status**, not on the observed test result.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Predictive values reverse the conditioning direction
+
+**Positive predictive value (PPV)** asks:
+
+> Among those who test positive, what proportion truly have the condition?
+
+$$
+PPV = \frac{TP}{TP+FP}
+$$
+
+**Negative predictive value (NPV)** asks:
+
+> Among those who test negative, what proportion truly do not have the condition?
+
+$$
+NPV = \frac{TN}{FN+TN}
+$$
+
+::: {.lipps-callout}
+**Source boundary**
+The attached CDC source explicitly develops predictive value positive in the surveillance context. NPV is included here as a LIPPS diagnostic-testing extension.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Why prevalence changes PPV
+
+Consider 10,000 people with 1% prevalence.
+
+There are 100 true cases and 9,900 non-cases.
+
+With 90% sensitivity:
+
+- TP = 90
+- FN = 10
+
+With 95% specificity:
+
+- TN = 9,405
+- FP = 495
+
+So:
+
+$$
+PPV = \frac{90}{90+495} \approx 15.4\%
+$$
+
+Despite good sensitivity and specificity, only about 15% of positive results are true positives in this low-prevalence setting.
+
+As prevalence rises, PPV usually rises and NPV usually falls, holding test properties constant.
+
+::: {.lipps-callout}
+**This is why “the test is 95% accurate” is usually an unhelpful sentence.**
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Sensitivity and PPV answer different questions
+
+This distinction should become automatic.
+
+**Sensitivity:** start with people who truly have disease → ask how many test positive.
+
+**PPV:** start with people whose test is positive → ask how many truly have disease.
+
+The same true-positive cell appears in both formulas, but the denominators differ.
+
+Confusing these quantities leads directly to poor patient counselling and poor screening-policy interpretation.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Likelihood ratios
+
+::: {.lipps-callout}
+**LIPPS extension**
+Likelihood ratios are not developed in the attached CDC source.
+:::
+
+Likelihood ratios describe how much a test result changes the odds of disease.
+
+$$
+LR+ = \frac{Sensitivity}{1-Specificity}
+$$
+
+$$
+LR- = \frac{1-Sensitivity}{Specificity}
+$$
+
+A large LR+ provides stronger evidence toward disease; a small LR− provides stronger evidence against disease.
+
+Likelihood ratios combine sensitivity and specificity and can be used with pre-test odds to obtain post-test odds.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Thresholds create trade-offs
+
+Many tests begin with a continuous value: blood pressure, biomarker concentration, risk score or optical density. A threshold converts that value into positive/negative classification.
+
+Lowering a threshold usually:
+
+- identifies more true cases → sensitivity rises;
+- also labels more non-cases positive → specificity falls.
+
+Raising the threshold usually does the reverse.
+
+There is no universally “best” threshold. The appropriate choice depends on the consequences of false negatives and false positives, disease prevalence, downstream testing capacity and purpose of screening.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · ROC curves and AUC
+
+::: {.lipps-callout}
+**LIPPS extension**
+ROC analysis is included as an advanced introductory extension.
+:::
+
+A receiver operating characteristic curve plots sensitivity against 1 − specificity across thresholds.
+
+The **area under the curve (AUC)** summarises discrimination: how well the test tends to rank diseased individuals above non-diseased individuals.
+
+AUC does not tell you:
+
+- PPV in your population;
+- whether a chosen threshold is clinically useful;
+- whether the test is calibrated;
+- whether harms and costs are acceptable.
+
+A good AUC is not the same as a good screening programme.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Serial and parallel testing
+
+::: {.lipps-callout}
+**LIPPS extension**
+Multi-test algorithms are not developed in the attached source.
+:::
+
+**Serial testing:** a second test is performed or required after the first positive. This tends to increase overall specificity but can reduce sensitivity.
+
+**Parallel testing:** a person may be classified positive if either of two tests is positive. This tends to increase sensitivity but can reduce specificity.
+
+The exact combined performance depends on test dependence and algorithm rules. Do not mechanically multiply test characteristics without checking assumptions.
+:::
+
+::: {.lipps-section}
+## LEARN 11 · Agreement is not accuracy
+
+Two tests can agree with each other and both be wrong if neither is compared with an adequate reference standard.
+
+**Accuracy questions** ask how a test corresponds to true disease status.
+
+**Agreement questions** ask how two raters or tests correspond to each other.
+
+Measures such as percent agreement and kappa address agreement, not necessarily diagnostic truth.
+
+::: {.lipps-callout}
+**LIPPS extension**
+Agreement and kappa are not developed in the attached CDC lesson.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 12 · What could fool us in a diagnostic study?
+
+Important threats include:
+
+**Spectrum effects** — performance differs across disease severity or patient mix.
+
+**Verification bias** — only some participants, often those with positive index tests, receive the reference standard.
+
+**Imperfect reference standard** — the “gold standard” itself misclassifies disease.
+
+**Incorporation bias** — the index test contributes to the reference diagnosis.
+
+**Reader or review bias** — interpreters know other test results.
+
+These problems change what apparent sensitivity and specificity mean.
+
+A diagnostic-accuracy estimate belongs to the population, threshold, specimen process and reference standard under which it was obtained.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A fictional typhoid screening study tests 2,000 febrile patients. A reference classification identifies 200 true disease cases. The index test is positive in 170 of those 200 cases and positive in 270 of the 1,800 non-cases.
+
+1. Construct the 2×2 table.
+2. Calculate sensitivity.
+3. Calculate specificity.
+4. Calculate PPV.
+5. Calculate NPV.
+6. Calculate LR+ and LR−.
+7. Explain why PPV would differ if the same sensitivity and specificity were applied in a much lower-prevalence general population.
+8. If the screening threshold is lowered, predict the usual direction of change in sensitivity and specificity.
+9. Explain why a high percent agreement with another rapid test would not establish accuracy.
+10. Identify how the study could be biased if only index-test-positive patients received the reference test.
+11. Write a counselling statement that avoids telling every positive patient that they “have typhoid” with certainty.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. A test detects 90 of 100 true cases. What is its sensitivity?
+2. Why does specificity use non-diseased people in its denominator?
+3. How is PPV conceptually different from sensitivity?
+4. Why can PPV be low in a low-prevalence setting despite high specificity?
+5. What usually happens to sensitivity when the positive threshold is lowered?
+6. Does high AUC guarantee a high PPV in a low-prevalence population?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 10 mastery quiz
+
+**Pilot Mastery Quiz:** 20 objective questions drawn from a Week 10 bank of 70 items.
+
+**Initial time limit:** 16 minutes because the bank includes parameterised 2×2 calculations.  
+**Blueprint:** sensitivity/specificity, predictive values, prevalence effects, likelihood ratios, thresholds, algorithms and bias scenarios.  
+**Calculator policy:** simple calculator allowed where the institution permits; questions should use values that reward conceptual fluency rather than lengthy arithmetic.
+
+::: {.lipps-callout}
+**Assessment principle**  
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.
+:::
+:::
+
+::: {.lipps-section}
+## Source foundation and LIPPS extensions
+
+**Primary source foundation:** the attached CDC material's definitions and two-by-two formulation of sensitivity, specificity and predictive value positive, including its observation that predictive value depends partly on underlying prevalence.
+
+**LIPPS extensions:** NPV, diagnostic-study framing, likelihood ratios, ROC/AUC, serial/parallel algorithms, agreement/kappa and diagnostic-study biases are explicitly added because the attached book does not provide a complete modern diagnostic-accuracy chapter.
+
+**Reference:** Centers for Disease Control and Prevention. *Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics*. October 2006; updated May 2012.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 9](week-09.qmd)
+
+[Week 11: Surveillance, Outbreak Investigation and Field Epidemiology →](week-11.qmd)
+:::

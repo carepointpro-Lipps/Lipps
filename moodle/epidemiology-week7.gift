@@ -1,0 +1,396 @@
+$CATEGORY: LIPPS/Epidemiology/Week 07/Design recognition
+
+::EPI-W7-001::Participants are grouped by baseline exposure and followed for new disease. What design is this? {
+=Cohort study#Correct.
+~Case-control study#Review cohort structure and follow-up.
+~Cross-sectional study#Review cohort structure and follow-up.
+~Ecological study#Review cohort structure and follow-up.
+}
+
+::EPI-W7-002::Both exposure and outcome have already occurred when records are reviewed, but participants are grouped by earlier exposure. What design is this? {
+=Retrospective cohort study#Correct.
+~Case-control study#Review cohort structure and follow-up.
+~Cross-sectional study#Review cohort structure and follow-up.
+~Randomised trial#Review cohort structure and follow-up.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 07/Incidence and risk
+
+::EPI-W7-003::A cohort observes 20 new cases among 400 exposed and 10 among 500 unexposed. What is the risk ratio? {
+=2.50#Correct. Divide risk in exposed by risk in unexposed.
+~0.40#Calculate each risk using its own baseline population, then divide.
+~2.00#Calculate each risk using its own baseline population, then divide.
+~3.00#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-004::A cohort observes 23 new cases among 420 exposed and 12 among 525 unexposed. What is the risk ratio? {
+=2.40#Correct. Divide risk in exposed by risk in unexposed.
+~0.42#Calculate each risk using its own baseline population, then divide.
+~1.92#Calculate each risk using its own baseline population, then divide.
+~3.19#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-005::A cohort observes 26 new cases among 440 exposed and 14 among 550 unexposed. What is the risk ratio? {
+=2.32#Correct. Divide risk in exposed by risk in unexposed.
+~0.43#Calculate each risk using its own baseline population, then divide.
+~1.86#Calculate each risk using its own baseline population, then divide.
+~3.36#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-006::A cohort observes 29 new cases among 460 exposed and 16 among 575 unexposed. What is the risk ratio? {
+=2.27#Correct. Divide risk in exposed by risk in unexposed.
+~0.44#Calculate each risk using its own baseline population, then divide.
+~1.81#Calculate each risk using its own baseline population, then divide.
+~3.52#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-007::A cohort observes 32 new cases among 480 exposed and 18 among 600 unexposed. What is the risk ratio? {
+=2.22#Correct. Divide risk in exposed by risk in unexposed.
+~0.45#Calculate each risk using its own baseline population, then divide.
+~1.78#Calculate each risk using its own baseline population, then divide.
+~3.67#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-008::A cohort observes 35 new cases among 500 exposed and 20 among 625 unexposed. What is the risk ratio? {
+=2.19#Correct. Divide risk in exposed by risk in unexposed.
+~0.46#Calculate each risk using its own baseline population, then divide.
+~1.75#Calculate each risk using its own baseline population, then divide.
+~3.80#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-009::A cohort observes 38 new cases among 520 exposed and 22 among 650 unexposed. What is the risk ratio? {
+=2.16#Correct. Divide risk in exposed by risk in unexposed.
+~0.46#Calculate each risk using its own baseline population, then divide.
+~1.73#Calculate each risk using its own baseline population, then divide.
+~3.92#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-010::A cohort observes 41 new cases among 540 exposed and 24 among 675 unexposed. What is the risk ratio? {
+=2.14#Correct. Divide risk in exposed by risk in unexposed.
+~0.47#Calculate each risk using its own baseline population, then divide.
+~1.71#Calculate each risk using its own baseline population, then divide.
+~4.04#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-011::A cohort observes 44 new cases among 560 exposed and 26 among 700 unexposed. What is the risk ratio? {
+=2.12#Correct. Divide risk in exposed by risk in unexposed.
+~0.47#Calculate each risk using its own baseline population, then divide.
+~1.69#Calculate each risk using its own baseline population, then divide.
+~4.14#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-012::A cohort observes 47 new cases among 580 exposed and 28 among 725 unexposed. What is the risk ratio? {
+=2.10#Correct. Divide risk in exposed by risk in unexposed.
+~0.48#Calculate each risk using its own baseline population, then divide.
+~1.68#Calculate each risk using its own baseline population, then divide.
+~4.24#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-013::A cohort observes 50 new cases among 600 exposed and 30 among 750 unexposed. What is the risk ratio? {
+=2.08#Correct. Divide risk in exposed by risk in unexposed.
+~0.48#Calculate each risk using its own baseline population, then divide.
+~1.67#Calculate each risk using its own baseline population, then divide.
+~4.33#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-014::A cohort observes 53 new cases among 620 exposed and 32 among 775 unexposed. What is the risk ratio? {
+=2.07#Correct. Divide risk in exposed by risk in unexposed.
+~0.48#Calculate each risk using its own baseline population, then divide.
+~1.66#Calculate each risk using its own baseline population, then divide.
+~4.42#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-015::A cohort observes 56 new cases among 640 exposed and 34 among 800 unexposed. What is the risk ratio? {
+=2.06#Correct. Divide risk in exposed by risk in unexposed.
+~0.49#Calculate each risk using its own baseline population, then divide.
+~1.65#Calculate each risk using its own baseline population, then divide.
+~4.50#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-016::A cohort observes 59 new cases among 660 exposed and 36 among 825 unexposed. What is the risk ratio? {
+=2.05#Correct. Divide risk in exposed by risk in unexposed.
+~0.49#Calculate each risk using its own baseline population, then divide.
+~1.64#Calculate each risk using its own baseline population, then divide.
+~4.58#Calculate each risk using its own baseline population, then divide.
+}
+
+::EPI-W7-017::A cohort observes 62 new cases among 680 exposed and 38 among 850 unexposed. What is the risk ratio? {
+=2.04#Correct. Divide risk in exposed by risk in unexposed.
+~0.49#Calculate each risk using its own baseline population, then divide.
+~1.63#Calculate each risk using its own baseline population, then divide.
+~4.65#Calculate each risk using its own baseline population, then divide.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 07/Person-time
+
+::EPI-W7-018::Exposed participants contribute 1000 person-years with 10 new cases; unexposed contribute 1200 person-years with 6 cases. What is the incidence rate ratio? {
+=2.00#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~5.00#Compute cases/person-time in each group before taking the ratio.
+~0.50#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-019::Exposed participants contribute 1100 person-years with 11 new cases; unexposed contribute 1320 person-years with 6 cases. What is the incidence rate ratio? {
+=2.20#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.55#Compute cases/person-time in each group before taking the ratio.
+~0.45#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-020::Exposed participants contribute 1200 person-years with 12 new cases; unexposed contribute 1440 person-years with 7 cases. What is the incidence rate ratio? {
+=2.06#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.86#Compute cases/person-time in each group before taking the ratio.
+~0.49#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-021::Exposed participants contribute 1300 person-years with 13 new cases; unexposed contribute 1560 person-years with 7 cases. What is the incidence rate ratio? {
+=2.23#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.49#Compute cases/person-time in each group before taking the ratio.
+~0.45#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-022::Exposed participants contribute 1400 person-years with 14 new cases; unexposed contribute 1680 person-years with 8 cases. What is the incidence rate ratio? {
+=2.10#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.76#Compute cases/person-time in each group before taking the ratio.
+~0.48#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-023::Exposed participants contribute 1500 person-years with 15 new cases; unexposed contribute 1800 person-years with 8 cases. What is the incidence rate ratio? {
+=2.25#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.44#Compute cases/person-time in each group before taking the ratio.
+~0.44#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-024::Exposed participants contribute 1600 person-years with 16 new cases; unexposed contribute 1920 person-years with 9 cases. What is the incidence rate ratio? {
+=2.13#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.69#Compute cases/person-time in each group before taking the ratio.
+~0.47#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-025::Exposed participants contribute 1700 person-years with 17 new cases; unexposed contribute 2040 person-years with 9 cases. What is the incidence rate ratio? {
+=2.27#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.41#Compute cases/person-time in each group before taking the ratio.
+~0.44#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-026::Exposed participants contribute 1800 person-years with 18 new cases; unexposed contribute 2160 person-years with 10 cases. What is the incidence rate ratio? {
+=2.16#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.63#Compute cases/person-time in each group before taking the ratio.
+~0.46#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-027::Exposed participants contribute 1900 person-years with 19 new cases; unexposed contribute 2280 person-years with 10 cases. What is the incidence rate ratio? {
+=2.28#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.39#Compute cases/person-time in each group before taking the ratio.
+~0.44#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-028::Exposed participants contribute 2000 person-years with 20 new cases; unexposed contribute 2400 person-years with 11 cases. What is the incidence rate ratio? {
+=2.18#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.58#Compute cases/person-time in each group before taking the ratio.
+~0.46#Compute cases/person-time in each group before taking the ratio.
+}
+
+::EPI-W7-029::Exposed participants contribute 2100 person-years with 21 new cases; unexposed contribute 2520 person-years with 11 cases. What is the incidence rate ratio? {
+=2.29#Correct. Compare the two person-time incidence rates.
+~10.00#Compute cases/person-time in each group before taking the ratio.
+~4.37#Compute cases/person-time in each group before taking the ratio.
+~0.44#Compute cases/person-time in each group before taking the ratio.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 07/Follow-up
+
+::EPI-W7-030::When can loss to follow-up introduce selection bias? {
+=When the probability of loss is related to exposure and outcome risk#Correct.
+~Whenever exactly one participant is lost#Review cohort structure and follow-up.
+~Only when the sample is small#Review cohort structure and follow-up.
+~Never in cohort studies#Review cohort structure and follow-up.
+}
+
+::EPI-W7-031::A participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+::EPI-W7-032::In a worker cohort, a participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+::EPI-W7-033::In a birth cohort, a participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+::EPI-W7-034::In a health-worker cohort, a participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+::EPI-W7-035::In a chronic-disease cohort, a participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+::EPI-W7-036::In a vaccine cohort, a participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+::EPI-W7-037::In an occupational cohort, a participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+::EPI-W7-038::In a registry cohort, a participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+::EPI-W7-039::In a retrospective cohort, a participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+::EPI-W7-040::In a prospective cohort, a participant is disease-free for two years and then moves away. What is the best conceptual treatment of the observed two years? {
+=They still contribute observed disease-free person-time before censoring#Correct.
+~Treat them as diseased at year two#Observed follow-up can contribute information even if later outcome status is unknown.
+~Assume they remained disease-free for the entire planned follow-up#Observed follow-up can contribute information even if later outcome status is unknown.
+~Delete all information from them#Observed follow-up can contribute information even if later outcome status is unknown.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 07/Comparison
+
+::EPI-W7-041::What is the role of an unexposed comparison cohort? {
+=Estimate outcome occurrence expected without the exposure pattern of interest#Correct.
+~Guarantee no confounding#Review cohort structure and follow-up.
+~Replace outcome measurement#Review cohort structure and follow-up.
+~Create randomisation#Review cohort structure and follow-up.
+}
+
+::EPI-W7-042::Exposed and unexposed workers differ greatly in age before follow-up. What is the main epidemiological concern? {
+=Age may confound the exposure-outcome comparison#Correct.
+~Cohort design eliminates all baseline differences#Observational cohorts can remain confounded.
+~The outcome cannot be measured#Observational cohorts can remain confounded.
+~Person-time becomes invalid by definition#Observational cohorts can remain confounded.
+}
+
+::EPI-W7-043::In an adolescent cohort, exposed and unexposed workers differ greatly in age before follow-up. What is the main epidemiological concern? {
+=Age may confound the exposure-outcome comparison#Correct.
+~Cohort design eliminates all baseline differences#Observational cohorts can remain confounded.
+~The outcome cannot be measured#Observational cohorts can remain confounded.
+~Person-time becomes invalid by definition#Observational cohorts can remain confounded.
+}
+
+::EPI-W7-044::In a maternal cohort, exposed and unexposed workers differ greatly in age before follow-up. What is the main epidemiological concern? {
+=Age may confound the exposure-outcome comparison#Correct.
+~Cohort design eliminates all baseline differences#Observational cohorts can remain confounded.
+~The outcome cannot be measured#Observational cohorts can remain confounded.
+~Person-time becomes invalid by definition#Observational cohorts can remain confounded.
+}
+
+::EPI-W7-045::In an HIV cohort, exposed and unexposed workers differ greatly in age before follow-up. What is the main epidemiological concern? {
+=Age may confound the exposure-outcome comparison#Correct.
+~Cohort design eliminates all baseline differences#Observational cohorts can remain confounded.
+~The outcome cannot be measured#Observational cohorts can remain confounded.
+~Person-time becomes invalid by definition#Observational cohorts can remain confounded.
+}
+
+::EPI-W7-046::In a worker cohort, exposed and unexposed workers differ greatly in age before follow-up. What is the main epidemiological concern? {
+=Age may confound the exposure-outcome comparison#Correct.
+~Cohort design eliminates all baseline differences#Observational cohorts can remain confounded.
+~The outcome cannot be measured#Observational cohorts can remain confounded.
+~Person-time becomes invalid by definition#Observational cohorts can remain confounded.
+}
+
+::EPI-W7-047::In a birth cohort, exposed and unexposed workers differ greatly in age before follow-up. What is the main epidemiological concern? {
+=Age may confound the exposure-outcome comparison#Correct.
+~Cohort design eliminates all baseline differences#Observational cohorts can remain confounded.
+~The outcome cannot be measured#Observational cohorts can remain confounded.
+~Person-time becomes invalid by definition#Observational cohorts can remain confounded.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 07/Interpretation
+
+::EPI-W7-048::Why does a cohort improve temporality compared with a typical cross-sectional study? {
+=Exposure can be measured before incident outcome occurs#Correct.
+~Cohorts always randomise exposure#Review cohort structure and follow-up.
+~Cohorts cannot have confounding#Review cohort structure and follow-up.
+~Cohorts measure only prevalence#Review cohort structure and follow-up.
+}
+
+::EPI-W7-049::Why might baseline exposure status be inadequate over long follow-up? {
+=Exposure can change over time#Correct.
+~Outcomes never occur after baseline#Changing exposure may require time-updated information.
+~All cohort studies are retrospective#Changing exposure may require time-updated information.
+~Risk ratios require case-control sampling#Changing exposure may require time-updated information.
+}
+
+::EPI-W7-050::In a health-worker cohort, why might baseline exposure status be inadequate over long follow-up? {
+=Exposure can change over time#Correct.
+~Outcomes never occur after baseline#Changing exposure may require time-updated information.
+~All cohort studies are retrospective#Changing exposure may require time-updated information.
+~Risk ratios require case-control sampling#Changing exposure may require time-updated information.
+}
+
+::EPI-W7-051::In a chronic-disease cohort, why might baseline exposure status be inadequate over long follow-up? {
+=Exposure can change over time#Correct.
+~Outcomes never occur after baseline#Changing exposure may require time-updated information.
+~All cohort studies are retrospective#Changing exposure may require time-updated information.
+~Risk ratios require case-control sampling#Changing exposure may require time-updated information.
+}
+
+::EPI-W7-052::In a vaccine cohort, why might baseline exposure status be inadequate over long follow-up? {
+=Exposure can change over time#Correct.
+~Outcomes never occur after baseline#Changing exposure may require time-updated information.
+~All cohort studies are retrospective#Changing exposure may require time-updated information.
+~Risk ratios require case-control sampling#Changing exposure may require time-updated information.
+}
+
+::EPI-W7-053::In an occupational cohort, why might baseline exposure status be inadequate over long follow-up? {
+=Exposure can change over time#Correct.
+~Outcomes never occur after baseline#Changing exposure may require time-updated information.
+~All cohort studies are retrospective#Changing exposure may require time-updated information.
+~Risk ratios require case-control sampling#Changing exposure may require time-updated information.
+}
+
+::EPI-W7-054::In a registry cohort, why might baseline exposure status be inadequate over long follow-up? {
+=Exposure can change over time#Correct.
+~Outcomes never occur after baseline#Changing exposure may require time-updated information.
+~All cohort studies are retrospective#Changing exposure may require time-updated information.
+~Risk ratios require case-control sampling#Changing exposure may require time-updated information.
+}
+
+::EPI-W7-055::In a retrospective cohort, why might baseline exposure status be inadequate over long follow-up? {
+=Exposure can change over time#Correct.
+~Outcomes never occur after baseline#Changing exposure may require time-updated information.
+~All cohort studies are retrospective#Changing exposure may require time-updated information.
+~Risk ratios require case-control sampling#Changing exposure may require time-updated information.
+}

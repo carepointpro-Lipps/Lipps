@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "LIPPS"
+  description: "Evidence is never the whole story. Applied epidemiology, research methods, public-health learning and reproducible analysis."
+  favicon: assets/lipps-mark.svg
+  reader-mode: true
+  page-navigation: true
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    pinned: true
+    title: "LIPPS."
+    left:
+      - text: "Learn"
+        href: learn/index.qmd
+      - text: "Methods"
+        href: methods/index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Studio"
+        href: studio.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - text: "LIPPS Learn"
+        href: learn/index.qmd
+  page-footer:
+    left: "© LIPPS — Evidence is never the whole story."
+    right:
+      - text: "Methods"
+        href: methods/index.qmd
+      - text: "Studio"
+        href: studio.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    smooth-scroll: true
+    code-copy: true
+    code-fold: show
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

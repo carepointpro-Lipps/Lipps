@@ -1,0 +1,283 @@
+---
+title: ""
+pagetitle: "Week 5 — Cross-sectional Studies | LIPPS"
+description: "Use cross-sectional designs to estimate prevalence and describe populations while recognising the limits created by simultaneous measurement of exposure and outcome."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 05
+:::
+
+# Cross-sectional Studies
+
+## A snapshot can describe a population very well — but it can blur the direction of time.
+
+<span class="lipps-chip">Foundation</span> <span class="lipps-chip">Cross-sectional</span> <span class="lipps-chip">Prevalence</span> <span class="lipps-chip">Survey reasoning</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Use cross-sectional designs to estimate prevalence and describe populations while recognising the limits created by simultaneous measurement of exposure and outcome.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 5, you should be able to:
+
+1. define a cross-sectional study from the timing of exposure and outcome measurement;
+2. explain why cross-sectional studies naturally estimate prevalence rather than incidence;
+3. distinguish target population, study population, sampling frame, sampling unit and observation unit;
+4. identify when a census or sample is appropriate;
+5. recognise how selection and non-response can alter prevalence estimates;
+6. identify when survey weights, clustering and stratification affect analysis;
+7. distinguish a prevalence ratio, prevalence difference and odds ratio as alternative ways to compare cross-sectional outcomes;
+8. explain the temporality problem when exposure and outcome are measured at the same time;
+9. recognise how disease duration can influence observed prevalence;
+10. write conclusions that match what a cross-sectional design can and cannot establish.
+:::
+
+::: {.lipps-section}
+## ORIENT · The survey found an association. What happened first?
+
+A university surveys 2,000 students during one semester. Current depressive symptoms and current heavy social-media use are measured in the same questionnaire. Heavy users have more depressive symptoms.
+
+What can the study establish?
+
+It can estimate the **prevalence** of each measured state and quantify their **association** at the time of measurement. But unless the timing of exposure and outcome is reconstructed with credible additional information, the design does not tell us whether heavy social-media use preceded depressive symptoms, whether symptoms changed social-media use, or whether another factor influenced both.
+
+That is the central discipline of cross-sectional interpretation: **a strong snapshot is still a snapshot.**
+:::
+
+::: {.lipps-section}
+## LEARN 1 · What makes a study cross-sectional?
+
+The defining feature is not simply “a questionnaire.” It is the **measurement structure**: a sample is observed at a point or short period, and exposure and outcome status are measured at essentially the same time.
+
+Cross-sectional studies can use interviews, records, examinations, laboratory tests or several sources together. A health-facility readiness assessment can also be cross-sectional even though the unit is a facility rather than a person.
+
+The attached CDC source characterises cross-sectional studies as simultaneous measurement of exposures and health outcomes and notes their value for documenting prevalence.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · The natural frequency measure is prevalence
+
+If a survey asks who currently has hypertension, the numerator includes people whose hypertension began yesterday and people who have lived with it for years.
+
+That is **prevalence**:
+
+$$
+P = \frac{\text{existing cases at the specified time}}{\text{population observed at that time}}
+$$
+
+A cross-sectional study generally cannot estimate the probability of *developing* hypertension during a prior period unless incidence information was separately and reliably reconstructed.
+
+This distinction matters because prevalence reflects both **incidence and duration**. A condition can have high prevalence because many new cases occur, because people live with it for a long time, or both.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Population language must be precise
+
+A survey can be technically competent and still answer the wrong population question.
+
+**Target population** — the population about which you ultimately want to make an inference.  
+**Study population** — the population from which study participants can actually be drawn under the protocol.  
+**Sampling frame** — the operational list or mechanism used to select units.  
+**Sampling unit** — the unit selected at a given sampling stage.  
+**Observation unit** — the unit on which measurements are ultimately recorded.
+
+Example: a household survey may target adults in a district, select villages first, households second, and one adult within each household. The village and household are sampling units at different stages; the adult is the observation unit.
+
+If the sampling frame excludes remote settlements, the “district estimate” may not represent the whole district even when the sample size is large.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · A sample becomes an estimate only through its design
+
+Simple random sampling is conceptually straightforward because each sampled unit has a known selection probability. Many public-health surveys, however, use stratified, cluster or multistage designs.
+
+Those design features can affect:
+
+- **weights**, because some units have different selection probabilities;
+- **standard errors**, because people sampled within the same cluster may be correlated;
+- **precision**, because stratification and clustering change the information structure; and
+- **population estimates**, when weighted and unweighted distributions differ.
+
+::: {.lipps-callout}
+**LIPPS extension**  
+The attached CDC chapter defines cross-sectional surveys but does not provide a full complex-survey analysis framework. Survey weights, clustering and stratification are included here because they are essential for analysing modern population surveys correctly.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Non-response is not just a smaller sample
+
+Suppose 80% of sampled adults participate. The main question is not merely whether 20% were lost; it is whether non-participants differ systematically from participants on variables related to the outcome.
+
+If people with severe illness are less able to participate, prevalence may be underestimated. If people particularly interested in the topic are more likely to respond, prevalence may be overestimated.
+
+A large final sample does not automatically remove non-response bias. Bias is about **systematic difference**, not simply sample size.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Comparing prevalence
+
+Two groups can be compared using absolute or relative measures.
+
+If hypertension prevalence is 30% in Group A and 20% in Group B:
+
+**Prevalence difference**
+
+$$
+PD = 0.30 - 0.20 = 0.10
+$$
+
+There are 10 additional prevalent cases per 100 people in Group A.
+
+**Prevalence ratio**
+
+$$
+PR = 0.30 / 0.20 = 1.50
+$$
+
+Prevalence in Group A is 1.5 times that in Group B.
+
+::: {.lipps-callout}
+**LIPPS extension**  
+Prevalence ratio and prevalence difference are included as modern cross-sectional effect measures. They are not explicitly developed in the attached CDC cross-sectional section.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Why the odds ratio can be awkward for common outcomes
+
+An odds ratio can be calculated from cross-sectional binary data, and logistic regression often produces one naturally. But odds are not risks or prevalences.
+
+When an outcome is common, an odds ratio can be numerically much farther from 1 than the corresponding prevalence ratio. That does not make logistic regression invalid; it means the **estimand and wording must be correct**.
+
+If the scientific question is about relative prevalence, a prevalence ratio may be easier to communicate. If the model estimates odds, report odds honestly.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Temporality: the fundamental causal limitation
+
+For many causal questions, the exposure must precede the outcome.
+
+Cross-sectional simultaneous measurement often leaves that order uncertain. This produces several possibilities:
+
+- exposure → outcome;
+- outcome → exposure (**reverse causation**);
+- a third factor → both; or
+- measurement artifacts producing the association.
+
+A survey showing that people with chronic back pain exercise less cannot by itself establish whether low exercise increased pain risk or pain reduced exercise.
+
+Additional temporal questions can help, but retrospective recall introduces its own error. The design should still be described honestly.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Prevalence can select survivors
+
+Because prevalence includes existing cases, it tends to over-represent conditions or cases of longer duration.
+
+Imagine two diseases with the same incidence. Disease A resolves in days; Disease B persists for years. A cross-sectional survey is much more likely to capture Disease B.
+
+This is sometimes called **length or prevalence-incidence bias** in broader epidemiological literature.
+
+::: {.lipps-callout}
+**LIPPS extension**  
+The attached text explains that prevalence depends on incidence and duration. The explicit survival-selection interpretation is developed here as an instructional extension.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Cross-sectional does not mean weak
+
+“Cannot establish temporal sequence well” is not the same as “useless.”
+
+Cross-sectional designs are excellent for questions such as:
+
+- What proportion of health facilities currently have oxygen?
+- What is the prevalence of hypertension among adults?
+- What proportion of adolescents report a behaviour?
+- How does current coverage vary by district?
+- Which groups currently have the greatest burden?
+
+The strength of a design is judged against the **question it was designed to answer**. A cross-sectional survey can be the ideal design for prevalence and service-readiness questions.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A fictional district household survey samples 1,800 adults using 30 villages as first-stage clusters. Current hypertension is measured using a standard protocol. Current physical activity, medication use, age, sex and residence are also recorded.
+
+Hypertension prevalence is 28%. Prevalence is 36% among adults reporting low physical activity and 22% among those reporting higher activity.
+
+Before making a causal claim:
+
+1. Identify the target population, likely sampling units and observation unit.
+2. State the primary frequency measure.
+3. Calculate the crude prevalence ratio and prevalence difference.
+4. Explain why the crude association does not establish that low physical activity caused hypertension.
+5. List at least three plausible confounding or reverse-causation explanations.
+6. Explain why cluster sampling may affect the confidence interval.
+7. State what weighting information you would need to estimate district-level prevalence appropriately.
+8. Rewrite this statement: “Low physical activity increased hypertension by 64% in the district.”
+
+A defensible version might say that low activity was **associated with higher hypertension prevalence**, while causal direction requires stronger temporal and confounding evidence.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why is prevalence the natural frequency measure in a typical cross-sectional survey?
+2. Can a cross-sectional study ever collect historical exposure information? If it does, does that automatically make the design longitudinal?
+3. What is the difference between the target population and the study population?
+4. Why can 5,000 poorly selected respondents produce a worse population estimate than 1,000 probability-sampled respondents?
+5. If prevalence is 40% versus 20%, what are the prevalence ratio and prevalence difference?
+6. Why might a chronic disease be easier to capture in a cross-sectional survey than a rapidly fatal disease?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 5 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 5 bank of 50 items.
+
+**Initial time limit:** 11 minutes.  
+**Question style:** design recognition, prevalence calculations, population/sampling logic, PR/PD interpretation, temporality and causal-language correction.  
+**Practice mode:** untimed with feedback.  
+**Formal mode:** randomised bank, delayed detailed feedback and approved accommodation overrides.
+
+::: {.lipps-callout}
+**Assessment principle**  
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.
+:::
+:::
+
+::: {.lipps-section}
+## Source foundation and LIPPS extensions
+
+**Primary source foundation:** the attached CDC text's definition and use of cross-sectional studies, simultaneous measurement, prevalence and the limitation of temporal/causal interpretation.
+
+**LIPPS extensions:** target/study-population distinctions, complex-survey weighting and clustering, prevalence ratio/difference, non-response reasoning and prevalence-incidence selection are added to make the course suitable for applied modern survey analysis.
+
+**Reference:** Centers for Disease Control and Prevention. *Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics*. October 2006; updated May 2012.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 4](week-04.qmd)
+
+[Week 6: Case-Control Studies →](week-06.qmd)
+:::

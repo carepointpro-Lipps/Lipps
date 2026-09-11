@@ -1,0 +1,361 @@
+$CATEGORY: LIPPS/Epidemiology/Week 05/Design recognition
+
+::EPI-W5-001::A survey measures current smoking and current hypertension during one visit. What design is this? {
+=Cross-sectional study#Correct. Exposure and outcome are measured at essentially the same time.
+~Cohort study#Review the defining design or interpretation logic.
+~Case-control study#Review the defining design or interpretation logic.
+~Randomised trial#Review the defining design or interpretation logic.
+}
+
+::EPI-W5-002::Which feature most strongly identifies a cross-sectional study? {
+=Exposure and outcome are assessed at the same time point or short period#Correct.
+~Participants are selected by outcome status#Review the defining design or interpretation logic.
+~Participants are randomised#Review the defining design or interpretation logic.
+~Everyone is followed until disease occurs#Review the defining design or interpretation logic.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 05/Prevalence
+
+::EPI-W5-003::A cross-sectional survey finds 50 current cases among 500 participants. What is the prevalence? {
+=10.0%#Correct. Prevalence is current cases divided by the population observed.
+~11.1%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.0%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~100.0%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-004::A cross-sectional survey finds 57 current cases among 550 participants. What is the prevalence? {
+=10.4%#Correct. Prevalence is current cases divided by the population observed.
+~11.6%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.2%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~103.6%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-005::A cross-sectional survey finds 64 current cases among 600 participants. What is the prevalence? {
+=10.7%#Correct. Prevalence is current cases divided by the population observed.
+~11.9%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.3%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~106.7%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-006::A cross-sectional survey finds 71 current cases among 650 participants. What is the prevalence? {
+=10.9%#Correct. Prevalence is current cases divided by the population observed.
+~12.3%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.5%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~109.2%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-007::A cross-sectional survey finds 78 current cases among 700 participants. What is the prevalence? {
+=11.1%#Correct. Prevalence is current cases divided by the population observed.
+~12.5%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.6%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~111.4%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-008::A cross-sectional survey finds 85 current cases among 750 participants. What is the prevalence? {
+=11.3%#Correct. Prevalence is current cases divided by the population observed.
+~12.8%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.7%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~113.3%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-009::A cross-sectional survey finds 92 current cases among 800 participants. What is the prevalence? {
+=11.5%#Correct. Prevalence is current cases divided by the population observed.
+~13.0%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.8%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~115.0%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-010::A cross-sectional survey finds 99 current cases among 850 participants. What is the prevalence? {
+=11.6%#Correct. Prevalence is current cases divided by the population observed.
+~13.2%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.8%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~116.5%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-011::A cross-sectional survey finds 106 current cases among 900 participants. What is the prevalence? {
+=11.8%#Correct. Prevalence is current cases divided by the population observed.
+~13.4%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.9%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~117.8%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-012::A cross-sectional survey finds 113 current cases among 950 participants. What is the prevalence? {
+=11.9%#Correct. Prevalence is current cases divided by the population observed.
+~13.5%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~12.9%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~118.9%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-013::A cross-sectional survey finds 120 current cases among 1000 participants. What is the prevalence? {
+=12.0%#Correct. Prevalence is current cases divided by the population observed.
+~13.6%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~13.0%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~120.0%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-014::A cross-sectional survey finds 127 current cases among 1050 participants. What is the prevalence? {
+=12.1%#Correct. Prevalence is current cases divided by the population observed.
+~13.8%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~13.0%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~121.0%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-015::A cross-sectional survey finds 134 current cases among 1100 participants. What is the prevalence? {
+=12.2%#Correct. Prevalence is current cases divided by the population observed.
+~13.9%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~13.1%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~121.8%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+::EPI-W5-016::A cross-sectional survey finds 141 current cases among 1150 participants. What is the prevalence? {
+=12.3%#Correct. Prevalence is current cases divided by the population observed.
+~14.0%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~13.1%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+~122.6%#Use existing cases in the numerator and the contemporaneous population in the denominator.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 05/Population and sampling
+
+::EPI-W5-017::What is the target population? {
+=The population about which the study intends to make an inference#Correct.
+~Only those who returned completed questionnaires#Review the defining design or interpretation logic.
+~The list used to draw the sample#Review the defining design or interpretation logic.
+~The variable recorded on each respondent#Review the defining design or interpretation logic.
+}
+
+::EPI-W5-018::What is a sampling frame? {
+=The operational list or mechanism from which units are selected#Correct.
+~The final regression model#Review the defining design or interpretation logic.
+~The target effect measure#Review the defining design or interpretation logic.
+~The response rate#Review the defining design or interpretation logic.
+}
+
+::EPI-W5-019::A district household survey samples villages first and households within villages. Which feature must be considered in variance estimation for scenario 1? {
+=Clustering of observations within selected villages#Correct. Clustered observations are not generally independent.
+~Only the final sample size#Multistage cluster sampling affects standard errors.
+~The alphabetical order of villages#Multistage cluster sampling affects standard errors.
+~Whether prevalence exceeds 50%#Multistage cluster sampling affects standard errors.
+}
+
+::EPI-W5-020::A district household survey samples villages first and households within villages. Which feature must be considered in variance estimation for scenario 2? {
+=Clustering of observations within selected villages#Correct. Clustered observations are not generally independent.
+~Only the final sample size#Multistage cluster sampling affects standard errors.
+~The alphabetical order of villages#Multistage cluster sampling affects standard errors.
+~Whether prevalence exceeds 50%#Multistage cluster sampling affects standard errors.
+}
+
+::EPI-W5-021::A district household survey samples villages first and households within villages. Which feature must be considered in variance estimation for scenario 3? {
+=Clustering of observations within selected villages#Correct. Clustered observations are not generally independent.
+~Only the final sample size#Multistage cluster sampling affects standard errors.
+~The alphabetical order of villages#Multistage cluster sampling affects standard errors.
+~Whether prevalence exceeds 50%#Multistage cluster sampling affects standard errors.
+}
+
+::EPI-W5-022::A district household survey samples villages first and households within villages. Which feature must be considered in variance estimation for scenario 4? {
+=Clustering of observations within selected villages#Correct. Clustered observations are not generally independent.
+~Only the final sample size#Multistage cluster sampling affects standard errors.
+~The alphabetical order of villages#Multistage cluster sampling affects standard errors.
+~Whether prevalence exceeds 50%#Multistage cluster sampling affects standard errors.
+}
+
+::EPI-W5-023::A district household survey samples villages first and households within villages. Which feature must be considered in variance estimation for scenario 5? {
+=Clustering of observations within selected villages#Correct. Clustered observations are not generally independent.
+~Only the final sample size#Multistage cluster sampling affects standard errors.
+~The alphabetical order of villages#Multistage cluster sampling affects standard errors.
+~Whether prevalence exceeds 50%#Multistage cluster sampling affects standard errors.
+}
+
+::EPI-W5-024::A district household survey samples villages first and households within villages. Which feature must be considered in variance estimation for scenario 6? {
+=Clustering of observations within selected villages#Correct. Clustered observations are not generally independent.
+~Only the final sample size#Multistage cluster sampling affects standard errors.
+~The alphabetical order of villages#Multistage cluster sampling affects standard errors.
+~Whether prevalence exceeds 50%#Multistage cluster sampling affects standard errors.
+}
+
+::EPI-W5-025::A district household survey samples villages first and households within villages. Which feature must be considered in variance estimation for scenario 7? {
+=Clustering of observations within selected villages#Correct. Clustered observations are not generally independent.
+~Only the final sample size#Multistage cluster sampling affects standard errors.
+~The alphabetical order of villages#Multistage cluster sampling affects standard errors.
+~Whether prevalence exceeds 50%#Multistage cluster sampling affects standard errors.
+}
+
+::EPI-W5-026::A district household survey samples villages first and households within villages. Which feature must be considered in variance estimation for scenario 8? {
+=Clustering of observations within selected villages#Correct. Clustered observations are not generally independent.
+~Only the final sample size#Multistage cluster sampling affects standard errors.
+~The alphabetical order of villages#Multistage cluster sampling affects standard errors.
+~Whether prevalence exceeds 50%#Multistage cluster sampling affects standard errors.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 05/Survey analysis
+
+::EPI-W5-027::Prevalence is 15% in Group A and 10% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 1.50; PD 5 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 5.00; PD 1.50 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.67; PD 5 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 1.50; PD 25 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+::EPI-W5-028::Prevalence is 22% in Group A and 12% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 1.83; PD 10 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 10.00; PD 1.83 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.55; PD 10 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 1.83; PD 34 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+::EPI-W5-029::Prevalence is 29% in Group A and 14% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 2.07; PD 15 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 15.00; PD 2.07 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.48; PD 15 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 2.07; PD 43 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+::EPI-W5-030::Prevalence is 21% in Group A and 16% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 1.31; PD 5 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 5.00; PD 1.31 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.76; PD 5 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 1.31; PD 37 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+::EPI-W5-031::Prevalence is 28% in Group A and 18% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 1.56; PD 10 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 10.00; PD 1.56 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.64; PD 10 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 1.56; PD 46 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+::EPI-W5-032::Prevalence is 35% in Group A and 20% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 1.75; PD 15 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 15.00; PD 1.75 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.57; PD 15 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 1.75; PD 55 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+::EPI-W5-033::Prevalence is 27% in Group A and 22% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 1.23; PD 5 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 5.00; PD 1.23 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.81; PD 5 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 1.23; PD 49 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+::EPI-W5-034::Prevalence is 34% in Group A and 24% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 1.42; PD 10 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 10.00; PD 1.42 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.71; PD 10 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 1.42; PD 58 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+::EPI-W5-035::Prevalence is 41% in Group A and 26% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 1.58; PD 15 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 15.00; PD 1.58 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.63; PD 15 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 1.58; PD 67 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+::EPI-W5-036::Prevalence is 33% in Group A and 28% in Group B. Which pair is closest to the prevalence ratio and prevalence difference? {
+=PR 1.18; PD 5 percentage points#Correct. PR divides prevalences; PD subtracts them.
+~PR 5.00; PD 1.18 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 0.85; PD 5 percentage points#Ratio uses division; absolute difference uses subtraction.
+~PR 1.18; PD 61 percentage points#Ratio uses division; absolute difference uses subtraction.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 05/Temporality
+
+::EPI-W5-037::Why is reverse causation a concern in many cross-sectional studies? {
+=Exposure and outcome may be measured simultaneously, obscuring which came first#Correct.
+~Cross-sectional studies never measure prevalence#Review the defining design or interpretation logic.
+~They always randomise exposure#Review the defining design or interpretation logic.
+~They cannot include comparison groups#Review the defining design or interpretation logic.
+}
+
+::EPI-W5-038::A cross-sectional survey finds lower physical activity among people with chronic pain. Which alternative explanation is most important before claiming inactivity caused pain? {
+=Pain may have reduced physical activity#Correct. The outcome may influence the measured exposure.
+~The sample is too large#This is a classic temporal/reverse-causation concern.
+~Prevalence cannot be calculated#This is a classic temporal/reverse-causation concern.
+~A denominator is never needed#This is a classic temporal/reverse-causation concern.
+}
+
+::EPI-W5-039::In a district household survey, a cross-sectional survey finds lower physical activity among people with chronic pain. Which alternative explanation is most important before claiming inactivity caused pain? {
+=Pain may have reduced physical activity#Correct. The outcome may influence the measured exposure.
+~The sample is too large#This is a classic temporal/reverse-causation concern.
+~Prevalence cannot be calculated#This is a classic temporal/reverse-causation concern.
+~A denominator is never needed#This is a classic temporal/reverse-causation concern.
+}
+
+::EPI-W5-040::In a university health survey, a cross-sectional survey finds lower physical activity among people with chronic pain. Which alternative explanation is most important before claiming inactivity caused pain? {
+=Pain may have reduced physical activity#Correct. The outcome may influence the measured exposure.
+~The sample is too large#This is a classic temporal/reverse-causation concern.
+~Prevalence cannot be calculated#This is a classic temporal/reverse-causation concern.
+~A denominator is never needed#This is a classic temporal/reverse-causation concern.
+}
+
+::EPI-W5-041::In a facility-readiness survey, a cross-sectional survey finds lower physical activity among people with chronic pain. Which alternative explanation is most important before claiming inactivity caused pain? {
+=Pain may have reduced physical activity#Correct. The outcome may influence the measured exposure.
+~The sample is too large#This is a classic temporal/reverse-causation concern.
+~Prevalence cannot be calculated#This is a classic temporal/reverse-causation concern.
+~A denominator is never needed#This is a classic temporal/reverse-causation concern.
+}
+
+::EPI-W5-042::In a national behavioural survey, a cross-sectional survey finds lower physical activity among people with chronic pain. Which alternative explanation is most important before claiming inactivity caused pain? {
+=Pain may have reduced physical activity#Correct. The outcome may influence the measured exposure.
+~The sample is too large#This is a classic temporal/reverse-causation concern.
+~Prevalence cannot be calculated#This is a classic temporal/reverse-causation concern.
+~A denominator is never needed#This is a classic temporal/reverse-causation concern.
+}
+
+::EPI-W5-043::In a refugee-settlement survey, a cross-sectional survey finds lower physical activity among people with chronic pain. Which alternative explanation is most important before claiming inactivity caused pain? {
+=Pain may have reduced physical activity#Correct. The outcome may influence the measured exposure.
+~The sample is too large#This is a classic temporal/reverse-causation concern.
+~Prevalence cannot be calculated#This is a classic temporal/reverse-causation concern.
+~A denominator is never needed#This is a classic temporal/reverse-causation concern.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 05/Interpretation
+
+::EPI-W5-044::A cross-sectional study finds higher current depression among heavy social-media users. Which conclusion is most defensible? {
+=Heavy social-media use was associated with higher depression prevalence in the sample#Correct.
+~Heavy social-media use caused depression#Review the defining design or interpretation logic.
+~Depression caused social-media use#Review the defining design or interpretation logic.
+~The association proves a treatment effect#Review the defining design or interpretation logic.
+}
+
+::EPI-W5-045::Which statement best reflects an appropriate use of a cross-sectional health-facility assessment? {
+=Estimate the current proportion of facilities meeting a readiness standard#Correct. Cross-sectional assessment is well suited to current prevalence/readiness.
+~Estimate five-year incidence without historical data#Match the design to a snapshot question.
+~Prove a readiness intervention caused change#Match the design to a snapshot question.
+~Measure survival time#Match the design to a snapshot question.
+}
+
+::EPI-W5-046::In a community NCD survey, which statement best reflects an appropriate use of a cross-sectional health-facility assessment? {
+=Estimate the current proportion of facilities meeting a readiness standard#Correct. Cross-sectional assessment is well suited to current prevalence/readiness.
+~Estimate five-year incidence without historical data#Match the design to a snapshot question.
+~Prove a readiness intervention caused change#Match the design to a snapshot question.
+~Measure survival time#Match the design to a snapshot question.
+}
+
+::EPI-W5-047::In an adolescent health survey, which statement best reflects an appropriate use of a cross-sectional health-facility assessment? {
+=Estimate the current proportion of facilities meeting a readiness standard#Correct. Cross-sectional assessment is well suited to current prevalence/readiness.
+~Estimate five-year incidence without historical data#Match the design to a snapshot question.
+~Prove a readiness intervention caused change#Match the design to a snapshot question.
+~Measure survival time#Match the design to a snapshot question.
+}
+
+::EPI-W5-048::In a maternal-health survey, which statement best reflects an appropriate use of a cross-sectional health-facility assessment? {
+=Estimate the current proportion of facilities meeting a readiness standard#Correct. Cross-sectional assessment is well suited to current prevalence/readiness.
+~Estimate five-year incidence without historical data#Match the design to a snapshot question.
+~Prove a readiness intervention caused change#Match the design to a snapshot question.
+~Measure survival time#Match the design to a snapshot question.
+}
+
+::EPI-W5-049::In a workplace survey, which statement best reflects an appropriate use of a cross-sectional health-facility assessment? {
+=Estimate the current proportion of facilities meeting a readiness standard#Correct. Cross-sectional assessment is well suited to current prevalence/readiness.
+~Estimate five-year incidence without historical data#Match the design to a snapshot question.
+~Prove a readiness intervention caused change#Match the design to a snapshot question.
+~Measure survival time#Match the design to a snapshot question.
+}
+
+::EPI-W5-050::In a school health survey, which statement best reflects an appropriate use of a cross-sectional health-facility assessment? {
+=Estimate the current proportion of facilities meeting a readiness standard#Correct. Cross-sectional assessment is well suited to current prevalence/readiness.
+~Estimate five-year incidence without historical data#Match the design to a snapshot question.
+~Prove a readiness intervention caused change#Match the design to a snapshot question.
+~Measure survival time#Match the design to a snapshot question.
+}

@@ -1,0 +1,37 @@
+---
+title: "Projects"
+description: "Complete LIPPS analytical projects from question to interpretation."
+---
+
+# Projects
+
+Projects are complete analytical workflows. They exist both as learning resources and as a professional portfolio of how LIPPS approaches real public-health evidence.
+
+::: {.lipps-grid .two}
+::: {.lipps-card}
+### Health-facility readiness under incomplete information
+<span class="lipps-chip">Health systems</span>
+<span class="lipps-chip">Survey analysis</span>
+<span class="lipps-chip">R</span>
+
+A model project showing data audit, indicator construction, uncertainty, sensitivity analysis and decision-oriented interpretation.
+
+[Open project →](facility-readiness.qmd)
+:::
+
+::: {.lipps-card}
+### Coming next: Cluster household survey
+<span class="lipps-chip">Epidemiology</span>
+<span class="lipps-chip">Complex surveys</span>
+
+Sampling reconstruction, weighted estimation, design-adjusted uncertainty and association analysis.
+:::
+:::
+
+## Planned launch portfolio
+
+1. Analysing a health-facility readiness assessment.
+2. Analysing a cluster household survey.
+3. From outbreak line list to epidemiological report.
+4. Diagnostic-test performance in a changing-prevalence population.
+5. Building and interpreting a public-health dashboard.

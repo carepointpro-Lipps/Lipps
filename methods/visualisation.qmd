@@ -1,0 +1,7 @@
+---
+title: "Visualisation"
+---
+
+# Visualisation
+
+Design tables, figures, maps and dashboards that reveal the evidence without overstating precision, hiding denominators or sacrificing accessibility.

@@ -1,0 +1,7 @@
+---
+title: "Measurement"
+---
+
+# Measurement
+
+Operational definitions, exposures, outcomes, covariates, constructs, indicators, scales, indices, composite scores, reliability, validity, measurement error and defensible cut-offs.

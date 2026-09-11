@@ -1,0 +1,70 @@
+---
+title: "Assessment Model"
+description: "How LIPPS Learn designs objective, time-disciplined and accessible assessments."
+---
+
+
+LIPPS uses objective assessment because it can provide rapid, consistent marking at scale. The quality of the assessment therefore depends on **what the questions require the learner to do**.
+
+## Three modes
+
+| Mode | Main purpose | Feedback | Typical use |
+|---|---|---|---|
+| **Practice** | Learn and correct misconceptions | Immediate and explanatory | During the weekly lesson |
+| **Mastery** | Demonstrate individual understanding | After submission | Weekly timed quiz |
+| **Assessment** | Formal institutional assessment | Institution-controlled | Scheduled test or examination |
+
+## Question design principles
+
+1. **Application before recall.** Most questions use a short scenario, output, graph, table or decision problem.
+2. **One defensible best answer.** Distractors should represent plausible misconceptions rather than tricks.
+3. **Large item banks.** Quizzes sample from topic-specific banks rather than presenting the same fixed paper to every learner.
+4. **Randomisation where appropriate.** Question order, options and parameterised calculations may vary.
+5. **Time discipline, not speed for its own sake.** Timing should make extensive external searching inefficient while still allowing a prepared learner to read and reason.
+6. **Accessible assessment.** Copy/paste and ordinary browser functions remain available; approved accommodations can extend time for an individual without changing the learning objectives.
+7. **Explanatory feedback.** Practice items explain why an answer is correct and why common alternatives are not.
+8. **Item QA.** Items should be reviewed for ambiguity, difficulty, distractor performance and discrimination as sufficient response data accumulate.
+
+## Timing principle
+
+LIPPS does not use one universal seconds-per-question rule. Timing is piloted against the actual items.
+
+A starting weekly mastery format may use **15–20 objective items in approximately 10–15 minutes**, then be adjusted using observed completion times and item difficulty. Calculation-heavy assessments require more time than recognition and interpretation items.
+
+::: {.lipps-callout}
+**Design objective**  
+The prepared learner should have enough time. The unprepared learner should not gain an advantage from spending the assessment searching externally for every answer.
+:::
+
+## Objective quizzes are not the whole course assessment
+
+Objective quizzes are efficient for frequent checks of knowledge, interpretation and short decisions. They are **not sufficient on their own** for competencies that require producing or defending work.
+
+For university pilots, LIPPS therefore pairs quizzes with authentic tasks such as study-design critiques, outbreak analyses, audience diagnoses, message pre-tests, risk-communication simulations and campaign plans.
+
+[See the proposed pilot assessment portfolios →](pilot-assessment-blueprints.qmd)
+
+## Moodle implementation
+
+The Moodle build should support:
+
+- topic-specific question-bank categories;
+- random-question selection;
+- shuffled answer choices where appropriate;
+- one-question-at-a-time presentation for mastery/assessment mode;
+- timed attempts with automatic submission;
+- institution-defined opening and closing windows;
+- delayed feedback for formal assessments;
+- individual extra-time accommodations;
+- attempt and grade reporting; and
+- question statistics for later item review.
+
+## Example item transformation
+
+**Weak recall item**  
+Which design measures prevalence?
+
+**LIPPS-style item**  
+A survey interviews 1,800 adults during one month and measures both current hypertension and current medication use. Which measure of disease occurrence can be estimated directly from this design?
+
+The second item still has an objective answer, but the learner must recognise the design from the scenario before answering.

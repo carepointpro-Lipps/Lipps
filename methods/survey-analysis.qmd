@@ -1,0 +1,40 @@
+---
+title: "Survey Analysis Strategies"
+---
+
+# Survey Analysis Strategies
+
+Survey analysis should begin by reconstructing **how the observations entered the dataset**. The sampling design determines the weights, dependence structure, variance estimation and often the appropriate modelling strategy.
+
+## Cross-sectional population surveys
+
+Define the target population and estimand; reconstruct inclusion probabilities; estimate prevalence or means with uncertainty; then analyse associations using methods appropriate to the outcome and design.
+
+## Cluster surveys
+
+Account for within-cluster correlation and the sampling design. Naïve analyses that treat all observations as independent usually understate uncertainty.
+
+## Stratified surveys
+
+Retain the stratification information in estimation and variance calculation. Disproportionate allocation often requires weights.
+
+## Multistage household surveys
+
+Track selection probabilities at every stage: primary sampling units, secondary units, households and individuals. Distinguish household-level from person-level estimands.
+
+## Health-facility assessments
+
+Clarify whether facilities were sampled or assessed as a census, distinguish facility-level from service- or patient-level denominators, document tracer-indicator construction, and avoid treating composite readiness scores as inherently comparable without validating the scoring model.
+
+## KAP surveys
+
+Define constructs before scoring them. Avoid arbitrary categorisation of knowledge or attitude scores unless a defensible threshold exists. Assess item behaviour and measurement properties where appropriate.
+
+## Humanitarian assessments
+
+Document inaccessible areas, population-frame uncertainty, cluster selection, non-response and operational compromises. Avoid reporting precise sub-area rankings when the design was only powered for pooled estimation.
+
+::: {.lipps-callout}
+**What could fool us?**  
+Ignoring weights, clustering or stratification can produce estimates that look precise while representing the target population poorly—or confidence intervals that are far too narrow.
+:::

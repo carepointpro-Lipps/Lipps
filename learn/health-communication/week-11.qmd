@@ -1,0 +1,174 @@
+---
+title: ""
+pagetitle: "Week 11 — Communication Campaign Design and Evaluation | LIPPS"
+description: "Design a coherent health communication campaign from problem diagnosis through objectives, strategy, implementation, monitoring and evaluation."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 11
+:::
+
+# Communication Campaign Design and Evaluation
+
+## If the objective cannot be measured, the campaign cannot tell whether it achieved anything beyond activity.
+
+<span class="lipps-chip">Campaign planning</span> <span class="lipps-chip">Theory of change</span> <span class="lipps-chip">Indicators</span> <span class="lipps-chip">Evaluation</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Design a coherent health communication campaign from problem diagnosis through objectives, strategy, implementation, monitoring and evaluation.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. distinguish health, behavioural and communication problems;
+2. write specific measurable communication objectives;
+3. develop a communication theory of change;
+4. align audience, mechanism, message, messenger and channel;
+5. distinguish inputs, activities, outputs, reach, intermediate outcomes, behaviour and health outcomes;
+6. select process and outcome indicators;
+7. explain implementation fidelity and dose/exposure;
+8. choose feasible evaluation designs and recognise attribution limits;
+9. combine quantitative and qualitative evaluation evidence;
+10. assess equity, cost and unintended effects.
+:::
+
+::: {.lipps-section}
+## ORIENT · A successful campaign because 100,000 flyers were printed?
+
+A programme reports that its maternal-health campaign was successful because it produced 100,000 flyers, aired 300 radio spots and reached 1.2 million social-media impressions. The original objective was to increase early antenatal booking. No measure of awareness, comprehension, intention, service enquiries or booking was collected.
+
+Activities and reach are useful implementation data. They are not automatically evidence that the campaign changed the intended outcome.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Start with the problem hierarchy
+
+Separate the **health problem** from the **behavioural or service problem** and from the **communication problem**. For example: maternal complications are the health problem; late antenatal initiation may be a behaviour/service problem; misunderstanding when ANC should begin may be one communication determinant.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Write measurable objectives
+
+An objective should specify **who**, **what change**, **how much**, and **by when** where feasible. “Raise awareness” is weak unless awareness is defined. “Increase from 45% to 65% the proportion of first-time pregnant women who know ANC should begin in the first trimester within six months” is clearer.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Build a communication theory of change
+
+Connect **determinant → communication mechanism → exposure/experience → intermediate change → behaviour → health contribution**. Include assumptions about service availability and social context. A theory of change makes it possible to identify where failure occurred.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Align strategy components
+
+The audience, objective, message, messenger and channel should fit one another. A complex decision requiring privacy and dialogue is poorly matched to a billboard. A reminder problem may be well suited to SMS if phones are private and numbers are stable.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Use an outcome ladder
+
+**Inputs** are resources. **Activities** are what the programme does. **Outputs** are products delivered. **Reach/exposure** captures contact with communication. **Intermediate outcomes** include knowledge, beliefs, skills, norms or intentions. **Behaviour/service outcomes** reflect action. **Health outcomes** are usually influenced by many additional factors.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Process evaluation explains implementation
+
+Measure whether communication was delivered as planned, with adequate quality, frequency and coverage. **Fidelity** asks whether the intervention matched its intended design. **Dose** concerns amount delivered or received. Process data help distinguish strategy failure from implementation failure.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Outcome evaluation needs a counterfactual idea
+
+A simple before-after change may reflect secular trends, other programmes, seasonality or changing populations. Stronger designs may use comparison groups, interrupted time series, repeated cross-sectional surveys or experimental allocation where ethical and feasible. Communication evaluation should borrow rigor from epidemiology.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Attribution becomes harder further down the chain
+
+It is usually easier to attribute a change in message comprehension to a campaign than a decline in mortality. Health outcomes depend on service quality, access, policy, biology and other exposures. Be explicit about contribution versus attribution.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Qualitative evidence explains mechanisms and unintended effects
+
+Interviews, observation, feedback logs and focus groups can reveal why a message was trusted, why a channel excluded some groups, how norms shifted or why a seemingly successful campaign produced stigma.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Evaluate equity and cost
+
+Ask who was reached, who benefited, who was missed and what it cost. A campaign with strong average effects can still widen disparities if already advantaged groups receive most of the benefit.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+Design a six-month campaign to increase timely childhood vaccination after missed-dose rates rise in three districts. Routine data suggest missed appointments, but formative interviews identify transport barriers, uncertainty about catch-up eligibility, occasional stock-outs and rumours about side effects.
+
+1. Separate health, service/behaviour and communication problems.
+2. Write two measurable communication objectives.
+3. Build a short theory of change.
+4. Define audiences and channel mix.
+5. List inputs, activities, outputs, reach indicators, intermediate outcomes and behaviour/service outcomes.
+6. Choose an evaluation design and identify key threats to inference.
+7. Add qualitative evaluation questions.
+8. Add equity and cost indicators.
+9. State what result would lead you to change the campaign rather than continue it.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why are outputs not outcomes?
+2. What does implementation fidelity mean?
+3. Why is a before-after comparison vulnerable to alternative explanations?
+4. What is the difference between contribution and attribution?
+5. Give one intermediate communication outcome between exposure and behaviour.
+6. How can a campaign improve the average outcome while worsening equity?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 11 mastery quiz
+
+**Pilot Mastery Quiz:** 20 objective questions sampled from a Week 11 bank of 56 items.
+
+**Initial time limit:** 14 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **NCI Making Health Communication Programs Work.** Planning and evaluation of health communication programmes.
+- **WHO Strategic Communications Framework.** Strategic planning principles for effective communication.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 10](week-10.qmd)
+
+[Week 12 →](week-12.qmd)
+:::

@@ -1,0 +1,165 @@
+---
+title: ""
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+::: {.lipps-hero}
+<div class="lipps-logo">LIPPS.</div>
+
+<div class="lipps-tagline">Evidence is never the whole story.</div>
+
+<div class="lipps-intro">
+Learn epidemiology, research methods and public-health reasoning through structured courses, rigorous methods and real analytical projects.
+</div>
+
+::: {.lipps-actions}
+[START LEARNING](learn/index.qmd){.lipps-btn .primary}
+[EXPLORE METHODS](methods/index.qmd){.lipps-btn .secondary}
+:::
+
+<div class="lipps-mantra">Real problems. Careful methods. Defensible conclusions.</div>
+:::
+
+::: {.lipps-section}
+<div class="lipps-eyebrow">LEARN</div>
+## Build competence, not just familiarity.
+
+Structured courses designed around explanation, application and assessment.
+
+::: {.lipps-grid .two}
+::: {.lipps-card}
+### Epidemiology
+**12 weeks**
+
+Learn how epidemiologists think, measure disease, compare populations, evaluate evidence and interpret findings.
+
+`Lessons` `Applied cases` `Practice` `Timed quizzes`
+
+[VIEW EPIDEMIOLOGY →](learn/epidemiology.qmd)
+:::
+
+::: {.lipps-card}
+### Health Communication
+**12 weeks**
+
+Learn how health information is understood, communicated and used—from interpersonal communication to risk communication, digital media and public-health campaigns.
+
+`Lessons` `Applied cases` `Practice` `Timed quizzes`
+
+[VIEW HEALTH COMMUNICATION →](learn/health-communication.qmd)
+:::
+:::
+:::
+
+::: {.lipps-section}
+<div class="lipps-eyebrow">METHODS</div>
+## Find the right way to answer the question.
+
+Explore practical guidance on research design, sampling, survey methodology, statistical analysis, measurement, diagnostic studies, causal reasoning, data quality, qualitative methods and interpretation.
+
+::: {.lipps-grid}
+::: {.lipps-card}
+### Design
+Choose a study design that matches the research question, estimand, setting and feasible level of inference.
+:::
+
+::: {.lipps-card}
+### Sampling
+Select people, households, facilities and clusters in ways that support valid estimation.
+:::
+
+::: {.lipps-card}
+### Surveys
+Move correctly from survey design to weighting, variance estimation, modelling and interpretation.
+:::
+
+::: {.lipps-card}
+### Analysis
+Choose analytical strategies based on the outcome, design, estimand and assumptions—not software menus.
+:::
+
+::: {.lipps-card}
+### Causal reasoning
+Recognise bias, confounding, mediation, interaction and the limits of causal claims.
+:::
+
+::: {.lipps-card}
+### Interpretation
+Turn estimates, uncertainty and model outputs into defensible scientific conclusions.
+:::
+:::
+
+[EXPLORE METHODS](methods/index.qmd){.lipps-btn .secondary}
+:::
+
+::: {.lipps-section}
+<div class="lipps-eyebrow">PROJECTS</div>
+## See how analysis is actually done.
+
+Follow complete analytical projects from the original question to data preparation, methodological choices, analysis, interpretation and limitations.
+
+Each project shows not only **what was done**, but **why it was done that way**.
+
+::: {.lipps-card}
+### Health-facility readiness under incomplete information
+<span class="lipps-chip">Health systems</span>
+<span class="lipps-chip">Survey analysis</span>
+<span class="lipps-chip">R</span>
+
+From data-quality checks and indicator construction through modelling, uncertainty and decision-oriented interpretation.
+
+[EXPLORE PROJECT →](projects/facility-readiness.qmd)
+:::
+
+[EXPLORE ALL PROJECTS](projects/index.qmd){.lipps-btn .secondary}
+:::
+
+::: {.lipps-section}
+<div class="lipps-eyebrow">FROM QUESTION TO EVIDENCE</div>
+## A good analysis does not begin with software.
+
+::: {.lipps-path}
+**Question** → **Design** → **Measurement** → **Data** → **Analysis** → **Interpretation** → **Decision**
+:::
+
+::: {.lipps-callout}
+**What could the evidence be hiding?**
+At every stage, LIPPS asks what could make the observed evidence misleading: selection, measurement error, missingness, bias, modelling assumptions, uncertainty or context.
+:::
+:::
+
+::: {.lipps-section}
+<div class="lipps-eyebrow">LIPPS STUDIO</div>
+## Bring rigorous methods to your own work.
+
+LIPPS Studio supports universities, research teams and organisations with research design, epidemiological analysis, survey analysis, statistical modelling, data-quality assessment, dashboards, research-methods training and institutional capacity building.
+
+[WORK WITH LIPPS](studio.qmd){.lipps-btn .primary}
+:::
+
+::: {.lipps-section}
+<div class="lipps-eyebrow">WHY LIPPS?</div>
+## Reason beyond the output.
+
+Evidence is always observed through something: a sample, a measurement, a record, a model or an interpretation. What we observe may therefore not perfectly represent what actually happened.
+
+The name **LIPPS** is inspired by the Signor–Lipps effect in palaeontology—a reminder that an incomplete record can produce a misleading picture of reality.
+
+Research faces the same challenge. Samples are incomplete. Measurements contain error. Records are missing. Associations can mislead. Context matters.
+
+**LIPPS exists to help people reason beyond the output.**
+
+[ABOUT LIPPS](about.qmd){.lipps-btn .secondary}
+:::
+
+::: {.lipps-section}
+<div class="lipps-eyebrow">THE LIPPS BRIEF</div>
+## One research problem worth thinking about.
+
+Occasional short lessons, methodological problems and new projects from LIPPS.
+
+<div class="lipps-placeholder">Email signup will be connected before public launch.</div>
+:::

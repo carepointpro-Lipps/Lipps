@@ -1,0 +1,172 @@
+---
+title: ""
+pagetitle: "Week 5 — Community Engagement and Participatory Communication | LIPPS"
+description: "Design community engagement as a two-way, accountable process that shares information, listens, adapts interventions and builds workable solutions with affected communities."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 05
+:::
+
+# Community Engagement and Participatory Communication
+
+## Communities are not channels through which programmes deliver messages. They are partners with knowledge, power, priorities and solutions.
+
+<span class="lipps-chip">Participation</span> <span class="lipps-chip">Community listening</span> <span class="lipps-chip">Power</span> <span class="lipps-chip">RCCE</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Design community engagement as a two-way, accountable process that shares information, listens, adapts interventions and builds workable solutions with affected communities.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. distinguish information, consultation, involvement, collaboration and shared leadership;
+2. explain why community engagement is different from mobilisation alone;
+3. map stakeholders by influence, interest, trust and role;
+4. identify power and representation problems in community participation;
+5. design feedback and accountability loops;
+6. use community listening to identify questions, rumours and barriers;
+7. explain the relationship between community engagement and trust;
+8. apply RCCE principles in health emergencies and humanitarian settings;
+9. recognise safeguarding, inclusion and do-no-harm considerations.
+:::
+
+::: {.lipps-section}
+## ORIENT · The meeting had 200 people—but no engagement
+
+A response team holds a large community meeting during a cholera outbreak. Officials speak for 90 minutes, distribute flyers and leave. Attendance is recorded as evidence of “community engagement.” No questions are documented, women speak very little, local water vendors are absent, and the team has no mechanism to report back on concerns.
+
+Large attendance can be mobilisation. It is not automatically participation or engagement.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Engagement is relational, not event-based
+
+Community engagement is an ongoing process of developing relationships and structures through which affected people help shape decisions and solutions. In emergencies, WHO frames communities as partners in creating responses that are acceptable and workable.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · A useful participation continuum
+
+Communication can move from **inform → consult → involve → collaborate → share leadership/empower**. Not every decision can be fully delegated, but programmes should be clear about what is genuinely open to influence. Pretending to consult when decisions are already fixed damages trust.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Stakeholder mapping should include power and trust
+
+List groups who are affected, who influence decisions, who control resources, who are trusted, who may be excluded and who can block or enable implementation. A high-ranking official may have formal power but low community trust; a local midwife or market leader may have high practical influence.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Representation is never automatic
+
+Community leaders do not necessarily represent women, adolescents, people with disabilities, displaced people, minority language groups or stigmatised populations. Ask who is missing from the room and who may not be safe speaking publicly.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Listening creates programme data
+
+Questions, complaints, rumours and resistance can reveal operational problems. If people repeatedly say vaccination teams arrive after working hours, the response is not merely to “correct misinformation.” It may require changing service delivery.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Feedback loops must close
+
+A functional loop is **listen → document → analyse → decide → act → report back**. If communities provide information but never hear what happened, engagement becomes extractive.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Trust is built through behaviour
+
+Transparency, consistency, respectful treatment, visible response to concerns and honest acknowledgement of constraints can strengthen trust. Communication teams cannot manufacture trust with slogans when programme behaviour contradicts the message.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · RCCE links communication and operational response
+
+Risk communication and community engagement work best when connected to surveillance, case management, vaccination, WASH, logistics and other response pillars. Community insight should change operations where evidence shows a barrier.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Participation has ethical and safeguarding requirements
+
+Engagement should avoid exposing people to retaliation, stigma or political risk. Consent, privacy, safe participation, fair compensation where appropriate and mechanisms for complaints matter, particularly in humanitarian settings.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Measure quality, not just attendance
+
+Useful indicators may include diversity of participation, proportion of priority concerns receiving a documented response, time to close feedback loops, changes made because of community input, trust measures and whether affected groups can explain how to raise concerns.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+An Ebola preparedness programme plans vaccination and infection-prevention activities in a border district. Community leaders support the programme, but market traders fear loss of business if cases are announced, young people rely heavily on social media, and some religious leaders are sceptical of vaccination. Previous emergency teams promised feedback but rarely returned.
+
+1. Map at least six stakeholders by influence, trust and likely role.
+2. Identify groups likely to be underrepresented if the programme consults only formal leaders.
+3. Design three listening mechanisms.
+4. Create a feedback loop showing who documents, analyses, acts and reports back.
+5. Identify one operational issue that communication alone cannot solve.
+6. Propose indicators of engagement quality.
+7. Explain how you would engage sceptical leaders without turning them into token endorsers.
+8. Identify one safeguarding risk and mitigation.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why is mobilisation not the same as engagement?
+2. What is the risk of relying only on formal leaders?
+3. What makes a feedback loop “closed”?
+4. Give one example of a community concern that should change operations rather than messages.
+5. Why can consultation damage trust when decisions are already fixed?
+6. Name one indicator of engagement quality other than attendance.
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 5 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 5 bank of 48 items.
+
+**Initial time limit:** 11 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **WHO RCCE Competency Framework, 2024.** Competencies for community-centred communication and engagement before, during and after emergencies.
+- **WHO Risk Communication and Community Engagement resources.** Community engagement as partnership in emergency solutions.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 4](week-04.qmd)
+
+[Week 6 →](week-06.qmd)
+:::

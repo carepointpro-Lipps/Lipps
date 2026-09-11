@@ -1,0 +1,31 @@
+---
+title: "Statistical Analysis Strategies"
+---
+
+# Statistical Analysis Strategies
+
+LIPPS organises statistical methods around the **question and outcome**, not around a disconnected list of tests.
+
+## Describing populations
+Frequencies, proportions, means, medians, rates, percentiles and standardisation.
+
+## Comparing groups
+Effect estimates, differences, confidence intervals and appropriate parametric or non-parametric comparisons.
+
+## Binary outcomes
+Logistic, log-binomial and modified Poisson approaches; odds ratios, risk ratios, prevalence ratios and predicted probabilities.
+
+## Counts and rates
+Poisson and negative-binomial models, offsets, rate ratios and overdispersion.
+
+## Continuous outcomes
+Linear models, transformations, residual diagnostics and robust alternatives.
+
+## Time-to-event outcomes
+Kaplan-Meier estimation, log-rank comparisons, Cox regression, proportional hazards and competing risks.
+
+## Correlated data
+GEE, multilevel models, mixed models, random effects and intra-cluster correlation.
+
+## Advanced pathways
+Repeated measures, time series, spatial analysis, Bayesian analysis, missing-data methods and small-sample approaches.

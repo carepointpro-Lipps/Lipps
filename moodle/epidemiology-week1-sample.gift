@@ -1,0 +1,11 @@
+// Deprecated sample file retained for backwards compatibility.
+// Use epidemiology-week1.gift for the expanded Week 1 question bank.
+
+$CATEGORY: LIPPS/Epidemiology/Week 01/Sample
+
+::EPI-W1-SAMPLE::Which statement BEST reflects epidemiological thinking? {
+~A statistically significant association proves causation.
+~A large sample eliminates systematic error.
+=Observed patterns must be interpreted in light of population, measurement, comparison and study design.
+~A sophisticated model can correct any design problem.
+}

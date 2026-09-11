@@ -1,0 +1,24 @@
+---
+title: "About"
+---
+
+# Why LIPPS?
+
+LIPPS takes inspiration from the Signor–Lipps effect in palaeontology: an incomplete observed record can misrepresent the timing or pattern of what actually occurred.
+
+Research faces the same underlying challenge. Samples are partial. Measurements contain error. Records are missing. Models rely on assumptions. Associations can be misread. Context matters.
+
+**Evidence is never the whole story.**
+
+LIPPS exists to teach people to reason carefully from evidence rather than merely produce outputs.
+
+## Teaching principles
+
+1. Teach concepts before software.
+2. Teach methods through real problems.
+3. Make learners interpret rather than merely calculate.
+4. Treat every result as evidence that requires scrutiny.
+
+## Founder
+
+Add the founder biography, selected professional work, publications, teaching, CV, ORCID and GitHub links here before public launch.

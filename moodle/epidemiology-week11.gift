@@ -1,0 +1,542 @@
+$CATEGORY: LIPPS/Epidemiology/Week 11/Surveillance concepts
+
+::EPI-W11-001::Which phrase best captures public-health surveillance? {
+=Ongoing systematic collection, analysis, interpretation and dissemination of health data for action#Correct.
+~A one-time research survey only#Review surveillance purpose and outbreak-investigation logic.
+~Direct treatment of every reported patient#Review surveillance purpose and outbreak-investigation logic.
+~Any database containing health information#Review surveillance purpose and outbreak-investigation logic.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 11/Surveillance types
+
+::EPI-W11-002::A health department routinely receives reports without actively calling every facility. What type is this? {
+=Passive surveillance#Correct.
+~Active surveillance#Review surveillance purpose and outbreak-investigation logic.
+~Randomised surveillance#Review surveillance purpose and outbreak-investigation logic.
+~Case-control surveillance#Review surveillance purpose and outbreak-investigation logic.
+}
+
+::EPI-W11-003::Selected clinics agree to report all cases of a condition to track trends. What approach is this? {
+=Sentinel surveillance#Correct.
+~Census#Review surveillance purpose and outbreak-investigation logic.
+~Case-control study#Review surveillance purpose and outbreak-investigation logic.
+~Cluster trial#Review surveillance purpose and outbreak-investigation logic.
+}
+
+::EPI-W11-004::A system monitors symptom patterns before specific diagnoses are confirmed. What approach is this? {
+=Syndromic surveillance#Correct.
+~Retrospective cohort#Review surveillance purpose and outbreak-investigation logic.
+~Experimental surveillance#Review surveillance purpose and outbreak-investigation logic.
+~Cross-sectional intervention#Review surveillance purpose and outbreak-investigation logic.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 11/Attributes
+
+::EPI-W11-005::What does surveillance sensitivity describe? {
+=Ability to detect true cases or events of interest#Correct.
+~Proportion of detected alerts that are true#Review surveillance purpose and outbreak-investigation logic.
+~Speed of data transmission only#Review surveillance purpose and outbreak-investigation logic.
+~Willingness of facilities to report#Review surveillance purpose and outbreak-investigation logic.
+}
+
+::EPI-W11-006::What does predictive value positive describe in surveillance? {
+=Proportion of detected cases or alerts that are truly cases or events#Correct.
+~Proportion of true cases detected#Review surveillance purpose and outbreak-investigation logic.
+~Proportion of noncases correctly ignored#Review surveillance purpose and outbreak-investigation logic.
+~Number of facilities reporting#Review surveillance purpose and outbreak-investigation logic.
+}
+
+::EPI-W11-007::Data are available quickly enough to support action. Which attribute best fits? {
+=Timeliness#Correct.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+~Flexibility#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-008::Observed patterns accurately reflect the population by person, place and time. Which attribute best fits? {
+=Representativeness#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+~Flexibility#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-009::People and organisations are willing to participate. Which attribute best fits? {
+=Acceptability#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Flexibility#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-010::The system can adapt to changing information needs. Which attribute best fits? {
+=Flexibility#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-011::The system and resources remain reliably available. Which attribute best fits? {
+=Stability#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-012::Recorded surveillance data are complete and valid. Which attribute best fits? {
+=Data quality#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-013::The system is easy enough to operate while meeting objectives. Which attribute best fits? {
+=Simplicity#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-014::During a district surveillance review, data are available quickly enough to support action. Which attribute best fits? {
+=Timeliness#Correct.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+~Flexibility#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-015::During an outbreak investigation, observed patterns accurately reflect the population by person, place and time. Which attribute best fits? {
+=Representativeness#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+~Flexibility#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-016::During a sentinel-site review, people and organisations are willing to participate. Which attribute best fits? {
+=Acceptability#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Flexibility#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-017::During active case finding, the system can adapt to changing information needs. Which attribute best fits? {
+=Flexibility#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-018::During a syndromic-surveillance review, the system and resources remain reliably available. Which attribute best fits? {
+=Stability#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-019::During a laboratory-surveillance review, recorded surveillance data are complete and valid. Which attribute best fits? {
+=Data quality#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-020::During a health-facility surveillance review, the system is easy enough to operate while meeting objectives. Which attribute best fits? {
+=Simplicity#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-021::During a field epidemiology deployment, data are available quickly enough to support action. Which attribute best fits? {
+=Timeliness#Correct.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+~Flexibility#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-022::During a community alert investigation, observed patterns accurately reflect the population by person, place and time. Which attribute best fits? {
+=Representativeness#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+~Flexibility#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-023::During a national surveillance review, people and organisations are willing to participate. Which attribute best fits? {
+=Acceptability#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Flexibility#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-024::During a line-list review, the system can adapt to changing information needs. Which attribute best fits? {
+=Flexibility#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-025::During a rapid response investigation, the system and resources remain reliably available. Which attribute best fits? {
+=Stability#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+::EPI-W11-026::During a district surveillance review, recorded surveillance data are complete and valid. Which attribute best fits? {
+=Data quality#Correct.
+~Timeliness#Match the operational characteristic to its definition.
+~Representativeness#Match the operational characteristic to its definition.
+~Acceptability#Match the operational characteristic to its definition.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 11/Signal verification
+
+::EPI-W11-027::Why is a sudden rise in reports not automatically a disease outbreak? {
+=Reporting, diagnostics, duplicates or population size may have changed#Correct.
+~All surveillance signals are false#Review surveillance purpose and outbreak-investigation logic.
+~Outbreaks require randomisation#Review surveillance purpose and outbreak-investigation logic.
+~Rates can never rise quickly#Review surveillance purpose and outbreak-investigation logic.
+}
+
+::EPI-W11-028::Weekly case reports rose sharply just after a new clinic began reporting. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-029::Weekly case reports rose sharply just after a case definition was broadened. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-030::Weekly case reports rose sharply just after duplicate reports were imported. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-031::Weekly case reports rose sharply just after a large refugee influx changed the denominator. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-032::Weekly case reports rose sharply just after a new rapid test increased diagnosis. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-033::Weekly case reports rose sharply just after a backlog of reports was entered in one batch. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-034::During an outbreak investigation, weekly case reports rose sharply just after a new clinic began reporting. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-035::During a sentinel-site review, weekly case reports rose sharply just after a case definition was broadened. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-036::During active case finding, weekly case reports rose sharply just after duplicate reports were imported. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-037::During a syndromic-surveillance review, weekly case reports rose sharply just after a large refugee influx changed the denominator. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-038::During a laboratory-surveillance review, weekly case reports rose sharply just after a new rapid test increased diagnosis. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+::EPI-W11-039::During a health-facility surveillance review, weekly case reports rose sharply just after a backlog of reports was entered in one batch. What should be checked before attributing the rise entirely to transmission? {
+=Whether the reporting or population change explains some of the increase#Correct.
+~Assume the signal proves an outbreak#The observation system itself can change the apparent numerator or denominator.
+~Ignore prior baseline data#The observation system itself can change the apparent numerator or denominator.
+~Stop using denominators#The observation system itself can change the apparent numerator or denominator.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 11/Case definition and finding
+
+::EPI-W11-040::Which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+::EPI-W11-041::During a field epidemiology deployment, which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+::EPI-W11-042::During a community alert investigation, which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+::EPI-W11-043::During a national surveillance review, which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+::EPI-W11-044::During a line-list review, which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+::EPI-W11-045::During a rapid response investigation, which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+::EPI-W11-046::During a district surveillance review, which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+::EPI-W11-047::During an outbreak investigation, which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+::EPI-W11-048::During a sentinel-site review, which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+::EPI-W11-049::During active case finding, which component should generally remain outside an outbreak case definition when it is the suspected exposure being evaluated? {
+=The hypothesised exposure#Correct.
+~Clinical criteria#Keep exposure classification independent of disease classification.
+~Relevant person restriction#Keep exposure classification independent of disease classification.
+~Relevant time and place restrictions#Keep exposure classification independent of disease classification.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 11/Descriptive field epi
+
+::EPI-W11-050::In field scenario 1, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+::EPI-W11-051::In field scenario 2, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+::EPI-W11-052::In field scenario 3, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+::EPI-W11-053::In field scenario 4, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+::EPI-W11-054::In field scenario 5, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+::EPI-W11-055::In field scenario 6, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+::EPI-W11-056::In field scenario 7, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+::EPI-W11-057::In field scenario 8, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+::EPI-W11-058::In field scenario 9, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+::EPI-W11-059::In field scenario 10, why describe cases by person, place and time before selecting an analytic study? {
+=The pattern identifies the population at risk and generates testable hypotheses#Correct.
+~It proves causation without comparison#Description directs the next analytic question.
+~It eliminates the need for data cleaning#Description directs the next analytic question.
+~It guarantees laboratory confirmation#Description directs the next analytic question.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 11/Outbreak design
+
+::EPI-W11-060::A complete guest list exists for a wedding outbreak. Which analytic design is often efficient? {
+=Retrospective cohort study#Correct.
+~Case-control study only#Review surveillance purpose and outbreak-investigation logic.
+~Cross-sectional survey only#Review surveillance purpose and outbreak-investigation logic.
+~Randomised trial#Review surveillance purpose and outbreak-investigation logic.
+}
+
+::EPI-W11-061::Cases arise from a large population that cannot be fully enumerated. Which design is often practical? {
+=Case-control study#Correct.
+~Retrospective cohort requiring complete enumeration#Review surveillance purpose and outbreak-investigation logic.
+~Randomised trial#Review surveillance purpose and outbreak-investigation logic.
+~Ecological time series only#Review surveillance purpose and outbreak-investigation logic.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 11/Hypotheses and action
+
+::EPI-W11-062::An initial analytic study fails to support the leading outbreak hypothesis. What is the best next step? {
+=Revisit descriptive epidemiology, outliers and alternative exposures#Correct.
+~Stop the investigation immediately#Review surveillance purpose and outbreak-investigation logic.
+~Delete nonsignificant cases#Review surveillance purpose and outbreak-investigation logic.
+~Assume the original hypothesis is true#Review surveillance purpose and outbreak-investigation logic.
+}
+
+::EPI-W11-063::When can early control measures be reasonable before every uncertainty is resolved? {
+=When evidence is sufficiently plausible, delay is harmful and the intervention is proportionate#Correct.
+~Only after causal certainty reaches 100%#Public health balances evidence, urgency, harm and reversibility.
+~Never during an outbreak#Public health balances evidence, urgency, harm and reversibility.
+~Whenever social media demands action#Public health balances evidence, urgency, harm and reversibility.
+}
+
+::EPI-W11-064::During a syndromic-surveillance review, when can early control measures be reasonable before every uncertainty is resolved? {
+=When evidence is sufficiently plausible, delay is harmful and the intervention is proportionate#Correct.
+~Only after causal certainty reaches 100%#Public health balances evidence, urgency, harm and reversibility.
+~Never during an outbreak#Public health balances evidence, urgency, harm and reversibility.
+~Whenever social media demands action#Public health balances evidence, urgency, harm and reversibility.
+}
+
+::EPI-W11-065::During a laboratory-surveillance review, when can early control measures be reasonable before every uncertainty is resolved? {
+=When evidence is sufficiently plausible, delay is harmful and the intervention is proportionate#Correct.
+~Only after causal certainty reaches 100%#Public health balances evidence, urgency, harm and reversibility.
+~Never during an outbreak#Public health balances evidence, urgency, harm and reversibility.
+~Whenever social media demands action#Public health balances evidence, urgency, harm and reversibility.
+}
+
+::EPI-W11-066::During a health-facility surveillance review, when can early control measures be reasonable before every uncertainty is resolved? {
+=When evidence is sufficiently plausible, delay is harmful and the intervention is proportionate#Correct.
+~Only after causal certainty reaches 100%#Public health balances evidence, urgency, harm and reversibility.
+~Never during an outbreak#Public health balances evidence, urgency, harm and reversibility.
+~Whenever social media demands action#Public health balances evidence, urgency, harm and reversibility.
+}
+
+::EPI-W11-067::During a field epidemiology deployment, when can early control measures be reasonable before every uncertainty is resolved? {
+=When evidence is sufficiently plausible, delay is harmful and the intervention is proportionate#Correct.
+~Only after causal certainty reaches 100%#Public health balances evidence, urgency, harm and reversibility.
+~Never during an outbreak#Public health balances evidence, urgency, harm and reversibility.
+~Whenever social media demands action#Public health balances evidence, urgency, harm and reversibility.
+}
+
+::EPI-W11-068::During a community alert investigation, when can early control measures be reasonable before every uncertainty is resolved? {
+=When evidence is sufficiently plausible, delay is harmful and the intervention is proportionate#Correct.
+~Only after causal certainty reaches 100%#Public health balances evidence, urgency, harm and reversibility.
+~Never during an outbreak#Public health balances evidence, urgency, harm and reversibility.
+~Whenever social media demands action#Public health balances evidence, urgency, harm and reversibility.
+}
+
+::EPI-W11-069::During a national surveillance review, when can early control measures be reasonable before every uncertainty is resolved? {
+=When evidence is sufficiently plausible, delay is harmful and the intervention is proportionate#Correct.
+~Only after causal certainty reaches 100%#Public health balances evidence, urgency, harm and reversibility.
+~Never during an outbreak#Public health balances evidence, urgency, harm and reversibility.
+~Whenever social media demands action#Public health balances evidence, urgency, harm and reversibility.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 11/Communication
+
+::EPI-W11-070::Why is dissemination part of surveillance rather than an optional final extra? {
+=Information must reach people who can make public-health decisions and act#Correct.
+~Publication alone defines surveillance#Surveillance is information for action.
+~Data should remain with analysts#Surveillance is information for action.
+~Dissemination replaces analysis#Surveillance is information for action.
+}
+
+::EPI-W11-071::During a line-list review, why is dissemination part of surveillance rather than an optional final extra? {
+=Information must reach people who can make public-health decisions and act#Correct.
+~Publication alone defines surveillance#Surveillance is information for action.
+~Data should remain with analysts#Surveillance is information for action.
+~Dissemination replaces analysis#Surveillance is information for action.
+}
+
+::EPI-W11-072::During a rapid response investigation, why is dissemination part of surveillance rather than an optional final extra? {
+=Information must reach people who can make public-health decisions and act#Correct.
+~Publication alone defines surveillance#Surveillance is information for action.
+~Data should remain with analysts#Surveillance is information for action.
+~Dissemination replaces analysis#Surveillance is information for action.
+}
+
+::EPI-W11-073::During a district surveillance review, why is dissemination part of surveillance rather than an optional final extra? {
+=Information must reach people who can make public-health decisions and act#Correct.
+~Publication alone defines surveillance#Surveillance is information for action.
+~Data should remain with analysts#Surveillance is information for action.
+~Dissemination replaces analysis#Surveillance is information for action.
+}
+
+::EPI-W11-074::During an outbreak investigation, why is dissemination part of surveillance rather than an optional final extra? {
+=Information must reach people who can make public-health decisions and act#Correct.
+~Publication alone defines surveillance#Surveillance is information for action.
+~Data should remain with analysts#Surveillance is information for action.
+~Dissemination replaces analysis#Surveillance is information for action.
+}
+
+::EPI-W11-075::During a sentinel-site review, why is dissemination part of surveillance rather than an optional final extra? {
+=Information must reach people who can make public-health decisions and act#Correct.
+~Publication alone defines surveillance#Surveillance is information for action.
+~Data should remain with analysts#Surveillance is information for action.
+~Dissemination replaces analysis#Surveillance is information for action.
+}

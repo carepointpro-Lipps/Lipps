@@ -1,0 +1,171 @@
+---
+title: ""
+pagetitle: "Week 10 — Misinformation, Disinformation and Infodemic Management | LIPPS"
+description: "Identify harmful information problems, prioritise them by likely health impact and respond through listening, accurate communication, trusted messengers, community engagement and resilience-building."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 10
+:::
+
+# Misinformation, Disinformation and Infodemic Management
+
+## The goal is not to win arguments online. It is to reduce the health harm created by a polluted information environment.
+
+<span class="lipps-chip">Infodemic</span> <span class="lipps-chip">Misinformation</span> <span class="lipps-chip">Social listening</span> <span class="lipps-chip">Resilience</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Identify harmful information problems, prioritise them by likely health impact and respond through listening, accurate communication, trusted messengers, community engagement and resilience-building.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. distinguish misinformation, disinformation, rumours and infodemics;
+2. explain why information voids and uncertainty create fertile conditions for harmful narratives;
+3. use social listening to identify questions and emerging narratives;
+4. prioritise misinformation responses according to reach, harm, vulnerability and actionability;
+5. choose when to correct publicly and when not to amplify a low-reach claim;
+6. write corrections that lead with useful facts and concrete actions;
+7. explain prebunking and resilience-building approaches;
+8. integrate community engagement with digital responses;
+9. measure infodemic-response outputs and outcomes;
+10. recognise ethical risks in monitoring information environments.
+:::
+
+::: {.lipps-section}
+## ORIENT · The rumour is false—but should you repeat it?
+
+A voice note claims that a new vaccine causes infertility. It has circulated in several closed messaging groups and a local radio presenter mentions it on air. A health agency drafts a poster with the rumour in huge red letters: “THE VACCINE DOES NOT CAUSE INFERTILITY.” Before publishing, the team should ask whether the correction will reduce harm or inadvertently spread the claim to people who had never heard it.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Define the information problem carefully
+
+**Misinformation** is false or misleading information shared without necessarily intending harm. **Disinformation** involves deliberate creation or spread of false or misleading information for strategic purposes. A **rumour** is unverified information circulating within a community. An **infodemic** is an overabundance of information—including false or misleading information—that creates confusion and can undermine health action.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Infodemics are not only about false facts
+
+People can be overwhelmed by contradictory guidance, outdated information, technical complexity, scams and true information stripped of context. Management therefore requires improving the overall information environment, not merely fact-checking false posts.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Information voids are a warning signal
+
+When people have urgent unanswered questions, others fill the gap. Monitor what people are asking: eligibility, safety, side effects, access, cost, cause, responsibility and uncertainty. Fast, clear answers to genuine questions can prevent harmful narratives from gaining traction.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Social listening should produce actionable insight
+
+Collect recurring questions and narratives, assess where they circulate, identify affected audiences, estimate likely harm and determine what response is possible. WHO frames infodemic management around listening, promoting understanding of risk and expert advice, building resilience to misinformation, and engaging communities for positive action.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Not every false claim deserves a mass response
+
+Prioritise according to potential health harm, reach, velocity, credibility of the source, vulnerability of the audience and whether the claim changes behaviour. Publicly rebutting an obscure claim can amplify it.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Corrections should make the useful truth easy to remember
+
+Lead with the accurate information and the action people need. Briefly identify the false claim only when necessary for recognition, explain why it is wrong using clear evidence, and repeat the accurate conclusion. Avoid ridicule; it can harden identity-based resistance and damage relationships.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Prebunking builds resilience before exposure
+
+Prebunking or inoculation approaches warn people about common manipulation techniques or likely misleading narratives before they encounter them. The aim is not to predict every rumour, but to strengthen recognition of unreliable tactics and encourage verification habits.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Trusted messengers and community dialogue matter
+
+A technically correct correction from a distrusted institution may fail. Work with health workers, community leaders, journalists and other credible intermediaries while ensuring they understand the evidence and are not used merely as endorsement props.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Measure beyond number of corrections issued
+
+Possible indicators include time from detection to response, unanswered information needs, reach of accurate content among affected audiences, changes in belief certainty, intended protective action, trust, and whether harmful narratives decline or persist. Attribution is difficult because information environments are dynamic.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Ethics and privacy still apply
+
+Social listening should minimise collection of identifiable information, avoid targeting individuals for punishment, and distinguish public-interest analysis from intrusive surveillance. Vulnerable groups should not be exposed or stigmatised through screenshots or examples.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+During an immunisation campaign, rumours circulate that the vaccine is part of a fertility-control programme. Some versions are low reach; another is repeated by a widely followed local personality. Health workers report that caregivers are asking whether the vaccine contains hormones.
+
+1. Classify the information problems: rumour, misinformation, disinformation or unknown intent.
+2. Identify the information void.
+3. Create a prioritisation matrix using reach, harm, vulnerability and actionability.
+4. Decide which claim requires public correction and which should be monitored.
+5. Draft a short correction that begins with accurate information and a practical action.
+6. Select trusted messengers and explain why.
+7. Propose one prebunking/resilience activity.
+8. Specify indicators for the next two weeks.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why is misinformation different from disinformation?
+2. What makes an infodemic broader than a list of false claims?
+3. Why can publicly rebutting a low-reach rumour be harmful?
+4. Name WHO’s four broad infodemic-management activities.
+5. What is an information void?
+6. What ethical concern arises when social listening captures identifiable posts from vulnerable individuals?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 10 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 10 bank of 52 items.
+
+**Initial time limit:** 12 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **WHO Infodemic resources.** Definition of infodemic and four broad infodemic-management activities.
+- **WHO/UNICEF infodemic insights guidance.** Social listening and translation of information signals into action.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 9](week-09.qmd)
+
+[Week 11 →](week-11.qmd)
+:::

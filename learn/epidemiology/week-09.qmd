@@ -1,0 +1,315 @@
+---
+title: ""
+pagetitle: "Week 9 — Bias, Confounding and Effect Modification | LIPPS"
+description: "Recognise systematic error, distinguish confounding from effect modification, and choose adjustment strategies that answer the intended epidemiological question."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 09
+:::
+
+# Bias, Confounding and Effect Modification
+
+## A model can be statistically sophisticated and still estimate the wrong thing.
+
+<span class="lipps-chip">Intermediate</span> <span class="lipps-chip">Bias</span> <span class="lipps-chip">Confounding</span> <span class="lipps-chip">Effect modification</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Recognise systematic error, distinguish confounding from effect modification, and choose adjustment strategies that answer the intended epidemiological question.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 9, you should be able to:
+
+1. define bias as systematic error rather than mere random variation;
+2. distinguish selection bias from information bias;
+3. recognise non-differential and differential misclassification conceptually;
+4. define confounding and identify the conditions that make a variable a plausible confounder;
+5. distinguish confounders from mediators and colliders at an introductory level;
+6. explain why indiscriminate statistical adjustment can create rather than remove bias;
+7. distinguish confounding from effect modification;
+8. interpret stratum-specific estimates when effects differ across groups;
+9. recognise that interaction can be defined on different statistical scales;
+10. use design and subject-matter knowledge, not p-values alone, to decide what to adjust for.
+:::
+
+::: {.lipps-section}
+## ORIENT · “We adjusted for everything” is not reassuring
+
+A paper reports an association between an exposure and hypertension. The authors say the model is reliable because they adjusted for age, sex, BMI, medication use, clinic attendance, kidney disease, physical activity, income, diet and several laboratory markers.
+
+More adjustment is not automatically better.
+
+Some variables may be confounders. Some may be consequences of the exposure. Some may be consequences of the outcome. Some may be colliders. Some may be measured poorly.
+
+The first question is not **“How many variables are in the model?”** It is **“What causal question is the model trying to answer?”**
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Bias is systematic error
+
+The attached CDC glossary defines bias as a systematic deviation of results or inferences from the truth. It explicitly notes that epidemiological bias does **not** imply intentional misconduct.
+
+Random error makes estimates vary unpredictably around a target. Bias moves the expected estimate systematically away from the target.
+
+Increasing sample size reduces random error but does not automatically remove bias. A very large biased study can estimate the wrong quantity with extraordinary precision.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Selection bias
+
+Selection bias arises when the way people enter, remain in, or are analysed in a study creates a systematic difference related to both exposure and outcome.
+
+Examples:
+
+- hospital controls whose illnesses are related to the exposure;
+- differential loss to follow-up in a cohort;
+- participation in a survey related to health status and exposure;
+- excluding participants because of post-exposure events.
+
+Selection bias is often created before analysis. Statistical adjustment cannot always reconstruct the population that should have been observed.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Information bias
+
+Information bias arises from systematic differences in how exposure, outcome or other variables are measured.
+
+Examples include:
+
+- cases recalling past exposure more intensely than controls;
+- interviewers probing one group more thoroughly;
+- an outcome assessor knowing treatment assignment;
+- different laboratory methods across study sites;
+- self-reported behaviours affected by social desirability.
+
+Measurement error can be **differential** when its pattern differs according to another relevant variable, or **non-differential** when the same classification process applies across groups.
+
+::: {.lipps-callout}
+**LIPPS extension**
+The attached CDC glossary defines information bias; the differential/non-differential distinction is added here because it is central to applied interpretation.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Confounding is a mixing of effects
+
+The attached CDC glossary defines confounding as distortion of the exposure-outcome association by a third variable related to both.
+
+Suppose coffee drinking appears associated with lung cancer, but smokers drink more coffee and smoking strongly causes lung cancer. Smoking can mix into the coffee-cancer comparison.
+
+A plausible confounder generally:
+
+1. is associated with the exposure in the source population;
+2. is a cause, marker or proxy of a cause of the outcome; and
+3. is not simply a consequence of the exposure along the causal pathway being estimated.
+
+These are conceptual conditions, not a mechanical checklist based only on statistical significance.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Crude and adjusted estimates answer different comparisons
+
+Imagine a crude risk ratio of 2.4 between an exposure and outcome. After appropriate age adjustment, the estimate becomes 1.2.
+
+That change may indicate important confounding by age—but the magnitude of change alone does not prove the adjustment set is correct.
+
+Adjustment aims to compare exposure groups as if they were similar with respect to selected confounding variables.
+
+Methods include:
+
+- restriction;
+- matching;
+- stratification;
+- standardisation; and
+- multivariable modelling.
+
+The method matters less than whether the selected variables are appropriate for the causal question.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · A mediator is not a confounder
+
+::: {.lipps-callout}
+**LIPPS extension**
+Mediators and collider bias are not developed in the attached CDC text. They are included because modern epidemiological analysis requires students to understand why adjustment can be harmful.
+:::
+
+A **mediator** lies on a causal pathway from exposure to outcome.
+
+Example:
+
+**High salt intake → higher blood pressure → stroke**
+
+If the question is the **total effect** of salt intake on stroke, adjusting for blood pressure removes part of the pathway we intend to estimate.
+
+If the question is a direct effect not operating through blood pressure, the estimand is different and stronger assumptions are needed.
+
+Adjustment therefore changes the question.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Collider bias: adjustment can create association
+
+A **collider** is a variable caused by two other variables.
+
+Suppose both severe disease and high socioeconomic status increase the probability of receiving specialist care. If analysis is restricted to specialist-clinic patients, conditioning on clinic attendance can create an artificial association between disease and socioeconomic status even if none existed in the source population.
+
+This is why “adjust for every variable associated with the outcome” is not a safe epidemiological rule.
+
+::: {.lipps-callout}
+**Adjustment is not a cleansing ritual. Every variable you control for changes the comparison your model is making.**
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Effect modification is not bias
+
+Effect modification occurs when the size—or sometimes direction—of an exposure-outcome association genuinely differs across levels of another variable.
+
+Example:
+
+A prevention programme may reduce disease strongly in younger adults but have little effect in older adults.
+
+If the stratum-specific estimates truly differ, averaging them into one number may hide important heterogeneity.
+
+Unlike confounding, effect modification is generally something to **describe and understand**, not “adjust away.”
+
+::: {.lipps-callout}
+**LIPPS extension**
+The attached source does not develop effect modification. This treatment is an added modern epidemiology component.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Stratified reasoning
+
+Suppose a crude RR is 1.8. After stratifying by sex:
+
+- women: RR = 1.1
+- men: RR = 1.0
+
+The similar stratum-specific estimates, both much closer to 1 than the crude estimate, are compatible with confounding.
+
+Now suppose:
+
+- women: RR = 3.0
+- men: RR = 0.9
+
+Those estimates are not naturally summarised by a single common effect. They suggest effect heterogeneity that deserves interpretation.
+
+This logic should be understood before relying on regression interaction terms.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Interaction depends on scale
+
+::: {.lipps-callout}
+**LIPPS extension**
+Interaction can look different on additive and multiplicative scales.
+:::
+
+An exposure may show no multiplicative interaction on the risk-ratio scale while showing an important difference in absolute risk.
+
+Public-health decisions often care deeply about the additive scale because it reflects additional cases that might be prevented.
+
+Do not ask only:
+
+> Is the interaction-term p-value below 0.05?
+
+Ask:
+
+> On which scale is effect heterogeneity scientifically meaningful for this question?
+:::
+
+::: {.lipps-section}
+## LEARN 11 · A practical adjustment workflow
+
+Before fitting a multivariable model:
+
+1. State the exposure, outcome and causal estimand.
+2. Draw or verbally specify the presumed causal structure.
+3. Identify causes of the outcome that also influence exposure.
+4. Exclude clear descendants of the exposure when estimating total effects.
+5. Avoid conditioning on plausible colliders.
+6. Check measurement quality.
+7. Examine whether meaningful effect modification is expected.
+8. Report crude and appropriately adjusted estimates.
+9. Perform sensitivity analyses when assumptions are uncertain.
+
+This workflow is more defensible than automatic variable selection based on bivariable p-values.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A fictional cross-sectional survey finds that current pesticide exposure is associated with chronic respiratory symptoms: crude prevalence ratio 2.0.
+
+Age is associated with both pesticide work and respiratory symptoms. Smoking is more common among pesticide workers and causes respiratory symptoms. Current clinic attendance is influenced by respiratory symptoms and by employer-provided insurance, which is more common among pesticide workers. Reduced physical activity may be a consequence of respiratory symptoms.
+
+1. Identify plausible confounders.
+2. Explain why current clinic attendance could behave as a collider.
+3. Explain why reduced physical activity could be a consequence of outcome rather than a confounder.
+4. Propose a defensible minimal adjustment set for the total exposure-outcome association.
+5. Suppose the adjusted PR is 1.35. Interpret the change from 2.0 without claiming that all bias has disappeared.
+6. Suppose adjusted PRs are 2.2 among workers without respirators and 1.0 among workers consistently using respirators. Is respirator use behaving more like confounding or effect modification in this result?
+7. State what further design and measurement information you would need before causal interpretation.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why does a larger sample not remove systematic bias?
+2. What distinguishes selection bias from information bias?
+3. What three conceptual conditions make a variable a plausible confounder?
+4. Why can controlling for a mediator be inappropriate when estimating a total effect?
+5. What is the danger of conditioning on a collider?
+6. Why should genuine effect modification usually be reported rather than averaged away?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 9 mastery quiz
+
+**Pilot Mastery Quiz:** 18 objective questions drawn from a Week 9 bank of 60 items.
+
+**Initial time limit:** 13 minutes.  
+**Question style:** bias classification, causal-structure micro-scenarios, confounder/mediator/collider distinctions, crude-versus-adjusted interpretation and effect-modification reasoning.  
+**No DAG drawing is required in the timed quiz; the assessment tests recognition and interpretation.
+
+::: {.lipps-callout}
+**Assessment principle**  
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.
+:::
+:::
+
+::: {.lipps-section}
+## Source foundation and LIPPS extensions
+
+**Primary source foundation:** the attached CDC text and glossary definitions of bias, selection bias, information bias and confounding, together with its repeated emphasis on valid comparison groups.
+
+**LIPPS extensions:** differential/non-differential misclassification, mediators, colliders, effect modification, interaction scale and causal adjustment logic are explicitly added because they are not developed in the attached text.
+
+**Reference:** Centers for Disease Control and Prevention. *Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics*. October 2006; updated May 2012.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 8](week-08.qmd)
+
+[Week 10: Screening and Diagnostic-Test Evaluation →](week-10.qmd)
+:::

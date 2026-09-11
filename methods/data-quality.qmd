@@ -1,0 +1,7 @@
+---
+title: "Data Quality"
+---
+
+# Data Quality
+
+Completeness, consistency, validity, uniqueness, timeliness, duplicates, impossible values, outliers, missingness, derived variables, data dictionaries, audit trails, reproducibility and version control.

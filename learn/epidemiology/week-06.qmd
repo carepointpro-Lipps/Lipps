@@ -1,0 +1,313 @@
+---
+title: ""
+pagetitle: "Week 6 — Case-Control Studies | LIPPS"
+description: "Design and interpret case-control studies by defining cases, selecting controls from the source population, measuring prior exposure and using odds ratios without pretending sampled case-control data provide risks."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 06
+:::
+
+# Case-Control Studies
+
+## Start with outcome status, then reconstruct and compare prior exposure.
+
+<span class="lipps-chip">Intermediate</span> <span class="lipps-chip">Case-control</span> <span class="lipps-chip">Controls</span> <span class="lipps-chip">Odds ratio</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Design and interpret case-control studies by defining cases, selecting controls from the source population, measuring prior exposure and using odds ratios without pretending sampled case-control data provide risks.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 6, you should be able to:
+
+1. recognise a case-control study from its outcome-based sampling direction;
+2. define cases using criteria independent of the exposure being evaluated;
+3. explain the idea of the source population that gave rise to the cases;
+4. select controls that estimate the exposure distribution expected in that source population;
+5. explain why convenient controls can introduce selection bias;
+6. calculate and interpret an odds ratio from a two-by-two table;
+7. explain why risks and risk ratios are generally not directly estimable from a standard case-control sample;
+8. distinguish odds from probability and avoid interpreting an odds ratio as a risk ratio when inappropriate;
+9. recognise recall, interviewer and exposure-misclassification threats;
+10. explain when matching may be useful and why matched designs require matched analysis;
+11. identify settings in which case-control studies are efficient, including rare outcomes and outbreak investigations.
+:::
+
+::: {.lipps-section}
+## ORIENT · Why not simply ask sick people what they ate?
+
+During a hepatitis outbreak, nearly every case-patient reports eating at a popular restaurant. That observation sounds impressive until you learn that almost everyone in the community eats there.
+
+Cases alone tell you what exposures were **common among cases**. They do not tell you whether those exposures were more common than expected.
+
+A case-control study therefore adds a carefully selected group of people **without the outcome** and compares prior exposure between cases and controls.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Direction of sampling
+
+A case-control study begins with **outcome status**.
+
+- **Cases** have the disease or outcome of interest.
+- **Controls** do not have that outcome.
+- Investigators then ascertain and compare prior exposures.
+
+This differs from a cohort study, which starts from exposure groups and observes subsequent outcomes.
+
+The design can be drawn as:
+
+**Outcome present → look back / reconstruct exposure**  
+**Outcome absent → look back / reconstruct exposure**
+
+The word “look back” does not mean every case-control study depends on memory. Exposure may be obtained from records, stored specimens, registries or other historical sources.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Defining cases
+
+Case selection begins with a reproducible outcome definition.
+
+A strong case definition should make clear:
+
+- clinical or diagnostic criteria;
+- relevant person, place and time restrictions;
+- whether cases are incident or prevalent;
+- how diagnostic certainty is handled; and
+- where cases are being ascertained.
+
+Do not define a case using the suspected exposure that you later intend to test. If “ate beef” is part of the case definition, beef will inevitably appear more common among cases because exposure has been built into outcome classification.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · The source population is the hidden denominator
+
+The most useful way to think about controls is not “healthy people who look like the cases.” Controls should represent the **population that produced the cases** with respect to the opportunity for exposure.
+
+A practical counterfactual question is:
+
+> If this control person had developed the outcome during the study period, would they have had a reasonable chance of being identified as a case in this study?
+
+If the answer is no, the control may not represent the same source population.
+
+This source-population logic is more important than superficial similarity.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Choosing controls
+
+The attached CDC material stresses that control selection is one of the most important decisions in a case-control study. Possible sources include population controls, neighbours, friends or patients from the same clinical system.
+
+Each choice can solve one problem while creating another.
+
+**Neighbour controls** may improve geographic comparability but can overmatch environmental exposures.  
+**Hospital controls** may be easy to recruit but their illnesses may themselves be associated with the exposure.  
+**Friend controls** may share behaviours too closely with cases.  
+**Population controls** may best represent the source population but can be difficult or costly to recruit.
+
+A control group that is systematically different from the case source population can generate a spurious association or hide a real one.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Why the odds ratio is the natural measure
+
+In a standard case-control study, investigators choose how many cases and controls to enrol. The sampled proportion of people who are cases is therefore created by the study design and does not equal population disease risk.
+
+That is why you ordinarily cannot calculate:
+
+- disease incidence;
+- absolute risk;
+- risk difference; or
+- risk ratio
+
+directly from the sampled case-control totals.
+
+The odds ratio, however, can be estimated:
+
+$$
+OR = \frac{ad}{bc}
+$$
+
+for the conventional two-by-two table.
+
+The attached CDC text therefore identifies the odds ratio as the measure of choice for typical case-control data.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Interpret odds as odds
+
+Suppose:
+
+|  | Cases | Controls |
+|---|---:|---:|
+| Exposed | 60 | 30 |
+| Unexposed | 40 | 70 |
+
+Then:
+
+$$
+OR = \frac{60\times70}{40\times30}=3.5
+$$
+
+A correct interpretation is:
+
+> The odds of prior exposure among cases were 3.5 times the odds of prior exposure among controls.
+
+Under standard case-control assumptions this estimates an exposure-outcome odds ratio. For a rare outcome, the OR may approximate the risk ratio that would have been obtained in the source population.
+
+Do not automatically write “cases were 3.5 times more likely to become ill.” The sampled case-control data did not estimate the probability of illness directly.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Rare-disease approximation is useful but often abused
+
+The attached source notes that when disease is uncommon, the odds ratio can approximate the risk ratio reasonably well.
+
+As the outcome becomes common, odds and risk diverge. An OR of 3 can correspond to a much smaller risk ratio when baseline risk is high.
+
+The rule is therefore not:
+
+> OR means RR.
+
+It is:
+
+> Under particular designs and conditions, the OR can estimate or approximate a relative measure of risk; interpretation should still use the correct quantity and context.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Recall and interviewer bias
+
+Case-control studies often reconstruct previous exposure after outcome status is known.
+
+This creates opportunities for **information bias**.
+
+Cases may search their memories more intensely than controls because they want an explanation for illness. Interviewers who know the hypothesis may probe cases more deeply. Records may be more complete for severely ill cases than controls.
+
+Ways to reduce these problems include:
+
+- standardised questionnaires;
+- objective records or biomarkers where appropriate;
+- similar recall periods;
+- interviewer training;
+- blinding exposure assessors when feasible; and
+- asking questions in the same manner across groups.
+
+Perfect memory is not required; comparable measurement error is the goal.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Selection bias can be built in before analysis begins
+
+Imagine studying whether alcohol use is associated with acute pancreatitis and choosing hospital controls with conditions strongly related to alcohol. Exposure among controls will be artificially high, potentially pulling the odds ratio toward the null.
+
+No regression model can fully repair a fundamentally inappropriate control group.
+
+The attached CDC material defines bias as a systematic difference that results in a mistaken estimate of association. Control selection is one of the clearest examples of design-stage bias.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Matching is a design tool, not a badge of quality
+
+::: {.lipps-callout}
+**LIPPS extension**
+Matching is not developed in detail in the attached CDC lesson, but it is common in case-control research and needs to be recognised.
+:::
+
+Matching selects controls to resemble cases on variables such as age, sex or facility.
+
+Potential advantages include efficiency and control of strong confounding by matching factors. Potential disadvantages include overmatching, difficulty finding controls and the inability to estimate effects of a factor on which cases and controls are perfectly matched.
+
+Most importantly, **matched sampling requires an analysis that respects the matching structure**. Matching does not automatically control confounding if the analysis ignores the design.
+:::
+
+::: {.lipps-section}
+## LEARN 11 · When case-control designs are especially useful
+
+Case-control studies are particularly attractive when:
+
+- the outcome is rare;
+- the disease has a long latency;
+- exposure data can be reconstructed efficiently;
+- the source population is large or difficult to enumerate;
+- rapid outbreak investigation is needed; or
+- multiple prior exposures are being evaluated.
+
+They are less attractive when the exposure is rare and difficult to ascertain retrospectively, or when reliable control selection is impossible.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A fictional hospital network identifies 120 adults with a newly diagnosed liver injury syndrome over 18 months. Investigators suspect use of an unregulated herbal preparation. They can access pharmacy histories, interview patients and identify adults from the same catchment population.
+
+Design the case-control study:
+
+1. Write a case definition that does not include herbal exposure.
+2. Define the source population.
+3. Propose one defensible control-selection strategy and one tempting but problematic strategy.
+4. Explain how many controls per case you might consider and why simply adding many controls eventually yields diminishing benefit.
+5. Specify how herbal exposure should be measured in both groups.
+6. If 72 cases and 36 controls report the preparation, while 48 cases and 84 controls do not, calculate the OR.
+7. Interpret the OR correctly.
+8. Identify one plausible recall bias and one selection bias.
+9. State whether the sampled table allows you to calculate the population risk of liver injury.
+10. List additional evidence needed before claiming the herbal preparation caused the syndrome.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why must controls come from the population that gave rise to the cases?
+2. What happens if the control illness is itself associated with the exposure of interest?
+3. Why can a standard case-control sample not directly estimate disease prevalence?
+4. In a 2×2 case-control table, what quantity does ad/bc estimate?
+5. Why is an odds ratio not literally a risk ratio?
+6. Give one strategy for reducing differential recall between cases and controls.
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 6 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions randomly sampled from a Week 6 bank of 55 items.
+
+**Initial time limit:** 11 minutes.  
+**Question style:** design recognition, control selection, 2×2 OR calculations, interpretation, bias scenarios and source-population reasoning.  
+**Practice mode:** untimed with feedback; **formal mode:** delayed detailed feedback and randomised item selection.
+
+::: {.lipps-callout}
+**Assessment principle**  
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.
+:::
+:::
+
+::: {.lipps-section}
+## Source foundation and LIPPS extensions
+
+**Primary source foundation:** the attached CDC text's treatment of case-control studies, outcome-based enrolment, control groups, odds ratios, rare-disease approximation and control-selection bias.
+
+**LIPPS extensions:** source-population counterfactual wording, matching, overmatching and additional modern interpretation safeguards are explicitly added to strengthen applied study-design competence.
+
+**Reference:** Centers for Disease Control and Prevention. *Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics*. October 2006; updated May 2012.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 5](week-05.qmd)
+
+[Week 7: Cohort Studies →](week-07.qmd)
+:::

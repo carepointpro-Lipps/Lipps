@@ -1,0 +1,172 @@
+---
+title: ""
+pagetitle: "Week 3 — Audience Analysis, Culture and Health Literacy | LIPPS"
+description: "Use formative audience insight, health-literacy principles and cultural context to design communication that people can access, understand and use."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 03
+:::
+
+# Audience Analysis, Culture and Health Literacy
+
+## The same message is not equally understandable, relevant, safe or actionable for every audience.
+
+<span class="lipps-chip">Audience insight</span> <span class="lipps-chip">Health literacy</span> <span class="lipps-chip">Culture</span> <span class="lipps-chip">Accessibility</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Use formative audience insight, health-literacy principles and cultural context to design communication that people can access, understand and use.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. distinguish primary, secondary and influential audiences;
+2. conduct a basic audience analysis using needs, beliefs, norms, barriers, channels and decision context;
+3. explain segmentation and its benefits and risks;
+4. apply health-literacy and plain-language principles;
+5. distinguish literacy from intelligence and health literacy from general schooling;
+6. communicate numbers and risk more clearly;
+7. adapt communication across language and cultural contexts without stereotyping;
+8. identify accessibility and digital-exclusion barriers;
+9. use formative research and community listening to test assumptions.
+:::
+
+::: {.lipps-section}
+## ORIENT · One message, three audiences
+
+A cervical-cancer screening programme sends one English-language SMS to all women aged 25–49: “Attend VIA screening at your HCIV. Early detection improves prognosis.” Some recipients do not read English, some share phones with partners, some do not know what VIA means, and some fear that screening is a test for cancer rather than a preventive service.
+
+The technical facts may be correct. The communication design is not audience-centred.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Audience analysis begins with decisions, not demographics
+
+Age and sex can be useful, but an audience is not adequately described by demographics alone. Useful analysis asks what decision is required, what people already know, believe and do, who influences them, what barriers they face, which channels they use and trust, and what services or opportunities are available.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Primary, secondary and influential audiences
+
+The **primary audience** is expected to make the target decision or perform the behaviour. **Secondary audiences** may support or hinder it. Influential audiences may include partners, parents, peers, religious leaders, health workers, employers or local officials. Communication plans often fail when they address only the person expected to act.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Segmentation can improve relevance—but can also stereotype
+
+Segmentation divides a broad audience into groups that differ in determinants, needs or communication behaviour. Good segmentation is based on actionable differences. Bad segmentation assumes that everyone in a demographic category thinks alike or turns culture into a fixed explanation for behaviour.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Health literacy is interaction, not a deficit label
+
+Health literacy concerns people’s ability to access, understand, appraise and use health information and services. It is shaped by both individual skills and the complexity of the health system. A confusing form is not proof that a patient is “illiterate”; it may be evidence that the system communicates badly.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Plain language is precise language
+
+Plain language uses familiar words, short sentences, clear organisation and explicit actions. It removes unnecessary jargon without removing essential meaning. Replace “utilise the nearest designated facility” with “Go to the nearest health centre.” Explain unavoidable technical terms the first time they appear.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Numbers need design, not just accuracy
+
+People can struggle with probabilities, percentages and changing denominators. Use consistent denominators, natural frequencies where useful, absolute as well as relative risks, and visual displays that do not exaggerate differences. “Risk fell from 2 in 100 to 1 in 100” may be clearer than “50% risk reduction” alone.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Culture is dynamic and internally diverse
+
+Cultural context influences meaning, norms, trust and acceptable messengers, but it should be investigated rather than guessed. Avoid statements such as “this community does not believe in hospitals.” Ask what experiences, histories, costs, norms and power relationships make particular responses reasonable from the audience’s perspective.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Translation is not the same as adaptation
+
+A literal translation may preserve words while losing meaning. Adaptation considers idiom, examples, tone, reading level, symbolism and local service reality. Back-translation can identify some errors, but comprehension testing with intended users is more informative.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Accessibility is part of effectiveness
+
+Communication should account for visual, hearing, cognitive and mobility-related access needs as well as literacy, language, device access, data cost and network reliability. Captions, transcripts, alt text, readable contrast, large text, simple navigation and low-bandwidth options are communication interventions, not cosmetic extras.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Formative research is how you replace assumptions with evidence
+
+Useful methods include interviews, focus groups, observation, rapid intercepts, social listening, existing data review and prototype testing. The purpose is not to produce a long report; it is to discover what must change in the communication strategy.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A maternal-health programme wants to encourage birth preparedness in an urban informal settlement and a rural district. In the urban area, most women have smartphones but frequently change numbers; many work long hours. In the rural district, radio is common, network coverage is patchy and household financial decisions often involve partners or older relatives. Both settings include women with low literacy and several local languages.
+
+1. Define the primary and influential audiences in each setting.
+2. Identify which characteristics are actionable for segmentation.
+3. List at least five formative-research questions.
+4. Rewrite “prepare for obstetric emergencies and identify a referral facility” in plain language.
+5. Choose a channel mix for each setting and justify it.
+6. Identify accessibility adaptations.
+7. Explain how you would test whether translations are understood as intended.
+8. Identify one stereotype you must avoid in each setting.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why is education level an imperfect proxy for health literacy?
+2. What makes a segmentation variable useful?
+3. Why can a literal translation still fail?
+4. Give one example of an influential audience for adolescent health communication.
+5. Why should absolute numbers accompany relative risks in some messages?
+6. What is one accessibility feature that also improves communication for people without disabilities?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 3 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 3 bank of 48 items.
+
+**Initial time limit:** 11 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **WHO Strategic Communications Framework.** Accessible, understandable, relevant and credible communication.
+- **WHO Health Literacy resources.** Health literacy as an interaction between people and health information/services.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 2](week-02.qmd)
+
+[Week 4 →](week-04.qmd)
+:::

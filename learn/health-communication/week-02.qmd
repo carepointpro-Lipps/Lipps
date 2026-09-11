@@ -1,0 +1,165 @@
+---
+title: ""
+pagetitle: "Week 2 — Communication and Behaviour-Change Theory | LIPPS"
+description: "Use behavioural and communication theory to diagnose why a health behaviour occurs and to select plausible communication and non-communication responses."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · HEALTH COMMUNICATION · WEEK 02
+:::
+
+# Communication and Behaviour-Change Theory
+
+## Theory is useful when it helps you diagnose why behaviour is happening—not when it is added after the campaign is already designed.
+
+<span class="lipps-chip">Theory</span> <span class="lipps-chip">Behaviour</span> <span class="lipps-chip">COM-B</span> <span class="lipps-chip">Social context</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Use behavioural and communication theory to diagnose why a health behaviour occurs and to select plausible communication and non-communication responses.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Good health communication asks not only whether a message was delivered, but **who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.**
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of this week, you should be able to:
+
+1. explain why theory can improve communication planning;
+2. distinguish determinants of behaviour from messages intended to influence them;
+3. apply key constructs from the Health Belief Model, Theory of Planned Behaviour and Social Cognitive Theory;
+4. use the social-ecological perspective to distinguish individual, interpersonal, community and structural influences;
+5. apply COM-B as a practical diagnostic framework for capability, opportunity and motivation;
+6. explain diffusion of innovations concepts including relative advantage, compatibility, complexity, trialability and observability;
+7. choose a theory because it fits the problem rather than because it is familiar;
+8. translate theoretical constructs into measurable communication objectives.
+:::
+
+::: {.lipps-section}
+## ORIENT · “People know—but they still do not do it”
+
+A community survey finds that almost everyone knows mosquito nets reduce malaria, yet consistent net use remains low. A campaign team proposes another awareness campaign. Before approving it, ask: Is knowledge actually the limiting determinant? Are nets available? Are they uncomfortable in hot weather? Do households reserve them for children? Are there beliefs about chemicals? Do sleeping arrangements make hanging difficult?
+
+Theory helps organise these explanations and prevents communication from treating every behaviour problem as an information deficit.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · Theory is a map, not a magic formula
+
+Behavioural theories organise plausible determinants and relationships. They help planners decide what to measure, what mechanism to target and what change would count as progress. A theory should be judged by its usefulness for the specific problem, not by how famous it is.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Health Belief Model: perceived threat and action
+
+The Health Belief Model focuses on perceived susceptibility, perceived severity, perceived benefits, perceived barriers, cues to action and self-efficacy. It can be useful when a person must decide whether a preventive or care-seeking action is worthwhile. Its weakness is that it can understate social, structural and environmental constraints if used alone.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · Theory of Planned Behaviour: intention is socially situated
+
+The Theory of Planned Behaviour links attitudes toward the behaviour, perceived social norms and perceived behavioural control to behavioural intention. It reminds communicators that a person may personally favour an action but still avoid it because important others disapprove or because they believe they cannot perform it.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Social Cognitive Theory: people learn in social environments
+
+Social Cognitive Theory emphasises reciprocal interaction among people, behaviour and environment. Important concepts include self-efficacy, observational learning, outcome expectations, goals and reinforcement. Demonstration and credible modelling can therefore matter as much as factual instruction.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Social-ecological thinking: behaviour has levels
+
+A social-ecological lens examines influences at individual, interpersonal, organisational, community and policy/system levels. Low vaccination uptake, for example, may reflect individual concerns, household decision-making, provider behaviour, clinic waiting time and policy or supply constraints simultaneously.
+:::
+
+::: {.lipps-section}
+## LEARN 6 · COM-B: capability, opportunity and motivation
+
+COM-B provides a practical diagnostic: behaviour occurs when people have sufficient **capability**, **opportunity** and **motivation**. Capability may be physical or psychological; opportunity may be social or physical; motivation may be reflective or automatic. Communication can influence some of these determinants, but it cannot create vaccine stock or shorten a 30-kilometre journey.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Diffusion of innovations: adoption is not uniform
+
+New practices spread differently across social systems. Adoption is affected by perceived relative advantage, compatibility with existing values and routines, complexity, trialability and observability. Opinion leaders and peer networks can influence diffusion, but “early adopter” labels should not become stereotypes.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · Choose the mechanism before the message
+
+If the problem is low self-efficacy, demonstrate the behaviour and build confidence. If social norms are the barrier, private information alone may do little. If physical opportunity is absent, communication should support service redesign rather than disguise an access problem as a knowledge problem.
+:::
+
+::: {.lipps-section}
+## LEARN 9 · From theory to measurable objective
+
+A theoretical construct becomes useful when it can be translated into something observable. “Improve attitudes” is vague. “Increase the proportion of eligible adults who believe hypertension screening is worthwhile despite feeling healthy” is more specific and measurable.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A district has low completion of four or more antenatal contacts. Interviews suggest that many women intend to attend but face transport costs, partners sometimes control household money, clinic queues are long, and some women believe later visits are unnecessary if the first visit found no problem.
+
+1. Use COM-B to classify the main determinants.
+2. Apply at least three Health Belief Model constructs.
+3. Identify one relevant subjective norm and one perceived-control issue.
+4. Use a social-ecological lens to identify influences at three levels.
+5. State which problems communication could plausibly address and which require service or policy action.
+6. Write two theory-linked communication objectives.
+7. Propose one message strategy and one environmental/service strategy.
+8. Explain why another generic “ANC is important” campaign could fail.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Why is awareness sometimes a poor target for behaviour-change communication?
+2. Give an example of perceived barrier and self-efficacy for the same health behaviour.
+3. How does perceived behavioural control differ from intention?
+4. What does COM-B add when a programme is over-focused on knowledge?
+5. Why might social modelling influence behaviour?
+6. Which diffusion attribute is involved when people reject an innovation because it conflicts with established practice?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 2 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions sampled from a Week 2 bank of 48 items.
+
+**Initial time limit:** 11 minutes.  
+**Mode:** one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.
+
+::: {.lipps-callout}
+**Assessment principle**  
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.
+:::
+:::
+
+::: {.lipps-section}
+## Key source foundation
+
+- **Glanz, Rimer & Viswanath, Health Behavior.** Major behavioural theories used in health promotion.
+- **Michie, van Stralen & West, Behaviour Change Wheel / COM-B.** Capability, opportunity and motivation as determinants of behaviour.
+
+The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 1](week-01.qmd)
+
+[Week 3 →](week-03.qmd)
+:::

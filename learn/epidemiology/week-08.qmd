@@ -1,0 +1,272 @@
+---
+title: ""
+pagetitle: "Week 8 — Experimental and Quasi-Experimental Designs | LIPPS"
+description: "Distinguish randomised experiments from observational and quasi-experimental evaluations and judge how allocation and comparison design affect causal interpretation."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · WEEK 08
+:::
+
+# Experimental and Quasi-Experimental Designs
+
+## Stronger causal inference comes from better counterfactual comparison, not from the word “intervention.”
+
+<span class="lipps-chip">Intermediate</span> <span class="lipps-chip">Trials</span> <span class="lipps-chip">Randomisation</span> <span class="lipps-chip">Quasi-experiments</span>
+:::
+
+::: {.lipps-section}
+## This week in one sentence
+
+**Distinguish randomised experiments from observational and quasi-experimental evaluations and judge how allocation and comparison design affect causal interpretation.**
+
+::: {.lipps-callout}
+**The LIPPS lens**  
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.
+:::
+:::
+
+::: {.lipps-section}
+## Learning outcomes
+
+By the end of Week 8, you should be able to:
+
+1. distinguish experimental from observational epidemiological studies;
+2. explain what random allocation is intended to achieve;
+3. distinguish individual and cluster allocation conceptually;
+4. explain the roles of control groups, allocation concealment and blinding at an introductory level;
+5. distinguish efficacy from effectiveness;
+6. recognise common threats created by non-adherence and loss to follow-up;
+7. explain intention-to-treat conceptually;
+8. distinguish simple before-after evaluation from stronger controlled or interrupted designs;
+9. identify when randomisation is unethical, infeasible or unnecessary;
+10. write causal conclusions in proportion to the strength of the design and execution.
+:::
+
+::: {.lipps-section}
+## ORIENT · An intervention happened and outcomes improved
+
+A district introduces a new maternal referral programme. Facility deliveries rise from 58% before implementation to 72% afterwards.
+
+Did the programme cause the increase?
+
+Not necessarily. Other things may have changed at the same time: transport, staffing, reporting, population composition, another campaign or a secular trend.
+
+An intervention is not automatically an experiment, and a before-after difference is not automatically an effect.
+:::
+
+::: {.lipps-section}
+## LEARN 1 · What makes a study experimental?
+
+The attached CDC text distinguishes experimental from observational studies by whether the investigator **determines the exposure or intervention** through a controlled process.
+
+In a clinical trial, participants may be assigned to a new intervention or a comparison condition and followed for outcomes. In community trials, the unit of intervention can be a group or community.
+
+The analytical logic remains comparison, but assignment creates an opportunity for stronger causal inference.
+:::
+
+::: {.lipps-section}
+## LEARN 2 · Why randomisation matters
+
+Random allocation gives eligible units a chance of receiving each study condition according to a random mechanism.
+
+Its main causal advantage is not that the groups become identical. It is that, with adequate implementation and sample size, both measured and unmeasured baseline causes of the outcome are expected to be balanced **on average**, apart from chance.
+
+Randomisation therefore protects against systematic treatment selection.
+
+A single randomised study can still have baseline imbalance by chance; randomisation is a process, not a guarantee of perfect symmetry.
+:::
+
+::: {.lipps-section}
+## LEARN 3 · The comparison group remains essential
+
+Without a comparison group, a change after intervention may reflect:
+
+- natural recovery;
+- regression to the mean;
+- secular trends;
+- seasonal change;
+- another intervention;
+- changing measurement or reporting; or
+- changes in who is observed.
+
+Randomised trials create a contemporaneous comparison intended to represent what would have happened without the intervention.
+
+That counterfactual logic is the real source of causal strength.
+:::
+
+::: {.lipps-section}
+## LEARN 4 · Allocation concealment and blinding
+
+::: {.lipps-callout}
+**LIPPS extension**
+These trial-quality concepts are not developed in detail in the attached introductory CDC chapter.
+:::
+
+**Allocation concealment** prevents those enrolling participants from predicting the next assignment, reducing selection manipulation.
+
+**Blinding** prevents selected participants, clinicians, outcome assessors or analysts from knowing assignment when that knowledge could alter behaviour or measurement.
+
+Blinding is not always possible. A health worker usually knows whether a new workflow has been introduced. The design should then focus on objective outcomes, standardised measurement and blinded outcome assessment where feasible.
+:::
+
+::: {.lipps-section}
+## LEARN 5 · Individual versus cluster randomisation
+
+Sometimes an intervention is delivered to groups rather than individuals—for example, a facility-level triage protocol or village-level health campaign.
+
+Randomising whole facilities or communities can reduce contamination but creates correlation among people within the same cluster.
+
+::: {.lipps-callout}
+**LIPPS extension**
+Cluster-randomised trials require sample-size and analysis methods that account for clustering. Treating all individuals as independent can overstate precision.
+:::
+:::
+
+::: {.lipps-section}
+## LEARN 6 · Efficacy versus effectiveness
+
+The attached CDC source distinguishes:
+
+**Efficacy** — performance under ideal or controlled conditions.
+
+**Effectiveness** — performance under typical field conditions.
+
+The difference is not merely vocabulary. It changes what population, adherence, delivery conditions and implementation problems the estimate represents.
+
+A highly efficacious intervention can have modest real-world effectiveness when uptake, adherence, supply or implementation is poor.
+:::
+
+::: {.lipps-section}
+## LEARN 7 · Non-adherence and intention-to-treat
+
+::: {.lipps-callout}
+**LIPPS extension**
+Intention-to-treat is introduced here because it is fundamental to interpreting randomised trials.
+:::
+
+Participants do not always follow their assigned intervention. Analysing only those who complied can recreate confounding because compliers may differ systematically from non-compliers.
+
+**Intention-to-treat** analysis compares groups according to original random assignment, preserving the causal protection of randomisation for the effect of assignment.
+
+Per-protocol questions can also be scientifically useful, but they require additional assumptions and should not casually replace the randomised comparison.
+:::
+
+::: {.lipps-section}
+## LEARN 8 · When randomisation is not feasible
+
+Randomisation may be unethical when an intervention is already known to be beneficial, politically unacceptable, operationally impossible, or inappropriate for a system-wide policy already being implemented.
+
+Researchers then use observational or **quasi-experimental** designs.
+
+The key question becomes:
+
+> How can we construct the most credible comparison possible without random assignment?
+:::
+
+::: {.lipps-section}
+## LEARN 9 · Quasi-experimental designs
+
+::: {.lipps-callout}
+**LIPPS extension**
+The attached CDC introduction does not provide a detailed quasi-experimental taxonomy. This section is an applied extension.
+:::
+
+**Simple before-after:** compare outcome before and after intervention. Easy but highly vulnerable to time-related confounding.
+
+**Controlled before-after:** add a comparable non-intervention group and examine whether change differs between groups.
+
+**Interrupted time series:** use many repeated observations before and after an intervention to estimate changes in level or trend.
+
+**Controlled interrupted time series:** add a comparison series to strengthen attribution.
+
+Other advanced quasi-experimental strategies exist, but the principle remains: exploit design structure to approximate the counterfactual more credibly.
+:::
+
+::: {.lipps-section}
+## LEARN 10 · Design does not compensate for poor execution
+
+A randomised label cannot save:
+
+- major loss to follow-up;
+- differential outcome measurement;
+- contamination;
+- protocol changes;
+- selective reporting;
+- poor adherence information; or
+- analysis that ignores the unit of randomisation.
+
+Conversely, a well-designed quasi-experiment can sometimes provide more credible evidence than a badly executed trial.
+
+Judge the **actual comparison created**, not only the design name.
+:::
+
+::: {.lipps-section}
+## APPLY · Integrated public-health problem
+
+A health ministry plans to introduce a new infection-prevention coaching package in 24 hospitals. Political leaders want all hospitals eventually to receive it, but implementation capacity allows only 12 to start immediately.
+
+Consider three possible evaluations:
+
+A. Compare the 12 early hospitals before versus after implementation.  
+B. Randomly select which 12 receive the package first and compare outcomes with the waiting hospitals during the same period.  
+C. Use 24 monthly observations before and 12 after national rollout, with no concurrent control.
+
+For each option:
+
+1. Name the design.
+2. Describe its comparison or counterfactual logic.
+3. Identify its strongest threat to causal interpretation.
+4. State what outcome-measurement features would reduce bias.
+5. Explain what clustering means if patient-level outcomes are analysed.
+6. Distinguish efficacy from effectiveness in this programme.
+7. Explain why analysing only hospitals that implemented the package perfectly might bias the effect estimate.
+8. Rank the three designs for causal strength under otherwise good execution and justify your ranking.
+:::
+
+::: {.lipps-section}
+## PRACTISE · Check your reasoning
+
+1. Does assigning an intervention automatically make a study randomised?
+2. What causal problem does random allocation primarily address?
+3. Why can a simple before-after study mistake secular trend for programme effect?
+4. What is the advantage of a controlled before-after design over an uncontrolled before-after design?
+5. Why must analysis respect cluster randomisation?
+6. What is the difference between efficacy and effectiveness?
+
+Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Week 8 mastery quiz
+
+**Pilot Mastery Quiz:** 15 objective questions from a Week 8 bank of 50 items.
+
+**Initial time limit:** 11 minutes.  
+**Question style:** design classification, randomisation logic, control groups, efficacy/effectiveness, cluster allocation and quasi-experimental scenario recognition.
+
+::: {.lipps-callout}
+**Assessment principle**  
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.
+:::
+:::
+
+::: {.lipps-section}
+## Source foundation and LIPPS extensions
+
+**Primary source foundation:** the attached CDC text's distinction between experimental and observational studies, examples of random assignment and its discussion of efficacy versus effectiveness.
+
+**LIPPS extensions:** allocation concealment, blinding, cluster randomisation, intention-to-treat and the quasi-experimental design taxonomy are explicitly added because the source does not develop these topics in detail.
+
+**Reference:** Centers for Disease Control and Prevention. *Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics*. October 2006; updated May 2012.
+:::
+
+::: {.lipps-section}
+## Continue
+
+[← Week 7](week-07.qmd)
+
+[Week 9: Bias, Confounding and Effect Modification →](week-09.qmd)
+:::

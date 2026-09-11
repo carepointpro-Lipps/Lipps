@@ -1,0 +1,7 @@
+---
+title: "Interpretation and Reporting"
+---
+
+# Interpretation and Reporting
+
+Move from model output to defensible scientific statements. Separate statistical evidence from causal claims, programme implications and policy recommendations. Connect analyses to relevant reporting standards where appropriate.

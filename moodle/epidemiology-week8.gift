@@ -1,0 +1,361 @@
+$CATEGORY: LIPPS/Epidemiology/Week 08/Experimental design
+
+::EPI-W8-001::What distinguishes an experimental study from an observational study? {
+=The investigator assigns or determines the intervention/exposure#Correct.
+~The sample must be larger#Review intervention-assignment and counterfactual logic.
+~The outcome must be binary#Review intervention-assignment and counterfactual logic.
+~No comparison group is used#Review intervention-assignment and counterfactual logic.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 08/Randomisation
+
+::EPI-W8-002::What is the main causal purpose of random assignment? {
+=Reduce systematic differences in baseline causes of outcome between groups on average#Correct.
+~Guarantee identical groups#Review intervention-assignment and counterfactual logic.
+~Remove all measurement error#Review intervention-assignment and counterfactual logic.
+~Ensure every participant adheres#Review intervention-assignment and counterfactual logic.
+}
+
+::EPI-W8-003::In trial scenario 1, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+::EPI-W8-004::In trial scenario 2, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+::EPI-W8-005::In trial scenario 3, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+::EPI-W8-006::In trial scenario 4, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+::EPI-W8-007::In trial scenario 5, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+::EPI-W8-008::In trial scenario 6, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+::EPI-W8-009::In trial scenario 7, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+::EPI-W8-010::In trial scenario 8, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+::EPI-W8-011::In trial scenario 9, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+::EPI-W8-012::In trial scenario 10, eligible participants are assigned by a computer-generated random sequence. What feature is being used? {
+=Random allocation#Correct.
+~Matching#A random sequence determines intervention assignment.
+~Convenience sampling#A random sequence determines intervention assignment.
+~Case-control sampling#A random sequence determines intervention assignment.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 08/Blinding and allocation
+
+::EPI-W8-013::What does allocation concealment primarily prevent? {
+=Predicting upcoming treatment assignment during enrolment#Correct.
+~Loss to follow-up#Review intervention-assignment and counterfactual logic.
+~Outcome incidence#Review intervention-assignment and counterfactual logic.
+~Cluster correlation#Review intervention-assignment and counterfactual logic.
+}
+
+::EPI-W8-014::Why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+::EPI-W8-015::In an intervention evaluation, why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+::EPI-W8-016::In a vaccine trial, why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+::EPI-W8-017::In a facility trial, why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+::EPI-W8-018::In a community intervention, why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+::EPI-W8-019::In a school intervention, why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+::EPI-W8-020::In a cluster-randomised study, why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+::EPI-W8-021::In a policy evaluation, why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+::EPI-W8-022::In a maternal-health intervention, why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+::EPI-W8-023::In an IPC programme, why might blinded outcome assessment be useful when participants cannot be blinded to an intervention? {
+=It can reduce differential outcome classification#Correct.
+~It creates randomisation after the fact#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It eliminates non-adherence#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+~It makes clustering disappear#Blinding can reduce measurement bias even when treatment awareness cannot be hidden.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 08/Efficacy effectiveness
+
+::EPI-W8-024::Which term usually refers to performance under ideal controlled conditions? {
+=Efficacy#Correct.
+~Effectiveness#Review intervention-assignment and counterfactual logic.
+~Prevalence#Review intervention-assignment and counterfactual logic.
+~Specificity#Review intervention-assignment and counterfactual logic.
+}
+
+::EPI-W8-025::Which term usually refers to performance under routine field conditions? {
+=Effectiveness#Correct.
+~Efficacy#Review intervention-assignment and counterfactual logic.
+~Incidence#Review intervention-assignment and counterfactual logic.
+~Odds#Review intervention-assignment and counterfactual logic.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 08/Cluster trials
+
+::EPI-W8-026::A programme is assigned to whole health facilities rather than individual patients in scenario 1. What design issue must the analysis recognise? {
+=Patients within the same facility may have correlated outcomes#Correct.
+~Every patient is statistically independent by definition#Cluster randomisation creates within-cluster correlation.
+~The study becomes case-control#Cluster randomisation creates within-cluster correlation.
+~No control group is possible#Cluster randomisation creates within-cluster correlation.
+}
+
+::EPI-W8-027::A programme is assigned to whole health facilities rather than individual patients in scenario 2. What design issue must the analysis recognise? {
+=Patients within the same facility may have correlated outcomes#Correct.
+~Every patient is statistically independent by definition#Cluster randomisation creates within-cluster correlation.
+~The study becomes case-control#Cluster randomisation creates within-cluster correlation.
+~No control group is possible#Cluster randomisation creates within-cluster correlation.
+}
+
+::EPI-W8-028::A programme is assigned to whole health facilities rather than individual patients in scenario 3. What design issue must the analysis recognise? {
+=Patients within the same facility may have correlated outcomes#Correct.
+~Every patient is statistically independent by definition#Cluster randomisation creates within-cluster correlation.
+~The study becomes case-control#Cluster randomisation creates within-cluster correlation.
+~No control group is possible#Cluster randomisation creates within-cluster correlation.
+}
+
+::EPI-W8-029::A programme is assigned to whole health facilities rather than individual patients in scenario 4. What design issue must the analysis recognise? {
+=Patients within the same facility may have correlated outcomes#Correct.
+~Every patient is statistically independent by definition#Cluster randomisation creates within-cluster correlation.
+~The study becomes case-control#Cluster randomisation creates within-cluster correlation.
+~No control group is possible#Cluster randomisation creates within-cluster correlation.
+}
+
+::EPI-W8-030::A programme is assigned to whole health facilities rather than individual patients in scenario 5. What design issue must the analysis recognise? {
+=Patients within the same facility may have correlated outcomes#Correct.
+~Every patient is statistically independent by definition#Cluster randomisation creates within-cluster correlation.
+~The study becomes case-control#Cluster randomisation creates within-cluster correlation.
+~No control group is possible#Cluster randomisation creates within-cluster correlation.
+}
+
+::EPI-W8-031::A programme is assigned to whole health facilities rather than individual patients in scenario 6. What design issue must the analysis recognise? {
+=Patients within the same facility may have correlated outcomes#Correct.
+~Every patient is statistically independent by definition#Cluster randomisation creates within-cluster correlation.
+~The study becomes case-control#Cluster randomisation creates within-cluster correlation.
+~No control group is possible#Cluster randomisation creates within-cluster correlation.
+}
+
+::EPI-W8-032::A programme is assigned to whole health facilities rather than individual patients in scenario 7. What design issue must the analysis recognise? {
+=Patients within the same facility may have correlated outcomes#Correct.
+~Every patient is statistically independent by definition#Cluster randomisation creates within-cluster correlation.
+~The study becomes case-control#Cluster randomisation creates within-cluster correlation.
+~No control group is possible#Cluster randomisation creates within-cluster correlation.
+}
+
+::EPI-W8-033::A programme is assigned to whole health facilities rather than individual patients in scenario 8. What design issue must the analysis recognise? {
+=Patients within the same facility may have correlated outcomes#Correct.
+~Every patient is statistically independent by definition#Cluster randomisation creates within-cluster correlation.
+~The study becomes case-control#Cluster randomisation creates within-cluster correlation.
+~No control group is possible#Cluster randomisation creates within-cluster correlation.
+}
+
+$CATEGORY: LIPPS/Epidemiology/Week 08/Quasi-experimental
+
+::EPI-W8-034::Why is a simple before-after study vulnerable to bias? {
+=Other time-related changes can explain the outcome difference#Correct.
+~It always randomises exposure#Review intervention-assignment and counterfactual logic.
+~It cannot measure outcomes#Review intervention-assignment and counterfactual logic.
+~It has too many comparison groups#Review intervention-assignment and counterfactual logic.
+}
+
+::EPI-W8-035::Outcome is measured once before and once after intervention with no control group. Which design best fits? {
+=Simple before-after#Correct.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-036::Intervention and comparison districts are both measured before and after rollout. Which design best fits? {
+=Controlled before-after#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-037::Monthly outcomes are available for 24 months before and 12 months after a policy. Which design best fits? {
+=Interrupted time series#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-038::Repeated pre/post series are available in intervention and comparison regions. Which design best fits? {
+=Controlled interrupted time series#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-039::In a service-delivery trial, outcome is measured once before and once after intervention with no control group. Which design best fits? {
+=Simple before-after#Correct.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-040::In a nutrition intervention, intervention and comparison districts are both measured before and after rollout. Which design best fits? {
+=Controlled before-after#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-041::In a screening intervention, monthly outcomes are available for 24 months before and 12 months after a policy. Which design best fits? {
+=Interrupted time series#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-042::In an intervention evaluation, repeated pre/post series are available in intervention and comparison regions. Which design best fits? {
+=Controlled interrupted time series#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-043::In a vaccine trial, outcome is measured once before and once after intervention with no control group. Which design best fits? {
+=Simple before-after#Correct.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-044::In a facility trial, intervention and comparison districts are both measured before and after rollout. Which design best fits? {
+=Controlled before-after#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-045::In a community intervention, monthly outcomes are available for 24 months before and 12 months after a policy. Which design best fits? {
+=Interrupted time series#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-046::In a school intervention, repeated pre/post series are available in intervention and comparison regions. Which design best fits? {
+=Controlled interrupted time series#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-047::In a cluster-randomised study, outcome is measured once before and once after intervention with no control group. Which design best fits? {
+=Simple before-after#Correct.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-048::In a policy evaluation, intervention and comparison districts are both measured before and after rollout. Which design best fits? {
+=Controlled before-after#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-049::In a maternal-health intervention, monthly outcomes are available for 24 months before and 12 months after a policy. Which design best fits? {
+=Interrupted time series#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}
+
+::EPI-W8-050::In an IPC programme, repeated pre/post series are available in intervention and comparison regions. Which design best fits? {
+=Controlled interrupted time series#Correct.
+~Simple before-after#Identify whether there is a control group and whether repeated time points are used.
+~Controlled before-after#Identify whether there is a control group and whether repeated time points are used.
+~Interrupted time series#Identify whether there is a control group and whether repeated time points are used.
+}

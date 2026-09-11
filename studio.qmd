@@ -1,0 +1,38 @@
+---
+title: "Studio"
+---
+
+# LIPPS Studio
+
+LIPPS Studio is the professional-services arm of the platform.
+
+::: {.lipps-grid .two}
+::: {.lipps-card}
+### Research
+Study design, protocols, analysis planning, sample-size strategy and methodological review.
+:::
+
+::: {.lipps-card}
+### Analytics
+Epidemiological analysis, statistical modelling, survey analysis, GIS, dashboards and interpretation.
+:::
+
+::: {.lipps-card}
+### Training
+Institutional courses and workshops in epidemiology, research methods, analysis and public-health communication.
+:::
+
+::: {.lipps-card}
+### Systems
+Data-quality frameworks, monitoring systems, dashboards and reproducible analytical workflows.
+:::
+:::
+
+::: {.lipps-callout}
+**Academic integrity**  
+LIPPS can teach, mentor, review and support analysis. It should not complete assessed academic work on behalf of students.
+:::
+
+## Request a consultation
+
+Replace this section with your preferred contact form and institutional contact details before launch.

@@ -1,0 +1,72 @@
+---
+title: ""
+pagetitle: "Lab 8 — Surveillance and Outbreak Signals | LIPPS"
+description: "Graduate R lab on surveillance baselines, reporting delay and outbreak signals."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+EPIDEMIOLOGY I · R LAB 08
+:::
+# Surveillance signals and outbreak comparisons
+## A signal is a reason to investigate, not a diagnosis of an outbreak.
+:::
+::: {.lipps-section}
+Download [surveillance.csv](../data/surveillance.csv).
+
+### Tasks
+1. Plot weekly cases for two years and mark the suspected signal period.
+2. Build a simple seasonal baseline from the first year.
+3. Compare recent counts with the baseline using transparent alert limits.
+4. Plot the proportion reported within seven days as a timeliness indicator.
+5. Explain how delayed reporting could create a false apparent decline.
+6. Draft a five-step verification plan before declaring an outbreak.
+7. State what denominator you would need to compare incidence across districts.
+
+```r
+d <- read.csv("surveillance.csv")
+plot(d$week, d$cases, type="l", xlab="Week", ylab="Reported cases")
+```
+:::
+::: {.lipps-section}
+## LAB PROTOCOL · Graduate submission standard
+
+### Epidemiological question
+Can routine surveillance distinguish expected variation from a potentially actionable signal, and what biases affect the alert?
+
+### Before opening R
+Write down the target population, exposure/treatment contrast, outcome, time horizon and effect measure. State the design and the assumptions that would make the proposed estimate meaningful. This paragraph is part of the submission: code without an estimand is incomplete.
+
+### Required analysis products
+Plot the time series, calculate baseline rates, identify signals under at least one simple alert rule, build a person/place/time outbreak summary and estimate an exposure comparison if analytic data are present.
+
+Every numerical result should be accompanied by a plain-language interpretation. Avoid reporting software output as though coefficients interpret themselves. If a model is used, state the link function, covariates, rationale for adjustment and how uncertainty was calculated.
+
+### Diagnostics that must appear in the report
+Check reporting delay, denominator changes, duplicate cases, changes in case definition/testing, seasonality and whether alert thresholds were retrospectively tuned.
+
+A diagnostic is not a ceremonial plot. State what failure it is intended to reveal and what you would change if that failure were present.
+
+### Reproducibility requirements
+Your submission should run from a clean R session. Use relative paths, set no user-specific working directory, keep data cleaning separate from analysis, label derived variables, and generate the final tables/figures from code. Include `sessionInfo()` or an equivalent dependency record. Do not manually copy numbers from the console into the final table.
+
+### Interpretation discipline
+End with four statements:
+1. **Estimate:** what was estimated, on what scale and with what uncertainty?
+2. **Assumptions:** which design/identification assumptions matter most?
+3. **Diagnostics:** what evidence supports or challenges those assumptions?
+4. **Claim:** what can be concluded, and what stronger claim would not be justified?
+
+### PhD extension
+Add a simple nowcasting or delay-adjustment exercise and discuss how decision thresholds should trade timeliness against false alarms.
+
+### Suggested marking rubric (20 marks)
+- estimand/design logic — 4
+- reproducible data management and code — 3
+- correct analysis — 5
+- diagnostics/sensitivity analysis — 4
+- interpretation and limits of inference — 4
+
+A technically correct model with an incoherent causal question should not receive a high distinction.
+:::
+

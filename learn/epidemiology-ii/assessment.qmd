@@ -1,0 +1,26 @@
+---
+title: ""
+pagetitle: "Epidemiology II Assessment | LIPPS"
+description: "Assessment blueprint for advanced epidemiologic methods and causal inference."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+EPIDEMIOLOGY II · ASSESSMENT
+:::
+# Advanced assessment blueprint
+## A causal-methods course should assess analysis, argument and defence.
+:::
+::: {.lipps-section}
+| Component | Weight | Required product |
+|---|---:|---|
+| Advanced R laboratory portfolio | 15% | Reproducible code, diagnostics and interpretation |
+| DAG and identification assignment | 20% | Causal graph, adjustment set and identification defence |
+| Causal analysis report | 25% | Standardisation/weighting or survival analysis with sensitivity checks |
+| Target-trial protocol | 20% | Eligibility, strategies, time zero, outcome, estimand and emulation plan |
+| Methods viva | 20% | Oral defence of assumptions, estimator, limitations and transportability |
+:::
+::: {.lipps-section}
+## Minimum pass standard
+A technically correct model cannot compensate for a mis-specified estimand. A learner who cannot distinguish prediction from causal inference, or cannot explain exchangeability/positivity/consistency for their analysis, has not yet demonstrated advanced epidemiological competence.
+:::

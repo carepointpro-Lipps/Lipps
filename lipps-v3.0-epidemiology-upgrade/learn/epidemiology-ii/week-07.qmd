@@ -1,0 +1,231 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 7 — G-formula, Propensity Scores and IP Weighting | LIPPS"
+description: "Advanced graduate epidemiology: Different estimators can target the same causal effect—and fail for different reasons."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 07
+:::
+# G-formula, Propensity Scores and IP Weighting
+## Different estimators can target the same causal effect—and fail for different reasons.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · Separate the causal estimand from the estimator
+Suppose the target is the 1-year risk difference under treatment versus no treatment. Outcome regression, standardisation, propensity-score matching and inverse-probability weighting can all target that contrast under related identification assumptions, but their modelling choices and diagnostics differ.
+:::
+::: {.lipps-section}
+## LEARN 1 · Parametric g-formula
+For a point treatment, fit an outcome model conditional on treatment and confounders, predict each person's outcome under each strategy, then average predictions over the target population.
+
+Strengths: direct estimation of marginal risks and flexible contrasts. Weakness: dependence on correct outcome modelling, especially in sparse regions.
+:::
+::: {.lipps-section}
+## LEARN 2 · Propensity score
+The propensity score is $e(L)=P(A=1\mid L)$. Conditioning on a correctly specified propensity score can balance measured confounders between treatment groups.
+
+Uses include matching, stratification, covariate adjustment and weighting. A high c-statistic is not the objective; **covariate balance and overlap** are.
+:::
+::: {.lipps-section}
+## LEARN 3 · Inverse-probability weighting
+For an ATE, simple treatment weights are:
+
+$$w_i=\frac{A_i}{e(L_i)}+\frac{1-A_i}{1-e(L_i)}.$$
+
+These create a pseudo-population in which measured baseline confounders are independent of treatment when the propensity model is correct and positivity holds.
+
+Stabilised weights reduce variance. Truncation can control extreme weights but changes the effective estimand and should be treated as a sensitivity choice rather than an invisible cleaning step.
+:::
+::: {.lipps-section}
+## LEARN 4 · Balance diagnostics
+After weighting or matching, assess standardised mean differences, distributional overlap and effective sample size. Do not declare success because the propensity model coefficients are statistically significant or because treatment prediction is accurate.
+
+Inspect the tails of the propensity distribution. If treated and untreated populations barely overlap, the causal question may be unsupported for part of the target population.
+:::
+::: {.lipps-section}
+## LEARN 5 · Doubly robust estimators
+Augmented inverse-probability weighting combines an outcome model and a treatment model. Under appropriate regularity conditions it can remain consistent if one of the two nuisance models is correctly specified.
+
+“Doubly robust” does not mean robust to unmeasured confounding, positivity violations or measurement error.
+:::
+::: {.lipps-section}
+## PHD EXTENSION · TMLE and machine learning
+Targeted maximum likelihood estimation and related semiparametric approaches can combine flexible nuisance estimation with targeted causal parameters. Cross-fitting and ensemble learners can reduce overfitting bias. These tools increase estimation flexibility but do not weaken causal identification assumptions.
+:::
+::: {.lipps-section}
+## R LAB
+[Advanced Lab 4 — G-computation, propensity weighting and balance →](labs/lab-04-adjustment.qmd)
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Compare estimators on the same causal question
+Use one dataset and estimate the same ATE four ways: outcome standardisation, propensity-score weighting, matching and augmented IPW. Differences reveal estimator sensitivity rather than different scientific questions.
+
+### Propensity model construction
+Include baseline causes of treatment and outcome, guided by the DAG. Variables strongly predicting outcome can improve precision. Do not include post-treatment variables.
+
+```r
+ps <- glm(a ~ age + severity + comorbidity + facility,
+          family=binomial(), data=d)
+d$e <- predict(ps, type="response")
+```
+
+### Overlap
+Plot propensity distributions by treatment. If treated participants have scores near 1 while controls have scores near 0, weights explode. Consider redefining the target population to an overlap population rather than pretending unsupported counterfactuals exist.
+
+### Stabilised weights
+For ATE weighting:
+
+```r
+pA <- mean(d$a)
+d$sw <- ifelse(d$a==1, pA/d$e, (1-pA)/(1-d$e))
+summary(d$sw)
+```
+
+Inspect mean, percentiles, maxima and effective sample size. A weighted pseudo-population with a handful of observations carrying enormous weights is fragile.
+
+### Covariate balance
+Use standardised mean differences before and after weighting. Balance should be assessed on the covariates themselves, not by p-values that depend on sample size.
+
+### Weighted outcome model
+A marginal structural model for a point treatment can estimate the weighted outcome contrast. Use robust standard errors appropriate to weighting.
+
+### Matching
+Nearest-neighbour propensity matching estimates an effect in the matched population and may discard non-overlapping participants. Caliper choices and matching with/without replacement affect precision and target population.
+
+### Doubly robust analysis
+AIPW combines outcome predictions with inverse-probability residual corrections. If either nuisance model is correctly specified—under the relevant conditions—the estimator can remain consistent. But both models can fail in the same unsupported region.
+
+### Machine learning nuisance models
+Random forests, boosting or super learner can flexibly estimate propensity or outcome functions. Cross-fitting separates nuisance-model training from causal-effect evaluation, reducing overfitting bias. However, black-box nuisance models do not make the causal assumptions less important.
+
+### Estimator comparison table
+Your report should contain a table like:
+
+| Estimator | Risk under A=1 | Risk under A=0 | RD | Key diagnostic |
+|---|---:|---:|---:|---|
+| G-computation | | | | outcome-model checks |
+| IPTW | | | | balance + weight tails |
+| Matching | | | | balance + matched target |
+| AIPW | | | | both nuisance models |
+
+If estimates differ materially, investigate support, modelling and target-population differences rather than averaging them.
+
+### Doctoral extension · Efficiency bound
+Semiparametric theory characterises the lowest achievable asymptotic variance among regular estimators under a model. Efficient influence functions underpin AIPW and TMLE. This is the bridge from applied causal inference to methodological research.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · Positivity and the geometry of causal estimation
+### Structural positivity
+If national guidelines prohibit treatment B for pregnant patients, there is no data-supported causal contrast of A versus B among pregnant patients. No amount of modelling can create that counterfactual.
+
+### Practical positivity
+Treatment B may technically occur but in only 1% of very severe patients. Estimates then depend on a few observations and become unstable.
+
+### Redefining the target population
+Instead of truncating extreme weights without discussion, consider restricting the estimand to people with clinical equipoise or using overlap weights that emphasise patients with substantial probability of either treatment.
+
+### Matching estimands
+1:1 propensity matching without replacement often targets the effect in the matched treated population rather than the original ATE. Report who was discarded and how the matched population differs from the source population.
+
+### Weight diagnostics beyond mean
+Report min/max, percentiles, coefficient of variation and effective sample size. Plot weights against key covariates to identify which clinical profiles drive instability.
+
+### Balance beyond means
+Standardised mean differences assess first moments. For continuous variables, compare distributions, variance ratios and density plots. Interactions and nonlinear terms that confound treatment effects should also be balanced.
+
+### Outcome-model extrapolation
+G-computation can hide positivity problems because predictions are produced even where no untreated patients exist. Therefore inspect propensity overlap even when the final estimator does not use propensity weights.
+
+### Doubly robust misconception
+If both treatment and outcome models use the same mismeasured confounders, double robustness does not help. It protects against some nuisance-model misspecification, not wrong causal variables.
+
+### Bootstrap with matching/weighting
+Variance estimation must reflect the estimator. Some matching estimators have non-standard bootstrap behaviour; use established package procedures or analytic variance methods rather than blindly resampling.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · Estimator choice should expose, not hide, the identifying assumptions
+
+G-computation, propensity-score weighting, matching and augmented estimators are often presented as competing “methods.” A more useful view is that they are different numerical strategies for recovering the same counterfactual contrast under common causal assumptions.
+
+### G-computation in more detail
+
+For the ATE with baseline confounders $L$:
+
+$$E(Y^a)=\sum_l E(Y\mid A=a,L=l)P(L=l).$$
+
+In practice, estimate $m(a,l)=E(Y\mid A=a,L=l)$, predict $m(1,L_i)$ and $m(0,L_i)$ for every member of the target population, and average. This makes the target population explicit. Flexible modelling is particularly important when outcome risk is nonlinear or treatment effects vary with $L$.
+
+### Inverse-probability weighting as population reconstruction
+
+Weights create a pseudo-population in which measured baseline confounders are balanced across treatment strategies. For binary treatment, unstabilised ATE weights are $1/e(L)$ for treated and $1/[1-e(L)]$ for untreated. Stabilised weights retain the same target under ideal conditions while often reducing variance.
+
+### Positivity diagnostics
+
+Report treatment-specific propensity distributions, extreme weight percentiles, effective sample size and covariate balance. An average weight near one does not rule out dangerous tails. Practical positivity problems often occur in clinically recognisable strata; inspect which patients generate extreme weights.
+
+### Trimming and truncation
+
+Capping weights can improve precision but may introduce bias and alter the implicit target. Report thresholds and re-estimate under alternative thresholds. Restricting to a pre-specified overlap population can be scientifically cleaner than arbitrary post hoc trimming.
+
+### Matching estimands
+
+Nearest-neighbour matching often estimates an effect among matched treated persons, not the population ATE. Calipers, replacement and ratio matching change who contributes. Report both balance and the population retained after matching.
+
+### Augmented IPW and double robustness
+
+AIPW combines treatment and outcome models. Its consistency if either nuisance model is correct is valuable, but “double robust” does not protect against an omitted confounder, measurement error, violations of consistency or absent overlap.
+
+### Targeted maximum likelihood estimation
+
+TMLE starts with initial outcome and treatment models and then updates the outcome prediction along a fluctuation submodel targeted to the parameter of interest. The efficient influence curve supports valid inference under suitable conditions. Super Learner can combine candidate algorithms for nuisance estimation.
+
+### Cross-fitting
+
+When machine-learning methods are used for nuisance functions, using the same observations to fit complex models and estimate the target can overfit. Cross-fitting separates nuisance learning from target evaluation across folds and is central to modern double/debiased machine-learning approaches.
+
+### Choosing between methods
+
+Use g-computation when outcome modelling and direct marginal risks are natural; weighting when balance diagnostics and pseudo-population interpretation are attractive; matching when a region of common support and treated-population effect are substantively useful; doubly robust methods when nuisance modelling flexibility is needed. The causal assumptions remain largely shared.
+
+### Sensitivity to unmeasured confounding
+
+No measured-confounding estimator solves unmeasured confounding. Add quantitative sensitivity analyses, negative controls, instrumental-variable arguments or triangulation where appropriate. E-values can summarise one type of sensitivity but should not substitute for a realistic bias model.
+
+### MSc standard
+
+Estimate the same ATE by at least two approaches, compare diagnostics and effect estimates, and explain why differences arise.
+
+### PhD standard
+
+Use flexible nuisance models with cross-fitting, justify the target parameter, report influence-function-based uncertainty where appropriate, and distinguish estimator robustness from causal-identification robustness.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 6](week-06.qmd)
+
+[Week 8 →](week-08.qmd)
+:::

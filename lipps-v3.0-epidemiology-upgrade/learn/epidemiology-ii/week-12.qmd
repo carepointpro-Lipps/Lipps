@@ -1,0 +1,307 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 12 — Transportability, Triangulation and Defensible Causal Claims | LIPPS"
+description: "Advanced graduate epidemiology: A causal estimate is useful only if its target and uncertainty are explicit."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 12
+:::
+# Transportability, Triangulation and Defensible Causal Claims
+## A causal estimate is useful only if its target and uncertainty are explicit.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · Internal validity is not the end of epidemiology
+A well-estimated effect in one population may not answer the decision problem in another. Effects can differ because baseline risk, effect modifiers, competing events, intervention delivery and healthcare context differ.
+:::
+::: {.lipps-section}
+## LEARN 1 · Generalisability and transportability
+Generalisability usually refers to extending results from a study sample to its source/target population. Transportability often refers to extending to a different population.
+
+A formal approach models selection into the study and reweights or standardises the study to the covariate distribution of the target population. This requires measured effect modifiers and positivity across populations.
+:::
+::: {.lipps-section}
+## LEARN 2 · Selection diagrams and target populations
+Selection into a study can be represented as a node affected by variables that also modify treatment effects. If effect modifiers are distributed differently between study and target populations, transport requires adjustment for those differences.
+
+Always name the target population before claiming external validity.
+:::
+::: {.lipps-section}
+## LEARN 3 · Triangulation
+Triangulation strengthens inference when studies with different biases converge on a similar conclusion. A cohort, case-control study, natural experiment and negative-control analysis may each have weaknesses, but those weaknesses need not point in the same direction.
+
+Triangulation is strongest when the expected bias structures are explicitly different rather than when many studies repeat the same design and data source.
+:::
+::: {.lipps-section}
+## LEARN 4 · Robustness values are not truth meters
+Sensitivity analyses, E-values, specification curves and negative controls can test aspects of robustness. None converts an observational result into proof. Interpret them as evidence about how conclusions respond to plausible violations.
+:::
+::: {.lipps-section}
+## LEARN 5 · Reporting causal claims
+A defensible conclusion distinguishes:
+
+- what was observed;
+- what was estimated after adjustment;
+- the causal estimand being targeted;
+- the assumptions required;
+- the principal threats to those assumptions;
+- the population to which the result is intended to apply;
+- the decision relevance of absolute and relative effects.
+
+Avoid both extremes: causal overstatement and reflexive refusal to reason causally. Epidemiology exists partly to support decisions under uncertainty.
+:::
+::: {.lipps-section}
+## CAPSTONE · The LIPPS EVIDENCE defence
+Use the LIPPS EVIDENCE framework on one real study:
+
+**E — Exact question:** What estimand and target population?  
+**V — Valid design:** Does the design emulate a credible comparison?  
+**I — Information quality:** How were exposure, outcome and covariates measured?  
+**D — Denominators/data structure:** Is time, sampling, clustering and censoring handled correctly?  
+**E — Explanations competing:** Which confounding, selection and measurement explanations remain?  
+**N — Numerical meaning:** What are the absolute and relative effects and uncertainty?  
+**C — Context:** Does the effect transport to the decision population?  
+**E — Expression:** Does the conclusion match the estimand and assumptions?
+
+The final submission should include a reproducible analysis or re-analysis plan and a 10-minute oral methods defence.
+:::
+::: {.lipps-section}
+## PHD EXTENSION · Methodological contribution
+Doctoral work should eventually move beyond competent application. A PhD epidemiologist should be able to identify where existing methods are inadequate, compare alternative identification or estimation strategies, conduct simulation studies when appropriate, and justify a methodological contribution or sophisticated application that advances knowledge rather than merely repeats a standard analysis.
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Build an evidence argument, not a significance claim
+At the end of an advanced analysis, assemble an **evidence map** around the causal conclusion.
+
+### Layer 1 · Design credibility
+- Was time zero aligned?
+- Was the comparison group generated from the same target population?
+- Was treatment assignment approximated credibly?
+- Were key design decisions prespecified?
+
+### Layer 2 · Measurement credibility
+- Were exposure and outcome measured consistently across groups?
+- Were assessors blinded where possible?
+- Were validation data available?
+- Did definitions change across sites or time?
+
+### Layer 3 · Adjustment and support
+- What DAG justified adjustment?
+- Was overlap adequate?
+- Were weights stable?
+- Were model forms plausible?
+- Did alternative valid estimators agree?
+
+### Layer 4 · Missingness and selection
+- Who was excluded from the analytic sample?
+- Why were data missing?
+- Was censoring informative?
+- Did complete-case restriction alter the target population?
+
+### Layer 5 · Sensitivity
+A mature analysis should include at least one sensitivity analysis directed at the main threat, not merely alternative covariate lists. Examples:
+- unmeasured confounding scenarios;
+- quantitative misclassification correction;
+- alternate time-zero definitions;
+- weight truncation;
+- missing-not-at-random shifts;
+- negative controls;
+- alternative outcome definitions.
+
+### Layer 6 · Transportability
+Describe differences between study and target populations in baseline risk and effect modifiers. If external covariate data are available, reweight or standardise to the target and compare transported with study-population effects.
+
+### Triangulation matrix
+Construct a matrix of evidence sources:
+
+| Evidence source | Main bias likely | Direction expected | Result |
+|---|---|---|---|
+| Cohort | residual confounding | away/toward null? | |
+| Natural experiment | instrument/parallel trend assumptions | uncertain | |
+| Negative control | shared confounding | should be null | |
+| Trial/substudy | adherence/selection | context-specific | |
+
+Convergence is more persuasive when biases differ.
+
+### From estimate to recommendation
+A causal effect does not automatically imply policy. Decisions also depend on baseline risk, harms, costs, feasibility, equity and implementation fidelity. Epidemiology informs the effect component of the decision.
+
+### Writing the conclusion
+A strong conclusion might say:
+
+> In the study population, the standardised 12-month risk under strategy A was estimated to be 4.1 percentage points lower than under strategy B. The causal interpretation depends primarily on exchangeability with respect to disease severity and care-seeking, adequate overlap, and non-informative outcome ascertainment. Results were similar across outcome-regression and weighting estimators and remained materially protective under prespecified unmeasured-confounding scenarios. Transport to rural facilities is uncertain because those facilities were poorly represented.
+
+That is more informative than either “A caused better outcomes” or “causality cannot be inferred from observational data.”
+
+### Doctoral extension · Contribution beyond application
+For dissertation-level work, ask whether your research contributes one or more of:
+- a novel causal question or target population;
+- improved measurement;
+- a stronger design;
+- a methodological comparison;
+- an extension of an estimator;
+- simulation evidence about performance;
+- improved transportability or bias analysis;
+- substantive evidence strong enough to change scientific understanding.
+
+A doctoral epidemiologist should be able to explain not only **which method was used**, but **why that method is justified, what would invalidate it, and what new knowledge the analysis contributes.**
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · A publication-ready causal results section
+A high-quality results section can follow this order:
+
+1. cohort flow and exclusions;
+2. baseline distribution and overlap;
+3. missingness and follow-up;
+4. primary marginal effect with absolute and relative measures;
+5. balance/model diagnostics;
+6. secondary estimators;
+7. sensitivity analyses;
+8. subgroup/heterogeneity analyses if prespecified;
+9. target-population comparison.
+
+### Avoid p-value narration
+Do not write “there was no association because p=0.08.” Report the effect estimate and interval, then discuss whether the data are compatible with clinically important benefit or harm.
+
+### Separate random and systematic uncertainty
+Confidence intervals quantify sampling uncertainty under the analysis model. They do not include unmeasured confounding, measurement error or selection bias unless those are explicitly modelled.
+
+### Causal language calibration
+Terms such as “effect,” “reduced,” “increased,” “prevented” and “impact” imply causal interpretation. Use them when the design and assumptions support the estimand and you state those assumptions. Use “association” when the analysis is descriptive or the causal target is not defensible.
+
+### Equity and transport
+Report effects in populations whose baseline risk and access differ. A small average effect can conceal substantial benefit in marginalised groups or harm in poorly supported strata.
+
+### Reproducible package
+A doctoral-quality analysis should preserve:
+- protocol/analysis plan;
+- data dictionary;
+- code;
+- package versions;
+- derivation of analytic variables;
+- diagnostics;
+- tables/figures generated from code;
+- sensitivity-analysis specifications.
+
+### Methods viva prompts
+Be prepared to answer:
+- Why this estimand rather than another?
+- Which untestable assumption worries you most?
+- Which variable would most improve identification if measured better?
+- What happens if positivity is violated?
+- Why did you choose this estimator?
+- Which result changed most across sensitivity analyses?
+- Who is outside your target population?
+- What evidence would make you change your conclusion?
+
+A learner who can answer these questions clearly has moved beyond formula-based epidemiology into defensible research practice.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · The final epidemiological task is deciding how far the evidence can travel
+
+A technically valid effect estimate for one study population is not automatically an answer for another population, setting, policy period or implementation system. Advanced interpretation separates **internal validity**, **transportability**, **generalisability**, **triangulation** and **decision relevance**.
+
+### Generalisability and transportability
+
+Generalisability typically refers to extending results from a study sample to its target/source population, whereas transportability extends findings to a different population. Both require assumptions about effect modifiers and the selection mechanism.
+
+Let $S=1$ indicate inclusion in the study and $S=0$ the target population. If all variables that jointly affect selection and treatment effect are measured, selection weights can reweight the study to resemble the target population.
+
+### Selection weighting
+
+Estimate the probability of study participation $P(S=1\mid X)$ and weight study participants toward the target distribution. Extreme selection weights again indicate poor overlap. Do not transport into covariate regions absent from the study merely because a model returns predictions.
+
+### Standardisation to an external population
+
+If outcome models are transportable conditional on effect modifiers $X$, predict counterfactual outcomes for the target population's covariate distribution. This is conceptually the same standardisation logic used for confounding adjustment, now applied to population selection.
+
+### Effect modification drives transportability
+
+Variables associated with participation but not with treatment effect need not threaten transported effects. Conversely, a modestly imbalanced true effect modifier can matter substantially. Therefore transport models should be guided by a causal model of selection and effect heterogeneity, not by indiscriminate prediction of study membership.
+
+### Triangulation
+
+Triangulation asks whether evidence from methods with different bias structures converges. A randomised trial, target-trial emulation, natural experiment and negative-control analysis may each have different limitations. Agreement is informative when biases are unlikely to align in the same direction; disagreement can reveal hidden assumptions.
+
+### Bradford Hill considerations are not a causal algorithm
+
+Temporality, strength, dose-response, plausibility and consistency can organise reasoning, but they do not mechanically establish causation. Modern causal inference focuses more explicitly on counterfactual contrasts, identification assumptions and study design.
+
+### Statistical uncertainty versus total uncertainty
+
+A narrow 95% confidence interval quantifies sampling uncertainty under the fitted model. It does not include unmeasured confounding, exposure misclassification, outcome misclassification, selection bias, model uncertainty or transportability uncertainty. A defensible conclusion discusses these qualitatively and, where possible, quantitatively.
+
+### Robustness and specification curves
+
+When multiple reasonable analytic decisions exist, multiverse or specification-curve analyses can reveal whether conclusions depend on one defensible choice. However, including implausible specifications simply to create a large multiverse can obscure rather than clarify uncertainty.
+
+### Bayesian evidence synthesis
+
+Bayesian models can formally combine external evidence and current data, but prior distributions encode assumptions that require transparency. Bayesian estimation does not repair a biased design. Hierarchical models can support partial pooling across sites or subgroups while preserving heterogeneity.
+
+### Decision thresholds
+
+Public-health decisions may require action before causal certainty is complete. Separate the evidence statement from the decision rule. Expected benefit, harm, cost, reversibility and urgency can justify action even when uncertainty remains; they should not be disguised as stronger causal evidence.
+
+### Reproducibility and provenance
+
+A doctoral-quality analysis should make the route from raw data to claim auditable: data provenance, versioned code, prespecified or time-stamped decisions, analytic dataset construction, model diagnostics, sensitivity analyses and deviations from protocol.
+
+### The LIPPS final claim ladder
+
+Before writing the abstract conclusion, move through these levels:
+
+1. **Observed:** what pattern exists in the analysed data?
+2. **Adjusted:** what association remains after the stated modelling choices?
+3. **Causal:** under which explicit assumptions can it be interpreted as an intervention contrast?
+4. **Transported:** to which population/settings can the contrast reasonably be extended?
+5. **Decision:** what action, if any, is justified given effect magnitude, uncertainty, feasibility and harms?
+
+Do not skip levels.
+
+### MSc standard
+
+Produce a final causal interpretation that distinguishes association, adjusted effect, causal assumptions, target population and sensitivity results.
+
+### PhD standard
+
+Construct a transportability argument, triangulate across designs or analyses with different bias structures, quantify at least one systematic uncertainty, and defend the final claim orally against plausible alternative explanations.
+
+### Final oral examination prompts
+
+1. What is the strongest claim your design supports without modelling assumptions?
+2. Which assumption, if false, would change your conclusion most?
+3. Which population is unsupported by your data?
+4. What independent design could challenge your causal interpretation?
+5. What evidence would make you reverse your recommendation?
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 11](week-11.qmd)
+
+[Epidemiology I →](../epidemiology.qmd)
+:::

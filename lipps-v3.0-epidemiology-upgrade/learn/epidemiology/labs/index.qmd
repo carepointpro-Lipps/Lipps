@@ -1,0 +1,31 @@
+---
+title: ""
+pagetitle: "Epidemiology I R Laboratories | LIPPS"
+description: "Eight reproducible R laboratories for graduate Epidemiology I."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY I
+:::
+# R laboratories
+## Code is evidence only when the epidemiological question and assumptions are visible.
+<span class="lipps-chip">8 labs</span> <span class="lipps-chip">Synthetic teaching data</span> <span class="lipps-chip">Reproducible</span>
+:::
+::: {.lipps-section}
+## Laboratory sequence
+1. [Disease frequency and standardisation](lab-01-standardisation.qmd)
+2. [Crude and adjusted effects](lab-02-effects.qmd)
+3. [Survey prevalence and weights](lab-03-survey.qmd)
+4. [Case-control analysis](lab-04-case-control.qmd)
+5. [Survival analysis](lab-05-survival.qmd)
+6. [Trials and quasi-experiments](lab-06-trials-quasi.qmd)
+7. [Diagnostic accuracy](lab-07-diagnostics.qmd)
+8. [Surveillance and outbreak signals](lab-08-surveillance.qmd)
+
+All datasets are fictional and generated for teaching. They are deliberately small enough to run on ordinary laptops. The displayed R code is non-executable in Quarto so the public site does not require an R runtime during deployment.
+:::
+::: {.lipps-section}
+## Submission standard
+A laboratory submission should include the question, estimand, reproducible code, one diagnostic/assumption check, a concise results paragraph and a **What could fool us?** note. A technically correct model without a defensible epidemiological interpretation is incomplete.
+:::

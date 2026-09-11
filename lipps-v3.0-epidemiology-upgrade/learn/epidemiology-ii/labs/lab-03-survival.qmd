@@ -1,0 +1,70 @@
+---
+title: ""
+pagetitle: "Advanced Lab 3 — Survival and Time | LIPPS"
+description: "Survival contrasts, proportional hazards and absolute risk."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+EPIDEMIOLOGY II · LAB 03
+:::
+# Survival, competing risks and time-updated covariates
+## Time is part of the outcome and part of the bias structure.
+:::
+::: {.lipps-section}
+Use [the Epidemiology I survival dataset](../../epidemiology/data/survival.csv) for the first analysis, then construct one start-stop dataset from repeated observations of your own or simulated data.
+
+### Tasks
+1. Estimate Kaplan-Meier curves and 3-/5-year survival.
+2. Fit crude and adjusted Cox models.
+3. Test proportional hazards and plot diagnostics.
+4. Estimate a standardised survival difference at 5 years if your chosen package supports it.
+5. Re-express the scientific conclusion using absolute survival rather than HR alone.
+6. Create a hypothetical competing event and explain whether you would report cause-specific hazards or cumulative incidence.
+7. Demonstrate, with a small constructed example, how assigning future treatment status to baseline creates immortal-time bias.
+
+### Doctoral extension
+Fit an RMST contrast at a prespecified horizon and explain why it may remain interpretable when proportional hazards fails.
+:::
+::: {.lipps-section}
+## LAB PROTOCOL · Graduate submission standard
+
+### Epidemiological question
+How should a time-to-event effect be estimated when covariates change, competing events occur or proportional hazards is doubtful?
+
+### Before opening R
+Write down the target population, exposure/treatment contrast, outcome, time horizon and effect measure. State the design and the assumptions that would make the proposed estimate meaningful. This paragraph is part of the submission: code without an estimand is incomplete.
+
+### Required analysis products
+Report survival/cumulative incidence, Cox or alternative model results, PH diagnostics, and at least one absolute contrast such as risk at time t or RMST.
+
+Every numerical result should be accompanied by a plain-language interpretation. Avoid reporting software output as though coefficients interpret themselves. If a model is used, state the link function, covariates, rationale for adjustment and how uncertainty was calculated.
+
+### Diagnostics that must appear in the report
+Assess censoring, competing events, time-varying exposure coding, PH and the sensitivity of results to model time scale.
+
+A diagnostic is not a ceremonial plot. State what failure it is intended to reveal and what you would change if that failure were present.
+
+### Reproducibility requirements
+Your submission should run from a clean R session. Use relative paths, set no user-specific working directory, keep data cleaning separate from analysis, label derived variables, and generate the final tables/figures from code. Include `sessionInfo()` or an equivalent dependency record. Do not manually copy numbers from the console into the final table.
+
+### Interpretation discipline
+End with four statements:
+1. **Estimate:** what was estimated, on what scale and with what uncertainty?
+2. **Assumptions:** which design/identification assumptions matter most?
+3. **Diagnostics:** what evidence supports or challenges those assumptions?
+4. **Claim:** what can be concluded, and what stronger claim would not be justified?
+
+### PhD extension
+Compare cause-specific and cumulative-incidence approaches, or fit a flexible/time-varying effect model, and explain why the estimands differ.
+
+### Suggested marking rubric (20 marks)
+- estimand/design logic — 4
+- reproducible data management and code — 3
+- correct analysis — 5
+- diagnostics/sensitivity analysis — 4
+- interpretation and limits of inference — 4
+
+A technically correct model with an incoherent causal question should not receive a high distinction.
+:::
+

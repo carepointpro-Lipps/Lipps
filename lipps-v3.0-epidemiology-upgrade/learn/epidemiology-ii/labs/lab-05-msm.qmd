@@ -1,0 +1,75 @@
+---
+title: ""
+pagetitle: "Advanced Lab 5 — Marginal Structural Models | LIPPS"
+description: "Longitudinal treatment, time-varying confounding and stabilised weights."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+EPIDEMIOLOGY II · LAB 05
+:::
+# Time-varying treatment and marginal structural weighting
+## Prior treatment can create the confounder you need to adjust for later.
+:::
+::: {.lipps-section}
+Download [longitudinal.csv](../data/longitudinal.csv).
+
+### Data structure
+Each row is one person-month. `biomarker` predicts treatment and event, while prior treatment influences later biomarker values.
+
+### Tasks
+1. Draw the longitudinal DAG for two time points.
+2. Fit denominator models for treatment using baseline severity, current biomarker and prior treatment.
+3. Fit numerator models using a reduced history.
+4. Construct cumulative stabilised weights.
+5. Plot the weight distribution by month and inspect extreme values.
+6. Fit a weighted pooled logistic outcome model for treatment history.
+7. Repeat after weight truncation and compare estimates.
+8. Explain why ordinary regression adjusting for current biomarker may not estimate the total treatment effect.
+9. Write a limitation statement about unmeasured time-varying confounding.
+
+### Doctoral extension
+Simulate a second longitudinal dataset with known causal effect and verify whether your weighting code recovers it under correct versus mis-specified treatment models.
+:::
+::: {.lipps-section}
+## LAB PROTOCOL · Graduate submission standard
+
+### Epidemiological question
+What is the effect of a sustained treatment strategy when time-varying confounders are themselves affected by earlier treatment?
+
+### Before opening R
+Write down the target population, exposure/treatment contrast, outcome, time horizon and effect measure. State the design and the assumptions that would make the proposed estimate meaningful. This paragraph is part of the submission: code without an estimand is incomplete.
+
+### Required analysis products
+Construct person-period data, estimate treatment/censoring probabilities, calculate stabilised cumulative weights, fit a marginal structural model and report weight diagnostics over time.
+
+Every numerical result should be accompanied by a plain-language interpretation. Avoid reporting software output as though coefficients interpret themselves. If a model is used, state the link function, covariates, rationale for adjustment and how uncertainty was calculated.
+
+### Diagnostics that must appear in the report
+Check sequential positivity, extreme cumulative weights, treatment-history definition, censoring and whether standard time-updated regression controls a treatment-affected confounder.
+
+A diagnostic is not a ceremonial plot. State what failure it is intended to reveal and what you would change if that failure were present.
+
+### Reproducibility requirements
+Your submission should run from a clean R session. Use relative paths, set no user-specific working directory, keep data cleaning separate from analysis, label derived variables, and generate the final tables/figures from code. Include `sessionInfo()` or an equivalent dependency record. Do not manually copy numbers from the console into the final table.
+
+### Interpretation discipline
+End with four statements:
+1. **Estimate:** what was estimated, on what scale and with what uncertainty?
+2. **Assumptions:** which design/identification assumptions matter most?
+3. **Diagnostics:** what evidence supports or challenges those assumptions?
+4. **Claim:** what can be concluded, and what stronger claim would not be justified?
+
+### PhD extension
+Compare MSM results with conventional adjustment and explain the direction/mechanism of any difference; optionally emulate a dynamic treatment rule.
+
+### Suggested marking rubric (20 marks)
+- estimand/design logic — 4
+- reproducible data management and code — 3
+- correct analysis — 5
+- diagnostics/sensitivity analysis — 4
+- interpretation and limits of inference — 4
+
+A technically correct model with an incoherent causal question should not receive a high distinction.
+:::
+

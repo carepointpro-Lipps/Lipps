@@ -1,0 +1,70 @@
+---
+title: ""
+pagetitle: "Advanced Lab 6 — Missing Data and Bias Analysis | LIPPS"
+description: "Multiple imputation, MNAR sensitivity and quantitative bias analysis."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+EPIDEMIOLOGY II · LAB 06
+:::
+# Missing data and quantitative bias analysis
+## Replace vague caveats with assumptions that can be varied.
+:::
+::: {.lipps-section}
+Download [missing_bias.csv](../data/missing_bias.csv).
+
+### Tasks
+1. Describe missing biomarker data by exposure and outcome.
+2. Compare complete cases with the full cohort on observed variables.
+3. State a plausible MAR mechanism and fit a multiple-imputation analysis.
+4. Conduct a delta-based sensitivity analysis in which missing biomarker values are systematically higher/lower than MAR predictions.
+5. Fit the exposure-outcome model with and without the confounder and quantify confounding.
+6. Construct one unmeasured-confounding scenario and calculate a bias-adjusted effect or E-value.
+7. Write a results paragraph that separates sampling uncertainty from systematic uncertainty.
+
+### Required figure
+Plot the estimated exposure effect against your MNAR delta or unmeasured-confounding parameter. Mark the point at which the substantive conclusion changes.
+:::
+::: {.lipps-section}
+## LAB PROTOCOL · Graduate submission standard
+
+### Epidemiological question
+How robust is the substantive conclusion to missing data, misclassification and plausible unmeasured confounding?
+
+### Before opening R
+Write down the target population, exposure/treatment contrast, outcome, time horizon and effect measure. State the design and the assumptions that would make the proposed estimate meaningful. This paragraph is part of the submission: code without an estimand is incomplete.
+
+### Required analysis products
+Compare complete-case and multiply-imputed estimates, perform at least one deterministic misclassification correction, and present a bias/sensitivity plot or table for unmeasured confounding.
+
+Every numerical result should be accompanied by a plain-language interpretation. Avoid reporting software output as though coefficients interpret themselves. If a model is used, state the link function, covariates, rationale for adjustment and how uncertainty was calculated.
+
+### Diagnostics that must appear in the report
+Check the imputation model, fraction of missing information, convergence, plausibility of sensitivity/specificity values and whether bias parameters are evidence-based.
+
+A diagnostic is not a ceremonial plot. State what failure it is intended to reveal and what you would change if that failure were present.
+
+### Reproducibility requirements
+Your submission should run from a clean R session. Use relative paths, set no user-specific working directory, keep data cleaning separate from analysis, label derived variables, and generate the final tables/figures from code. Include `sessionInfo()` or an equivalent dependency record. Do not manually copy numbers from the console into the final table.
+
+### Interpretation discipline
+End with four statements:
+1. **Estimate:** what was estimated, on what scale and with what uncertainty?
+2. **Assumptions:** which design/identification assumptions matter most?
+3. **Diagnostics:** what evidence supports or challenges those assumptions?
+4. **Claim:** what can be concluded, and what stronger claim would not be justified?
+
+### PhD extension
+Run a probabilistic QBA with distributions for at least two bias parameters and distinguish sampling uncertainty from systematic-error uncertainty.
+
+### Suggested marking rubric (20 marks)
+- estimand/design logic — 4
+- reproducible data management and code — 3
+- correct analysis — 5
+- diagnostics/sensitivity analysis — 4
+- interpretation and limits of inference — 4
+
+A technically correct model with an incoherent causal question should not receive a high distinction.
+:::
+

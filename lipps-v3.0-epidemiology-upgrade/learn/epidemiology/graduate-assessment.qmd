@@ -1,0 +1,73 @@
+---
+title: ""
+pagetitle: "Graduate Epidemiology Assessment | LIPPS"
+description: "Assessment architecture for Epidemiology I and the transition to advanced epidemiologic methods."
+page-layout: full
+---
+
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY · ASSESSMENT
+:::
+
+# Graduate assessment
+
+## Competence is demonstrated by producing defensible epidemiology, not by recognising definitions.
+
+<span class="lipps-chip">MSc level</span> <span class="lipps-chip">Reproducible analysis</span> <span class="lipps-chip">Protocol</span> <span class="lipps-chip">Critical appraisal</span>
+:::
+
+::: {.lipps-section}
+## Recommended Epidemiology I portfolio
+
+| Component | Weight | Evidence of competence |
+|---|---:|---|
+| Weekly mastery quizzes | 10% | Core concepts, calculations and rapid interpretation |
+| Reproducible R laboratory portfolio | 25% | Data management, analysis, graphics, interpretation and reproducibility |
+| Study protocol + analysis plan | 25% | Question, estimand, design, sampling, variables, bias control, analysis and ethics |
+| Critical appraisal / causal interpretation paper | 20% | Study validity, effect interpretation, assumptions and sensitivity reasoning |
+| Integrative epidemiology case | 20% | Move from a real public-health problem to defensible design, analysis and communication |
+
+Weekly quizzes remain useful, but they should not be the main evidence that a Master's epidemiologist can work independently.
+:::
+
+::: {.lipps-section}
+## Reproducible laboratory standard
+
+Each submitted analysis should contain:
+
+1. a one-paragraph scientific question and estimand;
+2. a data dictionary or variable map;
+3. reproducible code with a fixed workflow;
+4. descriptive checks before modelling;
+5. the primary analysis and uncertainty estimates;
+6. at least one assumption or diagnostic check;
+7. a sensitivity or alternative analysis where appropriate;
+8. a concise result written for a scientific report;
+9. a statement of what could make the estimate misleading.
+
+Marks should reward **reasoning before software sophistication**.
+:::
+
+::: {.lipps-section}
+## Doctoral extension · Methods viva
+
+For PhD preparation, add a 20–30 minute methods viva. Give the learner a paper, protocol or dataset and require them to defend:
+
+- the target estimand;
+- the design and source population;
+- the adjustment strategy;
+- measurement assumptions;
+- missing-data and censoring assumptions;
+- the interpretation of relative and absolute effects;
+- at least one sensitivity analysis;
+- whether the conclusion transports to the stated target population.
+
+A viva exposes whether a learner can reason through an unfamiliar problem rather than reproduce a rehearsed workflow.
+:::
+
+::: {.lipps-section}
+## Standard for high-stakes use
+
+Candidate question banks should be reviewed by a second epidemiologist and piloted before consequential use. After pilot administration, evaluate item difficulty, discrimination, distractor functioning, response time and differential performance. Retire items that reward wording tricks or recall rather than epidemiological judgment.
+:::

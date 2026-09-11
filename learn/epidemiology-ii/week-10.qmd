@@ -1,0 +1,215 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 10 — Missing Data, Measurement Error and Quantitative Bias Analysis | LIPPS"
+description: "Advanced graduate epidemiology: Replace the limitations paragraph with explicit assumptions and sensitivity parameters."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 10
+:::
+# Missing Data, Measurement Error and Quantitative Bias Analysis
+## Replace the limitations paragraph with explicit assumptions and sensitivity parameters.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · Bias does not disappear because it is acknowledged
+“Recall bias may have occurred” tells the reader little about the likely direction or magnitude of error. Advanced epidemiology turns missingness, misclassification and unmeasured confounding into explicit sensitivity analyses.
+:::
+::: {.lipps-section}
+## LEARN 1 · Missing-data mechanisms
+**MCAR:** missingness is unrelated to observed or unobserved data relevant to the analysis.
+
+**MAR:** after conditioning on observed variables, missingness is independent of the missing value.
+
+**MNAR:** missingness still depends on unobserved information after conditioning on observed data.
+
+These are modelling assumptions, not labels that software can verify conclusively.
+:::
+::: {.lipps-section}
+## LEARN 2 · Complete-case analysis
+Complete-case analysis is unbiased only under particular missingness structures and can lose substantial precision. It can also change the target population to people with complete data.
+
+Always report the extent and pattern of missingness by key variables and exposure/outcome groups.
+:::
+::: {.lipps-section}
+## LEARN 3 · Multiple imputation
+Multiple imputation draws plausible values from an imputation model, analyses each completed dataset and combines estimates using Rubin's rules. The imputation model should include variables that predict missingness and the missing values, the outcome, exposure and analysis-model structure.
+
+Imputation cannot recover information absent from the data without assumptions. Sensitivity analyses for departures from MAR may be needed.
+:::
+::: {.lipps-section}
+## LEARN 4 · Misclassification
+For binary variables, define sensitivity and specificity of classification. Non-differential misclassification does not universally bias associations toward the null, especially with multiple categories, correlated errors or adjusted analyses.
+
+Probabilistic bias analysis samples plausible misclassification parameters and propagates them into corrected effect estimates.
+:::
+::: {.lipps-section}
+## LEARN 5 · Unmeasured confounding
+Sensitivity analysis can specify plausible associations of an unmeasured confounder with exposure and outcome, then estimate how much the observed effect could shift. E-values are one summary of the minimum confounding strength needed to explain a risk-ratio estimate under specific assumptions, but they do not replace a full bias model.
+:::
+::: {.lipps-section}
+## LEARN 6 · Negative controls
+A negative-control outcome should not plausibly be affected by the exposure but should share similar confounding or measurement structures. A negative-control exposure should not causally affect the outcome. Unexpected associations can reveal residual bias, though null results do not prove absence of confounding.
+:::
+::: {.lipps-section}
+## R LAB
+[Advanced Lab 6 — Missing data and quantitative bias analysis →](labs/lab-06-bias.qmd)
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Turn uncertainty about bias into numbers
+Suppose an adjusted cohort analysis estimates RR=1.80 for occupational exposure and respiratory disease.
+
+### Unmeasured confounding scenario
+Postulate an unmeasured confounder $U$ that is twice as common among exposed participants and triples disease risk. Use algebraic or simulation-based bias formulas to estimate the confounding-adjusted RR under this scenario. Repeat across plausible parameter ranges.
+
+The purpose is not to discover the “true” value but to show what combinations of bias parameters would materially change the conclusion.
+
+### Probabilistic bias analysis
+Instead of one sensitivity value, assign distributions to bias parameters, such as exposure-classification sensitivity and specificity. Draw thousands of parameter sets, correct the data under each and obtain a distribution of bias-adjusted estimates.
+
+This separates **systematic uncertainty** from ordinary sampling uncertainty.
+
+### Multiple imputation workflow
+1. inspect missingness patterns;
+2. identify variables predicting missingness and missing values;
+3. include exposure, outcome and analysis-model terms;
+4. create multiple imputed datasets;
+5. fit the substantive model within each;
+6. combine estimates using Rubin's rules;
+7. compare with complete-case and alternative assumptions.
+
+### Imputation model compatibility
+If the analysis includes non-linear terms or interactions, the imputation model should preserve those structures. Passive imputation or substantive-model-compatible methods may be needed.
+
+### MNAR sensitivity
+Pattern-mixture models can shift imputed values by a delta representing how missing values might differ from MAR predictions. Tipping-point analyses identify how large departures from MAR must be to change a conclusion.
+
+### Measurement error in continuous variables
+Classical random error in a continuous exposure often attenuates simple linear associations but can have more complicated effects in nonlinear/multivariable models. Regression calibration and simulation-extrapolation (SIMEX) are possible correction methods when validation information is available.
+
+### Validation subsamples
+A gold-standard measure on a subset can estimate misclassification or measurement-error parameters. Two-phase methods can then correct the full analysis. Validation design should be planned, not treated as a post-hoc convenience sample.
+
+### E-values carefully
+For ratio measures, an E-value summarises the minimum joint strength of association that an unmeasured confounder would need with exposure and outcome to explain away an effect, under assumptions. It says nothing about whether such confounding is plausible. Pair it with subject-matter bias scenarios.
+
+### Negative controls
+If an exposure is associated with an outcome it cannot plausibly cause, residual bias is suggested. Choose controls that share the same data-generation mechanisms; an arbitrary unrelated variable is not a useful negative control.
+
+### Doctoral extension · Joint bias analysis
+Real studies may have confounding, selection, missingness and measurement error simultaneously. Monte Carlo bias analysis can propagate multiple bias processes, but parameter elicitation becomes the central scientific task.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · Bias parameter elicitation
+Quantitative bias analysis is only as credible as its sensitivity parameters. Do not choose values solely to show robustness.
+
+### Sources for parameters
+Use validation studies, repeatability studies, expert elicitation, previous literature and internal subsamples. Document why the chosen ranges are plausible in your setting.
+
+### Correlated sensitivity parameters
+Sensitivity and specificity may vary together by site, disease severity or instrument version. Independent draws can be unrealistic. Probabilistic bias analysis can model correlation when information permits.
+
+### Differential misclassification
+Allow classification parameters to differ by outcome or exposure status. Differential error can produce bias in any direction and can even create an association from a null truth.
+
+### Selection bias weights
+If selection probabilities can be modelled from observed data, inverse-probability-of-selection weights can target the source population. If important selection determinants are unmeasured, conduct sensitivity analysis over selection odds.
+
+### Missing outcomes versus missing confounders
+Missing outcomes can reduce event ascertainment and create censoring problems; missing confounders affect adjustment. The same imputation strategy is not automatically appropriate for both.
+
+### Auxiliary variables
+Variables not in the substantive model can improve imputation if they predict missingness or the missing value. Include them without confusing them with causal confounders.
+
+### Delta adjustment
+After MAR imputation, shift imputed continuous values by plausible deltas or alter binary-event odds among missing records to evaluate MNAR sensitivity. Plot the causal estimate against delta to identify a tipping point.
+
+### Bias-analysis reporting
+Report both conventional and bias-adjusted estimates, parameter ranges/distributions, data sources for parameters and which biases were not modelled. Quantitative sensitivity analysis should increase transparency, not create false certainty.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · Bias analysis turns “limitations” into quantitative questions
+
+A mature epidemiological analysis asks not only whether bias is possible, but **how large and in what direction the bias would need to be to change the conclusion**.
+
+### Missing-data mechanisms
+
+Let $R$ indicate whether a value is observed. Under MCAR, missingness is independent of observed and unobserved data. Under MAR, missingness may depend on observed variables but not the missing value after conditioning. Under MNAR, missingness still depends on the unobserved value or related unmeasured information.
+
+These labels are assumptions about the data-generating process, not testable categories assigned by software.
+
+### Complete-case analysis
+
+Complete-case estimates can be unbiased under conditions weaker than MCAR for some regression parameters, but the target population changes and precision is lost. Draw the missingness mechanism and ask whether conditioning on complete observation creates selection bias.
+
+### Multiple imputation
+
+Multiple imputation creates repeated plausible values from an imputation model, analyses each completed dataset and pools estimates using Rubin's rules. The imputation model should include outcome, exposure, confounders, auxiliary predictors of missingness and nonlinear/interacting terms needed by the analysis.
+
+### Sensitivity to MNAR
+
+Pattern-mixture models, selection models or delta adjustments can evaluate departures from MAR. Report conclusions across clinically plausible departures rather than presenting MAR as certain.
+
+### Measurement error
+
+For binary exposure/outcome, describe sensitivity and specificity of classification and whether errors differ by true outcome/exposure status. Nondifferential misclassification does **not** universally bias toward the null, particularly with multi-category variables or correlated errors.
+
+For continuous variables, classical random measurement error in an exposure often attenuates linear-regression slopes, but more complex settings behave differently. Regression calibration, validation subsamples and SIMEX are possible correction approaches.
+
+### Probabilistic quantitative bias analysis
+
+Assign probability distributions to bias parameters rather than single values, repeatedly correct the observed data, and obtain a distribution of bias-adjusted effects. This separates systematic-error uncertainty from ordinary sampling uncertainty.
+
+### Unmeasured confounding
+
+A simple bias factor for a binary unmeasured confounder depends on its prevalence imbalance across exposure groups and its association with outcome. More realistic QBA uses external data or elicited distributions. The point is to quantify what confounding structure would be required to explain the association.
+
+### E-values
+
+E-values summarise the minimum strength of association that an unmeasured confounder would need with both exposure and outcome, conditional on measured covariates, to explain away a risk-ratio association. They are one sensitivity metric, not proof of robustness, and do not address selection or measurement bias.
+
+### Negative controls
+
+A negative-control outcome should not plausibly be affected by exposure but may share confounding pathways; a negative-control exposure should not causally affect the outcome but may share bias structures. Unexpected associations can reveal residual bias, although null controls cannot prove absence of bias.
+
+### Bias direction is often uncertain
+
+Selection, confounding and misclassification can interact. Avoid ritual statements such as “bias was toward the null” unless justified. Construct a causal/bias diagram and specify plausible parameter ranges.
+
+### MSc standard
+
+Perform multiple imputation under MAR and at least one deterministic sensitivity analysis for misclassification or unmeasured confounding.
+
+### PhD standard
+
+Develop a probabilistic QBA, justify bias-parameter distributions from external evidence, examine joint biases, and show whether inferential conclusions are robust to credible systematic-error scenarios.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 9](week-09.qmd)
+
+[Week 11 →](week-11.qmd)
+:::

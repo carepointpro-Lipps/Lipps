@@ -1,0 +1,73 @@
+---
+title: ""
+pagetitle: "Lab 4 — Case-Control Analysis | LIPPS"
+description: "Graduate R lab on case-control odds ratios, confounding and matched analysis concepts."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+EPIDEMIOLOGY I · R LAB 04
+:::
+# Unmatched and matched case-control analysis
+## The control-sampling scheme determines what the odds ratio means.
+:::
+::: {.lipps-section}
+Download [case_control.csv](../data/case_control.csv).
+
+### Tasks
+1. Construct the exposure-by-case table and calculate the crude odds ratio.
+2. Fit unconditional logistic regression adjusting for age and site.
+3. Explain why you cannot calculate population risk from the sampled case-control totals.
+4. Describe how interpretation would change under incidence-density sampling.
+5. For the subset with a valid `match_set`, outline how conditional logistic regression would preserve matching.
+6. Write a source-population statement: who did the controls need to represent?
+
+```r
+d <- read.csv("case_control.csv")
+tab <- with(d, table(case, exposed))
+fit <- glm(case ~ exposed + age + factor(site), family=binomial(), data=d)
+exp(cbind(OR=coef(fit), confint(fit)))
+```
+:::
+::: {.lipps-section}
+## LAB PROTOCOL · Graduate submission standard
+
+### Epidemiological question
+How does control sampling and matching determine the estimand and analysis of a case-control study?
+
+### Before opening R
+Write down the target population, exposure/treatment contrast, outcome, time horizon and effect measure. State the design and the assumptions that would make the proposed estimate meaningful. This paragraph is part of the submission: code without an estimand is incomplete.
+
+### Required analysis products
+Construct the 2x2 table, estimate crude OR, fit unconditional and—where matched identifiers are provided—conditional logistic models, and state what quantity each OR estimates under the sampling scheme.
+
+Every numerical result should be accompanied by a plain-language interpretation. Avoid reporting software output as though coefficients interpret themselves. If a model is used, state the link function, covariates, rationale for adjustment and how uncertainty was calculated.
+
+### Diagnostics that must appear in the report
+Check source-population eligibility, matching variables, sparse matched sets, influential exposure patterns and whether any post-exposure variable has been adjusted for.
+
+A diagnostic is not a ceremonial plot. State what failure it is intended to reveal and what you would change if that failure were present.
+
+### Reproducibility requirements
+Your submission should run from a clean R session. Use relative paths, set no user-specific working directory, keep data cleaning separate from analysis, label derived variables, and generate the final tables/figures from code. Include `sessionInfo()` or an equivalent dependency record. Do not manually copy numbers from the console into the final table.
+
+### Interpretation discipline
+End with four statements:
+1. **Estimate:** what was estimated, on what scale and with what uncertainty?
+2. **Assumptions:** which design/identification assumptions matter most?
+3. **Diagnostics:** what evidence supports or challenges those assumptions?
+4. **Claim:** what can be concluded, and what stronger claim would not be justified?
+
+### PhD extension
+Recast the dataset as risk-set sampled controls and explain why the matched OR estimates an incidence-rate ratio without invoking the rare-disease approximation.
+
+### Suggested marking rubric (20 marks)
+- estimand/design logic — 4
+- reproducible data management and code — 3
+- correct analysis — 5
+- diagnostics/sensitivity analysis — 4
+- interpretation and limits of inference — 4
+
+A technically correct model with an incoherent causal question should not receive a high distinction.
+:::
+

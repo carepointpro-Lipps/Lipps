@@ -1,0 +1,306 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 1 — Estimands and Counterfactual Reasoning | LIPPS"
+description: "Advanced graduate epidemiology: Define the causal quantity before selecting the model."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 01
+:::
+# Estimands and Counterfactual Reasoning
+## Define the causal quantity before selecting the model.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · One dataset can answer several different questions
+Suppose a national HIV programme wants to know whether same-day ART initiation reduces 12-month mortality. A routine database contains treatment dates, baseline CD4 counts, facility characteristics, follow-up visits and deaths.
+
+A naïve question is: **“Is same-day ART associated with lower mortality?”** An advanced epidemiological question specifies:
+
+- the target population;
+- eligibility criteria;
+- the treatment strategies being compared;
+- time zero;
+- the outcome and follow-up horizon;
+- the causal contrast or estimand;
+- the assumptions needed to identify it from observed data.
+
+If these pieces are not aligned, a sophisticated model can estimate a precise answer to the wrong question.
+:::
+::: {.lipps-section}
+## LEARN 1 · Potential outcomes and causal effects
+Let $Y^1$ denote the outcome that would occur under treatment strategy 1 and $Y^0$ under strategy 0. For a binary outcome, a population average treatment effect can be expressed as:
+
+$$ATE=E(Y^1)-E(Y^0)$$
+
+or on a ratio scale:
+
+$$RR=E(Y^1)/E(Y^0).$$
+
+The individual causal effect $Y^1-Y^0$ cannot be observed because each person follows only one treatment history. Epidemiology therefore uses groups plus assumptions to estimate population contrasts between unobserved potential outcomes.
+
+This notation is useful because it prevents the word “effect” from floating free of a defined intervention and population.
+:::
+::: {.lipps-section}
+## LEARN 2 · The estimand has components
+A defensible estimand usually requires at least:
+
+1. **Population:** who is targeted?
+2. **Treatment/exposure strategies:** what exactly is compared?
+3. **Outcome:** what is measured and how?
+4. **Time horizon:** by when?
+5. **Summary measure:** risk difference, risk ratio, mean difference, survival difference, etc.
+6. **Intercurrent events:** how are competing events, treatment switching or death handled?
+
+Modern trial guidance increasingly emphasises these components because ambiguous treatment effects lead to ambiguous analyses.
+:::
+::: {.lipps-section}
+## LEARN 3 · Consistency and well-defined interventions
+Consistency links observed outcomes to potential outcomes under the strategy actually received. It is difficult to defend when “exposure” bundles together many versions with different consequences.
+
+“High-quality care” is not one intervention. “A facility delivers quarterly medication review, automated refill reminders and pharmacist reconciliation” is more specific. For non-manipulable attributes such as sex or genotype, causal questions need additional care because hypothetical interventions are not straightforward.
+:::
+::: {.lipps-section}
+## LEARN 4 · Exchangeability and positivity
+**Conditional exchangeability** requires that, after conditioning on appropriate covariates $L$, treatment groups are comparable with respect to potential outcomes:
+
+$$Y^a \perp A \mid L.$$
+
+This is an assumption, not a test result.
+
+**Positivity** requires that every covariate pattern relevant to the target population has a non-zero probability of receiving each strategy under comparison. If no critically ill patient ever remains untreated, the untreated counterfactual for critically ill patients is unsupported by the data.
+
+Near-violations create unstable weights and model extrapolation even when mathematical positivity is not exactly zero.
+:::
+::: {.lipps-section}
+## LEARN 5 · Time zero and immortal time
+Eligibility, treatment assignment/classification and start of follow-up should align. If treatment is defined using information that occurs after follow-up has begun, participants may have to survive event-free to be classified as treated. This creates immortal time.
+
+A target-trial mindset asks: **At what moment would a real trial randomise eligible participants?** Observational emulation should align exposure assignment and outcome follow-up to that same moment.
+:::
+::: {.lipps-section}
+## WORKED EXAMPLE · Same-day ART
+Target population: treatment-naïve adults newly eligible for ART at participating facilities.
+
+Strategies: initiate ART on the day of eligibility versus initiate 1–7 days later.
+
+Time zero: date eligibility is confirmed.
+
+Outcome: all-cause mortality by 12 months.
+
+Estimand: 12-month risk difference and risk ratio under the two strategies.
+
+Identification concerns: baseline disease severity, pregnancy, TB status, facility readiness and calendar time may influence both treatment timing and mortality; loss to follow-up may be informative; treatment strategy needs a rule for people who die before delayed initiation.
+:::
+::: {.lipps-section}
+## WHAT COULD FOOL US?
+- Defining the treatment using future information.
+- Adjusting for variables measured after treatment begins.
+- Estimating an odds ratio when the policy question concerns absolute 12-month risk.
+- Claiming exchangeability because covariate balance “looks good.”
+- Ignoring patients with covariate patterns for whom one strategy never occurs.
+:::
+::: {.lipps-section}
+## PHD EXTENSION · Identification is not estimation
+Identification asks whether the causal estimand can be expressed as a function of the observed-data distribution under stated assumptions. Estimation asks how to approximate that function with finite data. A better estimator cannot repair a non-identified causal question.
+
+This distinction becomes central when comparing g-computation, weighting, matching and doubly robust estimators later in the course.
+:::
+::: {.lipps-section}
+## APPLY
+Write a one-page estimand specification for a dissertation question. Include a hypothetical target trial even if your final study is observational. Explicitly state one exchangeability, one positivity and one consistency concern.
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Write the protocol before the model
+A useful discipline is to write the observational analysis as though a protocol committee will reject any ambiguity. For the same-day ART example, specify each component in operational language.
+
+**Eligibility:** adults aged 18 years or older, treatment-naïve, confirmed eligible for ART, with no prior ART in the preceding 12 months, entering one of the participating facilities during the study period.
+
+**Strategy 1:** initiate ART on the eligibility date.  
+**Strategy 2:** initiate ART between day 1 and day 7 after eligibility, provided the patient remains alive and eligible.
+
+Immediately a problem appears: strategy 2 is not defined for patients who die before day 7. A real trial would assign them to a strategy at baseline, not wait to see whether they survive. That forces the analyst to decide whether the intervention is *assignment to delayed initiation* or *actual initiation in a grace period*. Those are different strategies.
+
+### Grace periods
+A grace period allows treatment to start within a window after eligibility. Observational emulation must avoid giving treated patients guaranteed survival time during the grace period. Approaches include cloning individuals into compatible strategies and censoring clones when their observed treatment history becomes incompatible, then weighting for the induced censoring.
+
+At MSc level, the important point is conceptual: **a grace period changes the treatment strategy and the analysis.** At doctoral level, the implementation should be explicit enough that another analyst could reproduce the person-time classification.
+
+### Competing events
+Suppose the outcome is TB diagnosis by 12 months and death prevents future TB diagnosis. Two estimands are possible:
+
+- the risk of TB in a hypothetical world where death is somehow eliminated;
+- the real-world cumulative incidence of TB where death is allowed to compete.
+
+These correspond to different decision questions. A study must not treat the handling of death as a technical afterthought.
+
+### Descriptive versus causal contrasts
+The observed difference
+
+$$E(Y\mid A=1)-E(Y\mid A=0)$$
+
+is an associational contrast. The causal contrast
+
+$$E(Y^1)-E(Y^0)$$
+
+requires identification assumptions. The two coincide under conditions such as exchangeability, positivity and consistency. This distinction is the intellectual centre of advanced epidemiology.
+
+### Estimands beyond ATE
+The **ATE** asks about the whole target population. The **ATT** asks about people who actually received treatment. The **ATU** asks about untreated people. Policy questions may target one rather than another. If a programme is deciding whether to expand an intervention to those not currently receiving it, the ATU can sometimes be more directly relevant than the ATE.
+
+### A practical estimand template
+Complete this before any analysis:
+
+> Among **[target population]** eligible at **[time zero]**, what is the **[time horizon]** risk/mean/rate of **[outcome]** if everyone followed **[strategy A]** compared with if everyone followed **[strategy B]**, summarised as **[risk difference/risk ratio/etc.]**?
+
+Then add:
+
+> Identification requires **[exchangeability statement]**, **[positivity statement]**, **[consistency statement]**, and valid measurement/selection assumptions.
+
+### R design object before data analysis
+Even without a specialised package, encode the protocol in an analysis object or script header:
+
+```r
+estimand <- list(
+  population = "ART-naive adults newly eligible for ART",
+  treatment_a = "same-day initiation",
+  treatment_b = "initiation days 1-7",
+  time_zero = "eligibility date",
+  outcome = "all-cause mortality",
+  horizon_days = 365,
+  measure = c("risk_difference", "risk_ratio")
+)
+```
+
+This may seem trivial, but it prevents analytic drift when code becomes complex.
+
+### Common failure modes
+- **Prevalent-user bias:** including long-term users selects survivors and mixes treatment history.
+- **Depletion of susceptibles:** early adverse events may remove vulnerable users before study entry.
+- **Time-lag bias:** treatment groups differ in disease duration or severity because they enter at different treatment stages.
+- **Eligibility drift:** inclusion criteria change across calendar periods or facilities.
+- **Outcome-window asymmetry:** one group is observed longer or from a different starting point.
+
+### Doctoral exercise
+Take a published observational causal study and reconstruct its target trial. If you cannot determine one of the seven protocol components from the paper, record that as a reporting or design ambiguity. Then state whether the published analysis estimates the same effect as the reconstructed trial.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · Ambiguity audits
+Before analysing a causal question, conduct an **ambiguity audit**. Circle every word that could represent more than one intervention or outcome. “Early treatment,” “high exposure,” “adequate care,” “improved survival” and “routine follow-up” all require operational definitions.
+
+For each ambiguous phrase, specify what data would distinguish alternative versions. If “early ART” means within 7 days, determine whether time is measured from diagnosis, eligibility, enrolment or first prescription. Different anchors create different cohorts and can change the estimate.
+
+### Eligibility and treatment assignment are linked
+In a well-specified trial, eligibility is determined before assignment. Observational analyses often violate this by using information accumulated after treatment to define eligibility. For example, excluding patients who die within 30 days because they lacked a follow-up viral load conditions on a post-baseline event. This can create survivor selection.
+
+### Multiple versions of treatment
+Consistency assumes that the observed treatment corresponds sufficiently to the strategy being evaluated. If “community ART” includes home delivery, peer groups, outreach vans and pharmacy pickup, each with different effects, a single binary variable may conceal treatment-version heterogeneity. Either define a composite intervention deliberately or model versions separately.
+
+### Interference
+Standard causal notation often assumes one person's treatment does not affect another person's outcome. This can fail in infectious disease, vaccination, network interventions and facility-level programmes. Vaccinating one person changes exposure risk for others; improving one facility can shift patients from neighbouring facilities.
+
+When interference is plausible, specify whether the estimand is a direct effect, indirect/spillover effect, total effect or policy effect under a coverage strategy. Cluster-level interventions may be a more natural unit.
+
+### Dynamic treatment strategies
+Some causal questions compare rules rather than fixed treatments. Example: “start antihypertensive therapy when systolic BP exceeds 160 mmHg” versus “start when it exceeds 140 mmHg.” The intervention depends on evolving patient history. This distinction becomes critical in longitudinal g-methods.
+
+### Estimands and decision makers
+A ministry may care about population-average risk reduction; a clinician may care about individual predicted benefit; an implementation team may care about effect among those reachable by the programme. These are not merely communication preferences—they can correspond to different target populations and estimands.
+
+### Reproducibility check
+A colleague who sees only your estimand statement should be able to construct the skeleton of the study design. If they cannot determine who enters, when follow-up starts, what strategies are compared and when outcome is measured, the estimand is still too vague.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · From a vague question to an estimand that can actually be estimated
+
+At advanced level, the phrase **“the effect of exposure A on outcome Y” is incomplete**. Before any modelling, specify at least five components: the target population, the treatment or exposure strategies being contrasted, the outcome, the time horizon, and the summary measure. For a vaccine example, “effectiveness” could mean the 6-month risk ratio for laboratory-confirmed infection among vaccine-eligible adults, the 12-month risk difference for hospitalisation in the national adult population, or the per-protocol effect among people who would adhere to either strategy. These are different scientific questions.
+
+### Potential outcomes and individual causal effects
+
+Let $Y^1$ denote the outcome that would be observed under treatment and $Y^0$ the outcome under no treatment. The individual causal effect $Y^1-Y^0$ cannot generally be observed because only one treatment is received. Epidemiology therefore targets population summaries such as:
+
+$$ATE = E(Y^1)-E(Y^0).$$
+
+For binary outcomes, the same counterfactual risks can be summarised as a risk difference, risk ratio or odds ratio. The effect measure is not cosmetic: additive effects answer questions about excess burden and prevention; relative effects answer proportional questions; odds ratios can be useful for some designs but are less directly interpretable as risk contrasts.
+
+### Consistency
+
+Consistency links the observed outcome to the corresponding potential outcome: if a person actually receives strategy $A=a$, then under a sufficiently well-defined intervention $Y=Y^a$. This becomes difficult when “treatment” hides multiple versions. “Received hypertension care” might include different drugs, doses, adherence patterns and co-interventions. A causal estimand is only as coherent as the intervention it describes.
+
+### Exchangeability
+
+Conditional exchangeability means that after controlling for a sufficient set of pre-exposure variables $L$:
+
+$$Y^a \perp A \mid L.$$
+
+This is the formal version of “no uncontrolled confounding” for the specified contrast. It is not a statistical property that can be proved from the observed data. It is an argument based on design, subject-matter knowledge, causal structure and measurement quality.
+
+### Positivity
+
+For every covariate pattern included in the target population, each treatment strategy must have a non-zero probability:
+
+$$0 < P(A=a\mid L=l) < 1.$$
+
+If critically ill patients always receive treatment A and never treatment B, the data contain no direct information about the B counterfactual in that stratum. Flexible models may still output predictions, but that is extrapolation, not recovered evidence.
+
+### Identification versus estimation
+
+Identification asks whether the causal estimand can be expressed as a function of the observed-data distribution under stated assumptions. Estimation asks how to calculate that function from a finite sample. A beautifully estimated quantity can still lack causal identification. Conversely, an identifiable causal effect may be estimated imprecisely because of small samples or weak overlap.
+
+### Target population versus study sample
+
+A study sample is not automatically the target population. If a cohort is drawn from tertiary hospitals, the causal effect among those patients may differ from the effect among all people with the condition. Define whether the target is the source population, trial-eligible population, treated population, overlap population or a larger population to which results will later be transported.
+
+### Time zero is part of the estimand
+
+Eligibility, treatment assignment and start of follow-up should align. If treatment is classified using information collected after follow-up begins, immortal-time and selection problems can arise. A doctoral-level protocol should be able to point to one unambiguous **time zero** for each strategy.
+
+### Competing events and intercurrent events
+
+Death, treatment switching, loss to follow-up and rescue therapy may alter what the causal question means. Do you want a total effect regardless of switching, an effect under sustained treatment, an effect in a hypothetical world without the competing event, or an effect on a composite endpoint? Naming the estimand forces these decisions into the protocol rather than burying them in analysis.
+
+### MSc standard
+
+Given a substantive question, write a one-paragraph estimand statement and identify consistency, exchangeability and positivity assumptions. Then show how a crude association differs from the intended causal contrast.
+
+### PhD standard
+
+Translate the question into potential-outcome notation, state the identification assumptions formally, distinguish the observed-data functional from the estimator, and defend the target population and intercurrent-event strategy. If any assumption is implausible, reformulate the question rather than merely adding a limitation paragraph.
+
+### Oral examination prompts
+
+1. What exactly would have to be randomised in your ideal experiment?
+2. Which part of your causal question is not encoded by the regression model?
+3. Where does positivity fail, and what population remains supportable?
+4. Which versions of treatment threaten consistency?
+5. If death prevents the outcome, what estimand are you actually targeting?
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Epidemiology I](../epidemiology.qmd)
+
+[Week 2 →](week-02.qmd)
+:::

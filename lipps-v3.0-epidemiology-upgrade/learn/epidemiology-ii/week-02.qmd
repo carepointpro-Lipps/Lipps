@@ -1,0 +1,270 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 2 — Standardisation and Confounding Adjustment | LIPPS"
+description: "Advanced graduate epidemiology: Turn covariate adjustment into a population contrast you can interpret."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 02
+:::
+# Standardisation and Confounding Adjustment
+## Turn covariate adjustment into a population contrast you can interpret.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · Adjustment is a transformation of the comparison
+Suppose treated patients are older and sicker than untreated patients. A crude risk difference mixes treatment effects with baseline prognosis. Adjustment aims to reconstruct a comparison in which prognosis is balanced according to a defined target population.
+:::
+::: {.lipps-section}
+## LEARN 1 · Stratification as the conceptual foundation
+Within levels of confounders $L$, compare treated and untreated outcomes, then standardise stratum-specific estimates to a target covariate distribution.
+
+For a binary outcome, the standardised risk under treatment $a$ can be written:
+
+$$P(Y^a=1)=\sum_l P(Y=1\mid A=a,L=l)P(L=l).$$
+
+This is the g-formula for a simple point treatment. Regression is often used because direct stratification becomes sparse with many covariates.
+:::
+::: {.lipps-section}
+## LEARN 2 · Outcome regression and g-computation
+Fit a model for the outcome conditional on exposure and confounders. Then create two copies of the study population: set everyone to treatment and predict outcomes; set everyone to no treatment and predict again. Average predictions within each scenario.
+
+This separates **modelling** from **estimand construction**. The regression coefficients are intermediate quantities; the final marginal risks can be more interpretable for public-health decisions.
+
+```r
+fit <- glm(outcome ~ treatment + age + severity + facility,
+           family = binomial(), data = d)
+d1 <- transform(d, treatment = 1)
+d0 <- transform(d, treatment = 0)
+r1 <- mean(predict(fit, newdata=d1, type="response"))
+r0 <- mean(predict(fit, newdata=d0, type="response"))
+c(RD=r1-r0, RR=r1/r0)
+```
+:::
+::: {.lipps-section}
+## LEARN 3 · Model dependence
+Outcome-regression standardisation is valid only if the outcome model is sufficiently correct in the parts of covariate space used for prediction. Flexible modelling can reduce rigid functional-form assumptions, but all methods still require data support.
+
+Check continuous covariate form, interactions that matter for outcome prediction, influential observations and extrapolation into unsupported regions.
+:::
+::: {.lipps-section}
+## LEARN 4 · Conditional versus marginal targets
+A logistic-regression coefficient estimates a conditional log odds ratio under the model. Standardised risks create a marginal, population-average contrast. These quantities need not agree numerically even without confounding because odds ratios are non-collapsible.
+
+Decide whether the scientific question is about an individual covariate-defined stratum or a population-average intervention effect.
+:::
+::: {.lipps-section}
+## LEARN 5 · Standard population choice
+You can standardise to the study population, exposed population, unexposed population or an external target population. Each choice defines a different estimand.
+
+The average treatment effect (ATE) standardises to the whole target population. The average treatment effect among the treated (ATT) standardises to the treated population. Do not use these labels without defining the population.
+:::
+::: {.lipps-section}
+## WORKED EXAMPLE · Hypertension outreach
+A programme compares community outreach with usual facility-based screening. Outreach communities are younger and more urban. Crude detection is higher with outreach. The analysis models 6-month diagnosis as a function of strategy, age, sex, urbanicity and baseline care access, then standardises to the entire eligible population.
+
+Report: standardised risk under outreach, standardised risk under usual care, risk difference and risk ratio. Then state that causal interpretation requires no important unmeasured confounding and adequate overlap.
+:::
+::: {.lipps-section}
+## WHAT COULD FOOL US?
+- Treating every baseline predictor as a confounder.
+- Using data-driven covariate selection without a causal model.
+- Interpreting conditional odds ratios as population-average risk ratios.
+- Standardising to an undefined population.
+- Ignoring unsupported combinations of confounders and treatment.
+:::
+::: {.lipps-section}
+## R LAB
+[Advanced Lab 1 — Standardisation and the parametric g-formula →](labs/lab-01-gformula.qmd)
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Standardisation step by step
+Consider a cohort with treatment $A$, binary outcome $Y$, age, baseline severity and facility type. The target is the 1-year ATE.
+
+### Step 1 · Specify the adjustment set before looking at coefficients
+Use subject-matter knowledge and a DAG to choose baseline confounders. Do not select variables because their univariable p-value is below 0.20. A variable can be an important confounder even if weakly associated with outcome in this sample.
+
+### Step 2 · Fit an outcome model
+For a binary outcome, a flexible logistic model might include non-linear age terms and interactions that improve outcome prediction:
+
+```r
+fit <- glm(
+  y ~ a + splines::ns(age, 4) + severity + facility + a:severity,
+  family = binomial(), data = d
+)
+```
+
+The treatment coefficient is not yet the target estimand.
+
+### Step 3 · Create counterfactual copies
+Predict each participant's outcome under $A=1$ and $A=0$ while keeping baseline covariates unchanged.
+
+```r
+d1 <- transform(d, a = 1)
+d0 <- transform(d, a = 0)
+p1 <- predict(fit, newdata=d1, type="response")
+p0 <- predict(fit, newdata=d0, type="response")
+```
+
+### Step 4 · Average over the target population
+
+```r
+risk1 <- mean(p1)
+risk0 <- mean(p0)
+rd <- risk1 - risk0
+rr <- risk1 / risk0
+```
+
+Now the estimand is marginal because predictions are averaged over the covariate distribution of the target sample.
+
+### Step 5 · Quantify uncertainty
+Naïvely treating predicted risks as fixed understates uncertainty. Use the nonparametric bootstrap, influence-function methods or package-specific standardisation tools to obtain valid confidence intervals.
+
+### Standardising to another target population
+If the study sample differs from a target population, replace the covariate distribution used in averaging. For example, if a national survey provides age/sex/severity distributions, standardise model predictions to those weights. This becomes a transportability problem and requires adequate overlap.
+
+### Sparse-data bias
+When treatment is rare in some confounder strata, outcome regression extrapolates into regions with little or no data. Inspect treatment prevalence across clinically meaningful covariate strata and use propensity-score overlap plots even if propensity scores are not the final estimator.
+
+### Regression versus standardisation
+Regression coefficients answer model-conditional questions. Standardisation uses the regression model as a tool to reconstruct population outcomes under intervention strategies. This is why “adjusted odds ratio = 0.63” is often less decision-relevant than “standardised 1-year risks were 8.2% versus 11.7%, risk difference −3.5 percentage points.”
+
+### Parametric g-formula assumptions
+For point treatments, g-computation requires:
+
+- consistency;
+- exchangeability conditional on measured covariates;
+- positivity;
+- correct estimation of the conditional outcome mean.
+
+Model flexibility can address the last assumption but not the first three.
+
+### Sensitivity to model form
+Repeat standardisation using plausible alternative specifications: linear versus spline age effects, treatment-by-severity interaction, alternate outcome definitions. If the causal estimate changes materially, explain why.
+
+### Doctoral extension · Nonparametric identification
+The g-formula is an identification result before it is a regression algorithm. The equality
+
+$$E(Y^a)=\sum_l E(Y\mid A=a,L=l)P(L=l)$$
+
+follows from causal assumptions. Parametric regression is only one way to estimate the terms on the right-hand side. Flexible learners, super learner and targeted estimators can be substituted without changing the underlying identification logic.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · Confounding control as population reconstruction
+Think of adjustment as reconstructing the counterfactual outcome distribution that would have been observed had treatment groups shared a common covariate distribution.
+
+### Stratified standardisation example
+Suppose severe disease is present in 60% of treated and 20% of untreated patients. Within severity strata, treatment has the same protective risk ratio, but crude treated risk is higher because treated patients are much sicker.
+
+Calculate stratum-specific risks, then standardise both treatment strategies to the total population's severity distribution. The standardised comparison reverses the crude association. This is not statistical manipulation; it reflects a different comparison population.
+
+### Confounding versus non-collapsibility
+If an odds ratio changes after adjustment, ask whether change reflects confounding or non-collapsibility. Compare standardised risks or risk ratios, inspect the DAG, and avoid using change-in-estimate rules as the sole confounder-selection strategy.
+
+### Precision variables
+A baseline variable that predicts outcome but not treatment may improve precision in outcome regression without being a confounder. Include it if prespecified and modelled appropriately, but do not label it a confounder merely because it is in the model.
+
+### Instruments and colliders in adjustment sets
+A strong predictor of treatment that has no direct relation to outcome except through treatment can amplify bias from unmeasured confounding when adjusted for in some settings. A collider can create bias. Therefore “include every baseline variable” is not a safe rule.
+
+### Standardisation to policy populations
+Suppose a trial was conducted in tertiary hospitals but the intervention will be scaled to district hospitals. If effect modifiers such as baseline severity and staffing differ, estimate transported effects by weighting or standardising to the district-hospital distribution, provided there is overlap.
+
+### Uncertainty from standardisation
+Bootstrap the full process, including model fitting and prediction, rather than bootstrapping only the final average. For clustered studies, resample at the cluster level if clusters are the independent sampling units.
+
+### Model-free intuition
+Even if final analysis uses machine learning, the logic remains stratification: compare outcomes among sufficiently similar individuals and average those comparisons across the target population. Flexible algorithms help estimate conditional expectations; they do not change the causal target.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · Standardisation as the common language of adjustment
+
+Many adjustment methods can be understood as ways of reconstructing outcomes under a common covariate distribution. **Standardisation is therefore more than an old demographic technique; it is a bridge between classical stratified epidemiology and modern causal inference.**
+
+### Direct standardisation
+
+Suppose age-specific risks are available for exposed and unexposed groups. Choose a standard population distribution $w_l$ and calculate:
+
+$$R_a^{std}=\sum_l w_l R(Y=1\mid A=a,L=l).$$
+
+The standardised risk difference is $R_1^{std}-R_0^{std}$. By forcing both exposure groups to the same distribution of $L$, compositional differences are removed with respect to measured strata. Regression standardisation (g-computation) generalises this idea when $L$ is high-dimensional or continuous.
+
+### Indirect standardisation and the SMR
+
+Indirect standardisation applies stratum-specific rates from a reference population to the study population's covariate structure to calculate expected events. The standardised mortality ratio is:
+
+$$SMR = O/E.$$
+
+The SMR is useful when study-specific stratum rates are unstable, but two SMRs are not necessarily directly comparable because each is standardised to its own internal covariate distribution.
+
+### Mantel-Haenszel adjustment
+
+For a small number of categorical confounders, stratification can estimate a common adjusted association. The Mantel-Haenszel estimator remains pedagogically powerful because it makes the adjustment process visible: compare within strata, then combine information. Regression is not conceptually different simply because software performs the weighting invisibly.
+
+### Confounder assessment should not be based on p-values
+
+A variable is not a confounder because its coefficient is statistically significant, nor does it cease to be a confounder because $p>0.05$. Confounding is about causal structure and the target effect. Data-driven stepwise deletion can therefore produce unstable or biased adjustment sets.
+
+### Precision variables, instruments and colliders
+
+A strong predictor of outcome that is not caused by exposure can improve precision. A variable strongly predicting treatment but unrelated to outcome except through treatment can amplify bias from unmeasured confounding in some settings. A collider can create bias when conditioned upon. Therefore “adjust for everything available” is not a defensible graduate strategy.
+
+### Non-collapsibility
+
+For odds ratios and hazard ratios, a conditional estimate can differ from a marginal estimate even without confounding. This is **non-collapsibility**, not necessarily bias. Consequently, comparing crude and adjusted odds ratios as a mechanical test for confounding can mislead. Risk differences and risk ratios have different collapsibility properties.
+
+### Sparse strata and high-dimensional adjustment
+
+Classical stratification becomes unstable as covariates multiply. Regression, propensity methods and standardisation solve the computational problem but not the causal one. Sparse combinations of covariates can still create practical positivity problems. Examine support before trusting adjusted predictions.
+
+### Model-based standardisation workflow
+
+1. State the estimand.
+2. Fit a model for $E(Y\mid A,L)$ flexible enough for important nonlinearities and interactions.
+3. Create two counterfactual copies of the dataset: set everyone to $A=1$ and then to $A=0$.
+4. Predict outcomes under each strategy.
+5. Average predictions over the target covariate distribution.
+6. Contrast the averages on the chosen scale.
+7. Obtain uncertainty with appropriate analytic, bootstrap or influence-function methods.
+
+### Worked reasoning example
+
+A crude analysis suggests a treatment lowers 1-year mortality from 18% to 12%. Treated patients, however, are younger. Standardisation to the combined study population produces 15% under treatment and 17% under no treatment: RD = -2 percentage points. The adjustment did not merely “control for age”; it changed the comparison to what would be expected if both strategies were applied to the same age distribution.
+
+### MSc standard
+
+Calculate direct standardisation by hand for a small table, then reproduce the result using regression standardisation. Explain why the marginal adjusted risk is often easier to communicate than a regression coefficient.
+
+### PhD standard
+
+State the target distribution explicitly, distinguish conditional and marginal estimands, discuss non-collapsibility, and evaluate how positivity and model misspecification affect standardised estimates. Be prepared to explain when standardising to the treated population or an external population changes the scientific question.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 1](week-01.qmd)
+
+[Week 3 →](week-03.qmd)
+:::

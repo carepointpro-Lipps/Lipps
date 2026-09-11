@@ -1,0 +1,205 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 6 — DAGs and Identification | LIPPS"
+description: "Advanced graduate epidemiology: Draw the assumptions before adjusting for variables."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 06
+:::
+# DAGs and Identification
+## Draw the assumptions before adjusting for variables.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · A covariate table does not reveal causal structure
+The same variable can be a confounder, mediator or collider depending on the causal question. DAGs make those assumptions explicit and allow adjustment strategies to be discussed before models are fit.
+:::
+::: {.lipps-section}
+## LEARN 1 · Paths and d-separation
+A path between exposure and outcome can transmit association even when it is not causal. Backdoor paths enter the exposure through an arrow pointing into it. A sufficient adjustment set blocks all open non-causal backdoor paths without blocking the causal path of interest.
+
+D-separation is the graphical rule used to determine whether paths are open or blocked after conditioning.
+:::
+::: {.lipps-section}
+## LEARN 2 · Colliders
+If $A \rightarrow C \leftarrow U$, conditioning on collider $C$ can create association between $A$ and $U$. If $U$ also affects outcome $Y$, conditioning on $C$ can create a spurious path from $A$ to $Y$.
+
+Common colliders include hospital admission, study participation, test receipt and survival to recruitment when each is affected by multiple causes.
+:::
+::: {.lipps-section}
+## LEARN 3 · Mediators and total versus direct effects
+If $A \rightarrow M \rightarrow Y$, adjusting for $M$ changes the question. A total effect allows the mediated pathway to operate; a controlled direct effect compares exposure strategies while fixing the mediator to a specified value. Natural direct and indirect effects require additional cross-world assumptions and are treated later.
+:::
+::: {.lipps-section}
+## LEARN 4 · Descendants and selection
+Conditioning on descendants of colliders can also open biasing paths. Restricting analysis to people who attend clinic, survive long enough, have complete laboratory data or consent to a sub-study may create selection bias if those processes are common effects of exposure-related and outcome-related causes.
+:::
+::: {.lipps-section}
+## LEARN 5 · DAGs cannot encode everything
+DAGs encode qualitative causal structure, not effect sizes, measurement error, functional form or random error. They are only as credible as the subject-matter assumptions used to draw them.
+
+Cycles are also excluded from simple DAGs; feedback over time is represented by time-indexed variables rather than a literal directed cycle.
+:::
+::: {.lipps-section}
+## LEARN 6 · From graph to estimand
+The graph supports identification; it does not choose the estimator. Once an adjustment set is identified, effects can be estimated by standardisation, regression, matching, weighting or other approaches.
+
+A useful workflow is: **question → target trial/estimand → DAG → identification set → estimator → diagnostics → sensitivity analysis.**
+:::
+::: {.lipps-section}
+## ASSESSMENT · DAG defence
+Draw a DAG for one of your own research questions, identify a minimally sufficient adjustment set and defend why at least three measured covariates should or should not be adjusted for. Include one plausible unmeasured variable and describe how it threatens identification.
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · DAGs as a protocol language
+Take the question: does facility-level staffing improve viral suppression? Let staffing $A$ affect counselling quality $M$, which affects suppression $Y$. Facility resources $L$ affect both staffing and suppression. Patient severity $S$ influences facility choice and suppression.
+
+A DAG forces you to decide whether facility choice is a confounder pathway, a selection mechanism or both.
+
+### Backdoor criterion in practice
+A set $Z$ is sufficient if it blocks every backdoor path from $A$ to $Y$ without including descendants that induce bias. In the staffing example, facility resources and patient mix may be required. Counselling quality should not be adjusted for when estimating the total staffing effect because it is a mediator.
+
+### M-bias and collider intuition
+Suppose staffing is influenced by district funding and patient complexity; suppression is influenced by patient complexity and NGO support; selection of “well-documented facilities” depends on both staffing and NGO support. Restricting to well-documented facilities may open a path between staffing and NGO support through the collider selection variable.
+
+### Selection diagrams
+Add a selection node $S$ indicating inclusion in the analytic sample. Arrows into $S$ encode variables influencing participation or data completeness. This makes complete-case analysis a causal selection problem rather than a purely statistical missing-data issue.
+
+### Measurement nodes
+A DAG can distinguish true exposure $A$ from measured exposure $A^*$ and true outcome $Y$ from recorded outcome $Y^*$. Differential measurement can arise when $A$ influences how $Y$ is measured or vice versa.
+
+### DAGs and instrumental variables
+A proposed instrument $Z$ should affect treatment $A$, have no direct path to outcome $Y$ except through $A$, and share no unblocked common causes with $Y$. DAGs make the exclusion restriction and independence assumptions visible, though they cannot prove them.
+
+### Minimal versus maximal adjustment
+A minimally sufficient set may improve precision by avoiding unnecessary variables. A larger valid set may sometimes improve precision if variables strongly predict outcome without inducing bias. The graph identifies valid sets; efficiency remains an estimation question.
+
+### Temporal DAGs
+Longitudinal settings require time-indexed variables: $A_0 \rightarrow L_1 \rightarrow A_1 \rightarrow Y$. Feedback is represented across time rather than through cycles. This structure reveals why $L_1$ can simultaneously mediate $A_0$ and confound $A_1$.
+
+### Practical exercise
+For your dissertation:
+1. draw a pre-data DAG;
+2. label measured and unmeasured nodes;
+3. identify a minimal sufficient adjustment set;
+4. identify variables you must not adjust for in the total-effect analysis;
+5. identify the selection mechanism;
+6. identify at least one measurement process;
+7. write one sentence describing the untestable assumptions encoded by the graph.
+
+### Doctoral extension · SWIGs
+Single-world intervention graphs (SWIGs) merge graphical and potential-outcome notation to represent interventions and counterfactual independencies. They are useful when advanced doctoral work requires a more formal link between graphs and causal identification.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · Graphical mistakes that matter in real analyses
+### Conditioning on healthcare use
+Suppose obesity increases clinic attendance and diabetes symptoms also increase attendance. A study restricted to clinic attendees conditions on a collider influenced by obesity and latent diabetes risk, potentially distorting their association.
+
+### Survivor bias
+If exposure and unmeasured frailty both influence survival to study enrolment, conditioning on being alive at enrolment opens a path between exposure and frailty. This is common in studies of long-term survivors.
+
+### Mediator-outcome confounders affected by exposure
+Suppose treatment affects depression, depression influences adherence, and adherence mediates the treatment effect on viral suppression. Depression is then a treatment-induced confounder of the adherence-outcome relation. Standard mediation regression is biased; longitudinal g-methods or interventional effects may be required.
+
+### Precision variables and instruments
+DAGs identify variables required for bias control but do not always dictate variables useful for precision. Distinguish a **valid adjustment set** from the **statistically efficient set** within valid options.
+
+### Unmeasured nodes
+Do not omit a node because it was not measured. DAGs represent the causal world, not the columns available in the dataset. Mark unmeasured variables explicitly; that makes residual confounding visible rather than silently assumed away.
+
+### DAG falsification limits
+A DAG can imply conditional independencies testable in data, but failure to reject an implication does not prove the graph is correct. Multiple graphs can be compatible with the same observed distribution.
+
+### Selection into measurement
+Laboratory testing may depend on symptoms and clinician suspicion. Analysing only tested patients conditions on a post-exposure selection process. This is particularly important in diagnostic and electronic health-record studies.
+
+### Documentation standard
+Include the DAG, node definitions, temporal ordering, minimally sufficient set and rationale in the analysis plan. If the final adjustment differs from the prespecified graph, explain why.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · DAGs are tools for identification, not decorative figures
+
+A directed acyclic graph (DAG) represents assumptions about causal relations. Its value is not visual sophistication; it forces the analyst to state which variables are causes of exposure, causes of outcome, consequences of exposure, shared causes and selection variables.
+
+### Nodes, arrows and acyclicity
+
+An arrow $X\rightarrow Y$ means that $X$ is assumed to be a direct cause of $Y$ relative to the graph's level of detail. Absence of an arrow is also an assumption. A DAG cannot contain directed cycles, so feedback processes must be represented across time (for example $L_0\rightarrow A_0\rightarrow L_1\rightarrow A_1$).
+
+### Backdoor paths
+
+A backdoor path from exposure $A$ to outcome $Y$ begins with an arrow into $A$. Such paths create non-causal association. A sufficient adjustment set blocks all open backdoor paths without blocking the causal pathway of interest or opening collider paths.
+
+### Colliders
+
+If $A\rightarrow C\leftarrow U$, $C$ is a collider. The path through $C$ is naturally blocked; conditioning on $C$ or its descendants can open an association between its causes. Hospital-based samples frequently create collider structures when both exposure and disease influence admission.
+
+### Mediators
+
+If $A\rightarrow M\rightarrow Y$, adjusting for $M$ removes part of the total effect and can introduce additional bias if mediator-outcome confounding is affected by exposure. Whether to adjust depends on whether the target is a total effect, controlled direct effect, natural/interventional direct effect or something else.
+
+### Minimal sufficient adjustment sets
+
+There may be several sufficient sets. A minimal set blocks confounding without unnecessary variables. More adjustment is not always safer. Variables that only predict exposure can worsen positivity and precision; colliders can create bias; mediators change the estimand.
+
+### M-bias and practical judgement
+
+Theoretical structures exist where adjustment for a pre-exposure variable introduces bias. In practice, concern should be proportional to plausible causal structure and effect size. DAGs do not replace substantive knowledge; they organise it.
+
+### Selection bias on a DAG
+
+Introduce a selection node $S$ representing entry or remaining in the analysed sample. Conditioning on $S=1$ can create associations if selection is caused by exposure/outcome or their causes. Loss to follow-up, complete-case analysis and conditioning on testing can all be framed this way.
+
+### Measurement nodes
+
+The recorded variable $A^*$ is not always the causal exposure $A$. Explicitly representing measurement error can reveal pathways that ordinary adjustment diagrams omit. The same is true for outcome misclassification and mismeasured confounders.
+
+### From DAG to estimand
+
+A DAG can identify a covariate set for total-effect estimation, but it does not choose the effect measure, time horizon or target population. Start with the estimand; use the DAG to ask whether the effect is identifiable from measured variables.
+
+### SWIGs and counterfactual graphs
+
+Single-world intervention graphs (SWIGs) split treatment nodes into observed and intervened components and connect graphical assumptions directly to counterfactual independencies. They are useful for advanced identification arguments but require comfort with potential outcomes.
+
+### Worked example
+
+Consider socioeconomic position $L$, vaccination $A$, infection $Y$ and health-service use $H$. If $L\rightarrow A$, $L\rightarrow H$, and $H\rightarrow Y$ through exposure opportunities or care, then $L$ and/or $H$ may be needed depending on the exact structure. If vaccination itself changes later healthcare use, post-vaccination $H$ is no longer a simple baseline confounder. Time ordering changes the adjustment strategy.
+
+### MSc standard
+
+Draw a DAG from substantive knowledge, identify at least one sufficient adjustment set, explain why mediators/colliders are excluded, and translate the set into an analysis plan.
+
+### PhD standard
+
+Defend missing arrows, selection mechanisms and measurement structures; consider time-indexed DAGs or SWIGs; and distinguish graphical identification from empirical estimator performance.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 5](week-05.qmd)
+
+[Week 7 →](week-07.qmd)
+:::

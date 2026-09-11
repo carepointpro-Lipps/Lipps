@@ -1,0 +1,48 @@
+---
+title: ""
+pagetitle: "Epidemiology II — Advanced Epidemiologic Methods and Causal Inference | LIPPS"
+description: "A 12-week advanced graduate course in epidemiologic analysis, causal inference, survival methods, bias analysis and target-trial emulation."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · ADVANCED EPIDEMIOLOGY · 12 WEEKS
+:::
+# Epidemiology II
+## Advanced Epidemiologic Methods and Causal Inference
+
+Move from identifying bias to specifying estimands, identifying causal effects, fitting defensible models and testing how conclusions change when assumptions are weakened.
+
+<span class="lipps-chip">MSc Epidemiology</span> <span class="lipps-chip">PhD preparation</span> <span class="lipps-chip">R laboratories</span> <span class="lipps-chip">Causal inference</span>
+:::
+::: {.lipps-section}
+## Entry standard
+This course assumes competence in disease-frequency measures, cohort/case-control/cross-sectional designs, bias and confounding, basic regression and R. It is designed to follow [Epidemiology I](epidemiology.qmd), not replace it.
+
+The goal is not to turn causal inference into a collection of recipes. The learner should be able to state the target estimand, identify the assumptions required to estimate it, choose an analysis that corresponds to that estimand, and explain how violations would affect interpretation.
+:::
+::: {.lipps-section}
+## The 12-week sequence
+<div class="lipps-week-grid">
+<div class="lipps-week"><span>01</span><div><h3>Estimands and Counterfactual Reasoning</h3><p>Potential outcomes, target populations, intervention strategies, time zero and identification.</p><a href="epidemiology-ii/week-01.qmd"><strong>Start Week 1 →</strong></a></div></div>
+<div class="lipps-week"><span>02</span><div><h3>Standardisation and Confounding Adjustment</h3><p>Stratification, outcome regression, g-computation and population-average effects.</p><a href="epidemiology-ii/week-02.qmd"><strong>Start Week 2 →</strong></a></div></div>
+<div class="lipps-week"><span>03</span><div><h3>Regression Models for Epidemiologic Data</h3><p>Logistic, log-binomial, robust Poisson and count models; conditional versus marginal interpretation.</p><a href="epidemiology-ii/week-03.qmd"><strong>Start Week 3 →</strong></a></div></div>
+<div class="lipps-week"><span>04</span><div><h3>Advanced Case-Control Methods</h3><p>Risk-set sampling, matching, conditional logistic regression, nested case-control and case-cohort designs.</p><a href="epidemiology-ii/week-04.qmd"><strong>Start Week 4 →</strong></a></div></div>
+<div class="lipps-week"><span>05</span><div><h3>Survival and Longitudinal Epidemiology</h3><p>Kaplan-Meier, Cox models, competing risks, recurrent events and time-dependent covariates.</p><a href="epidemiology-ii/week-05.qmd"><strong>Start Week 5 →</strong></a></div></div>
+<div class="lipps-week"><span>06</span><div><h3>DAGs and Identification</h3><p>Backdoor paths, colliders, mediators, selection diagrams and minimally sufficient adjustment sets.</p><a href="epidemiology-ii/week-06.qmd"><strong>Start Week 6 →</strong></a></div></div>
+<div class="lipps-week"><span>07</span><div><h3>G-formula, Propensity Scores and IP Weighting</h3><p>Different estimators of the same causal contrast and the diagnostics each requires.</p><a href="epidemiology-ii/week-07.qmd"><strong>Start Week 7 →</strong></a></div></div>
+<div class="lipps-week"><span>08</span><div><h3>Time-varying Treatment and Confounding</h3><p>Treatment-confounder feedback, marginal structural models, censoring weights and sustained strategies.</p><a href="epidemiology-ii/week-08.qmd"><strong>Start Week 8 →</strong></a></div></div>
+<div class="lipps-week"><span>09</span><div><h3>Interaction, Mediation and Heterogeneous Effects</h3><p>Additive and multiplicative interaction, effect heterogeneity, controlled and natural effects, assumptions.</p><a href="epidemiology-ii/week-09.qmd"><strong>Start Week 9 →</strong></a></div></div>
+<div class="lipps-week"><span>10</span><div><h3>Missing Data, Measurement Error and Quantitative Bias Analysis</h3><p>Missingness mechanisms, imputation, probabilistic bias analysis and sensitivity parameters.</p><a href="epidemiology-ii/week-10.qmd"><strong>Start Week 10 →</strong></a></div></div>
+<div class="lipps-week"><span>11</span><div><h3>Quasi-experiments and Target-Trial Emulation</h3><p>Difference-in-differences, interrupted time series, regression discontinuity, IVs and observational trial emulation.</p><a href="epidemiology-ii/week-11.qmd"><strong>Start Week 11 →</strong></a></div></div>
+<div class="lipps-week"><span>12</span><div><h3>Transportability, Triangulation and Defensible Causal Claims</h3><p>Generalising effects, sensitivity analysis, negative controls, triangulation and transparent claims.</p><a href="epidemiology-ii/week-12.qmd"><strong>Start Week 12 →</strong></a></div></div>
+</div>
+:::
+::: {.lipps-section}
+## Assessment
+The recommended model is **15% advanced laboratory portfolio, 20% DAG/identification assignment, 25% reproducible causal analysis report, 20% target-trial protocol and 20% methods viva**. A learner should not pass the course by MCQ performance alone.
+
+[Advanced assessment blueprint →](epidemiology-ii/assessment.qmd)  
+[Core readings →](epidemiology-ii/core-readings.qmd)  
+[Advanced R labs →](epidemiology-ii/labs/index.qmd)
+:::

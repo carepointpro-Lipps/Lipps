@@ -1,0 +1,36 @@
+---
+title: ""
+pagetitle: "Epidemiology II Core Readings | LIPPS"
+description: "Advanced causal inference and epidemiologic methods readings for Epidemiology II."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+EPIDEMIOLOGY II · READINGS
+:::
+# Core readings
+## Read methods to understand assumptions, not to collect citations.
+:::
+::: {.lipps-section}
+## Essential
+- Hernán MA, Robins JM. *Causal Inference: What If*. Use Part I for causal effects, exchangeability, positivity and DAG logic; Part II for standardisation, IP weighting and g-methods; Part III for longitudinal treatment strategies.
+- Lash TL, VanderWeele TJ, Haneuse S, Rothman KJ, eds. *Modern Epidemiology*, 4th ed. Use as a reference for design, selection, confounding, measurement error and advanced effect interpretation.
+- Current STROBE guidance for transparent reporting of observational studies.
+- CONSORT 2025 for randomised-trial reporting; it supersedes CONSORT 2010.
+- STARD 2015 for diagnostic-accuracy studies.
+:::
+::: {.lipps-section}
+## Target-trial and longitudinal causal inference
+Read target-trial emulation papers alongside practical examples. Focus on eligibility, treatment strategies, assignment, time zero, follow-up, outcome, estimand and analysis—not on treating the phrase “target trial” as a quality label.
+:::
+::: {.lipps-section}
+## Reading discipline
+For each methods paper, record:
+1. the causal estimand;
+2. identification assumptions;
+3. estimator;
+4. required data structure;
+5. diagnostics;
+6. common violations;
+7. what sensitivity analysis would be informative.
+:::

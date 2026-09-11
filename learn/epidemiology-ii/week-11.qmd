@@ -1,0 +1,225 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 11 — Quasi-experiments and Target-Trial Emulation | LIPPS"
+description: "Advanced graduate epidemiology: Use design features to strengthen causal inference when randomisation is unavailable."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 11
+:::
+# Quasi-experiments and Target-Trial Emulation
+## Use design features to strengthen causal inference when randomisation is unavailable.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · Observational data do not become trial-like just because propensity scores are used
+Design comes before adjustment. Quasi-experimental methods exploit assignment rules, timing or natural variation that can make counterfactual comparisons more credible.
+:::
+::: {.lipps-section}
+## LEARN 1 · Difference-in-differences
+Difference-in-differences compares outcome changes in treated and comparison groups. The key assumption is that, absent treatment, trends would have evolved similarly.
+
+Use multiple pre-treatment periods to examine trend plausibility. Modern DiD methods are needed when treatment timing varies and effects are heterogeneous; conventional two-way fixed-effects models can produce unintuitive weighted averages.
+:::
+::: {.lipps-section}
+## LEARN 2 · Interrupted time series
+Interrupted time series estimates changes in level and trend after an intervention while using the pre-intervention series as a counterfactual trajectory. Model seasonality, autocorrelation and concurrent events. Controlled interrupted time series adds a comparison series when available.
+:::
+::: {.lipps-section}
+## LEARN 3 · Regression discontinuity
+When treatment eligibility changes sharply at a cutoff, units just above and below the threshold may be comparable. The effect is local to the cutoff. Check for manipulation of the running variable, continuity of covariates and sensitivity to bandwidth and functional form.
+:::
+::: {.lipps-section}
+## LEARN 4 · Instrumental variables
+A valid instrument influences treatment, is independent of unmeasured causes of the outcome, and affects the outcome only through treatment. Under additional monotonicity assumptions, IV methods can estimate a local average treatment effect among compliers.
+
+Instrument validity is primarily a substantive argument; strong first-stage association alone is insufficient.
+:::
+::: {.lipps-section}
+## LEARN 5 · Target-trial emulation
+Specify the hypothetical trial before analysing observational data:
+
+1. eligibility criteria;
+2. treatment strategies;
+3. assignment procedure;
+4. start and end of follow-up;
+5. outcome;
+6. causal contrast;
+7. analysis plan.
+
+Then emulate each component as closely as data permit. This structure helps prevent immortal-time bias, prevalent-user bias and ambiguous treatment definitions.
+:::
+::: {.lipps-section}
+## LEARN 6 · New-user active-comparator designs
+In pharmacoepidemiology, comparing new users of treatment A with new users of an alternative treatment for the same indication can improve exchangeability and align time zero better than comparing prevalent users with non-users.
+:::
+::: {.lipps-section}
+## WORKED EXAMPLE · Vaccine policy
+Suppose a vaccine is introduced in some districts earlier than others. A naïve post-introduction comparison is confounded by district differences. A stronger design might combine pre/post data, matched comparison districts and explicit trend assessment. If individual eligibility and vaccination dates are available, a target-trial emulation may be possible.
+:::
+::: {.lipps-section}
+## PHD EXTENSION
+Advanced target-trial emulations address grace periods, sustained treatment, competing events, cloning/censoring/weighting and sequential trial emulation. The framework clarifies design but does not guarantee exchangeability.
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Design quasi-experiments as carefully as trials
+### Difference-in-differences event studies
+With staggered intervention timing, estimate event-time effects relative to treatment adoption rather than relying on a single post indicator. Plot pre-treatment coefficients to assess trend plausibility and post-treatment dynamics.
+
+Modern estimators group units by treatment cohort to avoid problematic weighting that can occur in conventional two-way fixed-effects models when effects vary over time.
+
+### Controlled interrupted time series
+Add a comparison series unaffected by the intervention but exposed to similar secular forces. This improves protection against coincident national trends. Still assess whether the comparison itself experienced different shocks.
+
+### Regression discontinuity diagnostics
+Before estimating an RD effect:
+- plot outcome against the running variable;
+- test for density manipulation near the cutoff;
+- inspect covariate continuity;
+- choose bandwidth transparently;
+- compare local linear specifications;
+- report the effect as local to the threshold.
+
+### Instrument strength and weak instruments
+A weak instrument produces unstable estimates and magnifies bias. Report first-stage strength but do not confuse strength with validity. An invalid strong instrument is worse than a weak valid one.
+
+### Target-trial specification table
+For observational emulation, create a table with columns **Protocol component**, **Ideal trial**, **Available data**, **Emulation rule**, **Remaining deviation**. This makes compromises visible.
+
+### Time zero alignment
+Many observational biases are time-zero problems:
+- eligibility measured before exposure classification;
+- covariates measured after treatment begins;
+- treatment assignment defined using future exposure;
+- follow-up beginning at different times by group.
+
+Fix these in design before modelling.
+
+### Sequential target trials
+When eligibility recurs over time, each eligible person-time can initiate a new emulated trial. Pool sequential trials and use appropriate weighting/standard errors. This increases information but requires careful treatment of repeated participation.
+
+### Active comparator
+Choose a comparator with the same indication when possible. Comparing two plausible treatment choices can reduce confounding by healthcare-seeking and indication compared with treated-versus-untreated contrasts.
+
+### Falsification analyses
+Before claiming a quasi-experimental effect, test outcomes that should not respond at the intervention date, placebo intervention dates or unaffected subgroups where appropriate. These do not prove validity but can reveal implausible patterns.
+
+### Doctoral extension · Synthetic controls
+When one or few units receive an intervention, synthetic-control methods construct a weighted combination of untreated units that reproduces the pre-intervention trajectory. Inference and robustness require careful donor-pool selection and placebo analyses.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · When quasi-experimental assumptions break
+### DiD and anticipation
+If facilities change behaviour before official intervention start because they know rollout is coming, the pre-period is contaminated. Redefine treatment timing or model anticipation windows.
+
+### Spillovers
+Comparison areas may be affected by the intervention through patient movement, media or neighbouring policy. This violates no-interference assumptions and can attenuate or distort estimates.
+
+### Concurrent shocks
+A national drug shortage beginning at the same time as an intervention can mimic an intervention effect. Controlled series and negative-control outcomes can help diagnose this.
+
+### RD manipulation
+If clinicians can manipulate the running variable to cross an eligibility threshold, units around the cutoff are no longer quasi-random. Inspect density and institutional rules.
+
+### IV exclusion restriction
+Distance to facility may affect outcome through access to other services, violating exclusion. Physician prescribing preference may correlate with quality of care. Instruments require deep institutional knowledge.
+
+### Target-trial data sufficiency
+A database may lack exact eligibility dates, treatment start, reasons for treatment or time-varying confounders. Do not force target-trial language onto data that cannot emulate key protocol components.
+
+### Protocol deviations table
+For each target-trial component, classify emulation quality as **close**, **approximate**, or **unavailable** and describe likely bias. This is more informative than a generic limitations paragraph.
+
+### Estimating policy effects
+Quasi-experiments often estimate local effects tied to a threshold, treated region or rollout period. Avoid transporting them automatically to populations far from the assignment mechanism.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · Strong observational inference starts by designing the comparison
+
+Quasi-experimental methods are valuable because they seek sources of variation that make treatment groups more comparable **by design**, rather than relying entirely on statistical adjustment after exposure has occurred.
+
+### Difference-in-differences estimand
+
+For two groups and two periods, the basic DiD contrast is:
+
+$$[E(Y_{post}\mid G=1)-E(Y_{pre}\mid G=1)]-[E(Y_{post}\mid G=0)-E(Y_{pre}\mid G=0)].$$
+
+The critical identifying assumption is parallel untreated trends, not equality of baseline outcome levels. Multiple pre-periods help assess plausibility but cannot prove what post-treatment counterfactual trends would have been.
+
+### Staggered adoption
+
+When units adopt intervention at different times and treatment effects vary, conventional two-way fixed-effects estimators can combine comparisons with negative or unintuitive weights, including already-treated groups acting as controls. Use cohort/time-specific estimators designed for staggered treatment.
+
+### Interrupted time series
+
+Segmented regression may model level and slope changes:
+
+$$Y_t=\beta_0+\beta_1t+\beta_2I_t+\beta_3(t\times I_t)+\epsilon_t.$$
+
+Account for seasonality, autocorrelation, nonlinearity and changes in measurement. The intervention date should be substantively justified, and a controlled series can help distinguish the intervention from coincident shocks.
+
+### Regression discontinuity
+
+Sharp RD identifies a local effect when treatment changes deterministically at a cutoff; fuzzy RD uses the cutoff as an instrument when treatment probability jumps but compliance is imperfect. Use local polynomial methods, report bandwidth choices and inspect manipulation around the threshold.
+
+### Instrumental variables
+
+A valid IV requires relevance, independence from unmeasured outcome causes, and exclusion of pathways to outcome other than through treatment. Under monotonicity, a binary IV often identifies a local average treatment effect among compliers. The estimand may not generalise to always-takers, never-takers or other populations.
+
+### Target-trial emulation protocol
+
+Specify eligibility, treatment strategies, assignment procedure, time zero, follow-up, outcome, causal contrast and analysis. Then map each ideal component to observable data. This reveals where observational emulation deviates from the trial question.
+
+### New-user active-comparator design
+
+Restricting to people initiating alternative treatments for the same indication can reduce confounding by disease severity, healthcare access and treatment indication. Align covariate assessment before initiation and follow from a common time zero.
+
+### Grace periods and adherence
+
+A protocol allowing treatment initiation within 30 days cannot classify exposure using future information without care. Clone-censor-weight or sequential-trial approaches can emulate strategies with grace periods and sustained adherence.
+
+### Emulating intention-to-treat and per-protocol effects
+
+Observational data can target an assignment-like effect based on initiation strategy or a sustained-treatment effect. The latter requires adjustment for post-baseline adherence and censoring processes. Clearly distinguish them.
+
+### Falsification and robustness
+
+Use negative-control outcomes, placebo intervention dates, alternative comparison groups, bandwidths, donor pools or pre-trend windows as design-specific stress tests. Robustness across arbitrary specifications is less meaningful than robustness across scientifically plausible alternatives.
+
+### MSc standard
+
+Construct and analyse a simple DiD or interrupted-time-series study, articulate its identifying assumptions and perform at least two design-specific diagnostics.
+
+### PhD standard
+
+Handle staggered adoption, local estimands, weak instruments or complex target-trial strategies; explicitly map protocol deviations; and justify why the quasi-experimental variation plausibly identifies the stated causal effect.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 10](week-10.qmd)
+
+[Week 12 →](week-12.qmd)
+:::

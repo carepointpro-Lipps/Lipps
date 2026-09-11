@@ -1,0 +1,218 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 9 — Interaction, Mediation and Heterogeneous Effects | LIPPS"
+description: "Advanced graduate epidemiology: Decompose variation in effects without turning subgroup analyses into a search for significance."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 09
+:::
+# Interaction, Mediation and Heterogeneous Effects
+## Decompose variation in effects without turning subgroup analyses into a search for significance.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · “The effect was significant in women but not men” is not an interaction test
+Effect heterogeneity requires comparing effects, not comparing p-values. It also requires specifying the scale on which heterogeneity matters.
+:::
+::: {.lipps-section}
+## LEARN 1 · Additive and multiplicative interaction
+For binary exposures $A$ and $B$, additive interaction asks whether their joint excess risk differs from the sum of individual excess risks. One measure is the relative excess risk due to interaction (RERI):
+
+$$RERI=RR_{11}-RR_{10}-RR_{01}+1.$$
+
+Multiplicative interaction asks whether the joint relative effect differs from the product of separate relative effects.
+
+Public-health planning often benefits from additive interaction because it corresponds more directly to excess cases.
+:::
+::: {.lipps-section}
+## LEARN 2 · Effect-measure modification
+Effect modification is a property of the chosen measure and population. A treatment may have a constant relative effect but larger absolute benefit in higher-risk groups.
+
+Report stratum-specific absolute and relative effects with confidence intervals. Avoid dichotomising continuous modifiers without strong justification.
+:::
+::: {.lipps-section}
+## LEARN 3 · Mediation questions
+If treatment $A$ affects mediator $M$, which affects outcome $Y$, several estimands are possible:
+
+- total effect of $A$;
+- controlled direct effect fixing $M$ to a specified value;
+- natural direct and indirect effects comparing mediator values that would arise under different exposure states;
+- interventional analogues that may require less cross-world interpretation.
+
+Each estimand answers a different scientific question.
+:::
+::: {.lipps-section}
+## LEARN 4 · Mediator-outcome confounding
+Natural direct and indirect effects require strong assumptions about confounding of the exposure-outcome, exposure-mediator and mediator-outcome relationships. Exposure-induced mediator-outcome confounders create additional complexity.
+
+Therefore, “adjusting for the mediator and comparing coefficients” is not a general mediation analysis.
+:::
+::: {.lipps-section}
+## LEARN 5 · Heterogeneous treatment effects and multiplicity
+Exploring many subgroups creates false-positive findings and unstable estimates. Prespecify important modifiers, use shrinkage or hierarchical approaches where appropriate, and distinguish exploratory heterogeneity from confirmatory evidence.
+:::
+::: {.lipps-section}
+## PHD EXTENSION
+Modern heterogeneous-treatment-effect methods include causal forests and Bayesian hierarchical models. These methods can discover complex effect variation but still rely on identification assumptions and require careful external validation.
+:::
+::: {.lipps-section}
+## APPLY
+Using one intervention, specify a total-effect question, a mediation question and an effect-modification question. For each, define the estimand and explain why the same regression model cannot answer all three automatically.
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Separate heterogeneity from mediation
+Suppose a community intervention reduces 1-year hypertension risk. You observe larger absolute benefit in older adults and hypothesise that medication adherence mediates part of the effect.
+
+These are two different questions.
+
+### Effect modification analysis
+Estimate standardised risks under intervention/control within prespecified age strata. Report both risk differences and risk ratios. If baseline risk is higher in older adults, absolute benefit can be larger even when the relative effect is constant.
+
+A formal interaction contrast on the additive scale can be estimated by standardised risks rather than relying solely on product terms.
+
+### RERI
+For binary exposure $A$ and modifier $B$ with a causal interpretation:
+
+$$RERI=RR_{11}-RR_{10}-RR_{01}+1.$$
+
+RERI > 0 suggests positive interaction on the additive scale relative to the reference group, under assumptions. Confidence intervals require appropriate delta-method, bootstrap or model-based calculations.
+
+### Mediation DAG
+Draw $A\rightarrow M\rightarrow Y$, with baseline confounders of each relation. Decide whether any mediator-outcome confounder is itself affected by exposure. If yes, conventional natural-effect mediation formulas can fail.
+
+### Controlled direct effect
+Compare $Y^{a,m}$ under two exposure levels while fixing mediator $M$ to a specified value $m$. This may be policy-relevant if the mediator could actually be controlled.
+
+### Natural effects
+Natural direct effects compare exposure while setting the mediator to the value it would naturally take under a specified exposure state. These estimands rely on stronger cross-world assumptions and can be difficult to interpret for non-manipulable mediators.
+
+### Interventional effects
+Stochastic/interventional mediation effects replace individual-level natural mediator values with draws from mediator distributions, sometimes avoiding the most problematic cross-world interpretation.
+
+### Avoiding subgroup fallacies
+A significant effect in subgroup A and non-significant effect in subgroup B does not prove heterogeneity. Test the contrast directly and report confidence intervals for subgroup effects.
+
+### Multiplicity and prior plausibility
+If 20 modifiers are tested, some “interactions” will appear by chance. Prespecify a small set grounded in biology, social theory or implementation logic. Treat post-hoc subgroup findings as exploratory unless replicated.
+
+### Doctoral extension · Principal stratification
+When post-treatment events such as survival determine whether an outcome is defined, principal-stratification estimands compare latent groups defined by potential values of the post-treatment variable. These methods are conceptually powerful but often weakly identified without strong assumptions.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · Choosing the scale that matters
+### Additive scale for impact
+If treatment reduces risk from 30% to 20% in group A and from 3% to 2% in group B, both have RR≈0.67 but risk differences of −10 and −1 percentage points. Resource allocation may prioritise group A because more events are preventable.
+
+### Multiplicative scale for etiologic comparison
+Relative effects can be useful when comparing across populations with different baseline risks. But homogeneity on a multiplicative scale does not imply homogeneity on the additive scale.
+
+### Standardised interaction
+Fit a flexible outcome model with treatment, modifier and interaction, then predict counterfactual risks in each modifier stratum. Compute additive and multiplicative contrasts from predictions rather than relying solely on raw regression product terms.
+
+### Continuous modifiers
+Avoid median splits. Estimate treatment effects across meaningful values of a continuous modifier using interaction splines or stratified standardisation, with simultaneous confidence bands if many points are shown.
+
+### Mediation and timing
+Mediator measurement must occur after exposure and before outcome, and mediator-outcome confounders must be measured at the correct time. Cross-sectional mediator data cannot establish temporal mediation merely because software decomposes coefficients.
+
+### Proportion mediated
+The “proportion mediated” can be unstable or nonsensical when direct and indirect effects have opposite signs or total effects are near zero. Report component effects and scales rather than relying on one percentage.
+
+### Policy mediation
+Sometimes the useful question is not “how much is mediated?” but “what would happen if we intervened on the mediator distribution?” Interventional mediation estimands can align better with realistic policy interventions.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · Effect heterogeneity, interaction and mediation answer different scientific questions
+
+Epidemiologists often use “interaction” loosely. At graduate level distinguish at least three ideas: statistical interaction in a chosen model, effect-measure modification across strata, and causal mechanisms involving joint interventions.
+
+### Additive interaction
+
+For two binary exposures $A$ and $B$, additive interaction can be examined through risk differences. The relative excess risk due to interaction (RERI) is:
+
+$$RERI = RR_{11}-RR_{10}-RR_{01}+1.$$
+
+A positive RERI indicates more joint effect on the risk-difference scale than expected from adding the individual excess risks. The attributable proportion due to interaction and synergy index provide related summaries.
+
+### Multiplicative interaction
+
+A product term in a log-link model tests departure from multiplicativity of risks/rates; in logistic regression it tests multiplicativity of odds. Presence or absence of interaction can differ by scale. Therefore “there is no interaction” is incomplete without naming the scale.
+
+### Effect-measure modification
+
+Report stratum-specific estimates with uncertainty rather than only a product-term p-value. A clinically important contrast may exist despite weak statistical evidence for heterogeneity, particularly in small subgroups.
+
+### Heterogeneity and transportability
+
+Effect modifiers help explain why an intervention may perform differently across populations. Pre-specifying plausible modifiers can improve interpretation and transportability. Post hoc subgroup searches create multiplicity and selective-reporting problems.
+
+### Mediation questions
+
+If $A$ affects mediator $M$, which affects $Y$, one may ask about total effects, controlled direct effects, natural direct/indirect effects or interventional analogues. These estimands require different assumptions and have different policy interpretations.
+
+### Controlled direct effect
+
+A controlled direct effect compares outcomes under different exposure values while fixing the mediator to a particular value for everyone:
+
+$$E(Y^{1,m})-E(Y^{0,m}).$$
+
+This may correspond to an intervention if setting $M=m$ is meaningful.
+
+### Natural effects
+
+Natural direct and indirect effects compare mediator values that would naturally arise under different exposure states. They require strong cross-world assumptions and are problematic when exposure-induced mediator-outcome confounders exist.
+
+### Interventional indirect effects
+
+Interventional approaches replace person-specific cross-world mediator values with draws from mediator distributions under interventions. They can be more policy-relevant and avoid some cross-world constructs, though identification assumptions remain substantial.
+
+### Mediation versus adjustment
+
+Do not “control for the mediator” in a standard regression and label the change in exposure coefficient the mediated effect. Nonlinearity, exposure-mediator interaction and mediator-outcome confounding make this decomposition generally invalid.
+
+### Heterogeneous treatment effects with machine learning
+
+Causal forests and related methods can explore treatment-effect heterogeneity, but apparent subgroup variation can be noisy and non-replicable. Separate discovery from confirmation, use honest sample splitting/cross-fitting, and evaluate whether heterogeneity produces actionable treatment rules.
+
+### Equity
+
+Effect heterogeneity across sex, socioeconomic position, geography or vulnerability should not be interpreted without considering differential baseline risk. A constant relative effect can generate much larger absolute benefit in high-risk groups. Equity decisions often require absolute effects and access constraints, not only subgroup interaction p-values.
+
+### MSc standard
+
+Estimate and interpret interaction on additive and multiplicative scales, produce stratum-specific absolute effects, and distinguish effect modification from confounding.
+
+### PhD standard
+
+Define mediation estimands formally, defend identification assumptions, address exposure-induced mediator-outcome confounding, and separate confirmatory heterogeneity analyses from exploratory subgroup discovery.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 8](week-08.qmd)
+
+[Week 10 →](week-10.qmd)
+:::

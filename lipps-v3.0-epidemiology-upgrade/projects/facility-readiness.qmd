@@ -1,0 +1,63 @@
+---
+title: "Health-Facility Readiness Under Incomplete Information"
+description: "A LIPPS model analytical project."
+---
+
+# Health-Facility Readiness Under Incomplete Information
+
+<span class="lipps-chip">Health systems</span>
+<span class="lipps-chip">Facility assessment</span>
+<span class="lipps-chip">R</span>
+
+## 1. Context
+
+Emergency and fragile settings often require rapid decisions from facility-assessment data collected under imperfect access, incomplete records and uneven operational conditions.
+
+## 2. Research question
+
+How should facility readiness be estimated and communicated when the observed assessment data are incomplete and the decision-maker still needs an operational answer?
+
+## 3. Data
+
+**Demonstration status:** synthetic/public teaching data only in the LIPPS starter. Replace with a documented, ethically appropriate dataset before publication.
+
+## 4. Analysis plan
+
+1. Audit completeness and structural missingness.
+2. Define indicator denominators explicitly.
+3. Construct domain-level readiness measures.
+4. Quantify uncertainty rather than present scores as exact truths.
+5. Conduct sensitivity analyses around important assumptions.
+6. Interpret operationally rather than rank facilities mechanically.
+
+## 5. Data quality
+
+Document missing fields, duplicate facilities, impossible combinations, unavailable services and any distinction between *not assessed*, *not available* and *not functioning*.
+
+## 6. Methods
+
+See [Survey Analysis Strategies](../methods/survey-analysis.qmd) and [Data Quality](../methods/data-quality.qmd).
+
+## 7. Code
+
+```r
+# Demonstration placeholder for the project analysis.
+# Replace with a reproducible script/notebook when the teaching dataset is added.
+```
+
+## 8. Results
+
+This starter deliberately contains no invented empirical results. The published project should generate all tables and figures from the accompanying dataset and code.
+
+## 9. Interpretation
+
+Readiness estimates should be interpreted against the assessment frame, indicator definitions, missingness and operational context.
+
+::: {.lipps-callout}
+**What could fool us?**  
+A readiness score may appear objective while embedding arbitrary indicator weights, missing-data assumptions, incomparable denominators or unequal access to facilities during data collection.
+:::
+
+## 10. Reproducibility
+
+Published projects should state dataset provenance, licence, software versions, code repository, last update and citation information.

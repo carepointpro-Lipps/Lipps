@@ -1,0 +1,214 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 4 — Advanced Case-Control Methods | LIPPS"
+description: "Advanced graduate epidemiology: Control sampling is part of the estimator, not a recruitment detail."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 04
+:::
+# Advanced Case-Control Methods
+## Control sampling is part of the estimator, not a recruitment detail.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · The case-control odds ratio has several possible targets
+Case-control efficiency comes from sampling outcomes unevenly. That efficiency is paid for with a more complicated link between sample quantities and population quantities.
+:::
+::: {.lipps-section}
+## LEARN 1 · Incidence-density sampling
+For each incident case, sample controls from individuals still at risk when the case occurs. Controls represent person-time at risk and may later become cases. Under this design, the exposure odds ratio estimates the incidence-rate ratio without requiring a rare disease.
+
+This is often the cleanest conceptual foundation for nested case-control studies.
+:::
+::: {.lipps-section}
+## LEARN 2 · Cumulative-incidence sampling
+Controls are selected from people who remain non-cases over the risk period. The sample odds ratio approximates a risk ratio when disease is uncommon, but the approximation worsens as the outcome becomes common.
+
+Do not teach the “rare disease assumption” as a universal property of case-control studies; it is tied to the sampling scheme and target measure.
+:::
+::: {.lipps-section}
+## LEARN 3 · Matching and conditional logistic regression
+Individual matching creates sets of cases and controls sharing matching variables. Conditional logistic regression conditions on the matched set, comparing exposure within sets. The matching variables may disappear from the regression coefficient table because their effect is conditioned out.
+
+Matching can improve efficiency, but overmatching can erase useful exposure variation or make controls too similar to cases on variables related to exposure but not confounding.
+:::
+::: {.lipps-section}
+## LEARN 4 · Case-cohort designs
+A case-cohort study samples a subcohort from the baseline cohort and adds cases occurring outside the subcohort. Because the same subcohort can support analyses of several outcomes, case-cohort designs are attractive when biomarkers are expensive.
+
+Weighted Cox-type methods account for the sampling. The analysis should preserve the cohort's risk-set logic rather than treating the data as an ordinary cross-sectional case-control sample.
+:::
+::: {.lipps-section}
+## LEARN 5 · Selection bias through control choice
+Hospital controls can be convenient but dangerous if the exposure influences the diseases that bring controls to hospital. Friend controls may be too similar to cases in socioeconomic or behavioural exposures. Population controls can have lower participation.
+
+The correct control group is determined by the source population and case-ascertainment mechanism, not convenience.
+:::
+::: {.lipps-section}
+## LEARN 6 · Exposure measurement after diagnosis
+Recall bias is one form of differential measurement. More generally, disease status can influence record completeness, interviewer probing, biomarker availability or willingness to report sensitive exposures.
+
+Prefer exposure data recorded before disease when feasible. If measurement differs by case status, conduct quantitative sensitivity analysis rather than only mention “recall bias.”
+:::
+::: {.lipps-section}
+## R LAB
+[Advanced Lab 2 — Risk-set sampling and matched analysis →](labs/lab-02-case-control.qmd)
+:::
+::: {.lipps-section}
+## PHD EXTENSION
+Outcome-dependent sampling appears beyond classic case-control studies, including two-phase designs, case-cohort sampling and nested biomarker studies. Efficient analysis requires understanding the sampling probabilities and the full cohort quantity being targeted.
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Design the control sampling before calculating an OR
+Imagine a dynamic cohort of 100,000 adults followed for myocardial infarction. Stored blood samples make biomarker assays expensive. Rather than assay everyone, investigators identify all incident MIs and sample controls.
+
+### Incidence-density design
+For each MI at time $t$, sample controls from people still at risk at $t$. Matching might be on age, sex and calendar time. A participant can be sampled as a control more than once and later become a case.
+
+This surprises learners but is correct because controls sample **person-time**, not “people who will never become cases.” Excluding future cases from control eligibility would distort the risk set.
+
+### Conditional logistic model
+With matched risk sets:
+
+```r
+library(survival)
+fit <- clogit(case ~ biomarker + smoking + strata(risk_set), data=ncc)
+```
+
+The model compares exposures within risk sets. The estimated odds ratio corresponds to an incidence-rate ratio under the incidence-density sampling design.
+
+### Matching ratio and efficiency
+Adding controls per case increases precision, but returns diminish after roughly four controls per case in many simple settings. The optimal ratio depends on assay costs, case numbers, matching constraints and covariate distributions.
+
+### Countermatching
+Sometimes controls are deliberately sampled to increase exposure variation within matched sets. This can improve efficiency for rare exposures but requires analysis weights based on the sampling scheme.
+
+### Case-cohort analysis
+A random subcohort sampled at baseline can serve as the comparison group for multiple outcomes. Cases outside the subcohort are added. Because risk sets are reconstructed with sampling weights, standard Cox analysis without weights is not appropriate.
+
+### Two-phase designs
+Expensive covariates can be measured in a phase-2 subsample selected using cheap phase-1 variables. Inverse-probability weighting or likelihood methods use known sampling probabilities to recover target estimates. This design is powerful when biospecimens or genotyping are expensive.
+
+### Control selection and transportability
+If controls come from a hospital, the source population may be “people who would attend that hospital if they developed the disease,” not the geographic community. Make the catchment logic explicit.
+
+### Bias analysis for exposure misclassification
+Suppose self-reported occupational exposure has sensitivity 0.75 among cases and 0.60 among controls, with specificity 0.90 in both. This differential sensitivity can bias the OR away from or toward the null. A probabilistic bias analysis can sample sensitivity/specificity values from plausible distributions and correct the 2×2 table repeatedly.
+
+### Doctoral extension · Semiparametric efficiency
+Nested case-control and case-cohort designs can be analysed using weighted partial likelihood, pseudo-likelihood and augmented estimators. Methodological work asks how to use phase-1 information efficiently while retaining validity under the sampling design.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · Sampling fractions and what can be recovered
+Case-control data contain deliberately distorted case fractions. Therefore intercepts and absolute risks from an ordinary logistic model do not represent population risks unless the sampling fractions are known and incorporated.
+
+### Recovering absolute risk
+If the source cohort and case sampling fractions are known, weighted or likelihood-based methods can recover absolute risks. In a nested design, cohort incidence information may be available separately. Do not estimate PPV, prevalence or risk directly from a case-control sample whose case fraction was investigator-controlled.
+
+### Incidence-density OR
+Under risk-set sampling, the odds of exposure among sampled cases versus controls correspond to the rate ratio because controls sample the person-time distribution of exposure. This is why no rare-disease approximation is required.
+
+### Matching variable paradox
+A matched design forces case and control distributions to be similar on matching factors by construction. The association between a matching variable and disease cannot usually be estimated from the matched sample in the ordinary way. Matching variables were selected for design efficiency/confounding control, not substantive estimation.
+
+### Frequency matching
+If cases and controls are frequency matched on age groups rather than individual sets, analyse with unconditional logistic regression while adjusting for the matching factor. Do not automatically use conditional logistic regression.
+
+### Selection diagrams for hospital controls
+Draw hospitalisation $H$ as a selection node. If exposure affects another condition that causes hospitalisation and outcome status also affects hospitalisation, conditioning on $H=1$ can create collider bias. This is the graphical explanation for classic Berkson-type bias.
+
+### Rare exposure designs
+Case-control studies can be efficient for rare outcomes, while cohort studies are efficient for rare exposures. If the exposure is rare, control sampling may yield too few exposed controls unless special sampling or large source populations are used.
+
+### Etiologic heterogeneity
+When disease subtypes have different causes, combining them into one case definition can dilute associations. Polytomous logistic regression or subtype-specific case-control analyses may reveal etiologic heterogeneity, but multiple testing and subtype misclassification must be considered.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · The case-control odds ratio is created by the sampling design
+
+Advanced case-control methods become much easier when controls are understood as a **sample of the exposure experience of the source population**, not simply “people without disease.” The validity of the odds ratio depends on how that sampling was performed.
+
+### Source population principle
+
+Every case should arise from a population in which the selected controls could have become cases. A hospital control with a condition caused by the exposure of interest may distort exposure prevalence; neighbourhood controls may overmatch environmental or socioeconomic exposures; friend controls may overmatch behaviour. Convenience is not a design justification.
+
+### Three major control-sampling schemes
+
+**Cumulative-incidence sampling** selects controls from people who remain non-cases at the end of follow-up. The resulting exposure odds ratio approximates the risk ratio under the rare-disease condition.
+
+**Incidence-density (risk-set) sampling** selects controls from those at risk at the time each case occurs. A person can serve as a control before later becoming a case. The odds ratio estimates the incidence-rate ratio without requiring the disease to be rare.
+
+**Case-base (case-cohort) sampling** selects controls from the source cohort at baseline, regardless of future case status. With appropriate analysis, this design can estimate risk or rate contrasts and enables one subcohort to support multiple outcomes.
+
+### Matching
+
+Matching can improve efficiency and control design-stage confounding, but it creates an analysis obligation. Individually matched studies generally require conditional logistic regression or equivalent matched analysis. Matching does not remove confounding automatically; the matching factor has been conditioned on by design.
+
+Overmatching can occur when controls are matched on a variable closely related to exposure but not a true confounder, reducing exposure contrast. Matching on a mediator or collider can introduce bias.
+
+### Conditional logistic regression
+
+For matched sets, the conditional likelihood compares exposure configurations within risk sets or matched strata and removes nuisance intercepts. The resulting coefficient estimates a matched conditional odds ratio. Understand what was conditioned on before interpreting it.
+
+### Nested case-control studies
+
+Within a defined cohort, risk-set sampling can drastically reduce biomarker assay costs while preserving valid rate-ratio estimation. Sampling fractions may vary, and specialised weighting may be needed for some estimands or secondary analyses.
+
+### Case-cohort studies
+
+A random subcohort is selected at baseline, and all incident cases are included. Because cases outside the subcohort enter when they fail, standard Cox partial likelihood variance formulas are not automatically valid. Prentice-type weights and robust variance methods are commonly used.
+
+### Case-crossover design
+
+Each case serves as their own control by comparing exposure during a hazard window with exposure during control windows. Time-invariant confounders are controlled by design, but time trends, carryover and selection of control periods are critical. This is suited to transient exposures with acute effects, not stable chronic exposures.
+
+### Recall and information bias
+
+Case-control studies are especially vulnerable when exposure ascertainment occurs after disease. Differential recall, interviewer probing and proxy reporting can create spurious associations. Objective exposure records, blinded interviewers and identical instruments reduce—but do not eliminate—these concerns.
+
+### Selection diagrams
+
+At doctoral level, draw the mechanism by which inclusion into the case-control sample depends on disease, exposure and covariates. Conditioning on sample inclusion can induce associations. The sampling design must be incorporated into the causal argument.
+
+### Worked example
+
+Suppose 500 incident TB cases arise from a cohort of healthcare workers. For each case, four controls are sampled from workers still at risk on the diagnosis date. The exposure is recent work in a high-risk ward. Because controls are selected by incidence-density sampling, the matched OR estimates the rate ratio even if TB is not rare. Calling it a “rare disease approximation” would misunderstand the design.
+
+### MSc standard
+
+Given a case-control paper, identify the source population, control-sampling scheme, matching structure, estimand and appropriate regression analysis.
+
+### PhD standard
+
+Derive why risk-set sampling yields a rate-ratio estimate, critique selection mechanisms using causal diagrams, and specify weighted/robust analyses for nested case-control or case-cohort designs.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 3](week-03.qmd)
+
+[Week 5 →](week-05.qmd)
+:::

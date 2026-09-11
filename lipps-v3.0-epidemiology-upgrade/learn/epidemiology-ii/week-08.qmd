@@ -1,0 +1,217 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 8 — Time-varying Treatment and Confounding | LIPPS"
+description: "Advanced graduate epidemiology: When prior treatment changes future confounders, standard regression can adjust away part of the effect."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 08
+:::
+# Time-varying Treatment and Confounding
+## When prior treatment changes future confounders, standard regression can adjust away part of the effect.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · Treatment-confounder feedback
+Consider ART adherence measured monthly. Prior adherence improves viral load; viral load predicts future adherence and mortality. Viral load is therefore both a predictor of subsequent treatment and a consequence of prior treatment.
+
+A conventional model that adjusts for current viral load can block part of the prior treatment effect while trying to control confounding of later treatment.
+:::
+::: {.lipps-section}
+## LEARN 1 · Longitudinal treatment strategies
+The estimand may compare sustained strategies such as “remain ≥95% adherent each month” versus “remain <95% adherent.” A strategy must define what happens over time, not just baseline exposure.
+
+Time-varying regimes can also be dynamic: initiate treatment when a biomarker crosses a threshold rather than at a fixed calendar time.
+:::
+::: {.lipps-section}
+## LEARN 2 · Sequential exchangeability
+Longitudinal causal inference requires exchangeability at each treatment decision conditional on prior measured history. This is stronger than baseline adjustment because all important time-varying determinants of subsequent treatment and outcome must be measured appropriately.
+:::
+::: {.lipps-section}
+## LEARN 3 · Marginal structural models
+Inverse-probability weights can reweight each observed treatment history by the inverse probability of receiving that history given past covariates. The weighted pseudo-population aims to break the association between time-varying confounders and subsequent treatment while preserving pathways from earlier treatment through those confounders.
+
+A simple stabilised treatment weight is a product over time:
+
+$$SW_i=\prod_t \frac{P(A_t\mid \bar A_{t-1})}{P(A_t\mid \bar A_{t-1},\bar L_t)}.$$
+
+Censoring weights can be multiplied in when loss to follow-up is informative conditional on measured history.
+:::
+::: {.lipps-section}
+## LEARN 4 · Diagnostics
+Longitudinal weights can become extremely variable. Examine weight distributions, means, tails, positivity by time, effective sample size and sensitivity to truncation.
+
+A model that converges is not evidence that the weighted population is credible.
+:::
+::: {.lipps-section}
+## LEARN 5 · Cloning, censoring and weighting
+When sustained strategies are indistinguishable at baseline, one target-trial emulation approach clones eligible individuals into each strategy, censors a clone when it deviates from that strategy, and weights to adjust for informative artificial censoring.
+
+This approach makes treatment strategies explicit but depends heavily on data granularity and measured time-varying confounding.
+:::
+::: {.lipps-section}
+## PHD EXTENSION
+The parametric longitudinal g-formula and structural nested models are alternative g-methods. Understanding why ordinary conditioning fails in treatment-confounder feedback is more important than memorising one estimator.
+:::
+::: {.lipps-section}
+## R LAB
+[Advanced Lab 5 — Time-varying treatment and marginal structural weighting →](labs/lab-05-msm.qmd)
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Construct longitudinal weights without hiding instability
+Suppose patients are observed monthly for six months with adherence $A_t$, viral load $L_t$ and death $Y$. Prior adherence affects future viral load, and viral load affects subsequent adherence.
+
+### Long format
+Each participant contributes one row per decision time with baseline covariates, prior treatment history, current time-varying covariates, current treatment and censoring status.
+
+### Denominator treatment model
+Estimate the probability of observed treatment given full measured history:
+
+$$P(A_t\mid \bar A_{t-1}, \bar L_t, V).$$
+
+### Numerator treatment model
+For stabilised weights, estimate a reduced probability often conditional on baseline variables and prior treatment:
+
+$$P(A_t\mid \bar A_{t-1}, V).$$
+
+Multiply numerator/denominator ratios over time.
+
+### Censoring weights
+Similarly estimate the probability of remaining uncensored. Multiply treatment and censoring weights to create a pseudo-population where treatment/censoring are independent of measured time-varying prognostic factors conditional on the model.
+
+### Positivity diagnostics over time
+A treatment strategy may be feasible at baseline but impossible later for certain histories. For example, severely ill patients may always intensify treatment. Inspect predicted treatment probabilities at each time and by clinically important histories.
+
+### Weight truncation
+Truncating weights at the 1st/99th percentiles can reduce variance but introduces bias and changes the effective target. Report untruncated and several truncation thresholds as sensitivity analyses.
+
+### Marginal structural model
+A weighted pooled logistic model can approximate a discrete-time hazard model and estimate survival under treatment histories. The MSM should represent the causal contrast of interest; it is not simply the model used to calculate weights.
+
+### Artificial censoring
+For sustained strategy comparisons, participants can be censored when their observed history deviates from the strategy. This censoring is informative by construction, so censoring weights are essential.
+
+### Grace-period example
+Compare “initiate therapy within 30 days” versus “do not initiate within 30 days.” At baseline, both strategies can be compatible with the same observed patient. Cloning assigns a copy to each strategy, then copies are censored when their data become incompatible. Weighted follow-up approximates randomised assignment to dynamic strategies under assumptions.
+
+### Doctoral extension · Parametric g-formula
+Instead of weighting, model the full longitudinal data process, simulate covariate and outcome trajectories under each intervention, and average outcomes. This requires models for time-varying covariates and outcomes and can be sensitive to cumulative model misspecification.
+
+### Research discipline
+Longitudinal causal analyses should include a timeline diagram. If readers cannot see when covariates, treatment, censoring and outcomes occur, they cannot assess the identification strategy.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · Data requirements for longitudinal causal inference
+Longitudinal g-methods fail when the data are too coarse to represent treatment decisions. Monthly treatment data paired with annual confounder measurements may not capture the temporal ordering needed for sequential exchangeability.
+
+### Measurement interval
+Choose intervals short enough that treatment, confounders and outcomes can be ordered. If adherence changes weekly but viral load is measured every six months, the analysis must acknowledge substantial latent history.
+
+### Time-varying confounder measurement
+Variables used in treatment models should be measured before the treatment decision they predict. Using a lab value recorded after dispensing can accidentally adjust for a treatment consequence.
+
+### Weight-model specification
+Include flexible time functions, prior treatment and relevant interactions. Fit separate models by time when treatment mechanisms change sharply, or include treatment-time interactions.
+
+### Censoring due to death
+Death may be an outcome, competing event or censoring event depending on the estimand. Do not mechanically create inverse-probability censoring weights for death without defining the hypothetical intervention that makes death censorable.
+
+### Artificial censoring and adherence
+In per-protocol analyses, censor participants when they deviate from the assigned strategy. This creates informative censoring because deviation is related to prognosis; censoring weights attempt to restore comparability.
+
+### Weight explosion
+Products of many probabilities can generate extreme longitudinal weights. Stabilisation, truncation and strategy simplification can help. If positivity is fundamentally absent, redefine the question.
+
+### Simulation as a design tool
+Before analysing real data, simulate a simplified longitudinal process with known treatment effects and confounding. Verify that your code recovers the known effect under correct models and fails in expected ways under misspecification. This is excellent doctoral practice.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · Longitudinal causal inference is about treatment-confounder feedback
+
+The hardest longitudinal problem occurs when a time-varying variable both predicts future treatment and predicts outcome **and has itself been affected by earlier treatment**. Standard regression adjustment can then block part of the treatment effect or induce selection bias.
+
+### Longitudinal notation
+
+Let $A_t$ denote treatment at time $t$, $L_t$ time-varying covariates and $Y$ the final outcome. A treatment history is $\bar A_t=(A_0,\ldots,A_t)$ and covariate history is $\bar L_t$. A sustained strategy might be “treat at every visit while eligible” or a dynamic rule such as “initiate treatment when CD4 < 350.”
+
+### Sequential exchangeability
+
+Longitudinal identification requires that, at each time, treatment assignment is conditionally exchangeable given measured history:
+
+$$Y^{\bar a}\perp A_t\mid \bar A_{t-1},\bar L_t.$$
+
+This is stronger than baseline exchangeability because confounders must be adequately measured over time.
+
+### Why standard time-updated regression can fail
+
+Suppose earlier ART improves CD4 count, CD4 predicts later ART continuation, and CD4 also predicts mortality. Adjusting for current CD4 in an ordinary outcome model conditions on a mediator of earlier ART while trying to control confounding of later ART. This mixes two roles and can bias sustained-treatment effects.
+
+### Marginal structural models
+
+Inverse-probability treatment weights create a pseudo-population in which treatment history is independent of measured time-varying confounder history. A stabilised weight is the product of treatment probabilities across visits, with simpler history in the numerator and full confounder history in the denominator.
+
+$$SW_i=\prod_t \frac{P(A_t\mid \bar A_{t-1},L_0)}{P(A_t\mid \bar A_{t-1},\bar L_t)}.$$
+
+Censoring weights can be multiplied in when loss to follow-up is informative under measured history.
+
+### Weight instability over time
+
+Products of probabilities generate more extreme weights as follow-up grows. Diagnose weights at each interval and cumulatively. Consider model flexibility, pooling sparse treatment categories, redefining strategies or restricting the target population before resorting to arbitrary truncation.
+
+### Parametric g-formula
+
+The longitudinal g-formula models the joint evolution of time-varying covariates and outcome, then simulates outcomes under specified treatment strategies. It is powerful for dynamic regimes but depends on correct models for multiple components of the data-generating process.
+
+### Structural nested models and g-estimation
+
+Structural nested models parameterise causal effects of treatment “blips” over time and use g-estimation to exploit treatment-assignment models. They are less commonly taught operationally but are important in the theory of time-varying treatment.
+
+### Cloning, censoring and weighting
+
+For strategies defined by future adherence (for example “initiate within 30 days” versus “do not initiate”), each person may initially be compatible with multiple strategies. Clone records into each compatible strategy, censor a clone when observed behaviour deviates, and weight for that artificial censoring. This is widely used in target-trial emulations of sustained strategies.
+
+### Grace periods
+
+A treatment strategy may permit initiation within a window. Naïvely classifying people based on whether they initiate during the window creates immortal-time bias. Proper emulation treats strategy assignment and follow-up carefully, often using cloning/censoring/weighting or sequential trials.
+
+### Time-varying effect modification
+
+Treatment effects may differ by evolving disease state. Dynamic treatment regimes make such state-dependence explicit. The scientific question becomes: which treatment rule performs best for which evolving history?
+
+### MSc standard
+
+Recognise treatment-confounder feedback, build a person-period dataset, estimate stabilised weights and fit a simple marginal structural model.
+
+### PhD standard
+
+Formally state sequential exchangeability and positivity, evaluate dynamic interventions, use longitudinal g-formula or MSMs appropriately, and justify handling of grace periods, artificial censoring and competing events.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 7](week-07.qmd)
+
+[Week 9 →](week-09.qmd)
+:::

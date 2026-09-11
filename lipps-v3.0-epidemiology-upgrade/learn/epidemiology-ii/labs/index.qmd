@@ -1,0 +1,23 @@
+---
+title: ""
+pagetitle: "Epidemiology II R Laboratories | LIPPS"
+description: "Six advanced reproducible R laboratories in causal and epidemiologic methods."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+EPIDEMIOLOGY II · R LABS
+:::
+# Advanced R laboratories
+## Every lab begins with an estimand and ends with an assumption check.
+:::
+::: {.lipps-section}
+1. [Standardisation and the parametric g-formula](lab-01-gformula.qmd)
+2. [Risk-set sampling and matched analysis](lab-02-case-control.qmd)
+3. [Survival, competing risks and time-updated covariates](lab-03-survival.qmd)
+4. [G-computation, propensity weighting and balance](lab-04-adjustment.qmd)
+5. [Time-varying treatment and marginal structural weighting](lab-05-msm.qmd)
+6. [Missing data and quantitative bias analysis](lab-06-bias.qmd)
+
+Datasets are fictional teaching data. Code shown on the public site is display-only so GitHub Pages does not require an R runtime during render.
+:::

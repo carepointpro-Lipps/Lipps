@@ -1,0 +1,264 @@
+---
+title: ""
+pagetitle: "Epidemiology II Week 3 — Regression Models for Epidemiologic Data | LIPPS"
+description: "Advanced graduate epidemiology: Choose a model because of the outcome and estimand, not because it is familiar."
+page-layout: full
+---
+::: {.lipps-course-hero}
+::: {.lipps-eyebrow}
+LIPPS LEARN · EPIDEMIOLOGY II · WEEK 03
+:::
+# Regression Models for Epidemiologic Data
+## Choose a model because of the outcome and estimand, not because it is familiar.
+<span class="lipps-chip">Advanced</span> <span class="lipps-chip">MSc / PhD</span> <span class="lipps-chip">Causal methods</span>
+:::
+::: {.lipps-section}
+## Learning outcomes
+By the end of this week, you should be able to:
+
+1. state the target estimand in population, strategy, outcome, time and effect-measure terms;
+2. identify the assumptions required for the week's method;
+3. distinguish identification from estimation;
+4. select an analysis that corresponds to the scientific question;
+5. interpret absolute and relative effects with uncertainty;
+6. diagnose at least one failure mode using subject-matter reasoning;
+7. implement or outline a reproducible analysis in R; and
+8. defend what the resulting estimate can and cannot support.
+
+:::
+::: {.lipps-section}
+## ORIENT · Regression is a language for conditional distributions
+Regression models summarise how an outcome distribution changes with exposures and covariates. They do not automatically produce causal effects, and the same scientific question may be estimated with several models.
+:::
+::: {.lipps-section}
+## LEARN 1 · Binary outcomes
+Logistic regression models the log odds:
+
+$$\log\left(\frac{p}{1-p}\right)=\beta_0+\beta_1A+\beta_2L.$$
+
+It is numerically stable and widely available, but the exponentiated coefficient is an odds ratio. For common outcomes, this may be less intuitive than a risk ratio.
+
+Log-binomial regression models $\log(p)$ directly but can have convergence problems. Modified Poisson regression with robust standard errors is commonly used to estimate prevalence or risk ratios for binary outcomes, provided interpretation fits the design.
+:::
+::: {.lipps-section}
+## LEARN 2 · Counts and person-time
+Poisson regression is natural for event counts with an exposure-time offset:
+
+$$\log(E[Y])=\beta_0+\beta_1A+\log(person\ time).$$
+
+Exponentiated coefficients are rate ratios. Overdispersion—variance larger than the Poisson mean—can require robust variance or negative-binomial models.
+
+A rate model should not be used simply because person-time appears in the dataset. Confirm that the event process and follow-up structure fit the estimand.
+:::
+::: {.lipps-section}
+## LEARN 3 · Continuous exposures should not be categorised casually
+Splitting age, BMI or blood pressure into arbitrary categories discards information and creates artificial thresholds. Model non-linear relationships using transformations, polynomial terms or restricted cubic splines where appropriate.
+
+Always plot the fitted relationship. A p-value for a linear term can hide meaningful non-linearity.
+:::
+::: {.lipps-section}
+## LEARN 4 · Interaction and model scale
+An interaction term in a logit or log model represents interaction on that model's scale. Public-health interaction on the additive risk scale may require post-estimation standardisation even when the fitted model is logistic.
+
+Do not equate “product term p<0.05” with evidence of biological interaction.
+:::
+::: {.lipps-section}
+## LEARN 5 · Prediction is not causal adjustment
+A model selected for prediction may include colliders, mediators and proxies that improve predictive accuracy while damaging causal interpretation. Conversely, a causal adjustment model may deliberately include a weak predictor because it blocks confounding.
+
+State whether the goal is prediction, description or causal estimation before selecting variables and performance metrics.
+:::
+::: {.lipps-section}
+## LEARN 6 · Robustness and diagnostics
+Model checking should address:
+
+- functional form;
+- influential observations;
+- sparse cells and separation;
+- overdispersion for counts;
+- correlation or clustering;
+- calibration for prediction models;
+- whether standard errors reflect the sampling design;
+- whether uncertainty from imputation or weighting is propagated.
+:::
+::: {.lipps-section}
+## PHD EXTENSION · Regression as a nuisance model
+In modern causal inference, regression may serve as a **nuisance model** used to estimate components of a causal functional rather than being the scientific estimand itself. This perspective motivates standardisation, doubly robust estimators and targeted learning.
+:::
+::: {.lipps-section}
+## APPLY
+Take a binary outcome from your own research. Write three analysis plans: logistic regression for a conditional odds ratio, modified Poisson for an adjusted risk ratio, and outcome-regression standardisation for a marginal risk difference. Explain which best matches the substantive question.
+:::
+::: {.lipps-section}
+## METHODS WORKSHOP · Build an epidemiological analysis strategy
+A graduate analysis should be planned as a sequence, not as a single final model.
+
+### 1. Describe the data-generating structure
+Identify outcome type, repeated measures, person-time, clusters, sampling weights, censoring and the temporal order of covariates. A binary variable named `outcome` does not imply logistic regression if it represents repeated events or a fixed-horizon risk derived from time-to-event data.
+
+### 2. Inspect distributions and coding
+Continuous covariates should be plotted before modelling. Check impossible values, heaping, truncation and whether transformations reflect measurement scales. If BMI has a U-shaped relation with outcome, a linear coefficient is inadequate.
+
+### 3. Decide the estimand and model family
+Examples:
+
+| Outcome | Common model | Natural effect parameter |
+|---|---|---|
+| Binary risk | logistic | odds ratio |
+| Binary risk | log-binomial / robust Poisson | risk ratio |
+| Count with person-time | Poisson / negative binomial | rate ratio |
+| Continuous | linear / robust alternatives | mean difference |
+| Time to event | Cox | hazard ratio |
+| Repeated binary | GEE / mixed model | population-average / cluster-specific parameter |
+
+The model's natural parameter may still not be the final scientific estimand; post-estimation standardisation can transform it.
+
+### 4. Functional form
+Restricted cubic splines can represent smooth non-linearity without arbitrary categories. Choose knot locations transparently and avoid interpreting each spline coefficient. Plot predicted relationships with uncertainty.
+
+```r
+library(splines)
+fit <- glm(y ~ a + ns(age, df=4) + sex + severity,
+           family=binomial(), data=d)
+```
+
+### 5. Correlated observations
+If patients are nested within facilities, ordinary model standard errors assume independence incorrectly. Options include cluster-robust standard errors, GEE for population-average effects, or mixed models for cluster-specific effects and variance components.
+
+The choice changes interpretation. An odds ratio from a random-intercept logistic model is conditional on the random effect and need not equal a population-average GEE odds ratio.
+
+### 6. Separation and sparse data
+When some exposure-covariate combinations perfectly predict the outcome, logistic maximum likelihood can diverge. Penalised methods such as Firth regression can reduce small-sample bias, but they do not solve lack of causal positivity.
+
+### 7. Overdispersion
+For count models, compare observed variance with the Poisson assumption and inspect residuals. Negative-binomial models introduce an overdispersion parameter. Robust standard errors can correct variance misspecification while retaining the Poisson mean structure.
+
+### 8. Model selection
+Avoid stepwise p-value selection for causal models. For prediction, use cross-validation and penalisation. For causal adjustment, include variables based on the causal structure and use flexible forms where needed. Different goals require different selection principles.
+
+### 9. Multiple testing
+If dozens of exposures or subgroups are explored, false-positive risk rises. Distinguish prespecified analyses from exploratory analyses and consider multiplicity control or hierarchical shrinkage when appropriate.
+
+### 10. Reporting
+Provide enough information for reproducibility: software/version, model family/link, covariate coding, interaction terms, variance estimator, missing-data strategy, diagnostics and post-estimation method.
+
+### Doctoral extension · Estimating equations
+Many regression estimators can be understood as solutions to estimating equations. This perspective unifies robust variance, GEE and semiparametric estimation and helps distinguish model assumptions about the mean from assumptions about the full data distribution.
+:::
+
+::: {.lipps-section}
+## SEMINAR NOTES · Interpretation discipline across model families
+A model should be judged by whether its parameter and predictions answer the scientific question.
+
+### Logistic regression
+For a common outcome, an odds ratio can appear numerically farther from 1 than the corresponding risk ratio. Never write “twice the risk” when the model estimated an odds ratio of 2 unless a risk estimate was actually derived.
+
+### Robust Poisson for binary data
+Using a Poisson mean model with robust standard errors can estimate adjusted risk ratios despite binary variance misspecification. The robust variance addresses standard errors, not impossible predicted probabilities. Inspect predicted values and model fit.
+
+### Negative binomial models
+When event-count variance greatly exceeds the mean, negative binomial regression can model heterogeneity. But if overdispersion is caused by excess zeros, recurrent-event dependence or unmodelled clustering, a negative binomial fit may hide rather than explain structure.
+
+### GEE versus mixed models
+GEE estimates population-average associations and uses a working correlation structure. Mixed models include random effects and estimate cluster-specific associations. For nonlinear links, population-average and subject-specific effects differ numerically.
+
+Choose based on the scientific question: policy effects across facilities may favour population-average estimands; heterogeneity across facilities may motivate random-effects models.
+
+### Robust standard errors are not universal protection
+Sandwich estimators can protect standard errors against some model misspecification, but require enough independent clusters or observations. With few clusters, small-sample corrections or randomisation-based methods may be required.
+
+### Missing interactions
+If treatment effect varies by baseline severity and the outcome model omits treatment-by-severity interaction, standardised treatment effects may be biased even if the main-effects model seems well calibrated overall.
+
+### Reporting continuous effects
+For nonlinear exposures, report predicted risks or rates at meaningful values rather than a single coefficient. A spline model can be scientifically transparent if accompanied by a plot and clearly defined contrasts.
+
+### Avoiding table-one testing
+Do not use p-values in baseline tables to decide whether groups are “balanced.” In observational studies, baseline differences are expected; confounding depends on causal relations and effect sizes, not whether a sample difference reaches p<0.05.
+:::
+
+
+::: {.lipps-section}
+## ADVANCED SYNTHESIS · Regression is an estimation tool, not the research question
+
+Graduate epidemiology requires fluency with regression models, but methodological maturity begins when the analyst stops treating the model coefficient as automatically equivalent to the epidemiological estimand.
+
+### Linear regression
+
+For continuous outcomes, a model such as
+
+$$E(Y\mid A,L)=\beta_0+\beta_1A+\beta_2L$$
+
+may estimate an adjusted mean difference under strong modelling and causal assumptions. Check linearity, residual structure, influential observations and whether an interaction between $A$ and $L$ is scientifically expected. Heteroskedasticity affects standard errors even when the mean model is adequate.
+
+### Logistic regression
+
+For binary outcomes:
+
+$$\log\left(\frac{p}{1-p}\right)=\beta_0+\beta_1A+\beta^TL.$$
+
+Exponentiating $\beta_1$ gives a conditional odds ratio. When outcomes are common, this can differ substantially from a risk ratio. Even without confounding, the adjusted conditional OR may differ from the marginal OR because odds ratios are non-collapsible. For public-health communication, use model predictions to obtain adjusted risks, risk differences or risk ratios when those are the target quantities.
+
+### Log-binomial and modified Poisson models
+
+A log link can target risk ratios directly. Log-binomial models can face convergence problems because fitted probabilities are constrained to $[0,1]$. Modified Poisson regression with robust standard errors is widely used to estimate adjusted prevalence or risk ratios for binary outcomes. The mean-variance relationship is deliberately misspecified, so robust variance is essential.
+
+### Poisson regression and rates
+
+For event counts observed over different person-times:
+
+$$\log E(Y_i)=\beta_0+\beta_1A_i+\beta^TL_i+\log(T_i),$$
+
+where $\log(T_i)$ is an offset. Exponentiated coefficients are incidence-rate ratios. Investigate overdispersion, recurrent events and whether the assumption of a constant rate within intervals is reasonable.
+
+### Cox proportional hazards model
+
+The Cox model specifies:
+
+$$h(t\mid A,L)=h_0(t)\exp(\beta_1A+\beta^TL).$$
+
+$\exp(\beta_1)$ is a conditional hazard ratio if proportional hazards holds. Hazard ratios are not risk ratios and can be difficult to interpret causally. Report survival probabilities or restricted mean survival time when they better answer the substantive question.
+
+### Correlated data
+
+Clustered facility data, repeated measures and matched designs violate independence assumptions. Options include cluster-robust standard errors, generalised estimating equations (population-average interpretation) and mixed-effects models (cluster-specific interpretation). Choosing between them should reflect the target estimand and data-generating structure, not software familiarity.
+
+### Functional form
+
+A continuous covariate need not have a linear association with the link-scale outcome. Restricted cubic splines, fractional polynomials or principled transformation can reduce residual confounding and model misspecification. Arbitrary categorisation wastes information and creates artificial thresholds.
+
+### Interactions
+
+If effect modification is plausible, include interaction terms that correspond to the scale of interest. An interaction in a logistic model concerns multiplicativity of odds, not necessarily additivity of risks. Use predicted risks to examine interaction on clinically meaningful scales.
+
+### Missing data inside regression
+
+Complete-case analysis changes the analysed population and relies on assumptions about the missingness process. Multiple imputation can preserve information under missing-at-random assumptions if the imputation model includes appropriate predictors and reflects the analysis model. Imputation is not a generic repair for selection bias or MNAR processes.
+
+### Model diagnostics as epidemiological diagnostics
+
+Do not stop at residual plots. Ask whether estimates depend on unsupported extrapolation, a few influential clusters, separation, extreme covariate patterns, or inappropriate adjustment variables. Diagnostics should interrogate both statistical fit and causal support.
+
+### Reporting model results
+
+A graduate report should include the model family/link, covariates and rationale, handling of continuous variables, clustering/repeated measures, missing data, effect measure, uncertainty, relevant diagnostics and—where appropriate—standardised predictions. “Multivariable regression was performed” is not enough.
+
+### MSc standard
+
+Fit and interpret linear, logistic, modified Poisson and Poisson-rate models; choose the model based on outcome and estimand; produce adjusted absolute risks from regression predictions.
+
+### PhD standard
+
+Defend the estimand implied by the model, distinguish marginal from conditional effects, address nonlinearity/correlation/missingness, and show whether conclusions persist under plausible alternative modelling specifications.
+:::
+
+::: {.lipps-section}
+## DEMONSTRATE · Graduate standard
+Submit one short methods memo or reproducible analysis in which you **name the estimand first**, justify the design/estimator, report diagnostics, and state one sensitivity analysis. Marks should be lost for an unjustified causal claim even when the code is technically correct.
+:::
+::: {.lipps-section}
+## Continue
+[← Week 2](week-02.qmd)
+
+[Week 4 →](week-04.qmd)
+:::

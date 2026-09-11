@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Week 2 of LIPPS Epidemiology: ratios, proportions, rates, incidence, prevalence, mortality, natality, denominators and population-health interpretation.">
+
+<title>Week 2 — Measuring Disease Frequency and Population Health | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-week-in-one-sentence" id="toc-this-week-in-one-sentence" class="nav-link active" data-scroll-target="#this-week-in-one-sentence">This week in one sentence</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-which-district-has-more-malaria" id="toc-orient-which-district-has-more-malaria" class="nav-link" data-scroll-target="#orient-which-district-has-more-malaria">ORIENT · Which district has more malaria?</a>
+  <ul class="collapse">
+  <li><a href="#two-answers-can-both-be-correct" id="toc-two-answers-can-both-be-correct" class="nav-link" data-scroll-target="#two-answers-can-both-be-correct">Two answers can both be correct</a></li>
+  </ul></li>
+  <li><a href="#learn-1-count-ratio-proportion-and-rate-are-not-interchangeable" id="toc-learn-1-count-ratio-proportion-and-rate-are-not-interchangeable" class="nav-link" data-scroll-target="#learn-1-count-ratio-proportion-and-rate-are-not-interchangeable">LEARN 1 · Count, ratio, proportion and rate are not interchangeable</a>
+  <ul class="collapse">
+  <li><a href="#count" id="toc-count" class="nav-link" data-scroll-target="#count">Count</a></li>
+  <li><a href="#ratio" id="toc-ratio" class="nav-link" data-scroll-target="#ratio">Ratio</a></li>
+  <li><a href="#proportion" id="toc-proportion" class="nav-link" data-scroll-target="#proportion">Proportion</a></li>
+  <li><a href="#rate" id="toc-rate" class="nav-link" data-scroll-target="#rate">Rate</a></li>
+  </ul></li>
+  <li><a href="#learn-2-the-denominator-is-part-of-the-scientific-question" id="toc-learn-2-the-denominator-is-part-of-the-scientific-question" class="nav-link" data-scroll-target="#learn-2-the-denominator-is-part-of-the-scientific-question">LEARN 2 · The denominator is part of the scientific question</a>
+  <ul class="collapse">
+  <li><a href="#denominator-mismatch" id="toc-denominator-mismatch" class="nav-link" data-scroll-target="#denominator-mismatch">Denominator mismatch</a></li>
+  </ul></li>
+  <li><a href="#learn-3-incidence-proportion-the-probability-of-becoming-a-case" id="toc-learn-3-incidence-proportion-the-probability-of-becoming-a-case" class="nav-link" data-scroll-target="#learn-3-incidence-proportion-the-probability-of-becoming-a-case">LEARN 3 · Incidence proportion: the probability of becoming a case</a>
+  <ul class="collapse">
+  <li><a href="#incidence-proportion" id="toc-incidence-proportion" class="nav-link" data-scroll-target="#incidence-proportion">Incidence proportion</a></li>
+  <li><a href="#fictional-example" id="toc-fictional-example" class="nav-link" data-scroll-target="#fictional-example">Fictional example</a></li>
+  <li><a href="#what-incidence-proportion-is-not" id="toc-what-incidence-proportion-is-not" class="nav-link" data-scroll-target="#what-incidence-proportion-is-not">What incidence proportion is NOT</a></li>
+  </ul></li>
+  <li><a href="#learn-4-attack-rates-and-secondary-attack-rates" id="toc-learn-4-attack-rates-and-secondary-attack-rates" class="nav-link" data-scroll-target="#learn-4-attack-rates-and-secondary-attack-rates">LEARN 4 · Attack rates and secondary attack rates</a>
+  <ul class="collapse">
+  <li><a href="#overall-attack-rate" id="toc-overall-attack-rate" class="nav-link" data-scroll-target="#overall-attack-rate">Overall attack rate</a></li>
+  <li><a href="#exposure-specific-attack-rate" id="toc-exposure-specific-attack-rate" class="nav-link" data-scroll-target="#exposure-specific-attack-rate">Exposure-specific attack rate</a></li>
+  <li><a href="#secondary-attack-rate" id="toc-secondary-attack-rate" class="nav-link" data-scroll-target="#secondary-attack-rate">Secondary attack rate</a></li>
+  <li><a href="#fictional-example-1" id="toc-fictional-example-1" class="nav-link" data-scroll-target="#fictional-example-1">Fictional example</a></li>
+  </ul></li>
+  <li><a href="#learn-5-incidence-rate-when-follow-up-time-differs" id="toc-learn-5-incidence-rate-when-follow-up-time-differs" class="nav-link" data-scroll-target="#learn-5-incidence-rate-when-follow-up-time-differs">LEARN 5 · Incidence rate: when follow-up time differs</a>
+  <ul class="collapse">
+  <li><a href="#person-time-solves-a-different-denominator-problem" id="toc-person-time-solves-a-different-denominator-problem" class="nav-link" data-scroll-target="#person-time-solves-a-different-denominator-problem">Person-time solves a different denominator problem</a></li>
+  <li><a href="#fictional-example-2" id="toc-fictional-example-2" class="nav-link" data-scroll-target="#fictional-example-2">Fictional example</a></li>
+  <li><a href="#risk-and-rate-are-not-the-same-quantity" id="toc-risk-and-rate-are-not-the-same-quantity" class="nav-link" data-scroll-target="#risk-and-rate-are-not-the-same-quantity">Risk and rate are not the same quantity</a></li>
+  </ul></li>
+  <li><a href="#learn-6-prevalence-who-has-the-condition" id="toc-learn-6-prevalence-who-has-the-condition" class="nav-link" data-scroll-target="#learn-6-prevalence-who-has-the-condition">LEARN 6 · Prevalence: who has the condition?</a>
+  <ul class="collapse">
+  <li><a href="#point-prevalence" id="toc-point-prevalence" class="nav-link" data-scroll-target="#point-prevalence">Point prevalence</a></li>
+  <li><a href="#period-prevalence" id="toc-period-prevalence" class="nav-link" data-scroll-target="#period-prevalence">Period prevalence</a></li>
+  <li><a href="#incidence-versus-prevalence" id="toc-incidence-versus-prevalence" class="nav-link" data-scroll-target="#incidence-versus-prevalence">Incidence versus prevalence</a></li>
+  </ul></li>
+  <li><a href="#learn-7-why-high-prevalence-does-not-necessarily-mean-high-incidence" id="toc-learn-7-why-high-prevalence-does-not-necessarily-mean-high-incidence" class="nav-link" data-scroll-target="#learn-7-why-high-prevalence-does-not-necessarily-mean-high-incidence">LEARN 7 · Why high prevalence does not necessarily mean high incidence</a>
+  <ul class="collapse">
+  <li><a href="#two-diseases-same-incidence-different-prevalence" id="toc-two-diseases-same-incidence-different-prevalence" class="nav-link" data-scroll-target="#two-diseases-same-incidence-different-prevalence">Two diseases, same incidence, different prevalence</a></li>
+  </ul></li>
+  <li><a href="#learn-8-mortality-measures-death-needs-a-denominator-too" id="toc-learn-8-mortality-measures-death-needs-a-denominator-too" class="nav-link" data-scroll-target="#learn-8-mortality-measures-death-needs-a-denominator-too">LEARN 8 · Mortality measures: death needs a denominator too</a>
+  <ul class="collapse">
+  <li><a href="#crude-mortality-rate" id="toc-crude-mortality-rate" class="nav-link" data-scroll-target="#crude-mortality-rate">Crude mortality rate</a></li>
+  <li><a href="#cause-specific-mortality-rate" id="toc-cause-specific-mortality-rate" class="nav-link" data-scroll-target="#cause-specific-mortality-rate">Cause-specific mortality rate</a></li>
+  <li><a href="#age--sex--or-other-stratum-specific-mortality-rate" id="toc-age--sex--or-other-stratum-specific-mortality-rate" class="nav-link" data-scroll-target="#age--sex--or-other-stratum-specific-mortality-rate">Age-, sex- or other stratum-specific mortality rate</a></li>
+  <li><a href="#why-specificity-matters" id="toc-why-specificity-matters" class="nav-link" data-scroll-target="#why-specificity-matters">Why specificity matters</a></li>
+  </ul></li>
+  <li><a href="#learn-9-crude-rates-can-be-distorted-by-population-structure" id="toc-learn-9-crude-rates-can-be-distorted-by-population-structure" class="nav-link" data-scroll-target="#learn-9-crude-rates-can-be-distorted-by-population-structure">LEARN 9 · Crude rates can be distorted by population structure</a>
+  <ul class="collapse">
+  <li><a href="#two-approaches" id="toc-two-approaches" class="nav-link" data-scroll-target="#two-approaches">Two approaches</a></li>
+  </ul></li>
+  <li><a href="#learn-10-case-fatality-is-not-population-mortality" id="toc-learn-10-case-fatality-is-not-population-mortality" class="nav-link" data-scroll-target="#learn-10-case-fatality-is-not-population-mortality">LEARN 10 · Case fatality is not population mortality</a>
+  <ul class="collapse">
+  <li><a href="#case-fatality-measure" id="toc-case-fatality-measure" class="nav-link" data-scroll-target="#case-fatality-measure">Case-fatality measure</a></li>
+  <li><a href="#proportionate-mortality" id="toc-proportionate-mortality" class="nav-link" data-scroll-target="#proportionate-mortality">Proportionate mortality</a></li>
+  <li><a href="#three-different-questions" id="toc-three-different-questions" class="nav-link" data-scroll-target="#three-different-questions">Three different questions</a></li>
+  </ul></li>
+  <li><a href="#learn-11-maternal-neonatal-and-infant-mortality-measures" id="toc-learn-11-maternal-neonatal-and-infant-mortality-measures" class="nav-link" data-scroll-target="#learn-11-maternal-neonatal-and-infant-mortality-measures">LEARN 11 · Maternal, neonatal and infant mortality measures</a>
+  <ul class="collapse">
+  <li><a href="#neonatal-mortality" id="toc-neonatal-mortality" class="nav-link" data-scroll-target="#neonatal-mortality">Neonatal mortality</a></li>
+  <li><a href="#postneonatal-mortality" id="toc-postneonatal-mortality" class="nav-link" data-scroll-target="#postneonatal-mortality">Postneonatal mortality</a></li>
+  <li><a href="#infant-mortality" id="toc-infant-mortality" class="nav-link" data-scroll-target="#infant-mortality">Infant mortality</a></li>
+  <li><a href="#maternal-mortality-terminology-in-the-source" id="toc-maternal-mortality-terminology-in-the-source" class="nav-link" data-scroll-target="#maternal-mortality-terminology-in-the-source">Maternal mortality terminology in the source</a></li>
+  </ul></li>
+  <li><a href="#learn-12-natality-measures" id="toc-learn-12-natality-measures" class="nav-link" data-scroll-target="#learn-12-natality-measures">LEARN 12 · Natality measures</a>
+  <ul class="collapse">
+  <li><a href="#crude-birth-rate" id="toc-crude-birth-rate" class="nav-link" data-scroll-target="#crude-birth-rate">Crude birth rate</a></li>
+  <li><a href="#crude-fertility-rate" id="toc-crude-fertility-rate" class="nav-link" data-scroll-target="#crude-fertility-rate">Crude fertility rate</a></li>
+  <li><a href="#low-birth-weight-ratio" id="toc-low-birth-weight-ratio" class="nav-link" data-scroll-target="#low-birth-weight-ratio">Low-birth-weight ratio</a></li>
+  </ul></li>
+  <li><a href="#go-deeper-years-of-potential-life-lost" id="toc-go-deeper-years-of-potential-life-lost" class="nav-link" data-scroll-target="#go-deeper-years-of-potential-life-lost">GO DEEPER · Years of potential life lost</a></li>
+  <li><a href="#apply-choose-the-measure-before-calculating" id="toc-apply-choose-the-measure-before-calculating" class="nav-link" data-scroll-target="#apply-choose-the-measure-before-calculating">APPLY · Choose the measure before calculating</a>
+  <ul class="collapse">
+  <li><a href="#scenario-a-new-hypertension-diagnoses" id="toc-scenario-a-new-hypertension-diagnoses" class="nav-link" data-scroll-target="#scenario-a-new-hypertension-diagnoses">Scenario A · New hypertension diagnoses</a></li>
+  <li><a href="#scenario-b-different-follow-up-time" id="toc-scenario-b-different-follow-up-time" class="nav-link" data-scroll-target="#scenario-b-different-follow-up-time">Scenario B · Different follow-up time</a></li>
+  <li><a href="#scenario-c-burden-today" id="toc-scenario-c-burden-today" class="nav-link" data-scroll-target="#scenario-c-burden-today">Scenario C · Burden today</a></li>
+  <li><a href="#scenario-d-severity-among-cases" id="toc-scenario-d-severity-among-cases" class="nav-link" data-scroll-target="#scenario-d-severity-among-cases">Scenario D · Severity among cases</a></li>
+  <li><a href="#scenario-e-cause-among-deaths" id="toc-scenario-e-cause-among-deaths" class="nav-link" data-scroll-target="#scenario-e-cause-among-deaths">Scenario E · Cause among deaths</a></li>
+  </ul></li>
+  <li><a href="#worked-example-one-dataset-four-different-measures" id="toc-worked-example-one-dataset-four-different-measures" class="nav-link" data-scroll-target="#worked-example-one-dataset-four-different-measures">WORKED EXAMPLE · One dataset, four different measures</a>
+  <ul class="collapse">
+  <li><a href="#weekly-incidence-proportion-attack-rate" id="toc-weekly-incidence-proportion-attack-rate" class="nav-link" data-scroll-target="#weekly-incidence-proportion-attack-rate">1. Weekly incidence proportion / attack rate</a></li>
+  <li><a href="#secondary-attack-rate-among-susceptible-roommates" id="toc-secondary-attack-rate-among-susceptible-roommates" class="nav-link" data-scroll-target="#secondary-attack-rate-among-susceptible-roommates">2. Secondary attack rate among susceptible roommates</a></li>
+  <li><a href="#point-prevalence-on-friday" id="toc-point-prevalence-on-friday" class="nav-link" data-scroll-target="#point-prevalence-on-friday">3. Point prevalence on Friday</a></li>
+  <li><a href="#why-attack-rate-and-friday-prevalence-differ" id="toc-why-attack-rate-and-friday-prevalence-differ" class="nav-link" data-scroll-target="#why-attack-rate-and-friday-prevalence-differ">4. Why attack rate and Friday prevalence differ</a></li>
+  </ul></li>
+  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a>
+  <ul class="collapse">
+  <li><a href="#which-statement-best-distinguishes-a-proportion-from-a-general-ratio" id="toc-which-statement-best-distinguishes-a-proportion-from-a-general-ratio" class="nav-link" data-scroll-target="#which-statement-best-distinguishes-a-proportion-from-a-general-ratio">1. Which statement BEST distinguishes a proportion from a general ratio?</a></li>
+  <li><a href="#a-district-reports-500-tb-cases.-what-additional-information-is-most-important-for-comparing-tb-occurrence-with-another-district" id="toc-a-district-reports-500-tb-cases.-what-additional-information-is-most-important-for-comparing-tb-occurrence-with-another-district" class="nav-link" data-scroll-target="#a-district-reports-500-tb-cases.-what-additional-information-is-most-important-for-comparing-tb-occurrence-with-another-district">2. A district reports 500 TB cases. What additional information is MOST important for comparing TB occurrence with another district?</a></li>
+  <li><a href="#which-numerator-belongs-in-an-incidence-proportion" id="toc-which-numerator-belongs-in-an-incidence-proportion" class="nav-link" data-scroll-target="#which-numerator-belongs-in-an-incidence-proportion">3. Which numerator belongs in an incidence proportion?</a></li>
+  <li><a href="#twenty-new-cases-occur-during-2000-person-years.-which-measure-is-being-calculated" id="toc-twenty-new-cases-occur-during-2000-person-years.-which-measure-is-being-calculated" class="nav-link" data-scroll-target="#twenty-new-cases-occur-during-2000-person-years.-which-measure-is-being-calculated">4. Twenty new cases occur during 2,000 person-years. Which measure is being calculated?</a></li>
+  <li><a href="#which-statement-about-prevalence-is-correct" id="toc-which-statement-about-prevalence-is-correct" class="nav-link" data-scroll-target="#which-statement-about-prevalence-is-correct">5. Which statement about prevalence is correct?</a></li>
+  <li><a href="#a-chronic-condition-has-low-incidence-but-very-long-duration.-what-could-happen-to-prevalence" id="toc-a-chronic-condition-has-low-incidence-but-very-long-duration.-what-could-happen-to-prevalence" class="nav-link" data-scroll-target="#a-chronic-condition-has-low-incidence-but-very-long-duration.-what-could-happen-to-prevalence">6. A chronic condition has low incidence but very long duration. What could happen to prevalence?</a></li>
+  <li><a href="#eight-deaths-occur-among-200-identified-cases.-what-measure-is-8200-100" id="toc-eight-deaths-occur-among-200-identified-cases.-what-measure-is-8200-100" class="nav-link" data-scroll-target="#eight-deaths-occur-among-200-identified-cases.-what-measure-is-8200-100">7. Eight deaths occur among 200 identified cases. What measure is 8/200 × 100?</a></li>
+  <li><a href="#fifty-road-traffic-deaths-occur-among-500-deaths-from-all-causes.-what-does-50500-100-describe" id="toc-fifty-road-traffic-deaths-occur-among-500-deaths-from-all-causes.-what-does-50500-100-describe" class="nav-link" data-scroll-target="#fifty-road-traffic-deaths-occur-among-500-deaths-from-all-causes.-what-does-50500-100-describe">8. Fifty road-traffic deaths occur among 500 deaths from all causes. What does 50/500 × 100 describe?</a></li>
+  <li><a href="#why-might-crude-mortality-be-higher-in-one-district-even-if-its-age-specific-mortality-is-not-consistently-higher" id="toc-why-might-crude-mortality-be-higher-in-one-district-even-if-its-age-specific-mortality-is-not-consistently-higher" class="nav-link" data-scroll-target="#why-might-crude-mortality-be-higher-in-one-district-even-if-its-age-specific-mortality-is-not-consistently-higher">9. Why might crude mortality be higher in one district even if its age-specific mortality is not consistently higher?</a></li>
+  <li><a href="#which-statement-best-reflects-the-main-week-2-lesson" id="toc-which-statement-best-reflects-the-main-week-2-lesson" class="nav-link" data-scroll-target="#which-statement-best-reflects-the-main-week-2-lesson">10. Which statement BEST reflects the main Week 2 lesson?</a></li>
+  </ul></li>
+  <li><a href="#demonstrate-week-2-mastery-quiz" id="toc-demonstrate-week-2-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-2-mastery-quiz">DEMONSTRATE · Week 2 Mastery Quiz</a></li>
+  <li><a href="#summary-the-week-2-decision-tree" id="toc-summary-the-week-2-decision-tree" class="nav-link" data-scroll-target="#summary-the-week-2-decision-tree">SUMMARY · The Week 2 decision tree</a></li>
+  <li><a href="#what-moves-to-week-3" id="toc-what-moves-to-week-3" class="nav-link" data-scroll-target="#what-moves-to-week-3">What moves to Week 3</a></li>
+  <li><a href="#primary-source-used-to-build-this-lesson" id="toc-primary-source-used-to-build-this-lesson" class="nav-link" data-scroll-target="#primary-source-used-to-build-this-lesson">Primary source used to build this lesson</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY · WEEK 02</p>
+</div>
+<section id="measuring-disease-frequency-and-population-health" class="level1">
+<h1>Measuring Disease Frequency and Population Health</h1>
+<section id="the-numerator-tells-you-what-happened.-the-denominator-tells-you-what-it-means." class="level2">
+<h2 class="anchored" data-anchor-id="the-numerator-tells-you-what-happened.-the-denominator-tells-you-what-it-means.">The numerator tells you what happened. The denominator tells you what it means.</h2>
+<p>Epidemiology becomes useful when counts are placed in the population and time from which they arose. This week develops the language used to describe disease occurrence: <strong>ratios, proportions, rates, incidence, prevalence, mortality and selected population-health measures</strong>.</p>
+<p><span class="lipps-chip">Foundation</span> <span class="lipps-chip">Disease frequency</span> <span class="lipps-chip">Denominators</span> <span class="lipps-chip">Applied calculations</span></p>
+</section>
+</section>
+</div>
+<section id="this-week-in-one-sentence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="this-week-in-one-sentence">This week in one sentence</h2>
+<p><strong>Choose the numerator, choose the correct population and time denominator, calculate the measure, and interpret exactly what that measure describes.</strong></p>
+<div class="lipps-callout">
+<p><strong>The LIPPS lens</strong><br>
+Most errors in introductory epidemiology are not arithmetic errors. They are <strong>denominator errors, population errors, time errors or interpretation errors</strong>. A perfectly calculated fraction can still answer the wrong question.</p>
+</div>
+</section>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of Week 2, you should be able to:</p>
+<ol type="1">
+<li>distinguish a <strong>count, ratio, proportion and rate</strong>;</li>
+<li>identify the appropriate <strong>numerator, denominator, population at risk and time period</strong> for a frequency measure;</li>
+<li>calculate and interpret <strong>incidence proportion (risk)</strong>;</li>
+<li>calculate and interpret <strong>attack rates and secondary attack rates</strong> in outbreak settings;</li>
+<li>calculate and interpret <strong>incidence rates using person-time</strong>;</li>
+<li>calculate and distinguish <strong>point and period prevalence</strong>;</li>
+<li>explain conceptually why prevalence is influenced by both <strong>incidence and duration</strong>;</li>
+<li>calculate and distinguish major <strong>mortality measures</strong> including crude, cause-specific and stratum-specific mortality;</li>
+<li>distinguish <strong>case fatality</strong> and <strong>proportionate mortality</strong> from population mortality rates;</li>
+<li>interpret selected maternal, neonatal, infant and natality measures; and</li>
+<li>recognise when population structure makes a crude comparison potentially misleading.</li>
+</ol>
+</section>
+<section id="orient-which-district-has-more-malaria" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-which-district-has-more-malaria">ORIENT · Which district has more malaria?</h2>
+<p>Consider this fictional teaching scenario.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>District</th>
+<th style="text-align: right;">New malaria cases in June</th>
+<th style="text-align: right;">Population</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">450,000</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">120,000</td>
+</tr>
+</tbody>
+</table>
+<p>District A has the larger <strong>count</strong>.</p>
+<p>But if the question is, <strong>“Where was new malaria occurrence higher relative to population size?”</strong>, the count alone cannot answer it.</p>
+<p>For a simplified population comparison:</p>
+<ul>
+<li>District A: 900 / 450,000 = <strong>2.0 per 1,000</strong></li>
+<li>District B: 600 / 120,000 = <strong>5.0 per 1,000</strong></li>
+</ul>
+<p>So District A has more reported new cases, while District B has the higher occurrence relative to its population.</p>
+<section id="two-answers-can-both-be-correct" class="level3">
+<h3 class="anchored" data-anchor-id="two-answers-can-both-be-correct">Two answers can both be correct</h3>
+<p><strong>Where is the larger workload?</strong> Possibly District A.<br>
+<strong>Where is disease occurrence higher relative to population size?</strong> District B.</p>
+<p>The measure must match the decision.</p>
+</section>
+</section>
+<section id="learn-1-count-ratio-proportion-and-rate-are-not-interchangeable" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-count-ratio-proportion-and-rate-are-not-interchangeable">LEARN 1 · Count, ratio, proportion and rate are not interchangeable</h2>
+<section id="count" class="level3">
+<h3 class="anchored" data-anchor-id="count">Count</h3>
+<p>A <strong>count</strong> is simply the number of events observed: 120 measles cases, 18 maternal deaths, 450 positive tests.</p>
+<p>Counts matter for planning beds, medicines, vaccines, staff and laboratory supplies. But counts alone usually do not permit fair comparisons between populations of different sizes.</p>
+</section>
+<section id="ratio" class="level3">
+<h3 class="anchored" data-anchor-id="ratio">Ratio</h3>
+<p>A <strong>ratio</strong> compares one quantity with another. The numerator does not have to be part of the denominator.</p>
+<p>For example, if a facility has 30 nurses and 10 clinical officers, the nurse-to-clinical-officer ratio is <strong>3:1</strong>.</p>
+</section>
+<section id="proportion" class="level3">
+<h3 class="anchored" data-anchor-id="proportion">Proportion</h3>
+<p>A <strong>proportion</strong> is a ratio in which the numerator is included within the denominator.</p>
+<p>If 240 of 800 surveyed adults have hypertension:</p>
+<p><strong>240 / 800 = 0.30 = 30%</strong>.</p>
+<p>All 240 people in the numerator are part of the 800 people in the denominator.</p>
+</section>
+<section id="rate" class="level3">
+<h3 class="anchored" data-anchor-id="rate">Rate</h3>
+<p>The attached CDC text defines a rate as a measure of how frequently an event occurs in a defined population over a specified period. The term <strong>rate</strong> is also used loosely in epidemiology for some measures that are mathematically proportions, such as attack rate and case-fatality rate.</p>
+<div class="lipps-callout">
+<p><strong>Do not argue from the label alone. Inspect the fraction.</strong><br>
+Ask whether the numerator is contained within the denominator, whether time is incorporated, and what population the denominator represents.</p>
+</div>
+</section>
+</section>
+<section id="learn-2-the-denominator-is-part-of-the-scientific-question" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-the-denominator-is-part-of-the-scientific-question">LEARN 2 · The denominator is part of the scientific question</h2>
+<p>A denominator should represent the population capable of contributing to the numerator.</p>
+<p>If the numerator is <strong>new ovarian cancer cases</strong>, a denominator including people who cannot develop ovarian cancer would not represent the true population at risk. The CDC lesson uses this kind of example to show that denominators are conceptual decisions, not merely numbers taken from a census.</p>
+<p>Before calculating any epidemiological measure, ask:</p>
+<ol type="1">
+<li><strong>Who could have become a case?</strong></li>
+<li><strong>Who was actually under observation?</strong></li>
+<li><strong>At what time were they at risk?</strong></li>
+<li><strong>Does the denominator correspond to the numerator?</strong></li>
+<li><strong>Is this denominator complete and comparable across groups?</strong></li>
+</ol>
+<section id="denominator-mismatch" class="level3">
+<h3 class="anchored" data-anchor-id="denominator-mismatch">Denominator mismatch</h3>
+<p>Suppose a hospital reports 300 positive malaria tests among 1,000 people tested. That gives <strong>test positivity of 30% among those tested</strong>.</p>
+<p>It does <strong>not</strong> automatically give malaria prevalence in the district, because the denominator is people tested, not the district population or a representative sample of it.</p>
+<p>The arithmetic may be flawless while the epidemiological interpretation is wrong.</p>
+</section>
+</section>
+<section id="learn-3-incidence-proportion-the-probability-of-becoming-a-case" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-incidence-proportion-the-probability-of-becoming-a-case">LEARN 3 · Incidence proportion: the probability of becoming a case</h2>
+<p><strong>Incidence</strong> concerns <strong>new events</strong>.</p>
+<p>The attached CDC lesson distinguishes two common incidence measures: <strong>incidence proportion</strong> and <strong>incidence rate</strong>.</p>
+<section id="incidence-proportion" class="level3">
+<h3 class="anchored" data-anchor-id="incidence-proportion">Incidence proportion</h3>
+<p>Incidence proportion is the proportion of an initially disease-free population that develops the health event during a specified period.</p>
+<p>[ = ]</p>
+<p>It may also be called <strong>risk</strong>, <strong>cumulative incidence</strong>, or—particularly during an outbreak—<strong>attack rate</strong>.</p>
+</section>
+<section id="fictional-example" class="level3">
+<h3 class="anchored" data-anchor-id="fictional-example">Fictional example</h3>
+<p>A cohort begins with 2,000 adults without hypertension. During one year, 140 develop hypertension.</p>
+<p>[ 140 / 2,000 = 0.07 = 7% ]</p>
+<p>Interpretation:</p>
+<blockquote class="blockquote">
+<p><strong>Seven percent of the initially hypertension-free cohort developed hypertension during the one-year period.</strong></p>
+</blockquote>
+<p>Notice what the measure requires:</p>
+<ul>
+<li>new cases;</li>
+<li>an initially disease-free population;</li>
+<li>a defined period;</li>
+<li>a denominator representing people who could become new cases.</li>
+</ul>
+</section>
+<section id="what-incidence-proportion-is-not" class="level3">
+<h3 class="anchored" data-anchor-id="what-incidence-proportion-is-not">What incidence proportion is NOT</h3>
+<p>It is not the proportion who have hypertension at the end of the year. Some participants may already have had hypertension before follow-up, and those belong in a prevalence calculation rather than the new-case numerator.</p>
+</section>
+</section>
+<section id="learn-4-attack-rates-and-secondary-attack-rates" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-attack-rates-and-secondary-attack-rates">LEARN 4 · Attack rates and secondary attack rates</h2>
+<p>During outbreaks, <strong>attack rate</strong> is commonly used as another name for incidence proportion.</p>
+<section id="overall-attack-rate" class="level3">
+<h3 class="anchored" data-anchor-id="overall-attack-rate">Overall attack rate</h3>
+<p>[ ]</p>
+</section>
+<section id="exposure-specific-attack-rate" class="level3">
+<h3 class="anchored" data-anchor-id="exposure-specific-attack-rate">Exposure-specific attack rate</h3>
+<p>Suppose 80 wedding guests ate chicken and 32 became ill.</p>
+<p>[ 32/80 = 40% ]</p>
+<p>The food-specific attack rate among chicken eaters is <strong>40%</strong>.</p>
+<p>But this still does not tell us whether chicken was associated with illness. We also need the attack rate among people who <strong>did not</strong> eat chicken. The comparison itself belongs in Week 3.</p>
+</section>
+<section id="secondary-attack-rate" class="level3">
+<h3 class="anchored" data-anchor-id="secondary-attack-rate">Secondary attack rate</h3>
+<p>The CDC lesson describes secondary attack rate as useful for examining transmission among contacts of primary cases in households or other closed populations.</p>
+<p>A common form is:</p>
+<p>[ = ]</p>
+<p>Primary cases are generally excluded from the contact denominator because they are not at risk of becoming secondary cases from themselves.</p>
+</section>
+<section id="fictional-example-1" class="level3">
+<h3 class="anchored" data-anchor-id="fictional-example-1">Fictional example</h3>
+<p>Twelve primary cases occur in 12 households containing 58 people in total. During the relevant secondary transmission period, 9 additional household members develop the disease.</p>
+<p>Contacts at risk = 58 − 12 = <strong>46</strong>.</p>
+<p>[ 9/46 = 19.6% ]</p>
+<p>The secondary attack rate is approximately <strong>19.6%</strong>.</p>
+</section>
+</section>
+<section id="learn-5-incidence-rate-when-follow-up-time-differs" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-incidence-rate-when-follow-up-time-differs">LEARN 5 · Incidence rate: when follow-up time differs</h2>
+<p>Incidence proportion treats the starting population as the denominator. That works best when the cohort is reasonably closed and the observation period is clearly defined.</p>
+<p>But people often contribute <strong>different amounts of follow-up</strong>. They enrol late, migrate, die, are lost to follow-up, or develop the outcome at different times.</p>
+<section id="person-time-solves-a-different-denominator-problem" class="level3">
+<h3 class="anchored" data-anchor-id="person-time-solves-a-different-denominator-problem">Person-time solves a different denominator problem</h3>
+<p>The attached CDC text defines incidence rate (person-time rate) using:</p>
+<p>[ = ]</p>
+<p>One person followed disease-free for two years contributes <strong>2 person-years</strong>. Ten people each followed for six months contribute <strong>5 person-years</strong> in total.</p>
+</section>
+<section id="fictional-example-2" class="level3">
+<h3 class="anchored" data-anchor-id="fictional-example-2">Fictional example</h3>
+<p>A cohort contributes <strong>1,850 person-years</strong> of disease-free observation and 37 participants develop tuberculosis.</p>
+<p>[ 37 / 1,850 = 0.020 ]</p>
+<p>or <strong>20 new TB cases per 1,000 person-years</strong>.</p>
+<p>This means disease occurred at a rate of 20 new cases for every 1,000 person-years of observed time at risk.</p>
+</section>
+<section id="risk-and-rate-are-not-the-same-quantity" class="level3">
+<h3 class="anchored" data-anchor-id="risk-and-rate-are-not-the-same-quantity">Risk and rate are not the same quantity</h3>
+<p><strong>Incidence proportion</strong> answers approximately: <em>What proportion of this initially at-risk population became cases during this period?</em></p>
+<p><strong>Incidence rate</strong> answers approximately: <em>How quickly are new cases occurring in the accumulated time at risk?</em></p>
+<p>Do not attach a percent sign to a person-time rate.</p>
+</section>
+</section>
+<section id="learn-6-prevalence-who-has-the-condition" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-prevalence-who-has-the-condition">LEARN 6 · Prevalence: who has the condition?</h2>
+<p>Prevalence includes <strong>existing cases</strong>, not only new ones.</p>
+<section id="point-prevalence" class="level3">
+<h3 class="anchored" data-anchor-id="point-prevalence">Point prevalence</h3>
+<p>[ = ]</p>
+<p>If 360 of 1,200 adults surveyed today meet the definition of hypertension:</p>
+<p>[ 360/1,200 = 30% ]</p>
+<p>The point prevalence is <strong>30%</strong>.</p>
+</section>
+<section id="period-prevalence" class="level3">
+<h3 class="anchored" data-anchor-id="period-prevalence">Period prevalence</h3>
+<p>Period prevalence includes people who had the condition at <strong>any time during a specified interval</strong>, whether it was already present when the interval began or developed during it.</p>
+</section>
+<section id="incidence-versus-prevalence" class="level3">
+<h3 class="anchored" data-anchor-id="incidence-versus-prevalence">Incidence versus prevalence</h3>
+<p>The source makes the distinction through the numerator:</p>
+<p><strong>Incidence numerator → new cases only</strong><br>
+<strong>Prevalence numerator → all cases present in the relevant period</strong></p>
+<p>This is one of the most important distinctions in introductory epidemiology.</p>
+</section>
+</section>
+<section id="learn-7-why-high-prevalence-does-not-necessarily-mean-high-incidence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-7-why-high-prevalence-does-not-necessarily-mean-high-incidence">LEARN 7 · Why high prevalence does not necessarily mean high incidence</h2>
+<p>Prevalence is influenced by both <strong>new occurrence</strong> and <strong>duration</strong>.</p>
+<p>A condition may have high prevalence because:</p>
+<ul>
+<li>many new cases are developing;</li>
+<li>people remain affected for a long time;</li>
+<li>survival has improved without cure; or</li>
+<li>several of these processes occur together.</li>
+</ul>
+<p>A condition may have low prevalence because:</p>
+<ul>
+<li>few new cases occur;</li>
+<li>recovery is rapid; or</li>
+<li>mortality is rapid.</li>
+</ul>
+<section id="two-diseases-same-incidence-different-prevalence" class="level3">
+<h3 class="anchored" data-anchor-id="two-diseases-same-incidence-different-prevalence">Two diseases, same incidence, different prevalence</h3>
+<p>Imagine two conditions generate the same number of new cases each year.</p>
+<p><strong>Condition A</strong> usually resolves in 5 days.<br>
+<strong>Condition B</strong> commonly persists for 20 years.</p>
+<p>A cross-sectional survey is much more likely to find a larger pool of existing Condition B cases.</p>
+<div class="lipps-callout">
+<p><strong>LIPPS warning</strong><br>
+Do not infer the speed of disease occurrence from prevalence alone. Prevalence is a snapshot of the pool of existing disease; that pool is filled by incidence and emptied by recovery, death or other exits.</p>
+</div>
+</section>
+</section>
+<section id="learn-8-mortality-measures-death-needs-a-denominator-too" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-8-mortality-measures-death-needs-a-denominator-too">LEARN 8 · Mortality measures: death needs a denominator too</h2>
+<p>A population mortality rate relates deaths occurring during a period to the population in which those deaths occurred.</p>
+<section id="crude-mortality-rate" class="level3">
+<h3 class="anchored" data-anchor-id="crude-mortality-rate">Crude mortality rate</h3>
+<p>All deaths in the population, from all causes, divided by the relevant population.</p>
+</section>
+<section id="cause-specific-mortality-rate" class="level3">
+<h3 class="anchored" data-anchor-id="cause-specific-mortality-rate">Cause-specific mortality rate</h3>
+<p>Deaths from one specified cause divided by the population in which those deaths occurred.</p>
+</section>
+<section id="age--sex--or-other-stratum-specific-mortality-rate" class="level3">
+<h3 class="anchored" data-anchor-id="age--sex--or-other-stratum-specific-mortality-rate">Age-, sex- or other stratum-specific mortality rate</h3>
+<p>Both numerator and denominator are restricted to the same subgroup.</p>
+<p>For example:</p>
+<p>[ ]</p>
+<p>is an age- and cause-specific mortality measure.</p>
+</section>
+<section id="why-specificity-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-specificity-matters">Why specificity matters</h3>
+<p>If the numerator contains deaths among women aged 15–49, but the denominator is the entire district population, the numerator and denominator do not describe the same population.</p>
+<p>Always ask:</p>
+<blockquote class="blockquote">
+<p><strong>Who is represented in the numerator, and is the denominator the population from which those deaths could arise?</strong></p>
+</blockquote>
+</section>
+</section>
+<section id="learn-9-crude-rates-can-be-distorted-by-population-structure" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-9-crude-rates-can-be-distorted-by-population-structure">LEARN 9 · Crude rates can be distorted by population structure</h2>
+<p>The CDC text uses the contrast between Alaska and Florida to demonstrate an important idea: one population can have a higher <strong>crude mortality rate</strong> simply because it contains more older people.</p>
+<p>When mortality strongly varies with age, comparing crude mortality between populations with different age structures can be misleading.</p>
+<section id="two-approaches" class="level3">
+<h3 class="anchored" data-anchor-id="two-approaches">Two approaches</h3>
+<p><strong>Stratification:</strong> compare age-specific rates within comparable age groups.<br>
+<strong>Standardisation/adjustment:</strong> calculate a summary rate that removes the effect of different age distributions.</p>
+<p>Detailed age standardisation is beyond the core calculations for this week, but the reasoning matters now:</p>
+<blockquote class="blockquote">
+<p><strong>A crude difference may partly represent population composition rather than a difference in underlying age-specific mortality.</strong></p>
+</blockquote>
+<p>This same principle will return later when we discuss confounding.</p>
+</section>
+</section>
+<section id="learn-10-case-fatality-is-not-population-mortality" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-10-case-fatality-is-not-population-mortality">LEARN 10 · Case fatality is not population mortality</h2>
+<section id="case-fatality-measure" class="level3">
+<h3 class="anchored" data-anchor-id="case-fatality-measure">Case-fatality measure</h3>
+<p>The CDC lesson defines case fatality as the proportion of people with a particular condition who die from that condition.</p>
+<p>[ = ]</p>
+<p>It is mainly a measure of <strong>severity among identified cases</strong>, not the frequency of death in the entire population.</p>
+<p>If 8 of 200 confirmed cases die:</p>
+<p>[ 8/200 = 4% ]</p>
+<p>Case fatality = <strong>4%</strong>.</p>
+</section>
+<section id="proportionate-mortality" class="level3">
+<h3 class="anchored" data-anchor-id="proportionate-mortality">Proportionate mortality</h3>
+<p>Proportionate mortality asks what share of <strong>all deaths</strong> is due to a particular cause.</p>
+<p>[ ]</p>
+<p>If 50 of 500 recorded deaths were from road traffic injuries, proportionate mortality due to road traffic injuries is <strong>10%</strong>.</p>
+<p>This does <strong>not</strong> mean 10% of the population died from road traffic injuries. The denominator contains deaths, not people in the population.</p>
+</section>
+<section id="three-different-questions" class="level3">
+<h3 class="anchored" data-anchor-id="three-different-questions">Three different questions</h3>
+<p><strong>Population mortality:</strong> How often are people in the population dying?<br>
+<strong>Case fatality:</strong> Among people with the disease, what proportion die from it?<br>
+<strong>Proportionate mortality:</strong> Among all deaths, what share is due to this cause?</p>
+</section>
+</section>
+<section id="learn-11-maternal-neonatal-and-infant-mortality-measures" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-11-maternal-neonatal-and-infant-mortality-measures">LEARN 11 · Maternal, neonatal and infant mortality measures</h2>
+<p>The attached CDC lesson presents several mortality measures that use <strong>live births</strong> rather than a mid-period population as the denominator.</p>
+<section id="neonatal-mortality" class="level3">
+<h3 class="anchored" data-anchor-id="neonatal-mortality">Neonatal mortality</h3>
+<p>Deaths among infants younger than 28 days during a period divided by live births during that period, commonly expressed per 1,000 live births.</p>
+</section>
+<section id="postneonatal-mortality" class="level3">
+<h3 class="anchored" data-anchor-id="postneonatal-mortality">Postneonatal mortality</h3>
+<p>Deaths from 28 days to under one year divided by live births, commonly expressed per 1,000 live births.</p>
+</section>
+<section id="infant-mortality" class="level3">
+<h3 class="anchored" data-anchor-id="infant-mortality">Infant mortality</h3>
+<p>Deaths before one year of age divided by live births in the same period, commonly expressed per 1,000 live births.</p>
+<p>The source explicitly notes an important terminology point: the traditional <strong>infant mortality rate</strong> is not a pure population rate in the strict mathematical sense because its denominator is live births rather than the mid-year population of infants.</p>
+</section>
+<section id="maternal-mortality-terminology-in-the-source" class="level3">
+<h3 class="anchored" data-anchor-id="maternal-mortality-terminology-in-the-source">Maternal mortality terminology in the source</h3>
+<p>The CDC text labels the measure <strong>maternal mortality rate</strong>, but also explicitly says it is really a <strong>ratio</strong>, because pregnancy-related maternal deaths are divided by live births rather than by the population of women at risk.</p>
+<p>That observation is a useful reminder:</p>
+<blockquote class="blockquote">
+<p><strong>The conventional name of an indicator does not remove the need to understand its numerator and denominator.</strong></p>
+</blockquote>
+</section>
+</section>
+<section id="learn-12-natality-measures" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-12-natality-measures">LEARN 12 · Natality measures</h2>
+<p>The CDC lesson also introduces population-based measures of birth.</p>
+<section id="crude-birth-rate" class="level3">
+<h3 class="anchored" data-anchor-id="crude-birth-rate">Crude birth rate</h3>
+<p>[ ,000 ]</p>
+</section>
+<section id="crude-fertility-rate" class="level3">
+<h3 class="anchored" data-anchor-id="crude-fertility-rate">Crude fertility rate</h3>
+<p>[ ,000 ]</p>
+</section>
+<section id="low-birth-weight-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="low-birth-weight-ratio">Low-birth-weight ratio</h3>
+<p>[ ]</p>
+<p>The important lesson is not to memorise a table of indicators. It is to inspect how the denominator changes the question.</p>
+<p>A crude birth rate describes births relative to the <strong>whole population</strong>. A fertility rate narrows the denominator to a population more directly related to childbearing. The low-birth-weight measure asks what <strong>proportion of births</strong> meet a defined birth-weight criterion.</p>
+</section>
+</section>
+<section id="go-deeper-years-of-potential-life-lost" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="go-deeper-years-of-potential-life-lost">GO DEEPER · Years of potential life lost</h2>
+<p>The CDC lesson includes <strong>years of potential life lost (YPLL)</strong> as a way to describe premature mortality. Rather than treating every death as contributing equally, YPLL gives more weight to deaths occurring earlier than a selected endpoint.</p>
+<p>Conceptually:</p>
+<p>[ = - ]</p>
+<p>for deaths occurring before the endpoint.</p>
+<p>This can highlight causes that produce death at younger ages even when they are not the leading causes by total death count.</p>
+<p>YPLL is presented here as an <strong>extension concept</strong> rather than a core Week 2 mastery calculation. The source itself notes that the choice of endpoint embeds a value judgement because earlier deaths contribute more potential years lost.</p>
+</section>
+<section id="apply-choose-the-measure-before-calculating" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="apply-choose-the-measure-before-calculating">APPLY · Choose the measure before calculating</h2>
+<p>For each scenario, identify the most appropriate measure and explain the denominator.</p>
+<section id="scenario-a-new-hypertension-diagnoses" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-a-new-hypertension-diagnoses">Scenario A · New hypertension diagnoses</h3>
+<p>A closed cohort of 1,500 adults without hypertension is followed for 12 months. Ninety develop hypertension.</p>
+<p><strong>Best measure:</strong> Incidence proportion.<br>
+<strong>Denominator:</strong> The 1,500 adults at risk at the start.</p>
+</section>
+<section id="scenario-b-different-follow-up-time" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-b-different-follow-up-time">Scenario B · Different follow-up time</h3>
+<p>A TB cohort experiences 22 new recurrences during 940 person-years of post-treatment observation.</p>
+<p><strong>Best measure:</strong> Incidence rate.<br>
+<strong>Denominator:</strong> 940 person-years at risk.</p>
+</section>
+<section id="scenario-c-burden-today" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-c-burden-today">Scenario C · Burden today</h3>
+<p>A representative district survey finds 420 people with diabetes among 3,000 adults examined during the survey.</p>
+<p><strong>Best measure:</strong> Point prevalence, if status refers to the survey point/period as defined.<br>
+<strong>Denominator:</strong> The examined target population represented by the survey, subject to the survey design and weighting.</p>
+</section>
+<section id="scenario-d-severity-among-cases" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-d-severity-among-cases">Scenario D · Severity among cases</h3>
+<p>An outbreak produces 160 confirmed cases and 12 of those people die from the disease.</p>
+<p><strong>Best measure:</strong> Case fatality.<br>
+<strong>Denominator:</strong> The 160 cases.</p>
+</section>
+<section id="scenario-e-cause-among-deaths" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-e-cause-among-deaths">Scenario E · Cause among deaths</h3>
+<p>A district records 1,100 deaths, of which 220 are attributed to malaria.</p>
+<p><strong>Best measure:</strong> Proportionate mortality due to malaria.<br>
+<strong>Denominator:</strong> All 1,100 deaths.</p>
+</section>
+</section>
+<section id="worked-example-one-dataset-four-different-measures" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="worked-example-one-dataset-four-different-measures">WORKED EXAMPLE · One dataset, four different measures</h2>
+<p>Consider a fictional boarding-school outbreak.</p>
+<p>At the beginning of the week there are <strong>500 students</strong>, none currently ill.&nbsp;During the week <strong>75 students become ill</strong>. The 75 cases occur across several dormitories. In the dormitories of the first 20 cases, there are <strong>80 additional susceptible roommates</strong>, and <strong>24 of those roommates develop illness during the relevant secondary period</strong>. At the end of Friday, <strong>30 students are still ill</strong>.</p>
+<section id="weekly-incidence-proportion-attack-rate" class="level3">
+<h3 class="anchored" data-anchor-id="weekly-incidence-proportion-attack-rate">1. Weekly incidence proportion / attack rate</h3>
+<p>[ 75/500 = 15% ]</p>
+<p><strong>Interpretation:</strong> 15% of students at risk at the beginning became cases during the week.</p>
+</section>
+<section id="secondary-attack-rate-among-susceptible-roommates" class="level3">
+<h3 class="anchored" data-anchor-id="secondary-attack-rate-among-susceptible-roommates">2. Secondary attack rate among susceptible roommates</h3>
+<p>[ 24/80 = 30% ]</p>
+<p><strong>Interpretation:</strong> 30% of the defined susceptible contacts developed illness during the secondary-risk period.</p>
+</section>
+<section id="point-prevalence-on-friday" class="level3">
+<h3 class="anchored" data-anchor-id="point-prevalence-on-friday">3. Point prevalence on Friday</h3>
+<p>[ 30/500 = 6% ]</p>
+<p><strong>Interpretation:</strong> 6% of the school population was ill at the specified Friday assessment point, assuming the denominator remains appropriate.</p>
+</section>
+<section id="why-attack-rate-and-friday-prevalence-differ" class="level3">
+<h3 class="anchored" data-anchor-id="why-attack-rate-and-friday-prevalence-differ">4. Why attack rate and Friday prevalence differ</h3>
+<p>The attack rate counts <strong>new cases accumulated during the week</strong>. Friday point prevalence counts <strong>people still ill at one point in time</strong>. Students who became ill and recovered before Friday contribute to incidence but not Friday point prevalence.</p>
+<div class="lipps-callout">
+<p><strong>Same population. Same outbreak. Different questions. Different numerators. Different measures.</strong></p>
+</div>
+</section>
+</section>
+<section id="practise-check-your-reasoning" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
+<section id="which-statement-best-distinguishes-a-proportion-from-a-general-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="which-statement-best-distinguishes-a-proportion-from-a-general-ratio">1. Which statement BEST distinguishes a proportion from a general ratio?</h3>
+<p>A. A proportion must include time in the denominator.<br>
+B. In a proportion, the numerator is included in the denominator.<br>
+C. A proportion must be expressed per 100,000.<br>
+D. A proportion can never describe disease.</p>
+<p><strong>Answer: B.</strong> A proportion describes a part relative to the whole containing that part.</p>
+</section>
+<section id="a-district-reports-500-tb-cases.-what-additional-information-is-most-important-for-comparing-tb-occurrence-with-another-district" class="level3">
+<h3 class="anchored" data-anchor-id="a-district-reports-500-tb-cases.-what-additional-information-is-most-important-for-comparing-tb-occurrence-with-another-district">2. A district reports 500 TB cases. What additional information is MOST important for comparing TB occurrence with another district?</h3>
+<p>A. The font used in the report.<br>
+B. The corresponding population denominator, case definition and time period.<br>
+C. The number of pages in the report.<br>
+D. Whether the analyst used R or Stata.</p>
+<p><strong>Answer: B.</strong> A count requires population and measurement context before fair comparison.</p>
+</section>
+<section id="which-numerator-belongs-in-an-incidence-proportion" class="level3">
+<h3 class="anchored" data-anchor-id="which-numerator-belongs-in-an-incidence-proportion">3. Which numerator belongs in an incidence proportion?</h3>
+<p>A. All existing cases.<br>
+B. New cases occurring during the specified period.<br>
+C. All positive tests ever recorded.<br>
+D. Deaths from all causes.</p>
+<p><strong>Answer: B.</strong> Incidence concerns new occurrence.</p>
+</section>
+<section id="twenty-new-cases-occur-during-2000-person-years.-which-measure-is-being-calculated" class="level3">
+<h3 class="anchored" data-anchor-id="twenty-new-cases-occur-during-2000-person-years.-which-measure-is-being-calculated">4. Twenty new cases occur during 2,000 person-years. Which measure is being calculated?</h3>
+<p>A. Point prevalence.<br>
+B. Period prevalence.<br>
+C. Incidence rate.<br>
+D. Proportionate mortality.</p>
+<p><strong>Answer: C.</strong> Person-time in the denominator identifies an incidence rate.</p>
+</section>
+<section id="which-statement-about-prevalence-is-correct" class="level3">
+<h3 class="anchored" data-anchor-id="which-statement-about-prevalence-is-correct">5. Which statement about prevalence is correct?</h3>
+<p>A. It contains new cases only.<br>
+B. It is unaffected by disease duration.<br>
+C. It includes existing cases in the defined population and time.<br>
+D. It always estimates causal risk.</p>
+<p><strong>Answer: C.</strong> Prevalence describes the pool of existing disease or attributes.</p>
+</section>
+<section id="a-chronic-condition-has-low-incidence-but-very-long-duration.-what-could-happen-to-prevalence" class="level3">
+<h3 class="anchored" data-anchor-id="a-chronic-condition-has-low-incidence-but-very-long-duration.-what-could-happen-to-prevalence">6. A chronic condition has low incidence but very long duration. What could happen to prevalence?</h3>
+<p>A. It must be zero.<br>
+B. It may still be high.<br>
+C. It becomes an incidence rate.<br>
+D. Duration cannot affect prevalence.</p>
+<p><strong>Answer: B.</strong> Long duration can maintain a large pool of existing cases.</p>
+</section>
+<section id="eight-deaths-occur-among-200-identified-cases.-what-measure-is-8200-100" class="level3">
+<h3 class="anchored" data-anchor-id="eight-deaths-occur-among-200-identified-cases.-what-measure-is-8200-100">7. Eight deaths occur among 200 identified cases. What measure is 8/200 × 100?</h3>
+<p>A. Cause-specific mortality rate.<br>
+B. Case fatality.<br>
+C. Incidence rate.<br>
+D. Crude birth rate.</p>
+<p><strong>Answer: B.</strong> The denominator is cases, so the measure describes severity among cases.</p>
+</section>
+<section id="fifty-road-traffic-deaths-occur-among-500-deaths-from-all-causes.-what-does-50500-100-describe" class="level3">
+<h3 class="anchored" data-anchor-id="fifty-road-traffic-deaths-occur-among-500-deaths-from-all-causes.-what-does-50500-100-describe">8. Fifty road-traffic deaths occur among 500 deaths from all causes. What does 50/500 × 100 describe?</h3>
+<p>A. Risk of dying in the population.<br>
+B. Proportionate mortality.<br>
+C. Incidence proportion.<br>
+D. Case fatality.</p>
+<p><strong>Answer: B.</strong> It describes the share of deaths attributable to that cause.</p>
+</section>
+<section id="why-might-crude-mortality-be-higher-in-one-district-even-if-its-age-specific-mortality-is-not-consistently-higher" class="level3">
+<h3 class="anchored" data-anchor-id="why-might-crude-mortality-be-higher-in-one-district-even-if-its-age-specific-mortality-is-not-consistently-higher">9. Why might crude mortality be higher in one district even if its age-specific mortality is not consistently higher?</h3>
+<p>A. The district may have an older population.<br>
+B. A crude rate automatically adjusts for age.<br>
+C. Mortality is unrelated to age.<br>
+D. The denominator is always deaths.</p>
+<p><strong>Answer: A.</strong> Population age structure can distort crude comparisons.</p>
+</section>
+<section id="which-statement-best-reflects-the-main-week-2-lesson" class="level3">
+<h3 class="anchored" data-anchor-id="which-statement-best-reflects-the-main-week-2-lesson">10. Which statement BEST reflects the main Week 2 lesson?</h3>
+<p>A. Memorise every multiplier.<br>
+B. Always express health measures as percentages.<br>
+C. Match the numerator, denominator, population and time to the question before calculating.<br>
+D. Counts should never be reported.</p>
+<p><strong>Answer: C.</strong> Correct calculation begins with correct measurement logic.</p>
+</section>
+</section>
+<section id="demonstrate-week-2-mastery-quiz" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-week-2-mastery-quiz">DEMONSTRATE · Week 2 Mastery Quiz</h2>
+<p>The Week 2 Moodle bank is built around <strong>measure selection, denominator recognition, compact calculations and interpretation</strong>.</p>
+<p><strong>Pilot specification</strong></p>
+<ul>
+<li>15 questions sampled from a 50-item Week 2 bank;</li>
+<li>12 minutes initially because this week includes short calculations;</li>
+<li>one question at a time;</li>
+<li>question and answer order randomised where appropriate;</li>
+<li>calculated items varied across equivalent numerical scenarios;</li>
+<li>one graded attempt in Mastery mode;</li>
+<li>Practice mode gives explanatory feedback; and</li>
+<li>institutional accommodations can extend the time without changing the learning objective.</li>
+</ul>
+<div class="lipps-callout">
+<p><strong>AI-resilient by design</strong><br>
+The assessment is not protected by disabling copy and paste. It is protected by preparation: a learner who understands the measure can identify the denominator and calculate the answer faster than someone repeatedly outsourcing each question.</p>
+</div>
+</section>
+<section id="summary-the-week-2-decision-tree" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="summary-the-week-2-decision-tree">SUMMARY · The Week 2 decision tree</h2>
+<p>When you need to describe frequency, ask:</p>
+<p><strong>Do I only need the number of events?</strong> → Count.<br>
+<strong>Am I comparing two quantities?</strong> → Ratio.<br>
+<strong>Is the numerator part of the denominator?</strong> → Proportion.<br>
+<strong>Am I measuring new occurrence among an initially at-risk population?</strong> → Incidence proportion / risk.<br>
+<strong>Does follow-up time differ across people?</strong> → Incidence rate / person-time.<br>
+<strong>Am I measuring all existing cases at a point or during a period?</strong> → Prevalence.<br>
+<strong>Am I measuring deaths in a population?</strong> → Mortality rate.<br>
+<strong>Am I measuring deaths among cases?</strong> → Case fatality.<br>
+<strong>Am I asking what share of all deaths came from one cause?</strong> → Proportionate mortality.</p>
+<p>Then ask one final LIPPS question:</p>
+<blockquote class="blockquote">
+<p><strong>Does this denominator actually represent the population and time about which I intend to make the claim?</strong></p>
+</blockquote>
+</section>
+<section id="what-moves-to-week-3" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="what-moves-to-week-3">What moves to Week 3</h2>
+<p>The attached CDC Lesson Three continues from frequency measures into <strong>risk ratios, rate ratios, odds ratios and measures of public-health impact</strong>. LIPPS deliberately separates these topics.</p>
+<p>Week 2 asks:</p>
+<blockquote class="blockquote">
+<p><strong>How often is the outcome occurring?</strong></p>
+</blockquote>
+<p>Week 3 asks:</p>
+<blockquote class="blockquote">
+<p><strong>How different is occurrence between groups, and how should that difference be expressed?</strong></p>
+</blockquote>
+<p>This separation keeps measurement of frequency conceptually distinct from measurement of association and effect.</p>
+</section>
+<section id="primary-source-used-to-build-this-lesson" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="primary-source-used-to-build-this-lesson">Primary source used to build this lesson</h2>
+<p>This LIPPS lesson is an original teaching adaptation of <strong>Centers for Disease Control and Prevention (CDC), <em>Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics</em>, Lesson Three: Measures of Risk (updated May 2012).</strong></p>
+<p>The source material used here includes its treatment of ratios, proportions and rates; morbidity frequency measures; incidence proportion; attack rates; person-time incidence rates; point and period prevalence; mortality measures; age adjustment; case fatality; proportionate mortality; YPLL; and natality measures. <strong>Fictional Ugandan and school examples were created for LIPPS and are not claims about actual districts, facilities or outbreaks.</strong></p>
+</section>
+<div class="lipps-section">
+<p><a href="../../learn/epidemiology/week-01.html" class="lipps-btn secondary">← Week 1</a> <a href="../../learn/epidemiology/week-03.html" class="lipps-btn">Week 3 →</a></p>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Design and evaluate digital health communication while accounting for platform dynamics, privacy, accessibility, digital exclusion and the difference between engagement metrics and health outcomes.">
+
+<title>Week 8 — Digital Health and Social Media Communication | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-week-in-one-sentence" id="toc-this-week-in-one-sentence" class="nav-link active" data-scroll-target="#this-week-in-one-sentence">This week in one sentence</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-the-campaign-had-two-million-impressions.-did-it-work" id="toc-orient-the-campaign-had-two-million-impressions.-did-it-work" class="nav-link" data-scroll-target="#orient-the-campaign-had-two-million-impressions.-did-it-work">ORIENT · The campaign had two million impressions. Did it work?</a></li>
+  <li><a href="#learn-1-digital-channels-change-speed-scale-and-interaction" id="toc-learn-1-digital-channels-change-speed-scale-and-interaction" class="nav-link" data-scroll-target="#learn-1-digital-channels-change-speed-scale-and-interaction">LEARN 1 · Digital channels change speed, scale and interaction</a></li>
+  <li><a href="#learn-2-platform-selection-begins-with-audience-behaviour" id="toc-learn-2-platform-selection-begins-with-audience-behaviour" class="nav-link" data-scroll-target="#learn-2-platform-selection-begins-with-audience-behaviour">LEARN 2 · Platform selection begins with audience behaviour</a></li>
+  <li><a href="#learn-3-understand-the-metric-ladder" id="toc-learn-3-understand-the-metric-ladder" class="nav-link" data-scroll-target="#learn-3-understand-the-metric-ladder">LEARN 3 · Understand the metric ladder</a></li>
+  <li><a href="#learn-4-algorithms-shape-visibility" id="toc-learn-4-algorithms-shape-visibility" class="nav-link" data-scroll-target="#learn-4-algorithms-shape-visibility">LEARN 4 · Algorithms shape visibility</a></li>
+  <li><a href="#learn-5-social-listening-is-systematic-observation-not-surveillance-of-individuals" id="toc-learn-5-social-listening-is-systematic-observation-not-surveillance-of-individuals" class="nav-link" data-scroll-target="#learn-5-social-listening-is-systematic-observation-not-surveillance-of-individuals">LEARN 5 · Social listening is systematic observation, not surveillance of individuals</a></li>
+  <li><a href="#learn-6-moderation-is-part-of-communication-design" id="toc-learn-6-moderation-is-part-of-communication-design" class="nav-link" data-scroll-target="#learn-6-moderation-is-part-of-communication-design">LEARN 6 · Moderation is part of communication design</a></li>
+  <li><a href="#learn-7-privacy-can-be-harmed-by-seemingly-harmless-features" id="toc-learn-7-privacy-can-be-harmed-by-seemingly-harmless-features" class="nav-link" data-scroll-target="#learn-7-privacy-can-be-harmed-by-seemingly-harmless-features">LEARN 7 · Privacy can be harmed by seemingly harmless features</a></li>
+  <li><a href="#learn-8-mobile-first-means-more-than-shrinking-a-desktop-page" id="toc-learn-8-mobile-first-means-more-than-shrinking-a-desktop-page" class="nav-link" data-scroll-target="#learn-8-mobile-first-means-more-than-shrinking-a-desktop-page">LEARN 8 · Mobile-first means more than shrinking a desktop page</a></li>
+  <li><a href="#learn-9-digital-exclusion-is-an-epidemiological-issue" id="toc-learn-9-digital-exclusion-is-an-epidemiological-issue" class="nav-link" data-scroll-target="#learn-9-digital-exclusion-is-an-epidemiological-issue">LEARN 9 · Digital exclusion is an epidemiological issue</a></li>
+  <li><a href="#learn-10-ai-can-assist-but-human-accountability-remains" id="toc-learn-10-ai-can-assist-but-human-accountability-remains" class="nav-link" data-scroll-target="#learn-10-ai-can-assist-but-human-accountability-remains">LEARN 10 · AI can assist, but human accountability remains</a></li>
+  <li><a href="#deepen-digital-communication-changes-the-information-environment" id="toc-deepen-digital-communication-changes-the-information-environment" class="nav-link" data-scroll-target="#deepen-digital-communication-changes-the-information-environment">DEEPEN · Digital communication changes the information environment</a>
+  <ul class="collapse">
+  <li><a href="#platform-affordances" id="toc-platform-affordances" class="nav-link" data-scroll-target="#platform-affordances">Platform affordances</a></li>
+  <li><a href="#metrics-hierarchy" id="toc-metrics-hierarchy" class="nav-link" data-scroll-target="#metrics-hierarchy">Metrics hierarchy</a></li>
+  <li><a href="#privacy-and-sensitive-health-information" id="toc-privacy-and-sensitive-health-information" class="nav-link" data-scroll-target="#privacy-and-sensitive-health-information">Privacy and sensitive health information</a></li>
+  <li><a href="#digital-exclusion" id="toc-digital-exclusion" class="nav-link" data-scroll-target="#digital-exclusion">Digital exclusion</a></li>
+  <li><a href="#moderation-and-community-management" id="toc-moderation-and-community-management" class="nav-link" data-scroll-target="#moderation-and-community-management">Moderation and community management</a></li>
+  <li><a href="#ai-and-automated-communication" id="toc-ai-and-automated-communication" class="nav-link" data-scroll-target="#ai-and-automated-communication">AI and automated communication</a></li>
+  <li><a href="#what-could-fool-us" id="toc-what-could-fool-us" class="nav-link" data-scroll-target="#what-could-fool-us">What could fool us?</a></li>
+  </ul></li>
+  <li><a href="#field-lab-build-a-digital-metrics-ladder" id="toc-field-lab-build-a-digital-metrics-ladder" class="nav-link" data-scroll-target="#field-lab-build-a-digital-metrics-ladder">FIELD LAB · Build a digital metrics ladder</a>
+  <ul class="collapse">
+  <li><a href="#digital-safety-review" id="toc-digital-safety-review" class="nav-link" data-scroll-target="#digital-safety-review">Digital safety review</a></li>
+  <li><a href="#ab-testing-caution" id="toc-ab-testing-caution" class="nav-link" data-scroll-target="#ab-testing-caution">A/B testing caution</a></li>
+  </ul></li>
+  <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
+  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
+  <li><a href="#demonstrate-week-8-mastery-quiz" id="toc-demonstrate-week-8-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-8-mastery-quiz">DEMONSTRATE · Week 8 mastery quiz</a></li>
+  <li><a href="#key-source-foundation" id="toc-key-source-foundation" class="nav-link" data-scroll-target="#key-source-foundation">Key source foundation</a></li>
+  <li><a href="#assessment-architecture" id="toc-assessment-architecture" class="nav-link" data-scroll-target="#assessment-architecture">Assessment architecture</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · HEALTH COMMUNICATION · WEEK 08</p>
+</div>
+<section id="digital-health-and-social-media-communication" class="level1">
+<h1>Digital Health and Social Media Communication</h1>
+<section id="digital-communication-is-fast-measurable-and-scalablebut-its-metrics-can-be-seductive-and-its-exclusions-easy-to-ignore." class="level2">
+<h2 class="anchored" data-anchor-id="digital-communication-is-fast-measurable-and-scalablebut-its-metrics-can-be-seductive-and-its-exclusions-easy-to-ignore.">Digital communication is fast, measurable and scalable—but its metrics can be seductive and its exclusions easy to ignore.</h2>
+<p><span class="lipps-chip">Social media</span> <span class="lipps-chip">Digital metrics</span> <span class="lipps-chip">Privacy</span> <span class="lipps-chip">Low bandwidth</span></p>
+</section>
+</section>
+</div>
+<section id="this-week-in-one-sentence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="this-week-in-one-sentence">This week in one sentence</h2>
+<p><strong>Design and evaluate digital health communication while accounting for platform dynamics, privacy, accessibility, digital exclusion and the difference between engagement metrics and health outcomes.</strong></p>
+<div class="lipps-callout">
+<p><strong>The LIPPS lens</strong><br>
+Good health communication asks not only whether a message was delivered, but <strong>who interpreted it, under what conditions, what action became possible, and what evidence supports the claimed effect.</strong></p>
+</div>
+</section>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>describe strengths and limitations of major digital communication formats;</li>
+<li>select digital platforms according to audience behaviour and objective;</li>
+<li>distinguish impressions, reach, engagement, click-through and conversion;</li>
+<li>explain algorithmic amplification and attention dynamics;</li>
+<li>design social-listening and moderation approaches;</li>
+<li>identify privacy, consent and confidentiality risks;</li>
+<li>apply mobile-first and low-bandwidth design principles;</li>
+<li>recognise digital exclusion and inequity;</li>
+<li>use digital analytics without overstating impact;</li>
+<li>identify appropriate roles and risks of automated and AI-assisted communication.</li>
+</ol>
+</section>
+<section id="orient-the-campaign-had-two-million-impressions.-did-it-work" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-the-campaign-had-two-million-impressions.-did-it-work">ORIENT · The campaign had two million impressions. Did it work?</h2>
+<p>A social-media campaign reports two million impressions, 60,000 likes and 12,000 shares. The objective was to increase uptake of adolescent HIV self-testing. The campaign does not track whether the intended age group saw the content, whether viewers understood where to obtain tests, or whether testing increased.</p>
+<p>Digital platforms make some things easy to count. Easy-to-count metrics are not automatically the outcomes that matter.</p>
+</section>
+<section id="learn-1-digital-channels-change-speed-scale-and-interaction" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-digital-channels-change-speed-scale-and-interaction">LEARN 1 · Digital channels change speed, scale and interaction</h2>
+<p>Websites, SMS, messaging apps, social platforms, chatbots and mobile apps can support rapid dissemination, reminders, dialogue and tailored content. Their value depends on the communication task and user context.</p>
+</section>
+<section id="learn-2-platform-selection-begins-with-audience-behaviour" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-platform-selection-begins-with-audience-behaviour">LEARN 2 · Platform selection begins with audience behaviour</h2>
+<p>Do not choose a platform because it is fashionable. Ask who uses it, how often, for what purpose, at what cost, with what privacy, and whether the desired action can follow naturally from the platform experience.</p>
+</section>
+<section id="learn-3-understand-the-metric-ladder" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-understand-the-metric-ladder">LEARN 3 · Understand the metric ladder</h2>
+<p><strong>Impressions</strong> count displays. <strong>Reach</strong> estimates unique users exposed. <strong>Engagement</strong> includes reactions, comments or shares. <strong>Click-through</strong> indicates movement to another resource. <strong>Conversion</strong> captures a defined action. Each metric is further from health impact than teams sometimes imply.</p>
+</section>
+<section id="learn-4-algorithms-shape-visibility" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-algorithms-shape-visibility">LEARN 4 · Algorithms shape visibility</h2>
+<p>Social platforms rank and recommend content using proprietary systems. Emotional, novel or controversial material can receive disproportionate attention. Organic reach can change without any change in message quality. Platform metrics should therefore be interpreted as products of both audience response and platform design.</p>
+</section>
+<section id="learn-5-social-listening-is-systematic-observation-not-surveillance-of-individuals" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-social-listening-is-systematic-observation-not-surveillance-of-individuals">LEARN 5 · Social listening is systematic observation, not surveillance of individuals</h2>
+<p>Social listening identifies recurring questions, concerns, narratives and information gaps in public or appropriately consented spaces. It should be conducted with a defined purpose, privacy safeguards and caution about representativeness. Online conversation does not equal population opinion.</p>
+</section>
+<section id="learn-6-moderation-is-part-of-communication-design" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-moderation-is-part-of-communication-design">LEARN 6 · Moderation is part of communication design</h2>
+<p>Comment spaces can contain genuine questions, abuse, misinformation, disclosure of personal health information or requests for clinical advice. Establish rules for response, escalation, deletion and crisis handling before the campaign launches.</p>
+</section>
+<section id="learn-7-privacy-can-be-harmed-by-seemingly-harmless-features" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-7-privacy-can-be-harmed-by-seemingly-harmless-features">LEARN 7 · Privacy can be harmed by seemingly harmless features</h2>
+<p>A reproductive-health SMS appearing on a shared phone, a geotagged HIV-service check-in, or a public reply from a clinic account can disclose sensitive information. Collect the minimum data required and consider who else may see notifications or account activity.</p>
+</section>
+<section id="learn-8-mobile-first-means-more-than-shrinking-a-desktop-page" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-8-mobile-first-means-more-than-shrinking-a-desktop-page">LEARN 8 · Mobile-first means more than shrinking a desktop page</h2>
+<p>Use readable text, large touch targets, compressed assets, captions, alt text, transcripts and forms that work on low-cost devices. A low-bandwidth path should preserve the essential message and action even when video or interactive content fails.</p>
+</section>
+<section id="learn-9-digital-exclusion-is-an-epidemiological-issue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-9-digital-exclusion-is-an-epidemiological-issue">LEARN 9 · Digital exclusion is an epidemiological issue</h2>
+<p>If the people most likely to need an intervention are least likely to have data, devices, literacy or private access, digital-only communication can widen inequity. Monitor reach by meaningful subgroups and provide non-digital alternatives.</p>
+</section>
+<section id="learn-10-ai-can-assist-but-human-accountability-remains" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-10-ai-can-assist-but-human-accountability-remains">LEARN 10 · AI can assist, but human accountability remains</h2>
+<p>Automated drafting, translation, summarisation and chatbots can increase speed. They can also hallucinate, reproduce bias, mishandle sensitive data or provide unsafe clinical advice. Use human review, defined scope, source verification, privacy controls and escalation to qualified professionals.</p>
+</section>
+<section id="deepen-digital-communication-changes-the-information-environment" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="deepen-digital-communication-changes-the-information-environment">DEEPEN · Digital communication changes the information environment</h2>
+<p>Digital platforms do more than transmit messages. They rank, recommend, personalise and amplify content. The same health message can therefore reach different people in different contexts, surrounded by comments, competing claims and platform-generated cues about popularity.</p>
+<section id="platform-affordances" class="level3">
+<h3 class="anchored" data-anchor-id="platform-affordances">Platform affordances</h3>
+<p>Short-form video encourages different communication from a clinic portal or WhatsApp group. Design should consider discoverability, sharing, comment culture, privacy, persistence, moderation and whether users can ask questions.</p>
+</section>
+<section id="metrics-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="metrics-hierarchy">Metrics hierarchy</h3>
+<p>Separate <strong>exposure metrics</strong> such as impressions and views from <strong>engagement metrics</strong> such as clicks and comments, <strong>communication outcomes</strong> such as comprehension or trust, and <strong>health or service outcomes</strong> such as vaccination or appointment completion. A viral post can be a communication failure if people share it because it is confusing or controversial.</p>
+</section>
+<section id="privacy-and-sensitive-health-information" class="level3">
+<h3 class="anchored" data-anchor-id="privacy-and-sensitive-health-information">Privacy and sensitive health information</h3>
+<p>A platform may expose a person’s interests, group membership or messages to employers, family members or advertisers. Do not assume that a direct message is private merely because it is not public. Collect the minimum data needed, explain its use and avoid unnecessary linkage of identity to sensitive health topics.</p>
+</section>
+<section id="digital-exclusion" class="level3">
+<h3 class="anchored" data-anchor-id="digital-exclusion">Digital exclusion</h3>
+<p>Device ownership, disability, data cost, network coverage, language and gendered control of phones influence who can benefit. Digital-first programmes should maintain meaningful alternatives rather than relegating offline audiences to an inferior service.</p>
+</section>
+<section id="moderation-and-community-management" class="level3">
+<h3 class="anchored" data-anchor-id="moderation-and-community-management">Moderation and community management</h3>
+<p>Comments can reveal confusion, misinformation and adverse experiences. Establish escalation rules for threats, clinical emergencies, abuse, personal data and misinformation. Moderation should distinguish disagreement from harmful conduct.</p>
+</section>
+<section id="ai-and-automated-communication" class="level3">
+<h3 class="anchored" data-anchor-id="ai-and-automated-communication">AI and automated communication</h3>
+<p>Chatbots can provide scalable answers but may generate incorrect or overconfident health information. High-risk outputs need constrained knowledge sources, transparent limitations, escalation to humans and monitoring. Automation should not masquerade as a clinician.</p>
+</section>
+<section id="what-could-fool-us" class="level3">
+<h3 class="anchored" data-anchor-id="what-could-fool-us">What could fool us?</h3>
+<p>Algorithms make platform data endogenous: the people who see a post are partly selected by prior behaviour and platform ranking. Comparing engagement across posts does not necessarily identify which message would work better in the whole population. Digital analytics are valuable operational data, not automatically causal evidence.</p>
+</section>
+</section>
+<section id="field-lab-build-a-digital-metrics-ladder" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="field-lab-build-a-digital-metrics-ladder">FIELD LAB · Build a digital metrics ladder</h2>
+<p>A useful dashboard separates what the platform did from what people understood and what happened next.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Example metric</th>
+<th>What it can tell you</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>exposure</td>
+<td>unique reach, impressions</td>
+<td>whether content was delivered</td>
+</tr>
+<tr class="even">
+<td>engagement</td>
+<td>clicks, shares, comments</td>
+<td>whether users interacted</td>
+</tr>
+<tr class="odd">
+<td>communication</td>
+<td>comprehension, trust, confidence</td>
+<td>whether the message changed a proximal communication outcome</td>
+</tr>
+<tr class="even">
+<td>behaviour</td>
+<td>appointment completion, hotline use</td>
+<td>whether the intended action occurred</td>
+</tr>
+<tr class="odd">
+<td>health/service</td>
+<td>diagnosis, treatment initiation</td>
+<td>downstream programme outcome</td>
+</tr>
+</tbody>
+</table>
+<p>Do not skip levels when interpreting results. A high click rate with low comprehension indicates a different problem from low reach.</p>
+<section id="digital-safety-review" class="level3">
+<h3 class="anchored" data-anchor-id="digital-safety-review">Digital safety review</h3>
+<p>Before launch, answer: What personal data are collected? Is the channel private enough for the topic? Can users opt out? What happens if someone reports self-harm, abuse or an emergency? Who moderates harmful comments? How are AI-generated answers constrained and audited? What non-digital alternative exists?</p>
+</section>
+<section id="ab-testing-caution" class="level3">
+<h3 class="anchored" data-anchor-id="ab-testing-caution">A/B testing caution</h3>
+<p>Randomised message testing can improve subject lines or calls to action, but optimise for the <strong>right outcome</strong>. A headline that maximises clicks by provoking fear may reduce trust. The optimisation metric is part of the ethical design.</p>
+</section>
+</section>
+<section id="apply-integrated-public-health-problem" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="apply-integrated-public-health-problem">APPLY · Integrated public-health problem</h2>
+<p>A youth-friendly service plans a WhatsApp and Instagram campaign offering information about STI testing. Young people report concerns about privacy, some share phones with family, rural data costs are high, and staff cannot answer messages 24 hours a day.</p>
+<ol type="1">
+<li>Define the communication objective and conversion event.</li>
+<li>Decide what should be public content versus private interaction.</li>
+<li>Specify privacy safeguards for notifications and direct messages.</li>
+<li>Design a low-bandwidth alternative.</li>
+<li>Create a moderation and escalation policy for clinical questions and abuse.</li>
+<li>Select five digital metrics and state what each can and cannot prove.</li>
+<li>Explain how social listening would be conducted ethically.</li>
+<li>Identify where AI assistance could be useful and where human review is mandatory.</li>
+</ol>
+</section>
+<section id="practise-check-your-reasoning" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
+<ol type="1">
+<li>What is the difference between impressions and reach?</li>
+<li>Why does engagement not prove behaviour change?</li>
+<li>Give one privacy risk of health communication through messaging apps.</li>
+<li>Why is online social listening not automatically representative of the population?</li>
+<li>What makes a digital experience genuinely low-bandwidth?</li>
+<li>Name two safeguards for AI-assisted health communication.</li>
+</ol>
+<p>Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.</p>
+</section>
+<section id="demonstrate-week-8-mastery-quiz" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-week-8-mastery-quiz">DEMONSTRATE · Week 8 mastery quiz</h2>
+<p><strong>Pilot Mastery Quiz:</strong> 10 objective questions randomly sampled from a curated Week 8 bank of 30 items.</p>
+<p><strong>Initial time limit:</strong> 12 minutes. <strong>Mode:</strong> one question at a time; randomised item selection; answer options shuffled; limited attempts; feedback released according to course or institutional settings.</p>
+<div class="lipps-callout">
+<p><strong>Assessment principle</strong><br>
+Knowing the material should be the fastest strategy. Timing is calibrated to reward prepared reading and reasoning, not to replace sound question design or approved accessibility accommodations.</p>
+</div>
+</section>
+<section id="key-source-foundation" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="key-source-foundation">Key source foundation</h2>
+<ul>
+<li><strong>WHO Strategic Communications Framework.</strong> Digital and online communication within strategic health communication.</li>
+<li><strong>WHO Infodemic and social-listening resources.</strong> Use of digital listening to understand information needs and harmful narratives.</li>
+</ul>
+<p>The teaching narrative, fictional African public-health cases, practice activities and LIPPS synthesis are original instructional material. External frameworks are identified where used.</p>
+</section>
+<section id="assessment-architecture" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="assessment-architecture">Assessment architecture</h2>
+<p><a href="../../learn/health-communication/week-08-assessment.html">Instructor assessment blueprint →</a></p>
+<p>The curated bank separates formative practice, weekly mastery and protected institutional seed items.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../learn/health-communication/week-07.html">← Week 7</a></p>
+<p><a href="../../learn/health-communication/week-09.html">Week 9 →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

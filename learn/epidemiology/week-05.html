@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Use cross-sectional designs to estimate prevalence and describe populations while recognising the limits created by simultaneous measurement of exposure and outcome.">
+
+<title>Week 5 — Cross-sectional Studies | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-week-in-one-sentence" id="toc-this-week-in-one-sentence" class="nav-link active" data-scroll-target="#this-week-in-one-sentence">This week in one sentence</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-the-survey-found-an-association.-what-happened-first" id="toc-orient-the-survey-found-an-association.-what-happened-first" class="nav-link" data-scroll-target="#orient-the-survey-found-an-association.-what-happened-first">ORIENT · The survey found an association. What happened first?</a></li>
+  <li><a href="#learn-1-what-makes-a-study-cross-sectional" id="toc-learn-1-what-makes-a-study-cross-sectional" class="nav-link" data-scroll-target="#learn-1-what-makes-a-study-cross-sectional">LEARN 1 · What makes a study cross-sectional?</a></li>
+  <li><a href="#learn-2-the-natural-frequency-measure-is-prevalence" id="toc-learn-2-the-natural-frequency-measure-is-prevalence" class="nav-link" data-scroll-target="#learn-2-the-natural-frequency-measure-is-prevalence">LEARN 2 · The natural frequency measure is prevalence</a></li>
+  <li><a href="#learn-3-population-language-must-be-precise" id="toc-learn-3-population-language-must-be-precise" class="nav-link" data-scroll-target="#learn-3-population-language-must-be-precise">LEARN 3 · Population language must be precise</a></li>
+  <li><a href="#learn-4-a-sample-becomes-an-estimate-only-through-its-design" id="toc-learn-4-a-sample-becomes-an-estimate-only-through-its-design" class="nav-link" data-scroll-target="#learn-4-a-sample-becomes-an-estimate-only-through-its-design">LEARN 4 · A sample becomes an estimate only through its design</a></li>
+  <li><a href="#learn-5-non-response-is-not-just-a-smaller-sample" id="toc-learn-5-non-response-is-not-just-a-smaller-sample" class="nav-link" data-scroll-target="#learn-5-non-response-is-not-just-a-smaller-sample">LEARN 5 · Non-response is not just a smaller sample</a></li>
+  <li><a href="#learn-6-comparing-prevalence" id="toc-learn-6-comparing-prevalence" class="nav-link" data-scroll-target="#learn-6-comparing-prevalence">LEARN 6 · Comparing prevalence</a></li>
+  <li><a href="#learn-7-why-the-odds-ratio-can-be-awkward-for-common-outcomes" id="toc-learn-7-why-the-odds-ratio-can-be-awkward-for-common-outcomes" class="nav-link" data-scroll-target="#learn-7-why-the-odds-ratio-can-be-awkward-for-common-outcomes">LEARN 7 · Why the odds ratio can be awkward for common outcomes</a></li>
+  <li><a href="#learn-8-temporality-the-fundamental-causal-limitation" id="toc-learn-8-temporality-the-fundamental-causal-limitation" class="nav-link" data-scroll-target="#learn-8-temporality-the-fundamental-causal-limitation">LEARN 8 · Temporality: the fundamental causal limitation</a></li>
+  <li><a href="#learn-9-prevalence-can-select-survivors" id="toc-learn-9-prevalence-can-select-survivors" class="nav-link" data-scroll-target="#learn-9-prevalence-can-select-survivors">LEARN 9 · Prevalence can select survivors</a></li>
+  <li><a href="#learn-10-cross-sectional-does-not-mean-weak" id="toc-learn-10-cross-sectional-does-not-mean-weak" class="nav-link" data-scroll-target="#learn-10-cross-sectional-does-not-mean-weak">LEARN 10 · Cross-sectional does not mean weak</a></li>
+  <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
+  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
+  <li><a href="#demonstrate-week-5-mastery-quiz" id="toc-demonstrate-week-5-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-5-mastery-quiz">DEMONSTRATE · Week 5 mastery quiz</a></li>
+  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY · WEEK 05</p>
+</div>
+<section id="cross-sectional-studies" class="level1">
+<h1>Cross-sectional Studies</h1>
+<section id="a-snapshot-can-describe-a-population-very-well-but-it-can-blur-the-direction-of-time." class="level2">
+<h2 class="anchored" data-anchor-id="a-snapshot-can-describe-a-population-very-well-but-it-can-blur-the-direction-of-time.">A snapshot can describe a population very well — but it can blur the direction of time.</h2>
+<p><span class="lipps-chip">Foundation</span> <span class="lipps-chip">Cross-sectional</span> <span class="lipps-chip">Prevalence</span> <span class="lipps-chip">Survey reasoning</span></p>
+</section>
+</section>
+</div>
+<section id="this-week-in-one-sentence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="this-week-in-one-sentence">This week in one sentence</h2>
+<p><strong>Use cross-sectional designs to estimate prevalence and describe populations while recognising the limits created by simultaneous measurement of exposure and outcome.</strong></p>
+<div class="lipps-callout">
+<p><strong>The LIPPS lens</strong><br>
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.</p>
+</div>
+</section>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of Week 5, you should be able to:</p>
+<ol type="1">
+<li>define a cross-sectional study from the timing of exposure and outcome measurement;</li>
+<li>explain why cross-sectional studies naturally estimate prevalence rather than incidence;</li>
+<li>distinguish target population, study population, sampling frame, sampling unit and observation unit;</li>
+<li>identify when a census or sample is appropriate;</li>
+<li>recognise how selection and non-response can alter prevalence estimates;</li>
+<li>identify when survey weights, clustering and stratification affect analysis;</li>
+<li>distinguish a prevalence ratio, prevalence difference and odds ratio as alternative ways to compare cross-sectional outcomes;</li>
+<li>explain the temporality problem when exposure and outcome are measured at the same time;</li>
+<li>recognise how disease duration can influence observed prevalence;</li>
+<li>write conclusions that match what a cross-sectional design can and cannot establish.</li>
+</ol>
+</section>
+<section id="orient-the-survey-found-an-association.-what-happened-first" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-the-survey-found-an-association.-what-happened-first">ORIENT · The survey found an association. What happened first?</h2>
+<p>A university surveys 2,000 students during one semester. Current depressive symptoms and current heavy social-media use are measured in the same questionnaire. Heavy users have more depressive symptoms.</p>
+<p>What can the study establish?</p>
+<p>It can estimate the <strong>prevalence</strong> of each measured state and quantify their <strong>association</strong> at the time of measurement. But unless the timing of exposure and outcome is reconstructed with credible additional information, the design does not tell us whether heavy social-media use preceded depressive symptoms, whether symptoms changed social-media use, or whether another factor influenced both.</p>
+<p>That is the central discipline of cross-sectional interpretation: <strong>a strong snapshot is still a snapshot.</strong></p>
+</section>
+<section id="learn-1-what-makes-a-study-cross-sectional" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-what-makes-a-study-cross-sectional">LEARN 1 · What makes a study cross-sectional?</h2>
+<p>The defining feature is not simply “a questionnaire.” It is the <strong>measurement structure</strong>: a sample is observed at a point or short period, and exposure and outcome status are measured at essentially the same time.</p>
+<p>Cross-sectional studies can use interviews, records, examinations, laboratory tests or several sources together. A health-facility readiness assessment can also be cross-sectional even though the unit is a facility rather than a person.</p>
+<p>The attached CDC source characterises cross-sectional studies as simultaneous measurement of exposures and health outcomes and notes their value for documenting prevalence.</p>
+</section>
+<section id="learn-2-the-natural-frequency-measure-is-prevalence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-the-natural-frequency-measure-is-prevalence">LEARN 2 · The natural frequency measure is prevalence</h2>
+<p>If a survey asks who currently has hypertension, the numerator includes people whose hypertension began yesterday and people who have lived with it for years.</p>
+<p>That is <strong>prevalence</strong>:</p>
+<p><span class="math display">\[
+P = \frac{\text{existing cases at the specified time}}{\text{population observed at that time}}
+\]</span></p>
+<p>A cross-sectional study generally cannot estimate the probability of <em>developing</em> hypertension during a prior period unless incidence information was separately and reliably reconstructed.</p>
+<p>This distinction matters because prevalence reflects both <strong>incidence and duration</strong>. A condition can have high prevalence because many new cases occur, because people live with it for a long time, or both.</p>
+</section>
+<section id="learn-3-population-language-must-be-precise" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-population-language-must-be-precise">LEARN 3 · Population language must be precise</h2>
+<p>A survey can be technically competent and still answer the wrong population question.</p>
+<p><strong>Target population</strong> — the population about which you ultimately want to make an inference.<br>
+<strong>Study population</strong> — the population from which study participants can actually be drawn under the protocol.<br>
+<strong>Sampling frame</strong> — the operational list or mechanism used to select units.<br>
+<strong>Sampling unit</strong> — the unit selected at a given sampling stage.<br>
+<strong>Observation unit</strong> — the unit on which measurements are ultimately recorded.</p>
+<p>Example: a household survey may target adults in a district, select villages first, households second, and one adult within each household. The village and household are sampling units at different stages; the adult is the observation unit.</p>
+<p>If the sampling frame excludes remote settlements, the “district estimate” may not represent the whole district even when the sample size is large.</p>
+</section>
+<section id="learn-4-a-sample-becomes-an-estimate-only-through-its-design" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-a-sample-becomes-an-estimate-only-through-its-design">LEARN 4 · A sample becomes an estimate only through its design</h2>
+<p>Simple random sampling is conceptually straightforward because each sampled unit has a known selection probability. Many public-health surveys, however, use stratified, cluster or multistage designs.</p>
+<p>Those design features can affect:</p>
+<ul>
+<li><strong>weights</strong>, because some units have different selection probabilities;</li>
+<li><strong>standard errors</strong>, because people sampled within the same cluster may be correlated;</li>
+<li><strong>precision</strong>, because stratification and clustering change the information structure; and</li>
+<li><strong>population estimates</strong>, when weighted and unweighted distributions differ.</li>
+</ul>
+<div class="lipps-callout">
+<p><strong>LIPPS extension</strong><br>
+The attached CDC chapter defines cross-sectional surveys but does not provide a full complex-survey analysis framework. Survey weights, clustering and stratification are included here because they are essential for analysing modern population surveys correctly.</p>
+</div>
+</section>
+<section id="learn-5-non-response-is-not-just-a-smaller-sample" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-non-response-is-not-just-a-smaller-sample">LEARN 5 · Non-response is not just a smaller sample</h2>
+<p>Suppose 80% of sampled adults participate. The main question is not merely whether 20% were lost; it is whether non-participants differ systematically from participants on variables related to the outcome.</p>
+<p>If people with severe illness are less able to participate, prevalence may be underestimated. If people particularly interested in the topic are more likely to respond, prevalence may be overestimated.</p>
+<p>A large final sample does not automatically remove non-response bias. Bias is about <strong>systematic difference</strong>, not simply sample size.</p>
+</section>
+<section id="learn-6-comparing-prevalence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-comparing-prevalence">LEARN 6 · Comparing prevalence</h2>
+<p>Two groups can be compared using absolute or relative measures.</p>
+<p>If hypertension prevalence is 30% in Group A and 20% in Group B:</p>
+<p><strong>Prevalence difference</strong></p>
+<p><span class="math display">\[
+PD = 0.30 - 0.20 = 0.10
+\]</span></p>
+<p>There are 10 additional prevalent cases per 100 people in Group A.</p>
+<p><strong>Prevalence ratio</strong></p>
+<p><span class="math display">\[
+PR = 0.30 / 0.20 = 1.50
+\]</span></p>
+<p>Prevalence in Group A is 1.5 times that in Group B.</p>
+<div class="lipps-callout">
+<p><strong>LIPPS extension</strong><br>
+Prevalence ratio and prevalence difference are included as modern cross-sectional effect measures. They are not explicitly developed in the attached CDC cross-sectional section.</p>
+</div>
+</section>
+<section id="learn-7-why-the-odds-ratio-can-be-awkward-for-common-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-7-why-the-odds-ratio-can-be-awkward-for-common-outcomes">LEARN 7 · Why the odds ratio can be awkward for common outcomes</h2>
+<p>An odds ratio can be calculated from cross-sectional binary data, and logistic regression often produces one naturally. But odds are not risks or prevalences.</p>
+<p>When an outcome is common, an odds ratio can be numerically much farther from 1 than the corresponding prevalence ratio. That does not make logistic regression invalid; it means the <strong>estimand and wording must be correct</strong>.</p>
+<p>If the scientific question is about relative prevalence, a prevalence ratio may be easier to communicate. If the model estimates odds, report odds honestly.</p>
+</section>
+<section id="learn-8-temporality-the-fundamental-causal-limitation" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-8-temporality-the-fundamental-causal-limitation">LEARN 8 · Temporality: the fundamental causal limitation</h2>
+<p>For many causal questions, the exposure must precede the outcome.</p>
+<p>Cross-sectional simultaneous measurement often leaves that order uncertain. This produces several possibilities:</p>
+<ul>
+<li>exposure → outcome;</li>
+<li>outcome → exposure (<strong>reverse causation</strong>);</li>
+<li>a third factor → both; or</li>
+<li>measurement artifacts producing the association.</li>
+</ul>
+<p>A survey showing that people with chronic back pain exercise less cannot by itself establish whether low exercise increased pain risk or pain reduced exercise.</p>
+<p>Additional temporal questions can help, but retrospective recall introduces its own error. The design should still be described honestly.</p>
+</section>
+<section id="learn-9-prevalence-can-select-survivors" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-9-prevalence-can-select-survivors">LEARN 9 · Prevalence can select survivors</h2>
+<p>Because prevalence includes existing cases, it tends to over-represent conditions or cases of longer duration.</p>
+<p>Imagine two diseases with the same incidence. Disease A resolves in days; Disease B persists for years. A cross-sectional survey is much more likely to capture Disease B.</p>
+<p>This is sometimes called <strong>length or prevalence-incidence bias</strong> in broader epidemiological literature.</p>
+<div class="lipps-callout">
+<p><strong>LIPPS extension</strong><br>
+The attached text explains that prevalence depends on incidence and duration. The explicit survival-selection interpretation is developed here as an instructional extension.</p>
+</div>
+</section>
+<section id="learn-10-cross-sectional-does-not-mean-weak" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-10-cross-sectional-does-not-mean-weak">LEARN 10 · Cross-sectional does not mean weak</h2>
+<p>“Cannot establish temporal sequence well” is not the same as “useless.”</p>
+<p>Cross-sectional designs are excellent for questions such as:</p>
+<ul>
+<li>What proportion of health facilities currently have oxygen?</li>
+<li>What is the prevalence of hypertension among adults?</li>
+<li>What proportion of adolescents report a behaviour?</li>
+<li>How does current coverage vary by district?</li>
+<li>Which groups currently have the greatest burden?</li>
+</ul>
+<p>The strength of a design is judged against the <strong>question it was designed to answer</strong>. A cross-sectional survey can be the ideal design for prevalence and service-readiness questions.</p>
+</section>
+<section id="apply-integrated-public-health-problem" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="apply-integrated-public-health-problem">APPLY · Integrated public-health problem</h2>
+<p>A fictional district household survey samples 1,800 adults using 30 villages as first-stage clusters. Current hypertension is measured using a standard protocol. Current physical activity, medication use, age, sex and residence are also recorded.</p>
+<p>Hypertension prevalence is 28%. Prevalence is 36% among adults reporting low physical activity and 22% among those reporting higher activity.</p>
+<p>Before making a causal claim:</p>
+<ol type="1">
+<li>Identify the target population, likely sampling units and observation unit.</li>
+<li>State the primary frequency measure.</li>
+<li>Calculate the crude prevalence ratio and prevalence difference.</li>
+<li>Explain why the crude association does not establish that low physical activity caused hypertension.</li>
+<li>List at least three plausible confounding or reverse-causation explanations.</li>
+<li>Explain why cluster sampling may affect the confidence interval.</li>
+<li>State what weighting information you would need to estimate district-level prevalence appropriately.</li>
+<li>Rewrite this statement: “Low physical activity increased hypertension by 64% in the district.”</li>
+</ol>
+<p>A defensible version might say that low activity was <strong>associated with higher hypertension prevalence</strong>, while causal direction requires stronger temporal and confounding evidence.</p>
+</section>
+<section id="practise-check-your-reasoning" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
+<ol type="1">
+<li>Why is prevalence the natural frequency measure in a typical cross-sectional survey?</li>
+<li>Can a cross-sectional study ever collect historical exposure information? If it does, does that automatically make the design longitudinal?</li>
+<li>What is the difference between the target population and the study population?</li>
+<li>Why can 5,000 poorly selected respondents produce a worse population estimate than 1,000 probability-sampled respondents?</li>
+<li>If prevalence is 40% versus 20%, what are the prevalence ratio and prevalence difference?</li>
+<li>Why might a chronic disease be easier to capture in a cross-sectional survey than a rapidly fatal disease?</li>
+</ol>
+<p>Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.</p>
+</section>
+<section id="demonstrate-week-5-mastery-quiz" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-week-5-mastery-quiz">DEMONSTRATE · Week 5 mastery quiz</h2>
+<p><strong>Pilot Mastery Quiz:</strong> 15 objective questions sampled from a Week 5 bank of 50 items.</p>
+<p><strong>Initial time limit:</strong> 11 minutes.<br>
+<strong>Question style:</strong> design recognition, prevalence calculations, population/sampling logic, PR/PD interpretation, temporality and causal-language correction.<br>
+<strong>Practice mode:</strong> untimed with feedback.<br>
+<strong>Formal mode:</strong> randomised bank, delayed detailed feedback and approved accommodation overrides.</p>
+<div class="lipps-callout">
+<p><strong>Assessment principle</strong><br>
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.</p>
+</div>
+</section>
+<section id="source-foundation-and-lipps-extensions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</h2>
+<p><strong>Primary source foundation:</strong> the attached CDC text’s definition and use of cross-sectional studies, simultaneous measurement, prevalence and the limitation of temporal/causal interpretation.</p>
+<p><strong>LIPPS extensions:</strong> target/study-population distinctions, complex-survey weighting and clustering, prevalence ratio/difference, non-response reasoning and prevalence-incidence selection are added to make the course suitable for applied modern survey analysis.</p>
+<p><strong>Reference:</strong> Centers for Disease Control and Prevention. <em>Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics</em>. October 2006; updated May 2012.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../learn/epidemiology/week-04.html">← Week 4</a></p>
+<p><a href="../../learn/epidemiology/week-06.html">Week 6: Case-Control Studies →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

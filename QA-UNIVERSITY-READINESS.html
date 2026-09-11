@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>qa-university-readiness – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lipps-learn-university-readiness-qa" id="toc-lipps-learn-university-readiness-qa" class="nav-link active" data-scroll-target="#lipps-learn-university-readiness-qa">LIPPS Learn — University-readiness QA</a>
+  <ul class="collapse">
+  <li><a href="#executive-judgement" id="toc-executive-judgement" class="nav-link" data-scroll-target="#executive-judgement">Executive judgement</a></li>
+  <li><a href="#quantitative-audit" id="toc-quantitative-audit" class="nav-link" data-scroll-target="#quantitative-audit">Quantitative audit</a></li>
+  <li><a href="#course-level-ratings" id="toc-course-level-ratings" class="nav-link" data-scroll-target="#course-level-ratings">Course-level ratings</a></li>
+  <li><a href="#epidemiology-what-is-working" id="toc-epidemiology-what-is-working" class="nav-link" data-scroll-target="#epidemiology-what-is-working">Epidemiology — what is working</a></li>
+  <li><a href="#epidemiology-revisions-needed" id="toc-epidemiology-revisions-needed" class="nav-link" data-scroll-target="#epidemiology-revisions-needed">Epidemiology — revisions needed</a></li>
+  <li><a href="#health-communication-what-is-working" id="toc-health-communication-what-is-working" class="nav-link" data-scroll-target="#health-communication-what-is-working">Health Communication — what is working</a></li>
+  <li><a href="#health-communication-revisions-needed" id="toc-health-communication-revisions-needed" class="nav-link" data-scroll-target="#health-communication-revisions-needed">Health Communication — revisions needed</a></li>
+  <li><a href="#benchmark-check" id="toc-benchmark-check" class="nav-link" data-scroll-target="#benchmark-check">Benchmark check</a></li>
+  <li><a href="#required-assessment-redesign-before-institutional-launch" id="toc-required-assessment-redesign-before-institutional-launch" class="nav-link" data-scroll-target="#required-assessment-redesign-before-institutional-launch">Required assessment redesign before institutional launch</a>
+  <ul class="collapse">
+  <li><a href="#epidemiology" id="toc-epidemiology" class="nav-link" data-scroll-target="#epidemiology">Epidemiology</a></li>
+  <li><a href="#health-communication" id="toc-health-communication" class="nav-link" data-scroll-target="#health-communication">Health Communication</a></li>
+  </ul></li>
+  <li><a href="#assessment-bank-disposition" id="toc-assessment-bank-disposition" class="nav-link" data-scroll-target="#assessment-bank-disposition">Assessment-bank disposition</a></li>
+  <li><a href="#minimum-institutional-launch-gate" id="toc-minimum-institutional-launch-gate" class="nav-link" data-scroll-target="#minimum-institutional-launch-gate">Minimum institutional launch gate</a></li>
+  <li><a href="#overall-decision" id="toc-overall-decision" class="nav-link" data-scroll-target="#overall-decision">Overall decision</a></li>
+  <li><a href="#v1.9-progress" id="toc-v1.9-progress" class="nav-link" data-scroll-target="#v1.9-progress">v1.9 progress</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="lipps-learn-university-readiness-qa" class="level1">
+<h1>LIPPS Learn — University-readiness QA</h1>
+<p><strong>Version audited:</strong> v1.7<br>
+<strong>Scope:</strong> Epidemiology Weeks 1–12; Health Communication Weeks 1–12; public Quarto lessons; Moodle GIFT banks; course and assessment pages.</p>
+<section id="executive-judgement" class="level2">
+<h2 class="anchored" data-anchor-id="executive-judgement">Executive judgement</h2>
+<p>The LIPPS Learn architecture is strong enough for a <strong>university pilot</strong>, but the two courses are <strong>not yet ready to be sold as validated, stand-alone high-stakes courseware</strong>.</p>
+<p>The strongest elements are the course sequence, applied public-health framing, clear weekly learning cycle, causal/interpretive restraint in Epidemiology, and the unusually strong treatment of risk communication, community engagement, infodemics, ethics and equity in Health Communication.</p>
+<p>The main weakness is assessment validity. The existing Moodle banks are large, but item count should not be mistaken for assessment quality. Many Health Communication items are three paraphrased recognition questions built around the same definition; many Epidemiology items are repeated numerical variants of the same calculation template. These are useful <strong>practice generators</strong>, but a university-facing mastery bank must contain a much larger proportion of genuinely new scenarios, interpretation problems and decision questions.</p>
+<p>A second weakness is constructive alignment. Weekly objective quizzes alone cannot adequately assess skills such as audience analysis, counselling, message design, community engagement, campaign planning, outbreak reasoning or critical appraisal. Both courses need authentic assessed products alongside quizzes.</p>
+</section>
+<section id="quantitative-audit" class="level2">
+<h2 class="anchored" data-anchor-id="quantitative-audit">Quantitative audit</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th style="text-align: right;">Epidemiology</th>
+<th style="text-align: right;">Health Communication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Weeks</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td>Core lesson words</td>
+<td style="text-align: right;">~27,900</td>
+<td style="text-align: right;">~13,500</td>
+</tr>
+<tr class="odd">
+<td>Mean words/week</td>
+<td style="text-align: right;">~2,325</td>
+<td style="text-align: right;">~1,125</td>
+</tr>
+<tr class="even">
+<td>Candidate Moodle items</td>
+<td style="text-align: right;">680</td>
+<td style="text-align: right;">604</td>
+</tr>
+<tr class="odd">
+<td>Current dominant item pattern</td>
+<td style="text-align: right;">calculations + repeated scenario variants</td>
+<td style="text-align: right;">concept-recognition templates</td>
+</tr>
+<tr class="even">
+<td>Broken internal <code>.qmd</code> links</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>Week pages present</td>
+<td style="text-align: right;">12/12</td>
+<td style="text-align: right;">12/12</td>
+</tr>
+</tbody>
+</table>
+<p>The shorter Health Communication lessons are suitable as lecture-linked core notes, but are not yet deep enough to function as a complete three-hour weekly self-study experience without assigned readings, activities and lecturer facilitation.</p>
+</section>
+<section id="course-level-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="course-level-ratings">Course-level ratings</h2>
+<p>Scale: <strong>5 = strong for institutional pilot</strong>, <strong>3 = usable but requires revision</strong>, <strong>1 = major deficiency</strong>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th style="text-align: right;">Epidemiology</th>
+<th style="text-align: right;">Health Communication</th>
+<th>QA judgement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Curriculum sequence</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td>Coherent progression in both courses</td>
+</tr>
+<tr class="even">
+<td>Public-health relevance</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td>Strong applied framing</td>
+</tr>
+<tr class="odd">
+<td>Learning outcomes</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td>Clear, but some weeks have too many outcomes</td>
+</tr>
+<tr class="even">
+<td>Conceptual depth</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td>Health Communication needs more depth/readings</td>
+</tr>
+<tr class="odd">
+<td>African/LMIC applicability</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td>Good scenarios; should add more named regional evidence later</td>
+</tr>
+<tr class="even">
+<td>Constructive alignment</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td>Quizzes dominate; authentic products needed</td>
+</tr>
+<tr class="odd">
+<td>Objective-item quality</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td>Large banks, but too much templated repetition</td>
+</tr>
+<tr class="even">
+<td>Authentic assessment</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td>Needs formal applied assignments and rubrics</td>
+</tr>
+<tr class="odd">
+<td>Referencing/source transparency</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td>Health Communication needs consistent weekly references</td>
+</tr>
+<tr class="even">
+<td>Accessibility philosophy</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td>Strong: no copy/paste gimmicks, accommodations anticipated</td>
+</tr>
+<tr class="odd">
+<td>Technical structure</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td>Clear Quarto/Moodle separation, links clean</td>
+</tr>
+<tr class="even">
+<td>High-stakes readiness</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td>Requires SME review, pilot data and psychometrics</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="epidemiology-what-is-working" class="level2">
+<h2 class="anchored" data-anchor-id="epidemiology-what-is-working">Epidemiology — what is working</h2>
+<ol type="1">
+<li>The sequence from epidemiological thinking → frequency → association → description → study design → bias/causal reasoning → diagnostic testing → surveillance/outbreak → critical appraisal is coherent.</li>
+<li>Weeks 1–3 are particularly rich and explanatory.</li>
+<li>The course distinguishes what the attached CDC source supports from later LIPPS extensions.</li>
+<li>Week 9 correctly separates confounding, mediation, collider bias and effect modification.</li>
+<li>Week 10 avoids the common error of treating sensitivity, specificity and predictive value as interchangeable.</li>
+<li>Week 12 gives the course an appropriate interpretive endpoint rather than ending with formula recall.</li>
+</ol>
+</section>
+<section id="epidemiology-revisions-needed" class="level2">
+<h2 class="anchored" data-anchor-id="epidemiology-revisions-needed">Epidemiology — revisions needed</h2>
+<ol type="1">
+<li><strong>Assessment repetition:</strong> large blocks of parameterised items test the same operation repeatedly. Keep some as practice, but mastery banks should sample different reasoning steps.</li>
+<li><strong>Infectious-disease foundations:</strong> natural history, agent–host–environment reasoning and chain-of-infection concepts are underrepresented for a broad introductory epidemiology course. Add them as a concise supplement or embed them in Week 11.</li>
+<li><strong>Standardisation:</strong> age adjustment is introduced but not practised deeply. A short applied exercise would improve population-comparison competence.</li>
+<li><strong>Sampling:</strong> Week 5 introduces sampling logic, but probability sampling, cluster effects and weighting should link more explicitly to the Methods library.</li>
+<li><strong>Authentic outputs:</strong> add a short study-design critique, outbreak-analysis exercise and final critical-appraisal memo.</li>
+<li><strong>Assessment timing:</strong> current timings must remain pilot values until actual response-time data are available.</li>
+</ol>
+</section>
+<section id="health-communication-what-is-working" class="level2">
+<h2 class="anchored" data-anchor-id="health-communication-what-is-working">Health Communication — what is working</h2>
+<ol type="1">
+<li>The course does not reduce communication to posters and media products; it treats communication as a decision and implementation process.</li>
+<li>Behavioural theory is linked to diagnosis rather than added decoratively after campaign design.</li>
+<li>Health literacy, culture, interpersonal communication and community engagement appear before channels and media strategy.</li>
+<li>Risk/crisis communication and infodemic management are given their own substantial weeks.</li>
+<li>Ethics, equity, privacy, AI and manipulation are integrated rather than treated as footnotes.</li>
+<li>The LIPPS SIGNAL framework creates a useful capstone planning structure.</li>
+</ol>
+</section>
+<section id="health-communication-revisions-needed" class="level2">
+<h2 class="anchored" data-anchor-id="health-communication-revisions-needed">Health Communication — revisions needed</h2>
+<ol type="1">
+<li><strong>Depth:</strong> most weeks are around 1,000–1,300 words. For stand-alone digital courseware, add deeper explanations, comparative tables, worked communication products and assigned readings.</li>
+<li><strong>Question bank redesign:</strong> the largest current weakness. Many items repeat the same definition in three forms (definition → context label → term recognition). These should be reclassified as practice flash questions, not mastery assessment.</li>
+<li><strong>Performance assessment:</strong> health communication competence cannot be established using MCQs alone. Students should design, pre-test, revise and evaluate actual communication products.</li>
+<li><strong>Theory week overload:</strong> Week 2 covers HBM, TPB, Social Cognitive Theory, social-ecological thinking, COM-B and diffusion. Retain the overview, but add a comparison matrix and make students justify theory selection in a case.</li>
+<li><strong>Clinical communication:</strong> Week 4 needs an assessed teach-back or counselling transcript/role-play task.</li>
+<li><strong>Community engagement:</strong> Week 5 should assess stakeholder mapping, listening and feedback-loop design.</li>
+<li><strong>Media strategy:</strong> Week 7 should include a channel-mix budget or reach/frequency trade-off exercise.</li>
+<li><strong>Digital communication:</strong> Week 8 should distinguish platform engagement metrics from meaningful communication and health outcomes using a worked dashboard example.</li>
+<li><strong>Referencing:</strong> add a stable core-reading page and week-specific readings.</li>
+</ol>
+</section>
+<section id="benchmark-check" class="level2">
+<h2 class="anchored" data-anchor-id="benchmark-check">Benchmark check</h2>
+<p>The Health Communication sequence is broadly consistent with current public-health communication practice. WHO’s communication framework emphasizes communications that are accessible, actionable, credible, relevant, timely and understandable. WHO’s 2024 RCCE competency framework emphasizes professional behavioural competencies for community-centred emergency programmes. CDC’s Clear Communication Index provides a research-based tool for assessing public communication materials, while the current CDC CERC manual remains a practical emergency-communication reference. These should be treated as core benchmarks, not as the only evidence base.</p>
+<p>The attached CDC <em>Principles of Epidemiology in Public Health Practice, Third Edition</em> remains a strong foundational source for the Epidemiology course, but it is an older introductory text. LIPPS should retain it as a foundation while clearly identifying modern extensions and updating applied examples and methodological guidance.</p>
+</section>
+<section id="required-assessment-redesign-before-institutional-launch" class="level2">
+<h2 class="anchored" data-anchor-id="required-assessment-redesign-before-institutional-launch">Required assessment redesign before institutional launch</h2>
+<section id="epidemiology" class="level3">
+<h3 class="anchored" data-anchor-id="epidemiology">Epidemiology</h3>
+<ul>
+<li><strong>15% — weekly mastery quizzes:</strong> objective, randomised, mostly interpretation/application.</li>
+<li><strong>20% — applied measurement exercises:</strong> frequency, association, diagnostic testing and descriptive epidemiology.</li>
+<li><strong>20% — study-design critique:</strong> critique one published or simulated epidemiological study.</li>
+<li><strong>20% — field/outbreak analysis:</strong> line list, descriptive output, hypothesis and investigation plan.</li>
+<li><strong>25% — final critical-appraisal memo:</strong> interpret design, effect estimates, bias, precision, applicability and claim strength.</li>
+</ul>
+</section>
+<section id="health-communication" class="level3">
+<h3 class="anchored" data-anchor-id="health-communication">Health Communication</h3>
+<ul>
+<li><strong>15% — weekly mastery quizzes:</strong> objective checks, but no longer dominated by term recognition.</li>
+<li><strong>20% — audience and behaviour diagnosis brief:</strong> define audience, determinant and theory-informed response.</li>
+<li><strong>20% — message design + pre-test assignment:</strong> draft, pre-test evidence, revision rationale.</li>
+<li><strong>15% — risk-communication simulation:</strong> first announcement, uncertainty statement, action message and update.</li>
+<li><strong>30% — campaign capstone:</strong> strategy, channel mix, community feedback, implementation indicators, outcome evaluation and ethics/equity review using LIPPS SIGNAL.</li>
+</ul>
+<p>These weights are a proposed pilot blueprint and should be adapted to institutional regulations.</p>
+</section>
+</section>
+<section id="assessment-bank-disposition" class="level2">
+<h2 class="anchored" data-anchor-id="assessment-bank-disposition">Assessment-bank disposition</h2>
+<p>Do <strong>not</strong> delete the current banks. Reclassify them:</p>
+<ul>
+<li><strong>Foundation/practice pool:</strong> definition checks and repeated calculations.</li>
+<li><strong>Mastery pool:</strong> genuine scenarios, interpretation, comparison and decision-making.</li>
+<li><strong>Institutional assessment pool:</strong> separately reviewed, exposure-controlled items with documented blueprint coverage.</li>
+</ul>
+<p>A sensible target for the next revision is <strong>25–35 high-quality mastery items per week</strong>, not 50 superficially different items. Smaller, better banks are preferable to large templated banks.</p>
+</section>
+<section id="minimum-institutional-launch-gate" class="level2">
+<h2 class="anchored" data-anchor-id="minimum-institutional-launch-gate">Minimum institutional launch gate</h2>
+<p>LIPPS should not describe either course as high-stakes-ready until all of the following are complete:</p>
+<ul>
+<li>second subject-matter-expert review;</li>
+<li>explicit course assessment blueprint;</li>
+<li>authentic assignments and rubrics;</li>
+<li>mastery-bank rewrite;</li>
+<li>accessibility review;</li>
+<li>native Quarto render and browser/mobile testing;</li>
+<li>Moodle import test on the actual hosted instance;</li>
+<li>student pilot;</li>
+<li>item analysis after pilot;</li>
+<li>revision based on completion, difficulty, discrimination and response-time data; and</li>
+<li>local curriculum/credit-hour mapping by the adopting institution.</li>
+</ul>
+</section>
+<section id="overall-decision" class="level2">
+<h2 class="anchored" data-anchor-id="overall-decision">Overall decision</h2>
+<p><strong>Proceed to pilot. Do not market the current version as a finished high-stakes assessment product.</strong></p>
+<p>The curriculum is strong enough to justify a real university pilot. The next build priority is not more content categories; it is <strong>assessment quality, authentic student work, references/readings and pilot evidence</strong>.</p>
+</section>
+<section id="v1.9-progress" class="level2">
+<h2 class="anchored" data-anchor-id="v1.9-progress">v1.9 progress</h2>
+<p>Health Communication Week 1 has now been rebuilt against the recommended assessment standard: 30 distinct scenario-based items in Practice, Mastery and protected Institutional pools, plus an authentic Communication Diagnosis Brief and analytic rubric. Weeks 2–12 remain queued for the same overhaul.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

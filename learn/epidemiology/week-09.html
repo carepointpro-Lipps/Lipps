@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Recognise systematic error, distinguish confounding from effect modification, and choose adjustment strategies that answer the intended epidemiological question.">
+
+<title>Week 9 — Bias, Confounding and Effect Modification | LIPPS – LIPPS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/lipps-mark.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-89af0c2d685ccb09a4d7d65decb66752.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LIPPS.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../studio.html"> 
+<span class="menu-text">Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../learn/index.html"> 
+<span class="menu-text">LIPPS Learn</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-week-in-one-sentence" id="toc-this-week-in-one-sentence" class="nav-link active" data-scroll-target="#this-week-in-one-sentence">This week in one sentence</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#orient-we-adjusted-for-everything-is-not-reassuring" id="toc-orient-we-adjusted-for-everything-is-not-reassuring" class="nav-link" data-scroll-target="#orient-we-adjusted-for-everything-is-not-reassuring">ORIENT · “We adjusted for everything” is not reassuring</a></li>
+  <li><a href="#learn-1-bias-is-systematic-error" id="toc-learn-1-bias-is-systematic-error" class="nav-link" data-scroll-target="#learn-1-bias-is-systematic-error">LEARN 1 · Bias is systematic error</a></li>
+  <li><a href="#learn-2-selection-bias" id="toc-learn-2-selection-bias" class="nav-link" data-scroll-target="#learn-2-selection-bias">LEARN 2 · Selection bias</a></li>
+  <li><a href="#learn-3-information-bias" id="toc-learn-3-information-bias" class="nav-link" data-scroll-target="#learn-3-information-bias">LEARN 3 · Information bias</a></li>
+  <li><a href="#learn-4-confounding-is-a-mixing-of-effects" id="toc-learn-4-confounding-is-a-mixing-of-effects" class="nav-link" data-scroll-target="#learn-4-confounding-is-a-mixing-of-effects">LEARN 4 · Confounding is a mixing of effects</a></li>
+  <li><a href="#learn-5-crude-and-adjusted-estimates-answer-different-comparisons" id="toc-learn-5-crude-and-adjusted-estimates-answer-different-comparisons" class="nav-link" data-scroll-target="#learn-5-crude-and-adjusted-estimates-answer-different-comparisons">LEARN 5 · Crude and adjusted estimates answer different comparisons</a></li>
+  <li><a href="#learn-6-a-mediator-is-not-a-confounder" id="toc-learn-6-a-mediator-is-not-a-confounder" class="nav-link" data-scroll-target="#learn-6-a-mediator-is-not-a-confounder">LEARN 6 · A mediator is not a confounder</a></li>
+  <li><a href="#learn-7-collider-bias-adjustment-can-create-association" id="toc-learn-7-collider-bias-adjustment-can-create-association" class="nav-link" data-scroll-target="#learn-7-collider-bias-adjustment-can-create-association">LEARN 7 · Collider bias: adjustment can create association</a></li>
+  <li><a href="#learn-8-effect-modification-is-not-bias" id="toc-learn-8-effect-modification-is-not-bias" class="nav-link" data-scroll-target="#learn-8-effect-modification-is-not-bias">LEARN 8 · Effect modification is not bias</a></li>
+  <li><a href="#learn-9-stratified-reasoning" id="toc-learn-9-stratified-reasoning" class="nav-link" data-scroll-target="#learn-9-stratified-reasoning">LEARN 9 · Stratified reasoning</a></li>
+  <li><a href="#learn-10-interaction-depends-on-scale" id="toc-learn-10-interaction-depends-on-scale" class="nav-link" data-scroll-target="#learn-10-interaction-depends-on-scale">LEARN 10 · Interaction depends on scale</a></li>
+  <li><a href="#learn-11-a-practical-adjustment-workflow" id="toc-learn-11-a-practical-adjustment-workflow" class="nav-link" data-scroll-target="#learn-11-a-practical-adjustment-workflow">LEARN 11 · A practical adjustment workflow</a></li>
+  <li><a href="#apply-integrated-public-health-problem" id="toc-apply-integrated-public-health-problem" class="nav-link" data-scroll-target="#apply-integrated-public-health-problem">APPLY · Integrated public-health problem</a></li>
+  <li><a href="#practise-check-your-reasoning" id="toc-practise-check-your-reasoning" class="nav-link" data-scroll-target="#practise-check-your-reasoning">PRACTISE · Check your reasoning</a></li>
+  <li><a href="#demonstrate-week-9-mastery-quiz" id="toc-demonstrate-week-9-mastery-quiz" class="nav-link" data-scroll-target="#demonstrate-week-9-mastery-quiz">DEMONSTRATE · Week 9 mastery quiz</a></li>
+  <li><a href="#source-foundation-and-lipps-extensions" id="toc-source-foundation-and-lipps-extensions" class="nav-link" data-scroll-target="#source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="lipps-course-hero">
+<div class="lipps-eyebrow">
+<p>LIPPS LEARN · EPIDEMIOLOGY · WEEK 09</p>
+</div>
+<section id="bias-confounding-and-effect-modification" class="level1">
+<h1>Bias, Confounding and Effect Modification</h1>
+<section id="a-model-can-be-statistically-sophisticated-and-still-estimate-the-wrong-thing." class="level2">
+<h2 class="anchored" data-anchor-id="a-model-can-be-statistically-sophisticated-and-still-estimate-the-wrong-thing.">A model can be statistically sophisticated and still estimate the wrong thing.</h2>
+<p><span class="lipps-chip">Intermediate</span> <span class="lipps-chip">Bias</span> <span class="lipps-chip">Confounding</span> <span class="lipps-chip">Effect modification</span></p>
+</section>
+</section>
+</div>
+<section id="this-week-in-one-sentence" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="this-week-in-one-sentence">This week in one sentence</h2>
+<p><strong>Recognise systematic error, distinguish confounding from effect modification, and choose adjustment strategies that answer the intended epidemiological question.</strong></p>
+<div class="lipps-callout">
+<p><strong>The LIPPS lens</strong><br>
+Evidence becomes useful when you can explain not only what the analysis shows, but also what the design, measurement and comparison allow you to claim.</p>
+</div>
+</section>
+<section id="learning-outcomes" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
+<p>By the end of Week 9, you should be able to:</p>
+<ol type="1">
+<li>define bias as systematic error rather than mere random variation;</li>
+<li>distinguish selection bias from information bias;</li>
+<li>recognise non-differential and differential misclassification conceptually;</li>
+<li>define confounding and identify the conditions that make a variable a plausible confounder;</li>
+<li>distinguish confounders from mediators and colliders at an introductory level;</li>
+<li>explain why indiscriminate statistical adjustment can create rather than remove bias;</li>
+<li>distinguish confounding from effect modification;</li>
+<li>interpret stratum-specific estimates when effects differ across groups;</li>
+<li>recognise that interaction can be defined on different statistical scales;</li>
+<li>use design and subject-matter knowledge, not p-values alone, to decide what to adjust for.</li>
+</ol>
+</section>
+<section id="orient-we-adjusted-for-everything-is-not-reassuring" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="orient-we-adjusted-for-everything-is-not-reassuring">ORIENT · “We adjusted for everything” is not reassuring</h2>
+<p>A paper reports an association between an exposure and hypertension. The authors say the model is reliable because they adjusted for age, sex, BMI, medication use, clinic attendance, kidney disease, physical activity, income, diet and several laboratory markers.</p>
+<p>More adjustment is not automatically better.</p>
+<p>Some variables may be confounders. Some may be consequences of the exposure. Some may be consequences of the outcome. Some may be colliders. Some may be measured poorly.</p>
+<p>The first question is not <strong>“How many variables are in the model?”</strong> It is <strong>“What causal question is the model trying to answer?”</strong></p>
+</section>
+<section id="learn-1-bias-is-systematic-error" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-1-bias-is-systematic-error">LEARN 1 · Bias is systematic error</h2>
+<p>The attached CDC glossary defines bias as a systematic deviation of results or inferences from the truth. It explicitly notes that epidemiological bias does <strong>not</strong> imply intentional misconduct.</p>
+<p>Random error makes estimates vary unpredictably around a target. Bias moves the expected estimate systematically away from the target.</p>
+<p>Increasing sample size reduces random error but does not automatically remove bias. A very large biased study can estimate the wrong quantity with extraordinary precision.</p>
+</section>
+<section id="learn-2-selection-bias" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-2-selection-bias">LEARN 2 · Selection bias</h2>
+<p>Selection bias arises when the way people enter, remain in, or are analysed in a study creates a systematic difference related to both exposure and outcome.</p>
+<p>Examples:</p>
+<ul>
+<li>hospital controls whose illnesses are related to the exposure;</li>
+<li>differential loss to follow-up in a cohort;</li>
+<li>participation in a survey related to health status and exposure;</li>
+<li>excluding participants because of post-exposure events.</li>
+</ul>
+<p>Selection bias is often created before analysis. Statistical adjustment cannot always reconstruct the population that should have been observed.</p>
+</section>
+<section id="learn-3-information-bias" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-3-information-bias">LEARN 3 · Information bias</h2>
+<p>Information bias arises from systematic differences in how exposure, outcome or other variables are measured.</p>
+<p>Examples include:</p>
+<ul>
+<li>cases recalling past exposure more intensely than controls;</li>
+<li>interviewers probing one group more thoroughly;</li>
+<li>an outcome assessor knowing treatment assignment;</li>
+<li>different laboratory methods across study sites;</li>
+<li>self-reported behaviours affected by social desirability.</li>
+</ul>
+<p>Measurement error can be <strong>differential</strong> when its pattern differs according to another relevant variable, or <strong>non-differential</strong> when the same classification process applies across groups.</p>
+<div class="lipps-callout">
+<p><strong>LIPPS extension</strong> The attached CDC glossary defines information bias; the differential/non-differential distinction is added here because it is central to applied interpretation.</p>
+</div>
+</section>
+<section id="learn-4-confounding-is-a-mixing-of-effects" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-4-confounding-is-a-mixing-of-effects">LEARN 4 · Confounding is a mixing of effects</h2>
+<p>The attached CDC glossary defines confounding as distortion of the exposure-outcome association by a third variable related to both.</p>
+<p>Suppose coffee drinking appears associated with lung cancer, but smokers drink more coffee and smoking strongly causes lung cancer. Smoking can mix into the coffee-cancer comparison.</p>
+<p>A plausible confounder generally:</p>
+<ol type="1">
+<li>is associated with the exposure in the source population;</li>
+<li>is a cause, marker or proxy of a cause of the outcome; and</li>
+<li>is not simply a consequence of the exposure along the causal pathway being estimated.</li>
+</ol>
+<p>These are conceptual conditions, not a mechanical checklist based only on statistical significance.</p>
+</section>
+<section id="learn-5-crude-and-adjusted-estimates-answer-different-comparisons" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-5-crude-and-adjusted-estimates-answer-different-comparisons">LEARN 5 · Crude and adjusted estimates answer different comparisons</h2>
+<p>Imagine a crude risk ratio of 2.4 between an exposure and outcome. After appropriate age adjustment, the estimate becomes 1.2.</p>
+<p>That change may indicate important confounding by age—but the magnitude of change alone does not prove the adjustment set is correct.</p>
+<p>Adjustment aims to compare exposure groups as if they were similar with respect to selected confounding variables.</p>
+<p>Methods include:</p>
+<ul>
+<li>restriction;</li>
+<li>matching;</li>
+<li>stratification;</li>
+<li>standardisation; and</li>
+<li>multivariable modelling.</li>
+</ul>
+<p>The method matters less than whether the selected variables are appropriate for the causal question.</p>
+</section>
+<section id="learn-6-a-mediator-is-not-a-confounder" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-6-a-mediator-is-not-a-confounder">LEARN 6 · A mediator is not a confounder</h2>
+<div class="lipps-callout">
+<p><strong>LIPPS extension</strong> Mediators and collider bias are not developed in the attached CDC text. They are included because modern epidemiological analysis requires students to understand why adjustment can be harmful.</p>
+</div>
+<p>A <strong>mediator</strong> lies on a causal pathway from exposure to outcome.</p>
+<p>Example:</p>
+<p><strong>High salt intake → higher blood pressure → stroke</strong></p>
+<p>If the question is the <strong>total effect</strong> of salt intake on stroke, adjusting for blood pressure removes part of the pathway we intend to estimate.</p>
+<p>If the question is a direct effect not operating through blood pressure, the estimand is different and stronger assumptions are needed.</p>
+<p>Adjustment therefore changes the question.</p>
+</section>
+<section id="learn-7-collider-bias-adjustment-can-create-association" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-7-collider-bias-adjustment-can-create-association">LEARN 7 · Collider bias: adjustment can create association</h2>
+<p>A <strong>collider</strong> is a variable caused by two other variables.</p>
+<p>Suppose both severe disease and high socioeconomic status increase the probability of receiving specialist care. If analysis is restricted to specialist-clinic patients, conditioning on clinic attendance can create an artificial association between disease and socioeconomic status even if none existed in the source population.</p>
+<p>This is why “adjust for every variable associated with the outcome” is not a safe epidemiological rule.</p>
+<div class="lipps-callout">
+<p><strong>Adjustment is not a cleansing ritual. Every variable you control for changes the comparison your model is making.</strong></p>
+</div>
+</section>
+<section id="learn-8-effect-modification-is-not-bias" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-8-effect-modification-is-not-bias">LEARN 8 · Effect modification is not bias</h2>
+<p>Effect modification occurs when the size—or sometimes direction—of an exposure-outcome association genuinely differs across levels of another variable.</p>
+<p>Example:</p>
+<p>A prevention programme may reduce disease strongly in younger adults but have little effect in older adults.</p>
+<p>If the stratum-specific estimates truly differ, averaging them into one number may hide important heterogeneity.</p>
+<p>Unlike confounding, effect modification is generally something to <strong>describe and understand</strong>, not “adjust away.”</p>
+<div class="lipps-callout">
+<p><strong>LIPPS extension</strong> The attached source does not develop effect modification. This treatment is an added modern epidemiology component.</p>
+</div>
+</section>
+<section id="learn-9-stratified-reasoning" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-9-stratified-reasoning">LEARN 9 · Stratified reasoning</h2>
+<p>Suppose a crude RR is 1.8. After stratifying by sex:</p>
+<ul>
+<li>women: RR = 1.1</li>
+<li>men: RR = 1.0</li>
+</ul>
+<p>The similar stratum-specific estimates, both much closer to 1 than the crude estimate, are compatible with confounding.</p>
+<p>Now suppose:</p>
+<ul>
+<li>women: RR = 3.0</li>
+<li>men: RR = 0.9</li>
+</ul>
+<p>Those estimates are not naturally summarised by a single common effect. They suggest effect heterogeneity that deserves interpretation.</p>
+<p>This logic should be understood before relying on regression interaction terms.</p>
+</section>
+<section id="learn-10-interaction-depends-on-scale" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-10-interaction-depends-on-scale">LEARN 10 · Interaction depends on scale</h2>
+<div class="lipps-callout">
+<p><strong>LIPPS extension</strong> Interaction can look different on additive and multiplicative scales.</p>
+</div>
+<p>An exposure may show no multiplicative interaction on the risk-ratio scale while showing an important difference in absolute risk.</p>
+<p>Public-health decisions often care deeply about the additive scale because it reflects additional cases that might be prevented.</p>
+<p>Do not ask only:</p>
+<blockquote class="blockquote">
+<p>Is the interaction-term p-value below 0.05?</p>
+</blockquote>
+<p>Ask:</p>
+<blockquote class="blockquote">
+<p>On which scale is effect heterogeneity scientifically meaningful for this question?</p>
+</blockquote>
+</section>
+<section id="learn-11-a-practical-adjustment-workflow" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="learn-11-a-practical-adjustment-workflow">LEARN 11 · A practical adjustment workflow</h2>
+<p>Before fitting a multivariable model:</p>
+<ol type="1">
+<li>State the exposure, outcome and causal estimand.</li>
+<li>Draw or verbally specify the presumed causal structure.</li>
+<li>Identify causes of the outcome that also influence exposure.</li>
+<li>Exclude clear descendants of the exposure when estimating total effects.</li>
+<li>Avoid conditioning on plausible colliders.</li>
+<li>Check measurement quality.</li>
+<li>Examine whether meaningful effect modification is expected.</li>
+<li>Report crude and appropriately adjusted estimates.</li>
+<li>Perform sensitivity analyses when assumptions are uncertain.</li>
+</ol>
+<p>This workflow is more defensible than automatic variable selection based on bivariable p-values.</p>
+</section>
+<section id="apply-integrated-public-health-problem" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="apply-integrated-public-health-problem">APPLY · Integrated public-health problem</h2>
+<p>A fictional cross-sectional survey finds that current pesticide exposure is associated with chronic respiratory symptoms: crude prevalence ratio 2.0.</p>
+<p>Age is associated with both pesticide work and respiratory symptoms. Smoking is more common among pesticide workers and causes respiratory symptoms. Current clinic attendance is influenced by respiratory symptoms and by employer-provided insurance, which is more common among pesticide workers. Reduced physical activity may be a consequence of respiratory symptoms.</p>
+<ol type="1">
+<li>Identify plausible confounders.</li>
+<li>Explain why current clinic attendance could behave as a collider.</li>
+<li>Explain why reduced physical activity could be a consequence of outcome rather than a confounder.</li>
+<li>Propose a defensible minimal adjustment set for the total exposure-outcome association.</li>
+<li>Suppose the adjusted PR is 1.35. Interpret the change from 2.0 without claiming that all bias has disappeared.</li>
+<li>Suppose adjusted PRs are 2.2 among workers without respirators and 1.0 among workers consistently using respirators. Is respirator use behaving more like confounding or effect modification in this result?</li>
+<li>State what further design and measurement information you would need before causal interpretation.</li>
+</ol>
+</section>
+<section id="practise-check-your-reasoning" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="practise-check-your-reasoning">PRACTISE · Check your reasoning</h2>
+<ol type="1">
+<li>Why does a larger sample not remove systematic bias?</li>
+<li>What distinguishes selection bias from information bias?</li>
+<li>What three conceptual conditions make a variable a plausible confounder?</li>
+<li>Why can controlling for a mediator be inappropriate when estimating a total effect?</li>
+<li>What is the danger of conditioning on a collider?</li>
+<li>Why should genuine effect modification usually be reported rather than averaged away?</li>
+</ol>
+<p>Use Practice mode to work slowly and review explanations. Mastery mode should be attempted only after you can answer these kinds of questions without searching for definitions.</p>
+</section>
+<section id="demonstrate-week-9-mastery-quiz" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="demonstrate-week-9-mastery-quiz">DEMONSTRATE · Week 9 mastery quiz</h2>
+<p><strong>Pilot Mastery Quiz:</strong> 18 objective questions drawn from a Week 9 bank of 60 items.</p>
+<p><strong>Initial time limit:</strong> 13 minutes.<br>
+<strong>Question style:</strong> bias classification, causal-structure micro-scenarios, confounder/mediator/collider distinctions, crude-versus-adjusted interpretation and effect-modification reasoning.<br>
+**No DAG drawing is required in the timed quiz; the assessment tests recognition and interpretation.</p>
+<div class="lipps-callout">
+<p><strong>Assessment principle</strong><br>
+The quiz is designed so that a prepared learner can read, reason and answer efficiently. Timing is a learning-and-assessment parameter to be calibrated from real response-time data, not a substitute for good question design.</p>
+</div>
+</section>
+<section id="source-foundation-and-lipps-extensions" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="source-foundation-and-lipps-extensions">Source foundation and LIPPS extensions</h2>
+<p><strong>Primary source foundation:</strong> the attached CDC text and glossary definitions of bias, selection bias, information bias and confounding, together with its repeated emphasis on valid comparison groups.</p>
+<p><strong>LIPPS extensions:</strong> differential/non-differential misclassification, mediators, colliders, effect modification, interaction scale and causal adjustment logic are explicitly added because they are not developed in the attached text.</p>
+<p><strong>Reference:</strong> Centers for Disease Control and Prevention. <em>Principles of Epidemiology in Public Health Practice, Third Edition: An Introduction to Applied Epidemiology and Biostatistics</em>. October 2006; updated May 2012.</p>
+</section>
+<section id="continue" class="level2 lipps-section">
+<h2 class="anchored" data-anchor-id="continue">Continue</h2>
+<p><a href="../../learn/epidemiology/week-08.html">← Week 8</a></p>
+<p><a href="../../learn/epidemiology/week-10.html">Week 10: Screening and Diagnostic-Test Evaluation →</a></p>
+</section>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carepointpro-Lipps\.github\.io\/Lipps\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© LIPPS — Evidence is never the whole story.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../methods/index.html">
+<p>Methods</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../studio.html">
+<p>Studio</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

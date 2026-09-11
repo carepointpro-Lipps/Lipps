@@ -1,0 +1,461 @@
+# LIPPS browser authoring configuration
+# GitHub repository is now locked to the LIPPS account/repository below.
+backend:
+  name: github
+  repo: carepointpro-Lipps/Lipps
+  branch: main
+
+publish_mode: editorial_workflow
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+# Production domain intentionally omitted until the LIPPS domain is selected.
+# Add site_url and display_url here once the public domain is live.
+logo_url: /assets/lipps-mark.svg
+
+collections:
+  - name: lipps_content
+    label: LIPPS Content
+    label_singular: Page
+    delete: false
+    files:
+      - name: home
+        label: "Homepage"
+        file: index.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: learn
+        label: "Learn landing"
+        file: learn/index.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_course
+        label: "Epidemiology course"
+        file: learn/epidemiology.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_course
+        label: "Health Communication course"
+        file: learn/health-communication.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: studio
+        label: "Studio"
+        file: studio.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: about
+        label: "About"
+        file: about.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w01
+        label: "Epidemiology · Week 01"
+        file: learn/epidemiology/week-01.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w02
+        label: "Epidemiology · Week 02"
+        file: learn/epidemiology/week-02.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w03
+        label: "Epidemiology · Week 03"
+        file: learn/epidemiology/week-03.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w04
+        label: "Epidemiology · Week 04"
+        file: learn/epidemiology/week-04.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w05
+        label: "Epidemiology · Week 05"
+        file: learn/epidemiology/week-05.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w06
+        label: "Epidemiology · Week 06"
+        file: learn/epidemiology/week-06.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w07
+        label: "Epidemiology · Week 07"
+        file: learn/epidemiology/week-07.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w08
+        label: "Epidemiology · Week 08"
+        file: learn/epidemiology/week-08.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w09
+        label: "Epidemiology · Week 09"
+        file: learn/epidemiology/week-09.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w10
+        label: "Epidemiology · Week 10"
+        file: learn/epidemiology/week-10.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w11
+        label: "Epidemiology · Week 11"
+        file: learn/epidemiology/week-11.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: epi_w12
+        label: "Epidemiology · Week 12"
+        file: learn/epidemiology/week-12.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w01
+        label: "Health Communication · Week 01"
+        file: learn/health-communication/week-01.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w02
+        label: "Health Communication · Week 02"
+        file: learn/health-communication/week-02.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w03
+        label: "Health Communication · Week 03"
+        file: learn/health-communication/week-03.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w04
+        label: "Health Communication · Week 04"
+        file: learn/health-communication/week-04.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w05
+        label: "Health Communication · Week 05"
+        file: learn/health-communication/week-05.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w06
+        label: "Health Communication · Week 06"
+        file: learn/health-communication/week-06.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w07
+        label: "Health Communication · Week 07"
+        file: learn/health-communication/week-07.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w08
+        label: "Health Communication · Week 08"
+        file: learn/health-communication/week-08.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w09
+        label: "Health Communication · Week 09"
+        file: learn/health-communication/week-09.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w10
+        label: "Health Communication · Week 10"
+        file: learn/health-communication/week-10.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w11
+        label: "Health Communication · Week 11"
+        file: learn/health-communication/week-11.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: hc_w12
+        label: "Health Communication · Week 12"
+        file: learn/health-communication/week-12.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_analysis_strategies
+        label: "Methods · Analysis Strategies"
+        file: methods/analysis-strategies.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_bias_causality
+        label: "Methods · Bias Causality"
+        file: methods/bias-causality.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_data_quality
+        label: "Methods · Data Quality"
+        file: methods/data-quality.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_diagnostic_studies
+        label: "Methods · Diagnostic Studies"
+        file: methods/diagnostic-studies.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_index
+        label: "Methods · Index"
+        file: methods/index.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_interpretation_reporting
+        label: "Methods · Interpretation Reporting"
+        file: methods/interpretation-reporting.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_measurement
+        label: "Methods · Measurement"
+        file: methods/measurement.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_qualitative_mixed
+        label: "Methods · Qualitative Mixed"
+        file: methods/qualitative-mixed.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_sampling
+        label: "Methods · Sampling"
+        file: methods/sampling.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_study_design
+        label: "Methods · Study Design"
+        file: methods/study-design.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_survey_analysis
+        label: "Methods · Survey Analysis"
+        file: methods/survey-analysis.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: method_visualisation
+        label: "Methods · Visualisation"
+        file: methods/visualisation.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: project_facility_readiness
+        label: "Projects · Facility Readiness"
+        file: projects/facility-readiness.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
+      - name: project_index
+        label: "Projects · Index"
+        file: projects/index.qmd
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Internal title, widget: string, required: false }
+          - { name: pagetitle, label: Browser page title, widget: string, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: page-layout, label: Page layout, widget: hidden, default: full, required: false }
+          - { name: body, label: Page content, widget: markdown }
